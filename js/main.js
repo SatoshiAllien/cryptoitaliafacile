@@ -137,7 +137,6 @@ function initNewsletter() {
 
 async function initHomepage() {
   if (document.body.dataset.page !== 'home') return;
-  await loadArticles();
   const base = getBasePath();
 
   const trustEl = document.getElementById('trust-badges');
@@ -147,26 +146,9 @@ async function initHomepage() {
     ).join('');
   }
 
-  const teacherCard = document.getElementById('teacher-card');
-  if (teacherCard && SITE_CONFIG.teacher) {
-    const t = SITE_CONFIG.teacher;
-    const photoUrl = getAssetUrl(t.photo);
-    teacherCard.classList.add('visible');
-    teacherCard.innerHTML = `
-      <div class="teacher-photo-wrap">
-        <img src="${photoUrl}" alt="${t.name} — ${t.title}" class="teacher-photo" width="280" height="280" loading="eager" decoding="async">
-        <span class="teacher-photo-badge">🎓 Insegnante</span>
-      </div>
-      <div class="teacher-content">
-        <span class="section-label">👨‍🏫 Chi ti guida</span>
-        <h2>${t.name} — <span class="teacher-title">${t.title}</span></h2>
-        <p class="teacher-quote">"${t.quote}"</p>
-        <div class="teacher-badges">
-          ${t.badges.map(b => `<span class="teacher-badge"><span class="teacher-badge-icon">${b.icon}</span>${b.label}</span>`).join('')}
-        </div>
-        <a href="${base}${t.href}" class="btn btn-primary btn-sm">Scopri di più su di me →</a>
-      </div>`;
-  }
+  try {
+    await loadArticles();
+  } catch (_) { /* articoli non critici per homepage */ }
 
   const affiliateGrid = document.getElementById('affiliate-grid');
   if (affiliateGrid && SITE_CONFIG.affiliates) {
@@ -270,31 +252,6 @@ async function initHubPage() {
   render(filter);
 }
 
-function initAboutPage() {
-  const el = document.getElementById('about-teacher');
-  const t = SITE_CONFIG.teacher;
-  if (!el || !t) return;
-  const base = getBasePath();
-  const photoUrl = getAssetUrl(t.photo);
-  el.classList.add('visible');
-  el.innerHTML = `
-    <div class="about-hero-inner">
-      <div class="teacher-photo-wrap">
-        <img src="${photoUrl}" alt="${t.name} — ${t.title}" class="teacher-photo" width="300" height="300" loading="eager" decoding="async">
-        <span class="teacher-photo-badge">🎓 Insegnante</span>
-      </div>
-      <div>
-        <span class="section-label">Chi siamo</span>
-        <h1>${t.name}</h1>
-        <p class="about-role">${t.title} · Fondatore di CryptoFacile</p>
-        <p class="teacher-quote" style="margin-top:1rem;">"${t.quote}"</p>
-        <div class="teacher-badges" style="margin-top:1.25rem;">
-          ${t.badges.map(b => `<span class="teacher-badge"><span class="teacher-badge-icon">${b.icon}</span>${b.label}</span>`).join('')}
-        </div>
-      </div>
-    </div>`;
-}
-
 async function initGlossary() {
   if (document.body.dataset.page !== 'glossary') return;
   await loadArticles();
@@ -396,6 +353,5 @@ document.addEventListener('DOMContentLoaded', async () => {
   await initHubPage();
   await initGlossary();
   await initSearchPage();
-  initAboutPage();
   initFadeIn();
 });

@@ -332,6 +332,8 @@ p { margin-bottom: 1rem; }
   padding: 2.5rem 0;
   background: var(--white);
   border-bottom: 2px solid var(--primary-light);
+  position: relative;
+  z-index: 2;
 }
 .teacher-card {
   display: grid;
@@ -362,10 +364,10 @@ p { margin-bottom: 1rem; }
     0 12px 40px rgba(0,200,150,0.2),
     0 0 0 3px var(--primary);
 }
-.teacher-card.visible,
-.about-hero.visible {
-  opacity: 1;
-  transform: none;
+.teacher-section .teacher-card,
+.about-hero {
+  opacity: 1 !important;
+  transform: none !important;
 }
 .teacher-photo-badge {
   position: absolute;

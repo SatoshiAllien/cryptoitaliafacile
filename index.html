@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" href="assets/img/teacher.jpg">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='16' fill='%2300C896'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='bold' fill='white'>CF</text></svg>">
   <script type="application/ld+json">
   {
@@ -62,7 +63,24 @@
 
     <section class="teacher-section" id="teacher-profile">
       <div class="container">
-        <div class="teacher-card fade-in" id="teacher-card"></div>
+        <div class="teacher-card">
+          <div class="teacher-photo-wrap">
+            <img src="assets/img/teacher.jpg?v=2" alt="Stefano — Insegnante crypto professionale" class="teacher-photo" width="280" height="280" fetchpriority="high">
+            <span class="teacher-photo-badge">🎓 Insegnante</span>
+          </div>
+          <div class="teacher-content">
+            <span class="section-label">👨‍🏫 Chi ti guida</span>
+            <h2>Stefano — <span class="teacher-title">Insegnante crypto professionale</span></h2>
+            <p class="teacher-quote">"Ti accompagno passo dopo passo nel mondo crypto — con parole semplici, esempi pratici e zero hype. Il mio obiettivo è che tu capisca davvero, non che compri alla cieca."</p>
+            <div class="teacher-badges">
+              <span class="teacher-badge"><span class="teacher-badge-icon">🎓</span>Guide passo-passo</span>
+              <span class="teacher-badge"><span class="teacher-badge-icon">🛡️</span>Sicurezza prima di tutto</span>
+              <span class="teacher-badge"><span class="teacher-badge-icon">✨</span>Linguaggio semplice</span>
+              <span class="teacher-badge"><span class="teacher-badge-icon">🤝</span>Per principianti</span>
+            </div>
+            <a href="chi-siamo/index.html" class="btn btn-primary btn-sm">Scopri di più su di me →</a>
+          </div>
+        </div>
       </div>
     </section>
 

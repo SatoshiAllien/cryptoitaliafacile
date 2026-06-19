@@ -3,6 +3,14 @@ const SITE_CONFIG = {
   domain: 'cryptofacile.com',
   siteUrl: 'https://satoshiallien.github.io/cryptoitaliafacile/',
   tagline: 'Notizie e crypto, facili e semplici.',
+  legacyBrand: {
+    name: 'CryptoFacile',
+    tagline: 'La crypto spiegata facile'
+  },
+  legacyBrand: {
+    name: 'CryptoFacile',
+    tagline: 'La crypto spiegata facile'
+  },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
   email: 'info@cryptofacile.com',

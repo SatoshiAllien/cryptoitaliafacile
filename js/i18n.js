@@ -31,6 +31,8 @@ const TRANSLATIONS = {
       disclaimer: 'I contenuti di The Little Satoshi News sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.'
     },
     home: {
+      cryptoFacileName: 'CryptoFacile',
+      cryptoFacileTagline: 'La crypto spiegata facile',
       welcome: 'Ciao! Sei nel posto giusto per imparare',
       welcomeLabel: 'Benvenuto',
       welcomeBadge: 'Breaking News',
@@ -251,6 +253,8 @@ const TRANSLATIONS = {
       disclaimer: 'The Little Satoshi News content is for educational purposes only and does not constitute financial advice. Investing in crypto involves risks.'
     },
     home: {
+      cryptoFacileName: 'CryptoFacile',
+      cryptoFacileTagline: 'Crypto explained the easy way',
       welcome: 'Hi! You\'re in the right place to learn',
       welcomeLabel: 'Welcome',
       welcomeBadge: 'Breaking News',

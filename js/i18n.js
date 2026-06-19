@@ -54,6 +54,9 @@ const TRANSLATIONS = {
       tipsLabel: 'Tips', tipsTitle: 'Crypto Tips', tipsDesc: 'Consigli brevi e pratici da applicare subito', tipsLink: 'Tutti i tips →',
       pathLabel: 'Percorso', pathTitle: 'Percorso principianti', pathDesc: '5 step semplici per passare da zero al tuo primo wallet',
       toolsTitle: 'Strumenti consigliati', toolsDesc: 'Wallet, exchange e strumenti che usiamo nelle nostre guide',
+      socialLabel: 'Social', socialTitle: 'Seguici sui social',
+      socialDesc: 'Tips, guide brevi e video su Facebook, Instagram e TikTok.',
+      socialLink: 'Tutti i profili →',
       nlTitle: '1 tip di sicurezza a settimana',
       nlDesc: 'Iscriviti alla newsletter gratuita e ricevi subito la Checklist Sicurezza Crypto — 25 punti da verificare oggi.',
       nlNote: 'Niente spam. Solo contenuti educativi. Cancellati quando vuoi.'
@@ -255,6 +258,9 @@ const TRANSLATIONS = {
       tipsLabel: 'Tips', tipsTitle: 'Crypto Tips', tipsDesc: 'Short, practical advice you can use right away', tipsLink: 'All tips →',
       pathLabel: 'Path', pathTitle: 'Beginner path', pathDesc: '5 simple steps from zero to your first wallet',
       toolsTitle: 'Recommended tools', toolsDesc: 'Wallets, exchanges and tools we use in our guides',
+      socialLabel: 'Social', socialTitle: 'Follow us on social',
+      socialDesc: 'Tips, short guides and videos on Facebook, Instagram and TikTok.',
+      socialLink: 'All profiles →',
       nlTitle: '1 security tip per week',
       nlDesc: 'Subscribe to the free newsletter and get the Crypto Security Checklist — 25 points to verify today.',
       nlNote: 'No spam. Educational content only. Unsubscribe anytime.'

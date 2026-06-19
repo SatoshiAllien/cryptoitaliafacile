@@ -237,6 +237,11 @@ async function initHomepage() {
       </div>`;
     }).join('');
   }
+
+  const homeSocial = document.getElementById('home-social-links');
+  if (homeSocial && SITE_CONFIG.social) {
+    homeSocial.innerHTML = renderSocialLinks();
+  }
 }
 
 function initHubI18n() {

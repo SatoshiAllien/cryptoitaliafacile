@@ -457,6 +457,8 @@ async function bootApp() {
   await initSearchPage();
   initSocialPage();
   await initBitcoinNewsSession();
+  await initNewsHomePreview();
+  await initNewsHub();
   applyPageTranslations();
   initFadeIn();
 }
@@ -476,6 +478,8 @@ window.addEventListener('langchange', async () => {
   await initSearchPage();
   initSocialPage();
   await initBitcoinNewsSession();
+  await initNewsHomePreview();
+  await initNewsHub();
   applyPageTranslations();
   initFadeIn();
 });

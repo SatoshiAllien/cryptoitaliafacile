@@ -57,6 +57,7 @@ const SITE_CONFIG = {
     },
     { label: 'Crypto Tips', href: 'crypto-tips/index.html' },
     { label: 'Trend', href: 'trend/index.html' },
+    { label: 'News', href: 'news/index.html' },
     { label: 'Sicurezza', href: 'sicurezza/index.html' },
     { label: 'Cardano', href: 'cardano/index.html' },
     { label: 'Strumenti', href: 'strumenti/index.html' }

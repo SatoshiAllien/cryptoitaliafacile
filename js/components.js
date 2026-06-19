@@ -2,6 +2,7 @@ const NAV_I18N = {
   'guide/index.html': 'nav.guide',
   'crypto-tips/index.html': 'nav.cryptoTips',
   'trend/index.html': 'nav.trend',
+  'news/index.html': 'nav.news',
   'sicurezza/index.html': 'nav.sicurezza',
   'cardano/index.html': 'nav.cardano',
   'strumenti/index.html': 'nav.strumenti',
@@ -187,6 +188,7 @@ function renderFooter() {
               <a href="${base}glossario/index.html">${t('nav.glossario')}</a>
               <a href="${base}strumenti/index.html">${t('nav.strumenti')}</a>
               <a href="${base}trend/index.html">${t('nav.trend')}</a>
+              <a href="${base}news/index.html">${t('nav.news')}</a>
               <a href="${base}crypto-tips/index.html">${t('nav.cryptoTips')}</a>
               <a href="${base}newsletter/index.html">${t('nav.newsletter')}</a>
               <a href="${base}social/index.html">${t('nav.social')}</a>

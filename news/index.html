@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tutte le news crypto in un unico posto: X (BitcoinMagazine, Strategy, CPOfficialtx), trend e aggiornamenti del sito.">
+  <title>News — The Little Satoshi News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-hub="news">
+  <div id="site-header"></div>
+  <main class="container">
+    <section class="page-hero page-hero--news">
+      <h1>News</h1>
+      <p>Tutte le notizie aggregate: feed X, trend crypto e aggiornamenti The Little Satoshi News.</p>
+      <p class="news-hub-sources">
+        <span>@BitcoinMagazine</span>
+        <span>@Strategy</span>
+        <span>@CPOfficialtx</span>
+        <span data-i18n="newsHub.plusSite">+ sito</span>
+      </p>
+    </section>
+
+    <section class="news-hub-panel">
+      <div class="news-hub-toolbar">
+        <div class="btc-news-filters news-hub-filters" id="news-hub-filters">
+          <button type="button" class="btc-news-filter active" data-news-filter="all" data-i18n="newsHub.filterAll">Tutte</button>
+          <button type="button" class="btc-news-filter" data-news-filter="x" data-i18n="newsHub.filterX">Da X</button>
+          <button type="button" class="btc-news-filter" data-news-filter="trend" data-i18n="newsHub.filterTrend">Trend</button>
+          <button type="button" class="btc-news-filter" data-news-filter="tip" data-i18n="newsHub.filterTips">Tips</button>
+          <button type="button" class="btc-news-filter" data-news-filter="site" data-i18n="newsHub.filterSite">Dal sito</button>
+        </div>
+        <div class="news-hub-actions">
+          <span class="news-hub-count"><strong id="news-hub-count">0</strong> <span data-i18n="newsHub.items">notizie</span></span>
+          <button type="button" class="btn btn-secondary btn-sm" id="news-hub-export" data-i18n="newsHub.exportAll">Esporta feed</button>
+        </div>
+      </div>
+      <div class="btc-news-list news-hub-list" id="news-hub-list"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/bitcoin-news.js"></script>
+  <script src="../js/news-hub.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

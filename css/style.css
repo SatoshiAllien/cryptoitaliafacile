@@ -1193,6 +1193,50 @@ p { margin-bottom: 1rem; }
   color: var(--text-muted);
   padding: 1rem 0;
 }
+.page-hero--news h1 {
+  background: linear-gradient(90deg, #F7931A 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.news-hub-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+.news-hub-sources span {
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-muted);
+}
+.news-hub-panel {
+  margin-bottom: 3rem;
+}
+.news-hub-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.news-hub-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.news-hub-count {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.news-hub-list {
+  margin-top: 0.5rem;
+}
 @media (min-width: 768px) {
   .btc-news-feed { grid-template-columns: repeat(2, 1fr); }
   .btc-news-list { grid-template-columns: repeat(2, 1fr); }

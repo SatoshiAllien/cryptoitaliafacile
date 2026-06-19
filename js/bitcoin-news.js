@@ -31,6 +31,7 @@ function getBitcoinNewsItemUrl(item) {
 
 function getBitcoinNewsItemLabel(item) {
   if (item.sourceHandle) return item.sourceHandle;
+  if (item.source && !item.external) return item.source;
   return t(`btcNews.categories.${item.category}`) || BTC_NEWS_LABELS[item.category] || item.category;
 }
 

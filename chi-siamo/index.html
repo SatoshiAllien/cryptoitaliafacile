@@ -42,29 +42,5 @@
   <script src="../js/site-config.js"></script>
   <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const el = document.getElementById('about-teacher');
-      const t = SITE_CONFIG.teacher;
-      if (!el || !t) return;
-      const base = getBasePath();
-      el.innerHTML = `
-        <div class="about-hero-inner">
-          <div class="teacher-photo-wrap">
-            <img src="${base}${t.photo}" alt="${t.name} — ${t.title}" class="teacher-photo" width="300" height="300" loading="lazy">
-            <span class="teacher-photo-badge">🎓 Insegnante</span>
-          </div>
-          <div>
-            <span class="section-label">Chi siamo</span>
-            <h1>${t.name}</h1>
-            <p class="about-role">${t.title} · Fondatore di CryptoFacile</p>
-            <p class="teacher-quote" style="margin-top:1rem;">"${t.quote}"</p>
-            <div class="teacher-badges" style="margin-top:1.25rem;">
-              ${t.badges.map(b => `<span class="teacher-badge"><span class="teacher-badge-icon">${b.icon}</span>${b.label}</span>`).join('')}
-            </div>
-          </div>
-        </div>`;
-    });
-  </script>
 </body>
 </html>

@@ -123,6 +123,23 @@ const SITE_CONFIG = {
   ]
 };
 
+function getSiteRoot() {
+  const path = window.location.pathname;
+  const repoRoots = ['cryptoitaliafacile', 'cryptofacile'];
+  for (const root of repoRoots) {
+    const marker = `/${root}`;
+    const idx = path.indexOf(marker);
+    if (idx !== -1) return `${path.substring(0, idx + marker.length)}/`;
+  }
+  return '/';
+}
+
+function getAssetUrl(relativePath) {
+  const root = getSiteRoot();
+  const clean = relativePath.replace(/^\//, '');
+  return root === '/' ? `${getBasePath()}${clean}` : `${root}${clean}`;
+}
+
 function getBasePath() {
   const path = window.location.pathname;
   const repoRoots = ['cryptoitaliafacile', 'cryptofacile'];

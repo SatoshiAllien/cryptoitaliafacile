@@ -103,11 +103,23 @@ async function performSearch(query, container, limit = 20) {
   container.innerHTML = html;
 }
 
+let fadeObserver = null;
+
 function initFadeIn() {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  if (!fadeObserver) {
+    fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.05, rootMargin: '40px' });
+  }
+
+  document.querySelectorAll('.fade-in:not([data-fade-watched])').forEach(el => {
+    el.dataset.fadeWatched = '1';
+    fadeObserver.observe(el);
+    const rect = el.getBoundingClientRect();
+    if (rect.height > 0 && rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    }
+  });
 }
 
 function initNewsletter() {
@@ -138,9 +150,11 @@ async function initHomepage() {
   const teacherCard = document.getElementById('teacher-card');
   if (teacherCard && SITE_CONFIG.teacher) {
     const t = SITE_CONFIG.teacher;
+    const photoUrl = getAssetUrl(t.photo);
+    teacherCard.classList.add('visible');
     teacherCard.innerHTML = `
       <div class="teacher-photo-wrap">
-        <img src="${base}${t.photo}" alt="${t.name} — ${t.title}" class="teacher-photo" width="280" height="280" loading="lazy">
+        <img src="${photoUrl}" alt="${t.name} — ${t.title}" class="teacher-photo" width="280" height="280" loading="eager" decoding="async">
         <span class="teacher-photo-badge">🎓 Insegnante</span>
       </div>
       <div class="teacher-content">
@@ -256,6 +270,31 @@ async function initHubPage() {
   render(filter);
 }
 
+function initAboutPage() {
+  const el = document.getElementById('about-teacher');
+  const t = SITE_CONFIG.teacher;
+  if (!el || !t) return;
+  const base = getBasePath();
+  const photoUrl = getAssetUrl(t.photo);
+  el.classList.add('visible');
+  el.innerHTML = `
+    <div class="about-hero-inner">
+      <div class="teacher-photo-wrap">
+        <img src="${photoUrl}" alt="${t.name} — ${t.title}" class="teacher-photo" width="300" height="300" loading="eager" decoding="async">
+        <span class="teacher-photo-badge">🎓 Insegnante</span>
+      </div>
+      <div>
+        <span class="section-label">Chi siamo</span>
+        <h1>${t.name}</h1>
+        <p class="about-role">${t.title} · Fondatore di CryptoFacile</p>
+        <p class="teacher-quote" style="margin-top:1rem;">"${t.quote}"</p>
+        <div class="teacher-badges" style="margin-top:1.25rem;">
+          ${t.badges.map(b => `<span class="teacher-badge"><span class="teacher-badge-icon">${b.icon}</span>${b.label}</span>`).join('')}
+        </div>
+      </div>
+    </div>`;
+}
+
 async function initGlossary() {
   if (document.body.dataset.page !== 'glossary') return;
   await loadArticles();
@@ -357,4 +396,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await initHubPage();
   await initGlossary();
   await initSearchPage();
+  initAboutPage();
+  initFadeIn();
 });

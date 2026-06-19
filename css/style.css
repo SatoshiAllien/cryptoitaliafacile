@@ -350,15 +350,22 @@ p { margin-bottom: 1rem; }
   width: min(240px, 70vw);
 }
 .teacher-photo {
+  display: block;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 15%;
   border-radius: var(--radius-lg);
   border: 4px solid var(--white);
+  background: var(--white);
   box-shadow:
     0 12px 40px rgba(0,200,150,0.2),
     0 0 0 3px var(--primary);
+}
+.teacher-card.visible,
+.about-hero.visible {
+  opacity: 1;
+  transform: none;
 }
 .teacher-photo-badge {
   position: absolute;

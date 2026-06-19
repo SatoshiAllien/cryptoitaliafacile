@@ -69,8 +69,8 @@ const SITE_CONFIG = {
     {
       id: 'x',
       name: 'X',
-      handle: '@RapidResponse47',
-      url: 'https://x.com/RapidResponse47',
+      handle: '@TheRiser100x',
+      url: 'https://x.com/TheRiser100x',
       color: '#E7E9EA',
       desc: 'Notizie rapide, analisi crypto e aggiornamenti in tempo reale.'
     },

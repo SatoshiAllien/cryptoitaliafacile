@@ -111,12 +111,20 @@ const SITE_CONFIG = {
 
 function getBasePath() {
   const path = window.location.pathname;
-  const depth = (path.match(/\//g) || []).length - 1;
-  if (path.includes('/cryptofacile/')) {
-    const sub = path.split('/cryptofacile/')[1] || '';
-    const levels = sub.split('/').filter(Boolean).length - (sub.endsWith('.html') ? 1 : 0);
-    return levels > 0 ? '../'.repeat(levels) : '';
+  const repoRoots = ['cryptoitaliafacile', 'cryptofacile'];
+
+  for (const root of repoRoots) {
+    const marker = `/${root}/`;
+    if (path.includes(marker)) {
+      const sub = path.split(marker)[1] || '';
+      const levels = sub.split('/').filter(Boolean).length - (sub.endsWith('.html') ? 1 : 0);
+      return levels > 0 ? '../'.repeat(levels) : '';
+    }
+    if (path === `/${root}` || path === `/${root}/` || path === `/${root}/index.html`) {
+      return '';
+    }
   }
+
   const segments = path.split('/').filter(Boolean);
   const htmlIdx = segments.findIndex(s => s.endsWith('.html'));
   const depth2 = htmlIdx > 0 ? htmlIdx : (segments.length > 0 && !segments[segments.length - 1].endsWith('.html') ? segments.length : 0);

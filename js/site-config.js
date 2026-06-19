@@ -12,10 +12,10 @@ const SITE_CONFIG = {
     photo: 'assets/img/teacher.jpg',
     quote: 'Ti accompagno passo dopo passo nel mondo crypto — con parole semplici, esempi pratici e zero hype. Il mio obiettivo è che tu capisca davvero, non che compri alla cieca.',
     badges: [
-      { icon: '🎓', label: 'Guide passo-passo' },
-      { icon: '🛡️', label: 'Sicurezza prima di tutto' },
-      { icon: '✨', label: 'Linguaggio semplice' },
-      { icon: '🤝', label: 'Per principianti' }
+      'Guide passo-passo',
+      'Sicurezza prima di tutto',
+      'Linguaggio semplice',
+      'Per principianti'
     ],
     href: 'chi-siamo/index.html'
   },
@@ -29,10 +29,10 @@ const SITE_CONFIG = {
   },
 
   trustBadges: [
-    { icon: '🎓', label: '100% educativo' },
-    { icon: '🛡️', label: 'Sicurezza prima di tutto' },
-    { icon: '📖', label: 'Passo dopo passo' },
-    { icon: '✨', label: 'Zero hype' }
+    '100% educativo',
+    'Sicurezza prima di tutto',
+    'Passo dopo passo',
+    'Zero hype'
   ],
 
   nav: [
@@ -54,20 +54,20 @@ const SITE_CONFIG = {
   ],
 
   categories: [
-    { id: 'principianti', label: 'Principianti', icon: '🌱', href: 'guide/index.html?filter=principianti', color: '#00C896', bg: '#D4FFF3' },
-    { id: 'sicurezza', label: 'Sicurezza', icon: '🔒', href: 'sicurezza/index.html', color: '#FF7B6B', bg: '#FFE8E5' },
-    { id: 'cardano', label: 'Cardano', icon: '💎', iconImg: 'assets/img/cardano-ada.png', href: 'cardano/index.html', color: '#4F8CFF', bg: '#E8F0FF' },
-    { id: 'defi', label: 'DeFi & Staking', icon: '📈', href: 'guide/index.html?filter=defi', color: '#9B6DFF', bg: '#F0E8FF' },
-    { id: 'trend', label: 'Trend', icon: '🚀', href: 'trend/index.html', color: '#FFC93C', bg: '#FFF5D6' },
-    { id: 'strumenti', label: 'Strumenti', icon: '🛠️', href: 'strumenti/index.html', color: '#38BDF8', bg: '#E0F7FE' }
+    { id: 'principianti', label: 'Principianti', abbr: 'P', href: 'guide/index.html?filter=principianti', color: '#00C896', bg: '#D4FFF3' },
+    { id: 'sicurezza', label: 'Sicurezza', abbr: 'S', href: 'sicurezza/index.html', color: '#FF7B6B', bg: '#FFE8E5' },
+    { id: 'cardano', label: 'Cardano', iconImg: 'assets/img/cardano-ada.png', href: 'cardano/index.html', color: '#4F8CFF', bg: '#E8F0FF' },
+    { id: 'defi', label: 'DeFi & Staking', abbr: 'D', href: 'guide/index.html?filter=defi', color: '#9B6DFF', bg: '#F0E8FF' },
+    { id: 'trend', label: 'Trend', abbr: 'T', href: 'trend/index.html', color: '#FFC93C', bg: '#FFF5D6' },
+    { id: 'strumenti', label: 'Strumenti', abbr: 'St', href: 'strumenti/index.html', color: '#38BDF8', bg: '#E0F7FE' }
   ],
 
   pathColors: ['#00C896', '#4F8CFF', '#FFC93C', '#9B6DFF', '#FF7B6B'],
 
   social: {
-    twitter: { url: 'https://twitter.com/cryptofacile', label: 'Twitter/X', icon: '𝕏' },
-    telegram: { url: 'https://t.me/cryptofacile', label: 'Telegram', icon: '✈️' },
-    youtube: { url: 'https://youtube.com/@cryptofacile', label: 'YouTube', icon: '▶️' }
+    twitter: { url: 'https://twitter.com/cryptofacile', label: 'X' },
+    telegram: { url: 'https://t.me/cryptofacile', label: 'TG' },
+    youtube: { url: 'https://youtube.com/@cryptofacile', label: 'YT' }
   },
 
   beginnerPath: [
@@ -85,7 +85,7 @@ const SITE_CONFIG = {
     {
       id: 'revolut',
       name: 'Revolut',
-      icon: '💳',
+      initial: 'R',
       badge: 'GRATIS',
       badgeType: 'free',
       tagline: 'Il conto che usiamo davvero',
@@ -100,7 +100,7 @@ const SITE_CONFIG = {
     {
       id: 'kraken',
       name: 'Kraken',
-      icon: '🐙',
+      initial: 'K',
       badge: 'BONUS',
       badgeType: 'bonus',
       tagline: 'Exchange consigliato ai principianti',

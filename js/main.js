@@ -142,7 +142,7 @@ async function initHomepage() {
   const trustEl = document.getElementById('trust-badges');
   if (trustEl) {
     trustEl.innerHTML = SITE_CONFIG.trustBadges.map(b =>
-      `<span class="trust-badge"><span class="trust-badge-icon">${b.icon}</span>${b.label}</span>`
+      `<span class="trust-badge">${b}</span>`
     ).join('');
   }
 
@@ -155,7 +155,7 @@ async function initHomepage() {
     affiliateGrid.innerHTML = SITE_CONFIG.affiliates.map(a => `
       <a href="${a.href}" class="affiliate-card affiliate-card--${a.badgeType} fade-in" target="_blank" rel="noopener noreferrer sponsored" style="--aff-accent:${a.accent};--aff-accent-light:${a.accentLight}">
         <div class="affiliate-card-top">
-          <span class="affiliate-card-icon">${a.icon}</span>
+          <span class="affiliate-card-initial">${a.initial || a.name[0]}</span>
           <span class="affiliate-card-badge affiliate-card-badge--${a.badgeType}">${a.badge}</span>
         </div>
         <span class="affiliate-card-tagline">${a.tagline}</span>
@@ -174,8 +174,8 @@ async function initHomepage() {
     catGrid.innerHTML = SITE_CONFIG.categories.map(c => `
       <a href="${base}${c.href}" class="category-card fade-in" style="--cat-color:${c.color};--cat-bg:${c.bg}">
         <span class="category-icon">${c.iconImg
-          ? `<img src="${base}${c.iconImg}" alt="${c.label}" class="category-icon-img" width="40" height="40" loading="lazy" />`
-          : c.icon}</span>
+          ? `<img src="${base}${c.iconImg}" alt="${c.label}" class="category-icon-img" width="28" height="28" loading="lazy" />`
+          : `<span class="category-abbr">${c.abbr || c.label[0]}</span>`}</span>
         <span class="category-label">${c.label}</span>
       </a>`).join('');
   }

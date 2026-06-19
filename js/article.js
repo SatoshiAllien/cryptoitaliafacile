@@ -18,7 +18,7 @@ const ARTICLE_CONTENT = {
         </ul>
         <p><strong>Vantaggi:</strong> facilità, liquidità, metodi di pagamento familiari.</p>
         <p><strong>Limiti:</strong> non controlli direttamente le chiavi private; devi fidarti della piattaforma per i fondi depositati.</p>
-        <div class="box box--tip"><span class="box-title">💡 Regola d'oro</span>L'exchange serve per comprare e vendere. Per conservare crypto a lungo termine, trasferiscile su un wallet personale.</div>
+        <div class="box box--tip"><span class="box-title">Regola d'oro</span>L'exchange serve per comprare e vendere. Per conservare crypto a lungo termine, trasferiscile su un wallet personale.</div>
       `},
       { id: 'perche-revolut', title: 'Perché serve un conto Revolut per iniziare', content: `
         <p>Non è obbligatorio, ma <strong>Revolut</strong> è uno degli strumenti più pratici per chi inizia con le crypto in Europa. Ecco perché.</p>
@@ -40,9 +40,9 @@ const ARTICLE_CONTENT = {
         <p>Alcune banche italiane classici bloccano o rallentano bonifici verso exchange crypto. Revolut, essendo fintech nativa digitale, di solito non presenta questo problema — i bonifici SEPA verso Kraken arrivano senza intoppi.</p>
         <h3>Come aprire un conto Revolut</h3>
         <p>Puoi registrarti gratuitamente tramite link di invito. L'apertura del conto base è gratis e non ci sono costi obbligatori per iniziare. Revolut offre periodicamente bonus o cashback ai nuovi utenti — le promozioni variano nel tempo.</p>
-        <p>👉 <strong>Link per aprire Revolut:</strong><br>
+        <p><strong>Link per aprire Revolut:</strong><br>
         <a href="https://revolut.com/referral/?referral-code=stefan2ayd!JUN1-26-AR&geo-redirect" target="_blank" rel="noopener noreferrer">revolut.com/referral — registrazione gratuita</a></p>
-        <div class="box box--warning"><span class="box-title">ℹ️ Trasparenza</span>Questo è un link referral: se ti registri tramite questo link, potremmo ricevere un piccolo beneficio senza costi aggiuntivi per te. Lo includiamo perché lo usiamo realmente e lo riteniamo utile per chi inizia.</div>
+        <div class="box box--warning"><span class="box-title">Trasparenza</span>Questo è un link referral: se ti registri tramite questo link, potremmo ricevere un piccolo beneficio senza costi aggiuntivi per te. Lo includiamo perché lo usiamo realmente e lo riteniamo utile per chi inizia.</div>
       `},
       { id: 'scegliere-exchange', title: 'Come scegliere un exchange affidabile', content: `
         <p>Prima di depositare soldi, controlla questi criteri:</p>
@@ -65,7 +65,7 @@ const ARTICLE_CONTENT = {
         <p>Carica foto del documento d'identità e un selfie. È obbligatorio per legge su exchange regolamentati. I tempi vanno da pochi minuti a 24 ore.</p></div>
         <div class="step-block"><h3>Passo 4 — Attiva il 2FA</h3>
         <p>Subito dopo la registrazione, attiva l'<strong>autenticazione a due fattori</strong> con Google Authenticator o Authy. <strong>Mai via SMS</strong> se puoi evitarlo.</p></div>
-        <div class="box box--danger"><span class="box-title">🚨 Attenzione</span>Verifica sempre l'URL: per Kraken è <strong>kraken.com</strong>. Il phishing è il metodo di truffa più comune.</div>
+        <div class="box box--danger"><span class="box-title">Attenzione</span>Verifica sempre l'URL: per Kraken è <strong>kraken.com</strong>. Il phishing è il metodo di truffa più comune.</div>
       `},
       { id: 'deposito-prelievo', title: 'Come depositare e prelevare', content: `
         <h3>Deposito con bonifico SEPA (consigliato)</h3>
@@ -85,7 +85,7 @@ const ARTICLE_CONTENT = {
           <li>ETH → rete Ethereum (ERC-20)</li>
           <li>USDT può essere ERC-20, TRC-20 o altro — devi scegliere la stessa rete su invio e ricezione</li>
         </ul>
-        <div class="box box--warning"><span class="box-title">⚠️ Errore comune</span>Inviare crypto sulla rete sbagliata può causare perdita permanente dei fondi. Controlla tre volte prima di confermare.</div>
+        <div class="box box--warning"><span class="box-title">Errore comune</span>Inviare crypto sulla rete sbagliata può causare perdita permanente dei fondi. Controlla tre volte prima di confermare.</div>
       `},
       { id: 'affiliazione-kraken', title: 'Programma referral Kraken', content: `
         <p>Molti exchange, incluso Kraken, hanno un <strong>programma referral</strong>: se ti registri tramite il link di un utente esistente, entrambi potete ricevere vantaggi (bonus, sconti sulle fee) quando si verificano determinate condizioni.</p>
@@ -96,10 +96,10 @@ const ARTICLE_CONTENT = {
           <li>Effettui il primo acquisto o raggiungi una soglia minima</li>
           <li>Eventuali bonus vengono accreditati secondo le promozioni attive</li>
         </ol>
-        <p>👉 <strong>Link referral Kraken:</strong><br>
+        <p><strong>Link referral Kraken:</strong><br>
         <a href="https://invite.kraken.com/JDNW/pql7tac5" target="_blank" rel="noopener noreferrer">invite.kraken.com — registrazione Kraken</a></p>
-        <p>👉 <strong>Codice affiliazione:</strong> <code>3h8q8cf5</code></p>
-        <div class="box box--warning"><span class="box-title">ℹ️ Trasparenza</span>È un link referral. Potremmo ricevere una commissione se ti registri e operi, senza costi extra per te. Le promozioni bonus dipendono dalle campagne attive di Kraken e possono cambiare.</div>
+        <p><strong>Codice affiliazione:</strong> <code>3h8q8cf5</code></p>
+        <div class="box box--warning"><span class="box-title">Trasparenza</span>È un link referral. Potremmo ricevere una commissione se ti registri e operi, senza costi extra per te. Le promozioni bonus dipendono dalle campagne attive di Kraken e possono cambiare.</div>
       `},
       { id: 'primo-acquisto-kraken', title: 'Come fare il primo acquisto su Kraken', content: `
         <div class="step-block"><h3>1. Deposita euro</h3>
@@ -112,7 +112,7 @@ const ARTICLE_CONTENT = {
         <p>Rivedi il riepilogo e conferma. Le crypto appariranno nel tuo saldo Kraken.</p></div>
         <div class="step-block"><h3>5. Preleva verso wallet personale (opzionale)</h3>
         <p>Per somme che vuoi conservare a lungo termine: vai su "Preleva", inserisci l'indirizzo del tuo wallet personale, seleziona la rete corretta e conferma. Fai un test con pochi euro prima.</p></div>
-        <div class="box box--tip"><span class="box-title">💡 Consiglio</span>Inizia con 20-50€ per fare pratica. Meglio sbagliare con poco che con molto.</div>
+        <div class="box box--tip"><span class="box-title">Consiglio</span>Inizia con 20-50€ per fare pratica. Meglio sbagliare con poco che con molto.</div>
       `},
       { id: 'sicurezza-principianti', title: 'Consigli di sicurezza per principianti', content: `
         <ul>
@@ -135,7 +135,7 @@ const ARTICLE_CONTENT = {
           <li><strong>Trasferisci su wallet personale</strong> — quando sei pronto per conservare a lungo termine</li>
         </ol>
         <p>I link referral (Revolut e Kraken) possono offrirti vantaggi all'iscrizione senza costi aggiuntivi. In futuro, quando ti sentirai sicuro, potrai esplorare wallet personali, Lightning Network e DeFi.</p>
-        <div class="box box--tip"><span class="box-title">💡 Prossimi passi su CryptoFacile</span>
+        <div class="box box--tip"><span class="box-title">Prossimi passi su CryptoFacile</span>
           <ul>
             <li><a href="articolo.html?slug=comprare-bitcoin-prima-volta">Come comprare Bitcoin per la prima volta</a></li>
             <li><a href="articolo.html?slug=creare-wallet-sicuro">Come creare un wallet sicuro</a></li>
@@ -170,7 +170,7 @@ const ARTICLE_CONTENT = {
           <li>💸 <strong>Costi bassissimi</strong> — spesso meno di 0,01€</li>
           <li>🪙 <strong>Micro-pagamenti</strong> — puoi inviare anche solo 10 sats (frazioni di centesimo)</li>
         </ul>
-        <div class="box box--tip"><span class="box-title">💡 In parole semplici</span>Se Bitcoin on-chain è come un bonifico bancario, Lightning è come pagare con il telefono al bar: immediato e pratico.</div>
+        <div class="box box--tip"><span class="box-title">In parole semplici</span>Se Bitcoin on-chain è come un bonifico bancario, Lightning è come pagare con il telefono al bar: immediato e pratico.</div>
       `},
       { id: 'cosa-sono-sats', title: 'Cosa sono i SATS', content: `
         <p>Un <strong>satoshi</strong> (abbreviato <strong>sat</strong> o <strong>sats</strong>) è la più piccola unità di Bitcoin.</p>
@@ -187,7 +187,7 @@ const ARTICLE_CONTENT = {
           <li><strong>3.500 sats</strong> — circa il costo di un caffè</li>
           <li><strong>10.000 sats</strong> — poche euro, utile per una mancia o micro-donazione</li>
         </ul>
-        <div class="box box--warning"><span class="box-title">⚠️ Nota</span>Il valore in euro dei sats cambia con il prezzo di Bitcoin. Controlla sempre il controvalore nell'app prima di pagare.</div>
+        <div class="box box--warning"><span class="box-title">Nota</span>Il valore in euro dei sats cambia con il prezzo di Bitcoin. Controlla sempre il controvalore nell'app prima di pagare.</div>
       `},
       { id: 'come-scala', title: 'Come scala il Lightning Network', content: `
         <h3>I canali di pagamento</h3>
@@ -199,7 +199,7 @@ const ARTICLE_CONTENT = {
         <p>Le transazioni Lightning avvengono <strong>off-chain</strong> (fuori dalla blockchain). Non aspetti i blocchi Bitcoin: il pagamento si propaga in rete in millisecondi.</p>
         <h3>Perché alleggerisce Bitcoin?</h3>
         <p>Milioni di micro-pagamenti Lightning non intasano la blockchain. Solo l'apertura e la chiusura dei canali richiedono una transazione on-chain. Tutto il resto avviene sulla rete Lightning.</p>
-        <div class="box box--tip"><span class="box-title">💡 Analogia</span>Il canale è come una tabaccheria prepagata: carichi 50€ una volta e poi compri sigarette, giornali e gratta e vinci senza pagare ogni volta con il bancomat.</div>
+        <div class="box box--tip"><span class="box-title">Analogia</span>Il canale è come una tabaccheria prepagata: carichi 50€ una volta e poi compri sigarette, giornali e gratta e vinci senza pagare ogni volta con il bancomat.</div>
       `},
       { id: 'wallet-lightning', title: 'Wallet Lightning compatibili', content: `
         <p>Per usare Lightning ti serve un <strong>wallet compatibile</strong>. Ecco le categorie principali — senza preferenze commerciali, solo differenze utili.</p>
@@ -216,7 +216,7 @@ const ARTICLE_CONTENT = {
         <p>Supportano lo standard <strong>LNURL</strong>: link e QR semplificati per ricevere pagamenti senza generare invoice manuali ogni volta. Molto comodi per mance e donazioni.</p>
         <h3>Wallet con NFC / Tap-to-Pay</h3>
         <p>Alcune app permettono di pagare avvicinando il telefono (NFC), come Apple Pay o Google Pay. Tecnologia ancora in crescita, ma promettente per i pagamenti fisici.</p>
-        <div class="box box--tip"><span class="box-title">💡 Consiglio</span>Se sei alle prime armi, inizia con un wallet custodial semplice. Quando ti senti sicuro, valuta un wallet non-custodial per somme più importanti.</div>
+        <div class="box box--tip"><span class="box-title">Consiglio</span>Se sei alle prime armi, inizia con un wallet custodial semplice. Quando ti senti sicuro, valuta un wallet non-custodial per somme più importanti.</div>
       `},
       { id: 'configurare-satoshi-wallet', title: 'Come configurare Satoshi Wallet', content: `
         <p><strong>Satoshi Wallet</strong> è un'app mobile che combina wallet Lightning, acquisto di sats e una mappa dei commercianti che accettano Bitcoin. Ecco la configurazione passo-passo.</p>
@@ -234,7 +234,7 @@ const ARTICLE_CONTENT = {
         <p>Per richiedere un pagamento specifico: imposta l'importo in sats, aggiungi una descrizione (opzionale) e genera il QR. Valido per un tempo limitato.</p></div>
         <div class="step-block"><h3>Passo 7 — Collegamento nodo (opzionale)</h3>
         <p>Alcune versioni avanzate permettono di collegarsi a un nodo Lightning personale. Per la maggior parte degli utenti non è necessario: l'app gestisce tutto in automatico.</p></div>
-        <div class="box box--danger"><span class="box-title">🚨 Mai</span>Condividere seed phrase, screenshot di backup o credenziali con chiunque — nemmeno con il "supporto" dell'app.</div>
+        <div class="box box--danger"><span class="box-title">Mai</span>Condividere seed phrase, screenshot di backup o credenziali con chiunque — nemmeno con il "supporto" dell'app.</div>
       `},
       { id: 'mappa-satoshi-wallet', title: 'Come usare la mappa di Satoshi Wallet', content: `
         <p>Una delle funzioni più utili di Satoshi Wallet è la <strong>mappa dei commercianti</strong> che accettano pagamenti Lightning.</p>
@@ -248,7 +248,7 @@ const ARTICLE_CONTENT = {
         <p>Al momento del pagamento: apri "Invia" nell'app, scansiona il <strong>QR Lightning</strong> del commerciante, verifica l'importo in sats e conferma. Il pagamento è istantaneo.</p></div>
         <div class="step-block"><h3>Verificare la transazione</h3>
         <p>Dopo il pagamento vedrai una spunta verde e il dettaglio nella cronologia. Il commerciante riceve conferma in tempo reale — niente attese di blocchi.</p></div>
-        <div class="box box--tip"><span class="box-title">💡 Consiglio</span>Prima di andare in un negozio, controlla sulla mappa che sia ancora attivo e che accetti Lightning. I dati possono cambiare.</div>
+        <div class="box box--tip"><span class="box-title">Consiglio</span>Prima di andare in un negozio, controlla sulla mappa che sia ancora attivo e che accetti Lightning. I dati possono cambiare.</div>
       `},
       { id: 'esempi-pratici', title: 'Esempi pratici', content: `
         <h3>Comprare un caffè in sats</h3>
@@ -265,7 +265,7 @@ const ARTICLE_CONTENT = {
         <p>I <strong>sats</strong> sono l'unità ideale per ragionare su questi pagamenti — più pratica del BTC intero.</p>
         <p>I <strong>wallet Lightning</strong> stanno diventando sempre più semplici: app come Satoshi Wallet abbassano la barriera d'ingresso per chi non è tecnico.</p>
         <p>La <strong>mappa dei commercianti</strong> collega la teoria alla pratica: trovi chi accetta Bitcoin nel mondo reale e paghi con un QR.</p>
-        <div class="box box--tip"><span class="box-title">💡 Prossimi passi</span>
+        <div class="box box--tip"><span class="box-title">Prossimi passi</span>
           <ul>
             <li>Leggi la guida <a href="articolo.html?slug=comprare-bitcoin-prima-volta">Come comprare Bitcoin</a> se non hai ancora BTC</li>
             <li>Consulta <a href="articolo.html?slug=proteggere-seed-phrase">Come proteggere la seed phrase</a> prima di usare qualsiasi wallet</li>
@@ -293,7 +293,7 @@ const ARTICLE_CONTENT = {
           <li><strong>Conto bancario o carta</strong> — per depositare euro</li>
           <li><strong>Un po' di pazienza</strong> — la verifica può richiedere da pochi minuti a 24 ore</li>
         </ul>
-        <div class="box box--tip"><span class="box-title">💡 Consiglio pratico</span>Inizia con pochi euro (anche 20€) per familiarizzare con il processo prima di investire somme più importanti.</div>
+        <div class="box box--tip"><span class="box-title">Consiglio pratico</span>Inizia con pochi euro (anche 20€) per familiarizzare con il processo prima di investire somme più importanti.</div>
       `},
       { id: 'scegliere-exchange', title: 'Passo 1: Scegliere un exchange sicuro', content: `
         <p>Un exchange è una piattaforma dove puoi comprare e vendere crypto con euro. Per l'Italia, ti consiglio exchange regolamentati come:</p>
@@ -302,7 +302,7 @@ const ARTICLE_CONTENT = {
           <li><strong>Coinbase</strong> — molto intuitivo per principianti</li>
           <li><strong>Young Platform</strong> — exchange italiano con supporto in italiano</li>
         </ul>
-        <div class="box box--warning"><span class="box-title">⚠️ Attenzione</span>Verifica sempre che l'URL sia corretto prima di inserire le tue credenziali. Il phishing è il metodo di truffa più comune.</div>
+        <div class="box box--warning"><span class="box-title">Attenzione</span>Verifica sempre che l'URL sia corretto prima di inserire le tue credenziali. Il phishing è il metodo di truffa più comune.</div>
       `},
       { id: 'registrazione', title: 'Passo 2: Registrazione e verifica', content: `
         <div class="step-block"><h3>2.1 Crea il tuo account</h3>
@@ -334,7 +334,7 @@ const ARTICLE_CONTENT = {
           <li>Non lasciare grandi quantità sull'exchange a lungo termine</li>
           <li>Tieni traccia dell'operazione per la dichiarazione fiscale</li>
         </ul>
-        <div class="box box--tip"><span class="box-title">💡 Prossimo passo</span>Leggi la nostra guida su <a href="articolo.html?slug=creare-wallet-sicuro">come creare un wallet sicuro</a>.</div>
+        <div class="box box--tip"><span class="box-title">Prossimo passo</span>Leggi la nostra guida su <a href="articolo.html?slug=creare-wallet-sicuro">come creare un wallet sicuro</a>.</div>
       `}
     ],
     faq: [
@@ -363,7 +363,7 @@ const ARTICLE_CONTENT = {
           <li>Apri l'app e seleziona "Crea nuovo wallet"</li>
           <li>Imposta un PIN forte o attiva la biometria</li>
         </ol></div>
-        <div class="box box--danger"><span class="box-title">🚨 Mai</span>Scaricare wallet da link ricevuti via email, Telegram o annunci. Solo store ufficiali.</div>
+        <div class="box box--danger"><span class="box-title">Mai</span>Scaricare wallet da link ricevuti via email, Telegram o annunci. Solo store ufficiali.</div>
       `},
       { id: 'seed-phrase', title: 'Passo 2: Salvare la seed phrase', content: `
         <p>L'app ti mostrerà <strong>12 o 24 parole</strong> in un ordine preciso. Questa è la tua seed phrase (chiave di recupero).</p>
@@ -373,7 +373,7 @@ const ARTICLE_CONTENT = {
           <li>Conservale in un posto sicuro, lontano da occhi indiscreti</li>
           <li>Fai una seconda copia e conservala in un luogo diverso</li>
         </ol>
-        <div class="box box--danger"><span class="box-title">🚨 Mai</span>Fotografare, fare screenshot, salvare su cloud, inviare via email o digitare su computer la seed phrase.</div>
+        <div class="box box--danger"><span class="box-title">Mai</span>Fotografare, fare screenshot, salvare su cloud, inviare via email o digitare su computer la seed phrase.</div>
       `},
       { id: 'verifica', title: 'Passo 3: Verificare il backup', content: `
         <p>Il wallet ti chiederà di reinserire alcune parole per confermare che le hai salvate correttamente. Fallo con calma.</p>
@@ -406,7 +406,7 @@ const ARTICLE_CONTENT = {
           <li><strong>2 supporti</strong> diversi (es. carta + metallo inciso)</li>
           <li><strong>1 copia</strong> in un luogo fisico diverso (es. cassetta di sicurezza)</li>
         </ul>
-        <div class="box box--tip"><span class="box-title">💡 Consiglio</span>Esistono piastre in acciaio per incidere la seed phrase: resistono a fuoco e acqua meglio della carta.</div>
+        <div class="box box--tip"><span class="box-title">Consiglio</span>Esistono piastre in acciaio per incidere la seed phrase: resistono a fuoco e acqua meglio della carta.</div>
       `},
       { id: 'errori', title: 'Errori da evitare assolutamente', content: `
         <ul>
@@ -457,7 +457,7 @@ const ARTICLE_CONTENT = {
           <li>Spendere o trasferire i tuoi ADA in qualsiasi momento</li>
           <li>Cambiare pool quando vuoi</li>
         </ul>
-        <div class="box box--tip"><span class="box-title">💡 Consiglio</span>Leggi la guida completa: <a href="articolo.html?slug=staking-ada">Staking ADA passo-passo</a>.</div>
+        <div class="box box--tip"><span class="box-title">Consiglio</span>Leggi la guida completa: <a href="articolo.html?slug=staking-ada">Staking ADA passo-passo</a>.</div>
       `},
       { id: 'ecosistema', title: 'L\'ecosistema Cardano', content: `
         <p>Oltre a ADA, su Cardano trovi:</p>
@@ -518,7 +518,7 @@ function generateGenericContent(article) {
         <div class="step-block"><h3>Passo 1 — Preparazione</h3><p>Raccogli le informazioni necessarie e assicurati di aver compreso i rischi base prima di procedere.</p></div>
         <div class="step-block"><h3>Passo 2 — Esecuzione</h3><p>Segui le istruzioni passo dopo passo, verificando ogni operazione prima di confermare.</p></div>
         <div class="step-block"><h3>Passo 3 — Verifica</h3><p>Controlla che tutto sia andato a buon fine e conserva traccia dell'operazione.</p></div>
-        <div class="box box--warning"><span class="box-title">⚠️ Attenzione</span>Questo contenuto ha scopo educativo. Non costituisce consulenza finanziaria. Investire in crypto comporta rischi.</div>
+        <div class="box box--warning"><span class="box-title">Attenzione</span>Questo contenuto ha scopo educativo. Non costituisce consulenza finanziaria. Investire in crypto comporta rischi.</div>
       `},
       { id: 'consigli', title: 'Consigli pratici', content: `
         <ul>

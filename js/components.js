@@ -42,9 +42,9 @@ function renderHeader() {
         </nav>
         <div class="header-actions">
           <button class="search-toggle" id="open-search" aria-label="Cerca">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </button>
-          <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">📧 Newsletter</a>
+          <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">Newsletter</a>
           <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
@@ -53,7 +53,7 @@ function renderHeader() {
       <div class="search-bar" id="search-bar" hidden>
         <div class="container">
           <div class="search-bar-inner">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             <input type="search" id="header-search" placeholder="Cerca guide, tips, termini… (es. seed phrase, staking ADA)" autocomplete="off">
             <button class="search-close" id="search-close" aria-label="Chiudi ricerca">✕</button>
           </div>
@@ -86,7 +86,7 @@ function renderHeader() {
             return `<a href="${base}${item.href}" class="mobile-nav-link">${item.label}</a>`;
           }).join('')}
           <a href="${base}glossario/index.html" class="mobile-nav-link">Glossario</a>
-          <a href="${base}newsletter/index.html" class="mobile-nav-link mobile-nav-link--cta">📧 Newsletter gratis</a>
+          <a href="${base}newsletter/index.html" class="mobile-nav-link mobile-nav-link--cta">Newsletter gratis</a>
         </nav>
       </div>
     </div>`;
@@ -95,7 +95,7 @@ function renderHeader() {
 function renderFooter() {
   const base = getBasePath();
   const social = Object.values(SITE_CONFIG.social).map(s =>
-    `<a href="${s.url}" class="social-link" aria-label="${s.label}" target="_blank" rel="noopener">${s.icon}</a>`
+    `<a href="${s.url}" class="social-link" aria-label="${s.label}" target="_blank" rel="noopener">${s.label}</a>`
   ).join('');
 
   return `
@@ -139,7 +139,7 @@ function renderFooter() {
           </div>
         </div>
         <div class="footer-disclaimer">
-          ⚠️ I contenuti di CryptoFacile sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.
+          I contenuti di CryptoFacile sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.
         </div>
         <div class="footer-bottom">
           <span>© ${SITE_CONFIG.year} CryptoFacile.com — ${SITE_CONFIG.tagline}</span>
@@ -169,7 +169,7 @@ function renderArticleCard(article, base) {
       <div class="article-card-body">
         <div class="article-card-top">
           <span class="badge ${diffClass}">${diffLabel}</span>
-          <span class="article-meta">⏱ ${article.readTime} min</span>
+          <span class="article-meta">${article.readTime} min</span>
         </div>
         <h3 class="article-card-title">${article.title}</h3>
         <p class="article-card-excerpt">${article.excerpt}</p>
@@ -181,7 +181,7 @@ function renderArticleCard(article, base) {
 function renderTipCard(tip, base) {
   return `
     <a href="${base}articolo.html?slug=${tip.slug}" class="tip-card">
-      <span class="tip-icon">💡</span>
+      <span class="tip-marker" aria-hidden="true"></span>
       <div>
         <h3>${tip.title}</h3>
         <p>${tip.excerpt}</p>

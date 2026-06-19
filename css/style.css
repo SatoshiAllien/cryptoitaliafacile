@@ -92,8 +92,8 @@ p { margin-bottom: 1rem; }
 .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
 .btn-cardano { gap: 0.5rem; }
 .btn-crypto-icon {
-  width: 20px; height: 20px; border-radius: 50%;
-  object-fit: cover; flex-shrink: 0;
+  width: 16px; height: 16px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0; opacity: 0.85;
 }
 
 /* Badges */
@@ -266,15 +266,14 @@ p { margin-bottom: 1rem; }
   justify-content: center; margin-bottom: 1.75rem;
 }
 .trust-badge {
-  display: inline-flex; align-items: center; gap: 0.35rem;
-  background: rgba(255,255,255,0.22);
+  display: inline-flex; align-items: center;
+  background: rgba(255,255,255,0.18);
   backdrop-filter: blur(6px);
-  padding: 0.35rem 0.85rem;
+  padding: 0.3rem 0.7rem;
   border-radius: var(--radius-full);
-  font-size: 0.8rem; font-weight: 600; color: #fff;
-  border: 1px solid rgba(255,255,255,0.25);
+  font-size: 0.72rem; font-weight: 500; color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.2);
 }
-.trust-badge-icon { font-size: 1rem; }
 .hero .btn-secondary {
   background: rgba(255,255,255,0.92);
   color: var(--text);
@@ -374,14 +373,17 @@ p { margin-bottom: 1rem; }
   bottom: -0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  padding: 0.4rem 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  background: var(--white);
+  color: var(--primary-dark);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   border-radius: var(--radius-full);
   white-space: nowrap;
-  box-shadow: 0 4px 16px rgba(0,200,150,0.3);
+  border: 1px solid var(--primary-light);
+  box-shadow: var(--shadow);
 }
 .teacher-content h2 {
   font-size: clamp(1.25rem, 3vw, 1.65rem);
@@ -410,17 +412,14 @@ p { margin-bottom: 1rem; }
 .teacher-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 0.85rem;
+  padding: 0.3rem 0.7rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text);
-  box-shadow: var(--shadow);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
 }
-.teacher-badge-icon { font-size: 1rem; }
 
 /* Affiliate offers — clickbait in evidenza */
 .affiliate-section {
@@ -452,13 +451,16 @@ p { margin-bottom: 1rem; }
   border: 2px solid rgba(255,201,60,0.4);
   box-shadow: 0 8px 32px rgba(255,201,60,0.15), inset 0 1px 0 rgba(255,255,255,0.08);
 }
-.affiliate-banner-pulse {
-  font-size: 1.75rem;
-  animation: affiliate-pulse 1.5s ease-in-out infinite;
-}
-@keyframes affiliate-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+.affiliate-banner-tag {
+  padding: 0.3rem 0.65rem;
+  background: rgba(255,201,60,0.2);
+  border: 1px solid rgba(255,201,60,0.35);
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-yellow);
 }
 .affiliate-banner-text {
   flex: 1;
@@ -540,7 +542,20 @@ p { margin-bottom: 1rem; }
   justify-content: space-between;
   margin-bottom: 0.75rem;
 }
-.affiliate-card-icon { font-size: 2.25rem; line-height: 1; }
+.affiliate-card-initial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  background: var(--aff-accent-light);
+  color: var(--aff-accent);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.85;
+}
 .affiliate-card-badge {
   padding: 0.35rem 0.85rem;
   border-radius: var(--radius-full);
@@ -678,11 +693,26 @@ p { margin-bottom: 1rem; }
   color: var(--text);
 }
 .category-card .category-label { color: var(--cat-color, var(--primary)); }
-.category-icon { font-size: 1.5rem; display: flex; align-items: center; justify-content: center; }
+.category-icon { display: flex; align-items: center; justify-content: center; }
+.category-abbr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--cat-color, var(--primary));
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  opacity: 0.75;
+}
 .category-icon-img {
-  width: 40px; height: 40px; border-radius: 50%;
+  width: 28px; height: 28px; border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,51,160,0.2);
+  border: 1.5px solid var(--cat-color, var(--primary));
+  opacity: 0.85;
 }
 .page-hero-brand {
   display: flex; align-items: center; gap: 1.25rem;
@@ -711,13 +741,15 @@ p { margin-bottom: 1rem; }
 .section-header { margin-bottom: 2rem; }
 .section-label {
   display: inline-block;
-  background: var(--primary-light);
-  color: var(--primary-dark);
-  padding: 0.3rem 0.85rem;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
+  background: transparent;
+  color: var(--text-light);
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -798,7 +830,15 @@ p { margin-bottom: 1rem; }
   color: var(--text);
   transform: translateX(4px);
 }
-.tip-icon { font-size: 1.25rem; flex-shrink: 0; }
+.tip-marker {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0.45;
+  flex-shrink: 0;
+  margin-top: 0.55rem;
+}
 .tip-card h3 { font-size: 0.95rem; margin-bottom: 0.25rem; }
 .tip-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
 
@@ -896,9 +936,10 @@ p { margin-bottom: 1rem; }
 .footer-links a:hover { color: var(--white); }
 .social-links { display: flex; gap: 0.75rem; margin-top: 1rem; }
 .social-link {
-  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,0.1); border-radius: var(--radius-sm);
-  text-decoration: none; font-size: 1rem; transition: background var(--transition);
+  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.08); border-radius: var(--radius-sm);
+  text-decoration: none; font-size: 0.65rem; font-weight: 700;
+  color: rgba(255,255,255,0.65); transition: background var(--transition);
 }
 .social-link:hover { background: rgba(255,255,255,0.2); }
 .footer-disclaimer {

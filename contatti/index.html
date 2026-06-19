@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contatta il team di The Little Satoshi News per domande, suggerimenti o collaborazioni.">
+  <title>Contatti — The Little Satoshi News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container static-page">
+    <h1>Contatti</h1>
+    <p>Hai una domanda, un suggerimento per una nuova guida o vuoi collaborare con noi? Scrivici!</p>
+
+    <form id="contact-form" style="margin-top:2rem;">
+      <div style="margin-bottom:1rem;">
+        <label for="name" style="display:block;font-weight:600;margin-bottom:0.35rem;">Nome</label>
+        <input type="text" id="name" required style="width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;">
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label for="email" style="display:block;font-weight:600;margin-bottom:0.35rem;">Email</label>
+        <input type="email" id="email" required style="width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;">
+      </div>
+      <div style="margin-bottom:1.5rem;">
+        <label for="message" style="display:block;font-weight:600;margin-bottom:0.35rem;">Messaggio</label>
+        <textarea id="message" rows="5" required style="width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;font-family:inherit;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Invia messaggio</button>
+    </form>
+
+    <p style="margin-top:2rem;color:var(--text-muted);">Oppure scrivici a <a href="mailto:info@cryptofacile.com">info@cryptofacile.com</a></p>
+    <p style="margin-top:1rem;color:var(--text-muted);">Seguici su <a href="#" data-facebook-link data-facebook-text="handle" target="_blank" rel="noopener noreferrer">@Bitcoin.Wizard1</a> su Facebook per tips e aggiornamenti.</p>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('contact-form')?.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Grazie per il messaggio! Ti risponderemo al più presto.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

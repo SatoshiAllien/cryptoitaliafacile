@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Facebook — The Little Satoshi News</title>
+  <style>
+    :root { --bg:#0a0a12; --surface:#12121f; --cyan:#00f0ff; --magenta:#ff2a6d; --text:#e8e8f0; --muted:#9a9ab0; --border:#2a2a3d; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .sub { color: var(--muted); margin-bottom: 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .card h2 { font-size: 1rem; color: var(--cyan); margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .preview { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .preview figure { margin: 0; }
+    .preview img { border-radius: 8px; border: 1px solid var(--border); display: block; }
+    .preview figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.35rem; }
+    .field { margin-bottom: 1rem; }
+    .field label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.35rem; }
+    .field-row { display: flex; gap: 0.5rem; align-items: flex-start; }
+    textarea, .value { flex: 1; width: 100%; min-height: 2.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 0.65rem 0.75rem; font: inherit; resize: vertical; }
+    .value { white-space: pre-wrap; }
+    button { flex-shrink: 0; background: transparent; border: 1px solid var(--cyan); color: var(--cyan); border-radius: 8px; padding: 0.5rem 0.85rem; cursor: pointer; font-weight: 600; }
+    button:hover { background: rgba(0,240,255,0.1); }
+    button.ok { border-color: #4ade80; color: #4ade80; }
+    ol { padding-left: 1.25rem; }
+    ol li { margin-bottom: 0.5rem; }
+    a { color: var(--cyan); }
+    .warn { border-left: 3px solid var(--magenta); padding-left: 1rem; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Setup Facebook — Bitcoin.Wizard1</h1>
+    <p class="sub">Informazioni allineate al sito The Little Satoshi News. Copia ogni campo e incollalo su Facebook.</p>
+    <p class="warn">Apri <a href="https://www.facebook.com/Bitcoin.Wizard1/" target="_blank" rel="noopener">facebook.com/Bitcoin.Wizard1</a> (devi essere loggato) → Modifica pagina / Modifica profilo pubblico.</p>
+    <p style="margin-bottom:1.5rem;"><a href="facebook-posts.html" style="color:var(--cyan);font-weight:600;">→ Pubblica tutti gli articoli su Facebook (testi pronti)</a></p>
+
+    <div class="card">
+      <h2>1 — Foto da caricare</h2>
+      <div class="preview">
+        <figure>
+          <img src="assets/img/facebook/profile-bitcoin-wizard.jpg" alt="Foto profilo" width="120" height="120">
+          <figcaption>Foto profilo (logo)</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/facebook/cover-cryptofacile.jpg" alt="Copertina" width="280" height="105">
+          <figcaption>Copertina</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/teacher.jpg" alt="Stefano" width="120" height="120" style="border-radius:50%">
+          <figcaption>Alternativa: foto Stefano</figcaption>
+        </figure>
+      </div>
+      <p style="font-size:0.9rem;color:var(--muted)">File sul PC (doppio clic per aprire la cartella):<br>
+        <code id="path-profile">C:\Users\krown\cryptofacile\assets\img\facebook\profile-bitcoin-wizard.jpg</code><br>
+        <code id="path-cover">C:\Users\krown\cryptofacile\assets\img\facebook\cover-cryptofacile.jpg</code>
+      </p>
+      <p><a href="assets/img/facebook/profile-bitcoin-wizard.jpg" download="profile-facebook-cryptofacile.jpg" class="btn-dl" style="display:inline-block;margin-top:0.5rem;padding:0.6rem 1rem;border:1px solid var(--cyan);border-radius:8px;color:var(--cyan);text-decoration:none;font-weight:600;">Scarica foto profilo</a></p>
+    </div>
+
+    <div class="card">
+      <h2>2 — Nome pagina / profilo</h2>
+      <div class="field">
+        <label>Nome visualizzato</label>
+        <div class="field-row">
+          <textarea id="f-name" readonly rows="1">The Little Satoshi News · Bitcoin Wizard</textarea>
+          <button type="button" data-copy="f-name">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>3 — Bio (breve, max ~101 caratteri)</h2>
+      <div class="field">
+        <label>Bio / Info</label>
+        <div class="field-row">
+          <textarea id="f-bio" readonly rows="3">Notizie crypto, chiare e semplici. Guide passo-passo, tips e sicurezza. 100% educativo, zero hype.</textarea>
+          <button type="button" data-copy="f-bio">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>4 — Chi siamo / Descrizione lunga</h2>
+      <div class="field">
+        <label>Descrizione</label>
+        <div class="field-row">
+          <textarea id="f-desc" readonly rows="8">The Little Satoshi News è il portale educativo che rende il mondo crypto accessibile a tutti, senza hype e senza complicazioni inutili.
+
+Guide passo-passo per principianti, Crypto Tips pratici, trend spiegati senza sensazionalismo, sezione Cardano e guide sulla sicurezza del wallet.
+
+Educare, non vendere. Ogni contenuto ha un solo scopo: aiutarti a capire e usare le criptovalute in sicurezza.
+
+Principi: Semplicità · Praticità · Sicurezza · Zero hype · 100% educativo</textarea>
+          <button type="button" data-copy="f-desc">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>5 — Link e contatti</h2>
+      <div class="field">
+        <label>Sito web (campo principale)</label>
+        <div class="field-row">
+          <textarea id="f-url" readonly rows="1">https://satoshiallien.github.io/cryptoitaliafacile/</textarea>
+          <button type="button" data-copy="f-url">Copia</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <div class="field-row">
+          <textarea id="f-email" readonly rows="1">info@cryptofacile.com</textarea>
+          <button type="button" data-copy="f-email">Copia</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Categoria suggerita</label>
+        <div class="field-row">
+          <textarea id="f-cat" readonly rows="1">Sito web educativo / Istruzione</textarea>
+          <button type="button" data-copy="f-cat">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>6 — Primo post (opzionale)</h2>
+      <div class="field">
+        <label>Testo post</label>
+        <div class="field-row">
+          <textarea id="f-post" readonly rows="6">The Little Satoshi News è online!
+
+Guide crypto passo-passo, tips di sicurezza e spiegazioni semplici — senza hype.
+
+Inizia da qui: https://satoshiallien.github.io/cryptoitaliafacile/
+
+#crypto #bitcoin #guide #educazione #sicurezza</textarea>
+          <button type="button" data-copy="f-post">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Passi su Facebook</h2>
+      <ol>
+        <li>Apri la pagina e clicca <strong>Modifica profilo pubblico</strong> o <strong>Modifica pagina</strong>.</li>
+        <li><strong>Foto profilo</strong> → clicca sulla foto profilo → <strong>Aggiorna foto profilo</strong> → carica <code>profile-bitcoin-wizard.jpg</code> (moneta Bitcoin dorata). Alternativa personale: <code>teacher.jpg</code>.</li>
+        <li><strong>Copertina</strong> → carica <code>cover-cryptofacile.jpg</code>.</li>
+        <li><strong>Nome</strong> → incolla il nome da sopra.</li>
+        <li><strong>Bio</strong> → incolla la bio breve.</li>
+        <li><strong>Dettagli / Informazioni</strong> → descrizione lunga, sito web, email, categoria.</li>
+        <li>Salva. Pubblica il primo post se vuoi.</li>
+      </ol>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const el = document.getElementById(btn.dataset.copy);
+        await navigator.clipboard.writeText(el.value);
+        btn.textContent = 'Copiato!';
+        btn.classList.add('ok');
+        setTimeout(() => { btn.textContent = 'Copia'; btn.classList.remove('ok'); }, 1500);
+      });
+    });
+  </script>
+</body>
+</html>

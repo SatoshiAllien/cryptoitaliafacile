@@ -1,0 +1,82 @@
+name: Facebook Auto Post
+
+on:
+  schedule:
+    # ~09:00 Europe/Rome (CEST)
+    - cron: "0 7 * * *"
+    # ~13:00 Europe/Rome
+    - cron: "0 11 * * *"
+    # ~19:00 Europe/Rome
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Slot (0=mattina, 1=pranzo, 2=sera)"
+        required: true
+        default: "0"
+        type: choice
+        options:
+          - "0"
+          - "1"
+          - "2"
+      dry_run:
+        description: "Solo test, non pubblicare"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tzdata
+        run: pip install tzdata
+
+      - name: Determine slot
+        id: slot
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "value=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            case "${{ github.event.schedule }}" in
+              "0 7 * * *") echo "value=0" >> "$GITHUB_OUTPUT" ;;
+              "0 11 * * *") echo "value=1" >> "$GITHUB_OUTPUT" ;;
+              "0 17 * * *") echo "value=2" >> "$GITHUB_OUTPUT" ;;
+              *) echo "value=0" >> "$GITHUB_OUTPUT" ;;
+            esac
+          fi
+
+      - name: Post to Facebook
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+        run: |
+          ARGS="--auto --slot ${{ steps.slot.outputs.value }}"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python scripts/post-to-facebook.py $ARGS
+
+      - name: Commit schedule state
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/facebook-schedule.json
+          if git diff --staged --quiet; then
+            echo "Nessun aggiornamento schedule."
+          else
+            git commit -m "chore: aggiorna facebook-schedule dopo auto-post"
+            git push
+          fi

@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Pubblica articoli su Facebook — The Little Satoshi News</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .fb-posts-hero { padding: 2.5rem 0 1.5rem; }
+    .fb-posts-hero h1 { margin-bottom: 0.5rem; }
+    .fb-posts-hero p { color: var(--text-muted); max-width: 52rem; }
+    .fb-plan {
+      background: rgba(0,240,255,0.06); border: 1px solid rgba(0,240,255,0.2);
+      border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem;
+    }
+    .fb-plan-head { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+    .fb-plan h2 { font-size: 1rem; margin: 0; color: var(--primary); }
+    .fb-plan-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .fb-plan-controls label { font-size: 0.85rem; color: var(--text-muted); }
+    .fb-plan-controls input[type="date"] {
+      background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      color: var(--text); padding: 0.45rem 0.65rem; font: inherit;
+    }
+    .fb-per-day { display: flex; gap: 0.35rem; }
+    .fb-per-day button {
+      padding: 0.45rem 0.85rem; border-radius: 999px; border: 1px solid var(--border);
+      background: transparent; color: var(--text-muted); cursor: pointer; font: inherit; font-size: 0.875rem;
+    }
+    .fb-per-day button.active { border-color: var(--primary); color: var(--primary); background: rgba(0,240,255,0.08); }
+    .fb-today-box {
+      background: rgba(24,119,242,0.08); border: 1px solid rgba(24,119,242,0.25);
+      border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1rem;
+    }
+    .fb-today-box h3 { margin: 0 0 0.75rem; font-size: 0.95rem; color: #1877F2; }
+    .fb-today-slots { display: grid; gap: 0.65rem; }
+    .fb-today-slot {
+      display: grid; grid-template-columns: 5.5rem 1fr auto; gap: 0.75rem; align-items: center;
+      padding: 0.65rem 0.75rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+    }
+    .fb-slot-time { font-size: 0.8rem; color: var(--text-muted); }
+    .fb-slot-time strong { display: block; color: var(--text); font-size: 0.9rem; }
+    .fb-slot-title { font-size: 0.9rem; line-height: 1.35; }
+    .fb-calendar { display: grid; gap: 0.85rem; max-height: 420px; overflow-y: auto; padding-right: 0.25rem; }
+    .fb-day-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.85rem 1rem;
+    }
+    .fb-day-card.is-today { border-color: rgba(24,119,242,0.45); box-shadow: 0 0 20px rgba(24,119,242,0.08); }
+    .fb-day-card h4 { margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--primary); }
+    .fb-day-card ul { margin: 0; padding-left: 1.1rem; color: var(--text-muted); font-size: 0.85rem; }
+    .fb-day-card li { margin-bottom: 0.3rem; }
+    .fb-toolbar {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+      margin: 1.5rem 0; padding: 1rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .fb-toolbar input[type="search"] {
+      flex: 1; min-width: 200px; padding: 0.65rem 0.85rem;
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); color: var(--text); font: inherit;
+    }
+    .fb-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .fb-filter {
+      padding: 0.45rem 0.85rem; border-radius: 999px; border: 1px solid var(--border);
+      background: transparent; color: var(--text-muted); cursor: pointer; font: inherit; font-size: 0.875rem;
+    }
+    .fb-filter.active { border-color: var(--primary); color: var(--primary); background: rgba(0,240,255,0.08); }
+    .fb-stats { font-size: 0.875rem; color: var(--text-muted); margin-left: auto; }
+    .fb-grid { display: grid; gap: 1rem; padding-bottom: 3rem; }
+    .fb-post-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 1.25rem; transition: border-color var(--transition);
+    }
+    .fb-post-card.posted { border-color: rgba(74, 222, 128, 0.45); }
+    .fb-post-card.scheduled-today { border-color: rgba(24, 119, 242, 0.35); }
+    .fb-post-card-top { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
+    .fb-post-card h2 { font-size: 1.05rem; margin: 0 0 0.75rem; line-height: 1.4; }
+    .fb-post-preview {
+      width: 100%; min-height: 8rem; resize: vertical; background: var(--bg-alt);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      color: var(--text); padding: 0.75rem; font: inherit; font-size: 0.9rem; line-height: 1.5;
+    }
+    .fb-post-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.85rem; }
+    .fb-post-actions .btn-facebook svg { width: 16px; height: 16px; }
+    @media (min-width: 768px) { .fb-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) {
+      .fb-today-slot { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-page="fb-posts">
+  <div id="site-header"></div>
+  <main class="container">
+    <section class="fb-posts-hero">
+      <span class="section-label">Facebook</span>
+      <h1>Pubblica i tuoi articoli su Facebook</h1>
+      <p>Piano <strong>2–3 post al giorno</strong> con orari consigliati. Copia i testi pronti e incollali su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
+      <p style="margin-top:0.75rem;"><a href="facebook-auto-setup.html" class="btn btn-primary btn-sm" style="display:inline-flex;text-decoration:none;">⚡ Attiva post automatici</a></p>
+    </section>
+
+    <div class="fb-plan">
+      <div class="fb-plan-head">
+        <h2>Calendario pubblicazione</h2>
+        <div class="fb-plan-controls">
+          <label>Post al giorno:</label>
+          <div class="fb-per-day" id="fb-per-day">
+            <button type="button" data-per-day="2">2 post</button>
+            <button type="button" data-per-day="3" class="active">3 post</button>
+          </div>
+          <label>Inizio piano:</label>
+          <input type="date" id="fb-start-date">
+        </div>
+      </div>
+
+      <div class="fb-today-box" id="fb-today-box"></div>
+      <div class="fb-calendar" id="fb-calendar"></div>
+    </div>
+
+    <div class="fb-toolbar">
+      <input type="search" id="fb-search" placeholder="Cerca articolo…" autocomplete="off">
+      <div class="fb-filters" id="fb-filters">
+        <button class="fb-filter" data-filter="today">Oggi</button>
+        <button class="fb-filter active" data-filter="featured">In evidenza</button>
+        <button class="fb-filter" data-filter="all">Tutti</button>
+        <button class="fb-filter" data-filter="guide">Guide</button>
+        <button class="fb-filter" data-filter="tip">Tips</button>
+        <button class="fb-filter" data-filter="trend">Trend</button>
+        <button class="fb-filter" data-filter="cardano">Cardano</button>
+        <button class="fb-filter" data-filter="sicurezza">Sicurezza</button>
+      </div>
+      <span class="fb-stats" id="fb-stats"></span>
+    </div>
+
+    <div class="fb-grid" id="fb-posts-grid"></div>
+  </main>
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/facebook-posts.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const POSTED_KEY = 'cryptofacile_fb_posted';
+    const START_KEY = 'cryptofacile_fb_schedule_start';
+    const PER_DAY_KEY = 'cryptofacile_fb_posts_per_day';
+
+    let articles = [];
+    let plan = [];
+    let postsPerDay = 3;
+    let startDate = new Date().toISOString().slice(0, 10);
+    let todaySlugs = new Set();
+
+    function getPostedSlugs() {
+      try { return JSON.parse(localStorage.getItem(POSTED_KEY) || '[]'); } catch { return []; }
+    }
+
+    function markPosted(slug) {
+      const slugs = getPostedSlugs();
+      if (!slugs.includes(slug)) {
+        slugs.push(slug);
+        localStorage.setItem(POSTED_KEY, JSON.stringify(slugs));
+      }
+    }
+
+    function matchesFilter(article, filter) {
+      if (filter === 'all') return true;
+      if (filter === 'today') return todaySlugs.has(article.slug);
+      if (filter === 'featured') return article.featured || article.popular;
+      return article.category === filter;
+    }
+
+    function renderCard(article, posted) {
+      const post = buildFacebookPost(article);
+      const url = getArticleUrl(article.slug);
+      const shareUrl = getFacebookShareUrl(url);
+      const label = FB_POST_LABELS[article.category] || article.category;
+      const isToday = todaySlugs.has(article.slug);
+      return `
+        <article class="fb-post-card${posted ? ' posted' : ''}${isToday ? ' scheduled-today' : ''}" data-slug="${article.slug}">
+          <div class="fb-post-card-top">
+            <span class="badge badge--${article.difficulty}">${label}</span>
+            ${isToday ? '<span class="badge" style="background:rgba(24,119,242,0.12);color:#1877F2;border:1px solid rgba(24,119,242,0.25)">Oggi</span>' : ''}
+            ${article.popular ? '<span class="badge" style="background:rgba(252,238,10,0.12);color:var(--accent-yellow);border:1px solid rgba(252,238,10,0.25)">Popolare</span>' : ''}
+            ${posted ? '<span class="badge" style="background:rgba(74,222,128,0.12);color:#4ade80;border:1px solid rgba(74,222,128,0.25)">Pubblicato</span>' : ''}
+          </div>
+          <h2>${article.title}</h2>
+          <textarea class="fb-post-preview" readonly rows="7"></textarea>
+          <div class="fb-post-actions">
+            <button type="button" class="btn btn-facebook btn-sm" data-copy-post>
+              ${SOCIAL_ICONS.facebook} Copia post
+            </button>
+            <a href="${shareUrl}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Condividi link</a>
+            <a href="${getFacebookPageUrl()}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer">Apri Facebook</a>
+            <button type="button" class="btn btn-ghost btn-sm" data-mark-posted>Segna pubblicato</button>
+          </div>
+        </article>`;
+    }
+
+    function renderSchedule() {
+      plan = buildDailyPlan(articles, postsPerDay);
+      const todayBox = document.getElementById('fb-today-box');
+      const calendar = document.getElementById('fb-calendar');
+      const todayEntry = getTodayPlanDay(plan, startDate);
+      todaySlugs = new Set((todayEntry?.posts || []).map(p => p.article.slug));
+
+      if (todayBox) {
+        if (!todayEntry) {
+          todayBox.innerHTML = '<h3>Nessun post programmato per oggi</h3><p style="color:var(--text-muted);margin:0;font-size:0.9rem;">Il piano è finito o non è ancora iniziato. Cambia la data di inizio o resetta i post pubblicati.</p>';
+        } else {
+          const dateLabel = formatScheduleDate(startDate, plan.indexOf(todayEntry));
+          todayBox.innerHTML = `
+            <h3>Oggi — ${dateLabel} (${todayEntry.posts.length} post)</h3>
+            <div class="fb-today-slots">
+              ${todayEntry.posts.map((p, i) => `
+                <div class="fb-today-slot">
+                  <div class="fb-slot-time"><strong>${p.slot.label}</strong>${p.slot.time}</div>
+                  <div class="fb-slot-title">${p.article.title}</div>
+                  <button type="button" class="btn btn-facebook btn-sm" data-copy-today="${p.article.slug}">
+                    ${SOCIAL_ICONS.facebook} Copia
+                  </button>
+                </div>
+              `).join('')}
+            </div>
+            <button type="button" class="btn btn-primary btn-sm" style="margin-top:0.85rem" id="fb-copy-all-today">
+              Copia tutti i post di oggi
+            </button>`;
+        }
+      }
+
+      if (calendar) {
+        const showDays = plan.slice(0, 14);
+        const todayIdx = plan.indexOf(todayEntry);
+        calendar.innerHTML = showDays.map((day, idx) => `
+          <div class="fb-day-card${idx === todayIdx ? ' is-today' : ''}">
+            <h4>Giorno ${day.day} — ${formatScheduleDate(startDate, idx)} · ${day.posts.length} post</h4>
+            <ul>
+              ${day.posts.map(p => `<li><strong>${p.slot.time}</strong> ${p.article.title}</li>`).join('')}
+            </ul>
+          </div>
+        `).join('');
+      }
+
+      todayBox?.querySelectorAll('[data-copy-today]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const article = articles.find(a => a.slug === btn.dataset.copyToday);
+          if (!article) return;
+          await navigator.clipboard.writeText(buildFacebookPost(article));
+          btn.textContent = 'Copiato!';
+          setTimeout(() => { btn.innerHTML = `${SOCIAL_ICONS.facebook} Copia`; }, 1500);
+        });
+      });
+
+      document.getElementById('fb-copy-all-today')?.addEventListener('click', async () => {
+        if (!todayEntry) return;
+        const text = todayEntry.posts.map((p, i) =>
+          `--- POST ${i + 1} (${p.slot.label} ${p.slot.time}) ---\n\n${buildFacebookPost(p.article)}`
+        ).join('\n\n');
+        await navigator.clipboard.writeText(text);
+        const btn = document.getElementById('fb-copy-all-today');
+        btn.textContent = 'Copiati tutti!';
+        setTimeout(() => { btn.textContent = 'Copia tutti i post di oggi'; }, 1800);
+      });
+    }
+
+    async function initFacebookPostsPage() {
+      const grid = document.getElementById('fb-posts-grid');
+      const stats = document.getElementById('fb-stats');
+      if (!grid) return;
+
+      postsPerDay = Number(localStorage.getItem(PER_DAY_KEY) || 3);
+      startDate = localStorage.getItem(START_KEY) || new Date().toISOString().slice(0, 10);
+
+      const dateInput = document.getElementById('fb-start-date');
+      if (dateInput) {
+        dateInput.value = startDate;
+        dateInput.addEventListener('change', () => {
+          startDate = dateInput.value;
+          localStorage.setItem(START_KEY, startDate);
+          renderSchedule();
+          render();
+        });
+      }
+
+      document.querySelectorAll('#fb-per-day [data-per-day]').forEach(btn => {
+        btn.classList.toggle('active', Number(btn.dataset.perDay) === postsPerDay);
+        btn.addEventListener('click', () => {
+          postsPerDay = Number(btn.dataset.perDay);
+          localStorage.setItem(PER_DAY_KEY, String(postsPerDay));
+          document.querySelectorAll('#fb-per-day [data-per-day]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderSchedule();
+          render();
+        });
+      });
+
+      const res = await fetch('data/articles.json');
+      const data = await res.json();
+      articles = sortArticlesForSchedule(data.articles);
+      const posted = getPostedSlugs();
+
+      renderSchedule();
+
+      let filter = 'featured';
+      let query = '';
+
+      function render() {
+        const list = articles.filter(a => matchesFilter(a, filter) && (
+          !query || a.title.toLowerCase().includes(query) || a.excerpt.toLowerCase().includes(query)
+        ));
+        grid.innerHTML = list.map(a => renderCard(a, posted.includes(a.slug))).join('');
+        grid.querySelectorAll('.fb-post-preview').forEach(ta => {
+          const slug = ta.closest('.fb-post-card')?.dataset.slug;
+          const article = articles.find(a => a.slug === slug);
+          if (article) ta.value = buildFacebookPost(article);
+        });
+        if (stats) {
+          const days = Math.ceil(articles.length / postsPerDay);
+          stats.textContent = `${list.length} visibili · ${posted.length} pubblicati · piano ~${days} giorni`;
+        }
+
+        grid.querySelectorAll('[data-copy-post]').forEach(btn => {
+          btn.addEventListener('click', async () => {
+            const slug = btn.closest('.fb-post-card').dataset.slug;
+            const article = articles.find(a => a.slug === slug);
+            if (!article) return;
+            await navigator.clipboard.writeText(buildFacebookPost(article));
+            btn.innerHTML = `${SOCIAL_ICONS.facebook} Copiato!`;
+            setTimeout(() => { btn.innerHTML = `${SOCIAL_ICONS.facebook} Copia post`; }, 1800);
+          });
+        });
+
+        grid.querySelectorAll('[data-mark-posted]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            markPosted(btn.closest('.fb-post-card').dataset.slug);
+            if (!posted.includes(btn.closest('.fb-post-card').dataset.slug)) {
+              posted.push(btn.closest('.fb-post-card').dataset.slug);
+            }
+            renderSchedule();
+            render();
+          });
+        });
+      }
+
+      document.querySelectorAll('.fb-filter').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.fb-filter').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filter = btn.dataset.filter;
+          render();
+        });
+      });
+
+      document.getElementById('fb-search')?.addEventListener('input', e => {
+        query = e.target.value.trim().toLowerCase();
+        render();
+      });
+
+      render();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => setTimeout(initFacebookPostsPage, 100));
+  </script>
+</body>
+</html>

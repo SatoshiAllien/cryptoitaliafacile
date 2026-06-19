@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Post automatici Facebook — The Little Satoshi News</title>
+  <style>
+    :root { --bg:#0a0a12; --surface:#12121f; --cyan:#00f0ff; --magenta:#ff2a6d; --text:#e8e8f0; --muted:#9a9ab0; --border:#2a2a3d; --green:#4ade80; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .sub { color: var(--muted); margin-bottom: 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .card h2 { font-size: 1rem; color: var(--cyan); margin: 0 0 0.75rem; }
+    .card h3 { font-size: 0.95rem; margin: 1rem 0 0.5rem; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.45rem; }
+    code, pre { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; }
+    code { padding: 0.15rem 0.4rem; }
+    pre { padding: 0.85rem; overflow-x: auto; }
+    a { color: var(--cyan); }
+    .ok { color: var(--green); font-weight: 600; }
+    .warn { border-left: 3px solid var(--magenta); padding-left: 1rem; color: var(--muted); font-size: 0.9rem; margin: 1rem 0; }
+    .btn { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1rem; border: 1px solid var(--cyan); border-radius: 8px; color: var(--cyan); text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Post automatici su Facebook</h1>
+    <p class="sub">Configura la pubblicazione automatica di 2–3 articoli al giorno su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
+    <div class="card" style="border-color:rgba(74,222,128,0.4);">
+      <h2 class="ok">✓ App creata</h2>
+      <p style="margin:0.5rem 0 0;color:var(--muted);">
+        <strong>The Little Satoshi News Poster</strong><br>
+        App ID: <code>1058281383830078</code><br>
+        Modalità: In fase di sviluppo
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Cosa fa il sistema</h2>
+      <ul>
+        <li><strong>3 post/giorno</strong> alle ~09:00, ~13:00, ~19:00 (ora di Roma)</li>
+        <li>Alterna guide, tips e trend automaticamente</li>
+        <li>Evita duplicati (traccia i post già pubblicati)</li>
+        <li>Funziona via <strong>GitHub Actions</strong> (consigliato) o <strong>Windows Task Scheduler</strong></li>
+      </ul>
+      <a href="facebook-posts.html" class="btn">Vedi calendario post</a>
+    </div>
+
+    <div class="card">
+      <h2>Requisiti prima di iniziare</h2>
+      <ul>
+        <li>Account Facebook personale (quello con cui gestisci la pagina)</li>
+        <li>Devi essere <strong>admin</strong> della pagina <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a></li>
+        <li>La pagina deve avere il permesso <code>CREATE_CONTENT</code> (puoi pubblicare post)</li>
+      </ul>
+      <a href="scripts/apri-meta-api.bat" class="btn">Apri tutti i link utili (Windows)</a>
+    </div>
+
+    <div class="card">
+      <h2>Passo 1 — Crea l'app Meta (5 min)</h2>
+      <ol>
+        <li>Vai su <a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">developers.facebook.com/apps</a></li>
+        <li>Clicca <strong>Crea app</strong></li>
+        <li>Scegli caso d'uso: <strong>Altro</strong> → <strong>Avanti</strong></li>
+        <li>Tipo app: <strong>Business</strong> → <strong>Avanti</strong></li>
+        <li>Nome app: <code>The Little Satoshi News Poster</code></li>
+        <li>Email di contatto: la tua email</li>
+        <li>Clicca <strong>Crea app</strong> e conferma la password Facebook se richiesto</li>
+        <li>Nella dashboard dell'app, vai su <strong>Casi d'uso</strong> e aggiungi <strong>Gestire tutto sulla tua Pagina</strong> (Pages API) se disponibile</li>
+      </ol>
+      <p class="warn">Se Meta chiede la verifica business, per i test iniziali spesso basta la modalità <strong>Sviluppo</strong> con il tuo account come tester.</p>
+      <h3>Aggiungi il permesso per pubblicare (obbligatorio)</h3>
+      <ol>
+        <li>Apri <a href="https://developers.facebook.com/apps/1058281383830078/use_cases/" target="_blank" rel="noopener">Casi d'uso dell'app</a></li>
+        <li>Clicca <strong>Personalizza</strong> su <em>Gestisci tutto sulla tua Pagina</em> (Manage everything on your Page)</li>
+        <li>Clicca <strong>Aggiungi</strong> accanto a <code>pages_manage_posts</code></li>
+        <li>Aggiungi anche <code>pages_manage_read_engagement</code> e <code>pages_manage_metadata</code> se disponibili</li>
+        <li>Salva → torna al Graph API Explorer e <strong>rigenera il token</strong></li>
+      </ol>
+    </div>
+
+    <div class="card" style="border-color:rgba(255,42,109,0.5);">
+      <h2>⚠ Non vedi <code>pages_manage_posts</code> in Personalizza?</h2>
+      <p>Capita spesso. Meta mostra quel permesso <strong>solo</strong> se l'app ha il caso d'uso Pagina configurato correttamente. Prova in ordine:</p>
+
+      <h3>Soluzione A — Aggiungi il caso d'uso mancante</h3>
+      <ol>
+        <li>Apri la <a href="https://developers.facebook.com/apps/1058281383830078/dashboard/" target="_blank" rel="noopener">Dashboard dell'app</a></li>
+        <li>Cerca il pulsante <strong>Aggiungi casi d'uso</strong> (o <strong>+ Aggiungi</strong>)</li>
+        <li>Seleziona <strong>Gestisci tutto sulla tua Pagina</strong> / <em>Manage everything on your Page</em></li>
+        <li>Conferma → poi clicca <strong>Personalizza</strong> su quel caso d'uso</li>
+        <li>Ora dovresti vedere una lista con <code>pages_show_list</code> già presente e un pulsante <strong>Aggiungi</strong> per altri permessi, incluso <code>pages_manage_posts</code></li>
+      </ol>
+
+      <h3>Soluzione B — Menu Pubblica / Permessi</h3>
+      <p>In alcune versioni della dashboard Meta il permesso è qui, non in Casi d'uso:</p>
+      <ol>
+        <li>Menu sinistro → <strong>Pubblica</strong> (Publish)</li>
+        <li>Clicca <strong>Gestisci tutto sulla tua Pagina</strong></li>
+        <li>Oppure vai su <a href="https://developers.facebook.com/apps/1058281383830078/app-review/permissions/" target="_blank" rel="noopener">Revisione app → Permessi e funzioni</a></li>
+        <li>Cerca <code>pages_manage_posts</code> → clicca <strong>Aggiungi</strong> o <strong>Richiedi</strong></li>
+        <li>Aggiungi anche <code>pages_read_engagement</code> se richiesto</li>
+      </ol>
+
+      <h3>Soluzione C — Ricrea l'app (se A e B non funzionano)</h3>
+      <p>L'app attuale è stata creata con caso d'uso <strong>Altro</strong>. A volte Meta non espone i permessi Pagina. In quel caso:</p>
+      <ol>
+        <li><a href="https://developers.facebook.com/apps/" target="_blank" rel="noopener">Crea una nuova app</a></li>
+        <li>Al passo dei casi d'uso scegli direttamente <strong>Gestisci tutto sulla tua Pagina</strong> (non "Altro")</li>
+        <li>Tipo: <strong>Business</strong>, nome: <code>The Little Satoshi News Poster 2</code></li>
+        <li>In Personalizza aggiungi <code>pages_manage_posts</code></li>
+        <li>Usa la nuova app nel Graph API Explorer</li>
+      </ol>
+
+      <p class="warn"><strong>Cosa dovresti vedere in Personalizza (se è corretto):</strong> permessi già presenti <code>business_management</code>, <code>pages_show_list</code>, <code>public_profile</code> — e un elenco di permessi opzionali con pulsante <strong>Aggiungi</strong>. Se vedi solo 2–3 permessi senza possibilità di aggiungerne altri, il caso d'uso Pagina non è attivo.</p>
+      <p class="warn"><strong>Modalità Sviluppo:</strong> non serve approvazione Meta per testare su <em>The Little Satoshi News</em> se sei admin dell'app e della pagina. Basta aggiungere il permesso all'app e rigenerare il token.</p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 2 — Ottieni Page ID e Token</h2>
+      <ol>
+        <li>Apri <a href="https://developers.facebook.com/tools/explorer/" target="_blank" rel="noopener">Graph API Explorer</a></li>
+        <li>In alto a destra, menu <strong>Meta App</strong> → seleziona <code>The Little Satoshi News Poster</code></li>
+        <li>Clicca <strong>Generate Access Token</strong> (o icona permessi)</li>
+        <li>Spunta questi permessi (tutti quelli che vedi disponibili):
+          <ul>
+            <li><code>pages_manage_posts</code></li>
+            <li><code>pages_manage_metadata</code></li>
+            <li><code>pages_manage_read_engagement</code></li>
+            <li><code>pages_show_list</code></li>
+          </ul>
+        </li>
+        <li>Clicca <strong>Generate Access Token</strong> → accetta con Facebook</li>
+        <li>Nel campo query scrivi: <code>me/accounts</code></li>
+        <li>Metodo: <strong>GET</strong> → clicca <strong>Submit</strong></li>
+        <li>Nella risposta JSON trova la pagina <strong>Bitcoin.Wizard1</strong> (o il nome della tua pagina)</li>
+        <li>Copia due valori:
+          <ul>
+            <li><code>"id": "123456789"</code> → questo è il <strong>PAGE ID</strong></li>
+            <li><code>"access_token": "EAA..."</code> → questo è il <strong>TOKEN PAGINA</strong></li>
+          </ul>
+        </li>
+      </ol>
+      <p class="warn"><strong>Importante:</strong> non usare il <em>User Token</em>. Dopo aver generato il token, nel menu sotto il campo <strong>Access Token</strong> scegli <strong>User or Page → nome della tua Pagina</strong> (es. Bitcoin.Wizard1). Copia quel token Pagina. Se <code>me/accounts</code> è vuoto, questo è l'unico modo per ottenerlo.</p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 3 — Test rapido nel Graph Explorer</h2>
+      <ol>
+        <li>Nel menu <strong>User or Page</strong> (sotto il token), seleziona il token della <strong>pagina</strong> Bitcoin.Wizard1</li>
+        <li>Metodo: <strong>POST</strong></li>
+        <li>Query: <code>TUO_PAGE_ID/feed</code> (sostituisci con l'id numerico)</li>
+        <li>Parametro: <code>message</code> = <code>Test API The Little Satoshi News — funziona!</code></li>
+        <li>Clicca <strong>Submit</strong></li>
+        <li>Se ricevi <code>{"id": "..."}</code> → l'API funziona. Controlla il post sulla pagina Facebook.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Passo 3 — File .env (test locale)</h2>
+      <p>Crea il file <code>scripts\.env</code>:</p>
+      <pre>FACEBOOK_PAGE_ID=il_tuo_id_numerico
+FACEBOOK_PAGE_ACCESS_TOKEN=il_token_della_pagina</pre>
+      <p>Testa la connessione:</p>
+      <pre>cd C:\Users\krown\cryptofacile
+python scripts\verify-facebook-token.py
+python scripts\post-to-facebook.py --auto --slot 0 --dry-run</pre>
+      <p>Pubblica un post di prova:</p>
+      <pre>python scripts\post-to-facebook.py --auto --slot 0</pre>
+    </div>
+
+    <div class="card">
+      <h2>Passo 4 — GitHub Actions (automatico nel cloud)</h2>
+      <p>Consigliato se il sito è su GitHub Pages.</p>
+      <ol>
+        <li>Vai su <a href="https://github.com/SatoshiAllien/cryptoitaliafacile/settings/secrets/actions" target="_blank" rel="noopener">Settings → Secrets → Actions</a></li>
+        <li>Aggiungi due secrets:
+          <ul>
+            <li><code>FACEBOOK_PAGE_ID</code></li>
+            <li><code>FACEBOOK_PAGE_ACCESS_TOKEN</code></li>
+          </ul>
+        </li>
+        <li>Fai push del progetto su GitHub (branch <code>main</code>)</li>
+        <li>Il workflow <code>facebook-auto-post.yml</code> pubblicherà automaticamente 3 volte al giorno</li>
+        <li>Test manuale: Actions → <strong>Facebook Auto Post</strong> → <strong>Run workflow</strong></li>
+      </ol>
+      <p class="ok">Non serve tenere il PC acceso — GitHub pubblica per te.</p>
+    </div>
+
+    <div class="card">
+      <h2>Alternativa — Windows Task Scheduler</h2>
+      <p>Se preferisci pubblicare dal tuo PC (deve restare acceso):</p>
+      <pre>powershell -ExecutionPolicy Bypass -File scripts\register-facebook-tasks.ps1</pre>
+      <p>Crea 3 attività: mattina 09:00, pranzo 13:00, sera 19:00.</p>
+    </div>
+
+    <div class="card">
+      <h2>Impostazioni piano</h2>
+      <p>Modifica <code>data/facebook-schedule.json</code>:</p>
+      <pre>{
+  "startDate": "2026-06-19",
+  "postsPerDay": 3,
+  "timezone": "Europe/Rome",
+  "posted": []
+}</pre>
+      <ul>
+        <li><code>postsPerDay</code>: <strong>2</strong> o <strong>3</strong></li>
+        <li><code>startDate</code>: primo giorno del calendario</li>
+        <li><code>posted</code>: si aggiorna automaticamente dopo ogni post</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

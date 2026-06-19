@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Crea Pagina Facebook — The Little Satoshi News</title>
+  <style>
+    :root { --bg:#0a0a12; --surface:#12121f; --cyan:#00f0ff; --magenta:#ff2a6d; --text:#e8e8f0; --muted:#9a9ab0; --border:#2a2a3d; --green:#4ade80; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .sub { color: var(--muted); margin-bottom: 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .card h2 { font-size: 1rem; color: var(--cyan); margin: 0 0 0.75rem; }
+    .field { margin-bottom: 1rem; }
+    .field label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.35rem; }
+    .field-row { display: flex; gap: 0.5rem; align-items: flex-start; }
+    textarea { flex: 1; width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 0.65rem 0.75rem; font: inherit; resize: vertical; }
+    button { flex-shrink: 0; background: transparent; border: 1px solid var(--cyan); color: var(--cyan); border-radius: 8px; padding: 0.5rem 0.85rem; cursor: pointer; font-weight: 600; }
+    button:hover { background: rgba(0,240,255,0.1); }
+    ol { padding-left: 1.25rem; }
+    li { margin-bottom: 0.45rem; }
+    a { color: var(--cyan); }
+    .btn { display: inline-block; margin: 0.35rem 0.5rem 0.35rem 0; padding: 0.6rem 1rem; border: 1px solid var(--cyan); border-radius: 8px; color: var(--cyan); text-decoration: none; font-weight: 600; }
+    .warn { border-left: 3px solid var(--magenta); padding-left: 1rem; color: var(--muted); font-size: 0.9rem; margin: 1rem 0; }
+    .ok { color: var(--green); font-weight: 600; }
+    .preview { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+    .preview img { border-radius: 8px; border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Crea la Pagina Facebook</h1>
+    <p class="sub">Il profilo <strong>Bitcoin.Wizard1</strong> non supporta i post automatici via API. Serve una <strong>Pagina Facebook</strong> separata.</p>
+
+    <div class="card">
+      <h2>Apri la creazione pagina</h2>
+      <a class="btn" href="https://www.facebook.com/pages/create/" target="_blank" rel="noopener">Crea Pagina Facebook</a>
+      <a class="btn" href="https://business.facebook.com/latest/settings/pages" target="_blank" rel="noopener">Business Manager → Pagine</a>
+      <p class="warn">Devi essere loggato con lo stesso account Facebook che usi per The Little Satoshi News.</p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 1 — Tipo e nome</h2>
+      <ol>
+        <li>Clicca <strong>Crea Pagina Facebook</strong> sopra</li>
+        <li>Tipo: <strong>Azienda o marchio</strong> (oppure <strong>Creatore di contenuti</strong>)</li>
+        <li>Nome pagina: copia qui sotto</li>
+        <li>Categoria: <strong>Sito web educativo</strong> o <strong>Istruzione</strong></li>
+      </ol>
+      <div class="field">
+        <label>Nome pagina</label>
+        <div class="field-row">
+          <textarea id="f-name" readonly rows="1">The Little Satoshi News</textarea>
+          <button type="button" data-copy="f-name">Copia</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Nome utente (@) — prova in ordine</label>
+        <div class="field-row">
+          <textarea id="f-user" readonly rows="2">cryptofacile
+cryptofacile.it
+The Little Satoshi NewsIT</textarea>
+          <button type="button" data-copy="f-user">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Passo 2 — Foto profilo e copertina</h2>
+      <div class="preview">
+        <img src="assets/img/facebook/profile-bitcoin-wizard.jpg" alt="Profilo" width="100" height="100">
+        <img src="assets/img/facebook/cover-cryptofacile.jpg" alt="Copertina" width="240" height="90">
+      </div>
+      <p><a href="assets/img/facebook/profile-bitcoin-wizard.jpg" download>Scarica foto profilo</a> · <a href="assets/img/facebook/cover-cryptofacile.jpg" download>Scarica copertina</a></p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 3 — Bio e descrizione</h2>
+      <div class="field">
+        <label>Bio breve</label>
+        <div class="field-row">
+          <textarea id="f-bio" readonly rows="2">Notizie crypto, chiare e semplici. Guide passo-passo, tips e sicurezza. 100% educativo, zero hype.</textarea>
+          <button type="button" data-copy="f-bio">Copia</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Descrizione / Chi siamo</label>
+        <div class="field-row">
+          <textarea id="f-desc" readonly rows="7">The Little Satoshi News è il portale educativo che rende il mondo crypto accessibile a tutti, senza hype e senza complicazioni inutili.
+
+Guide passo-passo per principianti, Crypto Tips pratici, trend spiegati senza sensazionalismo, sezione Cardano e guide sulla sicurezza del wallet.
+
+Educare, non vendere. Ogni contenuto ha un solo scopo: aiutarti a capire e usare le criptovalute in sicurezza.</textarea>
+          <button type="button" data-copy="f-desc">Copia</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Sito web</label>
+        <div class="field-row">
+          <textarea id="f-url" readonly rows="1">https://satoshiallien.github.io/cryptoitaliafacile/</textarea>
+          <button type="button" data-copy="f-url">Copia</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <div class="field-row">
+          <textarea id="f-email" readonly rows="1">info@cryptofacile.com</textarea>
+          <button type="button" data-copy="f-email">Copia</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Passo 4 — Collega al Business Manager</h2>
+      <ol>
+        <li>Apri <a href="https://business.facebook.com/" target="_blank" rel="noopener">business.facebook.com</a></li>
+        <li>Portfolio: <strong>The Little Satoshi News Poster</strong></li>
+        <li><strong>Impostazioni</strong> → <strong>Pagine</strong> → <strong>Aggiungi</strong> → seleziona la nuova pagina <strong>The Little Satoshi News</strong></li>
+        <li>Assegna a te il controllo completo (Admin)</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Passo 5 — Dopo la creazione (API)</h2>
+      <ol>
+        <li>Apri <a href="https://developers.facebook.com/tools/explorer/1058281383830078/" target="_blank" rel="noopener">Graph API Explorer</a></li>
+        <li>Generate Access Token → spunta <code>pages_manage_posts</code>, <code>pages_read_engagement</code>, <code>pages_show_list</code></li>
+        <li>Query <code>GET me/accounts</code> → deve comparire la nuova pagina con <code>id</code> e <code>access_token</code></li>
+        <li>Copia l'<code>access_token</code> della pagina (non il User Token)</li>
+        <li>Esegui: <code>python scripts\aggiorna-token-facebook.py TOKEN</code></li>
+        <li>Aggiorna <code>FACEBOOK_PAGE_ID</code> in <code>scripts\.env</code> con l'id numerico della pagina</li>
+      </ol>
+      <p class="ok">Quando hai l'URL della nuova pagina (es. facebook.com/cryptofacile), mandamelo: aggiorno il sito e attivo i post automatici.</p>
+      <a class="btn" href="facebook-auto-setup.html">Guida post automatici</a>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const el = document.getElementById(btn.dataset.copy);
+        navigator.clipboard.writeText(el.value.trim()).then(() => {
+          btn.textContent = 'Copiato!';
+          setTimeout(() => { btn.textContent = 'Copia'; }, 1500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

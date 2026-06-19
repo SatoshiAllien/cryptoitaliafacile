@@ -80,8 +80,9 @@ const TRANSLATIONS = {
     },
     trust: ['100% educativo', 'Sicurezza prima di tutto', 'Passo dopo passo', 'Zero hype'],
     categories: {
-      principianti: 'Principianti', sicurezza: 'Sicurezza', cardano: 'Cardano',
-      defi: 'DeFi & Staking', trend: 'Trend', strumenti: 'Strumenti'
+      principianti: 'Principianti', sicurezza: 'Sicurezza',
+      bitcoin: 'Bitcoin', ethereum: 'Ethereum', 'smart-contract': 'Smart Contract',
+      cardano: 'Cardano', defi: 'DeFi & Staking', trend: 'Trend', strumenti: 'Strumenti'
     },
     path: [
       { title: 'Capire le basi', desc: 'Cos\'è una blockchain e come funziona' },
@@ -115,6 +116,9 @@ const TRANSLATIONS = {
       tips: { title: 'Crypto Tips', desc: 'Consigli brevi e pratici da applicare subito. Niente fuffa, solo azioni concrete.' },
       trend: { title: 'Trend Crypto del Momento', desc: 'I macro trend che stanno plasmando il mondo crypto, spiegati senza hype.' },
       sicurezza: { title: 'Sicurezza & Protezione Wallet', desc: 'Proteggi le tue crypto. Guide su seed phrase, hardware wallet, phishing e best practice.', goldenRule: 'Regola d\'oro', goldenText: 'Nessuno legittimo ti chiederà mai la seed phrase. Nemmeno il "supporto tecnico".' },
+      bitcoin: { title: 'Bitcoin', desc: 'Guide su BTC, acquisto, wallet, Lightning Network, halving e cultura Bitcoin spiegate in modo semplice.' },
+      ethereum: { title: 'Ethereum', desc: 'Guide su ETH, staking, gas fee, wallet, Layer 2 e DeFi spiegate senza tecnicismi.' },
+      'smart-contract': { title: 'Smart Contract', desc: 'Contratti intelligenti spiegati in modo chiaro: verifica, approvazioni, Solidity base e sicurezza DeFi.' },
       cardano: { title: 'Ecosistema Cardano', desc: 'Guide dedicate a ADA, staking, wallet Cardano, DeFi, governance e scalabilità.' },
       strumenti: { title: 'Strumenti Crypto', desc: 'Guide e confronti su wallet, exchange, hardware wallet e strumenti di monitoraggio.', toolsSection: 'Strumenti consigliati' }
     },
@@ -302,8 +306,9 @@ const TRANSLATIONS = {
     },
     trust: ['100% educational', 'Security first', 'Step by step', 'Zero hype'],
     categories: {
-      principianti: 'Beginners', sicurezza: 'Security', cardano: 'Cardano',
-      defi: 'DeFi & Staking', trend: 'Trends', strumenti: 'Tools'
+      principianti: 'Beginners', sicurezza: 'Security',
+      bitcoin: 'Bitcoin', ethereum: 'Ethereum', 'smart-contract': 'Smart Contract',
+      cardano: 'Cardano', defi: 'DeFi & Staking', trend: 'Trends', strumenti: 'Tools'
     },
     path: [
       { title: 'Learn the basics', desc: 'What a blockchain is and how it works' },
@@ -337,6 +342,9 @@ const TRANSLATIONS = {
       tips: { title: 'Crypto Tips', desc: 'Short, practical tips you can apply right away. No fluff — just concrete actions.' },
       trend: { title: 'Crypto Trends Right Now', desc: 'The macro trends shaping the crypto world, explained without hype.' },
       sicurezza: { title: 'Security & Wallet Protection', desc: 'Protect your crypto. Guides on seed phrases, hardware wallets, phishing and best practices.', goldenRule: 'Golden rule', goldenText: 'No legitimate service will ever ask for your seed phrase. Not even "technical support".' },
+      bitcoin: { title: 'Bitcoin', desc: 'Guides on BTC, buying, wallets, Lightning Network, halving and Bitcoin culture — explained simply.' },
+      ethereum: { title: 'Ethereum', desc: 'Guides on ETH, staking, gas fees, wallets, Layer 2 and DeFi — without jargon.' },
+      'smart-contract': { title: 'Smart Contracts', desc: 'Smart contracts explained clearly: verification, approvals, basic Solidity and DeFi security.' },
       cardano: { title: 'Cardano Ecosystem', desc: 'Guides dedicated to ADA, staking, Cardano wallets, DeFi, governance and scalability.' },
       strumenti: { title: 'Crypto Tools', desc: 'Guides and comparisons of wallets, exchanges, hardware wallets and monitoring tools.', toolsSection: 'Recommended tools' }
     },

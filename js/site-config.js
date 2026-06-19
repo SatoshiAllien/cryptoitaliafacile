@@ -65,6 +65,9 @@ const SITE_CONFIG = {
   categories: [
     { id: 'principianti', label: 'Principianti', abbr: 'P', href: 'guide/index.html?filter=principianti', color: '#00f0ff', bg: 'rgba(0,240,255,0.08)' },
     { id: 'sicurezza', label: 'Sicurezza', abbr: 'S', href: 'sicurezza/index.html', color: '#ff2a6d', bg: 'rgba(255,42,109,0.08)' },
+    { id: 'bitcoin', label: 'Bitcoin', iconImg: 'assets/img/bitcoin-btc.png', href: 'bitcoin/index.html', color: '#F7931A', bg: 'rgba(247,147,26,0.1)' },
+    { id: 'ethereum', label: 'Ethereum', iconImg: 'assets/img/ethereum-eth.svg', href: 'ethereum/index.html', color: '#627EEA', bg: 'rgba(98,126,234,0.1)' },
+    { id: 'smart-contract', label: 'Smart Contract', abbr: 'SC', href: 'smart-contract/index.html', color: '#10B981', bg: 'rgba(16,185,129,0.1)' },
     { id: 'cardano', label: 'Cardano', iconImg: 'assets/img/cardano-ada.png', href: 'cardano/index.html', color: '#3b82f6', bg: 'rgba(59,130,246,0.08)' },
     { id: 'defi', label: 'DeFi & Staking', abbr: 'D', href: 'guide/index.html?filter=defi', color: '#bd00ff', bg: 'rgba(189,0,255,0.08)' },
     { id: 'trend', label: 'Trend', abbr: 'T', href: 'trend/index.html', color: '#fcee0a', bg: 'rgba(252,238,10,0.08)' },

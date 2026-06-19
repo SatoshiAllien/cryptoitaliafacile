@@ -17,6 +17,9 @@ function getArticlesByFilter(filter) {
     case 'trend': return articles.filter(a => a.category === 'trend');
     case 'guide': return articles.filter(a => a.category === 'guide');
     case 'sicurezza': return articles.filter(a => a.category === 'sicurezza' || a.subcategory === 'sicurezza');
+    case 'bitcoin': return articles.filter(a => a.category === 'bitcoin' || (a.tags || []).some(tag => tag.toLowerCase().includes('bitcoin')));
+    case 'ethereum': return articles.filter(a => a.category === 'ethereum' || (a.tags || []).some(tag => tag.toLowerCase().includes('ethereum')));
+    case 'smart-contract': return articles.filter(a => a.category === 'smart-contract' || (a.tags || []).some(tag => tag.toLowerCase().includes('smart contract')));
     case 'cardano': return articles.filter(a => a.category === 'cardano');
     case 'strumenti': return articles.filter(a => a.tags?.includes('wallet') || a.tags?.includes('exchange'));
     case 'principianti': return articles.filter(a => a.subcategory === 'principianti' || (a.category === 'guide' && a.difficulty === 'beginner'));
@@ -291,7 +294,11 @@ async function initHubPage() {
   await loadArticles();
   const base = getBasePath();
   const params = new URLSearchParams(window.location.search);
-  const hubFilterMap = { guide: 'guide', tips: 'tip', trend: 'trend', sicurezza: 'sicurezza', cardano: 'cardano', strumenti: 'strumenti' };
+  const hubFilterMap = {
+    guide: 'guide', tips: 'tip', trend: 'trend', sicurezza: 'sicurezza',
+    bitcoin: 'bitcoin', ethereum: 'ethereum', 'smart-contract': 'smart-contract',
+    cardano: 'cardano', strumenti: 'strumenti'
+  };
   const filter = params.get('filter') || hubFilterMap[hub] || hub;
 
   const grid = document.getElementById('hub-articles');

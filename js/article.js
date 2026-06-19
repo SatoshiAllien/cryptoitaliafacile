@@ -508,7 +508,8 @@
 function generateGenericContent(article) {
   const categoryLabels = {
     guide: 'Guida passo-passo', tip: 'Crypto Tip', trend: 'Trend crypto',
-    tutorial: 'Tutorial', cardano: 'Cardano', sicurezza: 'Sicurezza'
+    tutorial: 'Tutorial', cardano: 'Cardano', sicurezza: 'Sicurezza',
+    bitcoin: 'Bitcoin', ethereum: 'Ethereum', 'smart-contract': 'Smart Contract'
   };
   return {
     intro: article.excerpt + ' Questo articolo fa parte della sezione ' + (categoryLabels[article.category] || article.category) + ' di The Little Satoshi News. Stiamo aggiornando il contenuto completo — nel frattempo, ecco una panoramica utile.',
@@ -573,7 +574,10 @@ async function initArticlePage() {
     trend: { label: 'Trend', href: 'trend/index.html' },
     tutorial: { label: 'Tutorial', href: 'guide/index.html' },
     cardano: { label: 'Cardano', href: 'cardano/index.html' },
-    sicurezza: { label: 'Sicurezza', href: 'sicurezza/index.html' }
+    sicurezza: { label: 'Sicurezza', href: 'sicurezza/index.html' },
+    bitcoin: { label: 'Bitcoin', href: 'bitcoin/index.html' },
+    ethereum: { label: 'Ethereum', href: 'ethereum/index.html' },
+    'smart-contract': { label: 'Smart Contract', href: 'smart-contract/index.html' }
   };
   const bc = breadcrumbMap[article.category] || { label: 'Guide', href: 'guide/index.html' };
 

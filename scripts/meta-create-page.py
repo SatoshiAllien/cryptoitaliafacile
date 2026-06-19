@@ -10,7 +10,7 @@ from pathlib import Path
 
 PAGE_NAME = "The Little Satoshi News"
 CATEGORIES = ("Sito web educativo", "Istruzione", "Education website", "Education")
-PAGE_BIO = "Notizie crypto, chiare e semplici. Guide passo-passo, tips e sicurezza. 100% educativo, zero hype."
+PAGE_BIO = "The Little Satoshi News — notizie e crypto, facili e semplici. Guide, tips e sicurezza. 100% educativo, zero hype."
 PAGE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
 CREATE_URL = "https://www.facebook.com/pages/create/"
 SHOTS = Path(__file__).resolve().parent / "meta-screenshots"

@@ -21,11 +21,11 @@ const SITE_CONFIG = {
   },
 
   colors: {
-    primary: '#00C896',
-    secondary: '#4F8CFF',
-    coral: '#FF7B6B',
-    yellow: '#FFC93C',
-    purple: '#9B6DFF'
+    primary: '#00f0ff',
+    secondary: '#ff2a6d',
+    coral: '#ff2a6d',
+    yellow: '#fcee0a',
+    purple: '#bd00ff'
   },
 
   trustBadges: [
@@ -54,15 +54,15 @@ const SITE_CONFIG = {
   ],
 
   categories: [
-    { id: 'principianti', label: 'Principianti', abbr: 'P', href: 'guide/index.html?filter=principianti', color: '#00C896', bg: '#D4FFF3' },
-    { id: 'sicurezza', label: 'Sicurezza', abbr: 'S', href: 'sicurezza/index.html', color: '#FF7B6B', bg: '#FFE8E5' },
-    { id: 'cardano', label: 'Cardano', iconImg: 'assets/img/cardano-ada.png', href: 'cardano/index.html', color: '#4F8CFF', bg: '#E8F0FF' },
-    { id: 'defi', label: 'DeFi & Staking', abbr: 'D', href: 'guide/index.html?filter=defi', color: '#9B6DFF', bg: '#F0E8FF' },
-    { id: 'trend', label: 'Trend', abbr: 'T', href: 'trend/index.html', color: '#FFC93C', bg: '#FFF5D6' },
-    { id: 'strumenti', label: 'Strumenti', abbr: 'St', href: 'strumenti/index.html', color: '#38BDF8', bg: '#E0F7FE' }
+    { id: 'principianti', label: 'Principianti', abbr: 'P', href: 'guide/index.html?filter=principianti', color: '#00f0ff', bg: 'rgba(0,240,255,0.08)' },
+    { id: 'sicurezza', label: 'Sicurezza', abbr: 'S', href: 'sicurezza/index.html', color: '#ff2a6d', bg: 'rgba(255,42,109,0.08)' },
+    { id: 'cardano', label: 'Cardano', iconImg: 'assets/img/cardano-ada.png', href: 'cardano/index.html', color: '#3b82f6', bg: 'rgba(59,130,246,0.08)' },
+    { id: 'defi', label: 'DeFi & Staking', abbr: 'D', href: 'guide/index.html?filter=defi', color: '#bd00ff', bg: 'rgba(189,0,255,0.08)' },
+    { id: 'trend', label: 'Trend', abbr: 'T', href: 'trend/index.html', color: '#fcee0a', bg: 'rgba(252,238,10,0.08)' },
+    { id: 'strumenti', label: 'Strumenti', abbr: 'St', href: 'strumenti/index.html', color: '#00f0ff', bg: 'rgba(0,240,255,0.06)' }
   ],
 
-  pathColors: ['#00C896', '#4F8CFF', '#FFC93C', '#9B6DFF', '#FF7B6B'],
+  pathColors: ['#00f0ff', '#ff2a6d', '#fcee0a', '#bd00ff', '#3b82f6'],
 
   social: {
     twitter: { url: 'https://twitter.com/cryptofacile', label: 'X' },

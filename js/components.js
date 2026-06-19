@@ -19,11 +19,10 @@ function renderLogo(base) {
   return `
     <a href="${base}index.html" class="logo" aria-label="CryptoFacile — Home">
       <svg class="logo-icon" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-        <circle cx="20" cy="20" r="18" fill="#00C896" opacity="0.2"/>
-        <circle cx="20" cy="20" r="16" fill="url(#logoGrad)"/>
-        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#00C896"/><stop offset="100%" stop-color="#4F8CFF"/></linearGradient></defs>
-        <text x="20" y="25" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="700" font-size="14" fill="#fff">CF</text>
-        <path d="M28 14 L32 10 L32 18 Z" fill="#FFC93C"/>
+        <rect x="4" y="4" width="32" height="32" rx="6" fill="#0a0a12" stroke="url(#logoGrad)" stroke-width="1.5"/>
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="#ff2a6d"/></linearGradient></defs>
+        <text x="20" y="25" text-anchor="middle" font-family="Orbitron, Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#00f0ff">CF</text>
+        <path d="M28 14 L32 10 L32 18 Z" fill="#fcee0a"/>
       </svg>
       <span class="logo-text">
         <span class="logo-name">CryptoFacile</span>

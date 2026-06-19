@@ -186,6 +186,11 @@ p { margin-bottom: 1rem; }
   display: flex; align-items: center; gap: 0.4rem;
   flex-shrink: 0; margin-left: auto;
 }
+.header-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
 .header-social {
   width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
   background: var(--bg-alt); border: 1px solid var(--border);

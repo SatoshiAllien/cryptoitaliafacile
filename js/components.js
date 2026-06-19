@@ -47,12 +47,22 @@ function renderNavLinks(base) {
   }).join('');
 }
 
+function renderHeaderSocialLink(id) {
+  const s = getSocial(id);
+  if (!s) return '';
+  return `<a href="${s.url}" class="header-social header-social--${s.id}" aria-label="${s.name}" target="_blank" rel="noopener noreferrer" style="--social-color:${s.color}">${SOCIAL_ICONS[s.id] || s.name[0]}</a>`;
+}
+
+function renderMobileSocialLink(id) {
+  const s = getSocial(id);
+  if (!s) return '';
+  return `<a href="${s.url}" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">${SOCIAL_ICONS[s.id] || ''} ${s.name}</a>`;
+}
+
 function renderHeader() {
   const base = getBasePath();
-  const fb = getSocial('facebook');
-  const fbHeader = fb
-    ? `<a href="${fb.url}" class="header-social header-social--facebook" aria-label="${fb.name}" target="_blank" rel="noopener noreferrer" style="--social-color:${fb.color}">${SOCIAL_ICONS.facebook}</a>`
-    : '';
+  const headerSocialsHtml = ['x', 'facebook'].map(renderHeaderSocialLink).join('');
+  const headerSocials = headerSocialsHtml ? `<div class="header-socials">${headerSocialsHtml}</div>` : '';
   return `
     <header class="header" id="header">
       <div class="container header-inner">
@@ -61,7 +71,7 @@ function renderHeader() {
           ${renderNavLinks(base)}
         </nav>
         <div class="header-actions">
-          ${fbHeader}
+          ${headerSocials}
           <button class="search-toggle" id="open-search" aria-label="${t('nav.search')}">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </button>
@@ -112,7 +122,7 @@ function renderHeader() {
             return `<a href="${base}${item.href}" class="mobile-nav-link">${navLabel(item.href)}</a>`;
           }).join('')}
           <a href="${base}glossario/index.html" class="mobile-nav-link">${t('nav.glossario')}</a>
-          ${fb ? `<a href="${fb.url}" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">${SOCIAL_ICONS.facebook} Facebook</a>` : ''}
+          ${['x', 'facebook'].map(renderMobileSocialLink).join('')}
           <a href="${base}newsletter/index.html" class="mobile-nav-link mobile-nav-link--cta">${t('nav.newsletterFree')}</a>
         </nav>
       </div>

@@ -7,7 +7,7 @@ const SITE_CONFIG = {
   email: 'info@cryptofacile.com',
 
   teacher: {
-    name: 'Stefan',
+    name: 'Stefano',
     title: 'Insegnante crypto professionale',
     photo: 'assets/img/teacher.jpg',
     quote: 'Ti accompagno passo dopo passo nel mondo crypto — con parole semplici, esempi pratici e zero hype. Il mio obiettivo è che tu capisca davvero, non che compri alla cieca.',

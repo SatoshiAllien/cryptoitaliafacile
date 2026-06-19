@@ -1,7 +1,10 @@
 const I18N_STORAGE_KEY = 'cf_lang';
 
-const FLAG_IT = `<svg class="lang-flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"><rect width="8" height="16" fill="#009246"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE2B37"/></svg>`;
-const FLAG_EN = `<svg class="lang-flag" viewBox="0 0 24 16" width="18" height="12" aria-hidden="true"><rect width="24" height="16" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="2.5"/><path d="M0 0l24 16M24 0L0 16" stroke="#C8102E" stroke-width="1.2"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="4"/><path d="M12 0v16M0 8h24" stroke="#C8102E" stroke-width="2"/></svg>`;
+function flagImg(code) {
+  const base = typeof getBasePath === 'function' ? getBasePath() : '';
+  const src = `${base}assets/img/flag-${code}.svg`;
+  return `<img src="${src}" class="lang-flag" width="22" height="15" alt="" loading="eager" decoding="async">`;
+}
 
 const TRANSLATIONS = {
   it: {
@@ -234,11 +237,11 @@ function renderLangSwitcher() {
   const lang = getLang();
   return `
     <div class="lang-switcher" role="group" aria-label="${t('ui.langLabel')}">
-      <button type="button" class="lang-btn${lang === 'it' ? ' lang-btn--active' : ''}" data-lang="it" aria-pressed="${lang === 'it'}">
-        ${FLAG_IT}<span>IT</span>
+      <button type="button" class="lang-btn${lang === 'it' ? ' lang-btn--active' : ''}" data-lang="it" aria-pressed="${lang === 'it'}" title="Italiano">
+        ${flagImg('it')}<span class="lang-code">IT</span>
       </button>
-      <button type="button" class="lang-btn${lang === 'en' ? ' lang-btn--active' : ''}" data-lang="en" aria-pressed="${lang === 'en'}">
-        ${FLAG_EN}<span>EN</span>
+      <button type="button" class="lang-btn${lang === 'en' ? ' lang-btn--active' : ''}" data-lang="en" aria-pressed="${lang === 'en'}" title="English">
+        ${flagImg('en')}<span class="lang-code">EN</span>
       </button>
     </div>`;
 }

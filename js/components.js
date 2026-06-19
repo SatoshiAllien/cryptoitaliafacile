@@ -58,10 +58,10 @@ function renderHeader() {
           ${renderNavLinks(base)}
         </nav>
         <div class="header-actions">
-          ${renderLangSwitcher()}
           <button class="search-toggle" id="open-search" aria-label="${t('nav.search')}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </button>
+          <div class="header-lang" id="header-lang">${renderLangSwitcher()}</div>
           <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">${t('nav.newsletter')}</a>
           <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -71,8 +71,9 @@ function renderHeader() {
       <div class="search-bar" id="search-bar" hidden>
         <div class="container">
           <div class="search-bar-inner">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <svg class="search-bar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             <input type="search" id="header-search" placeholder="${t('ui.searchPlaceholder')}" autocomplete="off">
+            <div class="search-bar-lang">${renderLangSwitcher()}</div>
             <button class="search-close" id="search-close" aria-label="${t('nav.closeSearch')}">✕</button>
           </div>
           <div class="search-suggestions" id="search-suggestions"></div>

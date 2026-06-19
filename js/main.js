@@ -99,7 +99,7 @@ async function performSearch(query, container, limit = 20) {
     </a>`;
   });
 
-  if (!html) html = '<p style="padding:0.75rem 1rem;color:var(--text-muted)">Nessun risultato trovato.</p>';
+  if (!html) html = `<p style="padding:0.75rem 1rem;color:var(--text-muted)">${t('ui.noResults')}</p>`;
   container.innerHTML = html;
 }
 
@@ -141,7 +141,8 @@ async function initHomepage() {
 
   const trustEl = document.getElementById('trust-badges');
   if (trustEl) {
-    trustEl.innerHTML = SITE_CONFIG.trustBadges.map(b =>
+    const badges = t('trust');
+    trustEl.innerHTML = (Array.isArray(badges) ? badges : SITE_CONFIG.trustBadges).map(b =>
       `<span class="trust-badge">${b}</span>`
     ).join('');
   }
@@ -152,21 +153,24 @@ async function initHomepage() {
 
   const affiliateGrid = document.getElementById('affiliate-grid');
   if (affiliateGrid && SITE_CONFIG.affiliates) {
-    affiliateGrid.innerHTML = SITE_CONFIG.affiliates.map(a => `
+    affiliateGrid.innerHTML = SITE_CONFIG.affiliates.map(a => {
+      const loc = t(`affiliates.${a.id}`) || {};
+      return `
       <a href="${a.href}" class="affiliate-card affiliate-card--${a.badgeType} fade-in" target="_blank" rel="noopener noreferrer sponsored" style="--aff-accent:${a.accent};--aff-accent-light:${a.accentLight}">
         <div class="affiliate-card-top">
           <span class="affiliate-card-initial">${a.initial || a.name[0]}</span>
           <span class="affiliate-card-badge affiliate-card-badge--${a.badgeType}">${a.badge}</span>
         </div>
-        <span class="affiliate-card-tagline">${a.tagline}</span>
-        <h3 class="affiliate-card-headline">${a.headline}</h3>
-        <p class="affiliate-card-hook">${a.hook}</p>
+        <span class="affiliate-card-tagline">${loc.tagline || a.tagline}</span>
+        <h3 class="affiliate-card-headline">${loc.headline || a.headline}</h3>
+        <p class="affiliate-card-hook">${loc.hook || a.hook}</p>
         <ul class="affiliate-card-perks">
-          ${a.perks.map(p => `<li>✓ ${p}</li>`).join('')}
+          ${(loc.perks || a.perks).map(p => `<li>✓ ${p}</li>`).join('')}
         </ul>
-        ${a.code ? `<div class="affiliate-card-code">Codice: <strong>${a.code}</strong></div>` : ''}
-        <span class="affiliate-card-cta">${a.cta}</span>
-      </a>`).join('');
+        ${a.code ? `<div class="affiliate-card-code">${loc.code || 'Codice'}: <strong>${a.code}</strong></div>` : ''}
+        <span class="affiliate-card-cta">${loc.cta || a.cta}</span>
+      </a>`;
+    }).join('');
   }
 
   const catGrid = document.getElementById('category-grid');
@@ -176,7 +180,7 @@ async function initHomepage() {
         <span class="category-icon">${c.iconImg
           ? `<img src="${base}${c.iconImg}" alt="${c.label}" class="category-icon-img" width="28" height="28" loading="lazy" />`
           : `<span class="category-abbr">${c.abbr || c.label[0]}</span>`}</span>
-        <span class="category-label">${c.label}</span>
+        <span class="category-label">${t(`categories.${c.id}`) || c.label}</span>
       </a>`).join('');
   }
 
@@ -200,12 +204,13 @@ async function initHomepage() {
 
   const path = document.getElementById('beginner-path');
   if (path) {
+    const pathTr = t('path') || [];
     path.innerHTML = SITE_CONFIG.beginnerPath.map((s, i) => `
       <a href="${base}${s.href}" class="path-step fade-in" style="--step-color:${SITE_CONFIG.pathColors[i]}">
         <span class="path-number">${s.step}</span>
         <div class="path-content">
-          <h3>${s.title}</h3>
-          <p>${s.desc}</p>
+          <h3>${pathTr[i]?.title || s.title}</h3>
+          <p>${pathTr[i]?.desc || s.desc}</p>
         </div>
         <span class="path-arrow">→</span>
       </a>`).join('');
@@ -213,14 +218,38 @@ async function initHomepage() {
 
   const tools = document.getElementById('tools-grid');
   if (tools) {
-    tools.innerHTML = SITE_CONFIG.tools.map(t => `
-      <div class="tool-card fade-in${t.affiliate ? ' tool-card--affiliate' : ''}">
-        <div class="tool-category">${t.category}${t.affiliate ? ' <span class="tool-affiliate-tag">BONUS</span>' : ''}</div>
-        <h3>${t.name}</h3>
-        <p>${t.desc}</p>
-        <a href="${t.href}" class="btn btn-ghost btn-sm"${t.affiliate ? ' target="_blank" rel="noopener noreferrer sponsored"' : ''}>${t.affiliate ? 'Ottieni bonus →' : 'Scopri →'}</a>
-      </div>`).join('');
+    const toolKeys = { Ledger: 'ledger', Revolut: 'revolut', Kraken: 'kraken', Eternl: 'eternl' };
+    tools.innerHTML = SITE_CONFIG.tools.map(tool => {
+      const key = toolKeys[tool.name];
+      const loc = key ? t(`tools.${key}`) : null;
+      return `
+      <div class="tool-card fade-in${tool.affiliate ? ' tool-card--affiliate' : ''}">
+        <div class="tool-category">${loc?.cat || tool.category}${tool.affiliate ? ' <span class="tool-affiliate-tag">BONUS</span>' : ''}</div>
+        <h3>${tool.name}</h3>
+        <p>${loc?.desc || tool.desc}</p>
+        <a href="${tool.href}" class="btn btn-ghost btn-sm"${tool.affiliate ? ' target="_blank" rel="noopener noreferrer sponsored"' : ''}>${tool.affiliate ? t('ui.getBonus') : t('ui.discover')}</a>
+      </div>`;
+    }).join('');
   }
+}
+
+function initHubI18n() {
+  const hub = document.body.dataset.hub;
+  if (!hub) return;
+  const hubData = t(`hubs.${hub}`);
+  if (!hubData || typeof hubData !== 'object') return;
+  const h1 = document.querySelector('.page-hero h1');
+  const desc = document.querySelector('.page-hero p');
+  if (h1) h1.textContent = hubData.title;
+  if (desc) desc.textContent = hubData.desc;
+  const filterMap = {
+    guide: 'ui.all', principianti: 'nav.principianti', avanzate: 'nav.avanzate',
+    defi: 'nav.defi', wallet: 'nav.wallet', sicurezza: 'nav.sicurezza'
+  };
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    const key = filterMap[btn.dataset.filter];
+    if (key) btn.textContent = t(key);
+  });
 }
 
 async function initHubPage() {
@@ -339,7 +368,7 @@ function loadCryptoBackground() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+async function bootApp() {
   try {
     await loadCryptoBackground();
     initCryptoBackground();
@@ -347,11 +376,28 @@ document.addEventListener('DOMContentLoaded', async () => {
   injectLayout();
   initMobileNav();
   initSearchBar();
+  initI18n();
   initFadeIn();
   initNewsletter();
   await initHomepage();
   await initHubPage();
+  initHubI18n();
   await initGlossary();
   await initSearchPage();
+  applyPageTranslations();
+  initFadeIn();
+}
+
+document.addEventListener('DOMContentLoaded', bootApp);
+
+window.addEventListener('langchange', async () => {
+  injectLayout();
+  initMobileNav();
+  initSearchBar();
+  initI18n();
+  await initHomepage();
+  await initHubPage();
+  initHubI18n();
+  applyPageTranslations();
   initFadeIn();
 });

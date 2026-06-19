@@ -146,6 +146,41 @@ p { margin-bottom: 1rem; }
 }
 .dropdown-link:hover { background: var(--primary-light); color: var(--primary); }
 .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.15rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.55rem;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  line-height: 1;
+}
+.lang-btn:hover { color: var(--text); background: var(--white); }
+.lang-btn--active {
+  background: var(--white);
+  color: var(--primary-dark);
+  box-shadow: var(--shadow);
+}
+.lang-flag { border-radius: 2px; flex-shrink: 0; opacity: 0.85; }
+.lang-btn--active .lang-flag { opacity: 1; }
+.mobile-nav-header-actions { display: flex; align-items: center; gap: 0.5rem; }
 .search-toggle, .menu-toggle {
   display: flex; align-items: center; justify-content: center;
   width: 40px; height: 40px; border: none; background: transparent;

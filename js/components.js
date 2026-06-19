@@ -1,3 +1,20 @@
+const NAV_I18N = {
+  'guide/index.html': 'nav.guide',
+  'crypto-tips/index.html': 'nav.cryptoTips',
+  'trend/index.html': 'nav.trend',
+  'sicurezza/index.html': 'nav.sicurezza',
+  'cardano/index.html': 'nav.cardano',
+  'strumenti/index.html': 'nav.strumenti',
+  'guide/index.html?filter=principianti': 'nav.principianti',
+  'guide/index.html?filter=avanzate': 'nav.avanzate',
+  'guide/index.html?filter=defi': 'nav.defi',
+  'guide/index.html?filter=wallet': 'nav.wallet'
+};
+
+function navLabel(href) {
+  return t(NAV_I18N[href] || href);
+}
+
 function renderLogo(base) {
   return `
     <a href="${base}index.html" class="logo" aria-label="CryptoFacile — Home">
@@ -10,7 +27,7 @@ function renderLogo(base) {
       </svg>
       <span class="logo-text">
         <span class="logo-name">CryptoFacile</span>
-        <span class="logo-tagline">La crypto, spiegata facile</span>
+        <span class="logo-tagline">${t('logoTagline')}</span>
       </span>
     </a>`;
 }
@@ -19,15 +36,15 @@ function renderNavLinks(base) {
   return SITE_CONFIG.nav.map(item => {
     if (item.children) {
       const children = item.children.map(c =>
-        `<a href="${base}${c.href}" class="dropdown-link">${c.label}</a>`
+        `<a href="${base}${c.href}" class="dropdown-link">${navLabel(c.href)}</a>`
       ).join('');
       return `
         <div class="nav-item nav-item--dropdown">
-          <a href="${base}${item.href}" class="nav-link">${item.label} <span class="nav-caret">▾</span></a>
+          <a href="${base}${item.href}" class="nav-link">${navLabel(item.href)} <span class="nav-caret">▾</span></a>
           <div class="dropdown-menu">${children}</div>
         </div>`;
     }
-    return `<a href="${base}${item.href}" class="nav-link">${item.label}</a>`;
+    return `<a href="${base}${item.href}" class="nav-link">${navLabel(item.href)}</a>`;
   }).join('');
 }
 
@@ -41,10 +58,11 @@ function renderHeader() {
           ${renderNavLinks(base)}
         </nav>
         <div class="header-actions">
-          <button class="search-toggle" id="open-search" aria-label="Cerca">
+          ${renderLangSwitcher()}
+          <button class="search-toggle" id="open-search" aria-label="${t('nav.search')}">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </button>
-          <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">Newsletter</a>
+          <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">${t('nav.newsletter')}</a>
           <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>
@@ -54,8 +72,8 @@ function renderHeader() {
         <div class="container">
           <div class="search-bar-inner">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" opacity="0.7"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <input type="search" id="header-search" placeholder="Cerca guide, tips, termini… (es. seed phrase, staking ADA)" autocomplete="off">
-            <button class="search-close" id="search-close" aria-label="Chiudi ricerca">✕</button>
+            <input type="search" id="header-search" placeholder="${t('ui.searchPlaceholder')}" autocomplete="off">
+            <button class="search-close" id="search-close" aria-label="${t('nav.closeSearch')}">✕</button>
           </div>
           <div class="search-suggestions" id="search-suggestions"></div>
         </div>
@@ -65,28 +83,31 @@ function renderHeader() {
       <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
       <div class="mobile-nav-panel">
         <div class="mobile-nav-header">
-          <strong>Menu</strong>
-          <button id="mobile-nav-close" aria-label="Chiudi">✕</button>
+          <strong>${t('nav.menu')}</strong>
+          <div class="mobile-nav-header-actions">
+            ${renderLangSwitcher()}
+            <button id="mobile-nav-close" aria-label="${t('nav.close')}">✕</button>
+          </div>
         </div>
         <div class="mobile-search">
-          <input type="search" id="mobile-search" placeholder="Cerca…" autocomplete="off">
+          <input type="search" id="mobile-search" placeholder="${t('ui.searchShort')}" autocomplete="off">
         </div>
         <nav class="mobile-nav-links">
           ${SITE_CONFIG.nav.map(item => {
             if (item.children) {
               return `
                 <details class="mobile-accordion">
-                  <summary>${item.label}</summary>
+                  <summary>${navLabel(item.href)}</summary>
                   <div class="mobile-accordion-body">
-                    <a href="${base}${item.href}">Tutte le guide</a>
-                    ${item.children.map(c => `<a href="${base}${c.href}">${c.label}</a>`).join('')}
+                    <a href="${base}${item.href}">${t('nav.allGuides')}</a>
+                    ${item.children.map(c => `<a href="${base}${c.href}">${navLabel(c.href)}</a>`).join('')}
                   </div>
                 </details>`;
             }
-            return `<a href="${base}${item.href}" class="mobile-nav-link">${item.label}</a>`;
+            return `<a href="${base}${item.href}" class="mobile-nav-link">${navLabel(item.href)}</a>`;
           }).join('')}
-          <a href="${base}glossario/index.html" class="mobile-nav-link">Glossario</a>
-          <a href="${base}newsletter/index.html" class="mobile-nav-link mobile-nav-link--cta">Newsletter gratis</a>
+          <a href="${base}glossario/index.html" class="mobile-nav-link">${t('nav.glossario')}</a>
+          <a href="${base}newsletter/index.html" class="mobile-nav-link mobile-nav-link--cta">${t('nav.newsletterFree')}</a>
         </nav>
       </div>
     </div>`;
@@ -104,45 +125,43 @@ function renderFooter() {
         <div class="footer-grid">
           <div class="footer-col">
             <h4>CryptoFacile</h4>
-            <p>Guide pratiche e spiegazioni semplici sul mondo crypto. 100% educativo, zero hype.</p>
+            <p>${t('footer.desc')}</p>
             <div class="social-links">${social}</div>
           </div>
           <div class="footer-col">
-            <h4>Guide</h4>
+            <h4>${t('footer.guides')}</h4>
             <div class="footer-links">
-              <a href="${base}guide/index.html?filter=principianti">Principianti</a>
-              <a href="${base}sicurezza/index.html">Sicurezza</a>
-              <a href="${base}cardano/index.html">Cardano</a>
-              <a href="${base}guide/index.html?filter=defi">DeFi & Staking</a>
-              <a href="${base}guide/index.html?filter=avanzate">Avanzate</a>
+              <a href="${base}guide/index.html?filter=principianti">${t('nav.principianti')}</a>
+              <a href="${base}sicurezza/index.html">${t('nav.sicurezza')}</a>
+              <a href="${base}cardano/index.html">${t('nav.cardano')}</a>
+              <a href="${base}guide/index.html?filter=defi">${t('nav.defi')}</a>
+              <a href="${base}guide/index.html?filter=avanzate">${t('nav.avanzate')}</a>
             </div>
           </div>
           <div class="footer-col">
-            <h4>Risorse</h4>
+            <h4>${t('footer.resources')}</h4>
             <div class="footer-links">
-              <a href="${base}glossario/index.html">Glossario</a>
-              <a href="${base}strumenti/index.html">Strumenti</a>
-              <a href="${base}trend/index.html">Trend</a>
-              <a href="${base}crypto-tips/index.html">Crypto Tips</a>
-              <a href="${base}newsletter/index.html">Newsletter</a>
+              <a href="${base}glossario/index.html">${t('nav.glossario')}</a>
+              <a href="${base}strumenti/index.html">${t('nav.strumenti')}</a>
+              <a href="${base}trend/index.html">${t('nav.trend')}</a>
+              <a href="${base}crypto-tips/index.html">${t('nav.cryptoTips')}</a>
+              <a href="${base}newsletter/index.html">${t('nav.newsletter')}</a>
             </div>
           </div>
           <div class="footer-col">
-            <h4>Legale</h4>
+            <h4>${t('footer.legal')}</h4>
             <div class="footer-links">
-              <a href="${base}chi-siamo/index.html">Chi siamo</a>
-              <a href="${base}contatti/index.html">Contatti</a>
+              <a href="${base}chi-siamo/index.html">${t('footer.about')}</a>
+              <a href="${base}contatti/index.html">${t('footer.contacts')}</a>
               <a href="${base}privacy.html">Privacy</a>
               <a href="${base}cookie.html">Cookie</a>
               <a href="${base}disclaimer.html">Disclaimer</a>
             </div>
           </div>
         </div>
-        <div class="footer-disclaimer">
-          I contenuti di CryptoFacile sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.
-        </div>
+        <div class="footer-disclaimer">${t('footer.disclaimer')}</div>
         <div class="footer-bottom">
-          <span>© ${SITE_CONFIG.year} CryptoFacile.com — ${SITE_CONFIG.tagline}</span>
+          <span>© ${SITE_CONFIG.year} CryptoFacile.com — ${t('tagline')}</span>
         </div>
       </div>
     </footer>`;
@@ -157,49 +176,52 @@ function renderBreadcrumb(items) {
     return `<a href="${base}${item.href}">${item.label}</a>`;
   }).join('<span class="breadcrumb-sep">›</span>');
 
-  return `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="${base}index.html">Home</a><span class="breadcrumb-sep">›</span>${crumbs}</nav>`;
+  return `<nav class="breadcrumb" aria-label="Breadcrumb"><a href="${base}index.html">${t('ui.home')}</a><span class="breadcrumb-sep">›</span>${crumbs}</nav>`;
 }
 
 function renderArticleCard(article, base) {
-  const diffClass = `badge--${article.difficulty}`;
-  const diffLabel = { beginner: 'Principiante', intermediate: 'Intermedio', advanced: 'Avanzato' }[article.difficulty] || 'Principiante';
+  const a = localizeArticle(article);
+  const diffClass = `badge--${a.difficulty}`;
+  const diffLabel = { beginner: t('ui.beginner'), intermediate: t('ui.intermediate'), advanced: t('ui.advanced') }[a.difficulty] || t('ui.beginner');
   return `
-    <a href="${base}articolo.html?slug=${article.slug}" class="article-card article-card--${article.difficulty}">
+    <a href="${base}articolo.html?slug=${a.slug}" class="article-card article-card--${a.difficulty}">
       <div class="article-card-accent"></div>
       <div class="article-card-body">
         <div class="article-card-top">
           <span class="badge ${diffClass}">${diffLabel}</span>
-          <span class="article-meta">${article.readTime} min</span>
+          <span class="article-meta">${a.readTime} min</span>
         </div>
-        <h3 class="article-card-title">${article.title}</h3>
-        <p class="article-card-excerpt">${article.excerpt}</p>
-        <span class="article-card-link">Leggi la guida →</span>
+        <h3 class="article-card-title">${a.title}</h3>
+        <p class="article-card-excerpt">${a.excerpt}</p>
+        <span class="article-card-link">${t('ui.readGuide')}</span>
       </div>
     </a>`;
 }
 
 function renderTipCard(tip, base) {
+  const t_ = localizeArticle(tip);
   return `
-    <a href="${base}articolo.html?slug=${tip.slug}" class="tip-card">
+    <a href="${base}articolo.html?slug=${t_.slug}" class="tip-card">
       <span class="tip-marker" aria-hidden="true"></span>
       <div>
-        <h3>${tip.title}</h3>
-        <p>${tip.excerpt}</p>
+        <h3>${t_.title}</h3>
+        <p>${t_.excerpt}</p>
       </div>
     </a>`;
 }
 
 function renderTrendCard(trend, base) {
-  const tags = (trend.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+  const tr = localizeArticle(trend);
+  const tags = (tr.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
   return `
-    <a href="${base}articolo.html?slug=${trend.slug}" class="trend-card">
+    <a href="${base}articolo.html?slug=${tr.slug}" class="trend-card">
       <div class="trend-card-header">
-        <span class="trend-date">Aggiornato ${trend.date}</span>
+        <span class="trend-date">${t('ui.updated')} ${tr.date}</span>
       </div>
-      <h3>${trend.title}</h3>
-      <p>${trend.excerpt}</p>
+      <h3>${tr.title}</h3>
+      <p>${tr.excerpt}</p>
       <div class="trend-tags">${tags}</div>
-      <span class="trend-cta">Spiegazione semplice →</span>
+      <span class="trend-cta">${t('ui.simpleExplanation')}</span>
     </a>`;
 }
 
@@ -208,4 +230,5 @@ function injectLayout() {
   const footerEl = document.getElementById('site-footer');
   if (headerEl) headerEl.innerHTML = renderHeader();
   if (footerEl) footerEl.innerHTML = renderFooter();
+  initLangSwitcher();
 }

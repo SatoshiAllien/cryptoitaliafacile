@@ -2,8 +2,8 @@ const SITE_CONFIG = {
   name: 'The Little Satoshi News',
   domain: 'cryptofacile.com',
   siteUrl: 'https://satoshiallien.github.io/cryptoitaliafacile/',
-  tagline: 'Notizie crypto, chiare e semplici.',
-  description: 'Guide pratiche, tips e spiegazioni semplici sul mondo crypto. Per principianti e non solo.',
+  tagline: 'Notizie e crypto, facili e semplici.',
+  description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
   email: 'info@cryptofacile.com',
 

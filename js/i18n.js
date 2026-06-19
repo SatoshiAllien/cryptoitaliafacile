@@ -8,8 +8,8 @@ function flagImg(code) {
 
 const TRANSLATIONS = {
   it: {
-    tagline: 'Notizie crypto, chiare e semplici.',
-    logoTagline: 'Notizie crypto, chiare e semplici',
+    tagline: 'Notizie e crypto, facili e semplici.',
+    logoTagline: 'Notizie e crypto, facili e semplici',
     nav: {
       guide: 'Guide', cryptoTips: 'Crypto Tips', trend: 'Trend', sicurezza: 'Sicurezza',
       cardano: 'Cardano', strumenti: 'Strumenti', glossario: 'Glossario',
@@ -26,7 +26,7 @@ const TRANSLATIONS = {
       searchShort: 'Cerca…', langLabel: 'Lingua'
     },
     footer: {
-      desc: 'Guide pratiche e spiegazioni semplici sul mondo crypto. 100% educativo, zero hype.',
+      desc: 'Notizie crypto e guide spiegate in modo facile e semplice. 100% educativo, zero hype.',
       guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', contacts: 'Contatti',
       disclaimer: 'I contenuti di The Little Satoshi News sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.'
     },
@@ -47,9 +47,9 @@ const TRANSLATIONS = {
       welcomeP3: 'Questo è il posto per chi non segue la massa. Per chi vuole capire, non farsi manipolare. Per chi costruisce, non aspetta.',
       welcomeClosing1: 'Stacking truth.',
       welcomeClosing2: 'Stacking memes.',
-      heroTitle: 'Le notizie crypto,',
-      heroHighlight: 'chiare e semplici',
-      heroDesc: 'Niente paura, niente gergo complicato. Guide passo-passo, tips pratici e spiegazioni chiare — pensate per chi inizia da zero.',
+      heroTitle: 'Notizie e crypto,',
+      heroHighlight: 'facili e semplici',
+      heroDesc: 'Notizie aggiornate e crypto spiegate in modo facile e semplice. Niente gergo, niente hype — solo guide chiare per chi inizia da zero.',
       ctaStart: 'Inizia da qui', ctaBonus: 'Bonus Revolut + Kraken', ctaSecurity: 'Sicurezza', ctaCardano: 'Cardano', ctaFacebook: 'Facebook',
       reassure1t: 'Non serve essere esperti', reassure1d: 'Tutto spiegato con parole semplici',
       reassure2t: 'Vai con calma', reassure2d: 'Impara al tuo ritmo, senza fretta',
@@ -198,8 +198,8 @@ const TRANSLATIONS = {
       }
     },
     meta: {
-      homeTitle: 'The Little Satoshi News — Notizie crypto, chiare e semplici',
-      homeDesc: 'Guide crypto passo-passo, tips pratici e spiegazioni semplici. Impara Bitcoin, wallet, DeFi e sicurezza senza hype.',
+      homeTitle: 'The Little Satoshi News — Notizie e crypto, facili e semplici',
+      homeDesc: 'Notizie crypto e guide spiegate in modo facile e semplice. Bitcoin, wallet, DeFi e sicurezza senza hype.',
       guideTitle: 'Guide Crypto — The Little Satoshi News',
       guideDesc: 'Guide crypto passo-passo per principianti e avanzati. Impara Bitcoin, wallet, DeFi, staking e molto altro su The Little Satoshi News.',
       tipsTitle: 'Crypto Tips — The Little Satoshi News', tipsDesc: 'Consigli brevi e pratici sul mondo crypto.',
@@ -227,8 +227,8 @@ const TRANSLATIONS = {
     messages: { noArticles: 'Nessun articolo in questa categoria.', bonus: 'BONUS' }
   },
   en: {
-    tagline: 'Crypto news, clear and simple.',
-    logoTagline: 'Crypto news, clear and simple',
+    tagline: 'News and crypto, easy and simple.',
+    logoTagline: 'News and crypto, easy and simple',
     nav: {
       guide: 'Guides', cryptoTips: 'Crypto Tips', trend: 'Trends', sicurezza: 'Security',
       cardano: 'Cardano', strumenti: 'Tools', glossario: 'Glossary',
@@ -266,9 +266,9 @@ const TRANSLATIONS = {
       welcomeP3: 'This is the place for those who don\'t follow the crowd. Who want to understand, not be manipulated. Who build, not wait.',
       welcomeClosing1: 'Stacking truth.',
       welcomeClosing2: 'Stacking memes.',
-      heroTitle: 'Crypto news,',
-      heroHighlight: 'clear and simple',
-      heroDesc: 'No fear, no complicated jargon. Step-by-step guides, practical tips and clear explanations — designed for complete beginners.',
+      heroTitle: 'News and crypto,',
+      heroHighlight: 'easy and simple',
+      heroDesc: 'Fresh crypto news and explanations the easy, simple way. No jargon, no hype — just clear guides for complete beginners.',
       ctaStart: 'Start here', ctaBonus: 'Revolut + Kraken bonus', ctaSecurity: 'Security', ctaCardano: 'Cardano', ctaFacebook: 'Facebook',
       reassure1t: 'No expertise needed', reassure1d: 'Everything explained in plain language',
       reassure2t: 'Take your time', reassure2d: 'Learn at your own pace',
@@ -417,8 +417,8 @@ const TRANSLATIONS = {
       }
     },
     meta: {
-      homeTitle: 'The Little Satoshi News — Crypto news, clear and simple',
-      homeDesc: 'Step-by-step crypto guides, practical tips and simple explanations. Learn Bitcoin, wallets, DeFi and security without hype.',
+      homeTitle: 'The Little Satoshi News — News and crypto, easy and simple',
+      homeDesc: 'Crypto news and guides explained the easy and simple way. Bitcoin, wallets, DeFi and security without hype.',
       guideTitle: 'Crypto Guides — The Little Satoshi News',
       guideDesc: 'Step-by-step crypto guides for beginners and advanced users. Learn Bitcoin, wallets, DeFi, staking and more on The Little Satoshi News.',
       tipsTitle: 'Crypto Tips — The Little Satoshi News', tipsDesc: 'Short, practical tips about the crypto world.',

@@ -67,6 +67,14 @@ const SITE_CONFIG = {
 
   social: [
     {
+      id: 'x',
+      name: 'X',
+      handle: '@RapidResponse47',
+      url: 'https://x.com/RapidResponse47',
+      color: '#E7E9EA',
+      desc: 'Notizie rapide, analisi crypto e aggiornamenti in tempo reale.'
+    },
+    {
       id: 'facebook',
       name: 'Facebook',
       handle: 'The Little Satoshi News',

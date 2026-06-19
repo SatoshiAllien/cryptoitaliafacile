@@ -403,6 +403,14 @@ function loadCryptoBackground() {
   });
 }
 
+function initSocialPage() {
+  if (document.body.dataset.page !== 'social') return;
+  const grid = document.getElementById('social-grid');
+  if (!grid || !SITE_CONFIG.social) return;
+  grid.innerHTML = SITE_CONFIG.social.map(s => renderSocialCard(s)).join('');
+  initFadeIn();
+}
+
 async function bootApp() {
   try {
     await loadCryptoBackground();
@@ -419,6 +427,7 @@ async function bootApp() {
   initHubI18n();
   await initGlossary();
   await initSearchPage();
+  initSocialPage();
   applyPageTranslations();
   initFadeIn();
 }
@@ -435,6 +444,7 @@ window.addEventListener('langchange', async () => {
   initHubI18n();
   await initGlossary();
   await initSearchPage();
+  initSocialPage();
   applyPageTranslations();
   initFadeIn();
 });

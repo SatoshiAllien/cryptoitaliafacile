@@ -15,7 +15,7 @@ const TRANSLATIONS = {
       cardano: 'Cardano', strumenti: 'Strumenti', glossario: 'Glossario',
       principianti: 'Principianti', avanzate: 'Avanzate', defi: 'DeFi & Staking', wallet: 'Wallet',
       allGuides: 'Tutte le guide', newsletter: 'Newsletter', newsletterFree: 'Newsletter gratis',
-      search: 'Cerca', menu: 'Menu', close: 'Chiudi', closeSearch: 'Chiudi ricerca'
+      social: 'Social', search: 'Cerca', menu: 'Menu', close: 'Chiudi', closeSearch: 'Chiudi ricerca'
     },
     ui: {
       home: 'Home', readGuide: 'Leggi la guida →', simpleExplanation: 'Spiegazione semplice →',
@@ -140,6 +140,17 @@ const TRANSLATIONS = {
         title: 'Glossario Crypto', desc: 'Tutti i termini del mondo crypto spiegati in parole semplici. Da A a Z.',
         all: 'Tutti', glossaryLabel: 'glossario'
       },
+      social: {
+        metaTitle: 'Social — CryptoFacile',
+        metaDesc: 'Segui CryptoFacile su Facebook, Instagram, TikTok e YouTube. Guide crypto semplici ogni giorno.',
+        title: 'Seguici sui social',
+        desc: 'Tips, guide brevi e aggiornamenti sul mondo crypto. Scegli la piattaforma che preferisci.',
+        follow: 'Seguici', cta: 'Vai al profilo →',
+        facebook: { desc: 'Guide brevi, aggiornamenti e community crypto in italiano.' },
+        instagram: { desc: 'Tips visivi, caroselli educativi e storie sulla sicurezza crypto.' },
+        tiktok: { desc: 'Video brevi: crypto spiegata in 60 secondi, zero hype.' },
+        youtube: { desc: 'Tutorial passo-passo e guide approfondite in video.' }
+      },
       article: {
         metaTitle: 'Articolo — CryptoFacile', metaDesc: 'Guida crypto su CryptoFacile',
         related: 'Guide correlate', nlTitle: 'Non perdere i prossimi aggiornamenti',
@@ -205,7 +216,7 @@ const TRANSLATIONS = {
       cardano: 'Cardano', strumenti: 'Tools', glossario: 'Glossary',
       principianti: 'Beginners', avanzate: 'Advanced', defi: 'DeFi & Staking', wallet: 'Wallet',
       allGuides: 'All guides', newsletter: 'Newsletter', newsletterFree: 'Free newsletter',
-      search: 'Search', menu: 'Menu', close: 'Close', closeSearch: 'Close search'
+      social: 'Social', search: 'Search', menu: 'Menu', close: 'Close', closeSearch: 'Close search'
     },
     ui: {
       home: 'Home', readGuide: 'Read guide →', simpleExplanation: 'Simple explanation →',
@@ -329,6 +340,17 @@ const TRANSLATIONS = {
         metaDesc: 'Crypto glossary A-Z: all cryptocurrency terms explained simply.',
         title: 'Crypto Glossary', desc: 'All crypto terms explained in plain language. From A to Z.',
         all: 'All', glossaryLabel: 'glossary'
+      },
+      social: {
+        metaTitle: 'Social — CryptoFacile',
+        metaDesc: 'Follow CryptoFacile on Facebook, Instagram, TikTok and YouTube. Simple crypto guides every day.',
+        title: 'Follow us on social',
+        desc: 'Tips, short guides and crypto updates. Pick your favourite platform.',
+        follow: 'Follow us', cta: 'Go to profile →',
+        facebook: { desc: 'Short guides, updates and an Italian crypto community.' },
+        instagram: { desc: 'Visual tips, educational carousels and security stories.' },
+        tiktok: { desc: 'Short videos: crypto explained in 60 seconds, zero hype.' },
+        youtube: { desc: 'Step-by-step tutorials and in-depth video guides.' }
       },
       article: {
         metaTitle: 'Article — CryptoFacile', metaDesc: 'Crypto guide on CryptoFacile',

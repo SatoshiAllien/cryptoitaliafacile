@@ -64,11 +64,40 @@ const SITE_CONFIG = {
 
   pathColors: ['#00f0ff', '#ff2a6d', '#fcee0a', '#bd00ff', '#3b82f6'],
 
-  social: {
-    twitter: { url: 'https://twitter.com/cryptofacile', label: 'X' },
-    telegram: { url: 'https://t.me/cryptofacile', label: 'TG' },
-    youtube: { url: 'https://youtube.com/@cryptofacile', label: 'YT' }
-  },
+  social: [
+    {
+      id: 'facebook',
+      name: 'Facebook',
+      handle: '@cryptofacile',
+      url: 'https://www.facebook.com/cryptofacile',
+      color: '#1877F2',
+      desc: 'Guide brevi, aggiornamenti e community crypto in italiano.'
+    },
+    {
+      id: 'instagram',
+      name: 'Instagram',
+      handle: '@cryptofacile',
+      url: 'https://www.instagram.com/cryptofacile',
+      color: '#E1306C',
+      desc: 'Tips visivi, caroselli educativi e storie sulla sicurezza crypto.'
+    },
+    {
+      id: 'tiktok',
+      name: 'TikTok',
+      handle: '@cryptofacile',
+      url: 'https://www.tiktok.com/@cryptofacile',
+      color: '#00f0ff',
+      desc: 'Video brevi: crypto spiegata in 60 secondi, zero hype.'
+    },
+    {
+      id: 'youtube',
+      name: 'YouTube',
+      handle: '@cryptofacile',
+      url: 'https://www.youtube.com/@cryptofacile',
+      color: '#FF0000',
+      desc: 'Tutorial passo-passo e guide approfondite in video.'
+    }
+  ],
 
   beginnerPath: [
     { step: 1, title: 'Capire le basi', desc: 'Cos\'è una blockchain e come funziona', href: 'articolo.html?slug=blockchain-5-minuti' },

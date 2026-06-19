@@ -4,3 +4,5 @@ desktop.ini
 *.log
 .env
 scripts/.env
+scripts/_synd-*.html
+scripts/_probe_*.py

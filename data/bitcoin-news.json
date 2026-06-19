@@ -1,0 +1,64 @@
+{
+  "session": "bitcoin-news",
+  "title": "Sessione News Bitcoin",
+  "exportedAt": "2026-06-19T22:31",
+  "source": "The Little Satoshi News",
+  "count": 5,
+  "items": [
+    {
+      "id": "trend-etf-bitcoin",
+      "title": "Bitcoin Spot ETF: cosa sono e perché contano",
+      "summary": "Fondi quotati che tracciano Bitcoin: impatto e cosa significa per te.",
+      "date": "Giugno 2026",
+      "category": "trend",
+      "slug": "trend-etf-bitcoin",
+      "breaking": true,
+      "readTime": 7,
+      "postText": "₿ Bitcoin News — Bitcoin Spot ETF: cosa sono e perché contano\n\nFondi quotati che tracciano Bitcoin: impatto e cosa significa per te.\n\n👉 Leggi tutto:\nhttps://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-etf-bitcoin\n\n#Bitcoin #BTC #crypto #TheLittleSatoshiNews"
+    },
+    {
+      "id": "comprare-bitcoin-prima-volta",
+      "title": "Come comprare Bitcoin per la prima volta (guida completa 2026)",
+      "summary": "Exchange, verifica identità, primo acquisto e sicurezza: tutto passo dopo passo.",
+      "date": "Giugno 2026",
+      "category": "guide",
+      "slug": "comprare-bitcoin-prima-volta",
+      "breaking": true,
+      "readTime": 15,
+      "postText": "₿ Bitcoin News — Come comprare Bitcoin per la prima volta (guida completa 2026)\n\nExchange, verifica identità, primo acquisto e sicurezza: tutto passo dopo passo.\n\n👉 Leggi tutto:\nhttps://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=comprare-bitcoin-prima-volta\n\n#Bitcoin #BTC #crypto #TheLittleSatoshiNews"
+    },
+    {
+      "id": "lightning-network-guida",
+      "title": "Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet",
+      "summary": "Cos'è Lightning, come funzionano i sats, quali wallet usare e come pagare con la mappa commercianti di Satoshi Wallet.",
+      "date": "Giugno 2026",
+      "category": "guide",
+      "slug": "lightning-network-guida",
+      "breaking": true,
+      "readTime": 18,
+      "postText": "₿ Bitcoin News — Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet\n\nCos'è Lightning, come funzionano i sats, quali wallet usare e come pagare con la mappa commercianti di Satoshi Wallet.\n\n👉 Leggi tutto:\nhttps://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=lightning-network-guida\n\n#Bitcoin #BTC #crypto #TheLittleSatoshiNews"
+    },
+    {
+      "id": "primi-20-euro-bitcoin",
+      "title": "Acquistare i primi 20€ di Bitcoin",
+      "summary": "Ordine di acquisto, pagamento e conferma passo-passo.",
+      "date": "Maggio 2026",
+      "category": "tutorial",
+      "slug": "primi-20-euro-bitcoin",
+      "breaking": false,
+      "readTime": 6,
+      "postText": "₿ Bitcoin News — Acquistare i primi 20€ di Bitcoin\n\nOrdine di acquisto, pagamento e conferma passo-passo.\n\n👉 Leggi tutto:\nhttps://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=primi-20-euro-bitcoin\n\n#Bitcoin #BTC #crypto #TheLittleSatoshiNews"
+    },
+    {
+      "id": "trend-halving",
+      "title": "Il halving di Bitcoin: cos'è e perché tutti ne parlano",
+      "summary": "Riduzione delle ricompense dei miner: effetti sul mercato.",
+      "date": "Febbraio 2026",
+      "category": "trend",
+      "slug": "trend-halving",
+      "breaking": false,
+      "readTime": 7,
+      "postText": "₿ Bitcoin News — Il halving di Bitcoin: cos'è e perché tutti ne parlano\n\nRiduzione delle ricompense dei miner: effetti sul mercato.\n\n👉 Leggi tutto:\nhttps://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-halving\n\n#Bitcoin #BTC #crypto #TheLittleSatoshiNews"
+    }
+  ]
+}

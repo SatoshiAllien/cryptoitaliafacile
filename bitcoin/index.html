@@ -22,12 +22,41 @@
         </div>
       </div>
     </section>
-    <div class="articles-grid" id="hub-articles"></div>
+
+    <section class="btc-news-session section--alt" id="news-session">
+      <div class="btc-news-session-inner">
+        <div class="section-header section-header-row">
+          <div>
+            <span class="section-label" data-i18n="btcNews.label">Sessione News</span>
+            <h2 data-i18n="btcNews.title">Sessione News Bitcoin</h2>
+            <p data-i18n="btcNews.desc">Notizie e guide BTC esportate dal sito — pronte da leggere o ripubblicare.</p>
+          </div>
+          <div class="btc-news-session-meta">
+            <span><strong data-btc-news-count>0</strong> <span data-i18n="btcNews.items">notizie</span></span>
+            <span data-i18n="btcNews.updated">Aggiornato</span>: <time data-btc-news-updated>—</time>
+          </div>
+        </div>
+        <div class="btc-news-toolbar">
+          <button type="button" class="btn btn-secondary btn-sm" data-export-btc-news data-i18n="btcNews.exportAll">Esporta tutte le news</button>
+          <a href="https://x.com/TheRiser100x" class="btn btn-ghost btn-sm" target="_blank" rel="noopener noreferrer" data-i18n="btcNews.shareX">Condividi su X</a>
+        </div>
+        <div class="btc-news-list" id="btc-news-list"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-label" data-i18n="btcNews.guidesLabel">Guide</span>
+        <h2 data-i18n="btcNews.guidesTitle">Tutte le guide Bitcoin</h2>
+      </div>
+      <div class="articles-grid" id="hub-articles"></div>
+    </section>
   </main>
   <div id="site-footer"></div>
   <script src="../js/site-config.js"></script>
   <script src="../js/i18n.js"></script>
   <script src="../js/components.js"></script>
+  <script src="../js/bitcoin-news.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

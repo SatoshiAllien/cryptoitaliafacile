@@ -78,6 +78,34 @@ const TRANSLATIONS = {
       nlDesc: 'Iscriviti alla newsletter gratuita e ricevi subito la Checklist Sicurezza Crypto — 25 punti da verificare oggi.',
       nlNote: 'Niente spam. Solo contenuti educativi. Cancellati quando vuoi.'
     },
+    btcNews: {
+      label: 'Sessione News',
+      title: 'Sessione News Bitcoin',
+      desc: 'Notizie e guide BTC esportate dal sito — pronte da leggere o ripubblicare.',
+      homeTitle: 'News Bitcoin del momento',
+      homeDesc: 'Le ultime notizie e guide BTC — esportate e ripubblicate nella sessione dedicata.',
+      homeLink: 'Sessione completa →',
+      items: 'notizie',
+      updated: 'Aggiornato',
+      exportAll: 'Esporta tutte le news',
+      shareX: 'Condividi su X',
+      readMore: 'Leggi →',
+      readArticle: 'Leggi articolo',
+      repost: 'Ripubblica',
+      copied: 'Copiato!',
+      exportedAll: 'Sessione esportata!',
+      exported: 'Esportato',
+      source: 'Fonte',
+      copyPrompt: 'Copia il testo della news:',
+      error: 'Impossibile caricare le news Bitcoin.',
+      breaking: 'In evidenza',
+      guidesLabel: 'Guide',
+      guidesTitle: 'Tutte le guide Bitcoin',
+      categories: {
+        guide: 'Guida', tip: 'Tip', trend: 'Trend', tutorial: 'Tutorial',
+        cardano: 'Cardano', sicurezza: 'Sicurezza', bitcoin: 'Bitcoin'
+      }
+    },
     trust: ['100% educativo', 'Sicurezza prima di tutto', 'Passo dopo passo', 'Zero hype'],
     categories: {
       principianti: 'Principianti', sicurezza: 'Sicurezza',
@@ -303,6 +331,34 @@ const TRANSLATIONS = {
       nlTitle: '1 security tip per week',
       nlDesc: 'Subscribe to the free newsletter and get the Crypto Security Checklist — 25 points to verify today.',
       nlNote: 'No spam. Educational content only. Unsubscribe anytime.'
+    },
+    btcNews: {
+      label: 'News Session',
+      title: 'Bitcoin News Session',
+      desc: 'BTC news and guides exported from the site — ready to read or repost.',
+      homeTitle: 'Bitcoin news right now',
+      homeDesc: 'Latest BTC news and guides — exported and reposted in a dedicated session.',
+      homeLink: 'Full session →',
+      items: 'stories',
+      updated: 'Updated',
+      exportAll: 'Export all news',
+      shareX: 'Share on X',
+      readMore: 'Read →',
+      readArticle: 'Read article',
+      repost: 'Repost',
+      copied: 'Copied!',
+      exportedAll: 'Session exported!',
+      exported: 'Exported',
+      source: 'Source',
+      copyPrompt: 'Copy the news text:',
+      error: 'Could not load Bitcoin news.',
+      breaking: 'Featured',
+      guidesLabel: 'Guides',
+      guidesTitle: 'All Bitcoin guides',
+      categories: {
+        guide: 'Guide', tip: 'Tip', trend: 'Trend', tutorial: 'Tutorial',
+        cardano: 'Cardano', sicurezza: 'Security', bitcoin: 'Bitcoin'
+      }
     },
     trust: ['100% educational', 'Security first', 'Step by step', 'Zero hype'],
     categories: {

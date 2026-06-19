@@ -1052,6 +1052,131 @@ p { margin-bottom: 1rem; }
   object-fit: cover; flex-shrink: 0;
   box-shadow: 0 4px 20px rgba(0,51,160,0.25);
 }
+
+.btc-news-feed,
+.btc-news-list {
+  display: grid;
+  gap: 1rem;
+}
+.btc-news-feed {
+  grid-template-columns: 1fr;
+}
+.btc-news-session {
+  margin: 2rem 0 2.5rem;
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(247, 147, 26, 0.25);
+  background: linear-gradient(135deg, rgba(247, 147, 26, 0.06) 0%, rgba(0, 240, 255, 0.04) 100%);
+}
+.btc-news-session-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: right;
+}
+.btc-news-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+.btc-news-card {
+  position: relative;
+  padding: 1.15rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 3px solid #F7931A;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.btc-news-card:hover {
+  border-color: rgba(247, 147, 26, 0.45);
+  box-shadow: 0 0 20px rgba(247, 147, 26, 0.12);
+}
+.btc-news-card--compact {
+  border-left-width: 2px;
+}
+.btc-news-badge {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #F7931A;
+  background: rgba(247, 147, 26, 0.12);
+  border: 1px solid rgba(247, 147, 26, 0.35);
+  border-radius: var(--radius-sm);
+}
+.btc-news-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+.btc-news-cat {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.btc-news-date,
+.btc-news-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.btc-news-meta-group {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+.btc-news-title {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+.btc-news-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+.btc-news-title a:hover { color: #F7931A; }
+.btc-news-summary {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.btc-news-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #F7931A;
+  text-decoration: none;
+}
+.btc-news-link:hover { text-decoration: underline; }
+.btc-news-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.btc-news-empty {
+  color: var(--text-muted);
+  padding: 1rem 0;
+}
+@media (min-width: 768px) {
+  .btc-news-feed { grid-template-columns: repeat(2, 1fr); }
+  .btc-news-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .btc-news-list { grid-template-columns: repeat(2, 1fr); }
+}
 .page-hero--cardano h1 { margin-bottom: 0.35rem; }
 .page-hero--cardano p { margin-bottom: 0; }
 .snek-mascot {

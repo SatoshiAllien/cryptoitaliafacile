@@ -135,7 +135,7 @@ const ARTICLE_CONTENT_EN = {
           <li><strong>Transfer to a personal wallet</strong> — when you\'re ready to hold long term</li>
         </ol>
         <p>Referral links (Revolut and Kraken) may offer signup benefits at no extra cost. Later, when you feel confident, you can explore personal wallets, the Lightning Network, and DeFi.</p>
-        <div class="box box--tip"><span class="box-title">Next steps on CryptoFacile</span>
+        <div class="box box--tip"><span class="box-title">Next steps on The Little Satoshi News</span>
           <ul>
             <li><a href="articolo.html?slug=comprare-bitcoin-prima-volta">How to buy Bitcoin for the first time</a></li>
             <li><a href="articolo.html?slug=creare-wallet-sicuro">How to create a secure wallet</a></li>

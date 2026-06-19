@@ -664,7 +664,7 @@ function injectArticleSchema(article, content) {
     description: article.excerpt,
     dateModified: '2026-06-01',
     author: { '@type': 'Organization', name: 'The Little Satoshi News' },
-    publisher: { '@type': 'Organization', name: 'The Little Satoshi News', url: 'https://cryptofacile.com' }
+    publisher: { '@type': 'Organization', name: 'The Little Satoshi News', url: SITE_CONFIG.siteUrl }
   };
   if (content.sections.length > 2) {
     schema['@type'] = 'HowTo';

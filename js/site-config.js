@@ -1,6 +1,7 @@
 const SITE_CONFIG = {
   name: 'CryptoFacile',
   domain: 'cryptofacile.com',
+  siteUrl: 'https://satoshiallien.github.io/cryptoitaliafacile/',
   tagline: 'La crypto, spiegata facile.',
   description: 'Guide pratiche, tips e spiegazioni semplici sul mondo crypto. Per principianti e non solo.',
   year: 2026,
@@ -68,8 +69,8 @@ const SITE_CONFIG = {
     {
       id: 'facebook',
       name: 'Facebook',
-      handle: '@cryptofacile',
-      url: 'https://www.facebook.com/cryptofacile',
+      handle: '@Bitcoin.Wizard1',
+      url: 'https://www.facebook.com/Bitcoin.Wizard1',
       color: '#1877F2',
       desc: 'Guide brevi, aggiornamenti e community crypto in italiano.'
     },

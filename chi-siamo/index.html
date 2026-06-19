@@ -13,11 +13,11 @@
 <body>
   <div id="site-header"></div>
   <main class="container static-page">
-    <h1>Chi siamo</h1>
-    <p><strong>CryptoFacile</strong> nasce con un obiettivo semplice: rendere il mondo crypto accessibile a tutti, senza hype e senza complicazioni inutili.</p>
-    <p>Ispirato allo stile chiaro e pratico di Aranzulla, il nostro portale offre guide passo-passo, tips brevi e spiegazioni dei macro trend — tutto con un linguaggio che chiunque può capire.</p>
+    <div class="about-hero fade-in" id="about-teacher"></div>
 
     <h2>La nostra missione</h2>
+    <p><strong>CryptoFacile</strong> nasce con un obiettivo semplice: rendere il mondo crypto accessibile a tutti, senza hype e senza complicazioni inutili.</p>
+    <p>Ispirato allo stile chiaro e pratico di Aranzulla, il nostro portale offre guide passo-passo, tips brevi e spiegazioni dei macro trend — tutto con un linguaggio che chiunque può capire.</p>
     <p>Educare, non vendere. Ogni contenuto su CryptoFacile ha un solo scopo: aiutarti a capire e usare le criptovalute in sicurezza.</p>
 
     <h2>Cosa troverai</h2>
@@ -42,5 +42,29 @@
   <script src="../js/site-config.js"></script>
   <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('about-teacher');
+      const t = SITE_CONFIG.teacher;
+      if (!el || !t) return;
+      const base = getBasePath();
+      el.innerHTML = `
+        <div class="about-hero-inner">
+          <div class="teacher-photo-wrap">
+            <img src="${base}${t.photo}" alt="${t.name} — ${t.title}" class="teacher-photo" width="300" height="300" loading="lazy">
+            <span class="teacher-photo-badge">🎓 Insegnante</span>
+          </div>
+          <div>
+            <span class="section-label">Chi siamo</span>
+            <h1>${t.name}</h1>
+            <p class="about-role">${t.title} · Fondatore di CryptoFacile</p>
+            <p class="teacher-quote" style="margin-top:1rem;">"${t.quote}"</p>
+            <div class="teacher-badges" style="margin-top:1.25rem;">
+              ${t.badges.map(b => `<span class="teacher-badge"><span class="teacher-badge-icon">${b.icon}</span>${b.label}</span>`).join('')}
+            </div>
+          </div>
+        </div>`;
+    });
+  </script>
 </body>
 </html>

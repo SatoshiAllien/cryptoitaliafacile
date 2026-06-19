@@ -135,6 +135,25 @@ async function initHomepage() {
     ).join('');
   }
 
+  const teacherCard = document.getElementById('teacher-card');
+  if (teacherCard && SITE_CONFIG.teacher) {
+    const t = SITE_CONFIG.teacher;
+    teacherCard.innerHTML = `
+      <div class="teacher-photo-wrap">
+        <img src="${base}${t.photo}" alt="${t.name} — ${t.title}" class="teacher-photo" width="280" height="280" loading="lazy">
+        <span class="teacher-photo-badge">🎓 Insegnante</span>
+      </div>
+      <div class="teacher-content">
+        <span class="section-label">👨‍🏫 Chi ti guida</span>
+        <h2>${t.name} — <span class="teacher-title">${t.title}</span></h2>
+        <p class="teacher-quote">"${t.quote}"</p>
+        <div class="teacher-badges">
+          ${t.badges.map(b => `<span class="teacher-badge"><span class="teacher-badge-icon">${b.icon}</span>${b.label}</span>`).join('')}
+        </div>
+        <a href="${base}${t.href}" class="btn btn-primary btn-sm">Scopri di più su di me →</a>
+      </div>`;
+  }
+
   const affiliateGrid = document.getElementById('affiliate-grid');
   if (affiliateGrid && SITE_CONFIG.affiliates) {
     affiliateGrid.innerHTML = SITE_CONFIG.affiliates.map(a => `

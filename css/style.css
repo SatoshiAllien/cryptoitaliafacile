@@ -327,6 +327,92 @@ p { margin-bottom: 1rem; }
 .reassure-item strong { color: var(--text); font-size: 0.95rem; }
 .reassure-item span { color: var(--text-muted); font-size: 0.82rem; }
 
+/* Teacher / insegnante professionale */
+.teacher-section {
+  padding: 2.5rem 0;
+  background: var(--white);
+  border-bottom: 2px solid var(--primary-light);
+}
+.teacher-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--primary-light) 100%);
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.teacher-photo-wrap {
+  position: relative;
+  justify-self: center;
+  width: min(240px, 70vw);
+}
+.teacher-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-lg);
+  border: 4px solid var(--white);
+  box-shadow:
+    0 12px 40px rgba(0,200,150,0.2),
+    0 0 0 3px var(--primary);
+}
+.teacher-photo-badge {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.4rem 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,200,150,0.3);
+}
+.teacher-content h2 {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.teacher-title {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+.teacher-quote {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary);
+}
+.teacher-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.teacher-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.teacher-badge-icon { font-size: 1rem; }
+
 /* Affiliate offers — clickbait in evidenza */
 .affiliate-section {
   padding: 2rem 0 2.5rem;
@@ -902,9 +988,35 @@ p { margin-bottom: 1rem; }
 .glossary-alpha button:hover, .glossary-alpha button.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
 
 /* Static pages */
-.static-page { padding: 2rem 0 4rem; max-width: var(--content-max); margin: 0 auto; }
+.static-page { padding: 2rem 0 4rem; max-width: 800px; margin: 0 auto; }
 .static-page h1 { margin-bottom: 1rem; }
 .static-page h2 { margin: 2rem 0 0.75rem; font-size: 1.25rem; }
+.about-hero {
+  margin-bottom: 2.5rem;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--primary-light) 100%);
+  border: 2px solid var(--primary-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.about-hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.about-role {
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+@media (min-width: 640px) {
+  .about-hero-inner { grid-template-columns: 200px 1fr; gap: 2rem; }
+}
+@media (min-width: 768px) {
+  .about-hero-inner { grid-template-columns: 240px 1fr; }
+}
 
 /* Search page */
 .search-page-form { margin: 2rem 0; }
@@ -929,6 +1041,8 @@ p { margin-bottom: 1rem; }
 /* Responsive */
 @media (min-width: 640px) {
   .reassure-inner { grid-template-columns: repeat(3, 1fr); }
+  .teacher-card { grid-template-columns: 220px 1fr; gap: 2rem; padding: 2rem; }
+  .teacher-photo-wrap { width: 220px; justify-self: start; }
   .affiliate-grid { grid-template-columns: repeat(2, 1fr); }
   .category-grid { grid-template-columns: repeat(3, 1fr); }
   .articles-grid { grid-template-columns: repeat(2, 1fr); }
@@ -940,6 +1054,8 @@ p { margin-bottom: 1rem; }
   .tools-grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (min-width: 768px) {
+  .teacher-card { grid-template-columns: 260px 1fr; }
+  .teacher-photo-wrap { width: 260px; }
   .logo-tagline { display: block; }
   .nav-desktop { display: flex; }
   .menu-toggle { display: none; }

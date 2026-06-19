@@ -6,6 +6,20 @@ const SITE_CONFIG = {
   year: 2026,
   email: 'info@cryptofacile.com',
 
+  teacher: {
+    name: 'Stefan',
+    title: 'Insegnante crypto professionale',
+    photo: 'assets/img/teacher.jpg',
+    quote: 'Ti accompagno passo dopo passo nel mondo crypto — con parole semplici, esempi pratici e zero hype. Il mio obiettivo è che tu capisca davvero, non che compri alla cieca.',
+    badges: [
+      { icon: '🎓', label: 'Guide passo-passo' },
+      { icon: '🛡️', label: 'Sicurezza prima di tutto' },
+      { icon: '✨', label: 'Linguaggio semplice' },
+      { icon: '🤝', label: 'Per principianti' }
+    ],
+    href: 'chi-siamo/index.html'
+  },
+
   colors: {
     primary: '#00C896',
     secondary: '#4F8CFF',

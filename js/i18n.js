@@ -92,12 +92,110 @@ const TRANSLATIONS = {
     },
     hubs: {
       guide: { title: 'Guide Crypto', desc: 'Guide passo-passo per imparare il mondo crypto senza complicazioni. Scegli il tuo livello e inizia.' },
-      tips: { title: 'Crypto Tips', desc: 'Consigli brevi e pratici da applicare subito.' },
-      trend: { title: 'Trend Crypto', desc: 'Macro trend spiegati in modo semplice, senza hype.' },
-      sicurezza: { title: 'Sicurezza Crypto', desc: 'Proteggi wallet, seed phrase e account.' },
-      cardano: { title: 'Cardano', desc: 'Tutto sull\'ecosistema ADA.' },
-      strumenti: { title: 'Strumenti', desc: 'Wallet, exchange e tool consigliati.' }
-    }
+      tips: { title: 'Crypto Tips', desc: 'Consigli brevi e pratici da applicare subito. Niente fuffa, solo azioni concrete.' },
+      trend: { title: 'Trend Crypto del Momento', desc: 'I macro trend che stanno plasmando il mondo crypto, spiegati senza hype.' },
+      sicurezza: { title: 'Sicurezza & Protezione Wallet', desc: 'Proteggi le tue crypto. Guide su seed phrase, hardware wallet, phishing e best practice.', goldenRule: 'Regola d\'oro', goldenText: 'Nessuno legittimo ti chiederà mai la seed phrase. Nemmeno il "supporto tecnico".' },
+      cardano: { title: 'Ecosistema Cardano', desc: 'Guide dedicate a ADA, staking, wallet Cardano, DeFi, governance e scalabilità.' },
+      strumenti: { title: 'Strumenti Crypto', desc: 'Guide e confronti su wallet, exchange, hardware wallet e strumenti di monitoraggio.', toolsSection: 'Strumenti consigliati' }
+    },
+    pages: {
+      about: {
+        metaTitle: 'Chi siamo — CryptoFacile',
+        metaDesc: 'Chi siamo: CryptoFacile è il portale educativo che spiega il mondo crypto in modo semplice e pratico.',
+        label: 'Chi siamo', badge: 'Insegnante', alt: 'Stefano — Insegnante crypto professionale',
+        role: 'Insegnante crypto professionale · Fondatore di CryptoFacile',
+        quote: '"Ti accompagno passo dopo passo nel mondo crypto — con parole semplici, esempi pratici e zero hype. Il mio obiettivo è che tu capisca davvero, non che compri alla cieca."',
+        mission: 'La nostra missione', mission1: 'nasce con un obiettivo semplice: rendere il mondo crypto accessibile a tutti, senza hype e senza complicazioni inutili.',
+        mission2: 'Ispirato allo stile chiaro e pratico di Aranzulla, il nostro portale offre guide passo-passo, tips brevi e spiegazioni dei macro trend — tutto con un linguaggio che chiunque può capire.',
+        mission3: 'Educare, non vendere. Ogni contenuto su CryptoFacile ha un solo scopo: aiutarti a capire e usare le criptovalute in sicurezza.',
+        find: 'Cosa troverai', find1: 'Guide passo-passo per principianti e utenti avanzati',
+        find2: 'Crypto Tips brevi e immediatamente applicabili', find3: 'Spiegazioni dei macro trend senza sensazionalismo',
+        find4: 'Sezione dedicata all\'ecosistema Cardano', find5: 'Guide approfondite su sicurezza e protezione wallet',
+        find6: 'Glossario con tutti i termini crypto', approach: 'Il nostro approccio', principles: 'I nostri principi',
+        principlesText: 'Semplicità · Praticità · Sicurezza · Zero hype · 100% educativo',
+        contact: 'Hai domande o suggerimenti?', contactLink: 'Contattaci'
+      },
+      contacts: {
+        metaTitle: 'Contatti — CryptoFacile', metaDesc: 'Contatta il team di CryptoFacile per domande, suggerimenti o collaborazioni.',
+        title: 'Contatti', intro: 'Hai una domanda, un suggerimento per una nuova guida o vuoi collaborare con noi? Scrivici!',
+        name: 'Nome', email: 'Email', message: 'Messaggio', submit: 'Invia messaggio',
+        or: 'Oppure scrivici a', thanks: 'Grazie per il messaggio! Ti risponderemo al più presto.'
+      },
+      newsletter: {
+        metaTitle: 'Newsletter — CryptoFacile',
+        metaDesc: 'Iscriviti alla newsletter CryptoFacile: 1 tip di sicurezza a settimana + Checklist Sicurezza Crypto gratis.',
+        title: 'Newsletter CryptoFacile', intro: 'Iscriviti gratis e ricevi:',
+        item1: '1 tip di sicurezza a settimana', item2: 'Nuove guide passo-passo',
+        item3: 'Checklist Sicurezza Crypto (PDF) in regalo',
+        thanks: 'Grazie! Ti abbiamo iscritto alla newsletter CryptoFacile. Controlla la tua email.'
+      },
+      search: {
+        metaTitle: 'Cerca — CryptoFacile', metaDesc: 'Cerca guide, tips e termini crypto su CryptoFacile.',
+        title: 'Cerca su CryptoFacile', desc: 'Trova guide, tips, trend e termini del glossario.',
+        noResults: 'Nessun risultato per', tryOther: 'Prova con altri termini.'
+      },
+      glossary: {
+        metaTitle: 'Glossario Crypto — CryptoFacile',
+        metaDesc: 'Glossario crypto A-Z: tutti i termini del mondo criptovalute spiegati in modo semplice.',
+        title: 'Glossario Crypto', desc: 'Tutti i termini del mondo crypto spiegati in parole semplici. Da A a Z.',
+        all: 'Tutti', glossaryLabel: 'glossario'
+      },
+      article: {
+        metaTitle: 'Articolo — CryptoFacile', metaDesc: 'Guida crypto su CryptoFacile',
+        related: 'Guide correlate', nlTitle: 'Non perdere i prossimi aggiornamenti',
+        nlDesc: 'Ricevi tips di sicurezza e nuove guide direttamente nella tua inbox.',
+        toc: 'Indice', faq: 'Domande frequenti', readMin: 'min di lettura', updated: 'Aggiornato'
+      },
+      privacy: {
+        metaTitle: 'Privacy Policy — CryptoFacile', title: 'Privacy Policy', updated: 'Ultimo aggiornamento: Giugno 2026',
+        intro: 'CryptoFacile.com rispetta la tua privacy. Questa policy descrive come raccogliamo e utilizziamo i dati personali.',
+        dataTitle: 'Dati raccolti', data: 'Raccogliamo solo i dati che ci fornisci volontariamente: indirizzo email (newsletter), nome e messaggio (modulo contatti), e dati di navigazione anonimi tramite cookie analitici.',
+        useTitle: 'Utilizzo dei dati', use: 'I dati vengono utilizzati esclusivamente per inviare la newsletter, rispondere alle richieste di contatto e migliorare il sito.',
+        rightsTitle: 'I tuoi diritti', rights: 'Hai diritto di accesso, rettifica, cancellazione e opposizione al trattamento dei tuoi dati. Contattaci a info@cryptofacile.com.'
+      },
+      disclaimer: {
+        metaTitle: 'Disclaimer — CryptoFacile', title: 'Disclaimer', warning: 'Avviso importante',
+        warningText: 'I contenuti di CryptoFacile.com sono forniti a scopo puramente educativo e informativo. Non costituiscono consulenza finanziaria, fiscale o legale.',
+        risksTitle: 'Rischi', risks: 'L\'investimento in criptovalute comporta rischi significativi, inclusa la possibilità di perdere l\'intero capitale investito. I prezzi delle crypto sono altamente volatili.',
+        affTitle: 'Affiliazioni', aff: 'Alcuni link presenti sul sito sono link di affiliazione. Questo significa che potremmo ricevere una commissione se acquisti un prodotto tramite i nostri link, senza costi aggiuntivi per te. Questo non influenza le nostre recensioni editoriali.',
+        accuracyTitle: 'Accuratezza', accuracy: 'Ci impegniamo a mantenere i contenuti aggiornati e accurati, ma il mondo crypto evolve rapidamente. Verifica sempre le informazioni con fonti ufficiali prima di prendere decisioni.'
+      },
+      cookie: {
+        metaTitle: 'Cookie Policy — CryptoFacile', title: 'Cookie Policy', updated: 'Ultimo aggiornamento: Giugno 2026',
+        intro: 'CryptoFacile.com utilizza cookie tecnici necessari al funzionamento del sito e cookie analitici per comprendere come i visitatori utilizzano il portale.',
+        typesTitle: 'Tipi di cookie', tech: 'Cookie tecnici', techDesc: 'necessari per la navigazione e il funzionamento del sito',
+        analytics: 'Cookie analitici', analyticsDesc: 'raccolgono dati anonimi sull\'utilizzo del sito',
+        manageTitle: 'Gestione dei cookie', manage: 'Puoi disabilitare i cookie dalle impostazioni del tuo browser. La disabilitazione dei cookie tecnici potrebbe limitare alcune funzionalità del sito.'
+      }
+    },
+    meta: {
+      homeTitle: 'CryptoFacile — La crypto, spiegata facile',
+      homeDesc: 'Guide crypto passo-passo, tips pratici e spiegazioni semplici. Impara Bitcoin, wallet, DeFi e sicurezza senza hype.',
+      guideTitle: 'Guide Crypto — CryptoFacile',
+      guideDesc: 'Guide crypto passo-passo per principianti e avanzati. Impara Bitcoin, wallet, DeFi, staking e molto altro su CryptoFacile.',
+      tipsTitle: 'Crypto Tips — CryptoFacile', tipsDesc: 'Consigli brevi e pratici sul mondo crypto.',
+      trendTitle: 'Trend Crypto — CryptoFacile', trendDesc: 'Macro trend crypto spiegati in modo semplice.',
+      sicurezzaTitle: 'Sicurezza Crypto — CryptoFacile',
+      sicurezzaDesc: 'Guide sulla sicurezza crypto: seed phrase, hardware wallet, phishing, backup e protezione del portafoglio.',
+      cardanoTitle: 'Cardano — CryptoFacile',
+      cardanoDesc: 'Tutto sull\'ecosistema Cardano: ADA, staking, wallet, DeFi, Catalyst e Hydra spiegati in modo semplice.',
+      strumentiTitle: 'Strumenti Crypto — CryptoFacile',
+      strumentiDesc: 'Confronti e guide su wallet, exchange, tracker e strumenti crypto consigliati.'
+    },
+    articleGeneric: {
+      introSuffix: 'Questo articolo fa parte della sezione {cat} di CryptoFacile. Stiamo aggiornando il contenuto completo — nel frattempo, ecco una panoramica utile.',
+      overview: 'Panoramica', overview2: 'In questa guida vedremo tutto ciò che serve per approfondire l\'argomento in modo pratico e sicuro, senza hype e con esempi concreti.',
+      steps: 'Passi principali', step1t: 'Passo 1 — Preparazione', step1d: 'Raccogli le informazioni necessarie e assicurati di aver compreso i rischi base prima di procedere.',
+      step2t: 'Passo 2 — Esecuzione', step2d: 'Segui le istruzioni passo dopo passo, verificando ogni operazione prima di confermare.',
+      step3t: 'Passo 3 — Verifica', step3d: 'Controlla che tutto sia andato a buon fine e conserva traccia dell\'operazione.',
+      warning: 'Attenzione', warningText: 'Questo contenuto ha scopo educativo. Non costituisce consulenza finanziaria. Investire in crypto comporta rischi.',
+      tips: 'Consigli pratici', tip1: 'Inizia sempre con piccole somme per fare pratica', tip2: 'Verifica le fonti ufficiali prima di ogni operazione',
+      tip3: 'Non condividere mai seed phrase o chiavi private', tip4: 'Tieni traccia di ogni operazione per la dichiarazione fiscale',
+      faq1q: 'Questo articolo è adatto ai principianti?', faq1a: 'Sì, CryptoFacile è pensato per chi si avvicina al mondo crypto. Se un termine non ti è chiaro, consulta il nostro glossario.',
+      faq2q: 'Quando sarà aggiornato il contenuto completo?', faq2a: 'Stiamo pubblicando le guide complete progressivamente. Iscriviti alla newsletter per ricevere gli aggiornamenti.',
+      catGuide: 'Guida passo-passo', catTip: 'Crypto Tip', catTrend: 'Trend crypto', catTutorial: 'Tutorial', catCardano: 'Cardano', catSicurezza: 'Sicurezza'
+    },
+    messages: { noArticles: 'Nessun articolo in questa categoria.', bonus: 'BONUS' }
   },
   en: {
     tagline: 'Crypto, explained simply.',
@@ -184,23 +282,111 @@ const TRANSLATIONS = {
     },
     hubs: {
       guide: { title: 'Crypto Guides', desc: 'Step-by-step guides to learn crypto without complications. Pick your level and start.' },
-      tips: { title: 'Crypto Tips', desc: 'Short, practical tips you can apply right away.' },
-      trend: { title: 'Crypto Trends', desc: 'Macro trends explained simply, without hype.' },
-      sicurezza: { title: 'Crypto Security', desc: 'Protect wallets, seed phrases and accounts.' },
-      cardano: { title: 'Cardano', desc: 'Everything about the ADA ecosystem.' },
-      strumenti: { title: 'Tools', desc: 'Recommended wallets, exchanges and tools.' }
-    }
+      tips: { title: 'Crypto Tips', desc: 'Short, practical tips you can apply right away. No fluff — just concrete actions.' },
+      trend: { title: 'Crypto Trends Right Now', desc: 'The macro trends shaping the crypto world, explained without hype.' },
+      sicurezza: { title: 'Security & Wallet Protection', desc: 'Protect your crypto. Guides on seed phrases, hardware wallets, phishing and best practices.', goldenRule: 'Golden rule', goldenText: 'No legitimate service will ever ask for your seed phrase. Not even "technical support".' },
+      cardano: { title: 'Cardano Ecosystem', desc: 'Guides dedicated to ADA, staking, Cardano wallets, DeFi, governance and scalability.' },
+      strumenti: { title: 'Crypto Tools', desc: 'Guides and comparisons of wallets, exchanges, hardware wallets and monitoring tools.', toolsSection: 'Recommended tools' }
+    },
+    pages: {
+      about: {
+        metaTitle: 'About us — CryptoFacile',
+        metaDesc: 'About us: CryptoFacile is the educational portal that explains the crypto world simply and practically.',
+        label: 'About us', badge: 'Teacher', alt: 'Stefano — Professional crypto teacher',
+        role: 'Professional crypto teacher · Founder of CryptoFacile',
+        quote: '"I walk you through crypto step by step — with simple words, practical examples and zero hype. My goal is for you to truly understand, not buy blindly."',
+        mission: 'Our mission', mission1: 'was born with a simple goal: make the crypto world accessible to everyone, without hype or unnecessary complications.',
+        mission2: 'Inspired by Aranzulla\'s clear, practical style, our portal offers step-by-step guides, short tips and macro trend explanations — all in language anyone can understand.',
+        mission3: 'Educate, not sell. Every piece of content on CryptoFacile has one purpose: help you understand and use cryptocurrencies safely.',
+        find: 'What you\'ll find', find1: 'Step-by-step guides for beginners and advanced users',
+        find2: 'Short, immediately applicable Crypto Tips', find3: 'Macro trend explanations without sensationalism',
+        find4: 'Section dedicated to the Cardano ecosystem', find5: 'In-depth guides on security and wallet protection',
+        find6: 'Glossary with all crypto terms', approach: 'Our approach', principles: 'Our principles',
+        principlesText: 'Simplicity · Practicality · Security · Zero hype · 100% educational',
+        contact: 'Questions or suggestions?', contactLink: 'Contact us'
+      },
+      contacts: {
+        metaTitle: 'Contact — CryptoFacile', metaDesc: 'Contact the CryptoFacile team for questions, suggestions or collaborations.',
+        title: 'Contact', intro: 'Have a question, a suggestion for a new guide, or want to collaborate? Write to us!',
+        name: 'Name', email: 'Email', message: 'Message', submit: 'Send message',
+        or: 'Or email us at', thanks: 'Thanks for your message! We\'ll get back to you soon.'
+      },
+      newsletter: {
+        metaTitle: 'Newsletter — CryptoFacile',
+        metaDesc: 'Subscribe to the CryptoFacile newsletter: 1 security tip per week + free Crypto Security Checklist.',
+        title: 'CryptoFacile Newsletter', intro: 'Subscribe free and receive:',
+        item1: '1 security tip per week', item2: 'New step-by-step guides',
+        item3: 'Crypto Security Checklist (PDF) as a gift',
+        thanks: 'Thanks! You\'re subscribed to the CryptoFacile newsletter. Check your email.'
+      },
+      search: {
+        metaTitle: 'Search — CryptoFacile', metaDesc: 'Search guides, tips and crypto terms on CryptoFacile.',
+        title: 'Search CryptoFacile', desc: 'Find guides, tips, trends and glossary terms.',
+        noResults: 'No results for', tryOther: 'Try other terms.'
+      },
+      glossary: {
+        metaTitle: 'Crypto Glossary — CryptoFacile',
+        metaDesc: 'Crypto glossary A-Z: all cryptocurrency terms explained simply.',
+        title: 'Crypto Glossary', desc: 'All crypto terms explained in plain language. From A to Z.',
+        all: 'All', glossaryLabel: 'glossary'
+      },
+      article: {
+        metaTitle: 'Article — CryptoFacile', metaDesc: 'Crypto guide on CryptoFacile',
+        related: 'Related guides', nlTitle: 'Don\'t miss the next updates',
+        nlDesc: 'Get security tips and new guides straight to your inbox.',
+        toc: 'Contents', faq: 'Frequently asked questions', readMin: 'min read', updated: 'Updated'
+      },
+      privacy: {
+        metaTitle: 'Privacy Policy — CryptoFacile', title: 'Privacy Policy', updated: 'Last updated: June 2026',
+        intro: 'CryptoFacile.com respects your privacy. This policy describes how we collect and use personal data.',
+        dataTitle: 'Data collected', data: 'We only collect data you voluntarily provide: email address (newsletter), name and message (contact form), and anonymous browsing data via analytics cookies.',
+        useTitle: 'Use of data', use: 'Data is used exclusively to send the newsletter, respond to contact requests and improve the site.',
+        rightsTitle: 'Your rights', rights: 'You have the right to access, rectify, delete and object to processing of your data. Contact us at info@cryptofacile.com.'
+      },
+      disclaimer: {
+        metaTitle: 'Disclaimer — CryptoFacile', title: 'Disclaimer', warning: 'Important notice',
+        warningText: 'CryptoFacile.com content is provided for educational and informational purposes only. It does not constitute financial, tax or legal advice.',
+        risksTitle: 'Risks', risks: 'Investing in cryptocurrencies involves significant risks, including the possibility of losing your entire invested capital. Crypto prices are highly volatile.',
+        affTitle: 'Affiliations', aff: 'Some links on the site are affiliate links. This means we may receive a commission if you purchase a product through our links, at no extra cost to you. This does not influence our editorial reviews.',
+        accuracyTitle: 'Accuracy', accuracy: 'We strive to keep content updated and accurate, but the crypto world evolves rapidly. Always verify information with official sources before making decisions.'
+      },
+      cookie: {
+        metaTitle: 'Cookie Policy — CryptoFacile', title: 'Cookie Policy', updated: 'Last updated: June 2026',
+        intro: 'CryptoFacile.com uses technical cookies necessary for site operation and analytics cookies to understand how visitors use the portal.',
+        typesTitle: 'Types of cookies', tech: 'Technical cookies', techDesc: 'necessary for navigation and site operation',
+        analytics: 'Analytics cookies', analyticsDesc: 'collect anonymous data on site usage',
+        manageTitle: 'Cookie management', manage: 'You can disable cookies in your browser settings. Disabling technical cookies may limit some site features.'
+      }
+    },
+    meta: {
+      homeTitle: 'CryptoFacile — Crypto, explained simply',
+      homeDesc: 'Step-by-step crypto guides, practical tips and simple explanations. Learn Bitcoin, wallets, DeFi and security without hype.',
+      guideTitle: 'Crypto Guides — CryptoFacile',
+      guideDesc: 'Step-by-step crypto guides for beginners and advanced users. Learn Bitcoin, wallets, DeFi, staking and more on CryptoFacile.',
+      tipsTitle: 'Crypto Tips — CryptoFacile', tipsDesc: 'Short, practical tips about the crypto world.',
+      trendTitle: 'Crypto Trends — CryptoFacile', trendDesc: 'Macro crypto trends explained simply.',
+      sicurezzaTitle: 'Crypto Security — CryptoFacile',
+      sicurezzaDesc: 'Crypto security guides: seed phrase, hardware wallet, phishing, backup and portfolio protection.',
+      cardanoTitle: 'Cardano — CryptoFacile',
+      cardanoDesc: 'Everything about the Cardano ecosystem: ADA, staking, wallets, DeFi, Catalyst and Hydra explained simply.',
+      strumentiTitle: 'Crypto Tools — CryptoFacile',
+      strumentiDesc: 'Comparisons and guides on wallets, exchanges, trackers and recommended crypto tools.'
+    },
+    articleGeneric: {
+      introSuffix: 'This article is part of the {cat} section on CryptoFacile. We\'re updating the full content — in the meantime, here\'s a useful overview.',
+      overview: 'Overview', overview2: 'In this guide we\'ll cover everything you need to explore the topic practically and safely, without hype and with concrete examples.',
+      steps: 'Main steps', step1t: 'Step 1 — Preparation', step1d: 'Gather the necessary information and make sure you understand the basic risks before proceeding.',
+      step2t: 'Step 2 — Execution', step2d: 'Follow the instructions step by step, verifying each operation before confirming.',
+      step3t: 'Step 3 — Verification', step3d: 'Check that everything went well and keep a record of the operation.',
+      warning: 'Warning', warningText: 'This content is for educational purposes. It does not constitute financial advice. Investing in crypto involves risks.',
+      tips: 'Practical tips', tip1: 'Always start with small amounts to practice', tip2: 'Verify official sources before every operation',
+      tip3: 'Never share seed phrases or private keys', tip4: 'Track every operation for tax reporting',
+      faq1q: 'Is this article suitable for beginners?', faq1a: 'Yes, CryptoFacile is designed for those new to crypto. If a term isn\'t clear, check our glossary.',
+      faq2q: 'When will the full content be updated?', faq2a: 'We\'re publishing complete guides progressively. Subscribe to the newsletter for updates.',
+      catGuide: 'Step-by-step guide', catTip: 'Crypto Tip', catTrend: 'Crypto trend', catTutorial: 'Tutorial', catCardano: 'Cardano', catSicurezza: 'Security'
+    },
+    messages: { noArticles: 'No articles in this category.', bonus: 'BONUS' }
   }
-};
-
-const ARTICLE_EN = {
-  'iniziare-exchange-revolut-kraken': { title: 'Getting started with exchanges: Revolut + Kraken guide for beginners', excerpt: 'Crypto exchanges explained simply: why use Revolut, how to sign up on Kraken and make your first safe purchase.' },
-  'lightning-network-guida': { title: 'Lightning Network explained simply: sats, wallets and Satoshi Wallet', excerpt: 'What Lightning is, how sats work, which wallets to use and how to pay with the Satoshi Wallet merchant map.' },
-  'comprare-bitcoin-prima-volta': { title: 'How to buy Bitcoin for the first time (complete 2026 guide)', excerpt: 'Exchange, identity verification, first purchase and security: everything step by step.' },
-  'creare-wallet-sicuro': { title: 'How to create a secure crypto wallet in 10 minutes', excerpt: 'Hot wallet, cold wallet and basic setup to protect your crypto.' },
-  'proteggere-seed-phrase': { title: 'How to protect your seed phrase: methods and mistakes to avoid', excerpt: 'The golden rule of crypto security: keeping your 12-24 recovery words safe.' },
-  'blockchain-5-minuti': { title: 'Blockchain in 5 minutes: how it works', excerpt: 'The basics of blockchain explained without technical jargon.' },
-  'cardano-spiegato': { title: 'Cardano explained: what is ADA', excerpt: 'The Cardano ecosystem, staking and why it matters.' }
 };
 
 function getLang() {
@@ -227,10 +413,18 @@ function t(key) {
 }
 
 function localizeArticle(article) {
-  if (getLang() !== 'en' || !article?.slug) return article;
-  const en = ARTICLE_EN[article.slug];
-  if (!en) return article;
-  return { ...article, title: en.title, excerpt: en.excerpt };
+  if (getLang() !== 'en' || !article) return article;
+  return {
+    ...article,
+    title: article.titleEn || article.title,
+    excerpt: article.excerptEn || article.excerpt,
+    date: article.dateEn || article.date
+  };
+}
+
+function localizeGlossary(entry) {
+  if (getLang() !== 'en' || !entry) return entry;
+  return { ...entry, definition: entry.definitionEn || entry.definition };
 }
 
 function renderLangSwitcher() {
@@ -262,8 +456,21 @@ function applyPageTranslations() {
   document.querySelectorAll('[data-i18n-aria]').forEach(el => {
     el.setAttribute('aria-label', t(el.dataset.i18nAria));
   });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    el.alt = t(el.dataset.i18nAlt);
+  });
+  document.querySelectorAll('[data-i18n-href]').forEach(el => {
+    const hrefKey = el.dataset.i18nHref;
+    if (hrefKey.startsWith('mailto:') || hrefKey.startsWith('http')) el.href = hrefKey;
+    else el.href = (typeof getBasePath === 'function' ? getBasePath() : '') + hrefKey;
+  });
   const titleKey = document.body.dataset.i18nTitle;
   if (titleKey) document.title = t(titleKey);
+  const descKey = document.body.dataset.i18nDesc;
+  if (descKey) {
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.content = t(descKey);
+  }
 }
 
 function initLangSwitcher() {

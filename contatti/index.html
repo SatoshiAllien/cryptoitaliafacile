@@ -10,29 +10,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body data-i18n-title="pages.contacts.metaTitle" data-i18n-desc="pages.contacts.metaDesc">
   <div id="site-header"></div>
   <main class="container static-page">
-    <h1>Contatti</h1>
-    <p>Hai una domanda, un suggerimento per una nuova guida o vuoi collaborare con noi? Scrivici!</p>
+    <h1 data-i18n="pages.contacts.title">Contatti</h1>
+    <p data-i18n="pages.contacts.intro">Hai una domanda, un suggerimento per una nuova guida o vuoi collaborare con noi? Scrivici!</p>
 
     <form id="contact-form" style="margin-top:2rem;">
       <div style="margin-bottom:1rem;">
-        <label for="name" style="display:block;font-weight:600;margin-bottom:0.35rem;">Nome</label>
+        <label for="name" style="display:block;font-weight:600;margin-bottom:0.35rem;" data-i18n="pages.contacts.name">Nome</label>
         <input type="text" id="name" required style="width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;">
       </div>
       <div style="margin-bottom:1rem;">
-        <label for="email" style="display:block;font-weight:600;margin-bottom:0.35rem;">Email</label>
+        <label for="email" style="display:block;font-weight:600;margin-bottom:0.35rem;" data-i18n="pages.contacts.email">Email</label>
         <input type="email" id="email" required style="width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;">
       </div>
       <div style="margin-bottom:1.5rem;">
-        <label for="message" style="display:block;font-weight:600;margin-bottom:0.35rem;">Messaggio</label>
+        <label for="message" style="display:block;font-weight:600;margin-bottom:0.35rem;" data-i18n="pages.contacts.message">Messaggio</label>
         <textarea id="message" rows="5" required style="width:100%;padding:0.75rem 1rem;border:2px solid var(--border);border-radius:var(--radius-sm);font-size:1rem;font-family:inherit;"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Invia messaggio</button>
+      <button type="submit" class="btn btn-primary" data-i18n="pages.contacts.submit">Invia messaggio</button>
     </form>
 
-    <p style="margin-top:2rem;color:var(--text-muted);">Oppure scrivici a <a href="mailto:info@cryptofacile.com">info@cryptofacile.com</a></p>
+    <p style="margin-top:2rem;color:var(--text-muted);"><span data-i18n="pages.contacts.or">Oppure scrivici a</span> <a href="mailto:info@cryptofacile.com">info@cryptofacile.com</a></p>
   </main>
   <div id="site-footer"></div>
   <script src="../js/site-config.js"></script>
@@ -42,7 +42,7 @@
   <script>
     document.getElementById('contact-form')?.addEventListener('submit', e => {
       e.preventDefault();
-      alert('Grazie per il messaggio! Ti risponderemo al più presto.');
+      alert(typeof t === 'function' ? t('pages.contacts.thanks') : 'Grazie per il messaggio! Ti risponderemo al più presto.');
       e.target.reset();
     });
   </script>

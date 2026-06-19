@@ -76,26 +76,32 @@ async function performSearch(query, container, limit = 20) {
   await loadArticles();
   const base = getBasePath();
   const q = query.toLowerCase();
-  const results = articlesData.articles.filter(a =>
-    a.title.toLowerCase().includes(q) ||
-    a.excerpt.toLowerCase().includes(q) ||
-    (a.tags || []).some(t => t.toLowerCase().includes(q))
-  ).slice(0, limit);
+  const results = articlesData.articles.filter(a => {
+    const loc = localizeArticle(a);
+    return loc.title.toLowerCase().includes(q) ||
+      loc.excerpt.toLowerCase().includes(q) ||
+      (a.tags || []).some(tag => tag.toLowerCase().includes(q));
+  }).slice(0, limit);
 
-  const glossary = (articlesData.glossary || []).filter(g =>
-    g.term.toLowerCase().includes(q) || g.definition.toLowerCase().includes(q)
-  ).slice(0, 3);
+  const glossary = (articlesData.glossary || []).filter(g => {
+    const loc = localizeGlossary(g);
+    return g.term.toLowerCase().includes(q) || loc.definition.toLowerCase().includes(q);
+  }).slice(0, 3);
 
-  let html = results.map(a => `
+  let html = results.map(a => {
+    const loc = localizeArticle(a);
+    return `
     <a href="${base}articolo.html?slug=${a.slug}" class="search-result-item">
       <span class="search-result-type">${a.category}</span>
-      <strong>${a.title}</strong>
-    </a>`).join('');
+      <strong>${loc.title}</strong>
+    </a>`;
+  }).join('');
 
   glossary.forEach(g => {
+    const loc = localizeGlossary(g);
     html += `<a href="${base}glossario/index.html#${g.term.toLowerCase().replace(/\s+/g, '-')}" class="search-result-item">
-      <span class="search-result-type">glossario</span>
-      <strong>${g.term}</strong> — ${g.definition.substring(0, 80)}…
+      <span class="search-result-type">${t('pages.glossary.glossaryLabel')}</span>
+      <strong>${g.term}</strong> — ${loc.definition.substring(0, 80)}…
     </a>`;
   });
 
@@ -128,7 +134,7 @@ function initNewsletter() {
       e.preventDefault();
       const input = form.querySelector('input[type="email"]');
       if (input?.value) {
-        alert('Grazie! Ti abbiamo iscritto alla newsletter CryptoFacile. Controlla la tua email.');
+        alert(t('pages.newsletter.thanks'));
         input.value = '';
       }
     });
@@ -238,10 +244,12 @@ function initHubI18n() {
   if (!hub) return;
   const hubData = t(`hubs.${hub}`);
   if (!hubData || typeof hubData !== 'object') return;
-  const h1 = document.querySelector('.page-hero h1');
-  const desc = document.querySelector('.page-hero p');
+  const h1 = document.querySelector('.page-hero h1, .page-hero-brand h1');
+  const desc = document.querySelector('.page-hero > p, .page-hero-brand p');
   if (h1) h1.textContent = hubData.title;
   if (desc) desc.textContent = hubData.desc;
+  const toolsH2 = document.querySelector('#tools-grid')?.closest('section')?.querySelector('h2');
+  if (hub === 'strumenti' && toolsH2 && hubData.toolsSection) toolsH2.textContent = hubData.toolsSection;
   const filterMap = {
     guide: 'ui.all', principianti: 'nav.principianti', avanzate: 'nav.avanzate',
     defi: 'nav.defi', wallet: 'nav.wallet', sicurezza: 'nav.sicurezza'
@@ -250,6 +258,26 @@ function initHubI18n() {
     const key = filterMap[btn.dataset.filter];
     if (key) btn.textContent = t(key);
   });
+  initStrumentiTools();
+}
+
+function initStrumentiTools() {
+  if (document.body.dataset.hub !== 'strumenti') return;
+  const tools = document.getElementById('tools-grid');
+  if (!tools || !SITE_CONFIG.tools) return;
+  const toolKeys = { Ledger: 'ledger', Revolut: 'revolut', Kraken: 'kraken', Eternl: 'eternl' };
+  const base = getBasePath();
+  tools.innerHTML = SITE_CONFIG.tools.map(tool => {
+    const key = toolKeys[tool.name];
+    const loc = key ? t(`tools.${key}`) : null;
+    return `
+      <div class="tool-card fade-in${tool.affiliate ? ' tool-card--affiliate' : ''}">
+        <div class="tool-category">${loc?.cat || tool.category}${tool.affiliate ? ` <span class="tool-affiliate-tag">${t('messages.bonus')}</span>` : ''}</div>
+        <h3>${tool.name}</h3>
+        <p>${loc?.desc || tool.desc}</p>
+        <a href="${tool.href}" class="btn btn-ghost btn-sm"${tool.affiliate ? ' target="_blank" rel="noopener noreferrer sponsored"' : ''}>${tool.affiliate ? t('ui.getBonus') : t('ui.discover')}</a>
+      </div>`;
+  }).join('');
 }
 
 async function initHubPage() {
@@ -268,7 +296,7 @@ async function initHubPage() {
     const items = getArticlesByFilter(filterKey);
     grid.innerHTML = items.length
       ? items.map(a => hub === 'tips' ? renderTipCard(a, base) : renderArticleCard(a, base)).join('')
-      : '<p style="color:var(--text-muted)">Nessun articolo in questa categoria.</p>';
+      : `<p style="color:var(--text-muted)">${t('messages.noArticles')}</p>`;
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.filter === filterKey);
     });
@@ -288,11 +316,11 @@ async function initGlossary() {
   const alpha = document.getElementById('glossary-alpha');
   if (!grid || !articlesData.glossary) return;
 
-  const terms = [...articlesData.glossary].sort((a, b) => a.term.localeCompare(b.term, 'it'));
+  const terms = [...articlesData.glossary].sort((a, b) => a.term.localeCompare(b.term, getLang() === 'en' ? 'en' : 'it'));
   const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))].sort();
 
   if (alpha) {
-    alpha.innerHTML = `<button class="active" data-letter="all">Tutti</button>` +
+    alpha.innerHTML = `<button class="active" data-letter="all">${t('pages.glossary.all')}</button>` +
       letters.map(l => `<button data-letter="${l}">${l}</button>`).join('');
     alpha.addEventListener('click', e => {
       if (e.target.tagName !== 'BUTTON') return;
@@ -303,11 +331,14 @@ async function initGlossary() {
   }
 
   function renderGlossary(list) {
-    grid.innerHTML = list.map(g => `
+    grid.innerHTML = list.map(g => {
+      const loc = localizeGlossary(g);
+      return `
       <div class="glossary-item" id="${g.term.toLowerCase().replace(/\s+/g, '-')}">
         <div class="glossary-term">${g.term}</div>
-        <p class="glossary-def">${g.definition}</p>
-      </div>`).join('');
+        <p class="glossary-def">${loc.definition}</p>
+      </div>`;
+    }).join('');
   }
   renderGlossary(terms);
 }
@@ -343,18 +374,22 @@ async function showSearchResults(query, container) {
   if (!query || query.length < 2) { container.innerHTML = ''; return; }
   const base = getBasePath();
   const q = query.toLowerCase();
-  const items = articlesData.articles.filter(a =>
-    a.title.toLowerCase().includes(q) || a.excerpt.toLowerCase().includes(q)
-  );
+  const items = articlesData.articles.filter(a => {
+    const loc = localizeArticle(a);
+    return loc.title.toLowerCase().includes(q) || loc.excerpt.toLowerCase().includes(q);
+  });
 
   container.innerHTML = items.length
-    ? items.map(a => `
+    ? items.map(a => {
+        const loc = localizeArticle(a);
+        return `
         <a href="${base}articolo.html?slug=${a.slug}" class="search-page-result">
           <span class="badge badge--${a.difficulty}">${a.category}</span>
-          <h3>${a.title}</h3>
-          <p>${a.excerpt}</p>
-        </a>`).join('')
-    : `<p style="color:var(--text-muted);padding:2rem 0">Nessun risultato per "<strong>${query}</strong>". Prova con altri termini.</p>`;
+          <h3>${loc.title}</h3>
+          <p>${loc.excerpt}</p>
+        </a>`;
+      }).join('')
+    : `<p style="color:var(--text-muted);padding:2rem 0">${t('pages.search.noResults')} "<strong>${query}</strong>". ${t('pages.search.tryOther')}</p>`;
 }
 
 function loadCryptoBackground() {
@@ -398,6 +433,8 @@ window.addEventListener('langchange', async () => {
   await initHomepage();
   await initHubPage();
   initHubI18n();
+  await initGlossary();
+  await initSearchPage();
   applyPageTranslations();
   initFadeIn();
 });

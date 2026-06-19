@@ -10,15 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-page="search">
+<body data-page="search" data-i18n-title="pages.search.metaTitle" data-i18n-desc="pages.search.metaDesc">
   <div id="site-header"></div>
   <main class="container">
     <section class="page-hero">
-      <h1>Cerca su CryptoFacile</h1>
-      <p>Trova guide, tips, trend e termini del glossario.</p>
+      <h1 data-i18n="pages.search.title">Cerca su CryptoFacile</h1>
+      <p data-i18n="pages.search.desc">Trova guide, tips, trend e termini del glossario.</p>
     </section>
     <div class="search-page-form">
-      <input type="search" id="search-page-input" placeholder="Cerca guide, tips, termini… (es. seed phrase, staking ADA)" autocomplete="off">
+      <input type="search" id="search-page-input" data-i18n-placeholder="ui.searchPlaceholder" placeholder="Cerca guide, tips, termini… (es. seed phrase, staking ADA)" autocomplete="off">
     </div>
     <div class="search-results-list" id="search-page-results"></div>
   </main>

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-hub="strumenti">
+<body data-hub="strumenti" data-i18n-title="meta.strumentiTitle" data-i18n-desc="meta.strumentiDesc">
   <div id="site-header"></div>
   <main class="container">
     <section class="page-hero">
@@ -19,7 +19,7 @@
     </section>
     <div class="articles-grid" id="hub-articles"></div>
     <section class="section">
-      <h2>Strumenti consigliati</h2>
+      <h2 data-i18n="hubs.strumenti.toolsSection">Strumenti consigliati</h2>
       <div class="tools-grid" id="tools-grid"></div>
     </section>
   </main>
@@ -28,18 +28,5 @@
   <script src="../js/i18n.js"></script>
   <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const tools = document.getElementById('tools-grid');
-      if (tools) {
-        tools.innerHTML = SITE_CONFIG.tools.map(t => `
-          <div class="tool-card">
-            <div class="tool-category">${t.category}</div>
-            <h3>${t.name}</h3>
-            <p>${t.desc}</p>
-          </div>`).join('');
-      }
-    });
-  </script>
 </body>
 </html>

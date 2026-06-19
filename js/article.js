@@ -505,35 +505,49 @@ const ARTICLE_CONTENT = {
   }
 };
 
-function generateGenericContent(article) {
-  const categoryLabels = {
-    guide: 'Guida passo-passo', tip: 'Crypto Tip', trend: 'Trend crypto',
-    tutorial: 'Tutorial', cardano: 'Cardano', sicurezza: 'Sicurezza'
+function getCategoryLabel(category) {
+  const map = {
+    guide: 'articleGeneric.catGuide', tip: 'articleGeneric.catTip', trend: 'articleGeneric.catTrend',
+    tutorial: 'articleGeneric.catTutorial', cardano: 'articleGeneric.catCardano', sicurezza: 'articleGeneric.catSicurezza'
   };
+  return t(map[category] || category);
+}
+
+function generateGenericContent(article) {
+  const cat = getCategoryLabel(article.category);
+  const suffix = t('articleGeneric.introSuffix').replace('{cat}', cat);
   return {
-    intro: article.excerpt + ' Questo articolo fa parte della sezione ' + (categoryLabels[article.category] || article.category) + ' di CryptoFacile. Stiamo aggiornando il contenuto completo — nel frattempo, ecco una panoramica utile.',
+    intro: article.excerpt + ' ' + suffix,
     sections: [
-      { id: 'panoramica', title: 'Panoramica', content: `<p>${article.excerpt}</p><p>In questa guida vedremo tutto ciò che serve per approfondire l'argomento in modo pratico e sicuro, senza hype e con esempi concreti.</p>` },
-      { id: 'passi', title: 'Passi principali', content: `
-        <div class="step-block"><h3>Passo 1 — Preparazione</h3><p>Raccogli le informazioni necessarie e assicurati di aver compreso i rischi base prima di procedere.</p></div>
-        <div class="step-block"><h3>Passo 2 — Esecuzione</h3><p>Segui le istruzioni passo dopo passo, verificando ogni operazione prima di confermare.</p></div>
-        <div class="step-block"><h3>Passo 3 — Verifica</h3><p>Controlla che tutto sia andato a buon fine e conserva traccia dell'operazione.</p></div>
-        <div class="box box--warning"><span class="box-title">Attenzione</span>Questo contenuto ha scopo educativo. Non costituisce consulenza finanziaria. Investire in crypto comporta rischi.</div>
+      { id: 'panoramica', title: t('articleGeneric.overview'), content: `<p>${article.excerpt}</p><p>${t('articleGeneric.overview2')}</p>` },
+      { id: 'passi', title: t('articleGeneric.steps'), content: `
+        <div class="step-block"><h3>${t('articleGeneric.step1t')}</h3><p>${t('articleGeneric.step1d')}</p></div>
+        <div class="step-block"><h3>${t('articleGeneric.step2t')}</h3><p>${t('articleGeneric.step2d')}</p></div>
+        <div class="step-block"><h3>${t('articleGeneric.step3t')}</h3><p>${t('articleGeneric.step3d')}</p></div>
+        <div class="box box--warning"><span class="box-title">${t('articleGeneric.warning')}</span>${t('articleGeneric.warningText')}</div>
       `},
-      { id: 'consigli', title: 'Consigli pratici', content: `
+      { id: 'consigli', title: t('articleGeneric.tips'), content: `
         <ul>
-          <li>Inizia sempre con piccole somme per fare pratica</li>
-          <li>Verifica le fonti ufficiali prima di ogni operazione</li>
-          <li>Non condividere mai seed phrase o chiavi private</li>
-          <li>Tieni traccia di ogni operazione per la dichiarazione fiscale</li>
+          <li>${t('articleGeneric.tip1')}</li>
+          <li>${t('articleGeneric.tip2')}</li>
+          <li>${t('articleGeneric.tip3')}</li>
+          <li>${t('articleGeneric.tip4')}</li>
         </ul>
       `}
     ],
     faq: [
-      { q: 'Questo articolo è adatto ai principianti?', a: 'Sì, CryptoFacile è pensato per chi si avvicina al mondo crypto. Se un termine non ti è chiaro, consulta il nostro glossario.' },
-      { q: 'Quando sarà aggiornato il contenuto completo?', a: 'Stiamo pubblicando le guide complete progressivamente. Iscriviti alla newsletter per ricevere gli aggiornamenti.' }
+      { q: t('articleGeneric.faq1q'), a: t('articleGeneric.faq1a') },
+      { q: t('articleGeneric.faq2q'), a: t('articleGeneric.faq2a') }
     ]
   };
+}
+
+function getArticleContent(slug, article) {
+  if (getLang() === 'en' && typeof ARTICLE_CONTENT_EN !== 'undefined' && ARTICLE_CONTENT_EN[slug]) {
+    return ARTICLE_CONTENT_EN[slug];
+  }
+  if (ARTICLE_CONTENT[slug]) return ARTICLE_CONTENT[slug];
+  return generateGenericContent(article);
 }
 
 async function initArticlePage() {
@@ -544,27 +558,28 @@ async function initArticlePage() {
   if (!slug) { window.location.href = getBasePath() + 'index.html'; return; }
 
   await loadArticles();
-  const article = articlesData.articles.find(a => a.slug === slug);
-  if (!article) { window.location.href = getBasePath() + 'index.html'; return; }
+  const raw = articlesData.articles.find(a => a.slug === slug);
+  if (!raw) { window.location.href = getBasePath() + 'index.html'; return; }
+  const article = localizeArticle(raw);
 
   const base = getBasePath();
-  const content = ARTICLE_CONTENT[slug] || generateGenericContent(article);
+  const content = getArticleContent(slug, article);
 
   document.title = `${article.title} — CryptoFacile`;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = article.excerpt;
 
-  const diffLabel = { beginner: 'Principiante', intermediate: 'Intermedio', advanced: 'Avanzato' }[article.difficulty] || 'Principiante';
+  const diffLabel = { beginner: t('ui.beginner'), intermediate: t('ui.intermediate'), advanced: t('ui.advanced') }[article.difficulty] || t('ui.beginner');
 
   const breadcrumbMap = {
-    guide: { label: 'Guide', href: 'guide/index.html' },
-    tip: { label: 'Crypto Tips', href: 'crypto-tips/index.html' },
-    trend: { label: 'Trend', href: 'trend/index.html' },
-    tutorial: { label: 'Tutorial', href: 'guide/index.html' },
-    cardano: { label: 'Cardano', href: 'cardano/index.html' },
-    sicurezza: { label: 'Sicurezza', href: 'sicurezza/index.html' }
+    guide: { label: t('nav.guide'), href: 'guide/index.html' },
+    tip: { label: t('nav.cryptoTips'), href: 'crypto-tips/index.html' },
+    trend: { label: t('nav.trend'), href: 'trend/index.html' },
+    tutorial: { label: t('nav.guide'), href: 'guide/index.html' },
+    cardano: { label: t('nav.cardano'), href: 'cardano/index.html' },
+    sicurezza: { label: t('nav.sicurezza'), href: 'sicurezza/index.html' }
   };
-  const bc = breadcrumbMap[article.category] || { label: 'Guide', href: 'guide/index.html' };
+  const bc = breadcrumbMap[article.category] || { label: t('nav.guide'), href: 'guide/index.html' };
 
   const breadcrumbEl = document.getElementById('article-breadcrumb');
   if (breadcrumbEl) {
@@ -580,14 +595,14 @@ async function initArticlePage() {
       <h1>${article.title}</h1>
       <div class="article-meta-bar">
         <span class="badge badge--${article.difficulty}">${diffLabel}</span>
-        <span>📖 ${article.readTime} min di lettura</span>
-        <span>📅 Aggiornato ${article.date}</span>
+        <span>${article.readTime} ${t('pages.article.readMin')}</span>
+        <span>${t('pages.article.updated')} ${article.date}</span>
       </div>`;
   }
 
   const tocItems = content.sections.map(s => `<li><a href="#${s.id}" data-toc="${s.id}">${s.title}</a></li>`).join('');
   const tocEl = document.getElementById('article-toc');
-  if (tocEl) tocEl.innerHTML = `<h4>Indice</h4><ul class="toc-list">${tocItems}</ul>`;
+  if (tocEl) tocEl.innerHTML = `<h4>${t('pages.article.toc')}</h4><ul class="toc-list">${tocItems}</ul>`;
 
   const bodyEl = document.getElementById('article-body');
   if (bodyEl) {
@@ -596,7 +611,7 @@ async function initArticlePage() {
       html += `<h2 id="${s.id}">${s.title}</h2>${s.content}`;
     });
     if (content.faq?.length) {
-      html += '<h2 id="faq">Domande frequenti</h2>';
+      html += `<h2 id="faq">${t('pages.article.faq')}</h2>`;
       content.faq.forEach(f => {
         html += `<details class="faq-item"><summary>${f.q}</summary><div class="faq-answer">${f.a}</div></details>`;
       });
@@ -665,4 +680,14 @@ function injectArticleSchema(article, content) {
   document.head.appendChild(script);
 }
 
-document.addEventListener('DOMContentLoaded', initArticlePage);
+async function bootArticle() {
+  await initArticlePage();
+  applyPageTranslations();
+}
+
+document.addEventListener('DOMContentLoaded', bootArticle);
+
+window.addEventListener('langchange', async () => {
+  await initArticlePage();
+  applyPageTranslations();
+});

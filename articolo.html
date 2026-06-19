@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='16' fill='%231B7A4E'/><text x='20' y='26' text-anchor='middle' font-size='14' font-weight='bold' fill='white'>CF</text></svg>">
 </head>
-<body data-page="article">
+<body data-page="article" data-i18n-title="pages.article.metaTitle" data-i18n-desc="pages.article.metaDesc">
 
   <div class="progress-bar" id="progress-bar"></div>
   <div id="site-header"></div>
@@ -25,16 +25,16 @@
         <div class="article-content" id="article-body"></div>
 
         <section class="section" style="padding-top:2rem;">
-          <h2>Guide correlate</h2>
+          <h2 data-i18n="pages.article.related">Guide correlate</h2>
           <div class="related-grid" id="related-articles"></div>
         </section>
 
         <section class="newsletter-cta" style="border-radius:var(--radius);margin:2rem 0;">
-          <h2>Non perdere i prossimi aggiornamenti</h2>
-          <p>Ricevi tips di sicurezza e nuove guide direttamente nella tua inbox.</p>
+          <h2 data-i18n="pages.article.nlTitle">Non perdere i prossimi aggiornamenti</h2>
+          <p data-i18n="pages.article.nlDesc">Ricevi tips di sicurezza e nuove guide direttamente nella tua inbox.</p>
           <form class="newsletter-form">
-            <input type="email" placeholder="La tua email" required aria-label="Email">
-            <button type="submit" class="btn">Iscriviti gratis</button>
+            <input type="email" data-i18n-placeholder="ui.emailPlaceholder" placeholder="La tua email" required data-i18n-aria="ui.emailAria" aria-label="Email">
+            <button type="submit" class="btn" data-i18n="ui.subscribe">Iscriviti gratis</button>
           </form>
         </section>
       </article>
@@ -51,6 +51,7 @@
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/article-content-en.js"></script>
   <script src="js/article.js"></script>
 </body>
 </html>

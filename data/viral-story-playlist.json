@@ -1,176 +1,240 @@
 {
-  "name": "Pop EDM Viral · Stories 2026",
-  "description": "Playlist virale pop/EDM per Stories — ispirata a trend Reels giugno 2026 (Summer Vibes, Game Time, pop-dance, future bass). Tracce royalty-free generate.",
+  "name": "Pop EDM Viral · Mixkit Real Audio",
+  "description": "Musica pop/EDM reale royalty-free (Mixkit) — strumenti veri, non sintesi a bip",
   "updated": "2026-06-21",
-  "source": "trend-research-2026 + generated-pop-edm",
+  "source": "mixkit-royalty-free",
   "trending_reference": [
-    {"title": "Okayyy", "artist": "Latto & Doja Cat", "style": "pop-hip-hop dance"},
-    {"title": "Game Time", "artist": "Future feat. Tyla", "style": "EDM festival hype"},
-    {"title": "Summer Vibes", "artist": "Past Day", "style": "pop guitar summer"},
-    {"title": "Life Feels So Good", "artist": "Napsea", "style": "uplifting pop"},
-    {"title": "SPEND DAT SAX", "artist": "Corey Staggers", "style": "sax pop EDM"},
-    {"title": "Sun On Me", "artist": "Her Highest Frequency", "style": "dreamy pop ambient"}
+    {
+      "title": "Okayyy",
+      "artist": "Latto & Doja Cat",
+      "style": "pop-hip-hop dance"
+    },
+    {
+      "title": "Game Time",
+      "artist": "Future feat. Tyla",
+      "style": "EDM festival hype"
+    },
+    {
+      "title": "Summer Vibes",
+      "artist": "Past Day",
+      "style": "pop guitar summer"
+    },
+    {
+      "title": "Life Feels So Good",
+      "artist": "Napsea",
+      "style": "uplifting pop"
+    },
+    {
+      "title": "SPEND DAT SAX",
+      "artist": "Corey Staggers",
+      "style": "sax pop EDM"
+    },
+    {
+      "title": "Sun On Me",
+      "artist": "Her Highest Frequency",
+      "style": "dreamy pop ambient"
+    }
   ],
   "tracks": [
     {
-      "id": "mainstage-drop",
-      "title": "Mainstage Drop",
-      "artist": "Viral EDM",
-      "file": "mainstage-drop.mp3",
-      "mood": "big room festival · 128 BPM",
-      "viral_tag": "#EDM"
+      "id": "mixkit-cat-walk",
+      "title": "Cat Walk",
+      "artist": "Arulo",
+      "file": "mixkit/mixkit-cat-walk.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "festival-pop",
-      "title": "Festival Pop Hook",
-      "artist": "Trending Audio",
-      "file": "festival-pop.mp3",
-      "mood": "mainstage pop anthem",
-      "viral_tag": "#Festival"
+      "id": "mixkit-can-t-get-you-off-my-mind",
+      "title": "Can't Get You Off My Mind",
+      "artist": "Michael Ramir C.",
+      "file": "mixkit/mixkit-can-t-get-you-off-my-mind.mp3",
+      "mood": "future bass",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "future-bass-glow",
-      "title": "Future Bass Glow",
-      "artist": "Hot Audio 2026",
-      "file": "future-bass-glow.mp3",
-      "mood": "future bass wobble",
-      "viral_tag": "#FutureBass"
+      "id": "mixkit-rising-forest",
+      "title": "Rising Forest",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-rising-forest.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "house-pop-banger",
-      "title": "House Pop Banger",
-      "artist": "Viral EDM",
-      "file": "house-pop-banger.mp3",
-      "mood": "house pop dance",
-      "viral_tag": "#House"
+      "id": "mixkit-i-do",
+      "title": "I Do!",
+      "artist": "Michael Ramir C.",
+      "file": "mixkit/mixkit-i-do.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "summer-vibes-pop",
-      "title": "Summer Vibes Pop",
-      "artist": "Trending Audio",
-      "file": "summer-vibes-pop.mp3",
-      "mood": "summer guitar pop EDM",
-      "viral_tag": "#Summer"
+      "id": "mixkit-karma",
+      "title": "Karma",
+      "artist": "Michael Ramir C.",
+      "file": "mixkit/mixkit-karma.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "game-time-energy",
-      "title": "Game Time Energy",
-      "artist": "Hot Audio 2026",
-      "file": "game-time-energy.mp3",
-      "mood": "hype stadium EDM",
-      "viral_tag": "#Hype"
+      "id": "mixkit-pop",
+      "title": "Pop",
+      "artist": "Andrew Ev",
+      "file": "mixkit/mixkit-pop.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "sax-pop-fusion",
-      "title": "Sax Pop Fusion",
-      "artist": "Viral EDM",
-      "file": "sax-pop-fusion.mp3",
-      "mood": "sax + pop bass",
-      "viral_tag": "#PopEDM"
+      "id": "mixkit-techno-fest-vibes",
+      "title": "Techno Fest Vibes",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-techno-fest-vibes.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "melodic-edm-rise",
-      "title": "Melodic EDM Rise",
-      "artist": "Trending Audio",
-      "file": "melodic-edm-rise.mp3",
-      "mood": "melodic build-up",
-      "viral_tag": "#Melodic"
+      "id": "mixkit-infected-vibes",
+      "title": "Infected Vibes",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-infected-vibes.mp3",
+      "mood": "trance",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "synth-pop-viral",
-      "title": "Synth Pop Viral",
-      "artist": "Hot Audio 2026",
-      "file": "synth-pop-viral.mp3",
-      "mood": "synth pop hook",
-      "viral_tag": "#SynthPop"
+      "id": "mixkit-loner",
+      "title": "Loner",
+      "artist": "Arulo",
+      "file": "mixkit/mixkit-loner.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "drop-zone-128",
-      "title": "Drop Zone 128",
-      "artist": "Viral EDM",
-      "file": "drop-zone-128.mp3",
-      "mood": "drop immediato",
-      "viral_tag": "#Drop"
+      "id": "mixkit-house-fest",
+      "title": "House Fest",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-house-fest.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "eurodance-revival",
-      "title": "Eurodance Revival",
-      "artist": "Trending Audio",
-      "file": "eurodance-revival.mp3",
-      "mood": "eurodance 2026",
-      "viral_tag": "#Eurodance"
+      "id": "mixkit-talent-in-the-air",
+      "title": "Talent in the Air",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-talent-in-the-air.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "tropical-pop-house",
-      "title": "Tropical Pop House",
-      "artist": "Hot Audio 2026",
-      "file": "tropical-pop-house.mp3",
-      "mood": "tropical house pop",
-      "viral_tag": "#Tropical"
+      "id": "mixkit-goa-trance-mantra",
+      "title": "Goa Trance Mantra",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-goa-trance-mantra.mp3",
+      "mood": "trance",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "electro-pop-rush",
-      "title": "Electro Pop Rush",
-      "artist": "Viral EDM",
-      "file": "electro-pop-rush.mp3",
-      "mood": "electro pop energy",
-      "viral_tag": "#ElectroPop"
+      "id": "mixkit-infected-mushroom-vibes",
+      "title": "Infected Mushroom Vibes",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-infected-mushroom-vibes.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "club-pop-anthem",
-      "title": "Club Pop Anthem",
-      "artist": "Trending Audio",
-      "file": "club-pop-anthem.mp3",
-      "mood": "club pop chorus",
-      "viral_tag": "#Club"
+      "id": "mixkit-b-o-r-n",
+      "title": "B.O.R.N",
+      "artist": "Eugenio Mininni",
+      "file": "mixkit/mixkit-b-o-r-n.mp3",
+      "mood": "trance",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "progressive-pop-drop",
-      "title": "Progressive Pop Drop",
-      "artist": "Hot Audio 2026",
-      "file": "progressive-pop-drop.mp3",
-      "mood": "progressive house pop",
-      "viral_tag": "#Progressive"
+      "id": "mixkit-gear",
+      "title": "Gear",
+      "artist": "Andrew Ev",
+      "file": "mixkit/mixkit-gear.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "dance-pop-fyp",
-      "title": "Dance Pop FYP",
-      "artist": "Viral EDM",
-      "file": "dance-pop-fyp.mp3",
-      "mood": "dance pop FYP",
-      "viral_tag": "#DancePop"
+      "id": "mixkit-a-game",
+      "title": "A Game",
+      "artist": "Michael Ramir C",
+      "file": "mixkit/mixkit-a-game.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "big-room-energy",
-      "title": "Big Room Energy",
-      "artist": "Trending Audio",
-      "file": "big-room-energy.mp3",
-      "mood": "big room slam",
-      "viral_tag": "#BigRoom"
+      "id": "mixkit-summer-dream",
+      "title": "Summer Dream",
+      "artist": "Eugenio Mininni",
+      "file": "mixkit/mixkit-summer-dream.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "pop-hook-drop",
-      "title": "Pop Hook Drop",
-      "artist": "Hot Audio 2026",
-      "file": "pop-hook-drop.mp3",
-      "mood": "hook pop virale",
-      "viral_tag": "#Hook"
+      "id": "mixkit-rising-sun",
+      "title": "Rising Sun",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-rising-sun.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "life-feels-good",
-      "title": "Life Feels So Good",
-      "artist": "Viral EDM",
-      "file": "life-feels-good.mp3",
-      "mood": "uplifting pop EDM",
-      "viral_tag": "#GoodVibes"
+      "id": "mixkit-minimal-emotion",
+      "title": "Minimal Emotion",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-minimal-emotion.mp3",
+      "mood": "techno",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     },
     {
-      "id": "sun-on-me-pop",
-      "title": "Sun On Me Pop",
-      "artist": "Trending Audio",
-      "file": "sun-on-me-pop.mp3",
-      "mood": "dreamy pop glow",
-      "viral_tag": "#SunOnMe"
+      "id": "mixkit-expressive-courage",
+      "title": "Expressive Courage",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-expressive-courage.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
     }
   ]
 }

@@ -1,0 +1,206 @@
+{
+  "updated": "2026-06-21",
+  "license": "https://mixkit.co/license/",
+  "tracks": [
+    {
+      "id": "mixkit-cat-walk",
+      "title": "Cat Walk",
+      "artist": "Arulo",
+      "file": "mixkit/mixkit-cat-walk.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-can-t-get-you-off-my-mind",
+      "title": "Can't Get You Off My Mind",
+      "artist": "Michael Ramir C.",
+      "file": "mixkit/mixkit-can-t-get-you-off-my-mind.mp3",
+      "mood": "future bass",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-rising-forest",
+      "title": "Rising Forest",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-rising-forest.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-i-do",
+      "title": "I Do!",
+      "artist": "Michael Ramir C.",
+      "file": "mixkit/mixkit-i-do.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-karma",
+      "title": "Karma",
+      "artist": "Michael Ramir C.",
+      "file": "mixkit/mixkit-karma.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-pop",
+      "title": "Pop",
+      "artist": "Andrew Ev",
+      "file": "mixkit/mixkit-pop.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-techno-fest-vibes",
+      "title": "Techno Fest Vibes",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-techno-fest-vibes.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-infected-vibes",
+      "title": "Infected Vibes",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-infected-vibes.mp3",
+      "mood": "trance",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-loner",
+      "title": "Loner",
+      "artist": "Arulo",
+      "file": "mixkit/mixkit-loner.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-house-fest",
+      "title": "House Fest",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-house-fest.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-talent-in-the-air",
+      "title": "Talent in the Air",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-talent-in-the-air.mp3",
+      "mood": "house",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-goa-trance-mantra",
+      "title": "Goa Trance Mantra",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-goa-trance-mantra.mp3",
+      "mood": "trance",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-infected-mushroom-vibes",
+      "title": "Infected Mushroom Vibes",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-infected-mushroom-vibes.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-b-o-r-n",
+      "title": "B.O.R.N",
+      "artist": "Eugenio Mininni",
+      "file": "mixkit/mixkit-b-o-r-n.mp3",
+      "mood": "trance",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-gear",
+      "title": "Gear",
+      "artist": "Andrew Ev",
+      "file": "mixkit/mixkit-gear.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-a-game",
+      "title": "A Game",
+      "artist": "Michael Ramir C",
+      "file": "mixkit/mixkit-a-game.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-summer-dream",
+      "title": "Summer Dream",
+      "artist": "Eugenio Mininni",
+      "file": "mixkit/mixkit-summer-dream.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-rising-sun",
+      "title": "Rising Sun",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-rising-sun.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-minimal-emotion",
+      "title": "Minimal Emotion",
+      "artist": "Alejandro Magaña (A. M.)",
+      "file": "mixkit/mixkit-minimal-emotion.mp3",
+      "mood": "techno",
+      "viral_tag": "#PopEDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    },
+    {
+      "id": "mixkit-expressive-courage",
+      "title": "Expressive Courage",
+      "artist": "Diego Nava",
+      "file": "mixkit/mixkit-expressive-courage.mp3",
+      "mood": "edm",
+      "viral_tag": "#EDM",
+      "source": "mixkit",
+      "license": "Mixkit Free License"
+    }
+  ]
+}

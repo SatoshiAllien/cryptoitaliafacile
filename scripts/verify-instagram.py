@@ -41,14 +41,29 @@ def fetch(url: str) -> dict:
 
 def main() -> None:
     env = load_env()
-    token = env.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
-    ig_id = env.get("INSTAGRAM_ACCOUNT_ID", "")
+    from instagram_auth import discover_instagram_login_profile, graph_url, is_instagram_login_token, resolve_credentials
+
+    ig_id, token, mode = resolve_credentials(env)
     if not token:
-        print("Manca FACEBOOK_PAGE_ACCESS_TOKEN")
+        print("Manca INSTAGRAM_ACCESS_TOKEN o FACEBOOK_PAGE_ACCESS_TOKEN")
         sys.exit(1)
     if not ig_id:
         print("Manca INSTAGRAM_ACCOUNT_ID — esegui: python scripts/discover-instagram-id.py")
         sys.exit(1)
+
+    print("Modalità API:", "Instagram Login (IGAA)" if mode == "instagram" else "Facebook Page (EAA)")
+
+    if is_instagram_login_token(token):
+        profile = discover_instagram_login_profile(token)
+        if not profile:
+            print("Token IGAA non valido")
+            sys.exit(2)
+        print("Token Instagram Login OK")
+        print(f"\nAccount: @{profile.get('username')} ({profile.get('name')})")
+        print(f"ID: {profile.get('id')}")
+        print("\nPronto per 20 post/giorno. Test:")
+        print("  python scripts/post-to-instagram.py --auto --slot 0")
+        return
 
     debug = fetch(f"https://graph.facebook.com/v21.0/debug_token?input_token={token}&access_token={token}")
     data = debug.get("data", {})
@@ -64,8 +79,7 @@ def main() -> None:
         print("\nPermessi Instagram OK.")
 
     profile = fetch(
-        f"https://graph.facebook.com/v21.0/{ig_id}"
-        f"?fields=id,username,name,profile_picture_url&access_token={token}"
+        f"{graph_url(f'/{ig_id}', token)}?fields=id,username,name,profile_picture_url&access_token={token}"
     )
     if profile.get("error"):
         print("\nProfilo IG non accessibile:", profile["error"].get("message"))
@@ -74,7 +88,7 @@ def main() -> None:
 
     print(f"\nAccount: @{profile.get('username')} ({profile.get('name')})")
     print(f"ID: {profile.get('id')}")
-    expected = env.get("INSTAGRAM_USERNAME", "bitcoin.is.hope2030")
+    expected = env.get("INSTAGRAM_USERNAME", "krown.82")
     if profile.get("username", "").lower() != expected.lower().lstrip("@"):
         print(f"Attenzione: atteso @{expected}, trovato @{profile.get('username')}")
 

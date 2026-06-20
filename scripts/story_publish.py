@@ -11,6 +11,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+from instagram_auth import graph_url
+
 GRAPH = "https://graph.facebook.com/v21.0"
 
 
@@ -151,12 +153,12 @@ def upload_facebook_video_story(page_id: str, video_path: Path, token: str, dry_
 
 
 def wait_instagram_media(creation_id: str, token: str, *, max_attempts: int = 10) -> dict | None:
+    status_url = (
+        f"{graph_url(f'/{creation_id}', token)}?fields=status_code&access_token={urllib.parse.quote(token)}"
+    )
     for attempt in range(max_attempts):
         time.sleep(3 if attempt == 0 else 5)
-        status = graph_request(
-            f"{GRAPH}/{creation_id}?fields=status_code&access_token={urllib.parse.quote(token)}",
-            method="GET",
-        )
+        status = graph_request(status_url, method="GET")
         code = (status.get("status_code") or "").upper()
         if code in ("FINISHED", ""):
             return None
@@ -167,9 +169,10 @@ def wait_instagram_media(creation_id: str, token: str, *, max_attempts: int = 10
 
 
 def _upload_instagram_resumable(ig_id: str, video_path: Path, token: str, dry_run: bool) -> dict:
+    media_url = graph_url(f"/{ig_id}/media", token)
     if dry_run:
         graph_request(
-            f"{GRAPH}/{ig_id}/media",
+            media_url,
             {"upload_type": "resumable", "media_type": "STORIES", "access_token": token},
             dry_run=True,
             label="IG resumable story container",
@@ -178,7 +181,7 @@ def _upload_instagram_resumable(ig_id: str, video_path: Path, token: str, dry_ru
         return {"dry_run": True, "id": "dry-run-ig-story"}
 
     container = graph_request(
-        f"{GRAPH}/{ig_id}/media",
+        media_url,
         {"upload_type": "resumable", "media_type": "STORIES", "access_token": token},
         label="IG resumable story container",
     )
@@ -210,7 +213,7 @@ def _upload_instagram_resumable(ig_id: str, video_path: Path, token: str, dry_ru
         return {"error": {"message": f"Story processing failed: {processing_err}"}}
 
     published = graph_request(
-        f"{GRAPH}/{ig_id}/media_publish",
+        graph_url(f"/{ig_id}/media_publish", token),
         {"creation_id": creation_id, "access_token": token},
         label="IG story publish",
     )
@@ -293,15 +296,17 @@ def publish_instagram_story(
             return result
         print(f"Resumable IG fallito, fallback image_url: {result.get('error')}", flush=True)
 
+    media_url = graph_url(f"/{ig_id}/media", token)
+    publish_url = graph_url(f"/{ig_id}/media_publish", token)
     if dry_run:
         graph_request(
-            f"{GRAPH}/{ig_id}/media",
+            media_url,
             {"image_url": image_url, "media_type": "STORIES", "access_token": token},
             dry_run=True,
             label="IG story container",
         )
         graph_request(
-            f"{GRAPH}/{ig_id}/media_publish",
+            publish_url,
             {"creation_id": "dry-run", "access_token": token},
             dry_run=True,
             label="IG story publish",
@@ -309,7 +314,7 @@ def publish_instagram_story(
         return {"dry_run": True, "id": "dry-run-ig-story"}
 
     container = graph_request(
-        f"{GRAPH}/{ig_id}/media",
+        media_url,
         {"image_url": image_url, "media_type": "STORIES", "access_token": token},
         label="IG story container",
     )
@@ -325,7 +330,7 @@ def publish_instagram_story(
         return {"error": {"message": f"Story processing failed: {processing_err}"}}
 
     return graph_request(
-        f"{GRAPH}/{ig_id}/media_publish",
+        publish_url,
         {"creation_id": creation_id, "access_token": token},
         label="IG story publish",
     )

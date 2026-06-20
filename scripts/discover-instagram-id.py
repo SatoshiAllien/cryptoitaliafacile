@@ -127,7 +127,7 @@ def main() -> int:
             print("(Probabile causa: token senza permessi Instagram — rigenera il token.)")
         print()
         print("Passi:")
-        print("  1. Apri instagram.com/bitcoin.is.hope2030 → Impostazioni → Account")
+        print("  1. Apri instagram.com/krown.82 → Impostazioni → Account")
         print("  2. Passa a account Business o Creator")
         print("  3. Collegalo a una Facebook Page (Crypto Italia Facile o nuova)")
         print("  4. Meta App → Use cases → aggiungi Instagram API")
@@ -141,11 +141,12 @@ def main() -> int:
     for ig_id, username, page_name in candidates:
         print(f"  @{username} (id={ig_id}) — collegato a Page: {page_name}")
 
+    preferred = (load_env().get("INSTAGRAM_USERNAME") or "krown.82").lower().lstrip("@")
     target = candidates[0]
     if len(candidates) > 1:
-        for ig_id, username, _ in candidates:
-            if username.lower() == "bitcoin.is.hope2030":
-                target = (ig_id, username, _)
+        for ig_id, username, page_name in candidates:
+            if username.lower() == preferred:
+                target = (ig_id, username, page_name)
                 break
 
     ig_id, username, page_name = target

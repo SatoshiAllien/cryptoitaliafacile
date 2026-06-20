@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pubblica articoli su Instagram (@bitcoin.is.hope2030) via Graph API.
+"""Pubblica articoli su Instagram (@krown.82 / @bitcoin.is.hope2030) via Graph API.
 
 Setup: scripts/.env — INSTAGRAM_ACCOUNT_ID + FACEBOOK_PAGE_ACCESS_TOKEN
 Guida: instagram-auto-setup.html
@@ -23,6 +23,7 @@ from datetime import date, datetime
 from pathlib import Path
 
 from chill_cyber_playlist import track_for_slot
+from instagram_auth import graph_url, is_instagram_login_token, resolve_credentials
 from story_publish import publish_instagram_story
 from story_video import prepare_story_video
 
@@ -39,7 +40,7 @@ IMAGE_BASE = f"{SITE_URL}assets/img/instagram/posts/"
 STORY_IMAGE_BASE = f"{SITE_URL}assets/img/instagram/stories/"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 GRAPH = "https://graph.facebook.com/v21.0"
-IG_HANDLE = "bitcoin.is.hope2030"
+IG_HANDLE = "krown.82"
 IG_POSTS_PER_DAY = 20
 
 EMOJI = {
@@ -205,7 +206,14 @@ def build_caption(article: dict) -> str:
     )[:2200]
 
 
-def graph_request(url: str, data: dict | None = None, method: str = "GET") -> dict:
+def graph_request(
+    path: str,
+    data: dict | None = None,
+    method: str = "GET",
+    *,
+    token: str = "",
+) -> dict:
+    url = graph_url(path, token) if token and not path.startswith("http") else path
     body = None
     if data is not None:
         body = urllib.parse.urlencode(data).encode("utf-8")
@@ -231,12 +239,16 @@ def post_to_instagram(caption: str, image_url: str, ig_id: str, token: str, dry_
         print(f"Length: {len(caption)}")
         return {"dry_run": True, "id": "dry-run"}
 
-    create_url = f"{GRAPH}/{ig_id}/media"
-    container = graph_request(create_url, {
-        "image_url": image_url,
-        "caption": caption,
-        "access_token": token,
-    }, method="POST")
+    container = graph_request(
+        f"/{ig_id}/media",
+        {
+            "image_url": image_url,
+            "caption": caption,
+            "access_token": token,
+        },
+        method="POST",
+        token=token,
+    )
     if container.get("error"):
         return container
 
@@ -244,11 +256,11 @@ def post_to_instagram(caption: str, image_url: str, ig_id: str, token: str, dry_
     if not creation_id:
         return {"error": {"message": f"No creation_id: {container}"}}
 
-    # Instagram needs a moment to process the image
     for attempt in range(8):
         time.sleep(3 if attempt == 0 else 5)
         status = graph_request(
-            f"{GRAPH}/{creation_id}?fields=status_code&access_token={token}"
+            f"/{creation_id}?fields=status_code&access_token={urllib.parse.quote(token)}",
+            token=token,
         )
         code = (status.get("status_code") or "").upper()
         if code in ("FINISHED", ""):
@@ -257,12 +269,15 @@ def post_to_instagram(caption: str, image_url: str, ig_id: str, token: str, dry_
             return {"error": {"message": f"Media processing failed: {status}"}}
         print(f"Media status: {code or 'processing'}...")
 
-    publish_url = f"{GRAPH}/{ig_id}/media_publish"
-    result = graph_request(publish_url, {
-        "creation_id": creation_id,
-        "access_token": token,
-    }, method="POST")
-    return result
+    return graph_request(
+        f"/{ig_id}/media_publish",
+        {
+            "creation_id": creation_id,
+            "access_token": token,
+        },
+        method="POST",
+        token=token,
+    )
 
 
 def article_score(article: dict) -> int:
@@ -426,31 +441,40 @@ def main() -> None:
     args = parser.parse_args()
 
     env = load_env()
-    ig_id = env.get("INSTAGRAM_ACCOUNT_ID", "")
-    token = env.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    ig_id, token, api_mode = resolve_credentials(env)
 
     if not args.dry_run and (not ig_id or not token):
-        print("Mancano INSTAGRAM_ACCOUNT_ID e FACEBOOK_PAGE_ACCESS_TOKEN.", file=sys.stderr)
+        print("Mancano INSTAGRAM_ACCESS_TOKEN (IGAA) o FACEBOOK_PAGE_ACCESS_TOKEN + INSTAGRAM_ACCOUNT_ID.", file=sys.stderr)
         print(f"File: {ENV_PATH}", file=sys.stderr)
         print("Guida: instagram-auto-setup.html", file=sys.stderr)
         sys.exit(1)
 
+    if not args.dry_run:
+        print(f"API Instagram: {api_mode} — @{env.get('INSTAGRAM_USERNAME', IG_HANDLE)}")
+
     page_id = env.get("FACEBOOK_PAGE_ID", "")
-    if not args.dry_run and page_id and token:
+    page_token = env.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+    if (
+        not args.dry_run
+        and api_mode == "facebook"
+        and page_id
+        and page_token
+    ):
         page_check = graph_request(
-            f"{GRAPH}/{page_id}?fields=instagram_business_account,page_backed_instagram_accounts"
-            f"&access_token={token}",
+            f"/{page_id}?fields=instagram_business_account,page_backed_instagram_accounts"
+            f"&access_token={page_token}",
             method="GET",
+            token=page_token,
         )
         has_business = bool((page_check.get("instagram_business_account") or {}).get("id"))
         has_backed = bool((page_check.get("page_backed_instagram_accounts") or {}).get("data"))
         if has_backed and not has_business:
+            primary = env.get("INSTAGRAM_USERNAME", IG_HANDLE).lstrip("@")
             print(
                 "Instagram non collegato come Business alla Page (solo page_backed). "
-                "L'API non può pubblicare finché non colleghi @bitcoin.is.hope2030.",
+                f"Usa token IGAA: python scripts/aggiorna-token-facebook.py IGAA...",
                 file=sys.stderr,
             )
-            print("Esegui: python scripts/link-instagram-page.py --open", file=sys.stderr)
 
     data = json.loads(ARTICLES_PATH.read_text(encoding="utf-8"))
     schedule = load_schedule()

@@ -30,7 +30,7 @@ def track_for_slot(slot: int, day_index: int = 0, posts_per_day: int = 20) -> di
 
 
 def playlist_label() -> str:
-    return load_playlist().get("name", "Viral Hits · Trending Now")
+    return load_playlist().get("name", "Pop EDM Viral · Stories 2026")
 
 
 def viral_tag_for_slot(slot: int, day_index: int = 0, posts_per_day: int = 20) -> str:

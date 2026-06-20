@@ -20,21 +20,24 @@
       <strong>Errore 403:</strong> l'app X è in modalità <strong>solo lettura</strong>. Il bot può autenticarsi ma <strong>non può pubblicare</strong> tweet.
     </div>
 
-    <h2>Fix in 5 passi</h2>
+    <h2>Fix in 6 passi</h2>
     <ol>
       <li>Vai su <a href="https://developer.x.com/en/portal/dashboard" target="_blank" rel="noopener">developer.x.com</a> → loggato come <strong>@TheRiser100x</strong></li>
       <li>Apri la tua <strong>App</strong> → tab <strong>Settings</strong></li>
-      <li>Scorri a <strong>User authentication settings</strong> → clicca <strong>Set up</strong> o <strong>Edit</strong></li>
+      <li>In alto, sezione <strong>App permissions</strong> → deve dire <strong>Read and write</strong> (non “Read”)</li>
+      <li><strong>User authentication settings</strong> → <strong>Edit</strong> → abilita <strong>OAuth 1.0a</strong> (non solo OAuth 2.0)</li>
       <li>Imposta:
         <ul>
-          <li><strong>App permissions:</strong> Read and Write</li>
-          <li><strong>Type of App:</strong> Automated App or Web App</li>
+          <li><strong>App permissions:</strong> Read and write</li>
+          <li><strong>Type of App:</strong> Automated App</li>
           <li><strong>Callback URL:</strong> <code>https://127.0.0.1</code></li>
+          <li><strong>Website URL:</strong> <code>https://satoshiallien.github.io/cryptoitaliafacile/</code></li>
         </ul>
-        Salva.
+        Clicca <strong>Save</strong> e attendi conferma.
       </li>
-      <li>Vai su <strong>Keys and tokens</strong> → <strong>Regenerate</strong> su <strong>Access Token and Secret</strong> → aggiorna <code>scripts/.env</code></li>
+      <li><strong>Keys and tokens</strong> → <strong>Regenerate</strong> Access Token + Secret → aggiorna <code>scripts/.env</code></li>
     </ol>
+    <p><strong>Piano API:</strong> se dopo il fix vedi ancora 403, il piano <strong>Free</strong> potrebbe non permettere post. Serve <strong>Basic</strong> (~$200/mese) su developer.x.com → Billing.</p>
 
     <h2>Test</h2>
     <pre>python scripts\verify-x-credentials.py

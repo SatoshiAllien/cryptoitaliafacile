@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Crea video Story 9:16 (immagine + musica playlist) per FB/IG."""
+"""Crea video Story 9:16 (immagine + musica + QR link) per FB/IG."""
 
 from __future__ import annotations
 
@@ -8,14 +8,15 @@ import tempfile
 import urllib.parse
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+import qrcode
+from PIL import Image, ImageDraw, ImageEnhance, ImageFont
 
 try:
     import imageio_ffmpeg
 except ImportError:
     imageio_ffmpeg = None  # type: ignore
 
-from chill_cyber_playlist import load_playlist, playlist_label, track_for_slot
+from chill_cyber_playlist import playlist_label, track_for_slot
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "assets" / "video" / "stories" / "cache"
@@ -24,6 +25,27 @@ IG_STORY_IMG = ROOT / "assets" / "img" / "instagram" / "stories"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
 SITE_LABEL = "cryptoitaliafacile.com"
 STORY_DURATION = 15
+
+THEME = {
+    "instagram": {
+        "accent": "#00F0FF",
+        "accent2": "#FF2A6D",
+        "gold": "#FDE047",
+        "cta": "📖 READ FREE GUIDE",
+        "scan": "📱 Scan QR with camera",
+        "hint": "👆 Opens in your browser",
+        "free": "✨ 100% FREE",
+    },
+    "facebook": {
+        "accent": "#34D399",
+        "accent2": "#FDE047",
+        "gold": "#00F0FF",
+        "cta": "📖 APRI LA GUIDA",
+        "scan": "📱 Scansiona il QR",
+        "hint": "👆 Si apre nel browser",
+        "free": "✨ GRATIS",
+    },
+}
 
 
 def ffmpeg_exe() -> str:
@@ -43,41 +65,81 @@ def _font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.I
     return ImageFont.load_default()
 
 
+def _hex_to_rgb(color: str) -> tuple[int, int, int]:
+    color = color.lstrip("#")
+    return tuple(int(color[i : i + 2], 16) for i in (0, 2, 4))
+
+
 def short_link_label(link_url: str) -> str:
     parsed = urllib.parse.urlparse(link_url)
     if parsed.netloc.endswith("github.io") and "cryptoitaliafacile" in parsed.path:
         return SITE_LABEL
     host = parsed.netloc.removeprefix("www.")
-    path = parsed.path.strip("/")
-    if path.startswith("articolo.html"):
-        return f"{host}/guide"
+    if parsed.path.strip("/").startswith("articolo.html"):
+        return f"{SITE_LABEL}/guide"
     return host or SITE_LABEL
 
 
-def overlay_link_sticker(
+def make_qr_image(link_url: str, size: int = 220) -> Image.Image:
+    qr = qrcode.QRCode(version=None, box_size=8, border=1)
+    qr.add_data(link_url)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="#0F172A", back_color="#FFFFFF")
+    return img.resize((size, size), Image.Resampling.NEAREST).convert("RGB")
+
+
+def _enhance_base(img: Image.Image) -> Image.Image:
+    rgb = img.convert("RGB")
+    rgb = ImageEnhance.Color(rgb).enhance(1.18)
+    rgb = ImageEnhance.Contrast(rgb).enhance(1.08)
+    rgb = ImageEnhance.Brightness(rgb).enhance(1.04)
+    return rgb
+
+
+def overlay_link_panel(
     image_path: Path,
     *,
     link_url: str,
     platform: str = "instagram",
-    accent: str = "#00F0FF",
 ) -> Path:
-    """Sticker stile link nativo IG/FB con URL del sito o articolo."""
-    img = Image.open(image_path).convert("RGBA")
+    """Pannello QR + CTA: l'unico modo affidabile per aprire il sito da Story IG."""
+    theme = THEME.get(platform, THEME["instagram"])
+    accent = theme["accent"]
+    accent2 = theme["accent2"]
+    accent_rgb = _hex_to_rgb(accent)
+    accent2_rgb = _hex_to_rgb(accent2)
+
+    img = _enhance_base(Image.open(image_path))
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    cta = "APRI LA GUIDA" if platform == "facebook" else "TAP TO READ"
-    label = short_link_label(link_url)
-    box = (72, 1040, 1008, 1240)
-    draw.rounded_rectangle(box, radius=32, fill=(255, 255, 255, 245), outline=accent, width=5)
-    draw.rounded_rectangle((108, 1070, 420, 1130), radius=20, fill=accent)
-    draw.text((128, 1086), f"🔗 {cta}", fill=(15, 23, 42), font=_font(28, bold=True))
-    draw.text((108, 1155), label, fill="#2563EB", font=_font(44, bold=True))
-    draw.text((108, 1210), "↑ Scorri / tocca per aprire", fill="#64748B", font=_font(24))
+    # Vignetta soft in basso per leggibilità
+    for y in range(900, 1920):
+        alpha = int(min(180, (y - 900) * 0.22))
+        draw.line([(0, y), (1080, y)], fill=(8, 12, 28, alpha))
 
-    out = Image.alpha_composite(img, layer).convert("RGB")
+    box = (56, 980, 1024, 1260)
+    draw.rounded_rectangle(box, radius=36, fill=(12, 18, 38, 235), outline=accent_rgb + (255,), width=4)
+    draw.rounded_rectangle((56, 980, 1024, 1048), radius=36, fill=accent2_rgb + (220,))
+
+    draw.text((88, 996), theme["cta"], fill=(15, 23, 42), font=_font(30, bold=True))
+    draw.text((780, 996), theme["free"], fill=(15, 23, 42), font=_font(24, bold=True))
+
+    qr = make_qr_image(link_url, size=200)
+    qr_rgba = qr.convert("RGBA")
+    layer.paste(qr_rgba, (88, 1068), qr_rgba)
+    draw.rounded_rectangle((80, 1060, 296, 1276), radius=16, outline=accent_rgb + (255,), width=3)
+
+    label = short_link_label(link_url)
+    draw.text((330, 1080), f"🌐 {label}", fill="#FFFFFF", font=_font(40, bold=True))
+    draw.text((330, 1140), theme["scan"], fill=accent, font=_font(28, bold=True))
+    draw.text((330, 1190), theme["hint"], fill="#CBD5E1", font=_font(26))
+    draw.rounded_rectangle((330, 1220, 990, 1250), radius=12, fill=accent_rgb + (60,))
+    draw.text((350, 1224), f"🔗 {link_url[:52]}{'…' if len(link_url) > 52 else ''}", fill="#E2E8F0", font=_font(20))
+
+    out = Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
     tmp = Path(tempfile.gettempdir()) / f"story-link-{image_path.stem}.jpg"
-    out.save(tmp, "JPEG", quality=92)
+    out.save(tmp, "JPEG", quality=94)
     return tmp
 
 
@@ -88,24 +150,31 @@ def overlay_music_badge(
     track_title: str,
     track_artist: str,
     viral_tag: str = "#TrendingNow",
-    accent: str = "#FF2A6D",
+    platform: str = "instagram",
 ) -> Path:
+    theme = THEME.get(platform, THEME["instagram"])
+    accent = theme["accent"]
+    accent2 = theme["accent2"]
+    accent_rgb = _hex_to_rgb(accent)
+    accent2_rgb = _hex_to_rgb(accent2)
+
     img = Image.open(image_path).convert("RGBA")
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    box = (72, 1290, 1008, 1540)
-    draw.rounded_rectangle(box, radius=28, fill=(15, 23, 42, 225), outline=accent, width=4)
+    box = (56, 1290, 1024, 1560)
+    draw.rounded_rectangle(box, radius=32, fill=(10, 15, 32, 240), outline=accent_rgb + (255,), width=4)
     tag = viral_tag if viral_tag.startswith("#") else f"#{viral_tag}"
-    draw.rounded_rectangle((108, 1310, 380, 1368), radius=18, fill=accent)
-    draw.text((128, 1324), f"🔥 {tag}", fill=(15, 23, 42), font=_font(24, bold=True))
-    draw.text((108, 1385), "🎵 " + playlist_name, fill="#E2E8F0", font=_font(28, bold=True))
-    draw.text((108, 1435), f"▶ {track_title}", fill="#FFFFFF", font=_font(40, bold=True))
-    draw.text((108, 1495), track_artist, fill="#94A3B8", font=_font(26))
+    draw.rounded_rectangle((88, 1310, 400, 1370), radius=20, fill=accent2_rgb + (255,))
+    draw.text((108, 1324), f"🔥 {tag}", fill=(15, 23, 42), font=_font(26, bold=True))
+    draw.text((88, 1390), f"🎧 {playlist_name}", fill="#E2E8F0", font=_font(30, bold=True))
+    draw.text((88, 1440), f"▶️ {track_title}", fill="#FFFFFF", font=_font(42, bold=True))
+    draw.text((88, 1500), f"🎤 {track_artist}", fill="#94A3B8", font=_font(28))
+    draw.text((720, 1505), "🎵", fill=accent, font=_font(36, bold=True))
 
     out = Image.alpha_composite(img, layer).convert("RGB")
     tmp = Path(tempfile.gettempdir()) / f"story-badge-{image_path.stem}.jpg"
-    out.save(tmp, "JPEG", quality=92)
+    out.save(tmp, "JPEG", quality=94)
     return tmp
 
 
@@ -118,7 +187,6 @@ def build_story_video(
     track_artist: str,
     viral_tag: str = "#TrendingNow",
     out_path: Path | None = None,
-    accent: str = "#FF2A6D",
     link_url: str = "",
     platform: str = "instagram",
 ) -> Path:
@@ -130,7 +198,7 @@ def build_story_video(
     base = image_path
     link_tmp: Path | None = None
     if link_url:
-        link_tmp = overlay_link_sticker(base, link_url=link_url, platform=platform, accent=accent)
+        link_tmp = overlay_link_panel(base, link_url=link_url, platform=platform)
         base = link_tmp
 
     framed = overlay_music_badge(
@@ -139,7 +207,7 @@ def build_story_video(
         track_title=track_title,
         track_artist=track_artist,
         viral_tag=viral_tag,
-        accent=accent,
+        platform=platform,
     )
     if link_tmp:
         link_tmp.unlink(missing_ok=True)
@@ -179,14 +247,13 @@ def prepare_story_video(
     *,
     link_url: str = "",
 ) -> tuple[Path, dict]:
-    """Genera MP4 story con musica virale trending per topic e slot."""
+    """Genera MP4 story con musica virale + QR verso articolo/sito."""
     stem = Path(image_file).stem
     img_dir = FB_STORY_IMG if platform == "facebook" else IG_STORY_IMG
     image_path = img_dir / f"{stem}.jpg"
     track = track_for_slot(slot, day_index, posts_per_day)
     audio_path = Path(track["path"])
     out_path = CACHE_DIR / platform / f"{stem}-{track['id']}.mp4"
-    accent = "#34D399" if platform == "facebook" else "#FF2A6D"
     video = build_story_video(
         image_path,
         audio_path,
@@ -195,7 +262,6 @@ def prepare_story_video(
         track_artist=track["artist"],
         viral_tag=track.get("viral_tag", "#TrendingNow"),
         out_path=out_path,
-        accent=accent,
         link_url=link_url or SITE_URL,
         platform=platform,
     )

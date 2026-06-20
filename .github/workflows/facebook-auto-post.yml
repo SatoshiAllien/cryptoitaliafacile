@@ -32,7 +32,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install tzdata imageio-ffmpeg numpy Pillow
+        run: pip install tzdata imageio-ffmpeg numpy Pillow qrcode[pil]
       - name: Sync viral story music
         run: python scripts/generate-viral-story-tracks.py && python scripts/sync-instagram-trending-audio.py || true
 

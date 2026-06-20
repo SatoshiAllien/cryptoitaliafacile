@@ -17,9 +17,12 @@ from story_video_host import stage_story_video
 GRAPH = "https://graph.facebook.com/v21.0"
 
 
-def _with_story_link(params: dict, link_url: str | None) -> dict:
-    if link_url:
-        params["link"] = link_url
+def _with_story_link(params: dict, link_url: str | None, *, platform: str = "instagram") -> dict:
+    if not link_url:
+        return params
+    params["link"] = link_url
+    if platform == "facebook":
+        params["cta"] = json.dumps({"type": "SEE_MORE", "value": {"link": link_url}})
     return params
 
 
@@ -164,6 +167,7 @@ def upload_facebook_video_story(
             "access_token": token,
         },
         link_url,
+        platform="facebook",
     )
     finished = graph_request(endpoint, finish_params, label="FB video_stories finish")
     if finished.get("error") and link_url and _link_api_error(finished):
@@ -215,7 +219,7 @@ def _upload_instagram_video_url(
 
     container = graph_request(media_url, media_params, label="IG story video_url")
     if container.get("error") and link_url and _link_api_error(container):
-        print("Link sticker IG non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+        print("Link IG non supportato via API — usa QR nella story, retry senza link.", flush=True)
         base_params = {"video_url": video_url, "media_type": "STORIES", "access_token": token}
         container = graph_request(media_url, base_params, label="IG story video_url (no link)")
     if container.get("error"):
@@ -236,6 +240,9 @@ def _upload_instagram_video_url(
     )
     published.setdefault("creation_id", creation_id)
     published.setdefault("video_url", video_url)
+    if link_url:
+        published["link_requested"] = link_url
+        published["link_note"] = "IG API non supporta link cliccabili — QR nella story"
     return published
 
 
@@ -330,7 +337,7 @@ def publish_facebook_story(
         )
         graph_request(
             f"{GRAPH}/{page_id}/photo_stories",
-            _with_story_link({"photo_id": "dry-run-photo", "access_token": token}, link_url),
+            _with_story_link({"photo_id": "dry-run-photo", "access_token": token}, link_url, platform="facebook"),
             dry_run=True,
             label="FB photo_stories",
         )
@@ -348,7 +355,7 @@ def publish_facebook_story(
     if not photo_id:
         return {"error": {"message": f"No photo id: {photo}"}}
 
-    story_params = _with_story_link({"photo_id": photo_id, "access_token": token}, link_url)
+    story_params = _with_story_link({"photo_id": photo_id, "access_token": token}, link_url, platform="facebook")
     story = graph_request(f"{GRAPH}/{page_id}/photo_stories", story_params, label="FB photo_stories")
     if story.get("error") and link_url and _link_api_error(story):
         print("Link FB story non supportato via API — overlay visivo attivo, retry senza link.", flush=True)

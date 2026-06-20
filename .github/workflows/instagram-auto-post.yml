@@ -32,7 +32,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install tzdata imageio-ffmpeg numpy Pillow
+        run: pip install tzdata imageio-ffmpeg numpy Pillow qrcode[pil]
       - name: Sync story music (Mixkit pop/EDM)
         run: python scripts/fetch-mixkit-story-music.py || true
 

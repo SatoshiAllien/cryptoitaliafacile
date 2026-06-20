@@ -204,6 +204,44 @@ def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFo
     return ImageFont.load_default()
 
 
+def load_emoji_font(size: int) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    for path in [
+        "C:/Windows/Fonts/seguiemj.ttf",
+        "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+        "/System/Library/Fonts/Apple Color Emoji.ttc",
+    ]:
+        if Path(path).exists():
+            try:
+                return ImageFont.truetype(path, size)
+            except OSError:
+                continue
+    return load_font(size)
+
+
+def _is_emoji_char(ch: str) -> bool:
+    o = ord(ch)
+    return o > 0x238C or ch in "₿⟠"
+
+
+def draw_mixed_text(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    text: str,
+    font,
+    fill: str,
+    *,
+    emoji_font=None,
+) -> tuple[int, int]:
+    ef = emoji_font or load_emoji_font(getattr(font, "size", 32))
+    x, y = xy
+    for ch in text:
+        f = ef if _is_emoji_char(ch) else font
+        draw.text((x, y), ch, fill=fill, font=f, embedded_color=True)
+        bbox = draw.textbbox((x, y), ch, font=f)
+        x = bbox[2]
+    return x, y
+
+
 def _hex(c: str) -> tuple[int, int, int]:
     c = c.lstrip("#")
     return tuple(int(c[i : i + 2], 16) for i in (0, 2, 4))
@@ -260,21 +298,33 @@ def draw_multiline(
     line_gap: int = 8,
 ) -> int:
     x, y = xy
+    ef = load_emoji_font(getattr(font, "size", 48))
     for line in text.split("\n"):
-        draw.text((x, y), line, fill=fill, font=font)
-        bbox = draw.textbbox((x, y), line, font=font)
-        y = bbox[3] + line_gap
+        draw_mixed_text(draw, (x, y), line, font, fill, emoji_font=ef)
+        tmp = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+        lh = 0
+        for ch in line:
+            f = ef if _is_emoji_char(ch) else font
+            bbox = tmp.textbbox((0, 0), ch, font=f)
+            lh = max(lh, bbox[3] - bbox[1])
+        y += lh + line_gap
     return y
 
 
 def draw_badge_pill(draw: ImageDraw.ImageDraw, x: int, y: int, text: str, accent: str, accent2: str, font) -> None:
-    bbox = draw.textbbox((0, 0), text, font=font)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    ef = load_emoji_font(getattr(font, "size", 32))
+    tmp = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+    tw, th = 0, 0
+    for ch in text:
+        f = ef if _is_emoji_char(ch) else font
+        bbox = tmp.textbbox((0, 0), ch, font=f)
+        tw += bbox[2] - bbox[0]
+        th = max(th, bbox[3] - bbox[1])
     pad_x, pad_y = 36, 22
     w, h = tw + pad_x * 2, th + pad_y * 2
     draw.rounded_rectangle((x, y, x + w + 8, y + h + 8), radius=28, fill=_hex(accent2))
     draw.rounded_rectangle((x + 4, y + 4, x + w + 4, y + h + 4), radius=24, fill=_hex(accent))
-    draw.text((x + pad_x, y + pad_y - 2), text, fill=(15, 23, 42), font=font)
+    draw_mixed_text(draw, (x + pad_x, y + pad_y - 2), text, font, (15, 23, 42), emoji_font=ef)
 
 
 def draw_cta_button(
@@ -290,11 +340,17 @@ def draw_cta_button(
     draw.rounded_rectangle((x1, y1, x2, y2), radius=28, fill=_hex(accent2))
     draw.rounded_rectangle((x1 + 4, y1 + 4, x2 - 4, y2 - 4), radius=24, fill=_hex(accent))
     font = load_font(font_size, bold=True)
-    bbox = draw.textbbox((0, 0), text, font=font)
-    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    ef = load_emoji_font(font_size)
+    tmp = ImageDraw.Draw(Image.new("RGB", (4, 4)))
+    tw, th = 0, 0
+    for ch in text:
+        f = ef if _is_emoji_char(ch) else font
+        bbox = tmp.textbbox((0, 0), ch, font=f)
+        tw += bbox[2] - bbox[0]
+        th = max(th, bbox[3] - bbox[1])
     tx = x1 + (x2 - x1 - tw) // 2
     ty = y1 + (y2 - y1 - th) // 2 - 2
-    draw.text((tx, ty), text, fill=(15, 23, 42), font=font)
+    draw_mixed_text(draw, (tx, ty), text, font, (15, 23, 42), emoji_font=ef)
 
 
 def topic_cfg(name: str, *, lang: str = "it") -> dict:
@@ -343,7 +399,7 @@ def render_post(
     draw_multiline(draw, (margin, hook_y), cfg["hook"], load_font(hook_size, bold=True), "#FFFFFF", line_gap=4)
 
     sub_y = hook_y + int(height * 0.22)
-    draw.text((margin, sub_y), cfg["sub"], fill="#E2E8F0", font=load_font(sub_size))
+    draw_mixed_text(draw, (margin, sub_y), cfg["sub"], load_font(sub_size), "#E2E8F0")
 
     cta_h = int(height * 0.14)
     cta_y = int(height * 0.72)
@@ -357,7 +413,13 @@ def render_post(
         font_size=max(22, int(height * 0.045)),
     )
 
-    draw.text((margin, height - margin - 28), f"🌐 {footer}", fill="#94A3B8", font=load_font(max(18, int(height * 0.028))))
+    draw_mixed_text(
+        draw,
+        (margin, height - margin - 28),
+        f"🌐 {footer}",
+        load_font(max(18, int(height * 0.028))),
+        "#94A3B8",
+    )
 
     return apply_branding(img, name, icon_box=icon_box, accent=cfg["accent"], brand_scale=brand_scale)
 
@@ -381,12 +443,12 @@ def render_story(
 
     draw_badge_pill(draw, 56, 90, cfg["badge_text"], cfg["accent"], cfg["accent2"], load_font(40, bold=True))
     draw_multiline(draw, (56, 280), cfg["hook"], load_font(78, bold=True), "#FFFFFF", line_gap=6)
-    draw.text((56, 580), cfg["sub"], fill="#E2E8F0", font=load_font(36))
+    draw_mixed_text(draw, (56, 580), cfg["sub"], load_font(36), "#E2E8F0")
 
     draw.rounded_rectangle((56, 760, 1024, 880), radius=28, fill=(10, 15, 32), outline=_hex(cfg["accent"]), width=4)
-    draw.text((96, 808), "🌐 cryptoitaliafacile.com", fill=cfg["accent"], font=load_font(38, bold=True))
+    draw_mixed_text(draw, (96, 808), "🌐 cryptoitaliafacile.com", load_font(38, bold=True), cfg["accent"])
 
     draw_cta_button(draw, (56, 1480, 900, 1600), cta, cfg["accent"], cfg["accent2"], font_size=36)
-    draw.text((56, 1760), footer, fill="#94A3B8", font=load_font(28))
+    draw_mixed_text(draw, (56, 1760), footer, load_font(28), "#94A3B8")
 
     return apply_branding(img, name, icon_box=(700, 960, 980, 1220), accent=cfg["accent"], brand_scale=0.09)

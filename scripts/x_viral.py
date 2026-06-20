@@ -13,18 +13,18 @@ HOOKS = {
     "whitehouse": "🇺🇸 WHITE HOUSE · CRYPTO",
     "bitcoin": "₿ BITCOIN ALERT",
     "ethereum": "⟠ ETH UPDATE",
-    "regulation": "⚖️ REGOLAMENTAZIONE CRYPTO",
-    "market": "📈 MERCATO CRYPTO",
+    "regulation": "⚖️ CRYPTO REGULATION",
+    "market": "📈 CRYPTO MARKET",
     "elon": "🔄 REPOST @elonmusk",
     "default": "🔥 CRYPTO NEWS",
 }
 
 CLICKBAIT_HOOKS = {
-    "bitcoin": "₿ BITCOIN — LO DEVI VEDERE 👇",
-    "regulation": "⚖️ REGOLAMENTAZIONE — ATTENZIONE 👇",
-    "elon": "🔄 ELON MUSK HA DETTO 👇",
-    "bitcoin_breaking": "🚨 BREAKING BTC — GUARDA 👇",
-    "bitcoin_viral": "🔥 VIRAL BTC — NON PERDERE 👇",
+    "bitcoin": "₿ BITCOIN — YOU NEED TO SEE THIS 👇",
+    "regulation": "⚖️ REGULATION ALERT — READ THIS 👇",
+    "elon": "🔄 ELON MUSK JUST SAID 👇",
+    "bitcoin_breaking": "🚨 BREAKING BTC — WATCH NOW 👇",
+    "bitcoin_viral": "🔥 VIRAL BTC — DON'T MISS THIS 👇",
 }
 
 EMOJI_BOOST = ["👀", "🚀", "⚡", "💥", "🔥"]
@@ -127,7 +127,7 @@ def build_viral_post(
 
     parts = [hook, "", body]
     if slot_type == "elon" and source_url:
-        parts.extend(["", "🔗 Post originale:", truncate(source_url, 80)])
+        parts.extend(["", "🔗 Original post:", truncate(source_url, 80)])
     elif via:
         parts.extend(["", via])
         if source_url:

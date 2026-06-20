@@ -8,18 +8,18 @@ const X_VIRAL_HOOKS = {
   whitehouse: '🇺🇸 WHITE HOUSE · CRYPTO',
   bitcoin: '₿ BITCOIN ALERT',
   ethereum: '⟠ ETH UPDATE',
-  regulation: '⚖️ REGOLAMENTAZIONE CRYPTO',
-  market: '📈 MERCATO CRYPTO',
+  regulation: '⚖️ CRYPTO REGULATION',
+  market: '📈 CRYPTO MARKET',
   elon: '🔄 REPOST @elonmusk',
   default: '🔥 CRYPTO NEWS'
 };
 
 const X_CLICKBAIT_HOOKS = {
-  bitcoin: '₿ BITCOIN — LO DEVI VEDERE 👇',
-  regulation: '⚖️ REGOLAMENTAZIONE — ATTENZIONE 👇',
-  elon: '🔄 ELON MUSK HA DETTO 👇',
-  bitcoin_breaking: '🚨 BREAKING BTC — GUARDA 👇',
-  bitcoin_viral: '🔥 VIRAL BTC — NON PERDERE 👇'
+  bitcoin: '₿ BITCOIN — YOU NEED TO SEE THIS 👇',
+  regulation: '⚖️ REGULATION ALERT — READ THIS 👇',
+  elon: '🔄 ELON MUSK JUST SAID 👇',
+  bitcoin_breaking: '🚨 BREAKING BTC — WATCH NOW 👇',
+  bitcoin_viral: '🔥 VIRAL BTC — DON\'T MISS THIS 👇'
 };
 
 const X_HASHTAGS = {
@@ -60,7 +60,12 @@ function buildXViralPost(item, slotType) {
   if (body.length > 150) body = body.slice(0, 149) + '…';
   const via = item.sourceHandle ? `via ${item.sourceHandle}` : '';
   let post = `${hook}\n\n${body}`;
-  if (via) post += `\n\n${via}`;
+  if (st === 'elon' && item.url) {
+    post += `\n\n🔗 Original post:\n${item.url}`;
+  } else if (via) {
+    post += `\n\n${via}`;
+    if (item.url) post += `\n${item.url}`;
+  }
   post += `\n\n${tags}`;
   return post.length > 280 ? post.slice(0, 277) + '…' : post;
 }

@@ -8,9 +8,9 @@ const X_SLOT_TYPES = ['bitcoin', 'regulation', 'elon', 'bitcoin_breaking', 'bitc
 const X_SLOT_TIMES = ['08:00', '11:15', '14:30', '17:45', '21:00'];
 
 const X_SLOT_LABELS = {
-  bitcoin: '₿ Bitcoin + foto clickbait',
-  regulation: '⚖️ Regolamentazione crypto',
-  elon: '🔄 Repost Elon Musk',
+  bitcoin: '₿ Bitcoin + clickbait image',
+  regulation: '⚖️ Crypto regulation',
+  elon: '🔄 Elon Musk repost',
   bitcoin_breaking: '🚨 Breaking BTC',
   bitcoin_viral: '🔥 Top viral Bitcoin'
 };

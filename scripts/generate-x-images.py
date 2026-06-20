@@ -15,29 +15,29 @@ TEMPLATES = {
         "bg": [(15, 23, 42), (180, 83, 9)],
         "accent": "#F7931A",
         "badge": "BITCOIN",
-        "hook": "₿ LO DEVI VEDERE ORA",
-        "sub": "News BTC · click per saperne di più",
+        "hook": "₿ YOU NEED TO SEE THIS",
+        "sub": "BTC news · tap to learn more",
     },
     "regulation": {
         "bg": [(30, 27, 75), (67, 56, 202)],
         "accent": "#A5B4FC",
-        "badge": "REGOLAMENTAZIONE",
-        "hook": "⚖️ ATTENZIONE CRYPTO",
-        "sub": "SEC · MICA · leggi che cambiano tutto",
+        "badge": "REGULATION",
+        "hook": "⚖️ CRYPTO ALERT",
+        "sub": "SEC · MiCA · laws that change everything",
     },
     "elon": {
         "bg": [(15, 23, 42), (30, 41, 59)],
         "accent": "#38BDF8",
         "badge": "ELON MUSK",
-        "hook": "🔄 REPOST VIRALE",
-        "sub": "Cosa ha detto Elon su Bitcoin & crypto",
+        "hook": "🔄 VIRAL REPOST",
+        "sub": "What Elon said about Bitcoin & crypto",
     },
     "breaking": {
         "bg": [(127, 29, 29), (220, 38, 38)],
         "accent": "#FCA5A5",
         "badge": "BREAKING",
         "hook": "🚨 BTC BREAKING NEWS",
-        "sub": "Aggiornamento in tempo reale",
+        "sub": "Real-time market update",
     },
 }
 
@@ -73,7 +73,7 @@ def render(name: str, cfg: dict) -> Path:
     draw.text((48, 250), cfg["sub"], fill="#E2E8F0", font=load_font(28))
 
     draw.rounded_rectangle((48, 480, 560, 570), radius=22, outline=accent, width=4)
-    draw.text((78, 510), "CLICCA E LEGGI TUTTO →", fill=accent, font=load_font(24, bold=True))
+    draw.text((78, 510), "TAP TO READ MORE →", fill=accent, font=load_font(24, bold=True))
     draw.text((48, 600), "@TheRiser100x · cryptoitaliafacile", fill="#94A3B8", font=load_font(20))
 
     draw.ellipse((920, 140, 1140, 360), outline=accent, width=6)

@@ -21,9 +21,9 @@ SLOT_IMAGES = {
 }
 
 SLOT_LABELS = {
-    "bitcoin": "₿ Bitcoin + foto clickbait",
-    "regulation": "⚖️ Regolamentazione crypto",
-    "elon": "🔄 Repost Elon Musk",
+    "bitcoin": "₿ Bitcoin + clickbait image",
+    "regulation": "⚖️ Crypto regulation",
+    "elon": "🔄 Elon Musk repost",
     "bitcoin_breaking": "🚨 Breaking BTC",
     "bitcoin_viral": "🔥 Top viral Bitcoin",
 }

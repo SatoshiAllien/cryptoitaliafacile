@@ -59,17 +59,48 @@ def main() -> int:
         print("Manca FACEBOOK_PAGE_ACCESS_TOKEN in scripts/.env")
         return 1
 
+    if len(sys.argv) > 1 and sys.argv[1].isdigit():
+        ig_id = sys.argv[1].strip()
+        upsert_env("INSTAGRAM_ACCOUNT_ID", ig_id)
+        if len(sys.argv) > 2:
+            upsert_env("INSTAGRAM_USERNAME", sys.argv[2].lstrip("@"))
+        print(f"Salvato INSTAGRAM_ACCOUNT_ID={ig_id}")
+        verify = Path(__file__).resolve().parent / "verify-instagram.py"
+        return subprocess.call([sys.executable, str(verify)]) if verify.exists() else 0
+
+    debug = fetch(f"https://graph.facebook.com/v21.0/debug_token?input_token={token}&access_token={token}")
+    scopes = set((debug.get("data") or {}).get("scopes") or [])
+    ig_scopes = {"instagram_basic", "instagram_content_publish"}
+    missing_ig = sorted(ig_scopes - scopes)
+    if missing_ig:
+        print("Token Page OK ma MANCANO permessi Instagram:", ", ".join(missing_ig))
+        print("Graph API Explorer → Generate Token → spunta instagram_basic + instagram_content_publish")
+        print("Poi rigenera token PAGINA e: python scripts/aggiorna-token-facebook.py EAA...")
+        print()
+
     candidates: list[tuple[str, str, str]] = []
+    page_backed_only: list[tuple[str, str, str]] = []
 
     if page_id:
         data = fetch(
             f"https://graph.facebook.com/v21.0/{page_id}"
-            f"?fields=id,name,instagram_business_account{{id,username}}"
+            f"?fields=id,name,instagram_business_account{{id,username}},connected_instagram_account{{id,username}}"
             f"&access_token={token}"
         )
-        ig = (data.get("instagram_business_account") or {})
-        if ig.get("id"):
-            candidates.append((ig["id"], ig.get("username", "?"), data.get("name", page_id)))
+        if data.get("error"):
+            print(f"API Page ({page_id}):", data["error"].get("message"))
+        for key in ("instagram_business_account", "connected_instagram_account"):
+            ig = data.get(key) or {}
+            if ig.get("id"):
+                candidates.append((ig["id"], ig.get("username") or "?", data.get("name", page_id)))
+
+        backed = fetch(
+            f"https://graph.facebook.com/v21.0/{page_id}"
+            f"?fields=page_backed_instagram_accounts{{id,username}}&access_token={token}"
+        )
+        for ig in (backed.get("page_backed_instagram_accounts") or {}).get("data") or []:
+            if ig.get("id"):
+                page_backed_only.append((ig["id"], ig.get("username") or "(page_backed)", backed.get("name", page_id)))
 
     accounts = fetch(
         "https://graph.facebook.com/v21.0/me/accounts"
@@ -81,7 +112,19 @@ def main() -> int:
             candidates.append((ig["id"], ig.get("username", "?"), page.get("name", "?")))
 
     if not candidates:
-        print("Nessun account Instagram collegato alle tue Facebook Page.")
+        if page_backed_only:
+            print("ATTENZIONE: trovato solo page_backed (NON pubblicabile via API):")
+            for ig_id, username, page_name in page_backed_only:
+                print(f"  id={ig_id} ({username}) — Page: {page_name}")
+            print()
+            print("Il collegamento Business NON è attivo. Dopo aver collegato in Business Suite:")
+            print("  1. Rigenera token USER in Graph API Explorer")
+            print("  2. python scripts/aggiorna-token-facebook.py <USER_TOKEN>")
+            print("  3. Riesegui questo script")
+            print()
+        print("Nessun instagram_business_account sulla Page", page_id or "(?)")
+        if missing_ig:
+            print("(Probabile causa: token senza permessi Instagram — rigenera il token.)")
         print()
         print("Passi:")
         print("  1. Apri instagram.com/bitcoin.is.hope2030 → Impostazioni → Account")
@@ -94,7 +137,7 @@ def main() -> int:
         print("Guida: instagram-auto-setup.html")
         return 2
 
-    print("Account Instagram trovati:")
+    print("Account Instagram Business trovati:")
     for ig_id, username, page_name in candidates:
         print(f"  @{username} (id={ig_id}) — collegato a Page: {page_name}")
 

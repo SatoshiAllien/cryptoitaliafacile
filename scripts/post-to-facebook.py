@@ -27,7 +27,9 @@ import urllib.request
 from datetime import date, datetime
 from pathlib import Path
 
+from chill_cyber_playlist import track_for_slot
 from story_publish import publish_facebook_story
+from story_video import prepare_story_video
 
 try:
     from zoneinfo import ZoneInfo
@@ -351,6 +353,7 @@ def record_post(
     post_id: str,
     *,
     story_id: str = "",
+    story_track: str = "",
 ) -> None:
     entry = {
         "date": date_str,
@@ -361,6 +364,8 @@ def record_post(
     }
     if story_id:
         entry["storyId"] = story_id
+    if story_track:
+        entry["storyTrack"] = story_track
     schedule.setdefault("posted", []).append(entry)
 
 
@@ -490,6 +495,10 @@ def main() -> None:
         print("Nessun post da pubblicare.")
         return
 
+    tz_name = schedule.get("timezone", "Europe/Rome")
+    start_date = env.get("FACEBOOK_SCHEDULE_START") or schedule.get("startDate")
+    day_idx = max(0, day_index_from_start(start_date, today_in_timezone(tz_name)))
+
     posted_slugs = {p.get("slug") for p in schedule.get("posted", []) if p.get("slug")}
     ok = 0
     fail = 0
@@ -520,9 +529,34 @@ def main() -> None:
             raise
 
         story_id = ""
+        story_track = ""
         if not args.no_story:
             try:
-                story_result = publish_facebook_story(page_id, story_url, token, args.dry_run)
+                story_video_path = None
+                if not args.dry_run:
+                    story_video_path, track = prepare_story_video(
+                        "facebook",
+                        facebook_image_file(article),
+                        args.slot,
+                        day_idx,
+                        per_day,
+                    )
+                    story_track = track["title"]
+                    print(f"MUSICA: {track['title']} — {track['artist']}")
+                    print(f"VIDEO: {story_video_path}")
+                else:
+                    track = track_for_slot(args.slot, day_idx, per_day)
+                    story_track = track["title"]
+                    print(f"MUSICA: {track['title']} — {track['artist']} (dry-run)")
+
+                story_result = publish_facebook_story(
+                    page_id,
+                    story_url,
+                    token,
+                    args.dry_run,
+                    video_path=story_video_path,
+                    use_video=not args.no_story,
+                )
                 print("STORY:", json.dumps(story_result, indent=2))
                 if story_result.get("error"):
                     print(f"AVVISO Story non pubblicata: {story_result['error']}", file=sys.stderr)
@@ -530,6 +564,7 @@ def main() -> None:
                     story_id = str(
                         story_result.get("post_id")
                         or story_result.get("id")
+                        or story_result.get("video_id")
                         or story_result.get("photo_id")
                         or ""
                     )
@@ -542,6 +577,7 @@ def main() -> None:
                 record_post(
                     schedule, today_str, args.slot, article["slug"], result.get("id", ""),
                     story_id=story_id,
+                    story_track=story_track,
                 )
             elif args.all:
                 entry = {

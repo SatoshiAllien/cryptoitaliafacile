@@ -31,8 +31,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install tzdata
-        run: pip install tzdata
+      - name: Install dependencies
+        run: pip install tzdata imageio-ffmpeg numpy Pillow
 
       - name: Post to Facebook
         env:

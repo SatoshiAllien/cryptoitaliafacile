@@ -16,6 +16,7 @@ def main() -> None:
         "generate-ig-images.py",
         "generate-x-images.py",
         "generate-story-images.py",
+        "generate-chill-cyber-tracks.py",
     ):
         print(f"=== {script} ===")
         subprocess.check_call([sys.executable, str(SCRIPTS / script)])

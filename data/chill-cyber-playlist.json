@@ -1,0 +1,62 @@
+{
+  "name": "Chill Cyber Coding",
+  "description": "Playlist ambient synth per le Stories — vibe coding notturno",
+  "tracks": [
+    {
+      "id": "neon-compiler",
+      "title": "Neon Compiler",
+      "artist": "Satoshi Beats",
+      "file": "neon-compiler.mp3",
+      "mood": "synthwave pad"
+    },
+    {
+      "id": "midnight-hash",
+      "title": "Midnight Hash",
+      "artist": "Satoshi Beats",
+      "file": "midnight-hash.mp3",
+      "mood": "lo-fi cyber"
+    },
+    {
+      "id": "synth-stack",
+      "title": "Synth Stack",
+      "artist": "Satoshi Beats",
+      "file": "synth-stack.mp3",
+      "mood": "arpeggio chill"
+    },
+    {
+      "id": "lofi-ledger",
+      "title": "Lo-Fi Ledger",
+      "artist": "Satoshi Beats",
+      "file": "lofi-ledger.mp3",
+      "mood": "warm pads"
+    },
+    {
+      "id": "cyber-chill-room",
+      "title": "Cyber Chill Room",
+      "artist": "Satoshi Beats",
+      "file": "cyber-chill-room.mp3",
+      "mood": "ambient room"
+    },
+    {
+      "id": "block-by-block",
+      "title": "Block by Block",
+      "artist": "Satoshi Beats",
+      "file": "block-by-block.mp3",
+      "mood": "deep focus"
+    },
+    {
+      "id": "terminal-dreams",
+      "title": "Terminal Dreams",
+      "artist": "Satoshi Beats",
+      "file": "terminal-dreams.mp3",
+      "mood": "dreamy synth"
+    },
+    {
+      "id": "node-runner",
+      "title": "Node Runner",
+      "artist": "Satoshi Beats",
+      "file": "node-runner.mp3",
+      "mood": "uptempo chill"
+    }
+  ]
+}

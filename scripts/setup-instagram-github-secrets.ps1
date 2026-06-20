@@ -12,7 +12,7 @@ Get-Content $envFile | ForEach-Object {
   }
 }
 
-$keys = @("INSTAGRAM_ACCOUNT_ID", "FACEBOOK_PAGE_ACCESS_TOKEN")
+$keys = @("INSTAGRAM_ACCOUNT_ID", "INSTAGRAM_ACCESS_TOKEN", "FACEBOOK_PAGE_ACCESS_TOKEN")
 foreach ($key in $keys) {
   if (-not $vars[$key]) { Write-Error "Missing $key in scripts\.env"; exit 1 }
 }
@@ -22,4 +22,4 @@ foreach ($key in $keys) {
   Write-Host "Setting GitHub secret: $key"
   $vars[$key] | gh secret set $key
 }
-Write-Host "GitHub workflow instagram-auto-post.yml can now post 20x/day."
+Write-Host "GitHub workflow instagram-auto-post.yml — 20 post + story/giorno su @krown.82."

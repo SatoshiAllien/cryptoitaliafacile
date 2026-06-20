@@ -99,6 +99,70 @@
       "file": "moment-heat.mp3",
       "mood": "heat check",
       "viral_tag": "#Hot"
+    },
+    {
+      "id": "tiktok-dance",
+      "title": "TikTok Dance Pop",
+      "artist": "Viral Beats",
+      "file": "tiktok-dance.mp3",
+      "mood": "dance challenge · 124 BPM",
+      "viral_tag": "#TikTok"
+    },
+    {
+      "id": "jersey-club",
+      "title": "Jersey Club Bounce",
+      "artist": "Trending Audio",
+      "file": "jersey-club.mp3",
+      "mood": "club bounce virale",
+      "viral_tag": "#JerseyClub"
+    },
+    {
+      "id": "drill-energy",
+      "title": "Drill Heat",
+      "artist": "Hot Audio 2026",
+      "file": "drill-energy.mp3",
+      "mood": "drill 808 slide",
+      "viral_tag": "#Drill"
+    },
+    {
+      "id": "afro-viral",
+      "title": "Afrobeat Viral",
+      "artist": "Viral Beats",
+      "file": "afro-viral.mp3",
+      "mood": "afro groove trending",
+      "viral_tag": "#Afrobeat"
+    },
+    {
+      "id": "miami-bass",
+      "title": "Miami Bass Rush",
+      "artist": "Trending Audio",
+      "file": "miami-bass.mp3",
+      "mood": "bass car culture",
+      "viral_tag": "#MiamiBass"
+    },
+    {
+      "id": "funk-brasil",
+      "title": "Funk Viral BR",
+      "artist": "Hot Audio 2026",
+      "file": "funk-brasil.mp3",
+      "mood": "baile funk energy",
+      "viral_tag": "#Funk"
+    },
+    {
+      "id": "remix-drop",
+      "title": "Remix Drop 2.0",
+      "artist": "Viral Beats",
+      "file": "remix-drop.mp3",
+      "mood": "remix virale drop",
+      "viral_tag": "#Remix"
+    },
+    {
+      "id": "nightcore-boost",
+      "title": "Nightcore Boost",
+      "artist": "Trending Audio",
+      "file": "nightcore-boost.mp3",
+      "mood": "sped-up viral edit",
+      "viral_tag": "#Nightcore"
     }
   ]
 }

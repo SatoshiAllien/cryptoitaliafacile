@@ -179,6 +179,77 @@ def track_moment_heat(t: np.ndarray) -> np.ndarray:
     return _env(_sidechain(_mix(kick, snap, synth), t, bpm), 0.01, 0.45)
 
 
+def track_tiktok_dance(t: np.ndarray) -> np.ndarray:
+    bpm = 124.0
+    kick = _kick(t, bpm, 0.26)
+    clap = 0.08 * np.sin(2 * math.pi * 900 * (t % (60 / bpm))) * (t % (60 / bpm) > 0.5)
+    pop = 0.1 * np.sin(2 * math.pi * 440 * (t % 0.25)) * (t % 0.25 < 0.08)
+    return _env(_sidechain(_mix(kick, clap, pop), t, bpm), 0.02, 0.55)
+
+
+def track_jersey_club(t: np.ndarray) -> np.ndarray:
+    bpm = 135.0
+    beat = 60.0 / bpm
+    kick = _kick(t, bpm, 0.3)
+    bounce = 0.12 * np.sin(2 * math.pi * 73.42 * t) * (np.sin(2 * math.pi * 4 * t) > 0)
+    bed = 0.06 * np.sin(2 * math.pi * 110 * (t % beat)) * (t % beat < 0.06)
+    return _env(_sidechain(_mix(kick, bounce, bed), t, bpm, 0.6), 0.01, 0.45)
+
+
+def track_drill_energy(t: np.ndarray) -> np.ndarray:
+    bpm = 140.0
+    kick = _kick(t, bpm, 0.32)
+    slide = 0.14 * np.sin(2 * math.pi * (55 + 30 * np.sin(2 * math.pi * 0.25 * t)) * t)
+    hat = 0.05 * np.random.default_rng(42).standard_normal(len(t)) * (t % (60 / bpm / 4) < 0.008)
+    return _env(_mix(kick, slide, hat), 0.01, 0.4)
+
+
+def track_afro_viral(t: np.ndarray) -> np.ndarray:
+    bpm = 108.0
+    kick = _kick(t, bpm, 0.25)
+    shaker = 0.05 * np.sin(2 * math.pi * 3000 * (t % 0.125)) * (t % 0.125 < 0.02)
+    melody = _hook_chords(t, [196, 246.94, 293.66, 349.23], bpm, 0.09)
+    return _env(_mix(kick, shaker, melody), 0.03, 0.65)
+
+
+def track_miami_bass(t: np.ndarray) -> np.ndarray:
+    bpm = 128.0
+    kick = _kick(t, bpm, 0.34)
+    bass = 0.18 * np.sin(2 * math.pi * 36.71 * t) * (1 + 0.5 * np.sin(2 * math.pi * 2 * t))
+    squeal = 0.06 * np.sin(2 * math.pi * 1200 * (t % 0.5)) * (t % 0.5 < 0.05)
+    return _env(_sidechain(_mix(kick, bass, squeal), t, bpm, 0.55), 0.01, 0.4)
+
+
+def track_funk_brasil(t: np.ndarray) -> np.ndarray:
+    bpm = 130.0
+    kick = _kick(t, bpm, 0.28)
+    cuica = 0.07 * np.sin(2 * math.pi * (400 + 600 * (t % 0.2) / 0.2) * t) * (t % 0.2 < 0.15)
+    bass = 0.13 * np.sin(2 * math.pi * 49 * t) * (np.sin(2 * math.pi * 2 * (60 / bpm) * t) > 0)
+    return _env(_mix(kick, cuica, bass), 0.02, 0.5)
+
+
+def track_remix_drop(t: np.ndarray) -> np.ndarray:
+    bpm = 128.0
+    kick = _kick(t, bpm, 0.27)
+    build = 0.06 * np.sin(2 * math.pi * (180 + 500 * (t / DURATION)) * t)
+    drop = 0.15 * np.sin(2 * math.pi * 87.31 * t) * (t > DURATION * 0.6)
+    stab = 0.1 * np.sin(2 * math.pi * 523.25 * t) * (t > DURATION * 0.6) * (t % (60 / bpm) < 0.1)
+    return _env(_mix(kick, build, drop, stab), 0.02, 0.5)
+
+
+def track_nightcore_boost(t: np.ndarray) -> np.ndarray:
+    bpm = 148.0
+    kick = _kick(t, bpm, 0.24)
+    lead = 0.09 * np.sin(2 * math.pi * 659.25 * t) * (np.sin(2 * math.pi * 4 * (60 / bpm) * t) > 0)
+    arp = np.zeros_like(t)
+    notes = [523.25, 659.25, 783.99, 987.77]
+    step = 60 / bpm / 4
+    for i, n in enumerate(notes * 8):
+        m = (t >= i * step) & (t < (i + 1) * step)
+        arp[m] = 0.07 * np.sin(2 * math.pi * n * t[m])
+    return _env(_sidechain(_mix(kick, lead, arp), t, bpm), 0.01, 0.45)
+
+
 GENERATORS = {
     "fyp-energy": track_fyp_energy,
     "scroll-stopper": track_scroll_stopper,
@@ -192,6 +263,14 @@ GENERATORS = {
     "viral-loop": track_viral_loop,
     "hype-builder": track_hype_builder,
     "moment-heat": track_moment_heat,
+    "tiktok-dance": track_tiktok_dance,
+    "jersey-club": track_jersey_club,
+    "drill-energy": track_drill_energy,
+    "afro-viral": track_afro_viral,
+    "miami-bass": track_miami_bass,
+    "funk-brasil": track_funk_brasil,
+    "remix-drop": track_remix_drop,
+    "nightcore-boost": track_nightcore_boost,
 }
 
 

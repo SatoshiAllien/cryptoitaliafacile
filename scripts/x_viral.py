@@ -15,7 +15,16 @@ HOOKS = {
     "ethereum": "⟠ ETH UPDATE",
     "regulation": "⚖️ REGOLAMENTAZIONE CRYPTO",
     "market": "📈 MERCATO CRYPTO",
+    "elon": "🔄 REPOST @elonmusk",
     "default": "🔥 CRYPTO NEWS",
+}
+
+CLICKBAIT_HOOKS = {
+    "bitcoin": "₿ BITCOIN — LO DEVI VEDERE 👇",
+    "regulation": "⚖️ REGOLAMENTAZIONE — ATTENZIONE 👇",
+    "elon": "🔄 ELON MUSK HA DETTO 👇",
+    "bitcoin_breaking": "🚨 BREAKING BTC — GUARDA 👇",
+    "bitcoin_viral": "🔥 VIRAL BTC — NON PERDERE 👇",
 }
 
 EMOJI_BOOST = ["👀", "🚀", "⚡", "💥", "🔥"]
@@ -26,6 +35,7 @@ HASHTAG_SETS = {
     "ethereum": ["#Ethereum", "#ETH", "#Crypto", "#DeFi", "#TheRiser100x"],
     "regulation": ["#Crypto", "#Regulation", "#SEC", "#Bitcoin", "#TheRiser100x"],
     "market": ["#Crypto", "#Bitcoin", "#Altcoins", "#CryptoNews", "#TheRiser100x"],
+    "elon": ["#ElonMusk", "#Bitcoin", "#Crypto", "#X", "#TheRiser100x"],
     "default": ["#Crypto", "#Bitcoin", "#CryptoNews", "#BTC", "#TheRiser100x"],
 }
 
@@ -40,8 +50,10 @@ def clean_text(text: str) -> str:
 
 def detect_topics(text: str, handle: str = "") -> list[str]:
     low = text.lower()
-    h = handle.lower()
+    h = handle.lower().lstrip("@")
     topics: list[str] = []
+    if h == "elonmusk" or any(k in low for k in ("elon musk", "elonmusk", "tesla", "spacex", "dogecoin", "doge")):
+        topics.append("elon")
     if h == "whitehouse" or any(k in low for k in ("white house", "whitehouse", "biden", "trump", "congress")):
         topics.append("whitehouse")
     if any(k in low for k in ("bitcoin", "btc", "satoshi")):
@@ -57,15 +69,21 @@ def detect_topics(text: str, handle: str = "") -> list[str]:
     return topics or ["default"]
 
 
-def pick_hook(topics: list[str]) -> str:
-    for key in ("breaking", "whitehouse", "regulation", "bitcoin", "ethereum", "market"):
+def pick_hook(topics: list[str], slot_type: str = "") -> str:
+    if slot_type and slot_type in CLICKBAIT_HOOKS:
+        return CLICKBAIT_HOOKS[slot_type]
+    for key in ("breaking", "elon", "whitehouse", "regulation", "bitcoin", "ethereum", "market"):
         if key in topics:
             return HOOKS[key]
     return HOOKS["default"]
 
 
-def pick_hashtags(topics: list[str]) -> str:
-    for key in ("whitehouse", "regulation", "bitcoin", "ethereum", "market"):
+def pick_hashtags(topics: list[str], slot_type: str = "") -> str:
+    if slot_type == "elon":
+        return " ".join(HASHTAG_SETS["elon"])
+    if slot_type == "regulation":
+        return " ".join(HASHTAG_SETS["regulation"])
+    for key in ("elon", "whitehouse", "regulation", "bitcoin", "ethereum", "market"):
         if key in topics:
             return " ".join(HASHTAG_SETS[key])
     return " ".join(HASHTAG_SETS["default"])
@@ -94,22 +112,27 @@ def build_viral_post(
     source_handle: str = "",
     source_url: str = "",
     source_label: str = "",
+    slot_type: str = "",
 ) -> str:
     topics = detect_topics(raw_text, source_handle.lstrip("@"))
-    hook = pick_hook(topics)
+    hook = pick_hook(topics, slot_type)
     body = clean_text(raw_text)
     body = maybe_emoji(body, topics)
-    body = truncate(body, 160)
+    body = truncate(body, 150 if slot_type else 160)
 
-    tags = pick_hashtags(topics)
+    tags = pick_hashtags(topics, slot_type)
     via = f"via {source_handle}" if source_handle else ""
     if source_label and not via:
         via = f"via {source_label}"
 
     parts = [hook, "", body]
-    if via:
+    if slot_type == "elon" and source_url:
+        parts.extend(["", "🔗 Post originale:", truncate(source_url, 80)])
+    elif via:
         parts.extend(["", via])
-    if source_url:
+        if source_url:
+            parts.extend(["", truncate(source_url, 80)])
+    elif source_url:
         parts.extend(["", truncate(source_url, 80)])
     parts.extend(["", tags])
 
@@ -117,9 +140,25 @@ def build_viral_post(
     if len(post) <= MAX_LEN:
         return post
 
-    # Compatta se troppo lungo
-    compact = f"{hook}\n\n{truncate(body, 120)}\n\n{tags}"
+    compact = f"{hook}\n\n{truncate(body, 110)}\n\n{tags}"
     return truncate(compact, MAX_LEN)
+
+
+def is_bitcoin_item(item: dict) -> bool:
+    text = (item.get("title") or "") + " " + (item.get("summary") or "")
+    topics = detect_topics(text, (item.get("sourceHandle") or "").lstrip("@"))
+    return "bitcoin" in topics or item.get("postCategory") == "bitcoin"
+
+
+def is_regulation_item(item: dict) -> bool:
+    text = (item.get("title") or "") + " " + (item.get("summary") or "")
+    topics = detect_topics(text, (item.get("sourceHandle") or "").lstrip("@"))
+    return "regulation" in topics or item.get("postCategory") == "regulation"
+
+
+def is_elon_item(item: dict) -> bool:
+    handle = (item.get("sourceHandle") or "").lstrip("@").lower()
+    return handle == "elonmusk" or item.get("postCategory") == "elon"
 
 
 def score_viral(item: dict) -> int:
@@ -128,6 +167,8 @@ def score_viral(item: dict) -> int:
     score = 0
     if "breaking" in topics:
         score += 8
+    if "elon" in topics:
+        score += 9
     if "whitehouse" in topics:
         score += 10
     if "regulation" in topics:
@@ -139,3 +180,15 @@ def score_viral(item: dict) -> int:
     if item.get("priority"):
         score += int(item["priority"])
     return score
+
+
+def categorize_post(text: str, handle: str) -> str:
+    topics = detect_topics(text, handle.lstrip("@"))
+    h = handle.lstrip("@").lower()
+    if h == "elonmusk":
+        return "elon"
+    if "regulation" in topics:
+        return "regulation"
+    if "bitcoin" in topics or "breaking" in topics:
+        return "bitcoin"
+    return "crypto"

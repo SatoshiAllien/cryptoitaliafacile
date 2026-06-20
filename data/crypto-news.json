@@ -2,9 +2,14 @@
   "session": "crypto-news",
   "title": "Ultime News Crypto",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-06-20T21:48",
-  "source": "X — WhiteHouse, BitcoinMagazine, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
+  "exportedAt": "2026-06-20T21:50",
+  "source": "X — elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
+    {
+      "handle": "elonmusk",
+      "label": "Elon Musk",
+      "priority": 11
+    },
     {
       "handle": "WhiteHouse",
       "label": "White House",
@@ -13,6 +18,11 @@
     {
       "handle": "BitcoinMagazine",
       "label": "Bitcoin Magazine",
+      "priority": 9
+    },
+    {
+      "handle": "SECGov",
+      "label": "SEC",
       "priority": 9
     },
     {
@@ -41,7 +51,7 @@
       "priority": 6
     }
   ],
-  "count": 30,
+  "count": 45,
   "items": [
     {
       "id": "2068413385989861440",
@@ -56,9 +66,11 @@
       "external": true,
       "url": "https://x.com/WatcherGuru/status/2068413385989861440",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 30,
       "postText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 President Trump says there will be no tolls in the Strait of Hormuz \"unless they are imposed by and for the United States of America.\"\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2068413385989861440\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 President Trump says there will be no tolls in the Strait of Hormuz \"unless they are imposed by and for the United States of America.\"\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2068413385989861440\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 President Trump says there will be no tolls in the Strait of Hormuz \"unless they are imposed by and for the United States of America.\"\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2068413385989861440\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068398006710173708",
@@ -73,9 +85,11 @@
       "external": true,
       "url": "https://x.com/WhiteHouse/status/2068398006710173708",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 22,
       "postText": "🇺🇸 WHITE HOUSE · CRYPTO\nAmerica is back 🇺🇸\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068398006710173708\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\nAmerica is back 🇺🇸\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068398006710173708\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\nAmerica is back 🇺🇸\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068398006710173708\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068397242214416540",
@@ -90,9 +104,11 @@
       "external": true,
       "url": "https://x.com/WhiteHouse/status/2068397242214416540",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 22,
       "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : I really enjoyed this interview with Steve Bartlett. He asked me the single most interesting question I've ever been asked.…\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068397242214416540\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : I really enjoyed this interview with Steve Bartlett. He asked me the single most interesting question I've ever been asked.…\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068397242214416540\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : I really enjoyed this interview with Steve Bartlett. He asked me the single most interesting question I've ever been asked.…\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068397242214416540\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068397199050830075",
@@ -107,9 +123,11 @@
       "external": true,
       "url": "https://x.com/WhiteHouse/status/2068397199050830075",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 22,
       "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : VP Vance on ’s commitment to long term peace: “He’s thinking about this for my kids’ sake, for our grandkids’ sake, to ensu…\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068397199050830075\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : VP Vance on ’s commitment to long term peace: “He’s thinking about this for my kids’ sake, for our grandkids’ sake, to ensu…\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068397199050830075\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : VP Vance on ’s commitment to long term peace: “He’s thinking about this for my kids’ sake, for our grandkids’ sake, to ensu…\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068397199050830075\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068379548408787310",
@@ -124,9 +142,11 @@
       "external": true,
       "url": "https://x.com/WhiteHouse/status/2068379548408787310",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 22,
-      "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe bravest and greatest heroes to ever walk the Earth. 🇺🇸 Through extraordinary courage, they have received the Congre…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe bravest and greatest heroes to ever walk the Earth. 🇺🇸 Through extraordinary courage, they have received the Congre…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe bravest and greatest heroes to ever walk the Earth. 🇺🇸 Through extraordinary courage, they have received…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe bravest and greatest heroes to ever walk the Earth. 🇺🇸 Through extraordinary courage, they have received…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068378251970367588",
@@ -141,9 +161,11 @@
       "external": true,
       "url": "https://x.com/WhiteHouse/status/2068378251970367588",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 22,
       "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : From flyovers to community events, Airmen are helping commemorate America's 250th anniversary. See what's ahead:\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068378251970367588\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : From flyovers to community events, Airmen are helping commemorate America's 250th anniversary. See what's ahead:\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068378251970367588\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 : From flyovers to community events, Airmen are helping commemorate America's 250th anniversary. See what's ahead:\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2068378251970367588\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068353233177792571",
@@ -158,9 +180,11 @@
       "external": true,
       "url": "https://x.com/BitcoinMagazine/status/2068353233177792571",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 14,
       "postText": "₿ BITCOIN ALERT\n₿ : Block CEO Jack Dorsey: \"Chose to pay with bitcoin at the counter.\" 👏\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068353233177792571\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n₿ : Block CEO Jack Dorsey: \"Chose to pay with bitcoin at the counter.\" 👏\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068353233177792571\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "viralPostText": "₿ BITCOIN ALERT\n₿ : Block CEO Jack Dorsey: \"Chose to pay with bitcoin at the counter.\" 👏\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068353233177792571\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068348751303819352",
@@ -175,9 +199,11 @@
       "external": true,
       "url": "https://x.com/BitcoinMagazine/status/2068348751303819352",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 14,
       "postText": "₿ BITCOIN ALERT\n₿ Block CEO Jack Dorsey: \"Chose to pay with bitcoin at the counter.\" 👏\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068348751303819352\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n₿ Block CEO Jack Dorsey: \"Chose to pay with bitcoin at the counter.\" 👏\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068348751303819352\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "viralPostText": "₿ BITCOIN ALERT\n₿ Block CEO Jack Dorsey: \"Chose to pay with bitcoin at the counter.\" 👏\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068348751303819352\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068342211776074026",
@@ -192,9 +218,11 @@
       "external": true,
       "url": "https://x.com/WatcherGuru/status/2068342211776074026",
       "breaking": true,
+      "postCategory": "regulation",
       "viralScore": 26,
       "postText": "🚨 BREAKING\n🚨 JUST IN: 🇮🇷 Iran's IRGC officially declares the Strait of Hormuz closed to all vessels, warns approaching ships face a \"security risk.\"\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2068342211776074026\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\n🚨 JUST IN: 🇮🇷 Iran's IRGC officially declares the Strait of Hormuz closed to all vessels, warns approaching ships face a \"security risk.\"\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2068342211776074026\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\n🚨 JUST IN: 🇮🇷 Iran's IRGC officially declares the Strait of Hormuz closed to all vessels, warns approaching ships face a \"security risk.\"\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2068342211776074026\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
     },
     {
       "id": "2068074195183960101",
@@ -209,9 +237,11 @@
       "external": true,
       "url": "https://x.com/BitcoinMagazine/status/2068074195183960101",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 26,
       "postText": "🚨 BREAKING\nJUST IN: $5.3 billion Cardone Capital bought 282 BTC worth $17.7 million on this dip 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068074195183960101\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: $5.3 billion Cardone Capital bought 282 BTC worth $17.7 million on this dip 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068074195183960101\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: $5.3 billion Cardone Capital bought 282 BTC worth $17.7 million on this dip 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068074195183960101\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068054801863041345",
@@ -226,9 +256,11 @@
       "external": true,
       "url": "https://x.com/BitcoinMagazine/status/2068054801863041345",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 26,
       "postText": "🚨 BREAKING\nJUST IN: Bitcoin transaction count total nears all-time highs 👀 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068054801863041345\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: Bitcoin transaction count total nears all-time highs 👀 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068054801863041345\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: Bitcoin transaction count total nears all-time highs 👀 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068054801863041345\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2068013763177914546",
@@ -243,9 +275,11 @@
       "external": true,
       "url": "https://x.com/BitcoinMagazine/status/2068013763177914546",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 14,
       "postText": "₿ BITCOIN ALERT\n₿ : A weekly bullish RSI divergence has printed on Bitcoin: price set a lower low while downside momentum faded. The identic…\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068013763177914546\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n₿ : A weekly bullish RSI divergence has printed on Bitcoin: price set a lower low while downside momentum faded. The identic…\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068013763177914546\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "viralPostText": "₿ BITCOIN ALERT\n₿ : A weekly bullish RSI divergence has printed on Bitcoin: price set a lower low while downside momentum faded. The identic…\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2068013763177914546\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2067987713194643596",
@@ -260,9 +294,30 @@
       "external": true,
       "url": "https://x.com/WatcherGuru/status/2067987713194643596",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 20,
       "postText": "🚨 BREAKING\nJUST IN: 🇺🇸 FBI Director Kash Patel says the FBI will find crypto scammers and bring them to justice.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067987713194643596\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸 FBI Director Kash Patel says the FBI will find crypto scammers and bring them to justice.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067987713194643596\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸 FBI Director Kash Patel says the FBI will find crypto scammers and bring them to justice.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067987713194643596\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "2067948012941303974",
+      "title": "Learn how adding a trusted contact to your investment accounts can help protect against fraud or financial exploitation.",
+      "summary": "Learn how adding a trusted contact to your investment accounts can help protect against fraud or financial exploitation.\n\n https://t.co/VfsKMqjLmB https://t.co/uu1Fjc9e9I",
+      "date": "19 Jun 2026 14:30",
+      "category": "x",
+      "source": "SEC",
+      "sourceHandle": "@SECGov",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/SECGov/status/2067948012941303974",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 9,
+      "postText": "🔥 CRYPTO NEWS\n👀 Learn how adding a trusted contact to your investment accounts can help protect against fraud or financial exploitation.\nvia @SECGov\nhttps://x.com/SECGov/status/2067948012941303974\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n👀 Learn how adding a trusted contact to your investment accounts can help protect against fraud or financial exploitation.\nvia @SECGov\nhttps://x.com/SECGov/status/2067948012941303974\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2067883834381893955",
@@ -277,9 +332,11 @@
       "external": true,
       "url": "https://x.com/CPOfficialtx/status/2067883834381893955",
       "breaking": true,
+      "postCategory": "regulation",
       "viralScore": 31,
-      "postText": "🚨 BREAKING\n\n🚨 BREAKING: Europe will ban cash payments above €10,000 and require identity verification for transactions starting in…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: Europe will ban cash payments above €10,000 and require identity verification for transactions starting in…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x"
+      "postText": "🚨 BREAKING\n\n🚨 BREAKING: Europe will ban cash payments above €10,000 and require identity verification for transactions st…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: Europe will ban cash payments above €10,000 and require identity verification for transactions st…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
     },
     {
       "id": "2067807855495786570",
@@ -294,9 +351,11 @@
       "external": true,
       "url": "https://x.com/WatcherGuru/status/2067807855495786570",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 20,
       "postText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 US Department of War requests $80,000,000,000 to cover Iran war and other costs.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067807855495786570\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 US Department of War requests $80,000,000,000 to cover Iran war and other costs.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067807855495786570\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 US Department of War requests $80,000,000,000 to cover Iran war and other costs.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067807855495786570\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2067716807352361367",
@@ -311,9 +370,11 @@
       "external": true,
       "url": "https://x.com/Cointelegraph/status/2067716807352361367",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 11,
-      "postText": "₿ BITCOIN ALERT\n\n₿ What if Bitcoin could also pay you an income? Well, has launched a product that does just that. So, what's the trade-…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n\n₿ What if Bitcoin could also pay you an income? Well, has launched a product that does just that. So, what's the trade-…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "postText": "₿ BITCOIN ALERT\n\n₿ What if Bitcoin could also pay you an income? Well, has launched a product that does just that. So, what's…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "viralPostText": "₿ BITCOIN ALERT\n\n₿ What if Bitcoin could also pay you an income? Well, has launched a product that does just that. So, what's…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2067704496000524745",
@@ -328,9 +389,87 @@
       "external": true,
       "url": "https://x.com/WatcherGuru/status/2067704496000524745",
       "breaking": true,
+      "postCategory": "regulation",
       "viralScore": 26,
       "postText": "🚨 BREAKING\nJUST IN: 🇺🇸 Illinois passes law to tax crypto transfers regardless of profit or loss, starting 2027.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067704496000524745\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸 Illinois passes law to tax crypto transfers regardless of profit or loss, starting 2027.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067704496000524745\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸 Illinois passes law to tax crypto transfers regardless of profit or loss, starting 2027.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067704496000524745\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
+    {
+      "id": "2067698291786043741",
+      "title": "The request for comment is intended to assist the agencies in evaluating whether changes to the design, scope, and stru…",
+      "summary": "The request for comment is intended to assist the agencies in evaluating whether changes to the design, scope, and structure of security-based swap and swap data reporting requirements would lead to greater alignment between their respective reporting frameworks.",
+      "date": "18 Jun 2026 21:57",
+      "category": "x",
+      "source": "SEC",
+      "sourceHandle": "@SECGov",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/SECGov/status/2067698291786043741",
+      "breaking": false,
+      "postCategory": "regulation",
+      "viralScore": 15,
+      "postText": "⚖️ REGOLAMENTAZIONE CRYPTO\n\n👀 The request for comment is intended to assist the agencies in evaluating whether changes to the design, sco…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "⚖️ REGOLAMENTAZIONE CRYPTO\n\n👀 The request for comment is intended to assist the agencies in evaluating whether changes to the design, sco…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
+    {
+      "id": "2067698289231667269",
+      "title": "TODAY 🚨: The SEC and @CFTC issued a joint request for public comment on potential opportunities to harmonize, modernize…",
+      "summary": "TODAY 🚨: The SEC and @CFTC issued a joint request for public comment on potential opportunities to harmonize, modernize, and streamline data reporting requirements in their regulation of the security-based swap and swap markets, respectively.\n\nRead more ⬇️ https://t.co/YnoVmVOfmV",
+      "date": "18 Jun 2026 21:57",
+      "category": "x",
+      "source": "SEC",
+      "sourceHandle": "@SECGov",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/SECGov/status/2067698289231667269",
+      "breaking": true,
+      "postCategory": "regulation",
+      "viralScore": 27,
+      "postText": "🚨 BREAKING\nTODAY 🚨: The SEC and issued a joint request for public comment on potential opportunities to harmonize, modernize, and streamline data reporting requirements i…\nvia @SECGov\nhttps://x.com/SECGov/status/2067698289231667269\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\nTODAY 🚨: The SEC and issued a joint request for public comment on potential opportunities to harmonize, modernize, and streamline data reporting requirements i…\nvia @SECGov\nhttps://x.com/SECGov/status/2067698289231667269\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
+    {
+      "id": "2067697895185187290",
+      "title": "The request for comment is intended to support the SEC’s ongoing evaluation of whether current regulatory definitions,…",
+      "summary": "The request for comment is intended to support the SEC’s ongoing evaluation of whether current regulatory definitions, interpretations, and jurisdictional frameworks reflect evolving market structures, financial products, and trading practices.\nhttps://t.co/63Eliwf9N1",
+      "date": "18 Jun 2026 21:56",
+      "category": "x",
+      "source": "SEC",
+      "sourceHandle": "@SECGov",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/SECGov/status/2067697895185187290",
+      "breaking": false,
+      "postCategory": "regulation",
+      "viralScore": 15,
+      "postText": "⚖️ REGOLAMENTAZIONE CRYPTO\n\n👀 The request for comment is intended to suppothe SEC’s ongoing evaluation of whether current regulatory defi…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "⚖️ REGOLAMENTAZIONE CRYPTO\n\n👀 The request for comment is intended to suppothe SEC’s ongoing evaluation of whether current regulatory defi…\n\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
+    {
+      "id": "2067697892177944988",
+      "title": "TODAY 🚨: The SEC and the @CFTC issued a joint request for public comment on potential opportunities to further update,…",
+      "summary": "TODAY 🚨: The SEC and the @CFTC issued a joint request for public comment on potential opportunities to further update, clarify, and harmonize certain derivatives product definitions and interpretive issues.\n\nRead more ⬇️ https://t.co/cqaHn1DZUb",
+      "date": "18 Jun 2026 21:56",
+      "category": "x",
+      "source": "SEC",
+      "sourceHandle": "@SECGov",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/SECGov/status/2067697892177944988",
+      "breaking": true,
+      "postCategory": "regulation",
+      "viralScore": 27,
+      "postText": "🚨 BREAKING\nTODAY 🚨: The SEC and the issued a joint request for public comment on potential opportunities to further update, clarify, and harmonize certain derivatives pro…\nvia @SECGov\nhttps://x.com/SECGov/status/2067697892177944988\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\nTODAY 🚨: The SEC and the issued a joint request for public comment on potential opportunities to further update, clarify, and harmonize certain derivatives pro…\nvia @SECGov\nhttps://x.com/SECGov/status/2067697892177944988\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
     },
     {
       "id": "2067661710513864818",
@@ -345,9 +484,30 @@
       "external": true,
       "url": "https://x.com/WatcherGuru/status/2067661710513864818",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 20,
       "postText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 US Military says blockade on the Strait of Hormuz has officially been lifted.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067661710513864818\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 US Military says blockade on the Strait of Hormuz has officially been lifted.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067661710513864818\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸🇮🇷 US Military says blockade on the Strait of Hormuz has officially been lifted.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2067661710513864818\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "2067589396958703686",
+      "title": "As a caregiver, you want the best for those in your care. ",
+      "summary": "As a caregiver, you want the best for those in your care. \n\nVisit https://t.co/HcJIp4BiPo today to learn how to spot fraud aimed at older investors and explore useful tools and tips to help keep their money safe. \n\nhttps://t.co/fLfoyCctx7 https://t.co/sbaBAv4l5D",
+      "date": "18 Jun 2026 14:45",
+      "category": "x",
+      "source": "SEC",
+      "sourceHandle": "@SECGov",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/SECGov/status/2067589396958703686",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 9,
+      "postText": "🔥 CRYPTO NEWS\n\n👀 As a caregiver, you want the best for those in your care. Visit today to learn how to spot fraud aimed at o…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n\n👀 As a caregiver, you want the best for those in your care. Visit today to learn how to spot fraud aimed at o…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2067334848079970671",
@@ -362,9 +522,11 @@
       "external": true,
       "url": "https://x.com/Strategy/status/2067334848079970671",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 11,
       "postText": "₿ BITCOIN ALERT\n₿ We have 32 years of dividend coverage through our $BTC Reserve.\nvia @Strategy\nhttps://x.com/Strategy/status/2067334848079970671\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n₿ We have 32 years of dividend coverage through our $BTC Reserve.\nvia @Strategy\nhttps://x.com/Strategy/status/2067334848079970671\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "viralPostText": "₿ BITCOIN ALERT\n₿ We have 32 years of dividend coverage through our $BTC Reserve.\nvia @Strategy\nhttps://x.com/Strategy/status/2067334848079970671\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2067040133358944459",
@@ -379,9 +541,11 @@
       "external": true,
       "url": "https://x.com/Strategy/status/2067040133358944459",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 6,
       "postText": "🔥 CRYPTO NEWS\nBuild a ₿ridge\nvia @Strategy\nhttps://x.com/Strategy/status/2067040133358944459\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🔥 CRYPTO NEWS\nBuild a ₿ridge\nvia @Strategy\nhttps://x.com/Strategy/status/2067040133358944459\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🔥 CRYPTO NEWS\nBuild a ₿ridge\nvia @Strategy\nhttps://x.com/Strategy/status/2067040133358944459\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2066889974918590755",
@@ -396,9 +560,11 @@
       "external": true,
       "url": "https://x.com/Strategy/status/2066889974918590755",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 6,
       "postText": "🔥 CRYPTO NEWS\n👀 $STRC is scaling at a ~350% annualized growth rate.\nvia @Strategy\nhttps://x.com/Strategy/status/2066889974918590755\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🔥 CRYPTO NEWS\n👀 $STRC is scaling at a ~350% annualized growth rate.\nvia @Strategy\nhttps://x.com/Strategy/status/2066889974918590755\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🔥 CRYPTO NEWS\n👀 $STRC is scaling at a ~350% annualized growth rate.\nvia @Strategy\nhttps://x.com/Strategy/status/2066889974918590755\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2066619760725401820",
@@ -413,9 +579,30 @@
       "external": true,
       "url": "https://x.com/Strategy/status/2066619760725401820",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 6,
       "postText": "🔥 CRYPTO NEWS\n👀 Semi-monthly dividends on $STRC stanow. The first record date under the new cadence is June 30.\nvia @Strategy\nhttps://x.com/Strategy/status/2066619760725401820\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🔥 CRYPTO NEWS\n👀 Semi-monthly dividends on $STRC stanow. The first record date under the new cadence is June 30.\nvia @Strategy\nhttps://x.com/Strategy/status/2066619760725401820\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🔥 CRYPTO NEWS\n👀 Semi-monthly dividends on $STRC stanow. The first record date under the new cadence is June 30.\nvia @Strategy\nhttps://x.com/Strategy/status/2066619760725401820\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "2066538446781382800",
+      "title": "Make our Sun sentient to understand the Universe and extend the light of consciousness to the stars",
+      "summary": "Make our Sun sentient to understand the Universe and extend the light of consciousness to the stars",
+      "date": "15 Jun 2026 17:08",
+      "category": "x",
+      "source": "Elon Musk",
+      "sourceHandle": "@elonmusk",
+      "priority": 11,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/elonmusk/status/2066538446781382800",
+      "breaking": false,
+      "postCategory": "elon",
+      "viralScore": 20,
+      "postText": "🔄 REPOST @elonmusk\n👀 Make our Sun sentient to understand the Universe and extend the light of consciousness to the stars\nvia @elonmusk\nhttps://x.com/elonmusk/status/2066538446781382800\n#ElonMusk #Bitcoin #Crypto #X #TheRiser100x",
+      "viralPostText": "🔄 REPOST @elonmusk\n👀 Make our Sun sentient to understand the Universe and extend the light of consciousness to the stars\nvia @elonmusk\nhttps://x.com/elonmusk/status/2066538446781382800\n#ElonMusk #Bitcoin #Crypto #X #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/elon.jpg"
     },
     {
       "id": "2066491576918884584",
@@ -430,9 +617,11 @@
       "external": true,
       "url": "https://x.com/Strategy/status/2066491576918884584",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 11,
-      "postText": "₿ BITCOIN ALERT\n\nStrategy has acquired 1,587 BTC for $100 million to increase our $BTC Reserve to ₿846,842. We have also increased our U…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n\nStrategy has acquired 1,587 BTC for $100 million to increase our $BTC Reserve to ₿846,842. We have also increased our U…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "postText": "₿ BITCOIN ALERT\n\nStrategy has acquired 1,587 BTC for $100 million to increase our $BTC Reserve to ₿846,842. We have also incre…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "viralPostText": "₿ BITCOIN ALERT\n\nStrategy has acquired 1,587 BTC for $100 million to increase our $BTC Reserve to ₿846,842. We have also incre…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2064464192980291920",
@@ -447,9 +636,11 @@
       "external": true,
       "url": "https://x.com/BitcoinMagazine/status/2064464192980291920",
       "breaking": false,
+      "postCategory": "bitcoin",
       "viralScore": 14,
-      "postText": "₿ BITCOIN ALERT\n\n₿ 🔴 EXCLUSIVE: BLOCKSTREAM CEO ADAM BACK BACKSTAGE AT THE BITCOIN CONFERENCE. sits down with to discuss why he’s NOT Sa…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "₿ BITCOIN ALERT\n\n₿ 🔴 EXCLUSIVE: BLOCKSTREAM CEO ADAM BACK BACKSTAGE AT THE BITCOIN CONFERENCE. sits down with to discuss why he’s NOT Sa…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x"
+      "postText": "₿ BITCOIN ALERT\n\n₿ 🔴 EXCLUSIVE: BLOCKSTREAM CEO ADAM BACK BACKSTAGE AT THE BITCOIN CONFERENCE. sits down with to discuss why h…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "viralPostText": "₿ BITCOIN ALERT\n\n₿ 🔴 EXCLUSIVE: BLOCKSTREAM CEO ADAM BACK BACKSTAGE AT THE BITCOIN CONFERENCE. sits down with to discuss why h…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2033965177918620008",
@@ -464,9 +655,11 @@
       "external": true,
       "url": "https://x.com/unusual_whales/status/2033965177918620008",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 19,
-      "postText": "🚨 BREAKING\n\n🚨 BREAKING: We just gave Claude full access to the options, equities, and prediction markets. The Unusual Whales MCP Se…\n\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: We just gave Claude full access to the options, equities, and prediction markets. The Unusual Whales MCP Se…\n\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x"
+      "postText": "🚨 BREAKING\n\n🚨 BREAKING: We just gave Claude full access to the options, equities, and prediction markets. The Unusual Wha…\n\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: We just gave Claude full access to the options, equities, and prediction markets. The Unusual Wha…\n\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "2028841201286238226",
@@ -481,9 +674,11 @@
       "external": true,
       "url": "https://x.com/WhiteHouse/status/2028841201286238226",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 22,
-      "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe Revolution that began in 1776 has not ended—it still continues, because the flame of Liberty and Independence still…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
-      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe Revolution that began in 1776 has not ended—it still continues, because the flame of Liberty and Independence still…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x"
+      "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe Revolution that began in 1776 has not ended—it still continues, because the flame of Liberty and Independ…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n\nThe Revolution that began in 1776 has not ended—it still continues, because the flame of Liberty and Independ…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "1969054944058605644",
@@ -498,9 +693,11 @@
       "external": true,
       "url": "https://x.com/CPOfficialtx/status/1969054944058605644",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 20,
       "postText": "🚨 BREAKING\n🚨 JUST IN: Enosys Loans brings the first XRP-backed stablecoin to Flare.\nvia @CPOfficialtx\nhttps://x.com/CPOfficialtx/status/1969054944058605644\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\n🚨 JUST IN: Enosys Loans brings the first XRP-backed stablecoin to Flare.\nvia @CPOfficialtx\nhttps://x.com/CPOfficialtx/status/1969054944058605644\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "viralPostText": "🚨 BREAKING\n🚨 JUST IN: Enosys Loans brings the first XRP-backed stablecoin to Flare.\nvia @CPOfficialtx\nhttps://x.com/CPOfficialtx/status/1969054944058605644\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "1954316835169423559",
@@ -515,9 +712,11 @@
       "external": true,
       "url": "https://x.com/Cointelegraph/status/1954316835169423559",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 6,
       "postText": "📈 MERCATO CRYPTO\n👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1954316835169423559\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
-      "viralPostText": "📈 MERCATO CRYPTO\n👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1954316835169423559\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x"
+      "viralPostText": "📈 MERCATO CRYPTO\n👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1954316835169423559\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "1943734838718017717",
@@ -532,9 +731,11 @@
       "external": true,
       "url": "https://x.com/unusual_whales/status/1943734838718017717",
       "breaking": true,
+      "postCategory": "bitcoin",
       "viralScore": 19,
-      "postText": "🚨 BREAKING\n\n🚨 BREAKING: The footage from Jeffery Epstein’s cell that was released by the DOJ was edited with Adobe Premiere Pro, st…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: The footage from Jeffery Epstein’s cell that was released by the DOJ was edited with Adobe Premiere Pro, st…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "postText": "🚨 BREAKING\n\n🚨 BREAKING: The footage from Jeffery Epstein’s cell that was released by the DOJ was edited with Adobe Premie…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: The footage from Jeffery Epstein’s cell that was released by the DOJ was edited with Adobe Premie…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {
       "id": "1889366424520462589",
@@ -549,9 +750,163 @@
       "external": true,
       "url": "https://x.com/Strategy/status/1889366424520462589",
       "breaking": false,
+      "postCategory": "crypto",
       "viralScore": 6,
-      "postText": "🔥 CRYPTO NEWS\n\n👀 \"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.\" Antoine…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "viralPostText": "🔥 CRYPTO NEWS\n\n👀 \"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.\" Antoine…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x"
+      "postText": "🔥 CRYPTO NEWS\n\n👀 \"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n\n👀 \"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1889317717389545556",
+      "title": "\"Gen Z are over having their work ethic questioned: ‘Most boomers don’t know what it’s like to work 40+ hours a week an…",
+      "summary": "\"Gen Z are over having their work ethic questioned: ‘Most boomers don’t know what it’s like to work 40+ hours a week and still not be able to afford a house’,\" per FORTUNE: https://t.co/y2DTbmOBNy",
+      "date": "11 Feb 2025 15:17",
+      "category": "x",
+      "source": "Unusual Whales",
+      "sourceHandle": "@unusual_whales",
+      "priority": 7,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/unusual_whales/status/1889317717389545556",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 7,
+      "postText": "⟠ ETH UPDATE\n\n👀 \"Gen Z are over having their work ethic questioned: ‘Most boomers don’t know what it’s like to work 40+ hou…\n\n#Ethereum #ETH #Crypto #DeFi #TheRiser100x",
+      "viralPostText": "⟠ ETH UPDATE\n\n👀 \"Gen Z are over having their work ethic questioned: ‘Most boomers don’t know what it’s like to work 40+ hou…\n\n#Ethereum #ETH #Crypto #DeFi #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1881688751602286740",
+      "title": "🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the gr…",
+      "summary": "🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the green light. https://t.co/BisP4SUGIj",
+      "date": "21 Jan 2025 14:02",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1881688751602286740",
+      "breaking": true,
+      "postCategory": "regulation",
+      "viralScore": 24,
+      "postText": "🚨 BREAKING\n🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the green light.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1881688751602286740\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the green light.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1881688751602286740\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
+    {
+      "id": "1859693801268560197",
+      "title": "🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas. https://t.co/0t75CIdYkf",
+      "summary": "🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas. https://t.co/0t75CIdYkf",
+      "date": "21 Nov 2024 21:22",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1859693801268560197",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "⟠ ETH UPDATE\n🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1859693801268560197\n#Ethereum #ETH #Crypto #DeFi #TheRiser100x",
+      "viralPostText": "⟠ ETH UPDATE\n🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1859693801268560197\n#Ethereum #ETH #Crypto #DeFi #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1854966072577081584",
+      "title": "BREAKING: Donald Trump to push a constitutional amendment to impose term limits on members of Congress.",
+      "summary": "BREAKING: Donald Trump to push a constitutional amendment to impose term limits on members of Congress.",
+      "date": "08 Nov 2024 20:15",
+      "category": "x",
+      "source": "Unusual Whales",
+      "sourceHandle": "@unusual_whales",
+      "priority": 7,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/unusual_whales/status/1854966072577081584",
+      "breaking": true,
+      "postCategory": "bitcoin",
+      "viralScore": 29,
+      "postText": "🚨 BREAKING\n🚨 BREAKING: Donald Trump to push a constitutional amendment to impose term limits on members of Congress.\nvia @unusual_whales\nhttps://x.com/unusual_whales/status/1854966072577081584\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n🚨 BREAKING: Donald Trump to push a constitutional amendment to impose term limits on members of Congress.\nvia @unusual_whales\nhttps://x.com/unusual_whales/status/1854966072577081584\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1854026234339938528",
+      "title": "🇺🇸🇺🇸The future is gonna be so 🔥 🇺🇸🇺🇸 https://t.co/x56cqb6oT5",
+      "summary": "🇺🇸🇺🇸The future is gonna be so 🔥 🇺🇸🇺🇸 https://t.co/x56cqb6oT5",
+      "date": "06 Nov 2024 06:01",
+      "category": "x",
+      "source": "Elon Musk",
+      "sourceHandle": "@elonmusk",
+      "priority": 11,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/elonmusk/status/1854026234339938528",
+      "breaking": false,
+      "postCategory": "elon",
+      "viralScore": 20,
+      "postText": "🔄 REPOST @elonmusk\n🇺🇸🇺🇸The future is gonna be so 🔥 🇺🇸🇺🇸\nvia @elonmusk\nhttps://x.com/elonmusk/status/1854026234339938528\n#ElonMusk #Bitcoin #Crypto #X #TheRiser100x",
+      "viralPostText": "🔄 REPOST @elonmusk\n🇺🇸🇺🇸The future is gonna be so 🔥 🇺🇸🇺🇸\nvia @elonmusk\nhttps://x.com/elonmusk/status/1854026234339938528\n#ElonMusk #Bitcoin #Crypto #X #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/elon.jpg"
+    },
+    {
+      "id": "1812258574049157405",
+      "title": "https://t.co/6eOgN9UdOy",
+      "summary": "https://t.co/6eOgN9UdOy",
+      "date": "14 Jul 2024 00:51",
+      "category": "x",
+      "source": "Elon Musk",
+      "sourceHandle": "@elonmusk",
+      "priority": 11,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/elonmusk/status/1812258574049157405",
+      "breaking": false,
+      "postCategory": "elon",
+      "viralScore": 20,
+      "postText": "🔄 REPOST @elonmusk\n👀 \nvia @elonmusk\nhttps://x.com/elonmusk/status/1812258574049157405\n#ElonMusk #Bitcoin #Crypto #X #TheRiser100x",
+      "viralPostText": "🔄 REPOST @elonmusk\n👀 \nvia @elonmusk\nhttps://x.com/elonmusk/status/1812258574049157405\n#ElonMusk #Bitcoin #Crypto #X #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/elon.jpg"
+    },
+    {
+      "id": "1773394872617033921",
+      "title": "This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique blend of tech…",
+      "summary": "This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique blend of technology and monetary theory. [AD]https://t.co/Twc59PQuOO",
+      "date": "28 Mar 2024 18:01",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1773394872617033921",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "🔥 CRYPTO NEWS\n\n👀 This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique b…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n\n👀 This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique b…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1767528468491665837",
+      "title": "Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. @GaiminIo [AD]",
+      "summary": "Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. @GaiminIo [AD]\n\nhttps://t.co/G6n06EaN4p",
+      "date": "12 Mar 2024 13:30",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1767528468491665837",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "🔥 CRYPTO NEWS\n👀 Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. [AD]\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1767528468491665837\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n👀 Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. [AD]\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1767528468491665837\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     }
   ]
 }

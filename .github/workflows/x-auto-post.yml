@@ -2,12 +2,12 @@ name: X Auto Post (TheRiser100x)
 
 on:
   schedule:
-    # ~10:00 e ~19:00 Roma (CEST) — controlli ogni 30 min
-    - cron: "0,30 8-17 * * *"
+    # 5 post/giorno 08:00–21:00 Roma — controlli ogni 30 min
+    - cron: "0,30 6-19 * * *"
   workflow_dispatch:
     inputs:
       slot:
-        description: "Slot 0=10:00, 1=19:00 (vuoto=auto)"
+        description: "Slot 0-4 (vuoto=auto)"
         required: false
         default: ""
       dry_run:

@@ -1,8 +1,9 @@
 {
   "startDate": "2026-06-20",
-  "postsPerDay": 2,
+  "postsPerDay": 5,
   "timezone": "Europe/Rome",
   "account": "https://x.com/TheRiser100x",
-  "slots": ["10:00", "19:00"],
+  "slots": ["08:00", "11:15", "14:30", "17:45", "21:00"],
+  "slotTypes": ["bitcoin", "regulation", "elon", "bitcoin_breaking", "bitcoin_viral"],
   "posted": []
 }

@@ -18,13 +18,16 @@ SCRIPTS = Path(__file__).resolve().parent
 import sys
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
-from x_viral import build_viral_post, score_viral
+from x_viral import build_viral_post, categorize_post, score_viral
+from x_images import SLOT_TYPES, image_url_for_slot
 OUTPUT = ROOT / "data" / "crypto-news.json"
 OUTPUT_LEGACY = ROOT / "data" / "bitcoin-news.json"
 
 X_SOURCES = [
+    {"handle": "elonmusk", "label": "Elon Musk", "priority": 11},
     {"handle": "WhiteHouse", "label": "White House", "priority": 12},
     {"handle": "BitcoinMagazine", "label": "Bitcoin Magazine", "priority": 9},
+    {"handle": "SECGov", "label": "SEC", "priority": 9},
     {"handle": "WatcherGuru", "label": "Watcher Guru", "priority": 8},
     {"handle": "CPOfficialtx", "label": "Crypto Patriot", "priority": 8},
     {"handle": "unusual_whales", "label": "Unusual Whales", "priority": 7},
@@ -37,7 +40,7 @@ USER_AGENT = (
     "Mozilla/5.0 (compatible; TheRiser100x/1.0; +https://satoshiallien.github.io/cryptoitaliafacile/)"
 )
 PER_ACCOUNT = 6
-MAX_ITEMS = 30
+MAX_ITEMS = 45
 
 
 def parse_timeline_html(html: str, handle: str) -> dict:
@@ -86,6 +89,7 @@ def tweet_to_item(tweet: dict, source: dict) -> dict:
     text = tweet.get("full_text") or tweet.get("text") or ""
     url = f"https://x.com/{handle}/status/{tweet['id_str']}"
     source_handle = f"@{handle}"
+    category = categorize_post(text, source_handle)
     viral = build_viral_post(text, source_handle, url, source["label"])
     low = text.lower()
     breaking = any(k in low for k in ("breaking", "just in", "🚨", "alert"))
@@ -103,6 +107,7 @@ def tweet_to_item(tweet: dict, source: dict) -> dict:
         "external": True,
         "url": url,
         "breaking": breaking,
+        "postCategory": category,
         "viralScore": 0,
         "postText": viral,
         "viralPostText": viral,
@@ -166,6 +171,12 @@ def collect_items() -> tuple[list[dict], list[str]]:
 
     for item in deduped:
         item.pop("dateSort", None)
+        slot_type = item.get("postCategory") or "bitcoin"
+        if slot_type == "crypto":
+            slot_type = "bitcoin"
+        if slot_type not in SLOT_TYPES:
+            slot_type = "bitcoin_viral"
+        item["xImage"] = image_url_for_slot(SLOT_TYPES.index(slot_type) if slot_type in SLOT_TYPES else 0)
 
     return deduped, errors
 

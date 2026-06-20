@@ -17,6 +17,18 @@ from story_video_host import stage_story_video
 GRAPH = "https://graph.facebook.com/v21.0"
 
 
+def _with_story_link(params: dict, link_url: str | None) -> dict:
+    if link_url:
+        params["link"] = link_url
+    return params
+
+
+def _link_api_error(result: dict) -> bool:
+    err = result.get("error") or {}
+    blob = f"{err.get('message', '')} {err.get('error_user_msg', '')}".lower()
+    return any(token in blob for token in ("link", "sticker", "invalid parameter", "not supported"))
+
+
 def graph_request(url: str, data: dict | None = None, method: str = "POST", dry_run: bool = False, label: str = "") -> dict:
     if dry_run:
         print(f"[DRY RUN] {method} {label or url}")
@@ -107,7 +119,14 @@ def _rupload_binary(upload_url: str, file_path: Path, token: str) -> dict:
         return err
 
 
-def upload_facebook_video_story(page_id: str, video_path: Path, token: str, dry_run: bool = False) -> dict:
+def upload_facebook_video_story(
+    page_id: str,
+    video_path: Path,
+    token: str,
+    dry_run: bool = False,
+    *,
+    link_url: str | None = None,
+) -> dict:
     """Upload e pubblica video Story sulla Page (rupload API su /video_stories)."""
     endpoint = f"{GRAPH}/{page_id}/video_stories"
     if dry_run:
@@ -138,15 +157,22 @@ def upload_facebook_video_story(page_id: str, video_path: Path, token: str, dry_
     if uploaded.get("error"):
         return uploaded
 
-    finished = graph_request(
-        endpoint,
+    finish_params = _with_story_link(
         {
             "upload_phase": "finish",
             "video_id": video_id,
             "access_token": token,
         },
-        label="FB video_stories finish",
+        link_url,
     )
+    finished = graph_request(endpoint, finish_params, label="FB video_stories finish")
+    if finished.get("error") and link_url and _link_api_error(finished):
+        print("Link FB story non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+        finished = graph_request(
+            endpoint,
+            {"upload_phase": "finish", "video_id": video_id, "access_token": token},
+            label="FB video_stories finish (no link)",
+        )
     if finished.get("error"):
         return finished
     finished.setdefault("video_id", video_id)
@@ -174,23 +200,24 @@ def _upload_instagram_video_url(
     video_url: str,
     token: str,
     dry_run: bool,
+    *,
+    link_url: str | None = None,
 ) -> dict:
     media_url = graph_url(f"/{ig_id}/media", token)
     publish_url = graph_url(f"/{ig_id}/media_publish", token)
+    media_params = _with_story_link(
+        {"video_url": video_url, "media_type": "STORIES", "access_token": token},
+        link_url,
+    )
     if dry_run:
-        graph_request(
-            media_url,
-            {"video_url": video_url, "media_type": "STORIES", "access_token": token},
-            dry_run=True,
-            label="IG story video_url",
-        )
+        graph_request(media_url, media_params, dry_run=True, label="IG story video_url")
         return {"dry_run": True, "id": "dry-run-ig-story-video"}
 
-    container = graph_request(
-        media_url,
-        {"video_url": video_url, "media_type": "STORIES", "access_token": token},
-        label="IG story video_url",
-    )
+    container = graph_request(media_url, media_params, label="IG story video_url")
+    if container.get("error") and link_url and _link_api_error(container):
+        print("Link sticker IG non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+        base_params = {"video_url": video_url, "media_type": "STORIES", "access_token": token}
+        container = graph_request(media_url, base_params, label="IG story video_url (no link)")
     if container.get("error"):
         return container
 
@@ -212,23 +239,29 @@ def _upload_instagram_video_url(
     return published
 
 
-def _upload_instagram_resumable(ig_id: str, video_path: Path, token: str, dry_run: bool) -> dict:
+def _upload_instagram_resumable(
+    ig_id: str,
+    video_path: Path,
+    token: str,
+    dry_run: bool,
+    *,
+    link_url: str | None = None,
+) -> dict:
     media_url = graph_url(f"/{ig_id}/media", token)
+    media_params = _with_story_link(
+        {"upload_type": "resumable", "media_type": "STORIES", "access_token": token},
+        link_url,
+    )
     if dry_run:
-        graph_request(
-            media_url,
-            {"upload_type": "resumable", "media_type": "STORIES", "access_token": token},
-            dry_run=True,
-            label="IG resumable story container",
-        )
+        graph_request(media_url, media_params, dry_run=True, label="IG resumable story container")
         print(f"[DRY RUN] UPLOAD bytes {video_path}")
         return {"dry_run": True, "id": "dry-run-ig-story"}
 
-    container = graph_request(
-        media_url,
-        {"upload_type": "resumable", "media_type": "STORIES", "access_token": token},
-        label="IG resumable story container",
-    )
+    container = graph_request(media_url, media_params, label="IG resumable story container")
+    if container.get("error") and link_url and _link_api_error(container):
+        print("Link sticker IG non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+        base_params = {"upload_type": "resumable", "media_type": "STORIES", "access_token": token}
+        container = graph_request(media_url, base_params, label="IG resumable story container (no link)")
     if container.get("error"):
         return container
 
@@ -273,17 +306,20 @@ def publish_facebook_story(
     *,
     video_path: Path | None = None,
     use_video: bool = False,
+    link_url: str | None = None,
 ) -> dict:
     """Pubblica Story: video con musica se video_path, altrimenti foto."""
     wants_video = use_video or (video_path is not None and video_path.exists())
     if wants_video:
         if dry_run:
-            return upload_facebook_video_story(page_id, video_path or Path("story.mp4"), token, dry_run=True)
+            return upload_facebook_video_story(
+                page_id, video_path or Path("story.mp4"), token, dry_run=True, link_url=link_url
+            )
 
         if not video_path or not video_path.exists():
             return {"error": {"message": f"Video story non trovato: {video_path}"}}
 
-        return upload_facebook_video_story(page_id, video_path, token)
+        return upload_facebook_video_story(page_id, video_path, token, link_url=link_url)
 
     if dry_run:
         graph_request(
@@ -294,7 +330,7 @@ def publish_facebook_story(
         )
         graph_request(
             f"{GRAPH}/{page_id}/photo_stories",
-            {"photo_id": "dry-run-photo", "access_token": token},
+            _with_story_link({"photo_id": "dry-run-photo", "access_token": token}, link_url),
             dry_run=True,
             label="FB photo_stories",
         )
@@ -312,11 +348,15 @@ def publish_facebook_story(
     if not photo_id:
         return {"error": {"message": f"No photo id: {photo}"}}
 
-    story = graph_request(
-        f"{GRAPH}/{page_id}/photo_stories",
-        {"photo_id": photo_id, "access_token": token},
-        label="FB photo_stories",
-    )
+    story_params = _with_story_link({"photo_id": photo_id, "access_token": token}, link_url)
+    story = graph_request(f"{GRAPH}/{page_id}/photo_stories", story_params, label="FB photo_stories")
+    if story.get("error") and link_url and _link_api_error(story):
+        print("Link FB story non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+        story = graph_request(
+            f"{GRAPH}/{page_id}/photo_stories",
+            {"photo_id": photo_id, "access_token": token},
+            label="FB photo_stories (no link)",
+        )
     if story.get("error"):
         return story
     story.setdefault("photo_id", photo_id)
@@ -331,18 +371,23 @@ def publish_instagram_story(
     *,
     video_path: Path | None = None,
     use_video: bool = False,
+    link_url: str | None = None,
 ) -> dict:
     """Pubblica Story Instagram: video con musica o immagine statica."""
     wants_video = use_video or (video_path is not None and video_path.exists())
     if wants_video:
         local_video = video_path or Path("story.mp4")
         if dry_run:
-            return _upload_instagram_video_url(ig_id, "https://example.com/story.mp4", token, dry_run=True)
+            return _upload_instagram_video_url(
+                ig_id, "https://example.com/story.mp4", token, dry_run=True, link_url=link_url
+            )
 
         if local_video.exists():
             try:
                 _, public_url = stage_story_video(local_video, "instagram", push_git=True)
-                result = _upload_instagram_video_url(ig_id, public_url, token, dry_run=False)
+                result = _upload_instagram_video_url(
+                    ig_id, public_url, token, dry_run=False, link_url=link_url
+                )
                 if not result.get("error"):
                     return result
                 print(f"video_url IG fallito: {result.get('error')}", flush=True)
@@ -350,20 +395,19 @@ def publish_instagram_story(
                 print(f"Hosting video story fallito: {exc}", flush=True)
 
         if not is_instagram_login_token(token):
-            result = _upload_instagram_resumable(ig_id, local_video, token, dry_run)
+            result = _upload_instagram_resumable(ig_id, local_video, token, dry_run, link_url=link_url)
             if not result.get("error"):
                 return result
             print(f"Resumable IG fallito: {result.get('error')}", flush=True)
 
     media_url = graph_url(f"/{ig_id}/media", token)
     publish_url = graph_url(f"/{ig_id}/media_publish", token)
+    image_params = _with_story_link(
+        {"image_url": image_url, "media_type": "STORIES", "access_token": token},
+        link_url,
+    )
     if dry_run:
-        graph_request(
-            media_url,
-            {"image_url": image_url, "media_type": "STORIES", "access_token": token},
-            dry_run=True,
-            label="IG story container",
-        )
+        graph_request(media_url, image_params, dry_run=True, label="IG story container")
         graph_request(
             publish_url,
             {"creation_id": "dry-run", "access_token": token},
@@ -372,11 +416,11 @@ def publish_instagram_story(
         )
         return {"dry_run": True, "id": "dry-run-ig-story"}
 
-    container = graph_request(
-        media_url,
-        {"image_url": image_url, "media_type": "STORIES", "access_token": token},
-        label="IG story container",
-    )
+    container = graph_request(media_url, image_params, label="IG story container")
+    if container.get("error") and link_url and _link_api_error(container):
+        print("Link sticker IG non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+        base_params = {"image_url": image_url, "media_type": "STORIES", "access_token": token}
+        container = graph_request(media_url, base_params, label="IG story container (no link)")
     if container.get("error"):
         return container
 

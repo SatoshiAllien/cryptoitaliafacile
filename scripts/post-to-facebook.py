@@ -530,6 +530,7 @@ def main() -> None:
 
         story_id = ""
         story_track = ""
+        story_link = article_url(article["slug"])
         if not args.no_story:
             try:
                 story_video_path = None
@@ -540,6 +541,7 @@ def main() -> None:
                         args.slot,
                         day_idx,
                         per_day,
+                        link_url=story_link,
                     )
                     story_track = track["title"]
                     print(f"MUSICA: {track['title']} — {track['artist']}")
@@ -549,6 +551,7 @@ def main() -> None:
                     story_track = track["title"]
                     print(f"MUSICA: {track['title']} — {track['artist']} (dry-run)")
 
+                print(f"STORY LINK: {story_link}")
                 story_result = publish_facebook_story(
                     page_id,
                     story_url,
@@ -556,6 +559,7 @@ def main() -> None:
                     args.dry_run,
                     video_path=story_video_path,
                     use_video=not args.no_story,
+                    link_url=story_link,
                 )
                 print("STORY:", json.dumps(story_result, indent=2))
                 if story_result.get("error"):

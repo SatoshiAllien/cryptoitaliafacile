@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import subprocess
 import tempfile
+import urllib.parse
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -20,6 +21,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "assets" / "video" / "stories" / "cache"
 FB_STORY_IMG = ROOT / "assets" / "img" / "facebook" / "stories"
 IG_STORY_IMG = ROOT / "assets" / "img" / "instagram" / "stories"
+SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
+SITE_LABEL = "cryptoitaliafacile.com"
 STORY_DURATION = 15
 
 
@@ -38,6 +41,44 @@ def _font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.I
         if Path(path).exists():
             return ImageFont.truetype(path, size)
     return ImageFont.load_default()
+
+
+def short_link_label(link_url: str) -> str:
+    parsed = urllib.parse.urlparse(link_url)
+    if parsed.netloc.endswith("github.io") and "cryptoitaliafacile" in parsed.path:
+        return SITE_LABEL
+    host = parsed.netloc.removeprefix("www.")
+    path = parsed.path.strip("/")
+    if path.startswith("articolo.html"):
+        return f"{host}/guide"
+    return host or SITE_LABEL
+
+
+def overlay_link_sticker(
+    image_path: Path,
+    *,
+    link_url: str,
+    platform: str = "instagram",
+    accent: str = "#00F0FF",
+) -> Path:
+    """Sticker stile link nativo IG/FB con URL del sito o articolo."""
+    img = Image.open(image_path).convert("RGBA")
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(layer)
+
+    cta = "APRI LA GUIDA" if platform == "facebook" else "TAP TO READ"
+    label = short_link_label(link_url)
+    box = (72, 1040, 1008, 1240)
+    draw.rounded_rectangle(box, radius=32, fill=(255, 255, 255, 245), outline=accent, width=5)
+    draw.rounded_rectangle((108, 1070, 420, 1130), radius=20, fill=accent)
+    draw.text((128, 1086), f"🔗 {cta}", fill=(15, 23, 42), font=_font(28, bold=True))
+    draw.text((108, 1155), label, fill="#2563EB", font=_font(44, bold=True))
+    draw.text((108, 1210), "↑ Scorri / tocca per aprire", fill="#64748B", font=_font(24))
+
+    out = Image.alpha_composite(img, layer).convert("RGB")
+    tmp = Path(tempfile.gettempdir()) / f"story-link-{image_path.stem}.jpg"
+    out.save(tmp, "JPEG", quality=92)
+    return tmp
 
 
 def overlay_music_badge(
@@ -78,20 +119,30 @@ def build_story_video(
     viral_tag: str = "#TrendingNow",
     out_path: Path | None = None,
     accent: str = "#FF2A6D",
+    link_url: str = "",
+    platform: str = "instagram",
 ) -> Path:
     if not image_path.exists():
         raise FileNotFoundError(f"Immagine story non trovata: {image_path}")
     if not audio_path.exists():
         raise FileNotFoundError(f"Traccia audio non trovata: {audio_path}")
 
+    base = image_path
+    link_tmp: Path | None = None
+    if link_url:
+        link_tmp = overlay_link_sticker(base, link_url=link_url, platform=platform, accent=accent)
+        base = link_tmp
+
     framed = overlay_music_badge(
-        image_path,
+        base,
         playlist_name=playlist_name,
         track_title=track_title,
         track_artist=track_artist,
         viral_tag=viral_tag,
         accent=accent,
     )
+    if link_tmp:
+        link_tmp.unlink(missing_ok=True)
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     if out_path is None:
@@ -125,6 +176,8 @@ def prepare_story_video(
     slot: int,
     day_index: int = 0,
     posts_per_day: int = 20,
+    *,
+    link_url: str = "",
 ) -> tuple[Path, dict]:
     """Genera MP4 story con musica virale trending per topic e slot."""
     stem = Path(image_file).stem
@@ -133,6 +186,7 @@ def prepare_story_video(
     track = track_for_slot(slot, day_index, posts_per_day)
     audio_path = Path(track["path"])
     out_path = CACHE_DIR / platform / f"{stem}-{track['id']}.mp4"
+    accent = "#34D399" if platform == "facebook" else "#FF2A6D"
     video = build_story_video(
         image_path,
         audio_path,
@@ -141,5 +195,8 @@ def prepare_story_video(
         track_artist=track["artist"],
         viral_tag=track.get("viral_tag", "#TrendingNow"),
         out_path=out_path,
+        accent=accent,
+        link_url=link_url or SITE_URL,
+        platform=platform,
     )
     return video, track

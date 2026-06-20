@@ -268,6 +268,14 @@ def post_tweet(text: str, env: dict, dry_run: bool, media_id: str | None = None)
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         err = e.read().decode("utf-8", errors="replace")
+        if e.code == 403 and "oauth1-permissions" in err:
+            raise SystemExit(
+                f"X API error 403: app lacks Read and Write permission.\n"
+                f"Fix: developer.x.com → your app → Settings → User authentication → "
+                f"OAuth 1.0a → App permissions: Read and Write → Save → "
+                f"Regenerate Access Token + Secret → update scripts/.env\n"
+                f"Guide: x-fix-permissions.html\n{err}"
+            ) from e
         raise SystemExit(f"X API error {e.code}: {err}") from e
 
 

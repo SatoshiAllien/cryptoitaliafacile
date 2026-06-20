@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix X permissions — @TheRiser100x</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .fix { max-width: 52rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+    .fix .alert { background: rgba(220, 38, 38, 0.1); border: 1px solid rgba(220, 38, 38, 0.35); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem; }
+    .fix ol li { margin-bottom: 0.75rem; line-height: 1.5; }
+    .fix code { background: var(--bg-alt); padding: 0.15rem 0.4rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="fix container">
+    <h1>Perché non vedi post su X</h1>
+    <div class="alert">
+      <strong>Errore 403:</strong> l'app X è in modalità <strong>solo lettura</strong>. Il bot può autenticarsi ma <strong>non può pubblicare</strong> tweet.
+    </div>
+
+    <h2>Fix in 5 passi</h2>
+    <ol>
+      <li>Vai su <a href="https://developer.x.com/en/portal/dashboard" target="_blank" rel="noopener">developer.x.com</a> → loggato come <strong>@TheRiser100x</strong></li>
+      <li>Apri la tua <strong>App</strong> → tab <strong>Settings</strong></li>
+      <li>Scorri a <strong>User authentication settings</strong> → clicca <strong>Set up</strong> o <strong>Edit</strong></li>
+      <li>Imposta:
+        <ul>
+          <li><strong>App permissions:</strong> Read and Write</li>
+          <li><strong>Type of App:</strong> Automated App or Web App</li>
+          <li><strong>Callback URL:</strong> <code>https://127.0.0.1</code></li>
+        </ul>
+        Salva.
+      </li>
+      <li>Vai su <strong>Keys and tokens</strong> → <strong>Regenerate</strong> su <strong>Access Token and Secret</strong> → aggiorna <code>scripts/.env</code></li>
+    </ol>
+
+    <h2>Test</h2>
+    <pre>python scripts\verify-x-credentials.py
+python scripts\post-to-x.py --auto --slot 0 --no-image</pre>
+
+    <p><a href="x-auto-setup.html" class="btn btn-primary btn-sm" style="text-decoration:none;display:inline-flex;">← Setup completo</a></p>
+  </div>
+  <div id="site-footer"></div>
+  <script src="js/site-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

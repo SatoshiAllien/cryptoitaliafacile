@@ -2,23 +2,14 @@ name: Facebook Auto Post
 
 on:
   schedule:
-    # ~09:00 Europe/Rome (CEST)
-    - cron: "0 7 * * *"
-    # ~13:00 Europe/Rome
-    - cron: "0 11 * * *"
-    # ~19:00 Europe/Rome
-    - cron: "0 17 * * *"
+    # Ogni 30 minuti, 05:00–20:30 UTC ≈ 07:00–22:30 Roma (CEST)
+    - cron: "0,30 5-20 * * *"
   workflow_dispatch:
     inputs:
       slot:
-        description: "Slot (0=mattina, 1=pranzo, 2=sera)"
-        required: true
-        default: "0"
-        type: choice
-        options:
-          - "0"
-          - "1"
-          - "2"
+        description: "Slot 0–19 (vuoto = rileva da orario Roma)"
+        required: false
+        default: ""
       dry_run:
         description: "Solo test, non pubblicare"
         required: false
@@ -43,26 +34,17 @@ jobs:
       - name: Install tzdata
         run: pip install tzdata
 
-      - name: Determine slot
-        id: slot
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "value=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
-          else
-            case "${{ github.event.schedule }}" in
-              "0 7 * * *") echo "value=0" >> "$GITHUB_OUTPUT" ;;
-              "0 11 * * *") echo "value=1" >> "$GITHUB_OUTPUT" ;;
-              "0 17 * * *") echo "value=2" >> "$GITHUB_OUTPUT" ;;
-              *) echo "value=0" >> "$GITHUB_OUTPUT" ;;
-            esac
-          fi
-
       - name: Post to Facebook
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
         run: |
-          ARGS="--auto --slot ${{ steps.slot.outputs.value }}"
+          ARGS="--auto"
+          if [ -n "${{ github.event.inputs.slot }}" ]; then
+            ARGS="$ARGS --slot ${{ github.event.inputs.slot }}"
+          else
+            ARGS="$ARGS --now"
+          fi
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi

@@ -29,7 +29,7 @@
 <body>
   <div class="wrap">
     <h1>Post automatici su Facebook</h1>
-    <p class="sub">Configura la pubblicazione automatica di 2–3 articoli al giorno su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
+    <p class="sub">Configura la pubblicazione automatica di <strong>20 articoli al giorno</strong> (07:00–22:00 Roma) su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
     <div class="card" style="border-color:rgba(74,222,128,0.4);">
       <h2 class="ok">✓ App creata</h2>
       <p style="margin:0.5rem 0 0;color:var(--muted);">
@@ -42,7 +42,7 @@
     <div class="card">
       <h2>Cosa fa il sistema</h2>
       <ul>
-        <li><strong>3 post/giorno</strong> alle ~09:00, ~13:00, ~19:00 (ora di Roma)</li>
+        <li><strong>20 post/giorno</strong> distribuiti dalle 07:00 alle 22:00 (ora di Roma)</li>
         <li>Alterna guide, tips e trend automaticamente</li>
         <li>Evita duplicati (traccia i post già pubblicati)</li>
         <li>Funziona via <strong>GitHub Actions</strong> (consigliato) o <strong>Windows Task Scheduler</strong></li>
@@ -203,12 +203,12 @@ python scripts\post-to-facebook.py --auto --slot 0 --dry-run</pre>
       <p>Modifica <code>data/facebook-schedule.json</code>:</p>
       <pre>{
   "startDate": "2026-06-19",
-  "postsPerDay": 3,
+  "postsPerDay": 20,
   "timezone": "Europe/Rome",
   "posted": []
 }</pre>
       <ul>
-        <li><code>postsPerDay</code>: <strong>2</strong> o <strong>3</strong></li>
+        <li><code>postsPerDay</code>: <strong>20</strong> (fisso)</li>
         <li><code>startDate</code>: primo giorno del calendario</li>
         <li><code>posted</code>: si aggiorna automaticamente dopo ogni post</li>
       </ul>

@@ -33,7 +33,10 @@
       border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1rem;
     }
     .fb-today-box h3 { margin: 0 0 0.75rem; font-size: 0.95rem; color: #1877F2; }
-    .fb-today-slots { display: grid; gap: 0.65rem; }
+    .fb-today-slots {
+      display: grid; gap: 0.65rem;
+      max-height: 420px; overflow-y: auto; padding-right: 0.25rem;
+    }
     .fb-today-slot {
       display: grid; grid-template-columns: 5.5rem 1fr auto; gap: 0.75rem; align-items: center;
       padding: 0.65rem 0.75rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
@@ -123,7 +126,7 @@
     <section class="fb-posts-hero">
       <span class="section-label">Facebook</span>
       <h1>Pubblica i tuoi articoli su Facebook</h1>
-      <p>Piano <strong>2–3 post al giorno</strong> con orari consigliati, <strong>foto clickbait correlate</strong> e testi pronti. Scarica l'immagine, caricala su Facebook e incolla il testo su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
+      <p>Piano fisso <strong>20 post al giorno</strong> (07:00–22:00 ora di Roma), con <strong>foto clickbait correlate</strong> e testi pronti. Scarica l'immagine, caricala su Facebook e incolla il testo su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
       <p style="margin-top:0.75rem;"><a href="facebook-auto-setup.html" class="btn btn-primary btn-sm" style="display:inline-flex;text-decoration:none;">⚡ Attiva post automatici</a></p>
     </section>
 
@@ -133,8 +136,7 @@
         <div class="fb-plan-controls">
           <label>Post al giorno:</label>
           <div class="fb-per-day" id="fb-per-day">
-            <button type="button" data-per-day="2">2 post</button>
-            <button type="button" data-per-day="3" class="active">3 post</button>
+            <button type="button" data-per-day="20" class="active">20 post (fisso)</button>
           </div>
           <label>Inizio piano:</label>
           <input type="date" id="fb-start-date">
@@ -177,7 +179,7 @@
 
     let articles = [];
     let plan = [];
-    let postsPerDay = 3;
+    let postsPerDay = 20;
     let startDate = new Date().toISOString().slice(0, 10);
     let todaySlugs = new Set();
 
@@ -307,7 +309,8 @@
       const stats = document.getElementById('fb-stats');
       if (!grid) return;
 
-      postsPerDay = Number(localStorage.getItem(PER_DAY_KEY) || 3);
+      postsPerDay = 20;
+      localStorage.setItem(PER_DAY_KEY, '20');
       startDate = localStorage.getItem(START_KEY) || new Date().toISOString().slice(0, 10);
 
       const dateInput = document.getElementById('fb-start-date');

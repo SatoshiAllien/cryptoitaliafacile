@@ -8,10 +8,10 @@ Uso manuale:
   python post-to-facebook.py --slug iniziare-exchange-revolut-kraken
   python post-to-facebook.py --dry-run --today --per-day 3
 
-Automazione (2-3 post/giorno):
-  python post-to-facebook.py --auto --slot 0   # mattina
-  python post-to-facebook.py --auto --slot 1   # pranzo
-  python post-to-facebook.py --auto --slot 2   # sera
+Automazione (20 post/giorno, 07:00–22:00 Roma):
+  python post-to-facebook.py --auto --now        # rileva slot dall'orario
+  python post-to-facebook.py --auto --slot 0     # post 1 (07:00)
+  python post-to-facebook.py --auto --slot 19    # post 20 (22:00)
 """
 
 from __future__ import annotations
@@ -68,7 +68,43 @@ IMAGE_BY_TAG = {
     "metamask": "wallet.jpg", "#bitcoin": "bitcoin.jpg", "#ethereum": "ethereum.jpg",
     "#defi": "defi.jpg", "#etf": "bitcoin.jpg", "#layer2": "ethereum.jpg",
 }
-SLOT_LABELS = {0: "Mattina", 1: "Pranzo", 2: "Sera"}
+FB_POSTS_PER_DAY = 20
+
+
+def generate_slot_times(per_day: int = FB_POSTS_PER_DAY, start_h: int = 7, end_h: int = 22) -> list[str]:
+    start_m = start_h * 60
+    end_m = end_h * 60
+    times: list[str] = []
+    for i in range(per_day):
+        if per_day == 1:
+            mins = start_m
+        else:
+            mins = round(start_m + (end_m - start_m) * i / (per_day - 1))
+        times.append(f"{mins // 60:02d}:{mins % 60:02d}")
+    return times
+
+
+def slot_label(index: int, per_day: int = FB_POSTS_PER_DAY) -> str:
+    times = generate_slot_times(per_day)
+    if 0 <= index < len(times):
+        return f"Post {index + 1} ({times[index]})"
+    return f"Post {index + 1}"
+
+
+def current_slot_index(per_day: int = FB_POSTS_PER_DAY, tz_name: str = "Europe/Rome", tolerance: int = 22) -> int | None:
+    if ZoneInfo is None:
+        return None
+    try:
+        now = datetime.now(ZoneInfo(tz_name))
+    except Exception:
+        return None
+    now_mins = now.hour * 60 + now.minute
+    for i, t in enumerate(generate_slot_times(per_day)):
+        h, m = map(int, t.split(":"))
+        slot_mins = h * 60 + m
+        if abs(now_mins - slot_mins) <= tolerance:
+            return i
+    return None
 
 
 def load_env() -> dict[str, str]:
@@ -86,7 +122,7 @@ def load_env() -> dict[str, str]:
 def load_schedule() -> dict:
     default = {
         "startDate": date.today().isoformat(),
-        "postsPerDay": 3,
+        "postsPerDay": FB_POSTS_PER_DAY,
         "timezone": "Europe/Rome",
         "posted": [],
     }
@@ -220,9 +256,15 @@ def balanced_queue(articles: list[dict]) -> list[dict]:
 
 def daily_plan(articles: list[dict], per_day: int) -> list[list[dict]]:
     queue = balanced_queue(articles)
+    if not queue:
+        return []
+    min_days = max((len(queue) + per_day - 1) // per_day, 30)
     days: list[list[dict]] = []
-    for i in range(0, len(queue), per_day):
-        days.append(queue[i : i + per_day])
+    cursor = 0
+    for _ in range(min_days):
+        day_posts = [queue[cursor % len(queue)] for _ in range(per_day)]
+        cursor += per_day
+        days.append(day_posts)
     return days
 
 
@@ -272,7 +314,7 @@ def record_post(schedule: dict, date_str: str, slot: int, slug: str, post_id: st
 
 
 def get_auto_article(articles: list[dict], schedule: dict, slot: int, env: dict) -> tuple[dict | None, int, str]:
-    per_day = int(env.get("FACEBOOK_POSTS_PER_DAY") or schedule.get("postsPerDay") or 3)
+    per_day = int(env.get("FACEBOOK_POSTS_PER_DAY") or schedule.get("postsPerDay") or FB_POSTS_PER_DAY)
     start_date = env.get("FACEBOOK_SCHEDULE_START") or schedule.get("startDate")
     tz_name = schedule.get("timezone", "Europe/Rome")
     today = today_in_timezone(tz_name)
@@ -283,7 +325,7 @@ def get_auto_article(articles: list[dict], schedule: dict, slot: int, env: dict)
         return None, day_index_from_start(start_date, today), today_str
 
     if already_posted(schedule, today_str, slot):
-        print(f"Già pubblicato oggi slot {slot} ({SLOT_LABELS.get(slot, slot)})")
+        print(f"Già pubblicato oggi slot {slot} ({slot_label(slot, per_day)})")
         return None, day_index_from_start(start_date, today), today_str
 
     day_idx = day_index_from_start(start_date, today)
@@ -292,11 +334,12 @@ def get_auto_article(articles: list[dict], schedule: dict, slot: int, env: dict)
         return None, day_idx, today_str
 
     days = daily_plan(articles, per_day)
-    if day_idx >= len(days):
-        print(f"Piano completato ({len(days)} giorni)")
+    if not days:
+        print("Nessun articolo nel piano")
         return None, day_idx, today_str
 
-    day_posts = days[day_idx]
+    effective_day = day_idx % len(days)
+    day_posts = days[effective_day]
     if slot >= len(day_posts):
         print(f"Nessun articolo per slot {slot} nel giorno {day_idx + 1}")
         return None, day_idx, today_str
@@ -320,7 +363,8 @@ def select_articles(data: dict, args: argparse.Namespace) -> list[dict]:
         article, day_idx, today_str = get_auto_article(articles, schedule, args.slot, env)
         if not article:
             return []
-        print(f"Auto post — giorno {day_idx + 1}, slot {args.slot} ({SLOT_LABELS.get(args.slot, '')}), data {today_str}")
+        auto_per_day = int(env.get("FACEBOOK_POSTS_PER_DAY") or schedule.get("postsPerDay") or FB_POSTS_PER_DAY)
+        print(f"Auto post — giorno {day_idx + 1}, slot {args.slot} ({slot_label(args.slot, auto_per_day)}), data {today_str}")
         return [article]
 
     if args.day is not None or args.today:
@@ -351,11 +395,12 @@ def main() -> None:
     parser.add_argument("--featured", action="store_true", help="Solo articoli in evidenza")
     parser.add_argument("--popular", action="store_true", help="Solo articoli popolari")
     parser.add_argument("--limit", type=int, default=1, help="Numero massimo di post")
-    parser.add_argument("--per-day", type=int, default=3, choices=[2, 3], help="Post per giorno nel piano")
+    parser.add_argument("--per-day", type=int, default=FB_POSTS_PER_DAY, help="Post per giorno nel piano (default: 20)")
     parser.add_argument("--day", type=int, help="Pubblica il piano del giorno N (1 = primo giorno)")
     parser.add_argument("--today", action="store_true", help="Pubblica tutti i post del giorno corrente del piano")
     parser.add_argument("--auto", action="store_true", help="Modalità automatica (un post per slot)")
-    parser.add_argument("--slot", type=int, default=0, choices=[0, 1, 2], help="Slot orario: 0 mattina, 1 pranzo, 2 sera")
+    parser.add_argument("--now", action="store_true", help="Con --auto: rileva lo slot dall'orario di Roma")
+    parser.add_argument("--slot", type=int, default=0, help="Slot orario 0–19 (20 post/giorno, 07:00–22:00 Roma)")
     parser.add_argument("--dry-run", action="store_true", help="Mostra senza pubblicare")
     parser.add_argument("--all", action="store_true", help="Pubblica tutti gli articoli del sito")
     parser.add_argument("--delay", type=int, default=18, help="Secondi di pausa tra i post (con --all)")
@@ -373,6 +418,20 @@ def main() -> None:
 
     data = json.loads(ARTICLES_PATH.read_text(encoding="utf-8"))
     schedule = load_schedule()
+    per_day = int(schedule.get("postsPerDay") or FB_POSTS_PER_DAY)
+
+    if args.auto and args.now:
+        tz_name = schedule.get("timezone", "Europe/Rome")
+        detected = current_slot_index(per_day, tz_name)
+        if detected is None:
+            print(f"Nessuno slot attivo ora ({tz_name}). Orari: {', '.join(generate_slot_times(per_day))}")
+            return
+        args.slot = detected
+        print(f"Slot rilevato: {detected} — {slot_label(detected, per_day)}")
+
+    if args.slot < 0 or args.slot >= per_day:
+        raise SystemExit(f"Slot {args.slot} non valido. Usa 0–{per_day - 1}.")
+
     selected = select_articles(data, args)
 
     if not selected:

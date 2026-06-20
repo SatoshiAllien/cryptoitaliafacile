@@ -83,17 +83,33 @@ function renderFacebookShareBar(article) {
     </div>`;
 }
 
-const FB_SCHEDULE_SLOTS = {
-  2: [
-    { label: 'Mattina', time: '10:00', hint: 'Guida o articolo principale' },
-    { label: 'Sera', time: '19:00', hint: 'Tip, trend o Cardano' }
-  ],
-  3: [
-    { label: 'Mattina', time: '09:00', hint: 'Guida in evidenza' },
-    { label: 'Pranzo', time: '13:00', hint: 'Crypto Tip breve' },
-    { label: 'Sera', time: '19:00', hint: 'Trend, Cardano o Sicurezza' }
-  ]
-};
+const FB_POSTS_PER_DAY = 20;
+const FB_SLOT_HINTS = [
+  'Guida in evidenza', 'Crypto Tip', 'Trend del momento', 'Cardano', 'Sicurezza',
+  'Tutorial', 'Bitcoin', 'DeFi', 'Wallet', 'Exchange',
+  'Guida principianti', 'Tip rapido', 'Trend macro', 'ADA / Cardano', 'Anti-truffa',
+  'Guida pratica', 'Consiglio utile', 'Notizia crypto', 'Ethereum', 'Sicurezza wallet'
+];
+
+function getScheduleSlots(postsPerDay = FB_POSTS_PER_DAY) {
+  const count = Math.max(1, Number(postsPerDay) || FB_POSTS_PER_DAY);
+  const startMins = 7 * 60;
+  const endMins = 22 * 60;
+  const slots = [];
+  for (let i = 0; i < count; i++) {
+    const mins = count === 1
+      ? startMins
+      : Math.round(startMins + ((endMins - startMins) * i) / (count - 1));
+    const h = String(Math.floor(mins / 60)).padStart(2, '0');
+    const m = String(mins % 60).padStart(2, '0');
+    slots.push({
+      label: `Post ${i + 1}`,
+      time: `${h}:${m}`,
+      hint: FB_SLOT_HINTS[i % FB_SLOT_HINTS.length]
+    });
+  }
+  return slots;
+}
 
 function articlePriority(article) {
   return (article.featured ? 4 : 0) + (article.popular ? 2 : 0);
@@ -128,14 +144,24 @@ function buildBalancedQueue(articles) {
   });
 }
 
-function buildDailyPlan(articles, postsPerDay = 3) {
-  const slots = FB_SCHEDULE_SLOTS[postsPerDay] || FB_SCHEDULE_SLOTS[3];
+function buildDailyPlan(articles, postsPerDay = FB_POSTS_PER_DAY) {
+  const perDay = Math.max(1, Number(postsPerDay) || FB_POSTS_PER_DAY);
+  const slots = getScheduleSlots(perDay);
   const queue = buildBalancedQueue(articles);
+  if (!queue.length) return [];
+
+  const minDays = Math.max(Math.ceil(queue.length / perDay), 30);
   const days = [];
-  for (let i = 0; i < queue.length; i += postsPerDay) {
-    const chunk = queue.slice(i, i + postsPerDay);
+  let cursor = 0;
+
+  for (let d = 0; d < minDays; d++) {
+    const chunk = [];
+    for (let s = 0; s < perDay; s++) {
+      chunk.push(queue[cursor % queue.length]);
+      cursor++;
+    }
     days.push({
-      day: days.length + 1,
+      day: d + 1,
       posts: chunk.map((article, idx) => ({
         article,
         slot: slots[idx] || slots[slots.length - 1]
@@ -157,8 +183,8 @@ function getTodayPlanDay(plan, startDate) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   const diff = Math.floor((today - start) / 86400000);
-  if (diff < 0 || diff >= plan.length) return null;
-  return plan[diff];
+  if (diff < 0 || !plan.length) return null;
+  return plan[diff % plan.length];
 }
 
 function initArticleFacebookShare(article) {

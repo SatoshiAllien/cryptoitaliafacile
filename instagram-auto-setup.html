@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Post automatici Instagram — @bitcoin.is.hope2030</title>
+  <style>
+    :root { --bg:#0a0a12; --surface:#12121f; --cyan:#00f0ff; --magenta:#ff2a6d; --text:#e8e8f0; --muted:#9a9ab0; --border:#2a2a3d; --green:#4ade80; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .sub { color: var(--muted); margin-bottom: 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .card h2 { font-size: 1rem; color: var(--cyan); margin: 0 0 0.75rem; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.45rem; }
+    code, pre { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; }
+    code { padding: 0.15rem 0.4rem; }
+    pre { padding: 0.85rem; overflow-x: auto; }
+    a { color: var(--cyan); }
+    .warn { border-left: 3px solid var(--magenta); padding-left: 1rem; color: var(--muted); font-size: 0.9rem; margin: 1rem 0; }
+    .btn { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1rem; border: 1px solid var(--cyan); border-radius: 8px; color: var(--cyan); text-decoration: none; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Post automatici su Instagram</h1>
+    <p class="sub"><strong>20 post al giorno</strong> (07:00–22:00 Roma) su <a href="https://www.instagram.com/bitcoin.is.hope2030/" target="_blank" rel="noopener">@bitcoin.is.hope2030</a> — immagini + caption in inglese, link in bio.</p>
+
+    <div class="card">
+      <h2>Cosa fa il sistema</h2>
+      <ul>
+        <li><strong>20 post/giorno</strong> — circa uno ogni 47 minuti</li>
+        <li>Immagini quadrate 1080×1080 da <code>assets/img/instagram/posts/</code></li>
+        <li>Contenuti educativi crypto da <code>data/articles.json</code></li>
+        <li>Automazione GitHub Actions (PC spento) o Windows Task Scheduler</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Passo 1 — Account Instagram Business</h2>
+      <ol>
+        <li>Apri <a href="https://www.instagram.com/bitcoin.is.hope2030/" target="_blank" rel="noopener">@bitcoin.is.hope2030</a></li>
+        <li>Impostazioni → Account → <strong>Passa a account professionale</strong></li>
+        <li>Scegli <strong>Business</strong> o <strong>Creator</strong></li>
+        <li>Collega a una <strong>Facebook Page</strong> (es. Crypto Italia Facile)</li>
+      </ol>
+      <p class="warn">Senza collegamento a una Facebook Page, l'API Instagram non può pubblicare.</p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 2 — Permessi Meta App</h2>
+      <ol>
+        <li><a href="https://developers.facebook.com/apps/1058281383830078/use_cases/" target="_blank" rel="noopener">Casi d'uso app</a></li>
+        <li>Aggiungi <strong>Instagram API</strong> (o “Gestisci messaggi e contenuti su Instagram”)</li>
+        <li>Permessi richiesti:
+          <ul>
+            <li><code>instagram_basic</code></li>
+            <li><code>instagram_content_publish</code></li>
+            <li><code>pages_read_engagement</code></li>
+          </ul>
+        </li>
+        <li>Rigenera il <strong>Page Access Token</strong> nel <a href="https://developers.facebook.com/tools/explorer/1058281383830078/" target="_blank" rel="noopener">Graph API Explorer</a></li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Passo 3 — Configura .env</h2>
+      <pre>python scripts\discover-instagram-id.py
+python scripts\verify-instagram.py</pre>
+      <p>Aggiunge automaticamente <code>INSTAGRAM_ACCOUNT_ID</code> in <code>scripts/.env</code>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 4 — Genera immagini e test</h2>
+      <pre>python scripts\generate-ig-images.py
+python scripts\post-to-instagram.py --auto --slot 0 --dry-run
+python scripts\post-to-instagram.py --auto --slot 0</pre>
+    </div>
+
+    <div class="card">
+      <h2>Passo 5 — Automazione cloud</h2>
+      <pre>powershell -ExecutionPolicy Bypass -File scripts\setup-instagram-github-secrets.ps1
+powershell -ExecutionPolicy Bypass -File scripts\register-instagram-tasks.ps1</pre>
+    </div>
+
+    <p><a href="facebook-auto-setup.html" class="btn">Setup Facebook</a>
+       <a href="x-auto-setup.html" class="btn" style="margin-left:0.5rem;">Setup X</a></p>
+  </div>
+</body>
+</html>

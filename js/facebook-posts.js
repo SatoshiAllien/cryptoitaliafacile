@@ -35,7 +35,16 @@ function buildFacebookPost(article) {
   const emoji = FB_POST_EMOJI[article.category] || '📖';
   const label = FB_POST_LABELS[article.category] || 'Guida';
   const url = getArticleUrl(article.slug);
-  return `${emoji} ${label}: ${article.title}\n\n${article.excerpt}\n\n👉 Leggi la guida completa:\n${url}\n\n${buildFacebookHashtags(article)}`;
+  const hook = typeof getFacebookClickbaitHook === 'function'
+    ? getFacebookClickbaitHook(article)
+    : '🔥 Non perdere questa guida:';
+  return `${hook}\n\n${emoji} ${label}: ${article.title}\n\n${article.excerpt}\n\n👉 Leggi la guida completa:\n${url}\n\n${buildFacebookHashtags(article)}`;
+}
+
+function getFacebookImageForArticle(article) {
+  return typeof getFacebookImageUrl === 'function'
+    ? getFacebookImageUrl(article)
+    : '';
 }
 
 function getFacebookShareUrl(articleUrl) {
@@ -48,12 +57,21 @@ function getFacebookPageUrl() {
 
 function renderFacebookShareBar(article) {
   const url = getArticleUrl(article.slug);
-  const post = buildFacebookPost(article);
   const shareUrl = getFacebookShareUrl(url);
   const pageUrl = getFacebookPageUrl();
+  const imageUrl = getFacebookImageForArticle(article);
+  const imageFile = typeof getFacebookImageFile === 'function' ? getFacebookImageFile(article) : '';
   return `
     <div class="article-share" data-article-slug="${article.slug}">
-      <span class="article-share-label">Condividi questa guida</span>
+      <span class="article-share-label">Condividi questa guida su Facebook</span>
+      <div class="article-share-visual">
+        <img src="${imageUrl}" alt="Anteprima clickbait Facebook" class="article-share-image" loading="lazy" width="600" height="315">
+        <div class="article-share-visual-meta">
+          <strong>Foto consigliata per il post</strong>
+          <span>Carica questa immagine su Facebook insieme al testo — più click garantiti.</span>
+          <a href="${imageUrl}" class="btn btn-ghost btn-sm" download="${imageFile || 'facebook-post.jpg'}" target="_blank" rel="noopener">Scarica foto</a>
+        </div>
+      </div>
       <div class="article-share-actions">
         <a href="${shareUrl}" class="btn btn-facebook btn-sm" target="_blank" rel="noopener noreferrer">
           ${SOCIAL_ICONS.facebook} Condividi su Facebook

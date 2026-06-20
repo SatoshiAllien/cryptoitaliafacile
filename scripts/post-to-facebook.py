@@ -35,6 +35,7 @@ ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_PATH = ROOT / "data" / "articles.json"
 SCHEDULE_PATH = ROOT / "data" / "facebook-schedule.json"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
+IMAGE_BASE = f"{SITE_URL}assets/img/facebook/posts/"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 
 EMOJI = {
@@ -44,6 +45,28 @@ EMOJI = {
 LABELS = {
     "guide": "Guida", "tip": "Crypto Tip", "trend": "Trend", "tutorial": "Tutorial",
     "cardano": "Cardano", "sicurezza": "Sicurezza",
+}
+HOOKS = {
+    "guide": "🔥 GUIDA GRATIS — Non saltare questo:",
+    "tip": "⚡ TIP DA APPLICARE SUBITO:",
+    "trend": "📈 TREND HOT — Cosa devi sapere:",
+    "tutorial": "🎓 TUTORIAL PASSO-PASSO:",
+    "cardano": "🔷 CARDANO — Lo spieghiamo facile:",
+    "sicurezza": "🚨 ATTENZIONE — Evita questo errore:",
+}
+IMAGE_DEFAULTS = {
+    "guide": "guide.jpg", "tip": "tip.jpg", "trend": "trend.jpg", "tutorial": "guide.jpg",
+    "cardano": "cardano.jpg", "sicurezza": "sicurezza.jpg",
+}
+IMAGE_BY_TAG = {
+    "bitcoin": "bitcoin.jpg", "btc": "bitcoin.jpg", "exchange": "exchange.jpg",
+    "revolut": "exchange.jpg", "kraken": "exchange.jpg", "wallet": "wallet.jpg",
+    "seed phrase": "sicurezza.jpg", "sicurezza": "sicurezza.jpg", "phishing": "sicurezza.jpg",
+    "truffe": "sicurezza.jpg", "cardano": "cardano.jpg", "ada": "cardano.jpg",
+    "ethereum": "ethereum.jpg", "eth": "ethereum.jpg", "defi": "defi.jpg",
+    "uniswap": "defi.jpg", "staking": "ethereum.jpg", "ledger": "wallet.jpg",
+    "metamask": "wallet.jpg", "#bitcoin": "bitcoin.jpg", "#ethereum": "ethereum.jpg",
+    "#defi": "defi.jpg", "#etf": "bitcoin.jpg", "#layer2": "ethereum.jpg",
 }
 SLOT_LABELS = {0: "Mattina", 1: "Pranzo", 2: "Sera"}
 
@@ -84,10 +107,44 @@ def article_url(slug: str) -> str:
     return f"{SITE_URL}articolo.html?slug={urllib.parse.quote(slug)}"
 
 
+def facebook_image_file(article: dict) -> str:
+    if article.get("fbImage"):
+        return article["fbImage"]
+    for raw in article.get("tags") or []:
+        tag = str(raw).lower().lstrip("#").strip()
+        if tag in IMAGE_BY_TAG:
+            return IMAGE_BY_TAG[tag]
+        if f"#{tag}" in IMAGE_BY_TAG:
+            return IMAGE_BY_TAG[f"#{tag}"]
+    title = (article.get("title") or "").lower()
+    slug = (article.get("slug") or "").lower()
+    if "bitcoin" in title or "bitcoin" in slug:
+        return "bitcoin.jpg"
+    if "ethereum" in title or "ethereum" in slug:
+        return "ethereum.jpg"
+    if "cardano" in title or "cardano" in slug or "ada" in slug:
+        return "cardano.jpg"
+    if "exchange" in title or "exchange" in slug or "revolut" in slug or "kraken" in slug:
+        return "exchange.jpg"
+    if "wallet" in title or "wallet" in slug or "seed" in slug:
+        return "wallet.jpg"
+    if "sicurezz" in title or "sicurezz" in slug or "phishing" in slug:
+        return "sicurezza.jpg"
+    if "defi" in title or "defi" in slug or "uniswap" in slug:
+        return "defi.jpg"
+    cat = article.get("category", "guide")
+    return IMAGE_DEFAULTS.get(cat, "guide.jpg")
+
+
+def facebook_image_url(article: dict) -> str:
+    return IMAGE_BASE + facebook_image_file(article)
+
+
 def build_post(article: dict) -> str:
     cat = article.get("category", "guide")
     emoji = EMOJI.get(cat, "📖")
     label = LABELS.get(cat, "Guida")
+    hook = HOOKS.get(cat, "🔥 Non perdere questa guida:")
     raw_tags = []
     for t in (article.get("tags") or [])[:4]:
         clean = t.lstrip("#").strip()
@@ -96,6 +153,7 @@ def build_post(article: dict) -> str:
     tags = " ".join(raw_tags)
     base_tags = "#crypto #The Little Satoshi News #educazione"
     return (
+        f"{hook}\n\n"
         f"{emoji} {label}: {article['title']}\n\n"
         f"{article['excerpt']}\n\n"
         f"👉 Leggi la guida completa:\n{article_url(article['slug'])}\n\n"
@@ -103,16 +161,18 @@ def build_post(article: dict) -> str:
     )
 
 
-def post_to_facebook(message: str, link: str, page_id: str, token: str, dry_run: bool) -> dict:
+def post_to_facebook(message: str, link: str, image_url: str, page_id: str, token: str, dry_run: bool) -> dict:
     payload = urllib.parse.urlencode({
+        "url": image_url,
         "message": message,
-        "link": link,
         "access_token": token,
+        "published": "true",
     }).encode("utf-8")
-    url = f"https://graph.facebook.com/v21.0/{page_id}/feed"
+    url = f"https://graph.facebook.com/v21.0/{page_id}/photos"
     if dry_run:
         print("[DRY RUN] POST", url)
         print(message)
+        print("IMAGE:", image_url)
         print("LINK:", link)
         return {"dry_run": True, "id": "dry-run"}
     req = urllib.request.Request(url, data=payload, method="POST")
@@ -330,9 +390,11 @@ def main() -> None:
 
         message = build_post(article)
         link = article_url(article["slug"])
+        image_url = facebook_image_url(article)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
+        print(f"IMAGE: {image_url}")
         try:
-            result = post_to_facebook(message, link, page_id, token, args.dry_run)
+            result = post_to_facebook(message, link, image_url, page_id, token, args.dry_run)
             print(json.dumps(result, indent=2))
             ok += 1
         except SystemExit as exc:

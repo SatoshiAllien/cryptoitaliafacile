@@ -556,7 +556,19 @@ async function initArticlePage() {
   if (metaDesc) metaDesc.content = article.excerpt;
 
   const articleUrl = getArticleUrl(slug);
-  [['og:title', article.title], ['og:description', article.excerpt], ['og:url', articleUrl], ['og:type', 'article']].forEach(([prop, content]) => {
+  const ogImage = typeof getFacebookImageAbsoluteUrl === 'function'
+    ? getFacebookImageAbsoluteUrl(article)
+    : (typeof getFacebookImageUrl === 'function' ? getFacebookImageUrl(article) : '');
+  const ogEntries = [
+    ['og:title', article.title],
+    ['og:description', article.excerpt],
+    ['og:url', articleUrl],
+    ['og:type', 'article']
+  ];
+  if (ogImage) {
+    ogEntries.push(['og:image', ogImage], ['og:image:width', '1200'], ['og:image:height', '630']);
+  }
+  ogEntries.forEach(([prop, content]) => {
     let el = document.querySelector(`meta[property="${prop}"]`);
     if (!el) {
       el = document.createElement('meta');
@@ -565,6 +577,15 @@ async function initArticlePage() {
     }
     el.content = content;
   });
+  if (ogImage) {
+    let tw = document.querySelector('meta[name="twitter:image"]');
+    if (!tw) {
+      tw = document.createElement('meta');
+      tw.setAttribute('name', 'twitter:image');
+      document.head.appendChild(tw);
+    }
+    tw.content = ogImage;
+  }
 
   const diffLabel = { beginner: 'Principiante', intermediate: 'Intermedio', advanced: 'Avanzato' }[article.difficulty] || 'Principiante';
 

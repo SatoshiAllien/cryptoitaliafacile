@@ -75,6 +75,35 @@
     .fb-post-card.scheduled-today { border-color: rgba(24, 119, 242, 0.35); }
     .fb-post-card-top { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-bottom: 0.75rem; }
     .fb-post-card h2 { font-size: 1.05rem; margin: 0 0 0.75rem; line-height: 1.4; }
+    .fb-post-image-wrap {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 0.85rem;
+      border: 1px solid rgba(24, 119, 242, 0.25);
+      background: var(--bg-elevated);
+    }
+    .fb-post-image-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 1200 / 630;
+      object-fit: cover;
+    }
+    .fb-post-image-badge {
+      position: absolute;
+      top: 0.6rem;
+      left: 0.6rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(15, 23, 42, 0.82);
+      color: #FDE047;
+      border: 1px solid rgba(253, 224, 71, 0.35);
+    }
     .fb-post-preview {
       width: 100%; min-height: 8rem; resize: vertical; background: var(--bg-alt);
       border: 1px solid var(--border); border-radius: var(--radius-sm);
@@ -94,7 +123,7 @@
     <section class="fb-posts-hero">
       <span class="section-label">Facebook</span>
       <h1>Pubblica i tuoi articoli su Facebook</h1>
-      <p>Piano <strong>2–3 post al giorno</strong> con orari consigliati. Copia i testi pronti e incollali su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
+      <p>Piano <strong>2–3 post al giorno</strong> con orari consigliati, <strong>foto clickbait correlate</strong> e testi pronti. Scarica l'immagine, caricala su Facebook e incolla il testo su <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a>.</p>
       <p style="margin-top:0.75rem;"><a href="facebook-auto-setup.html" class="btn btn-primary btn-sm" style="display:inline-flex;text-decoration:none;">⚡ Attiva post automatici</a></p>
     </section>
 
@@ -138,6 +167,7 @@
   <script src="js/site-config.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/facebook-images.js"></script>
   <script src="js/facebook-posts.js"></script>
   <script src="js/main.js"></script>
   <script>
@@ -171,11 +201,12 @@
     }
 
     function renderCard(article, posted) {
-      const post = buildFacebookPost(article);
       const url = getArticleUrl(article.slug);
       const shareUrl = getFacebookShareUrl(url);
       const label = FB_POST_LABELS[article.category] || article.category;
       const isToday = todaySlugs.has(article.slug);
+      const imageUrl = getFacebookImageUrl(article);
+      const imageFile = getFacebookImageFile(article);
       return `
         <article class="fb-post-card${posted ? ' posted' : ''}${isToday ? ' scheduled-today' : ''}" data-slug="${article.slug}">
           <div class="fb-post-card-top">
@@ -184,9 +215,14 @@
             ${article.popular ? '<span class="badge" style="background:rgba(252,238,10,0.12);color:var(--accent-yellow);border:1px solid rgba(252,238,10,0.25)">Popolare</span>' : ''}
             ${posted ? '<span class="badge" style="background:rgba(74,222,128,0.12);color:#4ade80;border:1px solid rgba(74,222,128,0.25)">Pubblicato</span>' : ''}
           </div>
+          <div class="fb-post-image-wrap">
+            <span class="fb-post-image-badge">Foto clickbait</span>
+            <img src="${imageUrl}" alt="Anteprima post Facebook: ${article.title}" loading="lazy" width="600" height="315">
+          </div>
           <h2>${article.title}</h2>
           <textarea class="fb-post-preview" readonly rows="7"></textarea>
           <div class="fb-post-actions">
+            <a href="${imageUrl}" class="btn btn-primary btn-sm" download="${imageFile}" target="_blank" rel="noopener">Scarica foto</a>
             <button type="button" class="btn btn-facebook btn-sm" data-copy-post>
               ${SOCIAL_ICONS.facebook} Copia post
             </button>
@@ -216,9 +252,12 @@
                 <div class="fb-today-slot">
                   <div class="fb-slot-time"><strong>${p.slot.label}</strong>${p.slot.time}</div>
                   <div class="fb-slot-title">${p.article.title}</div>
-                  <button type="button" class="btn btn-facebook btn-sm" data-copy-today="${p.article.slug}">
-                    ${SOCIAL_ICONS.facebook} Copia
-                  </button>
+                  <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.45rem;">
+                    <a href="${getFacebookImageUrl(p.article)}" class="btn btn-primary btn-sm" download="${getFacebookImageFile(p.article)}" target="_blank" rel="noopener">Foto</a>
+                    <button type="button" class="btn btn-facebook btn-sm" data-copy-today="${p.article.slug}">
+                      ${SOCIAL_ICONS.facebook} Copia
+                    </button>
+                  </div>
                 </div>
               `).join('')}
             </div>

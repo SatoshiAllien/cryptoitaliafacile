@@ -6,6 +6,8 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
+from brand_overlay import apply_logo
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "img" / "facebook" / "posts"
 W, H = 1200, 630
@@ -127,6 +129,7 @@ def render(name: str, cfg: dict) -> Path:
     draw.ellipse((920, 120, 1160, 360), outline=accent, width=6)
     draw.text((955, 210), "CF", fill=accent, font=load_font(96, bold=True))
 
+    img = apply_logo(img, scale=0.14)
     OUT.mkdir(parents=True, exist_ok=True)
     path = OUT / f"{name}.jpg"
     img.save(path, "JPEG", quality=92, optimize=True)

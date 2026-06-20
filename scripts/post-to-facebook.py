@@ -26,6 +26,9 @@ import urllib.parse
 import urllib.request
 from datetime import date, datetime
 from pathlib import Path
+
+from story_publish import publish_facebook_story
+
 try:
     from zoneinfo import ZoneInfo
 except ImportError:
@@ -36,6 +39,7 @@ ARTICLES_PATH = ROOT / "data" / "articles.json"
 SCHEDULE_PATH = ROOT / "data" / "facebook-schedule.json"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
 IMAGE_BASE = f"{SITE_URL}assets/img/facebook/posts/"
+STORY_IMAGE_BASE = f"{SITE_URL}assets/img/facebook/stories/"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 
 EMOJI = {
@@ -174,6 +178,10 @@ def facebook_image_file(article: dict) -> str:
 
 def facebook_image_url(article: dict) -> str:
     return IMAGE_BASE + facebook_image_file(article)
+
+
+def facebook_story_image_url(article: dict) -> str:
+    return STORY_IMAGE_BASE + facebook_image_file(article)
 
 
 def build_post(article: dict) -> str:
@@ -335,14 +343,25 @@ def already_posted(schedule: dict, date_str: str, slot: int) -> bool:
     )
 
 
-def record_post(schedule: dict, date_str: str, slot: int, slug: str, post_id: str) -> None:
-    schedule.setdefault("posted", []).append({
+def record_post(
+    schedule: dict,
+    date_str: str,
+    slot: int,
+    slug: str,
+    post_id: str,
+    *,
+    story_id: str = "",
+) -> None:
+    entry = {
         "date": date_str,
         "slot": slot,
         "slug": slug,
         "postId": post_id,
         "publishedAt": now_in_timezone_iso(schedule.get("timezone", "Europe/Rome")),
-    })
+    }
+    if story_id:
+        entry["storyId"] = story_id
+    schedule.setdefault("posted", []).append(entry)
 
 
 def get_auto_article(articles: list[dict], schedule: dict, slot: int, env: dict) -> tuple[dict | None, int, str]:
@@ -436,6 +455,7 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true", help="Mostra senza pubblicare")
     parser.add_argument("--all", action="store_true", help="Pubblica tutti gli articoli del sito")
     parser.add_argument("--delay", type=int, default=18, help="Secondi di pausa tra i post (con --all)")
+    parser.add_argument("--no-story", action="store_true", help="Pubblica solo il post feed, senza Story")
     args = parser.parse_args()
 
     env = load_env()
@@ -482,8 +502,10 @@ def main() -> None:
         message = build_post(article)
         link = article_url(article["slug"])
         image_url = facebook_image_url(article)
+        story_url = facebook_story_image_url(article)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")
+        print(f"STORY: {story_url}")
         try:
             result = post_to_facebook(message, link, image_url, page_id, token, args.dry_run)
             print(json.dumps(result, indent=2))
@@ -497,19 +519,42 @@ def main() -> None:
                 continue
             raise
 
+        story_id = ""
+        if not args.no_story:
+            try:
+                story_result = publish_facebook_story(page_id, story_url, token, args.dry_run)
+                print("STORY:", json.dumps(story_result, indent=2))
+                if story_result.get("error"):
+                    print(f"AVVISO Story non pubblicata: {story_result['error']}", file=sys.stderr)
+                else:
+                    story_id = str(
+                        story_result.get("post_id")
+                        or story_result.get("id")
+                        or story_result.get("photo_id")
+                        or ""
+                    )
+            except Exception as exc:
+                print(f"AVVISO Story non pubblicata: {exc}", file=sys.stderr)
+
         if not args.dry_run and result.get("id"):
             today_str = today_in_timezone(schedule.get("timezone", "Europe/Rome")).isoformat()
             if args.auto:
-                record_post(schedule, today_str, args.slot, article["slug"], result.get("id", ""))
+                record_post(
+                    schedule, today_str, args.slot, article["slug"], result.get("id", ""),
+                    story_id=story_id,
+                )
             elif args.all:
-                schedule.setdefault("posted", []).append({
+                entry = {
                     "date": today_str,
                     "slot": -1,
                     "slug": article["slug"],
                     "postId": result.get("id", ""),
                     "publishedAt": now_in_timezone_iso(schedule.get("timezone", "Europe/Rome")),
                     "bulk": True,
-                })
+                }
+                if story_id:
+                    entry["storyId"] = story_id
+                schedule.setdefault("posted", []).append(entry)
                 posted_slugs.add(article["slug"])
             if args.auto or args.all:
                 save_schedule(schedule)

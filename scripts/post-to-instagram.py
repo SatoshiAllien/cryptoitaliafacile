@@ -22,6 +22,8 @@ import urllib.request
 from datetime import date, datetime
 from pathlib import Path
 
+from story_publish import publish_instagram_story
+
 try:
     from zoneinfo import ZoneInfo
 except ImportError:
@@ -32,6 +34,7 @@ ARTICLES_PATH = ROOT / "data" / "articles.json"
 SCHEDULE_PATH = ROOT / "data" / "instagram-schedule.json"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
 IMAGE_BASE = f"{SITE_URL}assets/img/instagram/posts/"
+STORY_IMAGE_BASE = f"{SITE_URL}assets/img/instagram/stories/"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 GRAPH = "https://graph.facebook.com/v21.0"
 IG_HANDLE = "bitcoin.is.hope2030"
@@ -171,6 +174,10 @@ def instagram_image_file(article: dict) -> str:
 
 def instagram_image_url(article: dict) -> str:
     return IMAGE_BASE + instagram_image_file(article)
+
+
+def instagram_story_image_url(article: dict) -> str:
+    return STORY_IMAGE_BASE + instagram_image_file(article)
 
 
 def build_caption(article: dict) -> str:
@@ -332,14 +339,25 @@ def already_posted(schedule: dict, date_str: str, slot: int) -> bool:
     )
 
 
-def record_post(schedule: dict, date_str: str, slot: int, slug: str, media_id: str) -> None:
-    schedule.setdefault("posted", []).append({
+def record_post(
+    schedule: dict,
+    date_str: str,
+    slot: int,
+    slug: str,
+    media_id: str,
+    *,
+    story_id: str = "",
+) -> None:
+    entry = {
         "date": date_str,
         "slot": slot,
         "slug": slug,
         "mediaId": media_id,
         "publishedAt": now_in_timezone_iso(schedule.get("timezone", "Europe/Rome")),
-    })
+    }
+    if story_id:
+        entry["storyId"] = story_id
+    schedule.setdefault("posted", []).append(entry)
 
 
 def get_auto_article(articles: list[dict], schedule: dict, slot: int, env: dict) -> tuple[dict | None, int, str]:
@@ -399,6 +417,7 @@ def main() -> None:
     parser.add_argument("--now", action="store_true")
     parser.add_argument("--slot", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--no-story", action="store_true", help="Pubblica solo il post feed, senza Story")
     args = parser.parse_args()
 
     env = load_env()
@@ -435,8 +454,10 @@ def main() -> None:
     for i, article in enumerate(selected):
         caption = build_caption(article)
         image_url = instagram_image_url(article)
+        story_url = instagram_story_image_url(article)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")
+        print(f"STORY: {story_url}")
         result = post_to_instagram(caption, image_url, ig_id, token, args.dry_run)
         print(json.dumps(result, indent=2))
 
@@ -448,10 +469,25 @@ def main() -> None:
                 hint = "\n→ instagram-auto-setup.html (collega IG alla Page + permessi)"
             raise SystemExit(f"Instagram API error: {msg}{hint}")
 
+        story_id = ""
+        if not args.no_story:
+            try:
+                story_result = publish_instagram_story(ig_id, story_url, token, args.dry_run)
+                print("STORY:", json.dumps(story_result, indent=2))
+                if story_result.get("error"):
+                    print(f"AVVISO Story non pubblicata: {story_result['error']}", file=sys.stderr)
+                else:
+                    story_id = str(story_result.get("id") or "")
+            except Exception as exc:
+                print(f"AVVISO Story non pubblicata: {exc}", file=sys.stderr)
+
         if not args.dry_run and result.get("id"):
             today_str = today_in_timezone(schedule.get("timezone", "Europe/Rome")).isoformat()
             if args.auto:
-                record_post(schedule, today_str, args.slot, article["slug"], result["id"])
+                record_post(
+                    schedule, today_str, args.slot, article["slug"], result["id"],
+                    story_id=story_id,
+                )
                 save_schedule(schedule)
 
 

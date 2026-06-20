@@ -6,7 +6,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from brand_overlay import apply_logo
+from brand_overlay import apply_branding
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "img" / "instagram" / "posts"
@@ -121,10 +121,7 @@ def render(name: str, cfg: dict) -> Path:
 
     draw.text((56, 960), "Bitcoin is Hope · cryptoitaliafacile", fill="#94A3B8", font=load_font(26))
 
-    draw.ellipse((760, 420, 1020, 680), outline=accent, width=8)
-    draw.text((810, 520), "₿", fill=accent, font=load_font(120, bold=True))
-
-    img = apply_logo(img, scale=0.16)
+    img = apply_branding(img, name, icon_box=(760, 420, 1020, 680), accent=accent, brand_scale=0.08)
     OUT.mkdir(parents=True, exist_ok=True)
     path = OUT / f"{name}.jpg"
     img.save(path, "JPEG", quality=92, optimize=True)

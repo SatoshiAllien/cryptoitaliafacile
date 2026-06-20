@@ -1,30 +1,20 @@
 #!/usr/bin/env python3
-"""Applica logo brand a tutte le immagini post esistenti."""
+"""Rigenera tutte le immagini post: template originali + crypto + logo piccolo."""
 
 from __future__ import annotations
 
+import subprocess
+import sys
 from pathlib import Path
 
-from brand_overlay import apply_logo_file
-
-ROOT = Path(__file__).resolve().parent.parent
-DIRS = [
-    ROOT / "assets" / "img" / "facebook" / "posts",
-    ROOT / "assets" / "img" / "instagram" / "posts",
-    ROOT / "assets" / "img" / "x" / "posts",
-]
+SCRIPTS = Path(__file__).resolve().parent
 
 
 def main() -> None:
-    count = 0
-    for folder in DIRS:
-        if not folder.exists():
-            continue
-        for path in sorted(folder.glob("*.jpg")):
-            apply_logo_file(path)
-            print("LOGO", path.relative_to(ROOT))
-            count += 1
-    print(f"Completato: {count} immagini con logo.")
+    for script in ("generate-fb-images.py", "generate-ig-images.py", "generate-x-images.py"):
+        print(f"=== {script} ===")
+        subprocess.check_call([sys.executable, str(SCRIPTS / script)])
+    print("Fatto: immagini originali con icona crypto + logo brand piccolo.")
 
 
 if __name__ == "__main__":

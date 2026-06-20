@@ -22,4 +22,4 @@ foreach ($key in $keys) {
   Write-Host "Setting GitHub secret: $key"
   $vars[$key] | gh secret set $key
 }
-Write-Host "GitHub workflow instagram-auto-post.yml — 20 post + story/giorno su @krown.82."
+Write-Host 'GitHub workflow instagram-auto-post.yml — 20 post + story/giorno su @krown.82.'

@@ -16,11 +16,13 @@ def main() -> None:
         "generate-ig-images.py",
         "generate-x-images.py",
         "generate-story-images.py",
-        "generate-chill-cyber-tracks.py",
+        "generate-viral-story-tracks.py",
     ):
         print(f"=== {script} ===")
         subprocess.check_call([sys.executable, str(SCRIPTS / script)])
-    print("Fatto: immagini post + stories con icona crypto + logo brand piccolo.")
+    print("=== sync-instagram-trending-audio.py ===")
+    subprocess.run([sys.executable, str(SCRIPTS / "sync-instagram-trending-audio.py")], check=False)
+    print("Fatto: immagini + stories + playlist virale trending.")
 
 
 if __name__ == "__main__":

@@ -33,6 +33,8 @@ jobs:
 
       - name: Install dependencies
         run: pip install tzdata imageio-ffmpeg numpy Pillow
+      - name: Sync viral story music
+        run: python scripts/generate-viral-story-tracks.py && python scripts/sync-instagram-trending-audio.py || true
 
       - name: Post to Facebook
         env:

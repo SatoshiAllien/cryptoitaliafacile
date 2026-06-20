@@ -1,0 +1,104 @@
+{
+  "name": "Viral Hits · Trending Now",
+  "description": "Musica virale per Stories — hook forti, energia reel, rotazione giornaliera",
+  "updated": "2026-06-21",
+  "source": "generated-viral + instagram-trending-sync",
+  "tracks": [
+    {
+      "id": "fyp-energy",
+      "title": "FYP Energy",
+      "artist": "Trending Audio",
+      "file": "fyp-energy.mp3",
+      "mood": "viral reel · 128 BPM",
+      "viral_tag": "#FYP"
+    },
+    {
+      "id": "scroll-stopper",
+      "title": "Scroll Stopper",
+      "artist": "Viral Beats",
+      "file": "scroll-stopper.mp3",
+      "mood": "hook immediato",
+      "viral_tag": "#Trending"
+    },
+    {
+      "id": "phonk-midnight",
+      "title": "Phonk Midnight Drive",
+      "artist": "Hot Audio 2026",
+      "file": "phonk-midnight.mp3",
+      "mood": "phonk drift virale",
+      "viral_tag": "#Phonk"
+    },
+    {
+      "id": "algo-boost",
+      "title": "Algo Boost",
+      "artist": "Trending Audio",
+      "file": "algo-boost.mp3",
+      "mood": "drop social",
+      "viral_tag": "#Viral"
+    },
+    {
+      "id": "reel-hook",
+      "title": "Reel Hook Drop",
+      "artist": "Viral Beats",
+      "file": "reel-hook.mp3",
+      "mood": "reel trending",
+      "viral_tag": "#Reels"
+    },
+    {
+      "id": "crypto-hype",
+      "title": "Crypto Hype Wave",
+      "artist": "Hot Audio 2026",
+      "file": "crypto-hype.mp3",
+      "mood": "hype chart",
+      "viral_tag": "#Crypto"
+    },
+    {
+      "id": "bass-viral",
+      "title": "Bass Viral Rush",
+      "artist": "Trending Audio",
+      "file": "bass-viral.mp3",
+      "mood": "bass boost",
+      "viral_tag": "#Bass"
+    },
+    {
+      "id": "story-fire",
+      "title": "Story On Fire",
+      "artist": "Viral Beats",
+      "file": "story-fire.mp3",
+      "mood": "story energy",
+      "viral_tag": "#Stories"
+    },
+    {
+      "id": "trending-now",
+      "title": "Trending Now",
+      "artist": "Hot Audio 2026",
+      "file": "trending-now.mp3",
+      "mood": "trend del momento",
+      "viral_tag": "#TrendingNow"
+    },
+    {
+      "id": "viral-loop",
+      "title": "Viral Loop 15s",
+      "artist": "Trending Audio",
+      "file": "viral-loop.mp3",
+      "mood": "loop ipnotico",
+      "viral_tag": "#Loop"
+    },
+    {
+      "id": "hype-builder",
+      "title": "Hype Builder",
+      "artist": "Viral Beats",
+      "file": "hype-builder.mp3",
+      "mood": "build-up virale",
+      "viral_tag": "#Hype"
+    },
+    {
+      "id": "moment-heat",
+      "title": "Moment Heat",
+      "artist": "Hot Audio 2026",
+      "file": "moment-heat.mp3",
+      "mood": "heat check",
+      "viral_tag": "#Hot"
+    }
+  ]
+}

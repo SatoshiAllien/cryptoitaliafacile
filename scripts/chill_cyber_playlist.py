@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Playlist Chill Cyber Coding — selezione traccia per slot/giorno."""
+"""Playlist musica Stories — virale trending, rotazione per slot."""
 
 from __future__ import annotations
 
@@ -7,11 +7,14 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PLAYLIST_PATH = ROOT / "data" / "chill-cyber-playlist.json"
-AUDIO_DIR = ROOT / "assets" / "audio" / "chill-cyber-coding"
+PLAYLIST_PATH = ROOT / "data" / "viral-story-playlist.json"
+AUDIO_DIR = ROOT / "assets" / "audio" / "viral-stories"
 
 
 def load_playlist() -> dict:
+    if not PLAYLIST_PATH.exists():
+        fallback = ROOT / "data" / "chill-cyber-playlist.json"
+        return json.loads(fallback.read_text(encoding="utf-8"))
     return json.loads(PLAYLIST_PATH.read_text(encoding="utf-8"))
 
 
@@ -27,4 +30,9 @@ def track_for_slot(slot: int, day_index: int = 0, posts_per_day: int = 20) -> di
 
 
 def playlist_label() -> str:
-    return load_playlist().get("name", "Chill Cyber Coding")
+    return load_playlist().get("name", "Viral Hits · Trending Now")
+
+
+def viral_tag_for_slot(slot: int, day_index: int = 0, posts_per_day: int = 20) -> str:
+    track = track_for_slot(slot, day_index, posts_per_day)
+    return track.get("viral_tag", "#TrendingNow")

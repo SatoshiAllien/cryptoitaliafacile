@@ -46,17 +46,21 @@ def overlay_music_badge(
     playlist_name: str,
     track_title: str,
     track_artist: str,
-    accent: str = "#A78BFA",
+    viral_tag: str = "#TrendingNow",
+    accent: str = "#FF2A6D",
 ) -> Path:
     img = Image.open(image_path).convert("RGBA")
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
-    box = (72, 1320, 1008, 1520)
-    draw.rounded_rectangle(box, radius=28, fill=(15, 23, 42, 210), outline=accent, width=4)
-    draw.text((108, 1355), "🎵 " + playlist_name, fill="#E2E8F0", font=_font(30, bold=True))
-    draw.text((108, 1410), f"▶ {track_title}", fill="#FFFFFF", font=_font(38, bold=True))
-    draw.text((108, 1465), track_artist, fill="#94A3B8", font=_font(26))
+    box = (72, 1290, 1008, 1540)
+    draw.rounded_rectangle(box, radius=28, fill=(15, 23, 42, 225), outline=accent, width=4)
+    tag = viral_tag if viral_tag.startswith("#") else f"#{viral_tag}"
+    draw.rounded_rectangle((108, 1310, 380, 1368), radius=18, fill=accent)
+    draw.text((128, 1324), f"🔥 {tag}", fill=(15, 23, 42), font=_font(24, bold=True))
+    draw.text((108, 1385), "🎵 " + playlist_name, fill="#E2E8F0", font=_font(28, bold=True))
+    draw.text((108, 1435), f"▶ {track_title}", fill="#FFFFFF", font=_font(40, bold=True))
+    draw.text((108, 1495), track_artist, fill="#94A3B8", font=_font(26))
 
     out = Image.alpha_composite(img, layer).convert("RGB")
     tmp = Path(tempfile.gettempdir()) / f"story-badge-{image_path.stem}.jpg"
@@ -71,8 +75,9 @@ def build_story_video(
     playlist_name: str,
     track_title: str,
     track_artist: str,
+    viral_tag: str = "#TrendingNow",
     out_path: Path | None = None,
-    accent: str = "#A78BFA",
+    accent: str = "#FF2A6D",
 ) -> Path:
     if not image_path.exists():
         raise FileNotFoundError(f"Immagine story non trovata: {image_path}")
@@ -84,6 +89,7 @@ def build_story_video(
         playlist_name=playlist_name,
         track_title=track_title,
         track_artist=track_artist,
+        viral_tag=viral_tag,
         accent=accent,
     )
 
@@ -120,7 +126,7 @@ def prepare_story_video(
     day_index: int = 0,
     posts_per_day: int = 20,
 ) -> tuple[Path, dict]:
-    """Genera MP4 story con musica Chill Cyber Coding per topic e slot."""
+    """Genera MP4 story con musica virale trending per topic e slot."""
     stem = Path(image_file).stem
     img_dir = FB_STORY_IMG if platform == "facebook" else IG_STORY_IMG
     image_path = img_dir / f"{stem}.jpg"
@@ -133,6 +139,7 @@ def prepare_story_video(
         playlist_name=playlist_label(),
         track_title=track["title"],
         track_artist=track["artist"],
+        viral_tag=track.get("viral_tag", "#TrendingNow"),
         out_path=out_path,
     )
     return video, track

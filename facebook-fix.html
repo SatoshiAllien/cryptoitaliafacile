@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix Facebook — post e immagini</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .fix { max-width: 52rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+    .alert { background: rgba(220,38,38,0.1); border: 1px solid rgba(220,38,38,0.35); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem; }
+    .ok { background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.3); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem; }
+    pre { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="fix container">
+    <h1>Fix post Facebook</h1>
+    <p>Pagina: <a href="https://www.facebook.com/profile.php?id=61591151756348" target="_blank" rel="noopener">The Little Satoshi News</a></p>
+
+    <div class="alert">
+      <strong>Problema trovato:</strong> il token Facebook è <strong>scaduto il 19 giugno 2026</strong>.
+      Da allora nessun post automatico (né immagini) viene pubblicato.
+    </div>
+
+    <div class="ok">
+      <strong>Le immagini sul sito funzionano</strong> (URL pubblici su GitHub Pages).
+      Il problema non è il sito — serve un <strong>nuovo token Pagina</strong>.
+    </div>
+
+    <h2>Rinnova il token (5 minuti)</h2>
+    <ol>
+      <li>Apri <a href="https://developers.facebook.com/tools/explorer/1058281383830078/" target="_blank" rel="noopener">Graph API Explorer</a></li>
+      <li><strong>Generate Access Token</strong> → spunta <code>pages_manage_posts</code>, <code>pages_read_engagement</code>, <code>pages_show_list</code></li>
+      <li>Seleziona la pagina <strong>The Little Satoshi News</strong></li>
+      <li>Sotto il token: menu <strong>User or Page</strong> → scegli la <strong>PAGINA</strong> (non User Token)</li>
+      <li>Copia il token (inizia con <code>EAA...</code>)</li>
+      <li>Esegui:
+        <pre>python scripts\aggiorna-token-facebook.py INCOLLA_TOKEN_QUI</pre>
+      </li>
+    </ol>
+
+    <h2>Test post con immagine</h2>
+    <pre>python scripts\verify-facebook-token.py
+python scripts\post-to-facebook.py --auto --slot 0 --dry-run
+python scripts\post-to-facebook.py --auto --slot 0</pre>
+
+    <h2>Automazione cloud (PC spento)</h2>
+    <pre>powershell -ExecutionPolicy Bypass -File scripts\setup-facebook-github-secrets.ps1</pre>
+
+    <p><a href="facebook-posts.html" class="btn btn-primary btn-sm" style="text-decoration:none;display:inline-flex;">Calendario post</a>
+       <a href="facebook-auto-setup.html" class="btn btn-ghost btn-sm" style="text-decoration:none;display:inline-flex;margin-left:0.5rem;">Setup completo</a></p>
+  </div>
+  <div id="site-footer"></div>
+  <script src="js/site-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

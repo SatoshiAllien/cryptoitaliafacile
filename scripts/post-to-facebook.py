@@ -197,27 +197,59 @@ def build_post(article: dict) -> str:
     )
 
 
+def graph_post(url: str, data: dict, dry_run: bool, label: str) -> dict:
+    if dry_run:
+        print(f"[DRY RUN] POST {label}", url)
+        for k, v in data.items():
+            if k != "access_token":
+                print(f"  {k}: {v}")
+        return {"dry_run": True, "id": "dry-run"}
+    body = urllib.parse.urlencode(data).encode("utf-8")
+    req = urllib.request.Request(url, data=body, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=45) as resp:
+            return json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode("utf-8", errors="replace")
+        return {"error": {"code": e.code, "message": err_body}}
+
+
 def post_to_facebook(message: str, link: str, image_url: str, page_id: str, token: str, dry_run: bool) -> dict:
-    payload = urllib.parse.urlencode({
+    photo_url = f"https://graph.facebook.com/v21.0/{page_id}/photos"
+    photo_data = {
         "url": image_url,
         "message": message,
         "access_token": token,
         "published": "true",
-    }).encode("utf-8")
-    url = f"https://graph.facebook.com/v21.0/{page_id}/photos"
+    }
     if dry_run:
-        print("[DRY RUN] POST", url)
+        print("[DRY RUN] POST photo", photo_url)
         print(message)
         print("IMAGE:", image_url)
         print("LINK:", link)
         return {"dry_run": True, "id": "dry-run"}
-    req = urllib.request.Request(url, data=payload, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        body = e.read().decode("utf-8", errors="replace")
-        raise SystemExit(f"Facebook API error {e.code}: {body}") from e
+
+    result = graph_post(photo_url, photo_data, dry_run=False, label="photo")
+    if not result.get("error"):
+        return result
+
+    err = result["error"]
+    print(f"Photo post failed ({err.get('code')}): trying feed+link fallback...", file=sys.stderr)
+    feed_url = f"https://graph.facebook.com/v21.0/{page_id}/feed"
+    feed_data = {
+        "message": message,
+        "link": link,
+        "picture": image_url,
+        "access_token": token,
+    }
+    fallback = graph_post(feed_url, feed_data, dry_run=False, label="feed")
+    if fallback.get("error"):
+        fb_err = fallback["error"]
+        hint = ""
+        if "expired" in str(fb_err.get("message", "")).lower():
+            hint = "\nToken scaduto → facebook-fix.html"
+        raise SystemExit(f"Facebook API error {fb_err.get('code')}: {fb_err.get('message')}{hint}") from None
+    return fallback
 
 
 def article_score(article: dict) -> int:

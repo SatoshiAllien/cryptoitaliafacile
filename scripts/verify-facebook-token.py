@@ -58,6 +58,12 @@ def main() -> None:
     print("App:", data.get("application"))
     print("Tipo token:", token_type)
     print("Valido:", data.get("is_valid"))
+    if data.get("expires_at"):
+        import datetime
+        exp = datetime.datetime.fromtimestamp(int(data["expires_at"]), tz=datetime.timezone.utc)
+        print("Scade:", exp.strftime("%Y-%m-%d %H:%M UTC"))
+    else:
+        print("Scade: (token pagina — di solito non scade)")
     print("Permessi attuali:", ", ".join(sorted(scopes)) or "(nessuno)")
 
     missing = sorted(REQUIRED_SCOPES - scopes)

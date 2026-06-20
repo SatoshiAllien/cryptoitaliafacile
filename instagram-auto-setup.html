@@ -67,17 +67,33 @@
     </div>
 
     <div class="card">
-      <h2>Passo 3 — Configura .env</h2>
-      <pre>python scripts\discover-instagram-id.py
+      <h2>Passo 3 — Collega i due profili (obbligatorio)</h2>
+      <pre>python scripts\link-instagram-page.py --open
+python scripts\discover-instagram-id.py
 python scripts\verify-instagram.py</pre>
-      <p>Aggiunge automaticamente <code>INSTAGRAM_ACCOUNT_ID</code> in <code>scripts/.env</code>.</p>
+      <p>Deve comparire <code>instagram_business_account</code> (non solo <code>page_backed</code>).</p>
+      <p>Profili da collegare: <strong>Crypto Italia Facile</strong> (Facebook) ↔ <strong>@bitcoin.is.hope2030</strong> (Instagram).</p>
     </div>
 
     <div class="card">
-      <h2>Passo 4 — Genera immagini e test</h2>
-      <pre>python scripts\generate-ig-images.py
-python scripts\post-to-instagram.py --auto --slot 0 --dry-run
-python scripts\post-to-instagram.py --auto --slot 0</pre>
+      <h2>Passo 4 — Post sincronizzati FB + IG</h2>
+      <pre>python scripts\post-sync-both.py --slug comprare-bitcoin-prima-volta
+python scripts\post-to-instagram.py --auto --slot 0 --dry-run</pre>
+      <p>Stesso articolo, post feed + story con musica Chill Cyber Coding su entrambe le piattaforme.</p>
+    </div>
+
+    <div class="card">
+      <h2>Passo 5 — Genera immagini</h2>
+      <pre>python scripts\apply-logo-to-posts.py</pre>
+    </div>
+
+    <div class="card">
+      <h2>Se vedi errore (#10) — page_backed invece di Business</h2>
+      <ol>
+        <li><a href="https://developers.facebook.com/apps/1058281383830078/roles/roles/" target="_blank" rel="noopener">Ruoli app</a> → aggiungi <strong>@bitcoin.is.hope2030</strong> come Instagram Tester</li>
+        <li><a href="https://developers.facebook.com/apps/1058281383830078/app-review/permissions/" target="_blank" rel="noopener">App Review</a> → richiedi <strong>Advanced Access</strong> per <code>instagram_content_publish</code></li>
+        <li>Su Instagram: scollega e ricollega la Page Facebook — deve comparire <code>instagram_business_account</code> (non solo page-backed)</li>
+      </ol>
     </div>
 
     <div class="card">

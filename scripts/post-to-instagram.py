@@ -435,6 +435,23 @@ def main() -> None:
         print("Guida: instagram-auto-setup.html", file=sys.stderr)
         sys.exit(1)
 
+    page_id = env.get("FACEBOOK_PAGE_ID", "")
+    if not args.dry_run and page_id and token:
+        page_check = graph_request(
+            f"{GRAPH}/{page_id}?fields=instagram_business_account,page_backed_instagram_accounts"
+            f"&access_token={token}",
+            method="GET",
+        )
+        has_business = bool((page_check.get("instagram_business_account") or {}).get("id"))
+        has_backed = bool((page_check.get("page_backed_instagram_accounts") or {}).get("data"))
+        if has_backed and not has_business:
+            print(
+                "Instagram non collegato come Business alla Page (solo page_backed). "
+                "L'API non può pubblicare finché non colleghi @bitcoin.is.hope2030.",
+                file=sys.stderr,
+            )
+            print("Esegui: python scripts/link-instagram-page.py --open", file=sys.stderr)
+
     data = json.loads(ARTICLES_PATH.read_text(encoding="utf-8"))
     schedule = load_schedule()
     per_day = int(schedule.get("postsPerDay") or IG_POSTS_PER_DAY)

@@ -68,7 +68,7 @@ def main() -> None:
         print("Get keys: https://developer.x.com/")
         sys.exit(1)
 
-    url = "https://api.twitter.com/2/users/me?user.fields=username,name"
+    url = "https://api.twitter.com/2/users/me"
     req = urllib.request.Request(url, method="GET", headers={
         "Authorization": oauth1_header("GET", url, env),
     })

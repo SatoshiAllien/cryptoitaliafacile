@@ -1,7 +1,26 @@
 {
-  "startDate": "2026-06-21",
+  "startDate": "2026-06-20",
   "postsPerDay": 20,
   "timezone": "Europe/Rome",
   "account": "https://www.instagram.com/bitcoin.is.hope2030/",
-  "posted": []
+  "posted": [
+    {
+      "date": "2026-06-21",
+      "slot": 0,
+      "slug": "trasferire-crypto-exchange",
+      "mediaId": "18106973548790068",
+      "publishedAt": "2026-06-21T01:16:34.249017",
+      "storyId": "17860628337640870",
+      "storyTrack": "Cat Walk"
+    },
+    {
+      "date": "2026-06-21",
+      "slot": 1,
+      "slug": "trasferire-crypto-exchange",
+      "mediaId": "18186262768384024",
+      "publishedAt": "2026-06-21T01:19:46.789549",
+      "storyId": "18100323056122683",
+      "storyTrack": "Can't Get You Off My Mind"
+    }
+  ]
 }

@@ -11,7 +11,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from instagram_auth import graph_url
+from instagram_auth import graph_url, is_instagram_login_token
+from story_video_host import stage_story_video
 
 GRAPH = "https://graph.facebook.com/v21.0"
 
@@ -168,6 +169,49 @@ def wait_instagram_media(creation_id: str, token: str, *, max_attempts: int = 10
     return None
 
 
+def _upload_instagram_video_url(
+    ig_id: str,
+    video_url: str,
+    token: str,
+    dry_run: bool,
+) -> dict:
+    media_url = graph_url(f"/{ig_id}/media", token)
+    publish_url = graph_url(f"/{ig_id}/media_publish", token)
+    if dry_run:
+        graph_request(
+            media_url,
+            {"video_url": video_url, "media_type": "STORIES", "access_token": token},
+            dry_run=True,
+            label="IG story video_url",
+        )
+        return {"dry_run": True, "id": "dry-run-ig-story-video"}
+
+    container = graph_request(
+        media_url,
+        {"video_url": video_url, "media_type": "STORIES", "access_token": token},
+        label="IG story video_url",
+    )
+    if container.get("error"):
+        return container
+
+    creation_id = container.get("id")
+    if not creation_id:
+        return {"error": {"message": f"No creation_id: {container}"}}
+
+    processing_err = wait_instagram_media(creation_id, token)
+    if processing_err:
+        return {"error": {"message": f"Story video processing failed: {processing_err}"}}
+
+    published = graph_request(
+        publish_url,
+        {"creation_id": creation_id, "access_token": token},
+        label="IG story video publish",
+    )
+    published.setdefault("creation_id", creation_id)
+    published.setdefault("video_url", video_url)
+    return published
+
+
 def _upload_instagram_resumable(ig_id: str, video_path: Path, token: str, dry_run: bool) -> dict:
     media_url = graph_url(f"/{ig_id}/media", token)
     if dry_run:
@@ -291,10 +335,25 @@ def publish_instagram_story(
     """Pubblica Story Instagram: video con musica o immagine statica."""
     wants_video = use_video or (video_path is not None and video_path.exists())
     if wants_video:
-        result = _upload_instagram_resumable(ig_id, video_path or Path("story.mp4"), token, dry_run)
-        if not result.get("error"):
-            return result
-        print(f"Resumable IG fallito, fallback image_url: {result.get('error')}", flush=True)
+        local_video = video_path or Path("story.mp4")
+        if dry_run:
+            return _upload_instagram_video_url(ig_id, "https://example.com/story.mp4", token, dry_run=True)
+
+        if local_video.exists():
+            try:
+                _, public_url = stage_story_video(local_video, "instagram", push_git=True)
+                result = _upload_instagram_video_url(ig_id, public_url, token, dry_run=False)
+                if not result.get("error"):
+                    return result
+                print(f"video_url IG fallito: {result.get('error')}", flush=True)
+            except Exception as exc:
+                print(f"Hosting video story fallito: {exc}", flush=True)
+
+        if not is_instagram_login_token(token):
+            result = _upload_instagram_resumable(ig_id, local_video, token, dry_run)
+            if not result.get("error"):
+                return result
+            print(f"Resumable IG fallito: {result.get('error')}", flush=True)
 
     media_url = graph_url(f"/{ig_id}/media", token)
     publish_url = graph_url(f"/{ig_id}/media_publish", token)

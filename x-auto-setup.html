@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup post automatici X — @TheRiser100x</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .setup { max-width: 52rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
+    .setup h1 { margin-bottom: 0.5rem; }
+    .setup .sub { color: var(--text-muted); margin-bottom: 2rem; }
+    .setup section { margin-bottom: 2rem; }
+    .setup pre { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; overflow-x: auto; font-size: 0.85rem; }
+    .setup code { background: var(--bg-alt); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88em; }
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="setup container">
+    <h1>Post automatici su X</h1>
+    <p class="sub">2 post/giorno su <a href="https://x.com/TheRiser100x" target="_blank" rel="noopener">@TheRiser100x</a> — news crypto, White House, emoji e hashtag virali.</p>
+
+    <section>
+      <h2>Cosa fa</h2>
+      <ul>
+        <li><strong>2 post/giorno</strong> alle 10:00 e 19:00 (Roma)</li>
+        <li>Fonti: <strong>@WhiteHouse</strong>, Bitcoin Magazine, Watcher Guru, Cointelegraph…</li>
+        <li>Testi con 🚨 🇺🇸 ₿ 👀 🚀 e hashtag #Bitcoin #Crypto #WhiteHouse #TheRiser100x</li>
+        <li>Priorità mattina: White House / breaking — sera: top viral</li>
+      </ul>
+      <a href="x-posts.html" class="btn btn-primary btn-sm" style="text-decoration:none;display:inline-flex;">Vedi anteprima post</a>
+    </section>
+
+    <section>
+      <h2>1. Crea app su X Developer</h2>
+      <ol>
+        <li>Vai su <a href="https://developer.x.com/" target="_blank" rel="noopener">developer.x.com</a></li>
+        <li>Crea un progetto e un'app con permessi <strong>Read and Write</strong></li>
+        <li>Genera <strong>API Key</strong>, <strong>API Secret</strong>, <strong>Access Token</strong>, <strong>Access Token Secret</strong> per l'account @TheRiser100x</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>2. Configura scripts/.env</h2>
+      <pre>X_API_KEY=your_api_key
+X_API_SECRET=your_api_secret
+X_ACCESS_TOKEN=your_access_token
+X_ACCESS_TOKEN_SECRET=your_access_token_secret</pre>
+    </section>
+
+    <section>
+      <h2>3. GitHub Secrets (automazione cloud)</h2>
+      <p>In GitHub → Settings → Secrets → Actions, aggiungi:</p>
+      <ul>
+        <li><code>X_API_KEY</code></li>
+        <li><code>X_API_SECRET</code></li>
+        <li><code>X_ACCESS_TOKEN</code></li>
+        <li><code>X_ACCESS_TOKEN_SECRET</code></li>
+      </ul>
+      <p>Il workflow <code>x-auto-post.yml</code> pubblicherà automaticamente 2 volte al giorno.</p>
+    </section>
+
+    <section>
+      <h2>4. Test locale</h2>
+      <pre>python scripts\fetch-crypto-news.py
+python scripts\post-to-x.py --auto --slot 0 --dry-run
+python scripts\post-to-x.py --auto --slot 0</pre>
+    </section>
+  </div>
+  <div id="site-footer"></div>
+  <script src="js/site-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -20,14 +20,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch X news
-        run: python scripts/fetch-x-bitcoin-news.py
+      - name: Fetch crypto news (X)
+        run: python scripts/fetch-crypto-news.py
 
       - name: Commit updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/bitcoin-news.json
+          git add data/crypto-news.json data/bitcoin-news.json
           if git diff --staged --quiet; then
             echo "No news changes."
           else

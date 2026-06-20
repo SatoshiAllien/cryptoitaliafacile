@@ -78,6 +78,7 @@ function renderBitcoinNewsCard(item, base, { compact = false } = {}) {
       <div class="btc-news-actions">
         <a href="${href}" class="${ctaClass}"${linkTarget}>${cta}</a>
         <button type="button" class="btn btn-ghost btn-sm" data-copy-btc-news="${item.id}">${t('btcNews.repost')}</button>
+        <a href="x-posts.html" class="btn btn-ghost btn-sm">Post X virale</a>
       </div>
     </article>`;
 }

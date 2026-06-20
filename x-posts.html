@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post automatici X — @TheRiser100x</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .x-posts-hero { padding: 2.5rem 0 1.5rem; }
+    .x-posts-hero p { color: var(--text-muted); max-width: 52rem; }
+    .x-plan-box {
+      background: var(--bg-elevated); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem;
+    }
+    .x-slot { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; padding: 0.65rem 0; border-bottom: 1px solid var(--border); }
+    .x-slot:last-child { border-bottom: none; }
+    .x-grid { display: grid; gap: 1rem; }
+    .x-card {
+      background: var(--bg-elevated); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1rem;
+    }
+    .x-card--hot { border-color: rgba(252, 238, 10, 0.35); }
+    .x-preview {
+      width: 100%; min-height: 7rem; background: var(--bg-alt);
+      border: 1px solid var(--border); border-radius: var(--radius-sm);
+      color: var(--text); padding: 0.75rem; font: inherit; font-size: 0.9rem; line-height: 1.45;
+    }
+    .x-score { font-size: 0.75rem; color: var(--accent-yellow); font-weight: 700; }
+    @media (min-width: 768px) { .x-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body data-page="x-posts">
+  <div id="site-header"></div>
+  <main class="container">
+    <section class="x-posts-hero">
+      <span class="section-label">X / Twitter</span>
+      <h1>Post automatici @TheRiser100x</h1>
+      <p><strong>2 post al giorno</strong> (10:00 e 19:00 Roma) con ultime news crypto, <strong>White House</strong>, emoji e hashtag virali. Account: <a href="https://x.com/TheRiser100x" target="_blank" rel="noopener">@TheRiser100x</a></p>
+      <p style="margin-top:0.75rem;"><a href="x-auto-setup.html" class="btn btn-primary btn-sm" style="display:inline-flex;text-decoration:none;">⚡ Configura API X</a></p>
+    </section>
+
+    <div class="x-plan-box" id="x-today-plan"></div>
+
+    <div class="x-grid" id="x-posts-grid"></div>
+  </main>
+  <div id="site-footer"></div>
+
+  <script src="js/site-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/x-viral-posts.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const X_SLOTS = [
+      { label: 'Mattina', time: '10:00', hint: 'White House / Breaking / BTC' },
+      { label: 'Sera', time: '19:00', hint: 'Top news virali crypto' }
+    ];
+
+    async function initXPostsPage() {
+      const base = getBasePath();
+      const res = await fetch(`${base}data/crypto-news.json`).catch(() => fetch(`${base}data/bitcoin-news.json`));
+      const data = await res.json();
+      const items = [...(data.items || [])].sort((a, b) => xViralScore(b) - xViralScore(a));
+
+      const plan = document.getElementById('x-today-plan');
+      if (plan) {
+        const top = items.slice(0, 2);
+        plan.innerHTML = `
+          <h2 style="margin:0 0 0.75rem;font-size:1.1rem;">Oggi — 2 post programmati</h2>
+          ${X_SLOTS.map((slot, i) => {
+            const item = top[i] || items[i] || {};
+            return `<div class="x-slot">
+              <strong>${slot.label} ${slot.time}</strong>
+              <span style="color:var(--text-muted);font-size:0.85rem;">${slot.hint}</span>
+              <span style="flex:1;font-size:0.88rem;">${item.title || '—'}</span>
+              ${item.id ? `<button type="button" class="btn btn-ghost btn-sm" data-copy-x="${item.id}">Copia</button>` : ''}
+            </div>`;
+          }).join('')}`;
+      }
+
+      const grid = document.getElementById('x-posts-grid');
+      if (grid) {
+        grid.innerHTML = items.slice(0, 12).map(item => {
+          const post = buildXViralPost(item);
+          const hot = xViralScore(item) >= 12;
+          return `<article class="x-card${hot ? ' x-card--hot' : ''}" data-id="${item.id}">
+            <div style="display:flex;justify-content:space-between;gap:0.5rem;margin-bottom:0.5rem;">
+              <span class="badge">${item.sourceHandle || item.source}</span>
+              <span class="x-score">🔥 ${xViralScore(item)}</span>
+            </div>
+            <h2 style="font-size:1rem;margin:0 0 0.5rem;line-height:1.35;">${item.title}</h2>
+            <textarea class="x-preview" readonly rows="6">${post}</textarea>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.65rem;">
+              <button type="button" class="btn btn-primary btn-sm" data-copy-x="${item.id}">Copia post</button>
+              <a href="${getXShareUrl(post)}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Pubblica su X</a>
+              <a href="${item.url}" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Fonte</a>
+            </div>
+          </article>`;
+        }).join('');
+      }
+
+      document.querySelectorAll('[data-copy-x]').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const item = items.find(i => i.id === btn.dataset.copyX);
+          if (!item) return;
+          await navigator.clipboard.writeText(buildXViralPost(item));
+          btn.textContent = 'Copiato!';
+          setTimeout(() => { btn.textContent = 'Copia post'; }, 1500);
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', initXPostsPage);
+  </script>
+</body>
+</html>

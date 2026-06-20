@@ -12,36 +12,43 @@
     .setup section { margin-bottom: 2rem; }
     .setup pre { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; overflow-x: auto; font-size: 0.85rem; }
     .setup code { background: var(--bg-alt); padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.88em; }
+    .setup .warn { background: rgba(252, 238, 10, 0.08); border: 1px solid rgba(252, 238, 10, 0.3); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem; }
   </style>
 </head>
 <body>
   <div id="site-header"></div>
   <div class="setup container">
     <h1>Post automatici su X</h1>
-    <p class="sub">5 post/giorno su <a href="https://x.com/TheRiser100x" target="_blank" rel="noopener">@TheRiser100x</a> — Bitcoin, regolamentazione, repost Elon Musk, foto clickbait e hashtag virali.</p>
+    <p class="sub">5 post/giorno in <strong>inglese</strong> su <a href="https://x.com/TheRiser100x" target="_blank" rel="noopener">@TheRiser100x</a> — Bitcoin, regulation, Elon repost, clickbait images.</p>
+
+    <div class="warn">
+      <strong>Stato:</strong> il sistema è pronto. Per pubblicare serve solo configurare le <strong>X API keys</strong> (passo 1–2).
+    </div>
 
     <section>
-      <h2>Cosa fa</h2>
+      <h2>Cosa pubblica (automatico)</h2>
       <ul>
-        <li><strong>5 post/giorno</strong> alle 08:00, 11:15, 14:30, 17:45, 21:00 (Roma)</li>
-        <li>Slot: <strong>₿ Bitcoin</strong> · <strong>⚖️ Regolamentazione</strong> · <strong>🔄 Repost @elonmusk</strong> · <strong>🚨 Breaking BTC</strong> · <strong>🔥 Viral BTC</strong></li>
-        <li>Fonti: <strong>@elonmusk</strong>, @WhiteHouse, @SECGov, Bitcoin Magazine, Watcher Guru…</li>
-        <li>Foto clickbait + emoji 🚨 ₿ ⚖️ 🔄 e hashtag #Bitcoin #Regulation #ElonMusk #TheRiser100x</li>
+        <li><strong>5 post/day</strong> at 08:00, 11:15, 14:30, 17:45, 21:00 (Rome)</li>
+        <li>Slots: <strong>₿ Bitcoin</strong> · <strong>⚖️ Regulation</strong> · <strong>🔄 @elonmusk repost</strong> · <strong>🚨 Breaking BTC</strong> · <strong>🔥 Viral BTC</strong></li>
+        <li>Sources: @elonmusk, @WhiteHouse, @SECGov, Bitcoin Magazine, Watcher Guru…</li>
+        <li>Clickbait image + emojis + hashtags #Bitcoin #Regulation #ElonMusk #TheRiser100x</li>
       </ul>
-      <a href="x-posts.html" class="btn btn-primary btn-sm" style="text-decoration:none;display:inline-flex;">Vedi anteprima post</a>
+      <a href="x-posts.html" class="btn btn-primary btn-sm" style="text-decoration:none;display:inline-flex;">Preview posts</a>
     </section>
 
     <section>
-      <h2>1. Crea app su X Developer</h2>
+      <h2>1. Get X API keys</h2>
       <ol>
-        <li>Vai su <a href="https://developer.x.com/" target="_blank" rel="noopener">developer.x.com</a></li>
-        <li>Crea un progetto e un'app con permessi <strong>Read and Write</strong></li>
-        <li>Genera <strong>API Key</strong>, <strong>API Secret</strong>, <strong>Access Token</strong>, <strong>Access Token Secret</strong> per l'account @TheRiser100x</li>
+        <li>Go to <a href="https://developer.x.com/" target="_blank" rel="noopener">developer.x.com</a></li>
+        <li>Create a project + app with <strong>Read and Write</strong> permissions</li>
+        <li>Generate keys while logged in as <strong>@TheRiser100x</strong></li>
+        <li>Copy: API Key, API Secret, Access Token, Access Token Secret</li>
       </ol>
+      <p>Shortcut: run <code>scripts\apri-x-developer.bat</code></p>
     </section>
 
     <section>
-      <h2>2. Configura scripts/.env</h2>
+      <h2>2. Add keys to scripts/.env</h2>
       <pre>X_API_KEY=your_api_key
 X_API_SECRET=your_api_secret
 X_ACCESS_TOKEN=your_access_token
@@ -49,20 +56,22 @@ X_ACCESS_TOKEN_SECRET=your_access_token_secret</pre>
     </section>
 
     <section>
-      <h2>3. GitHub Secrets (automazione cloud)</h2>
-      <p>In GitHub → Settings → Secrets → Actions, aggiungi:</p>
-      <ul>
-        <li><code>X_API_KEY</code></li>
-        <li><code>X_API_SECRET</code></li>
-        <li><code>X_ACCESS_TOKEN</code></li>
-        <li><code>X_ACCESS_TOKEN_SECRET</code></li>
-      </ul>
-      <p>Il workflow <code>x-auto-post.yml</code> pubblicherà automaticamente 5 volte al giorno con immagine allegata.</p>
+      <h2>3. Activate (one command)</h2>
+      <pre>powershell -ExecutionPolicy Bypass -File scripts\setup-x-auto.ps1</pre>
+      <p>This will: verify credentials → dry-run test → register Windows tasks (5 posts/day on your PC).</p>
     </section>
 
     <section>
-      <h2>4. Test locale</h2>
-      <pre>python scripts\fetch-crypto-news.py
+      <h2>4. Cloud backup (PC off = still posting)</h2>
+      <p>Push the same keys to GitHub Actions:</p>
+      <pre>powershell -ExecutionPolicy Bypass -File scripts\setup-x-github-secrets.ps1</pre>
+      <p>Workflow <code>x-auto-post.yml</code> runs every 30 min on GitHub servers.</p>
+    </section>
+
+    <section>
+      <h2>5. Manual test</h2>
+      <pre>python scripts\verify-x-credentials.py
+python scripts\fetch-crypto-news.py
 python scripts\post-to-x.py --auto --slot 0 --dry-run
 python scripts\post-to-x.py --auto --slot 0</pre>
     </section>

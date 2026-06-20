@@ -3,7 +3,6 @@
   "postsPerDay": 20,
   "timezone": "Europe/Rome",
   "account": "https://www.instagram.com/krown.82/",
-  "handle": "krown.82",
   "posted": [
     {
       "date": "2026-06-21",
@@ -22,6 +21,16 @@
       "publishedAt": "2026-06-21T01:19:46.789549",
       "storyId": "18100323056122683",
       "storyTrack": "Can't Get You Off My Mind"
+    },
+    {
+      "date": "2026-06-21",
+      "slot": 2,
+      "slug": "trasferire-crypto-exchange",
+      "mediaId": "18048158360562843",
+      "publishedAt": "2026-06-21T01:32:16.277711",
+      "storyId": "17876450523492248",
+      "storyTrack": "Rising Forest"
     }
-  ]
+  ],
+  "handle": "krown.82"
 }

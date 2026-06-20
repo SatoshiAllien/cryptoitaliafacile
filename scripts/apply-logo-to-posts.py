@@ -16,13 +16,16 @@ def main() -> None:
         "generate-ig-images.py",
         "generate-x-images.py",
         "generate-story-images.py",
-        "generate-viral-story-tracks.py",
+        "fetch-mixkit-story-music.py",
     ):
         print(f"=== {script} ===")
-        subprocess.check_call([sys.executable, str(SCRIPTS / script)])
+        if script == "fetch-mixkit-story-music.py":
+            subprocess.run([sys.executable, str(SCRIPTS / script)], check=False)
+        else:
+            subprocess.check_call([sys.executable, str(SCRIPTS / script)])
     print("=== sync-instagram-trending-audio.py ===")
     subprocess.run([sys.executable, str(SCRIPTS / "sync-instagram-trending-audio.py")], check=False)
-    print("Fatto: immagini + stories + playlist virale trending.")
+    print("Fatto: immagini + stories + musica Mixkit pop/EDM.")
 
 
 if __name__ == "__main__":

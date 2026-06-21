@@ -1,0 +1,227 @@
+{
+  "account": "krown.82",
+  "highlightTitle": "Guide Crypto",
+  "count": 20,
+  "articles": [
+    {
+      "order": 1,
+      "slug": "trend-stablecoin",
+      "title": "Stablecoin: come funzionano e quali rischi nascondono",
+      "category": "trend",
+      "date": "Aprile 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-stablecoin",
+      "imageFile": "01-trend-stablecoin-abstract.jpg"
+    },
+    {
+      "order": 2,
+      "slug": "staking-ada",
+      "title": "Staking ADA: guida completa (delega vs pool)",
+      "category": "cardano",
+      "date": "Maggio 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=staking-ada",
+      "imageFile": "02-staking-ada-thematic.jpg"
+    },
+    {
+      "order": 3,
+      "slug": "tip-inizia-poco",
+      "title": "Inizia con pochi euro: impara prima di investire tanto",
+      "category": "tip",
+      "date": "Maggio 2026",
+      "variant": "minimal",
+      "variantKey": "variant-3-overlay",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=tip-inizia-poco",
+      "imageFile": "03-tip-inizia-poco-minimal.jpg"
+    },
+    {
+      "order": 4,
+      "slug": "tip-non-tenere-exchange",
+      "title": "Non tenere tutte le crypto sull'exchange",
+      "category": "tip",
+      "date": "Maggio 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=tip-non-tenere-exchange",
+      "imageFile": "04-tip-non-tenere-exchange-abstract.jpg"
+    },
+    {
+      "order": 5,
+      "slug": "trend-layer2",
+      "title": "Layer 2: perché Ethereum ha bisogno di \"strade secondarie\"",
+      "category": "trend",
+      "date": "Maggio 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-layer2",
+      "imageFile": "05-trend-layer2-thematic.jpg"
+    },
+    {
+      "order": 6,
+      "slug": "trend-rwa",
+      "title": "Real World Assets (RWA): crypto che rappresentano asset reali",
+      "category": "trend",
+      "date": "Maggio 2026",
+      "variant": "minimal",
+      "variantKey": "variant-3-overlay",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-rwa",
+      "imageFile": "06-trend-rwa-minimal.jpg"
+    },
+    {
+      "order": 7,
+      "slug": "wallet-cardano-confronto",
+      "title": "Eternl, Nami, Yoroi: quale wallet Cardano scegliere",
+      "category": "cardano",
+      "date": "Maggio 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=wallet-cardano-confronto",
+      "imageFile": "07-wallet-cardano-confronto-abstract.jpg"
+    },
+    {
+      "order": 8,
+      "slug": "cardano-spiegato",
+      "title": "Cardano spiegato semplice: cos'è ADA e come funziona",
+      "category": "cardano",
+      "date": "Giugno 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=cardano-spiegato",
+      "imageFile": "08-cardano-spiegato-thematic.jpg"
+    },
+    {
+      "order": 9,
+      "slug": "comprare-ada",
+      "title": "Come acquistare ADA su exchange italiani",
+      "category": "cardano",
+      "date": "Giugno 2026",
+      "variant": "minimal",
+      "variantKey": "variant-3-overlay",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=comprare-ada",
+      "imageFile": "09-comprare-ada-minimal.jpg"
+    },
+    {
+      "order": 10,
+      "slug": "comprare-bitcoin-prima-volta",
+      "title": "Come comprare Bitcoin per la prima volta (guida completa 2026)",
+      "category": "guide",
+      "date": "Giugno 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=comprare-bitcoin-prima-volta",
+      "imageFile": "10-comprare-bitcoin-prima-volta-abstract.jpg"
+    },
+    {
+      "order": 11,
+      "slug": "creare-wallet-sicuro",
+      "title": "Come creare un wallet crypto sicuro in 10 minuti",
+      "category": "guide",
+      "date": "Giugno 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=creare-wallet-sicuro",
+      "imageFile": "11-creare-wallet-sicuro-thematic.jpg"
+    },
+    {
+      "order": 12,
+      "slug": "iniziare-exchange-revolut-kraken",
+      "title": "Come iniziare con gli exchange: guida Revolut + Kraken per principianti",
+      "category": "guide",
+      "date": "Giugno 2026",
+      "variant": "minimal",
+      "variantKey": "variant-3-overlay",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=iniziare-exchange-revolut-kraken",
+      "imageFile": "12-iniziare-exchange-revolut-kraken-minimal.jpg"
+    },
+    {
+      "order": 13,
+      "slug": "lightning-network-guida",
+      "title": "Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet",
+      "category": "guide",
+      "date": "Giugno 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=lightning-network-guida",
+      "imageFile": "13-lightning-network-guida-abstract.jpg"
+    },
+    {
+      "order": 14,
+      "slug": "proteggere-seed-phrase",
+      "title": "Come proteggere la seed phrase: metodi e errori da evitare",
+      "category": "guide",
+      "date": "Giugno 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=proteggere-seed-phrase",
+      "imageFile": "14-proteggere-seed-phrase-thematic.jpg"
+    },
+    {
+      "order": 15,
+      "slug": "seed-phrase-guida",
+      "title": "Seed phrase: cos'è, come generarla e conservarla",
+      "category": "sicurezza",
+      "date": "Giugno 2026",
+      "variant": "minimal",
+      "variantKey": "variant-3-overlay",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=seed-phrase-guida",
+      "imageFile": "15-seed-phrase-guida-minimal.jpg"
+    },
+    {
+      "order": 16,
+      "slug": "tip-2fa-exchange",
+      "title": "Attiva sempre il 2FA sull'exchange (non via SMS)",
+      "category": "tip",
+      "date": "Giugno 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=tip-2fa-exchange",
+      "imageFile": "16-tip-2fa-exchange-abstract.jpg"
+    },
+    {
+      "order": 17,
+      "slug": "tip-mai-seed-phrase",
+      "title": "Mai condividere la seed phrase: nemmeno con il \"supporto\"",
+      "category": "tip",
+      "date": "Giugno 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=tip-mai-seed-phrase",
+      "imageFile": "17-tip-mai-seed-phrase-thematic.jpg"
+    },
+    {
+      "order": 18,
+      "slug": "tip-verifica-url",
+      "title": "Verifica l'URL dell'exchange: il phishing inizia da lì",
+      "category": "tip",
+      "date": "Giugno 2026",
+      "variant": "minimal",
+      "variantKey": "variant-3-overlay",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=tip-verifica-url",
+      "imageFile": "18-tip-verifica-url-minimal.jpg"
+    },
+    {
+      "order": 19,
+      "slug": "trend-etf-bitcoin",
+      "title": "Bitcoin Spot ETF: cosa sono e perché contano",
+      "category": "trend",
+      "date": "Giugno 2026",
+      "variant": "abstract",
+      "variantKey": "variant-1-hero",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-etf-bitcoin",
+      "imageFile": "19-trend-etf-bitcoin-abstract.jpg"
+    },
+    {
+      "order": 20,
+      "slug": "trend-mica",
+      "title": "MiCA 2026: cosa cambia davvero per le crypto in Europa",
+      "category": "trend",
+      "date": "Giugno 2026",
+      "variant": "thematic",
+      "variantKey": "variant-2-abstract",
+      "link": "https://satoshiallien.github.io/cryptoitaliafacile/articolo.html?slug=trend-mica",
+      "imageFile": "20-trend-mica-thematic.jpg"
+    }
+  ]
+}

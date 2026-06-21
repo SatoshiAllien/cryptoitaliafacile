@@ -33,19 +33,20 @@ function renderLogo(base) {
     </a>`;
 }
 
-const NAV_SHORT = {
-  'guide/index.html': 'Guide',
-  'crypto-tips/index.html': 'Tips',
-  'trend/index.html': 'Trend',
-  'news/index.html': 'News',
-  'sicurezza/index.html': 'Sicurezza',
-  'cardano/index.html': 'Cardano',
-  'strumenti/index.html': 'Strumenti',
-  'chat/index.html': 'Satoshi AI'
+const NAV_TAB_KEYS = {
+  'guide/index.html': 'tabGuide',
+  'crypto-tips/index.html': 'tabTips',
+  'trend/index.html': 'tabTrend',
+  'news/index.html': 'tabNews',
+  'sicurezza/index.html': 'tabSecurity',
+  'cardano/index.html': 'tabCardano',
+  'strumenti/index.html': 'tabTools',
+  'chat/index.html': 'tabSatoshi'
 };
 
 function navTabLabel(href) {
-  return NAV_SHORT[href] || navLabel(href);
+  const key = NAV_TAB_KEYS[href];
+  return key ? t(`nav.${key}`) : navLabel(href);
 }
 
 function renderNavTabs(base) {
@@ -71,11 +72,11 @@ function renderNavTabs(base) {
 function renderMobileNavCards(base) {
   return SITE_CONFIG.nav.map(item => {
     const label = navTabLabel(item.href);
-    const sub = item.children ? `${item.children.length} sottosezioni` : t('nav.openSection') || 'Apri sezione';
+    const sub = item.children ? t('nav.allGuides') : t('nav.openSection');
     if (item.href === 'chat/index.html') {
       return `<button type="button" class="mobile-nav-card mobile-nav-card--ai" data-satoshi-open>
         <span>${label}</span>
-        <span class="mobile-nav-card-sub">Assistente AI crypto</span>
+        <span class="mobile-nav-card-sub">${t('nav.satoshiSub')}</span>
       </button>`;
     }
     const cls = item.highlight ? 'mobile-nav-card mobile-nav-card--ai' : 'mobile-nav-card';

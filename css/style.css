@@ -1,18 +1,18 @@
 /* The Little Satoshi News — Cyber Orange Gold Design System */
 :root {
-  --primary: #FF8C00;
-  --primary-dark: #E67A00;
-  --primary-light: rgba(255, 140, 0, 0.14);
-  --secondary: #FFD700;
-  --secondary-light: rgba(255, 215, 0, 0.12);
+  --primary: #E8940C;
+  --primary-dark: #C77D08;
+  --primary-light: rgba(232, 148, 12, 0.1);
+  --secondary: #E8C547;
+  --secondary-light: rgba(232, 197, 71, 0.1);
   --accent-coral: #FF6B35;
   --accent-coral-light: rgba(255, 107, 53, 0.12);
   --accent-yellow: #FFD700;
   --accent-yellow-light: rgba(255, 215, 0, 0.1);
   --accent-purple: #C9A227;
   --accent-purple-light: rgba(201, 162, 39, 0.12);
-  --accent-gold: #FFD700;
-  --accent-amber: #FFAB00;
+  --accent-gold: #E8C547;
+  --accent-amber: #F0A830;
   --bg: #0c0a07;
   --bg-alt: #141008;
   --surface: #1a1510;
@@ -22,7 +22,7 @@
   --text-muted: #b0a090;
   --text-light: #7a6e5e;
   --border: rgba(255, 170, 0, 0.14);
-  --border-glow: rgba(255, 184, 0, 0.42);
+  --border-glow: rgba(232, 168, 12, 0.3);
   --warning: #FFD700;
   --warning-bg: rgba(255, 215, 0, 0.08);
   --danger: #FF6B35;
@@ -30,9 +30,9 @@
   --success-bg: rgba(255, 140, 0, 0.1);
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.6);
-  --shadow-color: 0 0 24px rgba(255, 140, 0, 0.28), 0 8px 32px rgba(0, 0, 0, 0.45);
-  --glow-cyan: 0 0 20px rgba(255, 140, 0, 0.4);
-  --glow-magenta: 0 0 20px rgba(255, 215, 0, 0.35);
+  --shadow-color: 0 0 18px rgba(232, 148, 12, 0.16), 0 8px 32px rgba(0, 0, 0, 0.45);
+  --glow-cyan: 0 0 14px rgba(232, 148, 12, 0.22);
+  --glow-magenta: 0 0 14px rgba(232, 197, 71, 0.18);
   --radius: 12px;
   --radius-sm: 8px;
   --radius-lg: 16px;
@@ -216,19 +216,19 @@ button.nav-tab {
 .nav-tab--active {
   color: #0c0a07 !important;
   background: linear-gradient(135deg, var(--primary), var(--accent-amber)) !important;
-  border-color: rgba(255, 215, 0, 0.5) !important;
-  box-shadow: 0 0 16px rgba(255, 140, 0, 0.3);
+  border-color: rgba(232, 197, 71, 0.4) !important;
+  box-shadow: 0 2px 12px rgba(232, 148, 12, 0.22);
 }
 .nav-tab--ai {
   color: var(--secondary);
-  background: linear-gradient(135deg, rgba(255, 140, 0, 0.18), rgba(255, 215, 0, 0.12));
-  border-color: rgba(255, 184, 0, 0.35);
+  background: linear-gradient(135deg, rgba(232, 148, 12, 0.12), rgba(232, 197, 71, 0.08));
+  border-color: rgba(232, 168, 12, 0.28);
 }
 .nav-tab--ai:hover,
 .nav-tab--ai.nav-tab--active {
   color: #0c0a07;
   background: linear-gradient(135deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.35);
+  box-shadow: 0 2px 14px rgba(232, 148, 12, 0.25);
 }
 .nav-caret { font-size: 0.65rem; opacity: 0.7; }
 .nav-tab-item--dropdown { position: relative; }
@@ -2174,7 +2174,7 @@ button.mobile-nav-card {
   .logo-tagline { display: block; }
   .menu-toggle { display: none; }
   .header-cta { display: inline-flex; }
-  .nav-tab { font-size: 0.82rem; padding: 0.45rem 1rem; }
+  .nav-tab { font-size: 0.84rem; padding: 0.48rem 1.05rem; }
   .category-grid { grid-template-columns: repeat(3, 1fr); }
   .category-card { flex-direction: column; text-align: center; padding: 1.25rem 0.75rem; }
   .articles-grid { grid-template-columns: repeat(3, 1fr); }

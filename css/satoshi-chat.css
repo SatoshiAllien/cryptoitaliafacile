@@ -23,15 +23,13 @@ button.header-cta { width: auto; text-align: center; }
 /* CTA buttons — gradient glow */
 .btn-satoshi {
   position: relative;
-  background: linear-gradient(135deg, #FF8C00 0%, #FFAB00 55%, #FFD700 100%);
-  background-size: 200% 200%;
-  color: #0a0a12 !important;
+  background: linear-gradient(135deg, #E8940C 0%, #F0A830 55%, #E8C547 100%);
+  color: #0c0a07 !important;
   border: none;
   gap: 0.5rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  box-shadow: 0 0 24px rgba(255, 140, 0, 0.35), 0 4px 20px rgba(255, 215, 0, 0.25);
-  animation: satoshi-btn-shine 4s ease infinite;
+  box-shadow: 0 4px 18px rgba(232, 148, 12, 0.28);
   overflow: hidden;
 }
 .btn-satoshi::before {
@@ -44,15 +42,11 @@ button.header-cta { width: auto; text-align: center; }
 }
 .btn-satoshi:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 0 36px rgba(255, 140, 0, 0.5), 0 8px 32px rgba(255, 215, 0, 0.35);
+  box-shadow: 0 6px 24px rgba(232, 148, 12, 0.35);
   color: #0c0a07 !important;
 }
 .btn-satoshi:hover::before { transform: translateX(100%); }
 .btn-satoshi:active { transform: translateY(0) scale(0.98); }
-@keyframes satoshi-btn-shine {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
 
 /* Floating launcher */
 .satoshi-launcher {

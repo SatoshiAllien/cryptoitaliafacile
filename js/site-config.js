@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260621-orange-gold',
+  assetVersion: '20260621-orange-refine',
   email: 'info@cryptofacile.com',
 
   teacher: {
@@ -27,8 +27,8 @@ const SITE_CONFIG = {
   },
 
   colors: {
-    primary: '#FF8C00',
-    secondary: '#FFD700',
+    primary: '#E8940C',
+    secondary: '#E8C547',
     coral: '#FF6B35',
     yellow: '#FFD700',
     purple: '#C9A227'

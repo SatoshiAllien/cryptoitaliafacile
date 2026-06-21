@@ -16,6 +16,9 @@ const TRANSLATIONS = {
       principianti: 'Principianti', avanzate: 'Avanzate', defi: 'DeFi & Staking', wallet: 'Wallet',
       allGuides: 'Tutte le guide', newsletter: 'Newsletter', newsletterFree: 'Newsletter gratis',
       satoshiAi: 'Parla con Satoshi',
+      tabGuide: 'Guide', tabTips: 'Consigli', tabTrend: 'Trend', tabNews: 'Notizie',
+      tabSecurity: 'Sicurezza', tabCardano: 'Cardano', tabTools: 'Strumenti', tabSatoshi: 'Satoshi',
+      openSection: 'Apri sezione', satoshiSub: 'Assistente AI crypto',
       social: 'Social', search: 'Cerca', menu: 'Menu', close: 'Chiudi', closeSearch: 'Chiudi ricerca'
     },
     ui: {
@@ -302,6 +305,9 @@ const TRANSLATIONS = {
       principianti: 'Beginners', avanzate: 'Advanced', defi: 'DeFi & Staking', wallet: 'Wallet',
       allGuides: 'All guides', newsletter: 'Newsletter', newsletterFree: 'Free newsletter',
       satoshiAi: 'Talk to Satoshi',
+      tabGuide: 'Guides', tabTips: 'Tips', tabTrend: 'Trends', tabNews: 'News',
+      tabSecurity: 'Security', tabCardano: 'Cardano', tabTools: 'Tools', tabSatoshi: 'Satoshi',
+      openSection: 'Open section', satoshiSub: 'Crypto AI assistant',
       social: 'Social', search: 'Search', menu: 'Menu', close: 'Close', closeSearch: 'Close search'
     },
     ui: {

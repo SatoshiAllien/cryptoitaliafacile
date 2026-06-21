@@ -25,6 +25,11 @@
     "category": "bitcoin"
   },
   {
+    "slug": "cardano-spiegato",
+    "title": "Cardano spiegato semplice: cos'è ADA e come funziona",
+    "category": "cardano"
+  },
+  {
     "slug": "staking-ada",
     "title": "Staking ADA: guida completa (delega vs pool)",
     "category": "cardano"
@@ -32,6 +37,11 @@
   {
     "slug": "cardano-vs-ethereum",
     "title": "Cardano vs Ethereum: differenze pratiche per l'utente",
+    "category": "cardano"
+  },
+  {
+    "slug": "plutus-panoramica",
+    "title": "Smart contract Cardano (Plutus): panoramica per utenti",
     "category": "cardano"
   },
   {
@@ -65,28 +75,13 @@
     "category": "cardano"
   },
   {
-    "slug": "cardano-spiegato",
-    "title": "Cardano spiegato semplice: cos'è ADA e come funziona",
-    "category": "regolamentazione"
-  },
-  {
     "slug": "trend-mica",
     "title": "MiCA 2026: cosa cambia davvero per le crypto in Europa",
     "category": "regolamentazione"
   },
   {
-    "slug": "plutus-panoramica",
-    "title": "Smart contract Cardano (Plutus): panoramica per utenti",
-    "category": "regolamentazione"
-  },
-  {
     "slug": "dichiarare-crypto-italia",
     "title": "Come dichiarare le crypto in Italia (panoramica pratica)",
-    "category": "regolamentazione"
-  },
-  {
-    "slug": "nodo-validator",
-    "title": "Configurare un nodo validator (panoramica requisiti)",
     "category": "regolamentazione"
   },
   {
@@ -222,11 +217,6 @@
   {
     "slug": "notifiche-prezzo-app",
     "title": "Impostare notifiche di prezzo su app mobile",
-    "category": "mercati"
-  },
-  {
-    "slug": "tip-diversifica",
-    "title": "Diversifica: non mettere tutto su una sola crypto",
     "category": "mercati"
   },
   {
@@ -370,6 +360,11 @@
     "category": "guide"
   },
   {
+    "slug": "tip-diversifica",
+    "title": "Diversifica: non mettere tutto su una sola crypto",
+    "category": "guide"
+  },
+  {
     "slug": "tip-traccia-operazioni",
     "title": "Tieni traccia di ogni operazione per la dichiarazione",
     "category": "guide"
@@ -442,6 +437,11 @@
   {
     "slug": "leggere-indirizzo-wallet",
     "title": "Come leggere un indirizzo wallet e verificare una transazione",
+    "category": "guide"
+  },
+  {
+    "slug": "nodo-validator",
+    "title": "Configurare un nodo validator (panoramica requisiti)",
     "category": "guide"
   },
   {

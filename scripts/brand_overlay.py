@@ -93,8 +93,9 @@ def _paste_in_box(canvas: Image.Image, icon: Image.Image, box: tuple[int, int, i
     w, h = x2 - x1, y2 - y1
     layer = canvas.convert("RGBA")
     draw = ImageDraw.Draw(layer)
+    draw.ellipse(box, fill=(30, 41, 59, 230))
     if outline:
-        draw.ellipse(box, outline=outline, width=max(4, w // 40))
+        draw.ellipse(box, outline=outline, width=max(2, w // 60))
     fitted = icon.copy()
     fitted.thumbnail((int(w * 0.72), int(h * 0.72)), Image.Resampling.LANCZOS)
     px = x1 + (w - fitted.width) // 2

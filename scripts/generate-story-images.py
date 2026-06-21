@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from image_style import CTA, TOPICS, render_story, topic_cfg
+from image_style import CTA, JPEG_QUALITY, TOPICS, render_story, topic_cfg
 
 ROOT = Path(__file__).resolve().parent.parent
 FB_OUT = ROOT / "assets" / "img" / "facebook" / "stories"
@@ -25,7 +25,7 @@ def main() -> None:
             footer="📰 The Little Satoshi News · cryptoitaliafacile",
         )
         p = FB_OUT / f"{name}.jpg"
-        fb.save(p, "JPEG", quality=93, optimize=True)
+        fb.save(p, "JPEG", quality=JPEG_QUALITY, optimize=True)
         print("OK FB", p.relative_to(ROOT))
 
         ig = render_story(
@@ -35,7 +35,7 @@ def main() -> None:
             footer="✨ @krown.82 · cryptoitaliafacile",
         )
         p = IG_OUT / f"{name}.jpg"
-        ig.save(p, "JPEG", quality=93, optimize=True)
+        ig.save(p, "JPEG", quality=JPEG_QUALITY, optimize=True)
         print("OK IG", p.relative_to(ROOT))
 
 

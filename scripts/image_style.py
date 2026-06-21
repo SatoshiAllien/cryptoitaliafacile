@@ -145,12 +145,14 @@ TOPICS: dict[str, dict] = {
 }
 
 CTA = {
-    "fb_post": "👉 Leggi la guida",
+    "fb_post": "👉 Clicca qui",
     "fb_story": "👉 Clicca qui · QR ↓",
-    "ig_post": "👆 Read the guide",
+    "ig_post": "👆 Tap here",
     "ig_story": "👆 Tap here · QR ↓",
     "x_post": "👉 Tap to read",
 }
+
+JPEG_QUALITY = 95
 
 
 def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
@@ -280,8 +282,6 @@ def draw_cta_button(
     th = font_size + 4
     tx = x1 + (x2 - x1 - tw) // 2
     ty = y1 + (y2 - y1 - th) // 2
-    if not outline:
-        draw.rounded_rectangle((x1, y1, x2, y2), radius=22, fill=_hex(accent))
     draw_mixed_text(draw, (tx, ty), text, font, text_color, emoji_font=ef)
 
 
@@ -320,7 +320,7 @@ def render_post(
 
     card_y = m + 80
     card_h = int(height * 0.52)
-    draw.rounded_rectangle((m, card_y, width - m, card_y + card_h), radius=24, fill=(15, 23, 42))
+    draw.rounded_rectangle((m, card_y, width - m, card_y + card_h), radius=24, fill=(15, 23, 42), outline=_hex(cfg["accent"]), width=2)
 
     hook_y = card_y + int(card_h * 0.12)
     draw_multiline(draw, (m + 32, hook_y), cfg["hook"], load_font(hook_size, bold=True), "#F8FAFC", line_gap=6)

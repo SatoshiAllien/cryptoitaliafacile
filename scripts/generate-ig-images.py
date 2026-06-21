@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from image_style import CTA, TOPICS, render_post, topic_cfg
+from image_style import CTA, JPEG_QUALITY, TOPICS, render_post, topic_cfg
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "img" / "instagram" / "posts"
@@ -32,7 +32,7 @@ def main() -> None:
             brand_scale=0.08,
         )
         path = OUT / f"{name}.jpg"
-        img.save(path, "JPEG", quality=93, optimize=True)
+        img.save(path, "JPEG", quality=JPEG_QUALITY, optimize=True)
         print("OK", path.relative_to(ROOT))
 
 

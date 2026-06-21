@@ -213,6 +213,26 @@ function renderFooter() {
     </footer>`;
 }
 
+function getArticlePreviewSquareUrl(article) {
+  if (!article) return '';
+  const file = article.igImage || article.fbImage;
+  if (!file) return '';
+  const path = `assets/img/instagram/posts/${file}`;
+  return typeof getAssetUrl === 'function' ? getAssetUrl(path) : path;
+}
+
+function getArticlePreviewHeroUrl(article) {
+  if (!article) return '';
+  const file = article.fbImage || article.igImage;
+  if (!file) return '';
+  const path = `assets/img/facebook/posts/${file}`;
+  if (typeof getAssetUrl === 'function') return getAssetUrl(path);
+  const base = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.siteUrl)
+    ? SITE_CONFIG.siteUrl.replace(/\/?$/, '/')
+    : 'https://satoshiallien.github.io/cryptoitaliafacile/';
+  return `${base}${path}`;
+}
+
 function renderBreadcrumb(items) {
   const base = getBasePath();
   const crumbs = items.map((item, i) => {
@@ -229,9 +249,15 @@ function renderArticleCard(article, base) {
   const a = localizeArticle(article);
   const diffClass = `badge--${a.difficulty}`;
   const diffLabel = { beginner: t('ui.beginner'), intermediate: t('ui.intermediate'), advanced: t('ui.advanced') }[a.difficulty] || t('ui.beginner');
+  const previewUrl = typeof getArticlePreviewSquareUrl === 'function'
+    ? getArticlePreviewSquareUrl(a)
+    : '';
+  const previewHtml = previewUrl
+    ? `<div class="article-card-media"><img src="${previewUrl}" alt="" class="article-card-image" loading="lazy" width="400" height="400" decoding="async"></div>`
+    : '<div class="article-card-accent"></div>';
   return `
     <a href="${base}articolo.html?slug=${a.slug}" class="article-card article-card--${a.difficulty}">
-      <div class="article-card-accent"></div>
+      ${previewHtml}
       <div class="article-card-body">
         <div class="article-card-top">
           <span class="badge ${diffClass}">${diffLabel}</span>
@@ -246,9 +272,15 @@ function renderArticleCard(article, base) {
 
 function renderTipCard(tip, base) {
   const t_ = localizeArticle(tip);
+  const previewUrl = typeof getArticlePreviewSquareUrl === 'function'
+    ? getArticlePreviewSquareUrl(t_)
+    : '';
+  const previewHtml = previewUrl
+    ? `<img src="${previewUrl}" alt="" class="tip-card-image" loading="lazy" width="96" height="96" decoding="async">`
+    : '<span class="tip-marker" aria-hidden="true"></span>';
   return `
     <a href="${base}articolo.html?slug=${t_.slug}" class="tip-card">
-      <span class="tip-marker" aria-hidden="true"></span>
+      ${previewHtml}
       <div>
         <h3>${t_.title}</h3>
         <p>${t_.excerpt}</p>
@@ -259,8 +291,15 @@ function renderTipCard(tip, base) {
 function renderTrendCard(trend, base) {
   const tr = localizeArticle(trend);
   const tags = (tr.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('');
+  const previewUrl = typeof getArticlePreviewSquareUrl === 'function'
+    ? getArticlePreviewSquareUrl(tr)
+    : '';
+  const previewHtml = previewUrl
+    ? `<div class="trend-card-media"><img src="${previewUrl}" alt="" class="trend-card-image" loading="lazy" width="320" height="180" decoding="async"></div>`
+    : '';
   return `
     <a href="${base}articolo.html?slug=${tr.slug}" class="trend-card">
+      ${previewHtml}
       <div class="trend-card-header">
         <span class="trend-date">${t('ui.updated')} ${tr.date}</span>
       </div>

@@ -556,9 +556,11 @@ async function initArticlePage() {
   if (metaDesc) metaDesc.content = article.excerpt;
 
   const articleUrl = getArticleUrl(slug);
-  const ogImage = typeof getFacebookImageAbsoluteUrl === 'function'
-    ? getFacebookImageAbsoluteUrl(article)
-    : (typeof getFacebookImageUrl === 'function' ? getFacebookImageUrl(article) : '');
+  const ogImage = typeof getArticlePreviewHeroUrl === 'function'
+    ? getArticlePreviewHeroUrl(article)
+    : (typeof getFacebookImageAbsoluteUrl === 'function'
+      ? getFacebookImageAbsoluteUrl(article)
+      : (typeof getFacebookImageUrl === 'function' ? getFacebookImageUrl(article) : ''));
   const ogEntries = [
     ['og:title', article.title],
     ['og:description', article.excerpt],
@@ -610,9 +612,17 @@ async function initArticlePage() {
     ]);
   }
 
+  const heroUrl = typeof getArticlePreviewHeroUrl === 'function'
+    ? getArticlePreviewHeroUrl(article)
+    : (typeof getFacebookImageAbsoluteUrl === 'function' ? getFacebookImageAbsoluteUrl(article) : '');
+  const heroHtml = heroUrl
+    ? `<figure class="article-hero-preview"><img src="${heroUrl}" alt="Anteprima: ${article.title}" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async"></figure>`
+    : '';
+
   const headerEl = document.getElementById('article-header');
   if (headerEl) {
     headerEl.innerHTML = `
+      ${heroHtml}
       <h1>${article.title}</h1>
       <div class="article-meta-bar">
         <span class="badge badge--${article.difficulty}">${diffLabel}</span>
@@ -682,6 +692,9 @@ function initTocHighlight() {
 }
 
 function injectArticleSchema(article, content) {
+  const previewImage = typeof getArticlePreviewHeroUrl === 'function'
+    ? getArticlePreviewHeroUrl(article)
+    : '';
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -691,6 +704,7 @@ function injectArticleSchema(article, content) {
     author: { '@type': 'Organization', name: 'The Little Satoshi News' },
     publisher: { '@type': 'Organization', name: 'The Little Satoshi News', url: SITE_CONFIG.siteUrl }
   };
+  if (previewImage) schema.image = previewImage;
   if (content.sections.length > 2) {
     schema['@type'] = 'HowTo';
     schema.step = content.sections.map((s, i) => ({

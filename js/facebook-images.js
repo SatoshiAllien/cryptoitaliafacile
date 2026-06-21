@@ -107,3 +107,37 @@ function getFacebookClickbaitHook(article) {
   const cat = article?.category || 'guide';
   return FB_CLICKBAIT_HOOKS[cat] || FB_CLICKBAIT_HOOKS.guide;
 }
+
+/** Anteprima quadrata 1080×1080 per card e griglie sito */
+function getArticlePreviewSquareFile(article) {
+  if (!article) return '';
+  if (article.igImage) return article.igImage;
+  if (article.fbImage) return article.fbImage;
+  return getFacebookImageFile(article);
+}
+
+/** Anteprima landscape 1200×630 per hero articolo e Open Graph */
+function getArticlePreviewHeroFile(article) {
+  if (!article) return '';
+  if (article.fbImage) return article.fbImage;
+  if (article.igImage) return article.igImage;
+  return getFacebookImageFile(article);
+}
+
+function getArticlePreviewSquareUrl(article) {
+  const file = getArticlePreviewSquareFile(article);
+  if (!file) return '';
+  const path = `assets/img/instagram/posts/${file}`;
+  return typeof getAssetUrl === 'function' ? getAssetUrl(path) : path;
+}
+
+function getArticlePreviewHeroUrl(article) {
+  const file = getArticlePreviewHeroFile(article);
+  if (!file) return '';
+  const path = `assets/img/facebook/posts/${file}`;
+  if (typeof getAssetUrl === 'function') return getAssetUrl(path);
+  const base = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.siteUrl)
+    ? SITE_CONFIG.siteUrl.replace(/\/?$/, '/')
+    : 'https://satoshiallien.github.io/cryptoitaliafacile/';
+  return `${base}${path}`;
+}

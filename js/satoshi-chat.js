@@ -9,6 +9,7 @@
   let sessionId = null;
   let isStreaming = false;
   let apiOnline = false;
+  let onlineLlmReady = false;
   let useLocalMode = true;
 
   function getApiBase() {
@@ -26,6 +27,10 @@
     const base = getApiBase();
     if (!base) return '';
     return `${base}/api/v1/chat${path}`;
+  }
+
+  function satoshiApiUrl() {
+    return chatApiUrl('/satoshi');
   }
 
   function assetUrl(path) {
@@ -53,6 +58,7 @@
       const res = await fetch(`${base}/api/v1/health`, { signal: AbortSignal.timeout(4000) });
       const data = await res.json();
       apiOnline = data.status === 'ok';
+      onlineLlmReady = !!(data.online_llm && data.online_llm.configured);
       useLocalMode = !apiOnline && fallback;
       return apiOnline || useLocalMode;
     } catch {
@@ -132,7 +138,7 @@
     ].filter(Boolean);
 
     const label = online
-      ? (apiOnline ? 'Online — Steven AI' : 'Online')
+      ? (onlineLlmReady ? 'Online — AI cloud' : apiOnline ? 'Online — motore locale' : 'Online')
       : 'Offline';
 
     dots.forEach(dot => {
@@ -198,7 +204,7 @@
   }
 
   async function sendApiMessage(containerId, text, botBubble) {
-    const apiUrl = chatApiUrl('/message');
+    const apiUrl = satoshiApiUrl();
     const res = await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -270,7 +276,7 @@
     const botBubble = addMessage(containerId, 'bot', '');
     botBubble.innerHTML = '<span class="satoshi-thinking">Satoshi sta pensando...</span>';
 
-    const tryApi = getApiBase() && apiOnline;
+    const tryApi = getApiBase() && (apiOnline || getApiBase());
 
     try {
       if (tryApi) {

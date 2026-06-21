@@ -274,21 +274,6 @@ def draw_grid(draw: ImageDraw.ImageDraw, w: int, h: int, grid_rgb: tuple[int, in
         draw.line([(0, y), (w, y)], fill=gc, width=1)
 
 
-def draw_glow_orb(draw: ImageDraw.ImageDraw, cx: int, cy: int, r: int, glow: tuple[int, int, int]) -> None:
-    for i in range(6, 0, -1):
-        ri = r + i * 14
-        shade = tuple(min(255, int(glow[j] * (0.35 + i * 0.08))) for j in range(3))
-        draw.ellipse((cx - ri, cy - ri, cx + ri, cy + ri), fill=shade)
-    draw.ellipse((cx - r, cy - r, cx + r, cy + r), fill=glow)
-    inner = tuple(min(255, c + 40) for c in glow)
-    draw.rounded_rectangle((cx - r // 3, cy - r // 3, cx + r // 3, cy + r // 3), radius=12, fill=inner)
-    draw.rounded_rectangle(
-        (cx - r // 6, cy - r // 6, cx + r // 6, cy + r // 6),
-        radius=6,
-        fill=(15, 23, 42),
-    )
-
-
 def draw_multiline(
     draw: ImageDraw.ImageDraw,
     xy: tuple[int, int],
@@ -386,10 +371,6 @@ def render_post(
     draw_grid(draw, width, height, cfg["grid"])
 
     margin = int(width * 0.04)
-    orb_cx = int(width * 0.82)
-    orb_cy = int(height * 0.42)
-    orb_r = int(min(width, height) * 0.12)
-    draw_glow_orb(draw, orb_cx, orb_cy, orb_r, cfg["glow"])
 
     draw_badge_pill(
         draw, margin, margin, cfg["badge_text"], cfg["accent"], cfg["accent2"], load_font(badge_size, bold=True)
@@ -437,9 +418,6 @@ def render_story(
     draw = ImageDraw.Draw(img)
     gradient3(draw, width, height, cfg["bg"][0], cfg["bg"][1], cfg["bg"][2])
     draw_grid(draw, width, height, cfg["grid"])
-
-    draw_glow_orb(draw, 880, 380, 130, cfg["glow"])
-    draw.ellipse((40, 720, 260, 940), fill=tuple(int(c * 0.6) for c in cfg["grid"]))
 
     draw_badge_pill(draw, 56, 90, cfg["badge_text"], cfg["accent"], cfg["accent2"], load_font(40, bold=True))
     draw_multiline(draw, (56, 280), cfg["hook"], load_font(78, bold=True), "#FFFFFF", line_gap=6)

@@ -3,7 +3,8 @@ let articlesData = null;
 async function loadArticles() {
   if (articlesData) return articlesData;
   const base = getBasePath();
-  const res = await fetch(`${base}data/articles.json`);
+  const v = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.assetVersion) ? `?v=${SITE_CONFIG.assetVersion}` : '';
+  const res = await fetch(`${base}data/articles.json${v}`);
   articlesData = await res.json();
   return articlesData;
 }

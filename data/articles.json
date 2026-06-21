@@ -18,7 +18,7 @@
       "popular": true,
       "featured": true,
       "fbImage": "iniziare-exchange-revolut-kraken.jpg",
-      "igImage": "iniziare-exchange-revolut-kraken-portrait.jpg",
+      "igImage": "iniziare-exchange-revolut-kraken.jpg",
       "fbStoryImage": "iniziare-exchange-revolut-kraken-abstract.jpg",
       "igStoryImage": "iniziare-exchange-revolut-kraken-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -48,7 +48,7 @@
       "popular": true,
       "featured": true,
       "fbImage": "lightning-network-guida.jpg",
-      "igImage": "lightning-network-guida-portrait.jpg",
+      "igImage": "lightning-network-guida.jpg",
       "fbStoryImage": "lightning-network-guida-abstract.jpg",
       "igStoryImage": "lightning-network-guida-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -77,7 +77,7 @@
       "popular": true,
       "featured": true,
       "fbImage": "comprare-bitcoin-prima-volta.jpg",
-      "igImage": "comprare-bitcoin-prima-volta-portrait.jpg",
+      "igImage": "comprare-bitcoin-prima-volta.jpg",
       "fbStoryImage": "comprare-bitcoin-prima-volta-abstract.jpg",
       "igStoryImage": "comprare-bitcoin-prima-volta-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -105,7 +105,7 @@
       "popular": true,
       "featured": true,
       "fbImage": "creare-wallet-sicuro.jpg",
-      "igImage": "creare-wallet-sicuro-portrait.jpg",
+      "igImage": "creare-wallet-sicuro.jpg",
       "fbStoryImage": "creare-wallet-sicuro-abstract.jpg",
       "igStoryImage": "creare-wallet-sicuro-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -132,7 +132,7 @@
       ],
       "popular": true,
       "fbImage": "trasferire-crypto-exchange.jpg",
-      "igImage": "trasferire-crypto-exchange-portrait.jpg",
+      "igImage": "trasferire-crypto-exchange.jpg",
       "fbStoryImage": "trasferire-crypto-exchange-abstract.jpg",
       "igStoryImage": "trasferire-crypto-exchange-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -159,7 +159,7 @@
       ],
       "popular": true,
       "fbImage": "staking-ethereum.jpg",
-      "igImage": "staking-ethereum-portrait.jpg",
+      "igImage": "staking-ethereum.jpg",
       "fbStoryImage": "staking-ethereum-abstract.jpg",
       "igStoryImage": "staking-ethereum-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -186,7 +186,7 @@
       ],
       "popular": true,
       "fbImage": "usare-metamask.jpg",
-      "igImage": "usare-metamask-portrait.jpg",
+      "igImage": "usare-metamask.jpg",
       "fbStoryImage": "usare-metamask-abstract.jpg",
       "igStoryImage": "usare-metamask-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -212,7 +212,7 @@
         "explorer"
       ],
       "fbImage": "leggere-indirizzo-wallet.jpg",
-      "igImage": "leggere-indirizzo-wallet-portrait.jpg",
+      "igImage": "leggere-indirizzo-wallet.jpg",
       "fbStoryImage": "leggere-indirizzo-wallet-abstract.jpg",
       "igStoryImage": "leggere-indirizzo-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -238,7 +238,7 @@
         "italia"
       ],
       "fbImage": "dichiarare-crypto-italia.jpg",
-      "igImage": "dichiarare-crypto-italia-portrait.jpg",
+      "igImage": "dichiarare-crypto-italia.jpg",
       "fbStoryImage": "dichiarare-crypto-italia-abstract.jpg",
       "igStoryImage": "dichiarare-crypto-italia-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -264,7 +264,7 @@
         "sicurezza"
       ],
       "fbImage": "scegliere-exchange-sicuro.jpg",
-      "igImage": "scegliere-exchange-sicuro-portrait.jpg",
+      "igImage": "scegliere-exchange-sicuro.jpg",
       "fbStoryImage": "scegliere-exchange-sicuro-abstract.jpg",
       "igStoryImage": "scegliere-exchange-sicuro-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -292,7 +292,7 @@
       "popular": true,
       "featured": true,
       "fbImage": "proteggere-seed-phrase.jpg",
-      "igImage": "proteggere-seed-phrase-portrait.jpg",
+      "igImage": "proteggere-seed-phrase.jpg",
       "fbStoryImage": "proteggere-seed-phrase-abstract.jpg",
       "igStoryImage": "proteggere-seed-phrase-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -318,7 +318,7 @@
         "uniswap"
       ],
       "fbImage": "prima-swap-uniswap.jpg",
-      "igImage": "prima-swap-uniswap-portrait.jpg",
+      "igImage": "prima-swap-uniswap.jpg",
       "fbStoryImage": "prima-swap-uniswap-abstract.jpg",
       "igStoryImage": "prima-swap-uniswap-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -344,7 +344,7 @@
         "hardware wallet"
       ],
       "fbImage": "hardware-wallet-ledger.jpg",
-      "igImage": "hardware-wallet-ledger-portrait.jpg",
+      "igImage": "hardware-wallet-ledger.jpg",
       "fbStoryImage": "hardware-wallet-ledger-abstract.jpg",
       "igStoryImage": "hardware-wallet-ledger-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -370,7 +370,7 @@
         "fee"
       ],
       "fbImage": "capire-gas-fee.jpg",
-      "igImage": "capire-gas-fee-portrait.jpg",
+      "igImage": "capire-gas-fee.jpg",
       "fbStoryImage": "capire-gas-fee-abstract.jpg",
       "igStoryImage": "capire-gas-fee-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -396,7 +396,7 @@
         "dca"
       ],
       "fbImage": "dca-crypto.jpg",
-      "igImage": "dca-crypto-portrait.jpg",
+      "igImage": "dca-crypto.jpg",
       "fbStoryImage": "dca-crypto-abstract.jpg",
       "igStoryImage": "dca-crypto-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -422,7 +422,7 @@
         "sicurezza"
       ],
       "fbImage": "verificare-smart-contract.jpg",
-      "igImage": "verificare-smart-contract-portrait.jpg",
+      "igImage": "verificare-smart-contract.jpg",
       "fbStoryImage": "verificare-smart-contract-abstract.jpg",
       "igStoryImage": "verificare-smart-contract-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -448,7 +448,7 @@
         "explorer"
       ],
       "fbImage": "usare-etherscan.jpg",
-      "igImage": "usare-etherscan-portrait.jpg",
+      "igImage": "usare-etherscan.jpg",
       "fbStoryImage": "usare-etherscan-abstract.jpg",
       "igStoryImage": "usare-etherscan-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -474,7 +474,7 @@
         "sicurezza"
       ],
       "fbImage": "cold-wallet-chiavi-offline.jpg",
-      "igImage": "cold-wallet-chiavi-offline-portrait.jpg",
+      "igImage": "cold-wallet-chiavi-offline.jpg",
       "fbStoryImage": "cold-wallet-chiavi-offline-abstract.jpg",
       "igStoryImage": "cold-wallet-chiavi-offline-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -500,7 +500,7 @@
         "yield"
       ],
       "fbImage": "yield-farming-sicurezza.jpg",
-      "igImage": "yield-farming-sicurezza-portrait.jpg",
+      "igImage": "yield-farming-sicurezza.jpg",
       "fbStoryImage": "yield-farming-sicurezza-abstract.jpg",
       "igStoryImage": "yield-farming-sicurezza-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -526,7 +526,7 @@
         "euro"
       ],
       "fbImage": "convertire-crypto-euro.jpg",
-      "igImage": "convertire-crypto-euro-portrait.jpg",
+      "igImage": "convertire-crypto-euro.jpg",
       "fbStoryImage": "convertire-crypto-euro-abstract.jpg",
       "igStoryImage": "convertire-crypto-euro-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -552,7 +552,7 @@
         "portfolio"
       ],
       "fbImage": "alert-prezzo-portafoglio.jpg",
-      "igImage": "alert-prezzo-portafoglio-portrait.jpg",
+      "igImage": "alert-prezzo-portafoglio.jpg",
       "fbStoryImage": "alert-prezzo-portafoglio-abstract.jpg",
       "igStoryImage": "alert-prezzo-portafoglio-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -578,7 +578,7 @@
         "errori"
       ],
       "fbImage": "recuperare-crypto-sbagliato.jpg",
-      "igImage": "recuperare-crypto-sbagliato-portrait.jpg",
+      "igImage": "recuperare-crypto-sbagliato.jpg",
       "fbStoryImage": "recuperare-crypto-sbagliato-abstract.jpg",
       "igStoryImage": "recuperare-crypto-sbagliato-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -602,7 +602,7 @@
         "sicurezza"
       ],
       "fbImage": "tip-mai-seed-phrase.jpg",
-      "igImage": "tip-mai-seed-phrase-portrait.jpg",
+      "igImage": "tip-mai-seed-phrase.jpg",
       "fbStoryImage": "tip-mai-seed-phrase-abstract.jpg",
       "igStoryImage": "tip-mai-seed-phrase-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -627,7 +627,7 @@
         "exchange"
       ],
       "fbImage": "tip-2fa-exchange.jpg",
-      "igImage": "tip-2fa-exchange-portrait.jpg",
+      "igImage": "tip-2fa-exchange.jpg",
       "fbStoryImage": "tip-2fa-exchange-abstract.jpg",
       "igStoryImage": "tip-2fa-exchange-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -651,7 +651,7 @@
         "phishing"
       ],
       "fbImage": "tip-verifica-url.jpg",
-      "igImage": "tip-verifica-url-portrait.jpg",
+      "igImage": "tip-verifica-url.jpg",
       "fbStoryImage": "tip-verifica-url-abstract.jpg",
       "igStoryImage": "tip-verifica-url-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -676,7 +676,7 @@
         "exchange"
       ],
       "fbImage": "tip-non-tenere-exchange.jpg",
-      "igImage": "tip-non-tenere-exchange-portrait.jpg",
+      "igImage": "tip-non-tenere-exchange.jpg",
       "fbStoryImage": "tip-non-tenere-exchange-abstract.jpg",
       "igStoryImage": "tip-non-tenere-exchange-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -700,7 +700,7 @@
         "principianti"
       ],
       "fbImage": "tip-inizia-poco.jpg",
-      "igImage": "tip-inizia-poco-portrait.jpg",
+      "igImage": "tip-inizia-poco.jpg",
       "fbStoryImage": "tip-inizia-poco-abstract.jpg",
       "igStoryImage": "tip-inizia-poco-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -724,7 +724,7 @@
         "transazioni"
       ],
       "fbImage": "tip-controlla-rete.jpg",
-      "igImage": "tip-controlla-rete-portrait.jpg",
+      "igImage": "tip-controlla-rete.jpg",
       "fbStoryImage": "tip-controlla-rete-abstract.jpg",
       "igStoryImage": "tip-controlla-rete-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -748,7 +748,7 @@
         "wallet"
       ],
       "fbImage": "tip-rubrica-wallet.jpg",
-      "igImage": "tip-rubrica-wallet-portrait.jpg",
+      "igImage": "tip-rubrica-wallet.jpg",
       "fbStoryImage": "tip-rubrica-wallet-abstract.jpg",
       "igStoryImage": "tip-rubrica-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -772,7 +772,7 @@
         "seed phrase"
       ],
       "fbImage": "tip-no-screenshot-seed.jpg",
-      "igImage": "tip-no-screenshot-seed-portrait.jpg",
+      "igImage": "tip-no-screenshot-seed.jpg",
       "fbStoryImage": "tip-no-screenshot-seed-abstract.jpg",
       "igStoryImage": "tip-no-screenshot-seed-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -796,7 +796,7 @@
         "truffe"
       ],
       "fbImage": "tip-diffida-telegram.jpg",
-      "igImage": "tip-diffida-telegram-portrait.jpg",
+      "igImage": "tip-diffida-telegram.jpg",
       "fbStoryImage": "tip-diffida-telegram-abstract.jpg",
       "igStoryImage": "tip-diffida-telegram-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -820,7 +820,7 @@
         "sicurezza"
       ],
       "fbImage": "tip-aggiorna-wallet.jpg",
-      "igImage": "tip-aggiorna-wallet-portrait.jpg",
+      "igImage": "tip-aggiorna-wallet.jpg",
       "fbStoryImage": "tip-aggiorna-wallet-abstract.jpg",
       "igStoryImage": "tip-aggiorna-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -844,7 +844,7 @@
         "sicurezza"
       ],
       "fbImage": "tip-email-dedicata.jpg",
-      "igImage": "tip-email-dedicata-portrait.jpg",
+      "igImage": "tip-email-dedicata.jpg",
       "fbStoryImage": "tip-email-dedicata-abstract.jpg",
       "igStoryImage": "tip-email-dedicata-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -868,7 +868,7 @@
         "sicurezza"
       ],
       "fbImage": "tip-leggi-transazione.jpg",
-      "igImage": "tip-leggi-transazione-portrait.jpg",
+      "igImage": "tip-leggi-transazione.jpg",
       "fbStoryImage": "tip-leggi-transazione-abstract.jpg",
       "igStoryImage": "tip-leggi-transazione-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -892,7 +892,7 @@
         "investimento"
       ],
       "fbImage": "tip-diversifica.jpg",
-      "igImage": "tip-diversifica-portrait.jpg",
+      "igImage": "tip-diversifica.jpg",
       "fbStoryImage": "tip-diversifica-abstract.jpg",
       "igStoryImage": "tip-diversifica-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -916,7 +916,7 @@
         "fiscalità"
       ],
       "fbImage": "tip-traccia-operazioni.jpg",
-      "igImage": "tip-traccia-operazioni-portrait.jpg",
+      "igImage": "tip-traccia-operazioni.jpg",
       "fbStoryImage": "tip-traccia-operazioni-abstract.jpg",
       "igStoryImage": "tip-traccia-operazioni-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -940,7 +940,7 @@
         "exchange"
       ],
       "fbImage": "tip-spread-fee.jpg",
-      "igImage": "tip-spread-fee-portrait.jpg",
+      "igImage": "tip-spread-fee.jpg",
       "fbStoryImage": "tip-spread-fee-abstract.jpg",
       "igStoryImage": "tip-spread-fee-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -964,7 +964,7 @@
         "staking"
       ],
       "fbImage": "tip-staking-unlock.jpg",
-      "igImage": "tip-staking-unlock-portrait.jpg",
+      "igImage": "tip-staking-unlock.jpg",
       "fbStoryImage": "tip-staking-unlock-abstract.jpg",
       "igStoryImage": "tip-staking-unlock-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -988,7 +988,7 @@
         "wallet"
       ],
       "fbImage": "tip-test-transazione.jpg",
-      "igImage": "tip-test-transazione-portrait.jpg",
+      "igImage": "tip-test-transazione.jpg",
       "fbStoryImage": "tip-test-transazione-abstract.jpg",
       "igStoryImage": "tip-test-transazione-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1012,7 +1012,7 @@
         "phishing"
       ],
       "fbImage": "tip-no-link-email.jpg",
-      "igImage": "tip-no-link-email-portrait.jpg",
+      "igImage": "tip-no-link-email.jpg",
       "fbStoryImage": "tip-no-link-email-abstract.jpg",
       "igStoryImage": "tip-no-link-email-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1036,7 +1036,7 @@
         "sicurezza"
       ],
       "fbImage": "tip-pin-wallet.jpg",
-      "igImage": "tip-pin-wallet-portrait.jpg",
+      "igImage": "tip-pin-wallet.jpg",
       "fbStoryImage": "tip-pin-wallet-abstract.jpg",
       "igStoryImage": "tip-pin-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1060,7 +1060,7 @@
         "investimento"
       ],
       "fbImage": "tip-non-capisci-non-investi.jpg",
-      "igImage": "tip-non-capisci-non-investi-portrait.jpg",
+      "igImage": "tip-non-capisci-non-investi.jpg",
       "fbStoryImage": "tip-non-capisci-non-investi-abstract.jpg",
       "igStoryImage": "tip-non-capisci-non-investi-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1091,7 +1091,7 @@
       ],
       "popular": true,
       "fbImage": "trend-mica.jpg",
-      "igImage": "trend-mica-portrait.jpg",
+      "igImage": "trend-mica.jpg",
       "fbStoryImage": "trend-mica-abstract.jpg",
       "igStoryImage": "trend-mica-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1117,7 +1117,7 @@
       ],
       "popular": true,
       "fbImage": "trend-etf-bitcoin.jpg",
-      "igImage": "trend-etf-bitcoin-portrait.jpg",
+      "igImage": "trend-etf-bitcoin.jpg",
       "fbStoryImage": "trend-etf-bitcoin-abstract.jpg",
       "igStoryImage": "trend-etf-bitcoin-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1143,7 +1143,7 @@
       ],
       "popular": true,
       "fbImage": "trend-layer2.jpg",
-      "igImage": "trend-layer2-portrait.jpg",
+      "igImage": "trend-layer2.jpg",
       "fbStoryImage": "trend-layer2-abstract.jpg",
       "igStoryImage": "trend-layer2-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1169,7 +1169,7 @@
       ],
       "popular": true,
       "fbImage": "trend-rwa.jpg",
-      "igImage": "trend-rwa-portrait.jpg",
+      "igImage": "trend-rwa.jpg",
       "fbStoryImage": "trend-rwa-abstract.jpg",
       "igStoryImage": "trend-rwa-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1193,7 +1193,7 @@
         "#Stablecoin"
       ],
       "fbImage": "trend-stablecoin.jpg",
-      "igImage": "trend-stablecoin-portrait.jpg",
+      "igImage": "trend-stablecoin.jpg",
       "fbStoryImage": "trend-stablecoin-abstract.jpg",
       "igStoryImage": "trend-stablecoin-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1217,7 +1217,7 @@
         "#CBDC"
       ],
       "fbImage": "trend-cbdc.jpg",
-      "igImage": "trend-cbdc-portrait.jpg",
+      "igImage": "trend-cbdc.jpg",
       "fbStoryImage": "trend-cbdc-abstract.jpg",
       "igStoryImage": "trend-cbdc-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1241,7 +1241,7 @@
         "#DePIN"
       ],
       "fbImage": "trend-depin.jpg",
-      "igImage": "trend-depin-portrait.jpg",
+      "igImage": "trend-depin.jpg",
       "fbStoryImage": "trend-depin-abstract.jpg",
       "igStoryImage": "trend-depin-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1266,7 +1266,7 @@
         "#Blockchain"
       ],
       "fbImage": "trend-ai-blockchain.jpg",
-      "igImage": "trend-ai-blockchain-portrait.jpg",
+      "igImage": "trend-ai-blockchain.jpg",
       "fbStoryImage": "trend-ai-blockchain-abstract.jpg",
       "igStoryImage": "trend-ai-blockchain-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1291,7 +1291,7 @@
         "#Halving"
       ],
       "fbImage": "trend-halving.jpg",
-      "igImage": "trend-halving-portrait.jpg",
+      "igImage": "trend-halving.jpg",
       "fbStoryImage": "trend-halving-abstract.jpg",
       "igStoryImage": "trend-halving-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1315,7 +1315,7 @@
         "#Blockchain"
       ],
       "fbImage": "trend-modular-blockchain.jpg",
-      "igImage": "trend-modular-blockchain-portrait.jpg",
+      "igImage": "trend-modular-blockchain.jpg",
       "fbStoryImage": "trend-modular-blockchain-abstract.jpg",
       "igStoryImage": "trend-modular-blockchain-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1341,7 +1341,7 @@
         "principianti"
       ],
       "fbImage": "blockchain-5-minuti.jpg",
-      "igImage": "blockchain-5-minuti-portrait.jpg",
+      "igImage": "blockchain-5-minuti.jpg",
       "fbStoryImage": "blockchain-5-minuti-abstract.jpg",
       "igStoryImage": "blockchain-5-minuti-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1366,7 +1366,7 @@
         "exchange"
       ],
       "fbImage": "creare-account-exchange.jpg",
-      "igImage": "creare-account-exchange-portrait.jpg",
+      "igImage": "creare-account-exchange.jpg",
       "fbStoryImage": "creare-account-exchange-abstract.jpg",
       "igStoryImage": "creare-account-exchange-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1391,7 +1391,7 @@
         "bitcoin"
       ],
       "fbImage": "primi-20-euro-bitcoin.jpg",
-      "igImage": "primi-20-euro-bitcoin-portrait.jpg",
+      "igImage": "primi-20-euro-bitcoin.jpg",
       "fbStoryImage": "primi-20-euro-bitcoin-abstract.jpg",
       "igStoryImage": "primi-20-euro-bitcoin-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1416,7 +1416,7 @@
         "wallet"
       ],
       "fbImage": "installare-trust-wallet.jpg",
-      "igImage": "installare-trust-wallet-portrait.jpg",
+      "igImage": "installare-trust-wallet.jpg",
       "fbStoryImage": "installare-trust-wallet-abstract.jpg",
       "igStoryImage": "installare-trust-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1441,7 +1441,7 @@
         "transazioni"
       ],
       "fbImage": "prima-transazione-crypto.jpg",
-      "igImage": "prima-transazione-crypto-portrait.jpg",
+      "igImage": "prima-transazione-crypto.jpg",
       "fbStoryImage": "prima-transazione-crypto-abstract.jpg",
       "igStoryImage": "prima-transazione-crypto-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1466,7 +1466,7 @@
         "trading"
       ],
       "fbImage": "leggere-grafico-candele.jpg",
-      "igImage": "leggere-grafico-candele-portrait.jpg",
+      "igImage": "leggere-grafico-candele.jpg",
       "fbStoryImage": "leggere-grafico-candele-abstract.jpg",
       "igStoryImage": "leggere-grafico-candele-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1491,7 +1491,7 @@
         "analisi"
       ],
       "fbImage": "market-cap-volume.jpg",
-      "igImage": "market-cap-volume-portrait.jpg",
+      "igImage": "market-cap-volume.jpg",
       "fbStoryImage": "market-cap-volume-abstract.jpg",
       "igStoryImage": "market-cap-volume-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1516,7 +1516,7 @@
         "explorer"
       ],
       "fbImage": "esplorare-block-explorer.jpg",
-      "igImage": "esplorare-block-explorer-portrait.jpg",
+      "igImage": "esplorare-block-explorer.jpg",
       "fbStoryImage": "esplorare-block-explorer-abstract.jpg",
       "igStoryImage": "esplorare-block-explorer-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1541,7 +1541,7 @@
         "tracker"
       ],
       "fbImage": "notifiche-prezzo-app.jpg",
-      "igImage": "notifiche-prezzo-app-portrait.jpg",
+      "igImage": "notifiche-prezzo-app.jpg",
       "fbStoryImage": "notifiche-prezzo-app-abstract.jpg",
       "igStoryImage": "notifiche-prezzo-app-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1566,7 +1566,7 @@
         "portfolio"
       ],
       "fbImage": "creare-watchlist.jpg",
-      "igImage": "creare-watchlist-portrait.jpg",
+      "igImage": "creare-watchlist.jpg",
       "fbStoryImage": "creare-watchlist-abstract.jpg",
       "igStoryImage": "creare-watchlist-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1592,7 +1592,7 @@
         "layer2"
       ],
       "fbImage": "bridge-cross-chain.jpg",
-      "igImage": "bridge-cross-chain-portrait.jpg",
+      "igImage": "bridge-cross-chain.jpg",
       "fbStoryImage": "bridge-cross-chain-abstract.jpg",
       "igStoryImage": "bridge-cross-chain-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1618,7 +1618,7 @@
         "uniswap"
       ],
       "fbImage": "liquidita-uniswap-v3.jpg",
-      "igImage": "liquidita-uniswap-v3-portrait.jpg",
+      "igImage": "liquidita-uniswap-v3.jpg",
       "fbStoryImage": "liquidita-uniswap-v3-abstract.jpg",
       "igStoryImage": "liquidita-uniswap-v3-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1644,7 +1644,7 @@
         "aave"
       ],
       "fbImage": "usare-aave.jpg",
-      "igImage": "usare-aave-portrait.jpg",
+      "igImage": "usare-aave.jpg",
       "fbStoryImage": "usare-aave-abstract.jpg",
       "igStoryImage": "usare-aave-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1670,7 +1670,7 @@
         "on-chain"
       ],
       "fbImage": "analisi-on-chain-dune.jpg",
-      "igImage": "analisi-on-chain-dune-portrait.jpg",
+      "igImage": "analisi-on-chain-dune.jpg",
       "fbStoryImage": "analisi-on-chain-dune-abstract.jpg",
       "igStoryImage": "analisi-on-chain-dune-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1696,7 +1696,7 @@
         "staking"
       ],
       "fbImage": "nodo-validator.jpg",
-      "igImage": "nodo-validator-portrait.jpg",
+      "igImage": "nodo-validator.jpg",
       "fbStoryImage": "nodo-validator-abstract.jpg",
       "igStoryImage": "nodo-validator-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1722,7 +1722,7 @@
         "smart contract"
       ],
       "fbImage": "leggere-solidity.jpg",
-      "igImage": "leggere-solidity-portrait.jpg",
+      "igImage": "leggere-solidity.jpg",
       "fbStoryImage": "leggere-solidity-abstract.jpg",
       "igStoryImage": "leggere-solidity-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1748,7 +1748,7 @@
         "defi"
       ],
       "fbImage": "mev-protezione.jpg",
-      "igImage": "mev-protezione-portrait.jpg",
+      "igImage": "mev-protezione.jpg",
       "fbStoryImage": "mev-protezione-abstract.jpg",
       "igStoryImage": "mev-protezione-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1774,7 +1774,7 @@
         "wallet"
       ],
       "fbImage": "multisig-gnosis-safe.jpg",
-      "igImage": "multisig-gnosis-safe-portrait.jpg",
+      "igImage": "multisig-gnosis-safe.jpg",
       "fbStoryImage": "multisig-gnosis-safe-abstract.jpg",
       "igStoryImage": "multisig-gnosis-safe-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1800,7 +1800,7 @@
         "ethereum"
       ],
       "fbImage": "ottimizzazione-gas-batch.jpg",
-      "igImage": "ottimizzazione-gas-batch-portrait.jpg",
+      "igImage": "ottimizzazione-gas-batch.jpg",
       "fbStoryImage": "ottimizzazione-gas-batch-abstract.jpg",
       "igStoryImage": "ottimizzazione-gas-batch-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1826,7 +1826,7 @@
         "defi"
       ],
       "fbImage": "hedging-stablecoin.jpg",
-      "igImage": "hedging-stablecoin-portrait.jpg",
+      "igImage": "hedging-stablecoin.jpg",
       "fbStoryImage": "hedging-stablecoin-abstract.jpg",
       "igStoryImage": "hedging-stablecoin-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1853,7 +1853,7 @@
       "popular": true,
       "featured": true,
       "fbImage": "cardano-spiegato.jpg",
-      "igImage": "cardano-spiegato-portrait.jpg",
+      "igImage": "cardano-spiegato.jpg",
       "fbStoryImage": "cardano-spiegato-abstract.jpg",
       "igStoryImage": "cardano-spiegato-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1878,7 +1878,7 @@
         "exchange"
       ],
       "fbImage": "comprare-ada.jpg",
-      "igImage": "comprare-ada-portrait.jpg",
+      "igImage": "comprare-ada.jpg",
       "fbStoryImage": "comprare-ada-abstract.jpg",
       "igStoryImage": "comprare-ada-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1904,7 +1904,7 @@
       ],
       "popular": true,
       "fbImage": "staking-ada.jpg",
-      "igImage": "staking-ada-portrait.jpg",
+      "igImage": "staking-ada.jpg",
       "fbStoryImage": "staking-ada-abstract.jpg",
       "igStoryImage": "staking-ada-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1929,7 +1929,7 @@
         "cardano"
       ],
       "fbImage": "wallet-cardano-confronto.jpg",
-      "igImage": "wallet-cardano-confronto-portrait.jpg",
+      "igImage": "wallet-cardano-confronto.jpg",
       "fbStoryImage": "wallet-cardano-confronto-abstract.jpg",
       "igStoryImage": "wallet-cardano-confronto-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1954,7 +1954,7 @@
         "catalyst"
       ],
       "fbImage": "project-catalyst.jpg",
-      "igImage": "project-catalyst-portrait.jpg",
+      "igImage": "project-catalyst.jpg",
       "fbStoryImage": "project-catalyst-abstract.jpg",
       "igStoryImage": "project-catalyst-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -1979,7 +1979,7 @@
         "cardano"
       ],
       "fbImage": "cardano-defi.jpg",
-      "igImage": "cardano-defi-portrait.jpg",
+      "igImage": "cardano-defi.jpg",
       "fbStoryImage": "cardano-defi-abstract.jpg",
       "igStoryImage": "cardano-defi-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2004,7 +2004,7 @@
         "cardano"
       ],
       "fbImage": "native-token-cardano.jpg",
-      "igImage": "native-token-cardano-portrait.jpg",
+      "igImage": "native-token-cardano.jpg",
       "fbStoryImage": "native-token-cardano-abstract.jpg",
       "igStoryImage": "native-token-cardano-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2029,7 +2029,7 @@
         "scalabilità"
       ],
       "fbImage": "hydra-cardano.jpg",
-      "igImage": "hydra-cardano-portrait.jpg",
+      "igImage": "hydra-cardano.jpg",
       "fbStoryImage": "hydra-cardano-abstract.jpg",
       "igStoryImage": "hydra-cardano-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2054,7 +2054,7 @@
         "smart contract"
       ],
       "fbImage": "plutus-panoramica.jpg",
-      "igImage": "plutus-panoramica-portrait.jpg",
+      "igImage": "plutus-panoramica.jpg",
       "fbStoryImage": "plutus-panoramica-abstract.jpg",
       "igStoryImage": "plutus-panoramica-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2079,7 +2079,7 @@
         "ethereum"
       ],
       "fbImage": "cardano-vs-ethereum.jpg",
-      "igImage": "cardano-vs-ethereum-portrait.jpg",
+      "igImage": "cardano-vs-ethereum.jpg",
       "fbStoryImage": "cardano-vs-ethereum-abstract.jpg",
       "igStoryImage": "cardano-vs-ethereum-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2104,7 +2104,7 @@
       ],
       "popular": true,
       "fbImage": "seed-phrase-guida.jpg",
-      "igImage": "seed-phrase-guida-portrait.jpg",
+      "igImage": "seed-phrase-guida.jpg",
       "fbStoryImage": "seed-phrase-guida-abstract.jpg",
       "igStoryImage": "seed-phrase-guida-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2128,7 +2128,7 @@
         "wallet"
       ],
       "fbImage": "hot-vs-cold-wallet.jpg",
-      "igImage": "hot-vs-cold-wallet-portrait.jpg",
+      "igImage": "hot-vs-cold-wallet.jpg",
       "fbStoryImage": "hot-vs-cold-wallet-abstract.jpg",
       "igStoryImage": "hot-vs-cold-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2152,7 +2152,7 @@
         "hardware wallet"
       ],
       "fbImage": "confronto-hardware-wallet.jpg",
-      "igImage": "confronto-hardware-wallet-portrait.jpg",
+      "igImage": "confronto-hardware-wallet.jpg",
       "fbStoryImage": "confronto-hardware-wallet-abstract.jpg",
       "igStoryImage": "confronto-hardware-wallet-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2176,7 +2176,7 @@
         "phishing"
       ],
       "fbImage": "difendersi-phishing.jpg",
-      "igImage": "difendersi-phishing-portrait.jpg",
+      "igImage": "difendersi-phishing.jpg",
       "fbStoryImage": "difendersi-phishing-abstract.jpg",
       "igStoryImage": "difendersi-phishing-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2200,7 +2200,7 @@
         "smart contract"
       ],
       "fbImage": "approvazioni-smart-contract.jpg",
-      "igImage": "approvazioni-smart-contract-portrait.jpg",
+      "igImage": "approvazioni-smart-contract.jpg",
       "fbStoryImage": "approvazioni-smart-contract-abstract.jpg",
       "igStoryImage": "approvazioni-smart-contract-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2224,7 +2224,7 @@
         "backup"
       ],
       "fbImage": "backup-wallet-321.jpg",
-      "igImage": "backup-wallet-321-portrait.jpg",
+      "igImage": "backup-wallet-321.jpg",
       "fbStoryImage": "backup-wallet-321-abstract.jpg",
       "igStoryImage": "backup-wallet-321-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2248,7 +2248,7 @@
         "mobile"
       ],
       "fbImage": "sicurezza-mobile.jpg",
-      "igImage": "sicurezza-mobile-portrait.jpg",
+      "igImage": "sicurezza-mobile.jpg",
       "fbStoryImage": "sicurezza-mobile-abstract.jpg",
       "igStoryImage": "sicurezza-mobile-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2272,7 +2272,7 @@
         "emergenza"
       ],
       "fbImage": "wallet-compromesso.jpg",
-      "igImage": "wallet-compromesso-portrait.jpg",
+      "igImage": "wallet-compromesso.jpg",
       "fbStoryImage": "wallet-compromesso-abstract.jpg",
       "igStoryImage": "wallet-compromesso-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2296,7 +2296,7 @@
         "password"
       ],
       "fbImage": "password-manager-crypto.jpg",
-      "igImage": "password-manager-crypto-portrait.jpg",
+      "igImage": "password-manager-crypto.jpg",
       "fbStoryImage": "password-manager-crypto-abstract.jpg",
       "igStoryImage": "password-manager-crypto-abstract.jpg",
       "previewVariant": "variant-1-hero",
@@ -2320,7 +2320,7 @@
         "checklist"
       ],
       "fbImage": "audit-sicurezza-portafoglio.jpg",
-      "igImage": "audit-sicurezza-portafoglio-portrait.jpg",
+      "igImage": "audit-sicurezza-portafoglio.jpg",
       "fbStoryImage": "audit-sicurezza-portafoglio-abstract.jpg",
       "igStoryImage": "audit-sicurezza-portafoglio-abstract.jpg",
       "previewVariant": "variant-1-hero",

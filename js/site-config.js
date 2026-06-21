@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260621-satoshi-vivid',
+  assetVersion: '20260621-orange-gold',
   email: 'info@cryptofacile.com',
 
   teacher: {
@@ -27,11 +27,11 @@ const SITE_CONFIG = {
   },
 
   colors: {
-    primary: '#00f0ff',
-    secondary: '#ff2a6d',
-    coral: '#ff2a6d',
-    yellow: '#fcee0a',
-    purple: '#bd00ff'
+    primary: '#FF8C00',
+    secondary: '#FFD700',
+    coral: '#FF6B35',
+    yellow: '#FFD700',
+    purple: '#C9A227'
   },
 
   trustBadges: [
@@ -62,7 +62,7 @@ const SITE_CONFIG = {
   ],
 
   categories: [
-    { id: 'principianti', label: 'Principianti', abbr: 'P', href: 'guide/index.html?filter=principianti', color: '#00f0ff', bg: 'rgba(0,240,255,0.08)' },
+    { id: 'principianti', label: 'Principianti', abbr: 'P', href: 'guide/index.html?filter=principianti', color: '#FF8C00', bg: 'rgba(255,140,0,0.08)' },
     { id: 'sicurezza', label: 'Sicurezza', abbr: 'S', href: 'sicurezza/index.html', color: '#ff2a6d', bg: 'rgba(255,42,109,0.08)' },
     { id: 'bitcoin', label: 'Bitcoin', iconImg: 'assets/img/bitcoin-btc.png', href: 'bitcoin/index.html', color: '#F7931A', bg: 'rgba(247,147,26,0.1)' },
     { id: 'ethereum', label: 'Ethereum', iconImg: 'assets/img/ethereum-eth.svg', href: 'ethereum/index.html', color: '#627EEA', bg: 'rgba(98,126,234,0.1)' },

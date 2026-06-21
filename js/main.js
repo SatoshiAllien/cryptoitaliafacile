@@ -33,6 +33,24 @@ function getArticlesByFilter(filter) {
   }
 }
 
+function initNavActive() {
+  const path = window.location.pathname;
+  const routes = [
+    { href: 'chat/index.html', test: () => path.includes('/chat/') },
+    { href: 'crypto-tips/index.html', test: () => path.includes('/crypto-tips/') },
+    { href: 'trend/index.html', test: () => path.includes('/trend/') },
+    { href: 'news/index.html', test: () => path.includes('/news/') },
+    { href: 'sicurezza/index.html', test: () => path.includes('/sicurezza/') },
+    { href: 'cardano/index.html', test: () => path.includes('/cardano/') },
+    { href: 'strumenti/index.html', test: () => path.includes('/strumenti/') },
+    { href: 'guide/index.html', test: () => path.includes('/guide/') }
+  ];
+  const active = routes.find(r => r.test())?.href || null;
+  document.querySelectorAll('[data-nav-href]').forEach(el => {
+    el.classList.toggle('nav-tab--active', el.getAttribute('data-nav-href') === active);
+  });
+}
+
 function initMobileNav() {
   const toggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('mobile-nav');
@@ -499,6 +517,7 @@ async function bootApp() {
   } catch (_) { /* background non critico */ }
   try { await loadSatoshiChat(); } catch (_) { /* chat non critico */ }
   injectLayout();
+  initNavActive();
   initFacebookLinks();
   initInstagramLinks();
   initMobileNav();
@@ -524,6 +543,7 @@ document.addEventListener('DOMContentLoaded', bootApp);
 
 window.addEventListener('langchange', async () => {
   injectLayout();
+  initNavActive();
   initFacebookLinks();
   initInstagramLinks();
   initMobileNav();

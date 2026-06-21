@@ -22,9 +22,9 @@ function renderLogo(base) {
     <a href="${base}index.html" class="logo" aria-label="${SITE_CONFIG.name} — Home">
       <svg class="logo-icon" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
         <rect x="4" y="4" width="32" height="32" rx="6" fill="#0a0a12" stroke="url(#logoGrad)" stroke-width="1.5"/>
-        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#00f0ff"/><stop offset="100%" stop-color="#ff2a6d"/></linearGradient></defs>
-        <text x="20" y="25" text-anchor="middle" font-family="Orbitron, Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#00f0ff">LS</text>
-        <path d="M28 14 L32 10 L32 18 Z" fill="#fcee0a"/>
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40"><stop offset="0%" stop-color="#FF8C00"/><stop offset="100%" stop-color="#FFD700"/></linearGradient></defs>
+        <text x="20" y="25" text-anchor="middle" font-family="Orbitron, Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#FF8C00">LS</text>
+        <path d="M28 14 L32 10 L32 18 Z" fill="#FFD700"/>
       </svg>
       <span class="logo-text">
         <span class="logo-name">${SITE_CONFIG.name}</span>
@@ -33,20 +33,56 @@ function renderLogo(base) {
     </a>`;
 }
 
-function renderNavLinks(base) {
+const NAV_SHORT = {
+  'guide/index.html': 'Guide',
+  'crypto-tips/index.html': 'Tips',
+  'trend/index.html': 'Trend',
+  'news/index.html': 'News',
+  'sicurezza/index.html': 'Sicurezza',
+  'cardano/index.html': 'Cardano',
+  'strumenti/index.html': 'Strumenti',
+  'chat/index.html': 'Satoshi AI'
+};
+
+function navTabLabel(href) {
+  return NAV_SHORT[href] || navLabel(href);
+}
+
+function renderNavTabs(base) {
   return SITE_CONFIG.nav.map(item => {
     if (item.children) {
       const children = item.children.map(c =>
         `<a href="${base}${c.href}" class="dropdown-link">${navLabel(c.href)}</a>`
       ).join('');
       return `
-        <div class="nav-item nav-item--dropdown">
-          <a href="${base}${item.href}" class="nav-link">${navLabel(item.href)} <span class="nav-caret">▾</span></a>
+        <div class="nav-tab-item nav-tab-item--dropdown">
+          <a href="${base}${item.href}" class="nav-tab" data-nav-href="${item.href}">${navTabLabel(item.href)} <span class="nav-caret">▾</span></a>
           <div class="dropdown-menu">${children}</div>
         </div>`;
     }
-    const cls = item.highlight ? 'nav-link nav-link--ai' : 'nav-link';
-    return `<a href="${base}${item.href}" class="${cls}">${navLabel(item.href)}</a>`;
+    if (item.href === 'chat/index.html') {
+      return `<button type="button" class="nav-tab nav-tab--ai" data-satoshi-open data-nav-href="${item.href}">${navTabLabel(item.href)}</button>`;
+    }
+    const cls = item.highlight ? 'nav-tab nav-tab--ai' : 'nav-tab';
+    return `<a href="${base}${item.href}" class="${cls}" data-nav-href="${item.href}">${navTabLabel(item.href)}</a>`;
+  }).join('');
+}
+
+function renderMobileNavCards(base) {
+  return SITE_CONFIG.nav.map(item => {
+    const label = navTabLabel(item.href);
+    const sub = item.children ? `${item.children.length} sottosezioni` : t('nav.openSection') || 'Apri sezione';
+    if (item.href === 'chat/index.html') {
+      return `<button type="button" class="mobile-nav-card mobile-nav-card--ai" data-satoshi-open>
+        <span>${label}</span>
+        <span class="mobile-nav-card-sub">Assistente AI crypto</span>
+      </button>`;
+    }
+    const cls = item.highlight ? 'mobile-nav-card mobile-nav-card--ai' : 'mobile-nav-card';
+    return `<a href="${base}${item.href}" class="${cls}">
+      <span>${label}</span>
+      <span class="mobile-nav-card-sub">${sub}</span>
+    </a>`;
   }).join('');
 }
 
@@ -73,22 +109,28 @@ function renderHeader() {
   const headerSocials = headerSocialsHtml ? `<div class="header-socials">${headerSocialsHtml}</div>` : '';
   return `
     <header class="header" id="header">
-      <div class="container header-inner">
-        ${renderLogo(base)}
-        <nav class="nav-desktop" aria-label="Menu principale">
-          ${renderNavLinks(base)}
-        </nav>
-        <div class="header-actions">
-          ${headerSocials}
-          <button class="search-toggle" id="open-search" aria-label="${t('nav.search')}">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          </button>
-          <div class="header-lang" id="header-lang">${renderLangSwitcher()}</div>
-          <button type="button" class="btn btn-satoshi btn-sm header-cta" data-satoshi-open title="${(SITE_CONFIG.satoshiAi || {}).title || 'Parla con Satoshi'}">${t('nav.satoshiAi')}</button>
-          <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">${t('nav.newsletter')}</a>
-          <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-          </button>
+      <div class="header-top">
+        <div class="container header-top-inner">
+          ${renderLogo(base)}
+          <div class="header-actions">
+            ${headerSocials}
+            <button class="search-toggle" id="open-search" aria-label="${t('nav.search')}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </button>
+            <div class="header-lang" id="header-lang">${renderLangSwitcher()}</div>
+            <button type="button" class="btn btn-satoshi btn-sm header-cta" data-satoshi-open title="${(SITE_CONFIG.satoshiAi || {}).title || 'Parla con Satoshi'}">${t('nav.satoshiAi')}</button>
+            <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">${t('nav.newsletter')}</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="header-nav-bar">
+        <div class="container">
+          <nav class="nav-tabs" aria-label="Menu principale">
+            ${renderNavTabs(base)}
+          </nav>
         </div>
       </div>
       <div class="search-bar" id="search-bar" hidden>
@@ -116,26 +158,22 @@ function renderHeader() {
         <div class="mobile-search">
           <input type="search" id="mobile-search" placeholder="${t('ui.searchShort')}" autocomplete="off">
         </div>
+        <div class="mobile-nav-section">
+          <span class="mobile-nav-label">${t('nav.menu')}</span>
+          <div class="mobile-nav-grid">
+            ${renderMobileNavCards(base)}
+          </div>
+        </div>
+        <details class="mobile-accordion">
+          <summary>${navLabel('guide/index.html')}</summary>
+          <div class="mobile-accordion-body">
+            <a href="${base}guide/index.html">${t('nav.allGuides')}</a>
+            ${(SITE_CONFIG.nav.find(n => n.children) || {}).children?.map(c => `<a href="${base}${c.href}">${navLabel(c.href)}</a>`).join('') || ''}
+          </div>
+        </details>
         <nav class="mobile-nav-links">
-          ${SITE_CONFIG.nav.map(item => {
-            if (item.children) {
-              return `
-                <details class="mobile-accordion">
-                  <summary>${navLabel(item.href)}</summary>
-                  <div class="mobile-accordion-body">
-                    <a href="${base}${item.href}">${t('nav.allGuides')}</a>
-                    ${item.children.map(c => `<a href="${base}${c.href}">${navLabel(c.href)}</a>`).join('')}
-                  </div>
-                </details>`;
-            }
-            const mcls = item.highlight ? 'mobile-nav-link mobile-nav-link--ai' : 'mobile-nav-link';
-            if (item.href === 'chat/index.html') {
-              return `<button type="button" class="${mcls}" data-satoshi-open>${navLabel(item.href)}</button>`;
-            }
-            return `<a href="${base}${item.href}" class="${mcls}">${navLabel(item.href)}</a>`;
-          }).join('')}
           <a href="${base}glossario/index.html" class="mobile-nav-link">${t('nav.glossario')}</a>
-          ${['x', 'facebook'].map(renderMobileSocialLink).join('')}
+          ${['x', 'facebook', 'instagram'].map(renderMobileSocialLink).join('')}
           <a href="${base}newsletter/index.html" class="mobile-nav-link mobile-nav-link--cta">${t('nav.newsletterFree')}</a>
         </nav>
       </div>

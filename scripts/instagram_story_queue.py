@@ -17,6 +17,7 @@ ARTICLES_PATH = ROOT / "data" / "articles.json"
 QUEUE_PATH = ROOT / "data" / "instagram-story-queue.json"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 HOME_LINK = SATOSHI_AI_STORY_LINK
+SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
 IG_STORY_BASE = f"{SITE_URL}assets/img/instagram/stories/"
 
 

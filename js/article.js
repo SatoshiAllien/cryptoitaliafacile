@@ -1,4 +1,4 @@
-﻿const ARTICLE_CONTENT = {
+const ARTICLE_CONTENT = {
   'iniziare-exchange-revolut-kraken': {
     intro: 'Vuoi comprare le tue prime crypto ma non sai da dove iniziare? In questa guida ti spiego cos\'è un exchange, perché Revolut ti semplifica la vita, come scegliere una piattaforma affidabile e come fare il tuo primo acquisto su Kraken — passo dopo passo, senza hype.',
     sections: [

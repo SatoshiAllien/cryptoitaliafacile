@@ -457,9 +457,9 @@ async function bootApp() {
   await initGlossary();
   await initSearchPage();
   initSocialPage();
-  await initBitcoinNewsSession();
-  await initNewsHomePreview();
-  await initNewsHub();
+  if (typeof initBitcoinNewsSession === 'function') await initBitcoinNewsSession();
+  if (typeof initNewsHomePreview === 'function') await initNewsHomePreview();
+  if (typeof initNewsHub === 'function') await initNewsHub();
   applyPageTranslations();
   initFadeIn();
 }
@@ -478,9 +478,9 @@ window.addEventListener('langchange', async () => {
   await initGlossary();
   await initSearchPage();
   initSocialPage();
-  await initBitcoinNewsSession();
-  await initNewsHomePreview();
-  await initNewsHub();
+  if (typeof initBitcoinNewsSession === 'function') await initBitcoinNewsSession();
+  if (typeof initNewsHomePreview === 'function') await initNewsHomePreview();
+  if (typeof initNewsHub === 'function') await initNewsHub();
   applyPageTranslations();
   initFadeIn();
 });

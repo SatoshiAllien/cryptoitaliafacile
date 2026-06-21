@@ -64,7 +64,7 @@ function renderMobileSocialLink(id) {
 
 function renderHeader() {
   const base = getBasePath();
-  const headerSocialsHtml = ['x', 'facebook'].map(renderHeaderSocialLink).join('');
+  const headerSocialsHtml = ['x', 'facebook', 'instagram'].map(renderHeaderSocialLink).join('');
   const headerSocials = headerSocialsHtml ? `<div class="header-socials">${headerSocialsHtml}</div>` : '';
   return `
     <header class="header" id="header">

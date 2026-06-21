@@ -439,6 +439,22 @@ function initFacebookLinks() {
   });
 }
 
+function initInstagramLinks() {
+  const ig = getSocial('instagram');
+  if (!ig) return;
+  document.querySelectorAll('[data-instagram-link]').forEach(el => {
+    el.href = ig.url;
+    el.setAttribute('aria-label', ig.name);
+    if (!el.target) {
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    }
+  });
+  document.querySelectorAll('[data-instagram-handle]').forEach(el => {
+    el.textContent = ig.handle;
+  });
+}
+
 async function loadSatoshiChat() {
   if (typeof initSatoshiChat === 'function') return;
   const base = getBasePath();
@@ -460,6 +476,7 @@ async function bootApp() {
   try { await loadSatoshiChat(); } catch (_) { /* chat non critico */ }
   injectLayout();
   initFacebookLinks();
+  initInstagramLinks();
   initMobileNav();
   initSearchBar();
   initI18n();
@@ -484,6 +501,7 @@ document.addEventListener('DOMContentLoaded', bootApp);
 window.addEventListener('langchange', async () => {
   injectLayout();
   initFacebookLinks();
+  initInstagramLinks();
   initMobileNav();
   initSearchBar();
   initI18n();

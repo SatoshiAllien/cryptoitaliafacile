@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260621-satoshi-ai',
+  assetVersion: '20260621-instagram',
   email: 'info@cryptofacile.com',
 
   teacher: {
@@ -95,8 +95,8 @@ const SITE_CONFIG = {
     {
       id: 'instagram',
       name: 'Instagram',
-      handle: '@cryptofacile',
-      url: 'https://www.instagram.com/cryptofacile',
+      handle: '@krown.82',
+      url: 'https://www.instagram.com/krown.82/',
       color: '#E1306C',
       desc: 'Tips visivi, caroselli educativi e storie sulla sicurezza crypto.'
     },

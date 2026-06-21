@@ -52,6 +52,54 @@ PUBLISHED_PATH = ROOT / "data" / "instagram-highlights-published.json"
 JPEG_QUALITY = 92
 
 
+def is_quota_error(result: dict) -> bool:
+    err = result.get("error") or {}
+    if err.get("code") == 9 and err.get("error_subcode") == 2207042:
+        return True
+    msg = str(err.get("message", "")).lower()
+    return "too many actions" in msg or "maximum number of post" in msg
+
+
+def load_published_slugs() -> set[str]:
+    if not PUBLISHED_PATH.exists():
+        return set()
+    try:
+        data = json.loads(PUBLISHED_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return set()
+    slugs: set[str] = set()
+    for item in data.get("published", []):
+        if item.get("slug") and item.get("version", data.get("version")) == 2:
+            slugs.add(item["slug"])
+        elif item.get("slug") and data.get("version") != 2 and "highlightId" in item:
+            slugs.add(item["slug"])
+    return slugs
+
+
+def save_publish_progress(report: dict) -> None:
+    PUBLISHED_PATH.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def print_publish_status(plan: dict) -> None:
+    done = load_published_slugs()
+    total = plan["storyCount"]
+    pending = [s for s in plan["stories"] if s["slug"] not in done]
+    print(f"\nStato pubblicazione v2:")
+    print(f"  Pubblicate: {len(done)}/{total}")
+    print(f"  In attesa:  {len(pending)}")
+    if done:
+        print("\n  Ultime pubblicate:")
+        for s in plan["stories"]:
+            if s["slug"] in done:
+                print(f"    ✓ [{s['highlightTitle']}] {s['title'][:50]}")
+    if pending:
+        print("\n  Prossime da pubblicare:")
+        for s in pending[:5]:
+            print(f"    → [{s['highlightTitle']}] {s['title'][:50]}")
+        if len(pending) > 5:
+            print(f"    … e altre {len(pending) - 5}")
+
+
 def image_public_url(relative_path: str) -> str:
     return f"{SITE_URL}assets/img/instagram/highlights/{urllib.parse.quote(relative_path, safe='/')}"
 
@@ -207,7 +255,13 @@ def plan_cover_test_path() -> str:
     return "bitcoin/01-comprare-bitcoin-prima-volta-abstract.jpg"
 
 
-def publish_stories(plan: dict, *, dry_run: bool = False, delay: int = 45) -> dict:
+def publish_stories(
+    plan: dict,
+    *,
+    dry_run: bool = False,
+    delay: int = 45,
+    resume: bool = False,
+) -> dict:
     from instagram_auth import load_env
 
     env = load_env()
@@ -218,15 +272,46 @@ def publish_stories(plan: dict, *, dry_run: bool = False, delay: int = 45) -> di
     existing = try_list_highlights(ig_id, token) if ig_id and token and not dry_run else None
     print_api_limitations(existing)
 
+    skip_slugs = load_published_slugs() if resume else set()
+    if resume and skip_slugs:
+        print(f"\n→ Resume: salto {len(skip_slugs)} story già pubblicate (v2)")
+
     print(f"\nAccount: @{env.get('INSTAGRAM_USERNAME', 'krown.82')} — API {api_mode}")
-    print(f"Story da pubblicare: {plan['storyCount']}\n")
+    pending = [s for s in plan["stories"] if s["slug"] not in skip_slugs]
+    print(f"Story da pubblicare: {len(pending)}/{plan['storyCount']}\n")
 
     published: list[dict] = []
+    if resume and PUBLISHED_PATH.exists():
+        try:
+            old = json.loads(PUBLISHED_PATH.read_text(encoding="utf-8"))
+            if old.get("version") == 2:
+                published = list(old.get("published", []))
+        except json.JSONDecodeError:
+            pass
+
     errors: list[dict] = []
     total = plan["storyCount"]
     current_cat = ""
+    quota_hit = False
+
+    report = {
+        "version": 2,
+        "account": plan.get("account", "krown.82"),
+        "publishedAt": datetime.now().isoformat(),
+        "categoryCount": plan["categoryCount"],
+        "storyCount": plan["storyCount"],
+        "published": published,
+        "errors": errors,
+        "categories": [
+            {"id": c["id"], "title": c["title"], "storyCount": c["storyCount"], "coverImage": c.get("coverImage")}
+            for c in plan["categories"]
+        ],
+    }
 
     for i, story in enumerate(plan["stories"], 1):
+        if story["slug"] in skip_slugs:
+            continue
+
         if story["highlightTitle"] != current_cat:
             current_cat = story["highlightTitle"]
             print(f"\n{'─' * 40}\n📁 Categoria: {current_cat}\n{'─' * 40}")
@@ -255,33 +340,38 @@ def publish_stories(plan: dict, *, dry_run: bool = False, delay: int = 45) -> di
         if result.get("error"):
             print(f"  ✗ Errore: {result['error']}")
             errors.append({"story": story["slug"], "error": result["error"]})
+            if is_quota_error(result):
+                quota_hit = True
+                print("\n⛔ LIMITE API INSTAGRAM RAGGIUNTO — pubblicazione interrotta.")
+                print("   Il limite si resetta di solito dopo 24h. Riprendi con: --publish --resume")
+                if not dry_run:
+                    report["published"] = published
+                    report["errors"] = errors
+                    report["quotaHit"] = True
+                    save_publish_progress(report)
+                break
         else:
             print(f"  ✓ Story ID: {story_id}")
-            published.append({
+            entry = {
                 **story,
                 "storyId": str(story_id or "dry-run"),
                 "publishedAt": datetime.now().isoformat(),
-            })
+            }
+            published.append(entry)
+            if not dry_run:
+                report["published"] = published
+                report["errors"] = errors
+                save_publish_progress(report)
 
-        if i < total and not dry_run:
+        remaining = [s for s in plan["stories"][i:] if s["slug"] not in skip_slugs]
+        if remaining and not dry_run and not quota_hit:
             print(f"  Pausa {delay}s…")
             time.sleep(delay)
 
-    report = {
-        "version": 2,
-        "account": plan.get("account", "krown.82"),
-        "publishedAt": datetime.now().isoformat(),
-        "categoryCount": plan["categoryCount"],
-        "storyCount": plan["storyCount"],
-        "published": published,
-        "errors": errors,
-        "categories": [
-            {"id": c["id"], "title": c["title"], "storyCount": c["storyCount"], "coverImage": c.get("coverImage")}
-            for c in plan["categories"]
-        ],
-    }
+    report["published"] = published
+    report["errors"] = errors
     if not dry_run:
-        PUBLISHED_PATH.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        save_publish_progress(report)
     return report
 
 
@@ -310,11 +400,13 @@ Esempi:
     parser.add_argument("--full", action="store_true", help="Piano + generate + push + publish")
     parser.add_argument("--dry-run", action="store_true", help="Simula publish senza API reale")
     parser.add_argument("--no-push", action="store_true", help="Salta git push (full/generate)")
-    parser.add_argument("--delay", type=int, default=45, help="Secondi tra story (default 45)")
+    parser.add_argument("--delay", type=int, default=60, help="Secondi tra story (default 60)")
     parser.add_argument("--max-news", type=int, default=12, help="Max voci News da homepage")
+    parser.add_argument("--resume", action="store_true", help="Riprendi pubblicazione saltando story già inviate")
+    parser.add_argument("--status", action="store_true", help="Mostra stato pubblicazione e esci")
     args = parser.parse_args()
 
-    if not any([args.plan_only, args.generate, args.publish, args.full]):
+    if not any([args.plan_only, args.generate, args.publish, args.full, args.status]):
         parser.print_help()
         return 0
 
@@ -323,6 +415,11 @@ Esempi:
 
     plan = save_plan(max_news=args.max_news)
     print("\n" + plan_summary(plan))
+
+    if args.status:
+        print_publish_status(plan)
+        print_manual_album_steps(plan)
+        return 0
 
     if args.plan_only and not (args.generate or args.publish or args.full):
         return 0
@@ -339,7 +436,7 @@ Esempi:
     if args.publish or args.full:
         if not args.dry_run and not list(HIGHLIGHTS_ROOT.rglob("*.jpg")):
             raise SystemExit("Nessuna immagine highlight — esegui prima --generate")
-        report = publish_stories(plan, dry_run=args.dry_run, delay=args.delay)
+        report = publish_stories(plan, dry_run=args.dry_run, delay=args.delay, resume=args.resume)
         print(f"\nPubblicate: {len(report['published'])}, errori: {len(report['errors'])}")
         print_manual_album_steps(plan)
         return 0 if not report["errors"] else 1

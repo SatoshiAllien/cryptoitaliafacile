@@ -87,11 +87,11 @@ const TRANSLATIONS = {
       aiLabel: 'Assistente AI',
       aiTitle: 'Parla con Satoshi',
       aiDesc: 'Il tuo assistente AI crypto personale. Chiedi qualsiasi cosa su Bitcoin, sicurezza, DeFi e Web3 — risposte chiare in italiano.',
-      aiCta: 'Inizia a chattare →',
-      aiFeature1: 'Risposte in italiano, zero gergo',
-      aiFeature2: 'Guide e spiegazioni personalizzate',
-      aiFeature3: 'Sicurezza e best practice crypto',
-      aiFeature4: 'Powered by Steven AI · GPU locale'
+      aiCta: 'Inizia a chattare',
+      aiFeature1: 'Italiano, zero gergo',
+      aiFeature2: 'Guide personalizzate',
+      aiFeature3: 'Sicurezza crypto',
+      aiFeature4: 'Steven AI'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -373,11 +373,11 @@ const TRANSLATIONS = {
       aiLabel: 'AI Assistant',
       aiTitle: 'Talk to Satoshi',
       aiDesc: 'Your personal crypto AI assistant. Ask anything about Bitcoin, security, DeFi and Web3 — clear answers in plain language.',
-      aiCta: 'Start chatting →',
-      aiFeature1: 'Answers in plain language, zero jargon',
-      aiFeature2: 'Personalized guides and explanations',
-      aiFeature3: 'Security and crypto best practices',
-      aiFeature4: 'Powered by Steven AI · Local GPU'
+      aiCta: 'Start chatting',
+      aiFeature1: 'Plain language, zero jargon',
+      aiFeature2: 'Personalized guides',
+      aiFeature3: 'Crypto security',
+      aiFeature4: 'Steven AI'
     },
     newsHub: {
       filterAll: 'All',

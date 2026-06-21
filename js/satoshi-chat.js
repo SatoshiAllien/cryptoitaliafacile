@@ -100,7 +100,6 @@
         </div>
       </div>
       <button class="satoshi-launcher-btn" id="satoshi-open" aria-label="${escapeHtml(title)}">
-        <span class="satoshi-launcher-pulse" aria-hidden="true"></span>
         <img src="${avatar}" alt="">
         <span class="satoshi-launcher-label">${escapeHtml(title)}</span>
       </button>

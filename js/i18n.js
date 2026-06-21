@@ -15,6 +15,7 @@ const TRANSLATIONS = {
       cardano: 'Cardano', strumenti: 'Strumenti', glossario: 'Glossario',
       principianti: 'Principianti', avanzate: 'Avanzate', defi: 'DeFi & Staking', wallet: 'Wallet',
       allGuides: 'Tutte le guide', newsletter: 'Newsletter', newsletterFree: 'Newsletter gratis',
+      satoshiAi: 'Parla con Satoshi',
       social: 'Social', search: 'Cerca', menu: 'Menu', close: 'Chiudi', closeSearch: 'Chiudi ricerca'
     },
     ui: {
@@ -76,7 +77,15 @@ const TRANSLATIONS = {
       socialLink: 'Tutti i profili →',
       nlTitle: '1 tip di sicurezza a settimana',
       nlDesc: 'Iscriviti alla newsletter gratuita e ricevi subito la Checklist Sicurezza Crypto — 25 punti da verificare oggi.',
-      nlNote: 'Niente spam. Solo contenuti educativi. Cancellati quando vuoi.'
+      nlNote: 'Niente spam. Solo contenuti educativi. Cancellati quando vuoi.',
+      aiLabel: 'Assistente AI',
+      aiTitle: 'Parla con Satoshi',
+      aiDesc: 'Il tuo assistente AI crypto personale. Chiedi qualsiasi cosa su Bitcoin, sicurezza, DeFi e Web3 — risposte chiare in italiano.',
+      aiCta: 'Inizia a chattare →',
+      aiFeature1: 'Risposte in italiano, zero gergo',
+      aiFeature2: 'Guide e spiegazioni personalizzate',
+      aiFeature3: 'Sicurezza e best practice crypto',
+      aiFeature4: 'Powered by Steven AI · GPU locale'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -286,6 +295,7 @@ const TRANSLATIONS = {
       cardano: 'Cardano', strumenti: 'Tools', glossario: 'Glossary',
       principianti: 'Beginners', avanzate: 'Advanced', defi: 'DeFi & Staking', wallet: 'Wallet',
       allGuides: 'All guides', newsletter: 'Newsletter', newsletterFree: 'Free newsletter',
+      satoshiAi: 'Talk to Satoshi',
       social: 'Social', search: 'Search', menu: 'Menu', close: 'Close', closeSearch: 'Close search'
     },
     ui: {
@@ -347,7 +357,15 @@ const TRANSLATIONS = {
       socialLink: 'All profiles →',
       nlTitle: '1 security tip per week',
       nlDesc: 'Subscribe to the free newsletter and get the Crypto Security Checklist — 25 points to verify today.',
-      nlNote: 'No spam. Educational content only. Unsubscribe anytime.'
+      nlNote: 'No spam. Educational content only. Unsubscribe anytime.',
+      aiLabel: 'AI Assistant',
+      aiTitle: 'Talk to Satoshi',
+      aiDesc: 'Your personal crypto AI assistant. Ask anything about Bitcoin, security, DeFi and Web3 — clear answers in plain language.',
+      aiCta: 'Start chatting →',
+      aiFeature1: 'Answers in plain language, zero jargon',
+      aiFeature2: 'Personalized guides and explanations',
+      aiFeature3: 'Security and crypto best practices',
+      aiFeature4: 'Powered by Steven AI · Local GPU'
     },
     newsHub: {
       filterAll: 'All',

@@ -1,0 +1,472 @@
+/* Parla con Satoshi — Chat Widget & Page */
+.nav-link--ai {
+  color: var(--accent-yellow) !important;
+  font-weight: 600;
+}
+.nav-link--ai:hover { color: var(--primary) !important; text-shadow: var(--glow-cyan); }
+.mobile-nav-link--ai {
+  color: var(--accent-yellow) !important;
+  font-weight: 700;
+  border: 1px solid rgba(252, 238, 10, 0.3);
+  border-radius: var(--radius-sm);
+  background: rgba(252, 238, 10, 0.06);
+}
+
+.btn-satoshi {
+  background: linear-gradient(135deg, var(--secondary), var(--accent-purple));
+  color: #fff !important;
+  border: 1px solid rgba(255, 42, 109, 0.5);
+  gap: 0.4rem;
+  box-shadow: var(--glow-magenta);
+}
+.btn-satoshi:hover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-1px);
+}
+
+/* Floating launcher */
+.satoshi-launcher {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+.satoshi-launcher > * { pointer-events: auto; }
+
+.satoshi-launcher-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.25rem;
+  background: linear-gradient(135deg, var(--secondary), var(--accent-purple));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--glow-magenta), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition);
+}
+.satoshi-launcher-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--glow-cyan), 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+.satoshi-launcher-btn img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-yellow);
+}
+.satoshi-launcher-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--secondary);
+  animation: satoshi-pulse 2s infinite;
+  pointer-events: none;
+}
+@keyframes satoshi-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0; transform: scale(1.15); }
+}
+
+/* Chat panel */
+.satoshi-panel {
+  width: min(400px, calc(100vw - 2rem));
+  height: min(560px, calc(100vh - 8rem));
+  background: var(--surface);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--glow-cyan);
+  transform-origin: bottom right;
+  animation: satoshi-panel-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.satoshi-panel[hidden] { display: none; }
+@keyframes satoshi-panel-in {
+  from { opacity: 0; transform: scale(0.9) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.satoshi-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, rgba(255, 42, 109, 0.2), rgba(0, 240, 255, 0.1));
+  border-bottom: 1px solid var(--border);
+}
+.satoshi-panel-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  box-shadow: var(--glow-cyan);
+}
+.satoshi-panel-info { flex: 1; min-width: 0; }
+.satoshi-panel-info h3 {
+  font-family: var(--font-cyber);
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin: 0;
+}
+.satoshi-panel-info p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+.satoshi-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+}
+.satoshi-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-light);
+}
+.satoshi-status-dot--online {
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88;
+}
+.satoshi-panel-actions { display: flex; gap: 0.35rem; }
+.satoshi-panel-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+.satoshi-panel-btn:hover { background: var(--border); color: var(--text); }
+
+.satoshi-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.satoshi-welcome {
+  text-align: center;
+  padding: 1.5rem 0.5rem;
+}
+.satoshi-welcome p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.satoshi-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.satoshi-suggestion {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.satoshi-suggestion:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.satoshi-msg {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 92%;
+}
+.satoshi-msg--user {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+}
+.satoshi-msg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.satoshi-msg--user .satoshi-msg-avatar {
+  background: linear-gradient(135deg, var(--secondary), var(--accent-purple));
+}
+.satoshi-msg--bot .satoshi-msg-avatar {
+  background: linear-gradient(135deg, var(--primary), var(--accent-purple));
+  color: var(--bg);
+}
+.satoshi-msg-bubble {
+  padding: 0.65rem 0.9rem;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.satoshi-msg--user .satoshi-msg-bubble {
+  background: linear-gradient(135deg, rgba(255, 42, 109, 0.35), rgba(189, 0, 255, 0.25));
+  border-bottom-right-radius: 4px;
+}
+.satoshi-msg--bot .satoshi-msg-bubble {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+}
+.satoshi-thinking {
+  color: var(--text-muted);
+  font-style: italic;
+  animation: satoshi-blink 1.5s infinite;
+}
+@keyframes satoshi-blink { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
+.satoshi-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--primary);
+  animation: satoshi-cursor 1s infinite;
+  vertical-align: text-bottom;
+}
+@keyframes satoshi-cursor { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+.satoshi-error { color: var(--danger); font-size: 0.8rem; }
+
+.satoshi-input-area {
+  padding: 0.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+}
+.satoshi-input-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.5rem 0.5rem 0.85rem;
+  transition: border-color var(--transition);
+}
+.satoshi-input-wrap:focus-within { border-color: var(--primary); box-shadow: var(--glow-cyan); }
+.satoshi-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: inherit;
+  resize: none;
+  max-height: 100px;
+  outline: none;
+  line-height: 1.4;
+}
+.satoshi-send {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+.satoshi-send:hover { box-shadow: var(--glow-cyan); transform: scale(1.05); }
+.satoshi-send:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+.satoshi-expand {
+  display: block;
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  transition: color var(--transition);
+}
+.satoshi-expand:hover { color: var(--primary); }
+
+/* Homepage AI section */
+.ai-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.ai-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 20% 50%, rgba(255, 42, 109, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 70% at 80% 50%, rgba(0, 240, 255, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .ai-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .satoshi-launcher { bottom: 1rem; right: 1rem; }
+  .satoshi-launcher-label { display: none; }
+}
+.ai-content h2 {
+  font-family: var(--font-cyber);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+.ai-content p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.ai-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 480px) { .ai-features { grid-template-columns: 1fr; } }
+.ai-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  padding: 0.6rem 0.85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.ai-feature::before {
+  content: '✦';
+  color: var(--primary);
+  font-size: 0.7rem;
+}
+.ai-preview {
+  background: var(--surface);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-color);
+}
+.ai-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.ai-preview-header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-yellow);
+}
+.ai-preview-header strong {
+  font-family: var(--font-cyber);
+  color: var(--primary);
+  display: block;
+}
+.ai-preview-header span { font-size: 0.8rem; color: var(--text-muted); }
+.ai-preview-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.ai-preview-bubble {
+  padding: 0.6rem 0.85rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-width: 85%;
+}
+.ai-preview-bubble--user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, rgba(255, 42, 109, 0.3), rgba(189, 0, 255, 0.2));
+  border-bottom-right-radius: 4px;
+}
+.ai-preview-bubble--bot {
+  align-self: flex-start;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 4px;
+  color: var(--text-muted);
+}
+
+/* Full chat page */
+.chat-page {
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+}
+.chat-page-hero {
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+.chat-page-hero h1 {
+  font-family: var(--font-cyber);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+.chat-page-hero p { color: var(--text-muted); max-width: 520px; margin: 0 auto; }
+.chat-page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 820px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1.25rem 2rem;
+}
+.chat-page-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  min-height: 500px;
+  box-shadow: var(--shadow-color);
+}
+.chat-page-main .satoshi-messages { flex: 1; min-height: 360px; }
+.chat-page-main .satoshi-input-area { padding: 1rem; }

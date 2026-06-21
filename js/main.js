@@ -439,11 +439,25 @@ function initFacebookLinks() {
   });
 }
 
+async function loadSatoshiChat() {
+  if (typeof initSatoshiChat === 'function') return;
+  const base = getBasePath();
+  const v = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.assetVersion) ? `?v=${SITE_CONFIG.assetVersion}` : '';
+  await new Promise((resolve, reject) => {
+    const s = document.createElement('script');
+    s.src = `${base}js/satoshi-chat.js${v}`;
+    s.onload = resolve;
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+}
+
 async function bootApp() {
   try {
     await loadCryptoBackground();
     initCryptoBackground();
   } catch (_) { /* background non critico */ }
+  try { await loadSatoshiChat(); } catch (_) { /* chat non critico */ }
   injectLayout();
   initFacebookLinks();
   initMobileNav();
@@ -462,6 +476,7 @@ async function bootApp() {
   if (typeof initNewsHub === 'function') await initNewsHub();
   applyPageTranslations();
   initFadeIn();
+  if (typeof initSatoshiChat === 'function') initSatoshiChat();
 }
 
 document.addEventListener('DOMContentLoaded', bootApp);
@@ -483,4 +498,5 @@ window.addEventListener('langchange', async () => {
   if (typeof initNewsHub === 'function') await initNewsHub();
   applyPageTranslations();
   initFadeIn();
+  if (typeof initSatoshiChat === 'function') initSatoshiChat();
 });

@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260621-mica-fix',
+  assetVersion: '20260621-satoshi-ai',
   email: 'info@cryptofacile.com',
 
   teacher: {
@@ -57,7 +57,8 @@ const SITE_CONFIG = {
     { label: 'News', href: 'news/index.html' },
     { label: 'Sicurezza', href: 'sicurezza/index.html' },
     { label: 'Cardano', href: 'cardano/index.html' },
-    { label: 'Strumenti', href: 'strumenti/index.html' }
+    { label: 'Strumenti', href: 'strumenti/index.html' },
+    { label: 'Parla con Satoshi', href: 'chat/index.html', highlight: true }
   ],
 
   categories: [
@@ -161,6 +162,29 @@ const SITE_CONFIG = {
       accentLight: '#F0EBFF'
     }
   ],
+
+  satoshiAi: {
+    name: 'Satoshi',
+    title: 'Parla con Satoshi',
+    subtitle: 'Assistente AI crypto — powered by Steven AI',
+    tagline: 'Chiedi qualsiasi cosa su Bitcoin, DeFi, sicurezza e Web3',
+    apiUrl: '',
+    productionApiUrl: '',
+    chatPage: 'chat/index.html',
+    avatar: 'assets/img/welcome-bitcoin-boss.png',
+    suggestions: [
+      'Cos\'è Bitcoin spiegato semplice?',
+      'Come iniziare con le crypto?',
+      'Come proteggere il mio wallet?',
+      'Cos\'è Cardano e Midnight?'
+    ],
+    features: [
+      'Risposte in italiano, zero gergo',
+      'Guide crypto personalizzate',
+      'Sicurezza e best practice',
+      'Aggiornato su trend e news'
+    ]
+  },
 
   tools: [
     { name: 'Ledger', desc: 'Hardware wallet per massima sicurezza', category: 'Wallet', href: '#' },

@@ -6,6 +6,7 @@ const NAV_I18N = {
   'sicurezza/index.html': 'nav.sicurezza',
   'cardano/index.html': 'nav.cardano',
   'strumenti/index.html': 'nav.strumenti',
+  'chat/index.html': 'nav.satoshiAi',
   'guide/index.html?filter=principianti': 'nav.principianti',
   'guide/index.html?filter=avanzate': 'nav.avanzate',
   'guide/index.html?filter=defi': 'nav.defi',
@@ -44,7 +45,8 @@ function renderNavLinks(base) {
           <div class="dropdown-menu">${children}</div>
         </div>`;
     }
-    return `<a href="${base}${item.href}" class="nav-link">${navLabel(item.href)}</a>`;
+    const cls = item.highlight ? 'nav-link nav-link--ai' : 'nav-link';
+    return `<a href="${base}${item.href}" class="${cls}">${navLabel(item.href)}</a>`;
   }).join('');
 }
 
@@ -77,6 +79,10 @@ function renderHeader() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </button>
           <div class="header-lang" id="header-lang">${renderLangSwitcher()}</div>
+          <a href="${base}chat/index.html" class="btn btn-satoshi btn-sm header-cta" title="${(SITE_CONFIG.satoshiAi || {}).title || 'Parla con Satoshi'}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            ${t('nav.satoshiAi')}
+          </a>
           <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">${t('nav.newsletter')}</a>
           <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -120,7 +126,8 @@ function renderHeader() {
                   </div>
                 </details>`;
             }
-            return `<a href="${base}${item.href}" class="mobile-nav-link">${navLabel(item.href)}</a>`;
+            const mcls = item.highlight ? 'mobile-nav-link mobile-nav-link--ai' : 'mobile-nav-link';
+            return `<a href="${base}${item.href}" class="${mcls}">${navLabel(item.href)}</a>`;
           }).join('')}
           <a href="${base}glossario/index.html" class="mobile-nav-link">${t('nav.glossario')}</a>
           ${['x', 'facebook'].map(renderMobileSocialLink).join('')}

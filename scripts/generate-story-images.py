@@ -22,7 +22,7 @@ def main() -> None:
             name,
             topic_cfg(name, lang="it"),
             cta=CTA["fb_story"],
-            footer="📰 The Little Satoshi News · cryptoitaliafacile",
+            footer="📰 The Little Satoshi News",
         )
         p = FB_OUT / f"{name}.jpg"
         fb.save(p, "JPEG", quality=JPEG_QUALITY, optimize=True)
@@ -32,7 +32,7 @@ def main() -> None:
             name,
             topic_cfg(name, lang="en"),
             cta=CTA["ig_story"],
-            footer="✨ @krown.82 · cryptoitaliafacile",
+            footer="✨ @krown.82",
         )
         p = IG_OUT / f"{name}.jpg"
         ig.save(p, "JPEG", quality=JPEG_QUALITY, optimize=True)

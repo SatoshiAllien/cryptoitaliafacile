@@ -29,7 +29,7 @@ from pathlib import Path
 
 from chill_cyber_playlist import track_for_slot
 from story_publish import publish_facebook_story
-from story_video import prepare_story_video
+from story_video import STORY_HOME_URL, prepare_story_video
 
 try:
     from zoneinfo import ZoneInfo
@@ -538,7 +538,7 @@ def main() -> None:
 
         story_id = ""
         story_track = ""
-        story_link = article_url(article["slug"])
+        story_link = STORY_HOME_URL
         if not args.no_story:
             try:
                 story_video_path = None

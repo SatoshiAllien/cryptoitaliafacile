@@ -23,6 +23,7 @@ CACHE_DIR = ROOT / "assets" / "video" / "stories" / "cache"
 FB_STORY_IMG = ROOT / "assets" / "img" / "facebook" / "stories"
 IG_STORY_IMG = ROOT / "assets" / "img" / "instagram" / "stories"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
+STORY_HOME_URL = "https://satoshiallien.github.io/cryptoitaliafacile/index.html"
 SITE_LABEL = "cryptoitaliafacile.com"
 STORY_DURATION = 15
 
@@ -31,18 +32,18 @@ THEME = {
         "accent": "#00F0FF",
         "accent2": "#FF2A6D",
         "gold": "#FDE047",
-        "cta": "👆 TAP HERE",
+        "cta": "👆 Tap here",
         "scan": "📱 Scan QR with camera",
-        "hint": "👉 Opens cryptoitaliafacile.com",
+        "hint": "👉 Opens the homepage",
         "free": "✨ FREE",
     },
     "facebook": {
         "accent": "#34D399",
         "accent2": "#FDE047",
         "gold": "#00F0FF",
-        "cta": "👉 CLICCA QUI",
+        "cta": "👉 Clicca qui",
         "scan": "📱 Scansiona il QR",
-        "hint": "👆 Si apre nel browser",
+        "hint": "👆 Si apre la homepage",
         "free": "✨ GRATIS",
     },
 }
@@ -72,12 +73,30 @@ def _hex_to_rgb(color: str) -> tuple[int, int, int]:
 
 def short_link_label(link_url: str) -> str:
     parsed = urllib.parse.urlparse(link_url)
+    path = parsed.path.strip("/")
+    if path in ("", "index.html") and parsed.netloc.endswith("github.io"):
+        return f"🏠 Homepage · {SITE_LABEL}"
     if parsed.netloc.endswith("github.io") and "cryptoitaliafacile" in parsed.path:
         return SITE_LABEL
     host = parsed.netloc.removeprefix("www.")
-    if parsed.path.strip("/").startswith("articolo.html"):
+    if path.startswith("articolo.html"):
         return f"{SITE_LABEL}/guide"
     return host or SITE_LABEL
+
+
+def format_link_lines(link_url: str, *, max_chars: int = 36) -> list[str]:
+    """Spezza URL lungo su più righe per overlay story."""
+    if len(link_url) <= max_chars:
+        return [link_url]
+    for sep in ("/cryptoitaliafacile/", "/"):
+        idx = link_url.find(sep, 12)
+        if idx > 0:
+            split = idx + (len(sep) if sep != "/" else 1)
+            left, right = link_url[:split], link_url[split:]
+            if right and len(left) <= max_chars + 8:
+                return [left, right]
+    mid = len(link_url) // 2
+    return [link_url[:mid], link_url[mid:]]
 
 
 def make_qr_image(link_url: str, size: int = 220) -> Image.Image:
@@ -118,24 +137,35 @@ def overlay_link_panel(
         alpha = int(min(180, (y - 900) * 0.22))
         draw.line([(0, y), (1080, y)], fill=(8, 12, 28, alpha))
 
-    box = (56, 980, 1024, 1260)
+    box = (56, 960, 1024, 1290)
     draw.rounded_rectangle(box, radius=36, fill=(12, 18, 38, 235), outline=accent_rgb + (255,), width=4)
-    draw.rounded_rectangle((56, 980, 1024, 1048), radius=36, fill=accent2_rgb + (220,))
+    draw.rounded_rectangle((56, 960, 1024, 1032), radius=36, fill=accent2_rgb + (220,))
 
-    draw.text((88, 996), theme["cta"], fill=(15, 23, 42), font=_font(30, bold=True))
-    draw.text((780, 996), theme["free"], fill=(15, 23, 42), font=_font(24, bold=True))
+    draw.text((88, 978), theme["cta"], fill=(15, 23, 42), font=_font(32, bold=True))
+    draw.text((780, 982), theme["free"], fill=(15, 23, 42), font=_font(24, bold=True))
 
-    qr = make_qr_image(link_url, size=200)
+    qr = make_qr_image(link_url, size=190)
     qr_rgba = qr.convert("RGBA")
-    layer.paste(qr_rgba, (88, 1068), qr_rgba)
-    draw.rounded_rectangle((80, 1060, 296, 1276), radius=16, outline=accent_rgb + (255,), width=3)
+    layer.paste(qr_rgba, (88, 1052), qr_rgba)
+    draw.rounded_rectangle((80, 1044, 286, 1250), radius=16, outline=accent_rgb + (255,), width=3)
 
     label = short_link_label(link_url)
-    draw.text((330, 1080), f"🌐 {label}", fill="#FFFFFF", font=_font(40, bold=True))
-    draw.text((330, 1140), theme["scan"], fill=accent, font=_font(28, bold=True))
-    draw.text((330, 1190), theme["hint"], fill="#CBD5E1", font=_font(26))
-    draw.rounded_rectangle((330, 1220, 990, 1250), radius=12, fill=accent_rgb + (60,))
-    draw.text((350, 1224), f"🔗 {link_url[:52]}{'…' if len(link_url) > 52 else ''}", fill="#E2E8F0", font=_font(20))
+    draw.text((310, 1052), label, fill="#FFFFFF", font=_font(34, bold=True))
+
+    cta_y = 1100
+    draw.text((310, cta_y), theme["cta"], fill=accent, font=_font(30, bold=True))
+    url_lines = format_link_lines(link_url)
+    url_font = _font(22)
+    url_y = cta_y + 42
+    for i, line in enumerate(url_lines):
+        line_y = url_y + i * 30
+        draw.text((310, line_y), f"🔗 {line}", fill=accent, font=url_font)
+        bbox = draw.textbbox((310, line_y), f"🔗 {line}", font=url_font)
+        draw.line([(bbox[0], bbox[3] + 2), (bbox[2], bbox[3] + 2)], fill=accent_rgb + (200,), width=2)
+
+    hint_y = url_y + len(url_lines) * 30 + 12
+    draw.text((310, hint_y), theme["scan"], fill="#E2E8F0", font=_font(26, bold=True))
+    draw.text((310, hint_y + 36), theme["hint"], fill="#94A3B8", font=_font(24))
 
     out = Image.alpha_composite(img.convert("RGBA"), layer).convert("RGB")
     tmp = Path(tempfile.gettempdir()) / f"story-link-{image_path.stem}.jpg"
@@ -269,7 +299,7 @@ def prepare_story_video(
         track_artist=track["artist"],
         viral_tag=track.get("viral_tag", "#TrendingNow"),
         out_path=out_path,
-        link_url=link_url or SITE_URL,
+        link_url=link_url or STORY_HOME_URL,
         platform=platform,
     )
     return video, track

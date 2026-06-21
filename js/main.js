@@ -472,17 +472,24 @@ function initInstagramLinks() {
   });
 }
 
-async function loadSatoshiChat() {
-  if (typeof initSatoshiChat === 'function') return;
-  const base = getBasePath();
-  const v = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.assetVersion) ? `?v=${SITE_CONFIG.assetVersion}` : '';
-  await new Promise((resolve, reject) => {
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    if (document.querySelector(`script[src="${src}"]`)) { resolve(); return; }
     const s = document.createElement('script');
-    s.src = `${base}js/satoshi-chat.js${v}`;
+    s.src = src;
     s.onload = resolve;
     s.onerror = reject;
     document.head.appendChild(s);
   });
+}
+
+async function loadSatoshiChat() {
+  if (typeof initSatoshiChat === 'function') { initSatoshiChat(); return; }
+  const base = getBasePath();
+  const v = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.assetVersion) ? `?v=${SITE_CONFIG.assetVersion}` : '';
+  await loadScript(`${base}js/satoshi-bot.js${v}`);
+  await loadScript(`${base}js/satoshi-chat.js${v}`);
+  if (typeof initSatoshiChat === 'function') initSatoshiChat();
 }
 
 async function bootApp() {

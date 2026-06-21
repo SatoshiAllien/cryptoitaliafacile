@@ -1,6 +1,6 @@
 /**
- * Parla con Satoshi — Chat widget & API client
- * Connette al backend Steven AI (CryptoItaliaFacile)
+ * Parla con Satoshi — Chat widget integrato nel sito web
+ * Modalità locale su GitHub Pages · Steven AI quando API disponibile
  */
 (function () {
   'use strict';
@@ -8,7 +8,8 @@
   const cfg = () => (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.satoshiAi) || {};
   let sessionId = null;
   let isStreaming = false;
-  let apiOnline = null;
+  let apiOnline = false;
+  let useLocalMode = true;
 
   function getApiBase() {
     const c = cfg();
@@ -39,15 +40,25 @@
 
   async function checkApiHealth() {
     const base = getApiBase();
-    if (!base) { apiOnline = false; return false; }
+    const c = cfg();
+    const fallback = c.useLocalFallback !== false;
+
+    if (!base) {
+      apiOnline = fallback;
+      useLocalMode = fallback;
+      return apiOnline;
+    }
+
     try {
       const res = await fetch(`${base}/api/v1/health`, { signal: AbortSignal.timeout(4000) });
       const data = await res.json();
       apiOnline = data.status === 'ok';
-      return apiOnline;
+      useLocalMode = !apiOnline && fallback;
+      return apiOnline || useLocalMode;
     } catch {
       apiOnline = false;
-      return false;
+      useLocalMode = fallback;
+      return useLocalMode;
     }
   }
 
@@ -106,24 +117,28 @@
     `;
     document.body.appendChild(el);
     bindLauncherEvents();
-    renderWelcome('satoshi-messages');
+    renderWelcome(document.body.dataset.page === 'chat' ? 'chat-page-messages' : 'satoshi-messages');
     checkApiHealth().then(updateStatus);
   }
 
   function updateStatus(online) {
-    const dot = document.getElementById('satoshi-status-dot');
-    const text = document.getElementById('satoshi-status-text');
-    if (!dot || !text) return;
-    if (online) {
-      dot.className = 'satoshi-status-dot satoshi-status-dot--online';
-      text.textContent = 'Online';
-    } else if (!getApiBase()) {
-      dot.className = 'satoshi-status-dot';
-      text.textContent = 'Configura API';
-    } else {
-      dot.className = 'satoshi-status-dot';
-      text.textContent = 'Offline';
-    }
+    const dots = [
+      document.getElementById('satoshi-status-dot'),
+      document.getElementById('chat-page-status-dot')
+    ].filter(Boolean);
+    const texts = [
+      document.getElementById('satoshi-status-text'),
+      document.getElementById('chat-page-status-text')
+    ].filter(Boolean);
+
+    const label = online
+      ? (apiOnline ? 'Online — Steven AI' : 'Online')
+      : 'Offline';
+
+    dots.forEach(dot => {
+      dot.className = online ? 'satoshi-status-dot satoshi-status-dot--online' : 'satoshi-status-dot';
+    });
+    texts.forEach(t => { t.textContent = label; });
   }
 
   function renderWelcome(containerId) {
@@ -166,6 +181,76 @@
     return div.querySelector('.satoshi-msg-bubble');
   }
 
+  async function sendLocalMessage(containerId, text, botBubble) {
+    if (!window.SatoshiBot) {
+      botBubble.innerHTML = '<span class="satoshi-error">Bot non caricato. Ricarica la pagina.</span>';
+      return;
+    }
+    const reply = SatoshiBot.findReply(text);
+    let fullText = '';
+    botBubble.innerHTML = '<span class="satoshi-cursor"></span>';
+    await SatoshiBot.streamReply(reply, (token) => {
+      fullText += token;
+      botBubble.textContent = fullText;
+      const container = document.getElementById(containerId);
+      if (container) container.scrollTop = container.scrollHeight;
+    }, 10);
+  }
+
+  async function sendApiMessage(containerId, text, botBubble) {
+    const apiUrl = chatApiUrl('/message');
+    const res = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: text, session_id: sessionId }),
+      signal: AbortSignal.timeout(300000),
+    });
+
+    if (!res.ok) throw new Error('Server errore ' + res.status);
+    if (!res.body) throw new Error('Risposta vuota');
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    let fullText = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6);
+        if (data === '[DONE]') continue;
+        try {
+          const event = JSON.parse(data);
+          if (event.type === 'session') sessionId = event.session_id;
+          else if (event.type === 'thinking') botBubble.innerHTML = `<span class="satoshi-thinking">${escapeHtml(event.content)}</span>`;
+          else if (event.type === 'tool_start') botBubble.innerHTML = `<span class="satoshi-thinking">Eseguo: ${escapeHtml(event.tool)}...</span>`;
+          else if (event.type === 'token') {
+            fullText += event.content;
+            botBubble.innerHTML = escapeHtml(fullText) + '<span class="satoshi-cursor"></span>';
+          }
+          else if (event.type === 'done') {
+            if (!fullText) fullText = event.content || '';
+            botBubble.textContent = fullText;
+          }
+          else if (event.type === 'error') {
+            throw new Error(event.content || 'Errore API');
+          }
+        } catch (e) {
+          if (e.message && e.message !== 'Errore API') throw e;
+        }
+      }
+      const container = document.getElementById(containerId);
+      if (container) container.scrollTop = container.scrollHeight;
+    }
+  }
+
   async function sendMessage(containerId) {
     const inputId = containerId === 'chat-page-messages' ? 'chat-page-input' : 'satoshi-input';
     const sendId = containerId === 'chat-page-messages' ? 'chat-page-send' : 'satoshi-send';
@@ -176,12 +261,6 @@
     const text = input.value.trim();
     if (!text || isStreaming) return;
 
-    const apiUrl = chatApiUrl('/message');
-    if (!apiUrl) {
-      addMessage(containerId, 'bot', 'Il servizio AI non è ancora configurato per il web. Contatta l\'amministratore o usa il sito in locale.');
-      return;
-    }
-
     isStreaming = true;
     if (sendBtn) sendBtn.disabled = true;
     input.value = '';
@@ -191,63 +270,30 @@
     const botBubble = addMessage(containerId, 'bot', '');
     botBubble.innerHTML = '<span class="satoshi-thinking">Satoshi sta pensando...</span>';
 
+    const tryApi = getApiBase() && apiOnline;
+
     try {
-      const res = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, session_id: sessionId }),
-        signal: AbortSignal.timeout(300000),
-      });
-
-      if (!res.ok) throw new Error('Server errore ' + res.status);
-      if (!res.body) throw new Error('Risposta vuota');
-
-      const reader = res.body.getReader();
-      const decoder = new TextDecoder();
-      let buffer = '';
-      let fullText = '';
-
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop();
-
-        for (const line of lines) {
-          if (!line.startsWith('data: ')) continue;
-          const data = line.slice(6);
-          if (data === '[DONE]') continue;
-          try {
-            const event = JSON.parse(data);
-            if (event.type === 'session') sessionId = event.session_id;
-            else if (event.type === 'thinking') botBubble.innerHTML = `<span class="satoshi-thinking">${escapeHtml(event.content)}</span>`;
-            else if (event.type === 'tool_start') botBubble.innerHTML = `<span class="satoshi-thinking">Eseguo: ${escapeHtml(event.tool)}...</span>`;
-            else if (event.type === 'token') {
-              fullText += event.content;
-              botBubble.innerHTML = escapeHtml(fullText) + '<span class="satoshi-cursor"></span>';
-            }
-            else if (event.type === 'done') {
-              if (!fullText) fullText = event.content || '';
-              botBubble.textContent = fullText;
-            }
-            else if (event.type === 'error') {
-              fullText = event.content || 'Errore';
-              botBubble.innerHTML = `<span class="satoshi-error">${escapeHtml(fullText)}</span>`;
-            }
-          } catch (_) { /* skip malformed */ }
-        }
-        const container = document.getElementById(containerId);
-        if (container) container.scrollTop = container.scrollHeight;
+      if (tryApi) {
+        await sendApiMessage(containerId, text, botBubble);
+      } else if (useLocalMode && window.SatoshiBot) {
+        await sendLocalMessage(containerId, text, botBubble);
+      } else {
+        throw new Error('offline');
       }
     } catch (err) {
-      const msg = err.name === 'TimeoutError'
-        ? 'Timeout: il modello impiega troppo tempo. Riprova.'
-        : 'Non riesco a connettermi al server AI. Verifica che il servizio sia attivo.';
-      botBubble.innerHTML = `<span class="satoshi-error">${escapeHtml(msg)}</span>`;
-      apiOnline = false;
-      updateStatus(false);
+      if (window.SatoshiBot && cfg().useLocalFallback !== false) {
+        botBubble.innerHTML = '<span class="satoshi-thinking">Satoshi sta pensando...</span>';
+        await sendLocalMessage(containerId, text, botBubble);
+        useLocalMode = true;
+        apiOnline = false;
+        updateStatus(true);
+      } else {
+        const msg = err.name === 'TimeoutError'
+          ? 'Timeout: il modello impiega troppo tempo. Riprova.'
+          : 'Servizio temporaneamente non disponibile. Riprova tra poco.';
+        botBubble.innerHTML = `<span class="satoshi-error">${escapeHtml(msg)}</span>`;
+        updateStatus(false);
+      }
     }
 
     isStreaming = false;
@@ -262,14 +308,17 @@
     const input = document.getElementById('satoshi-input');
     const sendBtn = document.getElementById('satoshi-send');
 
-    openBtn?.addEventListener('click', () => {
+    if (!openBtn) return;
+
+    openBtn.addEventListener('click', () => {
+      if (!panel) return;
       panel.hidden = !panel.hidden;
       if (!panel.hidden) {
         input?.focus();
         checkApiHealth().then(updateStatus);
       }
     });
-    closeBtn?.addEventListener('click', () => { panel.hidden = true; });
+    closeBtn?.addEventListener('click', () => { if (panel) panel.hidden = true; });
     newBtn?.addEventListener('click', () => {
       sessionId = null;
       renderWelcome('satoshi-messages');
@@ -287,22 +336,8 @@
   function initChatPage() {
     if (document.body.dataset.page !== 'chat') return;
 
-    const container = document.getElementById('chat-page-messages');
-    if (!container) return;
-
     renderWelcome('chat-page-messages');
-    checkApiHealth().then(online => {
-      const dot = document.getElementById('chat-page-status-dot');
-      const text = document.getElementById('chat-page-status-text');
-      if (dot && text) {
-        if (online) {
-          dot.className = 'satoshi-status-dot satoshi-status-dot--online';
-          text.textContent = 'Online — Steven AI';
-        } else {
-          text.textContent = getApiBase() ? 'Offline — avvia il servizio AI' : 'API non configurata';
-        }
-      }
-    });
+    checkApiHealth().then(updateStatus);
 
     const input = document.getElementById('chat-page-input');
     const sendBtn = document.getElementById('chat-page-send');
@@ -327,9 +362,8 @@
     renderLauncher();
     initChatPage();
     setInterval(() => {
-      if (document.getElementById('satoshi-panel') && !document.getElementById('satoshi-panel').hidden) {
-        checkApiHealth().then(updateStatus);
-      }
+      const panel = document.getElementById('satoshi-panel');
+      if (panel && !panel.hidden) checkApiHealth().then(updateStatus);
     }, 30000);
   };
 })();

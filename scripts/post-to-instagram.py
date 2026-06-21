@@ -540,7 +540,7 @@ def main() -> None:
                 if not args.dry_run:
                     story_video_path, track = prepare_story_video(
                         "instagram",
-                        instagram_image_file(article),
+                        instagram_story_image_file(article),
                         args.slot,
                         day_idx,
                         per_day,

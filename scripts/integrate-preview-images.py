@@ -16,7 +16,16 @@ FB_POSTS = ROOT / "assets" / "img" / "facebook" / "posts"
 FB_STORIES = ROOT / "assets" / "img" / "facebook" / "stories"
 IG_POSTS = ROOT / "assets" / "img" / "instagram" / "posts"
 IG_STORIES = ROOT / "assets" / "img" / "instagram" / "stories"
+STORY_CACHE = ROOT / "assets" / "video" / "stories" / "cache"
 JPEG_QUALITY = 88
+
+
+def clear_story_cache() -> None:
+    """Invalida video story generati con immagini precedenti."""
+    if STORY_CACHE.exists():
+        shutil.rmtree(STORY_CACHE)
+    STORY_CACHE.mkdir(parents=True, exist_ok=True)
+    print("Cache video story svuotata")
 
 
 def to_fb_post(src: Path, dest: Path) -> None:
@@ -36,9 +45,12 @@ def to_jpg(src: Path, dest: Path) -> None:
     img.save(dest, "JPEG", quality=JPEG_QUALITY, optimize=True)
 
 
-def integrate() -> dict[str, int]:
+def integrate(*, refresh_cache: bool = True) -> dict[str, int]:
     if not PREVIEWS.exists():
         raise SystemExit(f"Cartella anteprime non trovata: {PREVIEWS}")
+
+    if refresh_cache:
+        clear_story_cache()
 
     data = json.loads(ARTICLES_PATH.read_text(encoding="utf-8"))
     stats = {"ok": 0, "missing": 0, "updated": 0}

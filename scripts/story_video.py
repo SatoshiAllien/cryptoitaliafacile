@@ -254,6 +254,13 @@ def prepare_story_video(
     track = track_for_slot(slot, day_index, posts_per_day)
     audio_path = Path(track["path"])
     out_path = CACHE_DIR / platform / f"{stem}-{track['id']}.mp4"
+    if (
+        out_path.exists()
+        and image_path.exists()
+        and out_path.stat().st_mtime >= image_path.stat().st_mtime
+    ):
+        return out_path, track
+
     video = build_story_video(
         image_path,
         audio_path,

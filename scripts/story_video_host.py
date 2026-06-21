@@ -41,7 +41,13 @@ def _git_push_file(path: Path) -> bool:
     commit = subprocess.run(["git", "commit", "-m", msg], cwd=ROOT, capture_output=True, text=True)
     if commit.returncode != 0:
         return False
-    push = subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, capture_output=True, text=True)
+    push = subprocess.run(
+        ["git", "push", "origin", "main"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        timeout=90,
+    )
     return push.returncode == 0
 
 

@@ -53,6 +53,12 @@ const FB_CLICKBAIT_HOOKS = {
   ethereum: '⟠ ETHEREUM — Spiegato semplice:'
 };
 
+function getFacebookStoryImageFile(article) {
+  if (!article) return FB_IMAGE_DEFAULTS.guide;
+  if (article.fbStoryImage) return article.fbStoryImage;
+  return getFacebookImageFile(article);
+}
+
 function getFacebookImageFile(article) {
   if (!article) return FB_IMAGE_DEFAULTS.guide;
   if (article.fbImage) return article.fbImage;

@@ -1,128 +1,1873 @@
 {
   "articles": [
-    {"slug":"iniziare-exchange-revolut-kraken","title":"Come iniziare con gli exchange: guida Revolut + Kraken per principianti","excerpt":"Exchange crypto spiegati semplice: perché usare Revolut, come registrarsi su Kraken e fare il primo acquisto in sicurezza.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":16,"date":"Giugno 2026","tags":["exchange","revolut","kraken","principianti"],"popular":true,"featured":true},
-    {"slug":"lightning-network-guida","title":"Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet","excerpt":"Cos'è Lightning, come funzionano i sats, quali wallet usare e come pagare con la mappa commercianti di Satoshi Wallet.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":18,"date":"Giugno 2026","tags":["bitcoin","lightning","sats","wallet"],"popular":true,"featured":true},
-    {"slug":"comprare-bitcoin-prima-volta","title":"Come comprare Bitcoin per la prima volta (guida completa 2026)","excerpt":"Exchange, verifica identità, primo acquisto e sicurezza: tutto passo dopo passo.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":15,"date":"Giugno 2026","tags":["bitcoin","exchange","principianti"],"popular":true,"featured":true},
-    {"slug":"creare-wallet-sicuro","title":"Come creare un wallet crypto sicuro in 10 minuti","excerpt":"Hot wallet, cold wallet e configurazione base per proteggere le tue crypto.","category":"guide","subcategory":"sicurezza","difficulty":"beginner","readTime":10,"date":"Giugno 2026","tags":["wallet","sicurezza"],"popular":true,"featured":true},
-    {"slug":"trasferire-crypto-exchange","title":"Come trasferire crypto da exchange a wallet personale","excerpt":"Prelievo sicuro: rete, indirizzo, fee e verifica della transazione.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":8,"date":"Maggio 2026","tags":["exchange","wallet"],"popular":true},
-    {"slug":"staking-ethereum","title":"Come fare staking di Ethereum: guida passo-passo","excerpt":"Staking diretto, liquid staking e cosa aspettarsi in termini di rendimento.","category":"guide","subcategory":"defi","difficulty":"intermediate","readTime":12,"date":"Maggio 2026","tags":["ethereum","staking"],"popular":true},
-    {"slug":"usare-metamask","title":"Come usare MetaMask: installazione e prima transazione","excerpt":"Installa MetaMask, configura la rete e invia la tua prima transazione.","category":"guide","subcategory":"wallet","difficulty":"beginner","readTime":10,"date":"Maggio 2026","tags":["metamask","wallet"],"popular":true},
-    {"slug":"leggere-indirizzo-wallet","title":"Come leggere un indirizzo wallet e verificare una transazione","excerpt":"Capire indirizzi, hash transazione e block explorer.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":7,"date":"Aprile 2026","tags":["blockchain","explorer"]},
-    {"slug":"dichiarare-crypto-italia","title":"Come dichiarare le crypto in Italia (panoramica pratica)","excerpt":"RW, quadro RT e obblighi fiscali spiegati in modo semplice.","category":"guide","subcategory":"principianti","difficulty":"intermediate","readTime":14,"date":"Aprile 2026","tags":["fiscalità","italia"]},
-    {"slug":"scegliere-exchange-sicuro","title":"Come scegliere un exchange sicuro: checklist in 7 punti","excerpt":"Regolamentazione, reputazione, fee e sicurezza: cosa controllare.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":9,"date":"Aprile 2026","tags":["exchange","sicurezza"]},
-    {"slug":"proteggere-seed-phrase","title":"Come proteggere la seed phrase: metodi e errori da evitare","excerpt":"La regola d'oro della sicurezza crypto: conservare le 12-24 parole.","category":"guide","subcategory":"sicurezza","difficulty":"beginner","readTime":11,"date":"Giugno 2026","tags":["seed phrase","sicurezza"],"popular":true,"featured":true},
-    {"slug":"prima-swap-uniswap","title":"Come funziona un DEX: prima swap su Uniswap","excerpt":"Decentralized exchange, liquidità e prima operazione DeFi.","category":"guide","subcategory":"defi","difficulty":"intermediate","readTime":13,"date":"Marzo 2026","tags":["defi","uniswap"]},
-    {"slug":"hardware-wallet-ledger","title":"Come impostare un hardware wallet Ledger da zero","excerpt":"Configurazione, backup seed e prima transazione con Ledger.","category":"guide","subcategory":"sicurezza","difficulty":"beginner","readTime":12,"date":"Marzo 2026","tags":["ledger","hardware wallet"]},
-    {"slug":"capire-gas-fee","title":"Come capire le fee di rete (gas) e quando conviene operare","excerpt":"Gas su Ethereum e altre reti: come risparmiare sulle commissioni.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":8,"date":"Marzo 2026","tags":["gas","fee"]},
-    {"slug":"dca-crypto","title":"Come fare DCA (Dollar Cost Averaging) con le crypto","excerpt":"Investire a rate senza cercare il momento perfetto.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":7,"date":"Febbraio 2026","tags":["investimento","dca"]},
-    {"slug":"verificare-smart-contract","title":"Come verificare un contratto smart prima di investire","excerpt":"Strumenti e segnali di allarme per evitare truffe DeFi.","category":"guide","subcategory":"avanzate","difficulty":"advanced","readTime":15,"date":"Febbraio 2026","tags":["smart contract","sicurezza"]},
-    {"slug":"usare-etherscan","title":"Come usare un block explorer (Etherscan spiegato semplice)","excerpt":"Leggere transazioni, contratti e wallet su Etherscan.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":9,"date":"Febbraio 2026","tags":["etherscan","explorer"]},
-    {"slug":"cold-wallet-chiavi-offline","title":"Come creare un cold wallet con chiavi offline","excerpt":"Generare e conservare chiavi private senza connessione internet.","category":"guide","subcategory":"sicurezza","difficulty":"advanced","readTime":14,"date":"Gennaio 2026","tags":["cold wallet","sicurezza"]},
-    {"slug":"yield-farming-sicurezza","title":"Come fare yield farming in sicurezza (primi passi)","excerpt":"Fornire liquidità senza rischi inutili: guida prudente.","category":"guide","subcategory":"defi","difficulty":"intermediate","readTime":12,"date":"Gennaio 2026","tags":["defi","yield"]},
-    {"slug":"convertire-crypto-euro","title":"Come convertire crypto in euro e prelevare","excerpt":"Vendita su exchange, bonifico e tempistiche.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":8,"date":"Gennaio 2026","tags":["exchange","euro"]},
-    {"slug":"alert-prezzo-portafoglio","title":"Come impostare alert di prezzo e monitorare il portafoglio","excerpt":"App e strumenti per tenere sotto controllo i tuoi asset.","category":"guide","subcategory":"principianti","difficulty":"beginner","readTime":6,"date":"Gennaio 2026","tags":["tracker","portfolio"]},
-    {"slug":"recuperare-crypto-sbagliato","title":"Come recuperare crypto inviate all'indirizzo sbagliato","excerpt":"Cosa è possibile recuperare e cosa no: guida realistica.","category":"guide","subcategory":"principianti","difficulty":"intermediate","readTime":10,"date":"Gennaio 2026","tags":["transazioni","errori"]},
-
-    {"slug":"tip-mai-seed-phrase","title":"Mai condividere la seed phrase: nemmeno con il \"supporto\"","excerpt":"Nessuno legittimo ti chiederà mai le 12 o 24 parole di recupero.","category":"tip","difficulty":"beginner","readTime":2,"date":"Giugno 2026","tags":["sicurezza"]},
-    {"slug":"tip-2fa-exchange","title":"Attiva sempre il 2FA sull'exchange (non via SMS)","excerpt":"Autenticazione a due fattori con app dedicata, mai SMS.","category":"tip","difficulty":"beginner","readTime":2,"date":"Giugno 2026","tags":["sicurezza","exchange"]},
-    {"slug":"tip-verifica-url","title":"Verifica l'URL dell'exchange: il phishing inizia da lì","excerpt":"Controlla sempre la barra degli indirizzi prima di inserire credenziali.","category":"tip","difficulty":"beginner","readTime":2,"date":"Giugno 2026","tags":["phishing"]},
-    {"slug":"tip-non-tenere-exchange","title":"Non tenere tutte le crypto sull'exchange","excerpt":"L'exchange è per comprare/vendere, non per conservare a lungo termine.","category":"tip","difficulty":"beginner","readTime":2,"date":"Maggio 2026","tags":["wallet","exchange"]},
-    {"slug":"tip-inizia-poco","title":"Inizia con pochi euro: impara prima di investire tanto","excerpt":"Meglio fare errori da 20€ che da 2.000€.","category":"tip","difficulty":"beginner","readTime":2,"date":"Maggio 2026","tags":["principianti"]},
-    {"slug":"tip-controlla-rete","title":"Controlla la rete prima di inviare (ERC-20 ≠ BEP-20)","excerpt":"Inviare sulla rete sbagliata può costare caro.","category":"tip","difficulty":"beginner","readTime":2,"date":"Maggio 2026","tags":["transazioni"]},
-    {"slug":"tip-rubrica-wallet","title":"Salva gli indirizzi frequenti nella rubrica del wallet","excerpt":"Evita errori di battitura sugli indirizzi che usi spesso.","category":"tip","difficulty":"beginner","readTime":2,"date":"Aprile 2026","tags":["wallet"]},
-    {"slug":"tip-no-screenshot-seed","title":"Fai uno screenshot della seed? Hai già perso","excerpt":"Le foto nel cloud sono un bersaglio facile per i hacker.","category":"tip","difficulty":"beginner","readTime":2,"date":"Aprile 2026","tags":["seed phrase"]},
-    {"slug":"tip-diffida-telegram","title":"Diffida dei \"guadagni garantiti\" su Telegram","excerpt":"Se promettono rendimenti fissi, è quasi certamente una truffa.","category":"tip","difficulty":"beginner","readTime":2,"date":"Aprile 2026","tags":["truffe"]},
-    {"slug":"tip-aggiorna-wallet","title":"Aggiorna sempre wallet e app","excerpt":"Gli aggiornamenti correggono vulnerabilità di sicurezza.","category":"tip","difficulty":"beginner","readTime":2,"date":"Marzo 2026","tags":["sicurezza"]},
-    {"slug":"tip-email-dedicata","title":"Usa una email dedicata solo alle crypto","excerpt":"Separa le comunicazioni crypto dal resto della tua vita digitale.","category":"tip","difficulty":"beginner","readTime":2,"date":"Marzo 2026","tags":["sicurezza"]},
-    {"slug":"tip-leggi-transazione","title":"Prima di firmare una transazione, leggi cosa stai approvando","excerpt":"Ogni click \"Conferma\" può autorizzare un prelievo.","category":"tip","difficulty":"beginner","readTime":2,"date":"Marzo 2026","tags":["sicurezza"]},
-    {"slug":"tip-diversifica","title":"Diversifica: non mettere tutto su una sola crypto","excerpt":"Un portafoglio equilibrato riduce il rischio concentrato.","category":"tip","difficulty":"beginner","readTime":2,"date":"Febbraio 2026","tags":["investimento"]},
-    {"slug":"tip-traccia-operazioni","title":"Tieni traccia di ogni operazione per la dichiarazione","excerpt":"Un foglio o app di tracking ti salverà a fine anno.","category":"tip","difficulty":"beginner","readTime":2,"date":"Febbraio 2026","tags":["fiscalità"]},
-    {"slug":"tip-spread-fee","title":"Il prezzo che vedi non è quello che paghi (spread + fee)","excerpt":"Calcola sempre il costo totale dell'operazione.","category":"tip","difficulty":"beginner","readTime":2,"date":"Febbraio 2026","tags":["exchange"]},
-    {"slug":"tip-staking-unlock","title":"Staking: capisci il periodo di unlock prima di bloccare","excerpt":"Alcuni staking bloccano i fondi per giorni o settimane.","category":"tip","difficulty":"beginner","readTime":2,"date":"Gennaio 2026","tags":["staking"]},
-    {"slug":"tip-test-transazione","title":"Un wallet nuovo? Fai un test con pochi centesimi","excerpt":"Verifica che tutto funzioni prima di inviare somme importanti.","category":"tip","difficulty":"beginner","readTime":2,"date":"Gennaio 2026","tags":["wallet"]},
-    {"slug":"tip-no-link-email","title":"Non cliccare link crypto da email sospette","excerpt":"Vai sempre direttamente al sito digitando l'URL.","category":"tip","difficulty":"beginner","readTime":2,"date":"Gennaio 2026","tags":["phishing"]},
-    {"slug":"tip-pin-wallet","title":"Imposta un PIN forte sul wallet mobile","excerpt":"Proteggi l'accesso al wallet sul tuo smartphone.","category":"tip","difficulty":"beginner","readTime":2,"date":"Gennaio 2026","tags":["sicurezza"]},
-    {"slug":"tip-non-capisci-non-investi","title":"Se non capisci il progetto, non investirci","excerpt":"La regola più semplice e più efficace per evitare truffe.","category":"tip","difficulty":"beginner","readTime":2,"date":"Gennaio 2026","tags":["investimento"]},
-
-    {"slug":"trend-mica","title":"Cos'è la regolamentazione MiCA e cosa cambia in Europa","excerpt":"Il nuovo quadro europeo per le criptovalute spiegato in modo chiaro.","category":"trend","difficulty":"beginner","readTime":8,"date":"Giugno 2026","tags":["#Regolamentazione","#Europa"],"popular":true},
-    {"slug":"trend-etf-bitcoin","title":"Bitcoin Spot ETF: cosa sono e perché contano","excerpt":"Fondi quotati che tracciano Bitcoin: impatto e cosa significa per te.","category":"trend","difficulty":"beginner","readTime":7,"date":"Giugno 2026","tags":["#ETF","#Bitcoin"],"popular":true},
-    {"slug":"trend-layer2","title":"Layer 2: perché Ethereum ha bisogno di \"strade secondarie\"","excerpt":"Soluzioni di scalabilità per ridurre fee e tempi di conferma.","category":"trend","difficulty":"intermediate","readTime":9,"date":"Maggio 2026","tags":["#Layer2","#Ethereum"],"popular":true},
-    {"slug":"trend-rwa","title":"Real World Assets (RWA): crypto che rappresentano asset reali","excerpt":"Tokenizzazione di immobili, obbligazioni e materie prime.","category":"trend","difficulty":"intermediate","readTime":8,"date":"Maggio 2026","tags":["#RWA","#DeFi"],"popular":true},
-    {"slug":"trend-stablecoin","title":"Stablecoin: come funzionano e quali rischi nascondono","excerpt":"USDT, USDC e DAI: stabilità apparente, rischi reali.","category":"trend","difficulty":"beginner","readTime":8,"date":"Aprile 2026","tags":["#Stablecoin"]},
-    {"slug":"trend-cbdc","title":"CBDC: le monete digitali delle banche centrali spiegate","excerpt":"Euro digitale e monete sovrane: differenze dalle crypto decentralizzate.","category":"trend","difficulty":"beginner","readTime":7,"date":"Aprile 2026","tags":["#CBDC"]},
-    {"slug":"trend-depin","title":"DePIN: infrastrutture fisiche decentralizzate","excerpt":"Reti decentralizzate per storage, WiFi, energia e altro.","category":"trend","difficulty":"intermediate","readTime":8,"date":"Marzo 2026","tags":["#DePIN"]},
-    {"slug":"trend-ai-blockchain","title":"AI + Blockchain: trend o vera utilità?","excerpt":"Dove l'intelligenza artificiale incontra la blockchain.","category":"trend","difficulty":"intermediate","readTime":9,"date":"Marzo 2026","tags":["#AI","#Blockchain"]},
-    {"slug":"trend-halving","title":"Il halving di Bitcoin: cos'è e perché tutti ne parlano","excerpt":"Riduzione delle ricompense dei miner: effetti sul mercato.","category":"trend","difficulty":"beginner","readTime":7,"date":"Febbraio 2026","tags":["#Bitcoin","#Halving"]},
-    {"slug":"trend-modular-blockchain","title":"Modular Blockchain: la nuova architettura delle reti crypto","excerpt":"Separare consenso, esecuzione e disponibilità dati.","category":"trend","difficulty":"advanced","readTime":10,"date":"Febbraio 2026","tags":["#Blockchain"]},
-
-    {"slug":"blockchain-5-minuti","title":"Primi passi: cos'è una blockchain in 5 minuti","excerpt":"Il concetto fondamentale spiegato senza tecnicismi.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":5,"date":"Giugno 2026","tags":["blockchain","principianti"]},
-    {"slug":"creare-account-exchange","title":"Creare account su Coinbase/Kraken (con screenshot)","excerpt":"Registrazione, verifica KYC e primi passi sull'exchange.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":8,"date":"Giugno 2026","tags":["exchange"]},
-    {"slug":"primi-20-euro-bitcoin","title":"Acquistare i primi 20€ di Bitcoin","excerpt":"Ordine di acquisto, pagamento e conferma passo-passo.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":6,"date":"Maggio 2026","tags":["bitcoin"]},
-    {"slug":"installare-trust-wallet","title":"Installare e configurare Trust Wallet","excerpt":"Download, setup e prima ricezione di crypto.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":7,"date":"Maggio 2026","tags":["wallet"]},
-    {"slug":"prima-transazione-crypto","title":"Inviare e ricevere la prima crypto","excerpt":"Dal copia-incolla dell'indirizzo alla conferma on-chain.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":6,"date":"Aprile 2026","tags":["transazioni"]},
-    {"slug":"leggere-grafico-candele","title":"Leggere un grafico di prezzo (candele base)","excerpt":"Candlestick, timeframe e volumi per principianti.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":8,"date":"Aprile 2026","tags":["trading"]},
-    {"slug":"market-cap-volume","title":"Capire market cap, volume e supply","excerpt":"Le metriche base per valutare una criptovaluta.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":7,"date":"Marzo 2026","tags":["analisi"]},
-    {"slug":"esplorare-block-explorer","title":"Esplorare la prima transazione su blockchain explorer","excerpt":"Trovare e leggere la tua transazione sulla blockchain.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":6,"date":"Marzo 2026","tags":["explorer"]},
-    {"slug":"notifiche-prezzo-app","title":"Impostare notifiche di prezzo su app mobile","excerpt":"Alert personalizzati con CoinGecko e app simili.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":5,"date":"Febbraio 2026","tags":["tracker"]},
-    {"slug":"creare-watchlist","title":"Creare la prima watchlist personalizzata","excerpt":"Monitorare le crypto che ti interessano.","category":"tutorial","subcategory":"principianti","difficulty":"beginner","readTime":4,"date":"Febbraio 2026","tags":["portfolio"]},
-
-    {"slug":"bridge-cross-chain","title":"Bridge cross-chain: trasferire asset tra Ethereum e Arbitrum","excerpt":"Ponti tra blockchain: come funzionano e rischi da considerare.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":14,"date":"Giugno 2026","tags":["bridge","layer2"]},
-    {"slug":"liquidita-uniswap-v3","title":"Fornire liquidità su Uniswap V3 (con calcolo impermanent loss)","excerpt":"Concentrated liquidity e rischio di impermanent loss.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":16,"date":"Maggio 2026","tags":["defi","uniswap"]},
-    {"slug":"usare-aave","title":"Usare Aave per prestito e deposito DeFi","excerpt":"Lending e borrowing decentralizzato su Aave.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":14,"date":"Maggio 2026","tags":["defi","aave"]},
-    {"slug":"analisi-on-chain-dune","title":"Analisi on-chain con Dune Analytics","excerpt":"Query SQL e dashboard per analisi blockchain.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":15,"date":"Aprile 2026","tags":["analisi","on-chain"]},
-    {"slug":"nodo-validator","title":"Configurare un nodo validator (panoramica requisiti)","excerpt":"Hardware, software e costi per validare una rete.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":18,"date":"Aprile 2026","tags":["validator","staking"]},
-    {"slug":"leggere-solidity","title":"Smart contract: leggere codice Solidity base","excerpt":"Funzioni, variabili e pattern comuni per non-developer.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":16,"date":"Marzo 2026","tags":["solidity","smart contract"]},
-    {"slug":"mev-protezione","title":"MEV e protezione nelle transazioni DeFi","excerpt":"Maximal Extractable Value e come difendersi.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":12,"date":"Marzo 2026","tags":["mev","defi"]},
-    {"slug":"multisig-gnosis-safe","title":"Multisig wallet con Gnosis Safe","excerpt":"Wallet multi-firma per team e DAO.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":13,"date":"Febbraio 2026","tags":["multisig","wallet"]},
-    {"slug":"ottimizzazione-gas-batch","title":"Ottimizzazione gas con transazioni batch","excerpt":"Raggruppare operazioni per risparmiare sulle fee.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":11,"date":"Febbraio 2026","tags":["gas","ethereum"]},
-    {"slug":"hedging-stablecoin","title":"Strategie di hedging con stablecoin e derivati DeFi","excerpt":"Proteggere il portafoglio in mercati volatili.","category":"tutorial","subcategory":"avanzate","difficulty":"advanced","readTime":14,"date":"Gennaio 2026","tags":["hedging","defi"]},
-
-    {"slug":"cardano-spiegato","title":"Cardano spiegato semplice: cos'è ADA e come funziona","excerpt":"La blockchain proof-of-stake fondata su ricerca accademica.","category":"cardano","difficulty":"beginner","readTime":10,"date":"Giugno 2026","tags":["cardano","ada"],"popular":true,"featured":true},
-    {"slug":"comprare-ada","title":"Come acquistare ADA su exchange italiani","excerpt":"Dove e come comprare Cardano in Italia.","category":"cardano","difficulty":"beginner","readTime":8,"date":"Giugno 2026","tags":["ada","exchange"]},
-    {"slug":"staking-ada","title":"Staking ADA: guida completa (delega vs pool)","excerpt":"Delegare ADA a un pool di staking: rendimenti e scelta del pool.","category":"cardano","difficulty":"beginner","readTime":12,"date":"Maggio 2026","tags":["staking","ada"],"popular":true},
-    {"slug":"wallet-cardano-confronto","title":"Eternl, Nami, Yoroi: quale wallet Cardano scegliere","excerpt":"Confronto tra i wallet più usati nell'ecosistema Cardano.","category":"cardano","difficulty":"beginner","readTime":10,"date":"Maggio 2026","tags":["wallet","cardano"]},
-    {"slug":"project-catalyst","title":"Come votare su Project Catalyst","excerpt":"Partecipare alla governance e al funding dell'ecosistema.","category":"cardano","difficulty":"intermediate","readTime":9,"date":"Aprile 2026","tags":["governance","catalyst"]},
-    {"slug":"cardano-defi","title":"Cardano DeFi: Minswap, SundaeSwap e liquidity pool","excerpt":"Le principali DEX e protocolli DeFi su Cardano.","category":"cardano","difficulty":"intermediate","readTime":13,"date":"Aprile 2026","tags":["defi","cardano"]},
-    {"slug":"native-token-cardano","title":"Native token su Cardano: creare e gestire asset","excerpt":"Token nativi senza smart contract complessi.","category":"cardano","difficulty":"intermediate","readTime":11,"date":"Marzo 2026","tags":["token","cardano"]},
-    {"slug":"hydra-cardano","title":"Hydra: cos'è e cosa cambierà per la scalabilità","excerpt":"Layer 2 di Cardano per transazioni ultra-veloci.","category":"cardano","difficulty":"intermediate","readTime":9,"date":"Marzo 2026","tags":["hydra","scalabilità"]},
-    {"slug":"plutus-panoramica","title":"Smart contract Cardano (Plutus): panoramica per utenti","excerpt":"Come funzionano i contratti intelligenti su Cardano.","category":"cardano","difficulty":"intermediate","readTime":10,"date":"Febbraio 2026","tags":["plutus","smart contract"]},
-    {"slug":"cardano-vs-ethereum","title":"Cardano vs Ethereum: differenze pratiche per l'utente","excerpt":"Confronto reale tra i due ecosistemi per chi inizia.","category":"cardano","difficulty":"beginner","readTime":11,"date":"Febbraio 2026","tags":["cardano","ethereum"]},
-
-    {"slug":"seed-phrase-guida","title":"Seed phrase: cos'è, come generarla e conservarla","excerpt":"Tutto sulle parole di recupero del wallet.","category":"sicurezza","difficulty":"beginner","readTime":10,"date":"Giugno 2026","tags":["seed phrase"],"popular":true},
-    {"slug":"hot-vs-cold-wallet","title":"Hot wallet vs cold wallet: differenze e quando usare cosa","excerpt":"Confronto pratico tra wallet online e offline.","category":"sicurezza","difficulty":"beginner","readTime":8,"date":"Giugno 2026","tags":["wallet"]},
-    {"slug":"confronto-hardware-wallet","title":"Hardware wallet: confronto Ledger vs Trezor vs BitBox","excerpt":"Quale dispositivo scegliere per la massima sicurezza.","category":"sicurezza","difficulty":"beginner","readTime":12,"date":"Maggio 2026","tags":["hardware wallet"]},
-    {"slug":"difendersi-phishing","title":"Riconoscere e difendersi dal phishing crypto","excerpt":"Segnali di allarme e buone pratiche anti-truffa.","category":"sicurezza","difficulty":"beginner","readTime":9,"date":"Maggio 2026","tags":["phishing"]},
-    {"slug":"approvazioni-smart-contract","title":"Approvazioni smart contract: cosa firmi e come revocarle","excerpt":"Controllare e revocare permessi sui tuoi token.","category":"sicurezza","difficulty":"intermediate","readTime":10,"date":"Aprile 2026","tags":["smart contract"]},
-    {"slug":"backup-wallet-321","title":"Backup del wallet: strategia 3-2-1 per le crypto","excerpt":"Tre copie, due supporti, una off-site.","category":"sicurezza","difficulty":"beginner","readTime":8,"date":"Aprile 2026","tags":["backup"]},
-    {"slug":"sicurezza-mobile","title":"Sicurezza mobile: proteggere wallet su smartphone","excerpt":"PIN, biometria e precauzioni per wallet mobile.","category":"sicurezza","difficulty":"beginner","readTime":7,"date":"Marzo 2026","tags":["mobile"]},
-    {"slug":"wallet-compromesso","title":"Cosa fare se sospetti una compromissione del wallet","excerpt":"Piano d'azione immediato in caso di emergenza.","category":"sicurezza","difficulty":"intermediate","readTime":9,"date":"Marzo 2026","tags":["emergenza"]},
-    {"slug":"password-manager-crypto","title":"Password manager e crypto: best practice","excerpt":"Gestire password e note sicure per l'ecosistema crypto.","category":"sicurezza","difficulty":"beginner","readTime":7,"date":"Febbraio 2026","tags":["password"]},
-    {"slug":"audit-sicurezza-portafoglio","title":"Audit di sicurezza del proprio portafoglio (checklist)","excerpt":"25 punti da verificare per un portafoglio sicuro.","category":"sicurezza","difficulty":"beginner","readTime":10,"date":"Febbraio 2026","tags":["checklist"]}
+    {
+      "slug": "iniziare-exchange-revolut-kraken",
+      "title": "Come iniziare con gli exchange: guida Revolut + Kraken per principianti",
+      "excerpt": "Exchange crypto spiegati semplice: perché usare Revolut, come registrarsi su Kraken e fare il primo acquisto in sicurezza.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 16,
+      "date": "Giugno 2026",
+      "tags": [
+        "exchange",
+        "revolut",
+        "kraken",
+        "principianti"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "iniziare-exchange-revolut-kraken.jpg",
+      "igImage": "iniziare-exchange-revolut-kraken.jpg",
+      "fbStoryImage": "iniziare-exchange-revolut-kraken.jpg",
+      "igStoryImage": "iniziare-exchange-revolut-kraken.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "lightning-network-guida",
+      "title": "Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet",
+      "excerpt": "Cos'è Lightning, come funzionano i sats, quali wallet usare e come pagare con la mappa commercianti di Satoshi Wallet.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 18,
+      "date": "Giugno 2026",
+      "tags": [
+        "bitcoin",
+        "lightning",
+        "sats",
+        "wallet"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "lightning-network-guida.jpg",
+      "igImage": "lightning-network-guida.jpg",
+      "fbStoryImage": "lightning-network-guida.jpg",
+      "igStoryImage": "lightning-network-guida.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "comprare-bitcoin-prima-volta",
+      "title": "Come comprare Bitcoin per la prima volta (guida completa 2026)",
+      "excerpt": "Exchange, verifica identità, primo acquisto e sicurezza: tutto passo dopo passo.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 15,
+      "date": "Giugno 2026",
+      "tags": [
+        "bitcoin",
+        "exchange",
+        "principianti"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "comprare-bitcoin-prima-volta.jpg",
+      "igImage": "comprare-bitcoin-prima-volta.jpg",
+      "fbStoryImage": "comprare-bitcoin-prima-volta.jpg",
+      "igStoryImage": "comprare-bitcoin-prima-volta.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "creare-wallet-sicuro",
+      "title": "Come creare un wallet crypto sicuro in 10 minuti",
+      "excerpt": "Hot wallet, cold wallet e configurazione base per proteggere le tue crypto.",
+      "category": "guide",
+      "subcategory": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "date": "Giugno 2026",
+      "tags": [
+        "wallet",
+        "sicurezza"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "creare-wallet-sicuro.jpg",
+      "igImage": "creare-wallet-sicuro.jpg",
+      "fbStoryImage": "creare-wallet-sicuro.jpg",
+      "igStoryImage": "creare-wallet-sicuro.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trasferire-crypto-exchange",
+      "title": "Come trasferire crypto da exchange a wallet personale",
+      "excerpt": "Prelievo sicuro: rete, indirizzo, fee e verifica della transazione.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Maggio 2026",
+      "tags": [
+        "exchange",
+        "wallet"
+      ],
+      "popular": true,
+      "fbImage": "trasferire-crypto-exchange.jpg",
+      "igImage": "trasferire-crypto-exchange.jpg",
+      "fbStoryImage": "trasferire-crypto-exchange.jpg",
+      "igStoryImage": "trasferire-crypto-exchange.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "staking-ethereum",
+      "title": "Come fare staking di Ethereum: guida passo-passo",
+      "excerpt": "Staking diretto, liquid staking e cosa aspettarsi in termini di rendimento.",
+      "category": "guide",
+      "subcategory": "defi",
+      "difficulty": "intermediate",
+      "readTime": 12,
+      "date": "Maggio 2026",
+      "tags": [
+        "ethereum",
+        "staking"
+      ],
+      "popular": true,
+      "fbImage": "staking-ethereum.jpg",
+      "igImage": "staking-ethereum.jpg",
+      "fbStoryImage": "staking-ethereum.jpg",
+      "igStoryImage": "staking-ethereum.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "usare-metamask",
+      "title": "Come usare MetaMask: installazione e prima transazione",
+      "excerpt": "Installa MetaMask, configura la rete e invia la tua prima transazione.",
+      "category": "guide",
+      "subcategory": "wallet",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "date": "Maggio 2026",
+      "tags": [
+        "metamask",
+        "wallet"
+      ],
+      "popular": true,
+      "fbImage": "usare-metamask.jpg",
+      "igImage": "usare-metamask.jpg",
+      "fbStoryImage": "usare-metamask.jpg",
+      "igStoryImage": "usare-metamask.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "leggere-indirizzo-wallet",
+      "title": "Come leggere un indirizzo wallet e verificare una transazione",
+      "excerpt": "Capire indirizzi, hash transazione e block explorer.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Aprile 2026",
+      "tags": [
+        "blockchain",
+        "explorer"
+      ],
+      "fbImage": "leggere-indirizzo-wallet.jpg",
+      "igImage": "leggere-indirizzo-wallet.jpg",
+      "fbStoryImage": "leggere-indirizzo-wallet.jpg",
+      "igStoryImage": "leggere-indirizzo-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "dichiarare-crypto-italia",
+      "title": "Come dichiarare le crypto in Italia (panoramica pratica)",
+      "excerpt": "RW, quadro RT e obblighi fiscali spiegati in modo semplice.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "intermediate",
+      "readTime": 14,
+      "date": "Aprile 2026",
+      "tags": [
+        "fiscalità",
+        "italia"
+      ],
+      "fbImage": "dichiarare-crypto-italia.jpg",
+      "igImage": "dichiarare-crypto-italia.jpg",
+      "fbStoryImage": "dichiarare-crypto-italia.jpg",
+      "igStoryImage": "dichiarare-crypto-italia.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "scegliere-exchange-sicuro",
+      "title": "Come scegliere un exchange sicuro: checklist in 7 punti",
+      "excerpt": "Regolamentazione, reputazione, fee e sicurezza: cosa controllare.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 9,
+      "date": "Aprile 2026",
+      "tags": [
+        "exchange",
+        "sicurezza"
+      ],
+      "fbImage": "scegliere-exchange-sicuro.jpg",
+      "igImage": "scegliere-exchange-sicuro.jpg",
+      "fbStoryImage": "scegliere-exchange-sicuro.jpg",
+      "igStoryImage": "scegliere-exchange-sicuro.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "proteggere-seed-phrase",
+      "title": "Come proteggere la seed phrase: metodi e errori da evitare",
+      "excerpt": "La regola d'oro della sicurezza crypto: conservare le 12-24 parole.",
+      "category": "guide",
+      "subcategory": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 11,
+      "date": "Giugno 2026",
+      "tags": [
+        "seed phrase",
+        "sicurezza"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "proteggere-seed-phrase.jpg",
+      "igImage": "proteggere-seed-phrase.jpg",
+      "fbStoryImage": "proteggere-seed-phrase.jpg",
+      "igStoryImage": "proteggere-seed-phrase.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "prima-swap-uniswap",
+      "title": "Come funziona un DEX: prima swap su Uniswap",
+      "excerpt": "Decentralized exchange, liquidità e prima operazione DeFi.",
+      "category": "guide",
+      "subcategory": "defi",
+      "difficulty": "intermediate",
+      "readTime": 13,
+      "date": "Marzo 2026",
+      "tags": [
+        "defi",
+        "uniswap"
+      ],
+      "fbImage": "prima-swap-uniswap.jpg",
+      "igImage": "prima-swap-uniswap.jpg",
+      "fbStoryImage": "prima-swap-uniswap.jpg",
+      "igStoryImage": "prima-swap-uniswap.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "hardware-wallet-ledger",
+      "title": "Come impostare un hardware wallet Ledger da zero",
+      "excerpt": "Configurazione, backup seed e prima transazione con Ledger.",
+      "category": "guide",
+      "subcategory": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 12,
+      "date": "Marzo 2026",
+      "tags": [
+        "ledger",
+        "hardware wallet"
+      ],
+      "fbImage": "hardware-wallet-ledger.jpg",
+      "igImage": "hardware-wallet-ledger.jpg",
+      "fbStoryImage": "hardware-wallet-ledger.jpg",
+      "igStoryImage": "hardware-wallet-ledger.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "capire-gas-fee",
+      "title": "Come capire le fee di rete (gas) e quando conviene operare",
+      "excerpt": "Gas su Ethereum e altre reti: come risparmiare sulle commissioni.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Marzo 2026",
+      "tags": [
+        "gas",
+        "fee"
+      ],
+      "fbImage": "capire-gas-fee.jpg",
+      "igImage": "capire-gas-fee.jpg",
+      "fbStoryImage": "capire-gas-fee.jpg",
+      "igStoryImage": "capire-gas-fee.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "dca-crypto",
+      "title": "Come fare DCA (Dollar Cost Averaging) con le crypto",
+      "excerpt": "Investire a rate senza cercare il momento perfetto.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Febbraio 2026",
+      "tags": [
+        "investimento",
+        "dca"
+      ],
+      "fbImage": "dca-crypto.jpg",
+      "igImage": "dca-crypto.jpg",
+      "fbStoryImage": "dca-crypto.jpg",
+      "igStoryImage": "dca-crypto.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "verificare-smart-contract",
+      "title": "Come verificare un contratto smart prima di investire",
+      "excerpt": "Strumenti e segnali di allarme per evitare truffe DeFi.",
+      "category": "guide",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 15,
+      "date": "Febbraio 2026",
+      "tags": [
+        "smart contract",
+        "sicurezza"
+      ],
+      "fbImage": "verificare-smart-contract.jpg",
+      "igImage": "verificare-smart-contract.jpg",
+      "fbStoryImage": "verificare-smart-contract.jpg",
+      "igStoryImage": "verificare-smart-contract.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "usare-etherscan",
+      "title": "Come usare un block explorer (Etherscan spiegato semplice)",
+      "excerpt": "Leggere transazioni, contratti e wallet su Etherscan.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 9,
+      "date": "Febbraio 2026",
+      "tags": [
+        "etherscan",
+        "explorer"
+      ],
+      "fbImage": "usare-etherscan.jpg",
+      "igImage": "usare-etherscan.jpg",
+      "fbStoryImage": "usare-etherscan.jpg",
+      "igStoryImage": "usare-etherscan.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "cold-wallet-chiavi-offline",
+      "title": "Come creare un cold wallet con chiavi offline",
+      "excerpt": "Generare e conservare chiavi private senza connessione internet.",
+      "category": "guide",
+      "subcategory": "sicurezza",
+      "difficulty": "advanced",
+      "readTime": 14,
+      "date": "Gennaio 2026",
+      "tags": [
+        "cold wallet",
+        "sicurezza"
+      ],
+      "fbImage": "cold-wallet-chiavi-offline.jpg",
+      "igImage": "cold-wallet-chiavi-offline.jpg",
+      "fbStoryImage": "cold-wallet-chiavi-offline.jpg",
+      "igStoryImage": "cold-wallet-chiavi-offline.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "yield-farming-sicurezza",
+      "title": "Come fare yield farming in sicurezza (primi passi)",
+      "excerpt": "Fornire liquidità senza rischi inutili: guida prudente.",
+      "category": "guide",
+      "subcategory": "defi",
+      "difficulty": "intermediate",
+      "readTime": 12,
+      "date": "Gennaio 2026",
+      "tags": [
+        "defi",
+        "yield"
+      ],
+      "fbImage": "yield-farming-sicurezza.jpg",
+      "igImage": "yield-farming-sicurezza.jpg",
+      "fbStoryImage": "yield-farming-sicurezza.jpg",
+      "igStoryImage": "yield-farming-sicurezza.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "convertire-crypto-euro",
+      "title": "Come convertire crypto in euro e prelevare",
+      "excerpt": "Vendita su exchange, bonifico e tempistiche.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Gennaio 2026",
+      "tags": [
+        "exchange",
+        "euro"
+      ],
+      "fbImage": "convertire-crypto-euro.jpg",
+      "igImage": "convertire-crypto-euro.jpg",
+      "fbStoryImage": "convertire-crypto-euro.jpg",
+      "igStoryImage": "convertire-crypto-euro.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "alert-prezzo-portafoglio",
+      "title": "Come impostare alert di prezzo e monitorare il portafoglio",
+      "excerpt": "App e strumenti per tenere sotto controllo i tuoi asset.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 6,
+      "date": "Gennaio 2026",
+      "tags": [
+        "tracker",
+        "portfolio"
+      ],
+      "fbImage": "alert-prezzo-portafoglio.jpg",
+      "igImage": "alert-prezzo-portafoglio.jpg",
+      "fbStoryImage": "alert-prezzo-portafoglio.jpg",
+      "igStoryImage": "alert-prezzo-portafoglio.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "recuperare-crypto-sbagliato",
+      "title": "Come recuperare crypto inviate all'indirizzo sbagliato",
+      "excerpt": "Cosa è possibile recuperare e cosa no: guida realistica.",
+      "category": "guide",
+      "subcategory": "principianti",
+      "difficulty": "intermediate",
+      "readTime": 10,
+      "date": "Gennaio 2026",
+      "tags": [
+        "transazioni",
+        "errori"
+      ],
+      "fbImage": "recuperare-crypto-sbagliato.jpg",
+      "igImage": "recuperare-crypto-sbagliato.jpg",
+      "fbStoryImage": "recuperare-crypto-sbagliato.jpg",
+      "igStoryImage": "recuperare-crypto-sbagliato.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-mai-seed-phrase",
+      "title": "Mai condividere la seed phrase: nemmeno con il \"supporto\"",
+      "excerpt": "Nessuno legittimo ti chiederà mai le 12 o 24 parole di recupero.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Giugno 2026",
+      "tags": [
+        "sicurezza"
+      ],
+      "fbImage": "tip-mai-seed-phrase.jpg",
+      "igImage": "tip-mai-seed-phrase.jpg",
+      "fbStoryImage": "tip-mai-seed-phrase.jpg",
+      "igStoryImage": "tip-mai-seed-phrase.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-2fa-exchange",
+      "title": "Attiva sempre il 2FA sull'exchange (non via SMS)",
+      "excerpt": "Autenticazione a due fattori con app dedicata, mai SMS.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Giugno 2026",
+      "tags": [
+        "sicurezza",
+        "exchange"
+      ],
+      "fbImage": "tip-2fa-exchange.jpg",
+      "igImage": "tip-2fa-exchange.jpg",
+      "fbStoryImage": "tip-2fa-exchange.jpg",
+      "igStoryImage": "tip-2fa-exchange.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-verifica-url",
+      "title": "Verifica l'URL dell'exchange: il phishing inizia da lì",
+      "excerpt": "Controlla sempre la barra degli indirizzi prima di inserire credenziali.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Giugno 2026",
+      "tags": [
+        "phishing"
+      ],
+      "fbImage": "tip-verifica-url.jpg",
+      "igImage": "tip-verifica-url.jpg",
+      "fbStoryImage": "tip-verifica-url.jpg",
+      "igStoryImage": "tip-verifica-url.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-non-tenere-exchange",
+      "title": "Non tenere tutte le crypto sull'exchange",
+      "excerpt": "L'exchange è per comprare/vendere, non per conservare a lungo termine.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Maggio 2026",
+      "tags": [
+        "wallet",
+        "exchange"
+      ],
+      "fbImage": "tip-non-tenere-exchange.jpg",
+      "igImage": "tip-non-tenere-exchange.jpg",
+      "fbStoryImage": "tip-non-tenere-exchange.jpg",
+      "igStoryImage": "tip-non-tenere-exchange.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-inizia-poco",
+      "title": "Inizia con pochi euro: impara prima di investire tanto",
+      "excerpt": "Meglio fare errori da 20€ che da 2.000€.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Maggio 2026",
+      "tags": [
+        "principianti"
+      ],
+      "fbImage": "tip-inizia-poco.jpg",
+      "igImage": "tip-inizia-poco.jpg",
+      "fbStoryImage": "tip-inizia-poco.jpg",
+      "igStoryImage": "tip-inizia-poco.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-controlla-rete",
+      "title": "Controlla la rete prima di inviare (ERC-20 ≠ BEP-20)",
+      "excerpt": "Inviare sulla rete sbagliata può costare caro.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Maggio 2026",
+      "tags": [
+        "transazioni"
+      ],
+      "fbImage": "tip-controlla-rete.jpg",
+      "igImage": "tip-controlla-rete.jpg",
+      "fbStoryImage": "tip-controlla-rete.jpg",
+      "igStoryImage": "tip-controlla-rete.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-rubrica-wallet",
+      "title": "Salva gli indirizzi frequenti nella rubrica del wallet",
+      "excerpt": "Evita errori di battitura sugli indirizzi che usi spesso.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Aprile 2026",
+      "tags": [
+        "wallet"
+      ],
+      "fbImage": "tip-rubrica-wallet.jpg",
+      "igImage": "tip-rubrica-wallet.jpg",
+      "fbStoryImage": "tip-rubrica-wallet.jpg",
+      "igStoryImage": "tip-rubrica-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-no-screenshot-seed",
+      "title": "Fai uno screenshot della seed? Hai già perso",
+      "excerpt": "Le foto nel cloud sono un bersaglio facile per i hacker.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Aprile 2026",
+      "tags": [
+        "seed phrase"
+      ],
+      "fbImage": "tip-no-screenshot-seed.jpg",
+      "igImage": "tip-no-screenshot-seed.jpg",
+      "fbStoryImage": "tip-no-screenshot-seed.jpg",
+      "igStoryImage": "tip-no-screenshot-seed.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-diffida-telegram",
+      "title": "Diffida dei \"guadagni garantiti\" su Telegram",
+      "excerpt": "Se promettono rendimenti fissi, è quasi certamente una truffa.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Aprile 2026",
+      "tags": [
+        "truffe"
+      ],
+      "fbImage": "tip-diffida-telegram.jpg",
+      "igImage": "tip-diffida-telegram.jpg",
+      "fbStoryImage": "tip-diffida-telegram.jpg",
+      "igStoryImage": "tip-diffida-telegram.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-aggiorna-wallet",
+      "title": "Aggiorna sempre wallet e app",
+      "excerpt": "Gli aggiornamenti correggono vulnerabilità di sicurezza.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Marzo 2026",
+      "tags": [
+        "sicurezza"
+      ],
+      "fbImage": "tip-aggiorna-wallet.jpg",
+      "igImage": "tip-aggiorna-wallet.jpg",
+      "fbStoryImage": "tip-aggiorna-wallet.jpg",
+      "igStoryImage": "tip-aggiorna-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-email-dedicata",
+      "title": "Usa una email dedicata solo alle crypto",
+      "excerpt": "Separa le comunicazioni crypto dal resto della tua vita digitale.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Marzo 2026",
+      "tags": [
+        "sicurezza"
+      ],
+      "fbImage": "tip-email-dedicata.jpg",
+      "igImage": "tip-email-dedicata.jpg",
+      "fbStoryImage": "tip-email-dedicata.jpg",
+      "igStoryImage": "tip-email-dedicata.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-leggi-transazione",
+      "title": "Prima di firmare una transazione, leggi cosa stai approvando",
+      "excerpt": "Ogni click \"Conferma\" può autorizzare un prelievo.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Marzo 2026",
+      "tags": [
+        "sicurezza"
+      ],
+      "fbImage": "tip-leggi-transazione.jpg",
+      "igImage": "tip-leggi-transazione.jpg",
+      "fbStoryImage": "tip-leggi-transazione.jpg",
+      "igStoryImage": "tip-leggi-transazione.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-diversifica",
+      "title": "Diversifica: non mettere tutto su una sola crypto",
+      "excerpt": "Un portafoglio equilibrato riduce il rischio concentrato.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Febbraio 2026",
+      "tags": [
+        "investimento"
+      ],
+      "fbImage": "tip-diversifica.jpg",
+      "igImage": "tip-diversifica.jpg",
+      "fbStoryImage": "tip-diversifica.jpg",
+      "igStoryImage": "tip-diversifica.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-traccia-operazioni",
+      "title": "Tieni traccia di ogni operazione per la dichiarazione",
+      "excerpt": "Un foglio o app di tracking ti salverà a fine anno.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Febbraio 2026",
+      "tags": [
+        "fiscalità"
+      ],
+      "fbImage": "tip-traccia-operazioni.jpg",
+      "igImage": "tip-traccia-operazioni.jpg",
+      "fbStoryImage": "tip-traccia-operazioni.jpg",
+      "igStoryImage": "tip-traccia-operazioni.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-spread-fee",
+      "title": "Il prezzo che vedi non è quello che paghi (spread + fee)",
+      "excerpt": "Calcola sempre il costo totale dell'operazione.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Febbraio 2026",
+      "tags": [
+        "exchange"
+      ],
+      "fbImage": "tip-spread-fee.jpg",
+      "igImage": "tip-spread-fee.jpg",
+      "fbStoryImage": "tip-spread-fee.jpg",
+      "igStoryImage": "tip-spread-fee.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-staking-unlock",
+      "title": "Staking: capisci il periodo di unlock prima di bloccare",
+      "excerpt": "Alcuni staking bloccano i fondi per giorni o settimane.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Gennaio 2026",
+      "tags": [
+        "staking"
+      ],
+      "fbImage": "tip-staking-unlock.jpg",
+      "igImage": "tip-staking-unlock.jpg",
+      "fbStoryImage": "tip-staking-unlock.jpg",
+      "igStoryImage": "tip-staking-unlock.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-test-transazione",
+      "title": "Un wallet nuovo? Fai un test con pochi centesimi",
+      "excerpt": "Verifica che tutto funzioni prima di inviare somme importanti.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Gennaio 2026",
+      "tags": [
+        "wallet"
+      ],
+      "fbImage": "tip-test-transazione.jpg",
+      "igImage": "tip-test-transazione.jpg",
+      "fbStoryImage": "tip-test-transazione.jpg",
+      "igStoryImage": "tip-test-transazione.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-no-link-email",
+      "title": "Non cliccare link crypto da email sospette",
+      "excerpt": "Vai sempre direttamente al sito digitando l'URL.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Gennaio 2026",
+      "tags": [
+        "phishing"
+      ],
+      "fbImage": "tip-no-link-email.jpg",
+      "igImage": "tip-no-link-email.jpg",
+      "fbStoryImage": "tip-no-link-email.jpg",
+      "igStoryImage": "tip-no-link-email.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-pin-wallet",
+      "title": "Imposta un PIN forte sul wallet mobile",
+      "excerpt": "Proteggi l'accesso al wallet sul tuo smartphone.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Gennaio 2026",
+      "tags": [
+        "sicurezza"
+      ],
+      "fbImage": "tip-pin-wallet.jpg",
+      "igImage": "tip-pin-wallet.jpg",
+      "fbStoryImage": "tip-pin-wallet.jpg",
+      "igStoryImage": "tip-pin-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "tip-non-capisci-non-investi",
+      "title": "Se non capisci il progetto, non investirci",
+      "excerpt": "La regola più semplice e più efficace per evitare truffe.",
+      "category": "tip",
+      "difficulty": "beginner",
+      "readTime": 2,
+      "date": "Gennaio 2026",
+      "tags": [
+        "investimento"
+      ],
+      "fbImage": "tip-non-capisci-non-investi.jpg",
+      "igImage": "tip-non-capisci-non-investi.jpg",
+      "fbStoryImage": "tip-non-capisci-non-investi.jpg",
+      "igStoryImage": "tip-non-capisci-non-investi.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-mica",
+      "title": "Cos'è la regolamentazione MiCA e cosa cambia in Europa",
+      "excerpt": "Il nuovo quadro europeo per le criptovalute spiegato in modo chiaro.",
+      "category": "trend",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Giugno 2026",
+      "tags": [
+        "#Regolamentazione",
+        "#Europa"
+      ],
+      "popular": true,
+      "fbImage": "trend-mica.jpg",
+      "igImage": "trend-mica.jpg",
+      "fbStoryImage": "trend-mica.jpg",
+      "igStoryImage": "trend-mica.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-etf-bitcoin",
+      "title": "Bitcoin Spot ETF: cosa sono e perché contano",
+      "excerpt": "Fondi quotati che tracciano Bitcoin: impatto e cosa significa per te.",
+      "category": "trend",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Giugno 2026",
+      "tags": [
+        "#ETF",
+        "#Bitcoin"
+      ],
+      "popular": true,
+      "fbImage": "trend-etf-bitcoin.jpg",
+      "igImage": "trend-etf-bitcoin.jpg",
+      "fbStoryImage": "trend-etf-bitcoin.jpg",
+      "igStoryImage": "trend-etf-bitcoin.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-layer2",
+      "title": "Layer 2: perché Ethereum ha bisogno di \"strade secondarie\"",
+      "excerpt": "Soluzioni di scalabilità per ridurre fee e tempi di conferma.",
+      "category": "trend",
+      "difficulty": "intermediate",
+      "readTime": 9,
+      "date": "Maggio 2026",
+      "tags": [
+        "#Layer2",
+        "#Ethereum"
+      ],
+      "popular": true,
+      "fbImage": "trend-layer2.jpg",
+      "igImage": "trend-layer2.jpg",
+      "fbStoryImage": "trend-layer2.jpg",
+      "igStoryImage": "trend-layer2.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-rwa",
+      "title": "Real World Assets (RWA): crypto che rappresentano asset reali",
+      "excerpt": "Tokenizzazione di immobili, obbligazioni e materie prime.",
+      "category": "trend",
+      "difficulty": "intermediate",
+      "readTime": 8,
+      "date": "Maggio 2026",
+      "tags": [
+        "#RWA",
+        "#DeFi"
+      ],
+      "popular": true,
+      "fbImage": "trend-rwa.jpg",
+      "igImage": "trend-rwa.jpg",
+      "fbStoryImage": "trend-rwa.jpg",
+      "igStoryImage": "trend-rwa.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-stablecoin",
+      "title": "Stablecoin: come funzionano e quali rischi nascondono",
+      "excerpt": "USDT, USDC e DAI: stabilità apparente, rischi reali.",
+      "category": "trend",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Aprile 2026",
+      "tags": [
+        "#Stablecoin"
+      ],
+      "fbImage": "trend-stablecoin.jpg",
+      "igImage": "trend-stablecoin.jpg",
+      "fbStoryImage": "trend-stablecoin.jpg",
+      "igStoryImage": "trend-stablecoin.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-cbdc",
+      "title": "CBDC: le monete digitali delle banche centrali spiegate",
+      "excerpt": "Euro digitale e monete sovrane: differenze dalle crypto decentralizzate.",
+      "category": "trend",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Aprile 2026",
+      "tags": [
+        "#CBDC"
+      ],
+      "fbImage": "trend-cbdc.jpg",
+      "igImage": "trend-cbdc.jpg",
+      "fbStoryImage": "trend-cbdc.jpg",
+      "igStoryImage": "trend-cbdc.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-depin",
+      "title": "DePIN: infrastrutture fisiche decentralizzate",
+      "excerpt": "Reti decentralizzate per storage, WiFi, energia e altro.",
+      "category": "trend",
+      "difficulty": "intermediate",
+      "readTime": 8,
+      "date": "Marzo 2026",
+      "tags": [
+        "#DePIN"
+      ],
+      "fbImage": "trend-depin.jpg",
+      "igImage": "trend-depin.jpg",
+      "fbStoryImage": "trend-depin.jpg",
+      "igStoryImage": "trend-depin.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-ai-blockchain",
+      "title": "AI + Blockchain: trend o vera utilità?",
+      "excerpt": "Dove l'intelligenza artificiale incontra la blockchain.",
+      "category": "trend",
+      "difficulty": "intermediate",
+      "readTime": 9,
+      "date": "Marzo 2026",
+      "tags": [
+        "#AI",
+        "#Blockchain"
+      ],
+      "fbImage": "trend-ai-blockchain.jpg",
+      "igImage": "trend-ai-blockchain.jpg",
+      "fbStoryImage": "trend-ai-blockchain.jpg",
+      "igStoryImage": "trend-ai-blockchain.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-halving",
+      "title": "Il halving di Bitcoin: cos'è e perché tutti ne parlano",
+      "excerpt": "Riduzione delle ricompense dei miner: effetti sul mercato.",
+      "category": "trend",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Febbraio 2026",
+      "tags": [
+        "#Bitcoin",
+        "#Halving"
+      ],
+      "fbImage": "trend-halving.jpg",
+      "igImage": "trend-halving.jpg",
+      "fbStoryImage": "trend-halving.jpg",
+      "igStoryImage": "trend-halving.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "trend-modular-blockchain",
+      "title": "Modular Blockchain: la nuova architettura delle reti crypto",
+      "excerpt": "Separare consenso, esecuzione e disponibilità dati.",
+      "category": "trend",
+      "difficulty": "advanced",
+      "readTime": 10,
+      "date": "Febbraio 2026",
+      "tags": [
+        "#Blockchain"
+      ],
+      "fbImage": "trend-modular-blockchain.jpg",
+      "igImage": "trend-modular-blockchain.jpg",
+      "fbStoryImage": "trend-modular-blockchain.jpg",
+      "igStoryImage": "trend-modular-blockchain.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "blockchain-5-minuti",
+      "title": "Primi passi: cos'è una blockchain in 5 minuti",
+      "excerpt": "Il concetto fondamentale spiegato senza tecnicismi.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 5,
+      "date": "Giugno 2026",
+      "tags": [
+        "blockchain",
+        "principianti"
+      ],
+      "fbImage": "blockchain-5-minuti.jpg",
+      "igImage": "blockchain-5-minuti.jpg",
+      "fbStoryImage": "blockchain-5-minuti.jpg",
+      "igStoryImage": "blockchain-5-minuti.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "creare-account-exchange",
+      "title": "Creare account su Coinbase/Kraken (con screenshot)",
+      "excerpt": "Registrazione, verifica KYC e primi passi sull'exchange.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Giugno 2026",
+      "tags": [
+        "exchange"
+      ],
+      "fbImage": "creare-account-exchange.jpg",
+      "igImage": "creare-account-exchange.jpg",
+      "fbStoryImage": "creare-account-exchange.jpg",
+      "igStoryImage": "creare-account-exchange.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "primi-20-euro-bitcoin",
+      "title": "Acquistare i primi 20€ di Bitcoin",
+      "excerpt": "Ordine di acquisto, pagamento e conferma passo-passo.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 6,
+      "date": "Maggio 2026",
+      "tags": [
+        "bitcoin"
+      ],
+      "fbImage": "primi-20-euro-bitcoin.jpg",
+      "igImage": "primi-20-euro-bitcoin.jpg",
+      "fbStoryImage": "primi-20-euro-bitcoin.jpg",
+      "igStoryImage": "primi-20-euro-bitcoin.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "installare-trust-wallet",
+      "title": "Installare e configurare Trust Wallet",
+      "excerpt": "Download, setup e prima ricezione di crypto.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Maggio 2026",
+      "tags": [
+        "wallet"
+      ],
+      "fbImage": "installare-trust-wallet.jpg",
+      "igImage": "installare-trust-wallet.jpg",
+      "fbStoryImage": "installare-trust-wallet.jpg",
+      "igStoryImage": "installare-trust-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "prima-transazione-crypto",
+      "title": "Inviare e ricevere la prima crypto",
+      "excerpt": "Dal copia-incolla dell'indirizzo alla conferma on-chain.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 6,
+      "date": "Aprile 2026",
+      "tags": [
+        "transazioni"
+      ],
+      "fbImage": "prima-transazione-crypto.jpg",
+      "igImage": "prima-transazione-crypto.jpg",
+      "fbStoryImage": "prima-transazione-crypto.jpg",
+      "igStoryImage": "prima-transazione-crypto.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "leggere-grafico-candele",
+      "title": "Leggere un grafico di prezzo (candele base)",
+      "excerpt": "Candlestick, timeframe e volumi per principianti.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Aprile 2026",
+      "tags": [
+        "trading"
+      ],
+      "fbImage": "leggere-grafico-candele.jpg",
+      "igImage": "leggere-grafico-candele.jpg",
+      "fbStoryImage": "leggere-grafico-candele.jpg",
+      "igStoryImage": "leggere-grafico-candele.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "market-cap-volume",
+      "title": "Capire market cap, volume e supply",
+      "excerpt": "Le metriche base per valutare una criptovaluta.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Marzo 2026",
+      "tags": [
+        "analisi"
+      ],
+      "fbImage": "market-cap-volume.jpg",
+      "igImage": "market-cap-volume.jpg",
+      "fbStoryImage": "market-cap-volume.jpg",
+      "igStoryImage": "market-cap-volume.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "esplorare-block-explorer",
+      "title": "Esplorare la prima transazione su blockchain explorer",
+      "excerpt": "Trovare e leggere la tua transazione sulla blockchain.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 6,
+      "date": "Marzo 2026",
+      "tags": [
+        "explorer"
+      ],
+      "fbImage": "esplorare-block-explorer.jpg",
+      "igImage": "esplorare-block-explorer.jpg",
+      "fbStoryImage": "esplorare-block-explorer.jpg",
+      "igStoryImage": "esplorare-block-explorer.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "notifiche-prezzo-app",
+      "title": "Impostare notifiche di prezzo su app mobile",
+      "excerpt": "Alert personalizzati con CoinGecko e app simili.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 5,
+      "date": "Febbraio 2026",
+      "tags": [
+        "tracker"
+      ],
+      "fbImage": "notifiche-prezzo-app.jpg",
+      "igImage": "notifiche-prezzo-app.jpg",
+      "fbStoryImage": "notifiche-prezzo-app.jpg",
+      "igStoryImage": "notifiche-prezzo-app.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "creare-watchlist",
+      "title": "Creare la prima watchlist personalizzata",
+      "excerpt": "Monitorare le crypto che ti interessano.",
+      "category": "tutorial",
+      "subcategory": "principianti",
+      "difficulty": "beginner",
+      "readTime": 4,
+      "date": "Febbraio 2026",
+      "tags": [
+        "portfolio"
+      ],
+      "fbImage": "creare-watchlist.jpg",
+      "igImage": "creare-watchlist.jpg",
+      "fbStoryImage": "creare-watchlist.jpg",
+      "igStoryImage": "creare-watchlist.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "bridge-cross-chain",
+      "title": "Bridge cross-chain: trasferire asset tra Ethereum e Arbitrum",
+      "excerpt": "Ponti tra blockchain: come funzionano e rischi da considerare.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 14,
+      "date": "Giugno 2026",
+      "tags": [
+        "bridge",
+        "layer2"
+      ],
+      "fbImage": "bridge-cross-chain.jpg",
+      "igImage": "bridge-cross-chain.jpg",
+      "fbStoryImage": "bridge-cross-chain.jpg",
+      "igStoryImage": "bridge-cross-chain.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "liquidita-uniswap-v3",
+      "title": "Fornire liquidità su Uniswap V3 (con calcolo impermanent loss)",
+      "excerpt": "Concentrated liquidity e rischio di impermanent loss.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 16,
+      "date": "Maggio 2026",
+      "tags": [
+        "defi",
+        "uniswap"
+      ],
+      "fbImage": "liquidita-uniswap-v3.jpg",
+      "igImage": "liquidita-uniswap-v3.jpg",
+      "fbStoryImage": "liquidita-uniswap-v3.jpg",
+      "igStoryImage": "liquidita-uniswap-v3.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "usare-aave",
+      "title": "Usare Aave per prestito e deposito DeFi",
+      "excerpt": "Lending e borrowing decentralizzato su Aave.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 14,
+      "date": "Maggio 2026",
+      "tags": [
+        "defi",
+        "aave"
+      ],
+      "fbImage": "usare-aave.jpg",
+      "igImage": "usare-aave.jpg",
+      "fbStoryImage": "usare-aave.jpg",
+      "igStoryImage": "usare-aave.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "analisi-on-chain-dune",
+      "title": "Analisi on-chain con Dune Analytics",
+      "excerpt": "Query SQL e dashboard per analisi blockchain.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 15,
+      "date": "Aprile 2026",
+      "tags": [
+        "analisi",
+        "on-chain"
+      ],
+      "fbImage": "analisi-on-chain-dune.jpg",
+      "igImage": "analisi-on-chain-dune.jpg",
+      "fbStoryImage": "analisi-on-chain-dune.jpg",
+      "igStoryImage": "analisi-on-chain-dune.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "nodo-validator",
+      "title": "Configurare un nodo validator (panoramica requisiti)",
+      "excerpt": "Hardware, software e costi per validare una rete.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 18,
+      "date": "Aprile 2026",
+      "tags": [
+        "validator",
+        "staking"
+      ],
+      "fbImage": "nodo-validator.jpg",
+      "igImage": "nodo-validator.jpg",
+      "fbStoryImage": "nodo-validator.jpg",
+      "igStoryImage": "nodo-validator.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "leggere-solidity",
+      "title": "Smart contract: leggere codice Solidity base",
+      "excerpt": "Funzioni, variabili e pattern comuni per non-developer.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 16,
+      "date": "Marzo 2026",
+      "tags": [
+        "solidity",
+        "smart contract"
+      ],
+      "fbImage": "leggere-solidity.jpg",
+      "igImage": "leggere-solidity.jpg",
+      "fbStoryImage": "leggere-solidity.jpg",
+      "igStoryImage": "leggere-solidity.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "mev-protezione",
+      "title": "MEV e protezione nelle transazioni DeFi",
+      "excerpt": "Maximal Extractable Value e come difendersi.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 12,
+      "date": "Marzo 2026",
+      "tags": [
+        "mev",
+        "defi"
+      ],
+      "fbImage": "mev-protezione.jpg",
+      "igImage": "mev-protezione.jpg",
+      "fbStoryImage": "mev-protezione.jpg",
+      "igStoryImage": "mev-protezione.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "multisig-gnosis-safe",
+      "title": "Multisig wallet con Gnosis Safe",
+      "excerpt": "Wallet multi-firma per team e DAO.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 13,
+      "date": "Febbraio 2026",
+      "tags": [
+        "multisig",
+        "wallet"
+      ],
+      "fbImage": "multisig-gnosis-safe.jpg",
+      "igImage": "multisig-gnosis-safe.jpg",
+      "fbStoryImage": "multisig-gnosis-safe.jpg",
+      "igStoryImage": "multisig-gnosis-safe.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "ottimizzazione-gas-batch",
+      "title": "Ottimizzazione gas con transazioni batch",
+      "excerpt": "Raggruppare operazioni per risparmiare sulle fee.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 11,
+      "date": "Febbraio 2026",
+      "tags": [
+        "gas",
+        "ethereum"
+      ],
+      "fbImage": "ottimizzazione-gas-batch.jpg",
+      "igImage": "ottimizzazione-gas-batch.jpg",
+      "fbStoryImage": "ottimizzazione-gas-batch.jpg",
+      "igStoryImage": "ottimizzazione-gas-batch.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "hedging-stablecoin",
+      "title": "Strategie di hedging con stablecoin e derivati DeFi",
+      "excerpt": "Proteggere il portafoglio in mercati volatili.",
+      "category": "tutorial",
+      "subcategory": "avanzate",
+      "difficulty": "advanced",
+      "readTime": 14,
+      "date": "Gennaio 2026",
+      "tags": [
+        "hedging",
+        "defi"
+      ],
+      "fbImage": "hedging-stablecoin.jpg",
+      "igImage": "hedging-stablecoin.jpg",
+      "fbStoryImage": "hedging-stablecoin.jpg",
+      "igStoryImage": "hedging-stablecoin.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "cardano-spiegato",
+      "title": "Cardano spiegato semplice: cos'è ADA e come funziona",
+      "excerpt": "La blockchain proof-of-stake fondata su ricerca accademica.",
+      "category": "cardano",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "date": "Giugno 2026",
+      "tags": [
+        "cardano",
+        "ada"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "cardano-spiegato.jpg",
+      "igImage": "cardano-spiegato.jpg",
+      "fbStoryImage": "cardano-spiegato.jpg",
+      "igStoryImage": "cardano-spiegato.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "comprare-ada",
+      "title": "Come acquistare ADA su exchange italiani",
+      "excerpt": "Dove e come comprare Cardano in Italia.",
+      "category": "cardano",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Giugno 2026",
+      "tags": [
+        "ada",
+        "exchange"
+      ],
+      "fbImage": "comprare-ada.jpg",
+      "igImage": "comprare-ada.jpg",
+      "fbStoryImage": "comprare-ada.jpg",
+      "igStoryImage": "comprare-ada.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "staking-ada",
+      "title": "Staking ADA: guida completa (delega vs pool)",
+      "excerpt": "Delegare ADA a un pool di staking: rendimenti e scelta del pool.",
+      "category": "cardano",
+      "difficulty": "beginner",
+      "readTime": 12,
+      "date": "Maggio 2026",
+      "tags": [
+        "staking",
+        "ada"
+      ],
+      "popular": true,
+      "fbImage": "staking-ada.jpg",
+      "igImage": "staking-ada.jpg",
+      "fbStoryImage": "staking-ada.jpg",
+      "igStoryImage": "staking-ada.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "wallet-cardano-confronto",
+      "title": "Eternl, Nami, Yoroi: quale wallet Cardano scegliere",
+      "excerpt": "Confronto tra i wallet più usati nell'ecosistema Cardano.",
+      "category": "cardano",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "date": "Maggio 2026",
+      "tags": [
+        "wallet",
+        "cardano"
+      ],
+      "fbImage": "wallet-cardano-confronto.jpg",
+      "igImage": "wallet-cardano-confronto.jpg",
+      "fbStoryImage": "wallet-cardano-confronto.jpg",
+      "igStoryImage": "wallet-cardano-confronto.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "project-catalyst",
+      "title": "Come votare su Project Catalyst",
+      "excerpt": "Partecipare alla governance e al funding dell'ecosistema.",
+      "category": "cardano",
+      "difficulty": "intermediate",
+      "readTime": 9,
+      "date": "Aprile 2026",
+      "tags": [
+        "governance",
+        "catalyst"
+      ],
+      "fbImage": "project-catalyst.jpg",
+      "igImage": "project-catalyst.jpg",
+      "fbStoryImage": "project-catalyst.jpg",
+      "igStoryImage": "project-catalyst.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "cardano-defi",
+      "title": "Cardano DeFi: Minswap, SundaeSwap e liquidity pool",
+      "excerpt": "Le principali DEX e protocolli DeFi su Cardano.",
+      "category": "cardano",
+      "difficulty": "intermediate",
+      "readTime": 13,
+      "date": "Aprile 2026",
+      "tags": [
+        "defi",
+        "cardano"
+      ],
+      "fbImage": "cardano-defi.jpg",
+      "igImage": "cardano-defi.jpg",
+      "fbStoryImage": "cardano-defi.jpg",
+      "igStoryImage": "cardano-defi.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "native-token-cardano",
+      "title": "Native token su Cardano: creare e gestire asset",
+      "excerpt": "Token nativi senza smart contract complessi.",
+      "category": "cardano",
+      "difficulty": "intermediate",
+      "readTime": 11,
+      "date": "Marzo 2026",
+      "tags": [
+        "token",
+        "cardano"
+      ],
+      "fbImage": "native-token-cardano.jpg",
+      "igImage": "native-token-cardano.jpg",
+      "fbStoryImage": "native-token-cardano.jpg",
+      "igStoryImage": "native-token-cardano.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "hydra-cardano",
+      "title": "Hydra: cos'è e cosa cambierà per la scalabilità",
+      "excerpt": "Layer 2 di Cardano per transazioni ultra-veloci.",
+      "category": "cardano",
+      "difficulty": "intermediate",
+      "readTime": 9,
+      "date": "Marzo 2026",
+      "tags": [
+        "hydra",
+        "scalabilità"
+      ],
+      "fbImage": "hydra-cardano.jpg",
+      "igImage": "hydra-cardano.jpg",
+      "fbStoryImage": "hydra-cardano.jpg",
+      "igStoryImage": "hydra-cardano.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "plutus-panoramica",
+      "title": "Smart contract Cardano (Plutus): panoramica per utenti",
+      "excerpt": "Come funzionano i contratti intelligenti su Cardano.",
+      "category": "cardano",
+      "difficulty": "intermediate",
+      "readTime": 10,
+      "date": "Febbraio 2026",
+      "tags": [
+        "plutus",
+        "smart contract"
+      ],
+      "fbImage": "plutus-panoramica.jpg",
+      "igImage": "plutus-panoramica.jpg",
+      "fbStoryImage": "plutus-panoramica.jpg",
+      "igStoryImage": "plutus-panoramica.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "cardano-vs-ethereum",
+      "title": "Cardano vs Ethereum: differenze pratiche per l'utente",
+      "excerpt": "Confronto reale tra i due ecosistemi per chi inizia.",
+      "category": "cardano",
+      "difficulty": "beginner",
+      "readTime": 11,
+      "date": "Febbraio 2026",
+      "tags": [
+        "cardano",
+        "ethereum"
+      ],
+      "fbImage": "cardano-vs-ethereum.jpg",
+      "igImage": "cardano-vs-ethereum.jpg",
+      "fbStoryImage": "cardano-vs-ethereum.jpg",
+      "igStoryImage": "cardano-vs-ethereum.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "seed-phrase-guida",
+      "title": "Seed phrase: cos'è, come generarla e conservarla",
+      "excerpt": "Tutto sulle parole di recupero del wallet.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "date": "Giugno 2026",
+      "tags": [
+        "seed phrase"
+      ],
+      "popular": true,
+      "fbImage": "seed-phrase-guida.jpg",
+      "igImage": "seed-phrase-guida.jpg",
+      "fbStoryImage": "seed-phrase-guida.jpg",
+      "igStoryImage": "seed-phrase-guida.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "hot-vs-cold-wallet",
+      "title": "Hot wallet vs cold wallet: differenze e quando usare cosa",
+      "excerpt": "Confronto pratico tra wallet online e offline.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Giugno 2026",
+      "tags": [
+        "wallet"
+      ],
+      "fbImage": "hot-vs-cold-wallet.jpg",
+      "igImage": "hot-vs-cold-wallet.jpg",
+      "fbStoryImage": "hot-vs-cold-wallet.jpg",
+      "igStoryImage": "hot-vs-cold-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "confronto-hardware-wallet",
+      "title": "Hardware wallet: confronto Ledger vs Trezor vs BitBox",
+      "excerpt": "Quale dispositivo scegliere per la massima sicurezza.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 12,
+      "date": "Maggio 2026",
+      "tags": [
+        "hardware wallet"
+      ],
+      "fbImage": "confronto-hardware-wallet.jpg",
+      "igImage": "confronto-hardware-wallet.jpg",
+      "fbStoryImage": "confronto-hardware-wallet.jpg",
+      "igStoryImage": "confronto-hardware-wallet.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "difendersi-phishing",
+      "title": "Riconoscere e difendersi dal phishing crypto",
+      "excerpt": "Segnali di allarme e buone pratiche anti-truffa.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 9,
+      "date": "Maggio 2026",
+      "tags": [
+        "phishing"
+      ],
+      "fbImage": "difendersi-phishing.jpg",
+      "igImage": "difendersi-phishing.jpg",
+      "fbStoryImage": "difendersi-phishing.jpg",
+      "igStoryImage": "difendersi-phishing.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "approvazioni-smart-contract",
+      "title": "Approvazioni smart contract: cosa firmi e come revocarle",
+      "excerpt": "Controllare e revocare permessi sui tuoi token.",
+      "category": "sicurezza",
+      "difficulty": "intermediate",
+      "readTime": 10,
+      "date": "Aprile 2026",
+      "tags": [
+        "smart contract"
+      ],
+      "fbImage": "approvazioni-smart-contract.jpg",
+      "igImage": "approvazioni-smart-contract.jpg",
+      "fbStoryImage": "approvazioni-smart-contract.jpg",
+      "igStoryImage": "approvazioni-smart-contract.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "backup-wallet-321",
+      "title": "Backup del wallet: strategia 3-2-1 per le crypto",
+      "excerpt": "Tre copie, due supporti, una off-site.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 8,
+      "date": "Aprile 2026",
+      "tags": [
+        "backup"
+      ],
+      "fbImage": "backup-wallet-321.jpg",
+      "igImage": "backup-wallet-321.jpg",
+      "fbStoryImage": "backup-wallet-321.jpg",
+      "igStoryImage": "backup-wallet-321.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "sicurezza-mobile",
+      "title": "Sicurezza mobile: proteggere wallet su smartphone",
+      "excerpt": "PIN, biometria e precauzioni per wallet mobile.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Marzo 2026",
+      "tags": [
+        "mobile"
+      ],
+      "fbImage": "sicurezza-mobile.jpg",
+      "igImage": "sicurezza-mobile.jpg",
+      "fbStoryImage": "sicurezza-mobile.jpg",
+      "igStoryImage": "sicurezza-mobile.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "wallet-compromesso",
+      "title": "Cosa fare se sospetti una compromissione del wallet",
+      "excerpt": "Piano d'azione immediato in caso di emergenza.",
+      "category": "sicurezza",
+      "difficulty": "intermediate",
+      "readTime": 9,
+      "date": "Marzo 2026",
+      "tags": [
+        "emergenza"
+      ],
+      "fbImage": "wallet-compromesso.jpg",
+      "igImage": "wallet-compromesso.jpg",
+      "fbStoryImage": "wallet-compromesso.jpg",
+      "igStoryImage": "wallet-compromesso.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "password-manager-crypto",
+      "title": "Password manager e crypto: best practice",
+      "excerpt": "Gestire password e note sicure per l'ecosistema crypto.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 7,
+      "date": "Febbraio 2026",
+      "tags": [
+        "password"
+      ],
+      "fbImage": "password-manager-crypto.jpg",
+      "igImage": "password-manager-crypto.jpg",
+      "fbStoryImage": "password-manager-crypto.jpg",
+      "igStoryImage": "password-manager-crypto.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    },
+    {
+      "slug": "audit-sicurezza-portafoglio",
+      "title": "Audit di sicurezza del proprio portafoglio (checklist)",
+      "excerpt": "25 punti da verificare per un portafoglio sicuro.",
+      "category": "sicurezza",
+      "difficulty": "beginner",
+      "readTime": 10,
+      "date": "Febbraio 2026",
+      "tags": [
+        "checklist"
+      ],
+      "fbImage": "audit-sicurezza-portafoglio.jpg",
+      "igImage": "audit-sicurezza-portafoglio.jpg",
+      "fbStoryImage": "audit-sicurezza-portafoglio.jpg",
+      "igStoryImage": "audit-sicurezza-portafoglio.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-3-overlay"
+    }
   ],
-
   "glossary": [
-    {"term":"Blockchain","definition":"Registro digitale distribuito che registra transazioni in modo immutabile e trasparente."},
-    {"term":"Wallet","definition":"Strumento software o hardware per conservare e gestire le tue criptovalute."},
-    {"term":"Seed Phrase","definition":"Sequenza di 12-24 parole che permette di recuperare un wallet. Va custodita offline."},
-    {"term":"Exchange","definition":"Piattaforma dove comprare, vendere e scambiare criptovalute."},
-    {"term":"Staking","definition":"Bloccare crypto per supportare una rete e ricevere ricompense."},
-    {"term":"DeFi","definition":"Finanza decentralizzata: servizi finanziari senza intermediari centralizzati."},
-    {"term":"Gas Fee","definition":"Commissione pagata per eseguire transazioni su una blockchain."},
-    {"term":"Smart Contract","definition":"Programma automatico sulla blockchain che esegue accordi senza intermediari."},
-    {"term":"DEX","definition":"Exchange decentralizzato: scambi peer-to-peer tramite smart contract."},
-    {"term":"KYC","definition":"Know Your Customer: verifica dell'identità richiesta dagli exchange regolamentati."},
-    {"term":"Cold Wallet","definition":"Wallet offline, non connesso a internet, per massima sicurezza."},
-    {"term":"Hot Wallet","definition":"Wallet connesso a internet, comodo ma meno sicuro del cold wallet."},
-    {"term":"MiCA","definition":"Markets in Crypto-Assets: regolamento europeo per le criptovalute."},
-    {"term":"Layer 2","definition":"Soluzione di scalabilità costruita sopra una blockchain principale."},
-    {"term":"ADA","definition":"Criptovaluta nativa della blockchain Cardano."},
-    {"term":"Pool di Staking","definition":"Gruppo di validatori a cui delegare le proprie crypto per lo staking."},
-    {"term":"Phishing","definition":"Tentativo di truffa per rubare credenziali o seed phrase tramite siti falsi."},
-    {"term":"2FA","definition":"Autenticazione a due fattori: secondo livello di sicurezza oltre alla password."},
-    {"term":"Market Cap","definition":"Valore totale di una crypto: prezzo × numero di monete in circolazione."},
-    {"term":"Stablecoin","definition":"Criptovaluta ancorata al valore di un asset stabile, come il dollaro."},
-    {"term":"Lightning Network","definition":"Rete di secondo livello su Bitcoin per pagamenti istantanei e a bassissimo costo tramite canali di pagamento."},
-    {"term":"Satoshi (sat)","definition":"Unità minima di Bitcoin: 1 BTC = 100.000.000 satoshi. I sats sono l'unità usata nei pagamenti Lightning."},
-    {"term":"Invoice Lightning","definition":"Richiesta di pagamento Lightning con importo e destinatario, spesso condivisa come QR code o stringa di testo."}
+    {
+      "term": "Blockchain",
+      "definition": "Registro digitale distribuito che registra transazioni in modo immutabile e trasparente."
+    },
+    {
+      "term": "Wallet",
+      "definition": "Strumento software o hardware per conservare e gestire le tue criptovalute."
+    },
+    {
+      "term": "Seed Phrase",
+      "definition": "Sequenza di 12-24 parole che permette di recuperare un wallet. Va custodita offline."
+    },
+    {
+      "term": "Exchange",
+      "definition": "Piattaforma dove comprare, vendere e scambiare criptovalute."
+    },
+    {
+      "term": "Staking",
+      "definition": "Bloccare crypto per supportare una rete e ricevere ricompense."
+    },
+    {
+      "term": "DeFi",
+      "definition": "Finanza decentralizzata: servizi finanziari senza intermediari centralizzati."
+    },
+    {
+      "term": "Gas Fee",
+      "definition": "Commissione pagata per eseguire transazioni su una blockchain."
+    },
+    {
+      "term": "Smart Contract",
+      "definition": "Programma automatico sulla blockchain che esegue accordi senza intermediari."
+    },
+    {
+      "term": "DEX",
+      "definition": "Exchange decentralizzato: scambi peer-to-peer tramite smart contract."
+    },
+    {
+      "term": "KYC",
+      "definition": "Know Your Customer: verifica dell'identità richiesta dagli exchange regolamentati."
+    },
+    {
+      "term": "Cold Wallet",
+      "definition": "Wallet offline, non connesso a internet, per massima sicurezza."
+    },
+    {
+      "term": "Hot Wallet",
+      "definition": "Wallet connesso a internet, comodo ma meno sicuro del cold wallet."
+    },
+    {
+      "term": "MiCA",
+      "definition": "Markets in Crypto-Assets: regolamento europeo per le criptovalute."
+    },
+    {
+      "term": "Layer 2",
+      "definition": "Soluzione di scalabilità costruita sopra una blockchain principale."
+    },
+    {
+      "term": "ADA",
+      "definition": "Criptovaluta nativa della blockchain Cardano."
+    },
+    {
+      "term": "Pool di Staking",
+      "definition": "Gruppo di validatori a cui delegare le proprie crypto per lo staking."
+    },
+    {
+      "term": "Phishing",
+      "definition": "Tentativo di truffa per rubare credenziali o seed phrase tramite siti falsi."
+    },
+    {
+      "term": "2FA",
+      "definition": "Autenticazione a due fattori: secondo livello di sicurezza oltre alla password."
+    },
+    {
+      "term": "Market Cap",
+      "definition": "Valore totale di una crypto: prezzo × numero di monete in circolazione."
+    },
+    {
+      "term": "Stablecoin",
+      "definition": "Criptovaluta ancorata al valore di un asset stabile, come il dollaro."
+    },
+    {
+      "term": "Lightning Network",
+      "definition": "Rete di secondo livello su Bitcoin per pagamenti istantanei e a bassissimo costo tramite canali di pagamento."
+    },
+    {
+      "term": "Satoshi (sat)",
+      "definition": "Unità minima di Bitcoin: 1 BTC = 100.000.000 satoshi. I sats sono l'unità usata nei pagamenti Lightning."
+    },
+    {
+      "term": "Invoice Lightning",
+      "definition": "Richiesta di pagamento Lightning con importo e destinatario, spesso condivisa come QR code o stringa di testo."
+    }
   ]
 }

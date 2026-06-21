@@ -147,6 +147,18 @@ def article_url(slug: str) -> str:
     return f"{SITE_URL}articolo.html?slug={urllib.parse.quote(slug)}"
 
 
+def instagram_story_image_file(article: dict) -> str:
+    if article.get("igStoryImage"):
+        return article["igStoryImage"]
+    if article.get("igImage"):
+        return article["igImage"]
+    if article.get("fbStoryImage"):
+        return article["fbStoryImage"]
+    if article.get("fbImage"):
+        return article["fbImage"]
+    return instagram_image_file(article)
+
+
 def instagram_image_file(article: dict) -> str:
     if article.get("igImage"):
         return article["igImage"]
@@ -180,7 +192,7 @@ def instagram_image_url(article: dict) -> str:
 
 
 def instagram_story_image_url(article: dict) -> str:
-    return STORY_IMAGE_BASE + instagram_image_file(article)
+    return STORY_IMAGE_BASE + instagram_story_image_file(article)
 
 
 def build_caption(article: dict) -> str:

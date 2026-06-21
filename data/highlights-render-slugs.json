@@ -1,8 +1,28 @@
 [
   {
-    "slug": "trend-stablecoin",
-    "title": "Stablecoin: come funzionano e quali rischi nascondono",
-    "category": "trend"
+    "slug": "comprare-bitcoin-prima-volta",
+    "title": "Come comprare Bitcoin per la prima volta (guida completa 2026)",
+    "category": "bitcoin"
+  },
+  {
+    "slug": "lightning-network-guida",
+    "title": "Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet",
+    "category": "bitcoin"
+  },
+  {
+    "slug": "trend-etf-bitcoin",
+    "title": "Bitcoin Spot ETF: cosa sono e perché contano",
+    "category": "bitcoin"
+  },
+  {
+    "slug": "trend-halving",
+    "title": "Il halving di Bitcoin: cos'è e perché tutti ne parlano",
+    "category": "bitcoin"
+  },
+  {
+    "slug": "primi-20-euro-bitcoin",
+    "title": "Acquistare i primi 20€ di Bitcoin",
+    "category": "bitcoin"
   },
   {
     "slug": "staking-ada",
@@ -10,33 +30,33 @@
     "category": "cardano"
   },
   {
-    "slug": "tip-inizia-poco",
-    "title": "Inizia con pochi euro: impara prima di investire tanto",
-    "category": "tip"
+    "slug": "cardano-vs-ethereum",
+    "title": "Cardano vs Ethereum: differenze pratiche per l'utente",
+    "category": "cardano"
   },
   {
-    "slug": "tip-non-tenere-exchange",
-    "title": "Non tenere tutte le crypto sull'exchange",
-    "category": "tip"
+    "slug": "hydra-cardano",
+    "title": "Hydra: cos'è e cosa cambierà per la scalabilità",
+    "category": "cardano"
   },
   {
-    "slug": "trend-layer2",
-    "title": "Layer 2: perch\u00e9 Ethereum ha bisogno di \"strade secondarie\"",
-    "category": "trend"
+    "slug": "native-token-cardano",
+    "title": "Native token su Cardano: creare e gestire asset",
+    "category": "cardano"
   },
   {
-    "slug": "trend-rwa",
-    "title": "Real World Assets (RWA): crypto che rappresentano asset reali",
-    "category": "trend"
+    "slug": "cardano-defi",
+    "title": "Cardano DeFi: Minswap, SundaeSwap e liquidity pool",
+    "category": "cardano"
+  },
+  {
+    "slug": "project-catalyst",
+    "title": "Come votare su Project Catalyst",
+    "category": "cardano"
   },
   {
     "slug": "wallet-cardano-confronto",
     "title": "Eternl, Nami, Yoroi: quale wallet Cardano scegliere",
-    "category": "cardano"
-  },
-  {
-    "slug": "cardano-spiegato",
-    "title": "Cardano spiegato semplice: cos'\u00e8 ADA e come funziona",
     "category": "cardano"
   },
   {
@@ -45,9 +65,214 @@
     "category": "cardano"
   },
   {
-    "slug": "comprare-bitcoin-prima-volta",
-    "title": "Come comprare Bitcoin per la prima volta (guida completa 2026)",
-    "category": "guide"
+    "slug": "cardano-spiegato",
+    "title": "Cardano spiegato semplice: cos'è ADA e come funziona",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "trend-mica",
+    "title": "MiCA 2026: cosa cambia davvero per le crypto in Europa",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "plutus-panoramica",
+    "title": "Smart contract Cardano (Plutus): panoramica per utenti",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "dichiarare-crypto-italia",
+    "title": "Come dichiarare le crypto in Italia (panoramica pratica)",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "nodo-validator",
+    "title": "Configurare un nodo validator (panoramica requisiti)",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "scegliere-exchange-sicuro",
+    "title": "Come scegliere un exchange sicuro: checklist in 7 punti",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "creare-account-exchange",
+    "title": "Creare account su Coinbase/Kraken (con screenshot)",
+    "category": "regolamentazione"
+  },
+  {
+    "slug": "news-2068421919892734077",
+    "title": "RT @SecRollins: SNAP Fraudsters found a glitch. @WHFraudTF and @USDA Patched it.",
+    "category": "news"
+  },
+  {
+    "slug": "news-2028841201286238226",
+    "title": "The Revolution that began in 1776 has not ended—it still continues, because the flame of Liberty and Independence still…",
+    "category": "news"
+  },
+  {
+    "slug": "news-2068397199050830075",
+    "title": "RT @VP: VP Vance on @POTUS’s commitment to long term peace:",
+    "category": "news"
+  },
+  {
+    "slug": "news-2068397242214416540",
+    "title": "RT @JDVance: I really enjoyed this interview with Steve Bartlett. He asked me the single most interesting question I've…",
+    "category": "news"
+  },
+  {
+    "slug": "news-2068398006710173708",
+    "title": "America is back 🇺🇸 https://t.co/rLURkFz1jB",
+    "category": "news"
+  },
+  {
+    "slug": "news-2068422727245996395",
+    "title": "“There will be NO TOLLS in the Hormuz Strait for 60 days during the Cease Fire Period, and there will be NO TOLLS after…",
+    "category": "news"
+  },
+  {
+    "slug": "news-1854026234339938528",
+    "title": "🇺🇸🇺🇸The future is gonna be so 🔥 🇺🇸🇺🇸 https://t.co/x56cqb6oT5",
+    "category": "news"
+  },
+  {
+    "slug": "news-1812258574049157405",
+    "title": "https://t.co/6eOgN9UdOy",
+    "category": "news"
+  },
+  {
+    "slug": "news-2066538446781382800",
+    "title": "Make our Sun sentient to understand the Universe and extend the light of consciousness to the stars",
+    "category": "news"
+  },
+  {
+    "slug": "news-1518623997054918657",
+    "title": "I hope that even my worst critics remain on Twitter, because that is what free speech means",
+    "category": "news"
+  },
+  {
+    "slug": "news-1519480761749016577",
+    "title": "Next I’m buying Coca-Cola to put the cocaine back in",
+    "category": "news"
+  },
+  {
+    "slug": "news-1519495072802390016",
+    "title": "Let’s make Twitter maximum fun!",
+    "category": "news"
+  },
+  {
+    "slug": "seed-phrase-guida",
+    "title": "Seed phrase: cos'è, come generarla e conservarla",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "audit-sicurezza-portafoglio",
+    "title": "Audit di sicurezza del proprio portafoglio (checklist)",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "password-manager-crypto",
+    "title": "Password manager e crypto: best practice",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "sicurezza-mobile",
+    "title": "Sicurezza mobile: proteggere wallet su smartphone",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "wallet-compromesso",
+    "title": "Cosa fare se sospetti una compromissione del wallet",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "approvazioni-smart-contract",
+    "title": "Approvazioni smart contract: cosa firmi e come revocarle",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "backup-wallet-321",
+    "title": "Backup del wallet: strategia 3-2-1 per le crypto",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "confronto-hardware-wallet",
+    "title": "Hardware wallet: confronto Ledger vs Trezor vs BitBox",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "difendersi-phishing",
+    "title": "Riconoscere e difendersi dal phishing crypto",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "hot-vs-cold-wallet",
+    "title": "Hot wallet vs cold wallet: differenze e quando usare cosa",
+    "category": "sicurezza"
+  },
+  {
+    "slug": "alert-prezzo-portafoglio",
+    "title": "Come impostare alert di prezzo e monitorare il portafoglio",
+    "category": "mercati"
+  },
+  {
+    "slug": "hedging-stablecoin",
+    "title": "Strategie di hedging con stablecoin e derivati DeFi",
+    "category": "mercati"
+  },
+  {
+    "slug": "notifiche-prezzo-app",
+    "title": "Impostare notifiche di prezzo su app mobile",
+    "category": "mercati"
+  },
+  {
+    "slug": "tip-diversifica",
+    "title": "Diversifica: non mettere tutto su una sola crypto",
+    "category": "mercati"
+  },
+  {
+    "slug": "tip-spread-fee",
+    "title": "Il prezzo che vedi non è quello che paghi (spread + fee)",
+    "category": "mercati"
+  },
+  {
+    "slug": "leggere-grafico-candele",
+    "title": "Leggere un grafico di prezzo (candele base)",
+    "category": "mercati"
+  },
+  {
+    "slug": "trend-layer2",
+    "title": "Layer 2: perché Ethereum ha bisogno di \"strade secondarie\"",
+    "category": "trend"
+  },
+  {
+    "slug": "trend-rwa",
+    "title": "Real World Assets (RWA): crypto che rappresentano asset reali",
+    "category": "trend"
+  },
+  {
+    "slug": "trend-modular-blockchain",
+    "title": "Modular Blockchain: la nuova architettura delle reti crypto",
+    "category": "trend"
+  },
+  {
+    "slug": "trend-ai-blockchain",
+    "title": "AI + Blockchain: trend o vera utilità?",
+    "category": "trend"
+  },
+  {
+    "slug": "trend-depin",
+    "title": "DePIN: infrastrutture fisiche decentralizzate",
+    "category": "trend"
+  },
+  {
+    "slug": "trend-cbdc",
+    "title": "CBDC: le monete digitali delle banche centrali spiegate",
+    "category": "trend"
+  },
+  {
+    "slug": "trend-stablecoin",
+    "title": "Stablecoin: come funzionano e quali rischi nascondono",
+    "category": "trend"
   },
   {
     "slug": "creare-wallet-sicuro",
@@ -60,43 +285,238 @@
     "category": "guide"
   },
   {
-    "slug": "lightning-network-guida",
-    "title": "Lightning Network spiegato semplice: sats, wallet e Satoshi Wallet",
-    "category": "guide"
-  },
-  {
     "slug": "proteggere-seed-phrase",
     "title": "Come proteggere la seed phrase: metodi e errori da evitare",
     "category": "guide"
   },
   {
-    "slug": "seed-phrase-guida",
-    "title": "Seed phrase: cos'\u00e8, come generarla e conservarla",
-    "category": "sicurezza"
+    "slug": "staking-ethereum",
+    "title": "Come fare staking di Ethereum: guida passo-passo",
+    "category": "guide"
+  },
+  {
+    "slug": "trasferire-crypto-exchange",
+    "title": "Come trasferire crypto da exchange a wallet personale",
+    "category": "guide"
+  },
+  {
+    "slug": "usare-metamask",
+    "title": "Come usare MetaMask: installazione e prima transazione",
+    "category": "guide"
+  },
+  {
+    "slug": "cold-wallet-chiavi-offline",
+    "title": "Come creare un cold wallet con chiavi offline",
+    "category": "guide"
+  },
+  {
+    "slug": "convertire-crypto-euro",
+    "title": "Come convertire crypto in euro e prelevare",
+    "category": "guide"
+  },
+  {
+    "slug": "recuperare-crypto-sbagliato",
+    "title": "Come recuperare crypto inviate all'indirizzo sbagliato",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-no-link-email",
+    "title": "Non cliccare link crypto da email sospette",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-non-capisci-non-investi",
+    "title": "Se non capisci il progetto, non investirci",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-pin-wallet",
+    "title": "Imposta un PIN forte sul wallet mobile",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-staking-unlock",
+    "title": "Staking: capisci il periodo di unlock prima di bloccare",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-test-transazione",
+    "title": "Un wallet nuovo? Fai un test con pochi centesimi",
+    "category": "guide"
+  },
+  {
+    "slug": "yield-farming-sicurezza",
+    "title": "Come fare yield farming in sicurezza (primi passi)",
+    "category": "guide"
+  },
+  {
+    "slug": "creare-watchlist",
+    "title": "Creare la prima watchlist personalizzata",
+    "category": "guide"
+  },
+  {
+    "slug": "dca-crypto",
+    "title": "Come fare DCA (Dollar Cost Averaging) con le crypto",
+    "category": "guide"
+  },
+  {
+    "slug": "multisig-gnosis-safe",
+    "title": "Multisig wallet con Gnosis Safe",
+    "category": "guide"
+  },
+  {
+    "slug": "ottimizzazione-gas-batch",
+    "title": "Ottimizzazione gas con transazioni batch",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-traccia-operazioni",
+    "title": "Tieni traccia di ogni operazione per la dichiarazione",
+    "category": "guide"
+  },
+  {
+    "slug": "usare-etherscan",
+    "title": "Come usare un block explorer (Etherscan spiegato semplice)",
+    "category": "guide"
+  },
+  {
+    "slug": "verificare-smart-contract",
+    "title": "Come verificare un contratto smart prima di investire",
+    "category": "guide"
+  },
+  {
+    "slug": "capire-gas-fee",
+    "title": "Come capire le fee di rete (gas) e quando conviene operare",
+    "category": "guide"
+  },
+  {
+    "slug": "esplorare-block-explorer",
+    "title": "Esplorare la prima transazione su blockchain explorer",
+    "category": "guide"
+  },
+  {
+    "slug": "hardware-wallet-ledger",
+    "title": "Come impostare un hardware wallet Ledger da zero",
+    "category": "guide"
+  },
+  {
+    "slug": "leggere-solidity",
+    "title": "Smart contract: leggere codice Solidity base",
+    "category": "guide"
+  },
+  {
+    "slug": "market-cap-volume",
+    "title": "Capire market cap, volume e supply",
+    "category": "guide"
+  },
+  {
+    "slug": "mev-protezione",
+    "title": "MEV e protezione nelle transazioni DeFi",
+    "category": "guide"
+  },
+  {
+    "slug": "prima-swap-uniswap",
+    "title": "Come funziona un DEX: prima swap su Uniswap",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-aggiorna-wallet",
+    "title": "Aggiorna sempre wallet e app",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-email-dedicata",
+    "title": "Usa una email dedicata solo alle crypto",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-leggi-transazione",
+    "title": "Prima di firmare una transazione, leggi cosa stai approvando",
+    "category": "guide"
+  },
+  {
+    "slug": "analisi-on-chain-dune",
+    "title": "Analisi on-chain con Dune Analytics",
+    "category": "guide"
+  },
+  {
+    "slug": "leggere-indirizzo-wallet",
+    "title": "Come leggere un indirizzo wallet e verificare una transazione",
+    "category": "guide"
+  },
+  {
+    "slug": "prima-transazione-crypto",
+    "title": "Inviare e ricevere la prima crypto",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-diffida-telegram",
+    "title": "Diffida dei \"guadagni garantiti\" su Telegram",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-no-screenshot-seed",
+    "title": "Fai uno screenshot della seed? Hai già perso",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-rubrica-wallet",
+    "title": "Salva gli indirizzi frequenti nella rubrica del wallet",
+    "category": "guide"
+  },
+  {
+    "slug": "installare-trust-wallet",
+    "title": "Installare e configurare Trust Wallet",
+    "category": "guide"
+  },
+  {
+    "slug": "liquidita-uniswap-v3",
+    "title": "Fornire liquidità su Uniswap V3 (con calcolo impermanent loss)",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-controlla-rete",
+    "title": "Controlla la rete prima di inviare (ERC-20 ≠ BEP-20)",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-inizia-poco",
+    "title": "Inizia con pochi euro: impara prima di investire tanto",
+    "category": "guide"
+  },
+  {
+    "slug": "tip-non-tenere-exchange",
+    "title": "Non tenere tutte le crypto sull'exchange",
+    "category": "guide"
+  },
+  {
+    "slug": "usare-aave",
+    "title": "Usare Aave per prestito e deposito DeFi",
+    "category": "guide"
+  },
+  {
+    "slug": "blockchain-5-minuti",
+    "title": "Primi passi: cos'è una blockchain in 5 minuti",
+    "category": "guide"
+  },
+  {
+    "slug": "bridge-cross-chain",
+    "title": "Bridge cross-chain: trasferire asset tra Ethereum e Arbitrum",
+    "category": "guide"
   },
   {
     "slug": "tip-2fa-exchange",
     "title": "Attiva sempre il 2FA sull'exchange (non via SMS)",
-    "category": "tip"
+    "category": "guide"
   },
   {
     "slug": "tip-mai-seed-phrase",
     "title": "Mai condividere la seed phrase: nemmeno con il \"supporto\"",
-    "category": "tip"
+    "category": "guide"
   },
   {
     "slug": "tip-verifica-url",
-    "title": "Verifica l'URL dell'exchange: il phishing inizia da l\u00ec",
-    "category": "tip"
-  },
-  {
-    "slug": "trend-etf-bitcoin",
-    "title": "Bitcoin Spot ETF: cosa sono e perch\u00e9 contano",
-    "category": "trend"
-  },
-  {
-    "slug": "trend-mica",
-    "title": "MiCA 2026: cosa cambia davvero per le crypto in Europa",
-    "category": "trend"
+    "title": "Verifica l'URL dell'exchange: il phishing inizia da lì",
+    "category": "guide"
   }
 ]

@@ -268,24 +268,44 @@ button.nav-tab {
 .header-socials {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.45rem;
+  flex-shrink: 0;
 }
 .header-social {
-  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
-  background: var(--bg-alt); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); text-decoration: none; color: var(--text-muted);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(232, 148, 12, 0.22), rgba(232, 197, 71, 0.14));
+  border: 1.5px solid rgba(232, 197, 71, 0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--secondary);
+  cursor: pointer;
   transition: all var(--transition);
+  box-shadow: 0 0 14px rgba(232, 197, 71, 0.18);
 }
 .header-social:hover {
-  color: var(--social-color, var(--primary));
-  border-color: var(--social-color, var(--primary));
-  box-shadow: 0 0 16px color-mix(in srgb, var(--social-color, var(--primary)) 35%, transparent);
+  color: #0c0a07;
+  background: linear-gradient(145deg, var(--primary), var(--secondary));
+  border-color: var(--secondary);
+  box-shadow: 0 0 22px rgba(232, 197, 71, 0.45);
+  transform: translateY(-2px) scale(1.07);
 }
-.header-social svg,
-.header-social img { width: 18px; height: 18px; display: block; }
-.header-social--instagram:hover { color: #E1306C; }
-.header-social--facebook:hover { color: #1877F2; }
-.header-social--x:hover { color: #E7E9EA; }
+.header-social:active { transform: translateY(0) scale(1); }
+.header-social svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+}
+.header-social--instagram,
+.header-social--facebook,
+.header-social--x { color: var(--secondary); }
+.header-social--instagram:hover,
+.header-social--facebook:hover,
+.header-social--x:hover { color: #0c0a07; }
 .header-lang { flex-shrink: 0; }
 .lang-switcher {
   display: inline-flex;
@@ -2184,6 +2204,8 @@ button.mobile-nav-card {
   .header-lang .lang-code { display: none; }
   .header-lang .lang-btn { padding: 0.35rem 0.45rem; }
   .logo-name { font-size: 0.82rem; max-width: 11rem; }
+  .header-social { width: 36px; height: 36px; }
+  .header-social svg { width: 16px; height: 16px; }
 }
 @media (min-width: 1024px) {
   body { font-size: 18px; }

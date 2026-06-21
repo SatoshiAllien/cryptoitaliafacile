@@ -53,7 +53,12 @@ function renderNavLinks(base) {
 function renderHeaderSocialLink(id) {
   const s = getSocial(id);
   if (!s) return '';
-  return `<a href="${s.url}" class="header-social header-social--${s.id}" aria-label="${s.name}" target="_blank" rel="noopener noreferrer" style="--social-color:${s.color}">${SOCIAL_ICONS[s.id] || s.name[0]}</a>`;
+  const base = getBasePath();
+  const iconSrc = `${base}assets/img/social/icon-${s.id}.svg`;
+  const iconHtml = ['instagram', 'facebook', 'x'].includes(s.id)
+    ? `<img src="${iconSrc}" alt="" width="18" height="18" loading="eager" decoding="async">`
+    : (SOCIAL_ICONS[s.id] || s.name[0]);
+  return `<a href="${s.url}" class="header-social header-social--${s.id}" aria-label="${s.name}" target="_blank" rel="noopener noreferrer" style="--social-color:${s.color}">${iconHtml}</a>`;
 }
 
 function renderMobileSocialLink(id) {

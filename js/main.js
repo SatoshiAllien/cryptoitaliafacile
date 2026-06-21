@@ -246,6 +246,23 @@ async function initHomepage() {
   if (homeSocial && SITE_CONFIG.social) {
     homeSocial.innerHTML = renderSocialLinks();
   }
+
+  initHeroSocialIcons();
+}
+
+function initHeroSocialIcons() {
+  const el = document.getElementById('hero-social-icons');
+  if (!el || !SITE_CONFIG.social) return;
+  const base = getBasePath();
+  const order = ['instagram', 'facebook', 'x'];
+  el.innerHTML = order.map(id => {
+    const s = getSocial(id);
+    if (!s) return '';
+    const iconFile = `${base}assets/img/social/icon-${id}.svg`;
+    return `<a href="${s.url}" class="hero-social-icon hero-social-icon--${id}" data-label="${s.handle || s.name}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}">
+      <img src="${iconFile}" alt="" width="24" height="24" loading="eager" decoding="async">
+    </a>`;
+  }).join('');
 }
 
 function initHubI18n() {

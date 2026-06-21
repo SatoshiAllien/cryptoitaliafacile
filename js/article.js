@@ -502,6 +502,97 @@
     faq: [
       { q: 'Blockchain e Bitcoin sono la stessa cosa?', a: 'No. Bitcoin è una criptovaluta che usa la tecnologia blockchain. La blockchain è la tecnologia sottostante, usata anche da Ethereum, Cardano e molte altre.' }
     ]
+  },
+
+  'trend-mica': {
+    subtitle: 'Il regolamento europeo che ridefinisce exchange, stablecoin e diritti degli investitori — spiegato senza gergo legale.',
+    intro: 'Il <strong>MiCA</strong> (Markets in Crypto-Assets) è il primo quadro normativo completo dell\'Unione Europea dedicato alle criptovalute. Entrato in vigore a fine 2024, nel <strong>2026</strong> vediamo gli effetti concreti: exchange autorizzati, stablecoin sotto controllo, maggiore protezione per chi investe e un\'Europa che prova a competere con USA e Asia. Ecco cosa devi sapere, in modo chiaro.',
+    sections: [
+      { id: 'trasparenza-exchange', title: 'Trasparenza obbligatoria per gli exchange', content: `
+        <p>Con MiCA, operare in Europa non è più questione di "aprire un sito e iniziare". I <strong>Crypto-Asset Service Provider</strong> (CASP) — exchange, piattaforme di custodia, broker crypto — devono ottenere <strong>autorizzazione</strong> da un'autorità nazionale competente (in Italia, tipicamente la Banca d'Italia o Consob, a seconda del servizio).</p>
+        <p>Cosa significa per te, in pratica:</p>
+        <ul>
+          <li><strong>White paper obbligatorio</strong> per le offerte al pubblico di token non già regolamentati</li>
+          <li><strong>Informativa chiara</strong> su rischi, commissioni e conflitti di interesse</li>
+          <li><strong>Segregazione dei fondi</strong> dei clienti rispetto a quelli dell'operatore</li>
+          <li><strong>Tracciabilità</strong> delle operazioni e procedure antiriciclaggio rafforzate</li>
+        </ul>
+        <p>Gli exchange non conformi devono uscire dal mercato UE o adeguarsi. Nel 2026 la lista degli operatori autorizzati diventa il primo filtro da controllare prima di depositare euro o crypto.</p>
+        <div class="box box--tip"><span class="box-title">Come verificare</span>Controlla sempre se la piattaforma dichiara licenza MiCA o registrazione VASP nel tuo Paese. Diffida di chi non indica chiaramente ente regolatore e numero di autorizzazione.</div>
+      `},
+      { id: 'protezione-investitori', title: 'Protezione degli investitori', content: `
+        <p>MiCA introduce regole che avvicinano il mondo crypto a standard più vicini alla finanza tradizionale — senza eliminare i rischi di mercato, ma riducendo quelli legati a <strong>opacità e malafede</strong>.</p>
+        <p>I pilastri principali:</p>
+        <ul>
+          <li><strong>Classificazione degli asset</strong> — e-money token, asset-referenced token, altri crypto-asset: ogni categoria ha obblighi diversi</li>
+          <li><strong>Divieto di manipolazione</strong> di mercato e insider trading, con sanzioni significative</li>
+          <li><strong>Comunicazioni marketing</strong> — devono essere chiare, non fuorvianti e identificabili come pubblicitarie</li>
+          <li><strong>Reclami e risoluzione dispute</strong> — procedure obbligatorie per i fornitori autorizzati</li>
+        </ul>
+        <p>Per l'investitore retail, il vantaggio è maggiore <strong>prevedibilità</strong>: sai chi contattare in caso di problemi e quali diritti minimo aspettarti. Il rischio di perdere capitale per volatilità resta — MiCA non è una garanzia sui prezzi.</p>
+        <div class="box box--warning"><span class="box-title">Attenzione</span>MiCA protegge da operatori non conformi e da pratiche scorrette, non dalle oscillazioni di Bitcoin o altcoin. Investi solo somme che puoi permetterti di perdere.</div>
+      `},
+      { id: 'stablecoin-regole', title: 'Stablecoin e nuove regole', content: `
+        <p>Le stablecoin sono al centro di MiCA. Il regolamento distingue soprattutto:</p>
+        <ul>
+          <li><strong>E-Money Token (EMT)</strong> — ancorate a una valuta fiat (es. euro). Emittenti soggetti ad autorizzazione come istituti di moneta elettronica o banche</li>
+          <li><strong>Asset-Referenced Token (ART)</strong> — ancorate a un paniere di asset (valute, commodity, crypto). Requisiti di capitale e governance più stringenti</li>
+        </ul>
+        <p>Nel 2026 i trend più visibili:</p>
+        <ul>
+          <li>Stablecoin non conformi <strong>limitate o ritirate</strong> dal mercato europeo</li>
+          <li>Maggiore spazio per <strong>stablecoin regolate in euro</strong> (fiat-backed con riserve verificabili)</li>
+          <li>Più trasparenza su <strong>riserve, audit e redemption</strong> — il peg non è più solo una promessa sul sito web</li>
+        </ul>
+        <p>Se usi stablecoin per trading, DeFi o semplicemente per "parcheggiare" valore, verifica se l'emittente è autorizzato in UE. Una stablecoin senza compliance MiCA può diventare difficile da usare su exchange europei.</p>
+      `},
+      { id: 'competitivita-europea', title: 'Competitività europea', content: `
+        <p>L'Europa ha scelto la strada della <strong>regolamentazione esplicita</strong> mentre altri Paesi — come gli USA — procedono con approcci più frammentati o orientati all'enforcement post-hoc. Il 2026 è il banco di prova.</p>
+        <p><strong>Punti di forza</strong> per l'ecosistema UE:</p>
+        <ul>
+          <li><strong>Passaporto europeo</strong> — un'autorizzazione MiCA valida in tutti gli Stati membri (con notifiche)</li>
+          <li><strong>Certezza normativa</strong> — attrae istituzioni che evitano zone grigie</li>
+          <li><strong>Integrazione con PSD2/AML</strong> — framework coerente con banche e fintech</li>
+        </ul>
+        <p><strong>Rischi</strong> da monitorare:</p>
+        <ul>
+          <li>Costi di compliance elevati per startup — possibile concentrazione su pochi grandi player</li>
+          <li>Spostamento di volumi verso offshore non regolamentati</li>
+          <li>Ritmo più lento dell'innovazione DeFi rispetto a mercati meno regolati</li>
+        </ul>
+        <p>La competizione non è solo legale, ma anche tecnologica: layer 2, CBDC, tokenizzazione di asset reali (RWA). MiCA è la base, non il traguardo.</p>
+      `},
+      { id: 'adozione-istituzionale', title: 'Adozione istituzionale', content: `
+        <p>Il 2026 segna un punto di svolta: banche, gestori patrimoniali e grandi aziende non possono più ignorare MiCA se vogliono operare in Europa con crypto.</p>
+        <p>Trend in corso:</p>
+        <ul>
+          <li><strong>ETF e prodotti quotati</strong> — già regolati da normativa finanziaria tradizionale, ora in dialogo più chiaro con MiCA per servizi accessori</li>
+          <li><strong>Custodia istituzionale</strong> — banche che offrono custodia crypto con standard MiCA</li>
+          <li><strong>Tokenizzazione</strong> — obbligazioni, fondi e titoli su blockchain con quadro giuridico definito</li>
+          <li><strong>CBDC e stablecoin</strong> — il digitale euro (in fase pilota) convive con stablecoin private regolate</li>
+        </ul>
+        <p>Per il retail, l'effetto più tangibile è la <strong>normalizzazione</strong>: crypto sempre più integrate in app bancarie, piattaforme di investimento e servizi pensionistici — con KYC, reportistica fiscale e protezione del consumatore allineate al resto della finanza.</p>
+        <div class="box box--tip"><span class="box-title">Prospettiva</span>Chi capisce MiCA oggi capisce dove andrà il mercato europeo nei prossimi 3–5 anni. Non serve un laurea in legge: basta sapere chi è autorizzato, quali asset sono conformi e quali rischi restano tuoi.</div>
+      `},
+      { id: 'conclusione', title: 'Conclusione: sintesi e prospettive future', content: `
+        <p>Il <strong>MiCA 2026</strong> non è un dettaglio tecnico per avvocati — è il nuovo terreno di gioco del mercato crypto europeo. In sintesi:</p>
+        <ul>
+          <li>Exchange e piattaforme devono essere <strong>autorizzati e trasparenti</strong></li>
+          <li>Gli investitori hanno <strong>più tutele</strong> contro operatori scorretti</li>
+          <li>Le stablecoin entrano in un regime <strong>rigoroso e verificabile</strong></li>
+          <li>L'Europa punta su <strong>regole chiare</strong> per competere a livello globale</li>
+          <li>L'adozione istituzionale accelera su <strong>custodia, ETF e tokenizzazione</strong></li>
+        </ul>
+        <p>Nei prossimi anni assisteremo probabilmente a <strong>consolidamento del settore</strong> (meno operatori, più solidi), maggiore <strong>integrazione banca-crypto</strong> e nuove sfide su DeFi e privacy — aree ancora parzialmente fuori dal perimetro MiCA.</p>
+        <p>La tua mossa intelligente: usare solo piattaforme conformi, diversificare, documentare le operazioni per il fisco e restare aggiornato. Il regolamento protegge chi opera in modo consapevole — non chi delega tutto alla fortuna.</p>
+      `}
+    ],
+    faq: [
+      { q: 'MiCA si applica anche in Italia?', a: 'Sì. MiCA è un regolamento UE direttamente applicabile in tutti gli Stati membri, inclusa l\'Italia. Le autorità nazionali vigilano sull\'attuazione.' },
+      { q: 'Devo dichiarare le crypto diversamente con MiCA?', a: 'MiCA regola operatori e mercati, non sostituisce gli obblighi fiscali. In Italia le crypto vanno comunque dichiarate secondo la normativa vigente (RW, quadro RT, plusvalenze).' },
+      { q: 'Bitcoin è regolato da MiCA?', a: 'Bitcoin, come asset decentralizzato senza emittente, non rientra nella categoria dei token emessi con offerta al pubblico. I servizi su Bitcoin (exchange, custodia) sì — devono rispettare MiCA.' },
+      { q: 'Posso ancora usare exchange non europei?', a: 'Dipende da licenze, restrizioni geografiche e conformità. Un exchange senza autorizzazione UE può essere inaccessibile o più rischioso per residenti europei.' }
+    ]
   }
 };
 
@@ -551,9 +642,20 @@ async function initArticlePage() {
   const base = getBasePath();
   const content = ARTICLE_CONTENT[slug] || generateGenericContent(article);
 
-  document.title = `${article.title} — The Little Satoshi News`;
+  const seoTitle = article.seoTitle || article.title;
+  const seoDescription = article.seoDescription || article.excerpt;
+  document.title = `${seoTitle} — The Little Satoshi News`.slice(0, 70);
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (metaDesc) metaDesc.content = article.excerpt;
+  if (metaDesc) metaDesc.content = seoDescription;
+  if (article.seoKeywords) {
+    let kw = document.querySelector('meta[name="keywords"]');
+    if (!kw) {
+      kw = document.createElement('meta');
+      kw.setAttribute('name', 'keywords');
+      document.head.appendChild(kw);
+    }
+    kw.content = article.seoKeywords;
+  }
 
   const articleUrl = getArticleUrl(slug);
   const ogImage = typeof getArticlePreviewHeroUrl === 'function'
@@ -562,8 +664,8 @@ async function initArticlePage() {
       ? getFacebookImageAbsoluteUrl(article)
       : (typeof getFacebookImageUrl === 'function' ? getFacebookImageUrl(article) : ''));
   const ogEntries = [
-    ['og:title', article.title],
-    ['og:description', article.excerpt],
+    ['og:title', seoTitle],
+    ['og:description', seoDescription],
     ['og:url', articleUrl],
     ['og:type', 'article']
   ];
@@ -621,9 +723,13 @@ async function initArticlePage() {
 
   const headerEl = document.getElementById('article-header');
   if (headerEl) {
+    const subtitleHtml = content.subtitle
+      ? `<p class="article-subtitle">${content.subtitle}</p>`
+      : '';
     headerEl.innerHTML = `
       ${heroHtml}
       <h1>${article.title}</h1>
+      ${subtitleHtml}
       <div class="article-meta-bar">
         <span class="badge badge--${article.difficulty}">${diffLabel}</span>
         <span>📖 ${article.readTime} min di lettura</span>

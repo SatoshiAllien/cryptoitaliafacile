@@ -100,17 +100,26 @@ function renderMobileSocialLink(id) {
   return `<a href="${s.url}" class="mobile-nav-link" target="_blank" rel="noopener noreferrer">${SOCIAL_ICONS[s.id] || ''} ${s.name}</a>`;
 }
 
+function renderHeaderSocialBar() {
+  const links = ['instagram', 'facebook', 'x'].map(renderHeaderSocialLink).join('');
+  if (!links) return '';
+  return `
+    <div class="header-social-bar" aria-label="${t('nav.social')}">
+      <div class="container header-social-bar-inner">
+        <span class="header-social-label">${t('nav.followUs')}</span>
+        <div class="header-socials">${links}</div>
+      </div>
+    </div>`;
+}
+
 function renderHeader() {
   const base = getBasePath();
-  const headerSocialsHtml = ['x', 'facebook', 'instagram'].map(renderHeaderSocialLink).join('');
-  const headerSocials = headerSocialsHtml ? `<div class="header-socials">${headerSocialsHtml}</div>` : '';
   return `
     <header class="header" id="header">
       <div class="header-top">
         <div class="container header-top-inner">
           ${renderLogo(base)}
           <div class="header-actions">
-            ${headerSocials}
             <button class="search-toggle" id="open-search" aria-label="${t('nav.search')}">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             </button>
@@ -123,6 +132,7 @@ function renderHeader() {
           </div>
         </div>
       </div>
+      ${renderHeaderSocialBar()}
       <div class="header-nav-bar">
         <div class="container">
           <nav class="nav-tabs" aria-label="Menu principale">

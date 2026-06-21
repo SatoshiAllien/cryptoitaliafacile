@@ -42,8 +42,9 @@
   --font-body: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --header-top-h: 64px;
+  --header-social-h: 50px;
   --header-nav-h: 46px;
-  --header-h: var(--header-top-h);
+  --header-h: calc(var(--header-top-h) + var(--header-social-h));
   --content-max: 680px;
   --sidebar-w: 300px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -265,47 +266,69 @@ button.nav-tab {
   display: flex; align-items: center; gap: 0.35rem;
   flex-shrink: 0; margin-left: auto;
 }
-.header-socials {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  flex-shrink: 0;
+/* Barra social sempre visibile sotto il logo */
+.header-social-bar {
+  display: block;
+  background: linear-gradient(90deg, rgba(232, 148, 12, 0.14), rgba(255, 215, 0, 0.1), rgba(232, 148, 12, 0.14));
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.22);
 }
-.header-social {
-  width: 40px;
-  height: 40px;
+.header-social-bar-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, rgba(232, 148, 12, 0.22), rgba(232, 197, 71, 0.14));
-  border: 1.5px solid rgba(232, 197, 71, 0.5);
+  gap: 0.85rem;
+  min-height: var(--header-social-h);
+  padding: 0.35rem 0;
+}
+.header-social-label {
+  font-family: var(--font-cyber);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
+  flex-shrink: 0;
+}
+.header-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+}
+.header-social {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #FFD700 0%, #E8940C 100%);
+  border: 2px solid #FFF3B0;
   border-radius: 50%;
   text-decoration: none;
-  color: var(--secondary);
+  color: #1a1008;
   cursor: pointer;
   transition: all var(--transition);
-  box-shadow: 0 0 14px rgba(232, 197, 71, 0.18);
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.45), 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 .header-social:hover {
   color: #0c0a07;
-  background: linear-gradient(145deg, var(--primary), var(--secondary));
-  border-color: var(--secondary);
-  box-shadow: 0 0 22px rgba(232, 197, 71, 0.45);
-  transform: translateY(-2px) scale(1.07);
+  background: linear-gradient(145deg, #FFF3B0, #FFD700);
+  border-color: #fff;
+  box-shadow: 0 0 28px rgba(255, 215, 0, 0.65);
+  transform: translateY(-3px) scale(1.1);
 }
 .header-social:active { transform: translateY(0) scale(1); }
 .header-social svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: block;
   fill: currentColor;
 }
 .header-social--instagram,
 .header-social--facebook,
-.header-social--x { color: var(--secondary); }
-.header-social--instagram:hover,
-.header-social--facebook:hover,
-.header-social--x:hover { color: #0c0a07; }
+.header-social--x { color: #1a1008; }
 .header-lang { flex-shrink: 0; }
 .lang-switcher {
   display: inline-flex;
@@ -2186,7 +2209,7 @@ button.mobile-nav-card {
 }
 @media (min-width: 640px) {
   .header-nav-bar { display: block; }
-  :root { --header-h: calc(var(--header-top-h) + var(--header-nav-h)); }
+  :root { --header-h: calc(var(--header-top-h) + var(--header-social-h) + var(--header-nav-h)); }
 }
 @media (min-width: 768px) {
   .teacher-card { grid-template-columns: 260px 1fr; }

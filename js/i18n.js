@@ -18,7 +18,7 @@ const TRANSLATIONS = {
       satoshiAi: 'Parla con Satoshi',
       tabGuide: 'Guide', tabTips: 'Consigli', tabTrend: 'Trend', tabNews: 'Notizie',
       tabSecurity: 'Sicurezza', tabCardano: 'Cardano', tabTools: 'Strumenti', tabSatoshi: 'Satoshi',
-      openSection: 'Apri sezione', satoshiSub: 'Assistente AI crypto',
+      openSection: 'Apri sezione', satoshiSub: 'Assistente AI crypto', followUs: 'Seguici',
       social: 'Social', search: 'Cerca', menu: 'Menu', close: 'Chiudi', closeSearch: 'Chiudi ricerca'
     },
     ui: {
@@ -307,7 +307,7 @@ const TRANSLATIONS = {
       satoshiAi: 'Talk to Satoshi',
       tabGuide: 'Guides', tabTips: 'Tips', tabTrend: 'Trends', tabNews: 'News',
       tabSecurity: 'Security', tabCardano: 'Cardano', tabTools: 'Tools', tabSatoshi: 'Satoshi',
-      openSection: 'Open section', satoshiSub: 'Crypto AI assistant',
+      openSection: 'Open section', satoshiSub: 'Crypto AI assistant', followUs: 'Follow us',
       social: 'Social', search: 'Search', menu: 'Menu', close: 'Close', closeSearch: 'Close search'
     },
     ui: {

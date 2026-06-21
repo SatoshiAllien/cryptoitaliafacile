@@ -1,0 +1,18 @@
+{
+  "pending": [
+    {
+      "slug": "comprare-bitcoin-prima-volta",
+      "title": "Come comprare Bitcoin per la prima volta (guida completa 2026)",
+      "slot": 0,
+      "link_url": "https://satoshiallien.github.io/cryptoitaliafacile/index.html",
+      "cta": "Parla con Satoshi AI educativa",
+      "reason": "quota_limit",
+      "note": "Facebook già pubblicata (post_id 1003187899129444); IG in attesa reset API",
+      "enqueued_at": "2026-06-21T15:45:00+00:00",
+      "attempts": 1,
+      "facebook_published": true,
+      "facebook_post_id": "1003187899129444"
+    }
+  ],
+  "completed": []
+}

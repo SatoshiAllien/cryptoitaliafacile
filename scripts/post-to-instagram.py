@@ -24,6 +24,7 @@ from pathlib import Path
 
 from chill_cyber_playlist import track_for_slot
 from instagram_auth import graph_url, is_instagram_login_token, resolve_credentials
+from story_links import SATOSHI_AI_STORY_LINK
 from story_publish import publish_instagram_story
 from story_video import prepare_story_video, story_image_file
 
@@ -525,7 +526,7 @@ def main() -> None:
 
         story_id = ""
         story_track = ""
-        story_link = article_url(article["slug"])
+        story_link = SATOSHI_AI_STORY_LINK
         if not args.no_story:
             try:
                 story_video_path = None

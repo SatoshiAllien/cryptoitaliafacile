@@ -12,18 +12,61 @@ import urllib.request
 from pathlib import Path
 
 from instagram_auth import graph_url, is_instagram_login_token
+from story_links import SATOSHI_AI_STORY_LINK, SATOSHI_STORY_STICKER
 from story_video_host import stage_story_video
 
 GRAPH = "https://graph.facebook.com/v21.0"
 
 
-def _with_story_link(params: dict, link_url: str | None, *, platform: str = "instagram") -> dict:
+def _cta_json(cta_type: str, link_url: str) -> str:
+    return json.dumps({"type": cta_type, "value": {"link": link_url}}, separators=(",", ":"))
+
+
+def _fb_link_cta_payloads(link_url: str) -> list[dict]:
+    return [
+        {"link": link_url, "cta": _cta_json("OPEN_LINK", link_url)},
+        {"link": link_url, "cta": _cta_json("VIEW_WEBSITE", link_url)},
+        {"link": link_url, "cta": _cta_json("SEE_MORE", link_url)},
+        {"link": link_url, "cta": _cta_json("LEARN_MORE", link_url)},
+        {"link": link_url},
+    ]
+
+
+def _ig_link_payloads(link_url: str) -> list[dict]:
+    """Varianti parametro link per Story Instagram."""
+    sticker = SATOSHI_STORY_STICKER
+    return [
+        {"link": link_url},
+        {"link": link_url, "link_text": sticker},
+        {"link": link_url, "link_text": "Parla con Satoshi AI"},
+        {"website_url": link_url},
+    ]
+
+
+def _with_story_link(
+    params: dict,
+    link_url: str | None,
+    *,
+    platform: str = "instagram",
+    ig_variant: int = 0,
+) -> dict:
     if not link_url:
         return params
-    params["link"] = link_url
+    out = dict(params)
     if platform == "facebook":
-        params["cta"] = json.dumps({"type": "SEE_MORE", "value": {"link": link_url}})
-    return params
+        payload = _fb_link_cta_payloads(link_url)[0]
+        out.update(payload)
+        return out
+    ig_payload = _ig_link_payloads(link_url)[min(ig_variant, len(_ig_link_payloads(link_url)) - 1)]
+    out.update(ig_payload)
+    return out
+
+
+def _fb_finish_attempts(video_id: str, link_url: str | None, token: str) -> list[dict]:
+    base = {"upload_phase": "finish", "video_id": video_id, "access_token": token}
+    if not link_url:
+        return [base]
+    return [{**base, **payload} for payload in _fb_link_cta_payloads(link_url)]
 
 
 def _link_api_error(result: dict) -> bool:
@@ -160,23 +203,17 @@ def upload_facebook_video_story(
     if uploaded.get("error"):
         return uploaded
 
-    finish_params = _with_story_link(
-        {
-            "upload_phase": "finish",
-            "video_id": video_id,
-            "access_token": token,
-        },
-        link_url,
-        platform="facebook",
-    )
-    finished = graph_request(endpoint, finish_params, label="FB video_stories finish")
-    if finished.get("error") and link_url and _link_api_error(finished):
-        print("Link FB story non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
-        finished = graph_request(
-            endpoint,
-            {"upload_phase": "finish", "video_id": video_id, "access_token": token},
-            label="FB video_stories finish (no link)",
-        )
+    finished: dict = {}
+    for i, finish_params in enumerate(_fb_finish_attempts(video_id, link_url, token)):
+        label = "FB video_stories finish" if i == 0 else f"FB video_stories finish try {i + 1}"
+        finished = graph_request(endpoint, finish_params, label=label)
+        if not finished.get("error"):
+            if link_url and i > 0:
+                print(f"Link FB story OK (strategia {i + 1})", flush=True)
+            break
+        if link_url:
+            err = finished.get("error", {})
+            print(f"Link FB tentativo {i + 1} fallito: {err.get('message', err)}", flush=True)
     if finished.get("error"):
         return finished
     finished.setdefault("video_id", video_id)
@@ -217,11 +254,12 @@ def _upload_instagram_video_url(
         graph_request(media_url, media_params, dry_run=True, label="IG story video_url")
         return {"dry_run": True, "id": "dry-run-ig-story-video"}
 
-    container = graph_request(media_url, media_params, label="IG story video_url")
-    if container.get("error") and link_url and _link_api_error(container):
-        print("Link IG non supportato via API — usa QR nella story, retry senza link.", flush=True)
-        base_params = {"video_url": video_url, "media_type": "STORIES", "access_token": token}
-        container = graph_request(media_url, base_params, label="IG story video_url (no link)")
+    container = _ig_story_container(
+        media_url,
+        {"video_url": video_url, "media_type": "STORIES", "access_token": token},
+        link_url,
+        label="IG story video_url",
+    )
     if container.get("error"):
         return container
 
@@ -242,8 +280,37 @@ def _upload_instagram_video_url(
     published.setdefault("video_url", video_url)
     if link_url:
         published["link_requested"] = link_url
-        published["link_note"] = "IG API non supporta link cliccabili — QR nella story"
+        if not published.get("link_attached"):
+            published["link_note"] = "Link API IG non disponibile — usa QR Parla con Satoshi AI nella story"
     return published
+
+
+def _ig_story_container(
+    media_url: str,
+    base_params: dict,
+    link_url: str | None,
+    *,
+    label: str,
+) -> dict:
+    if not link_url:
+        return graph_request(media_url, base_params, label=label)
+    last: dict = {}
+    variants = _ig_link_payloads(link_url)
+    for i, extra in enumerate(variants):
+        params = {**base_params, **extra}
+        attempt_label = label if i == 0 else f"{label} link try {i + 1}"
+        last = graph_request(media_url, params, label=attempt_label)
+        if not last.get("error"):
+            if i > 0:
+                print(f"Link IG story OK (variante {i + 1})", flush=True)
+            last["link_attached"] = True
+            return last
+        if not _link_api_error(last):
+            return last
+        err = last.get("error", {})
+        print(f"Link IG tentativo {i + 1} fallito: {err.get('message', err)}", flush=True)
+    print("Link sticker IG non supportato via API — QR Satoshi AI attivo nella story.", flush=True)
+    return graph_request(media_url, base_params, label=f"{label} (no link)")
 
 
 def _upload_instagram_resumable(
@@ -264,11 +331,12 @@ def _upload_instagram_resumable(
         print(f"[DRY RUN] UPLOAD bytes {video_path}")
         return {"dry_run": True, "id": "dry-run-ig-story"}
 
-    container = graph_request(media_url, media_params, label="IG resumable story container")
-    if container.get("error") and link_url and _link_api_error(container):
-        print("Link sticker IG non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
-        base_params = {"upload_type": "resumable", "media_type": "STORIES", "access_token": token}
-        container = graph_request(media_url, base_params, label="IG resumable story container (no link)")
+    container = _ig_story_container(
+        media_url,
+        {"upload_type": "resumable", "media_type": "STORIES", "access_token": token},
+        link_url,
+        label="IG resumable story container",
+    )
     if container.get("error"):
         return container
 
@@ -355,14 +423,23 @@ def publish_facebook_story(
     if not photo_id:
         return {"error": {"message": f"No photo id: {photo}"}}
 
-    story_params = _with_story_link({"photo_id": photo_id, "access_token": token}, link_url, platform="facebook")
-    story = graph_request(f"{GRAPH}/{page_id}/photo_stories", story_params, label="FB photo_stories")
-    if story.get("error") and link_url and _link_api_error(story):
-        print("Link FB story non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
+    story: dict = {}
+    if link_url:
+        for i, payload in enumerate(_fb_link_cta_payloads(link_url)):
+            params = {"photo_id": photo_id, "access_token": token, **payload}
+            lbl = "FB photo_stories" if i == 0 else f"FB photo_stories link try {i + 1}"
+            story = graph_request(f"{GRAPH}/{page_id}/photo_stories", params, label=lbl)
+            if not story.get("error"):
+                if i > 0:
+                    print(f"Link FB photo story OK (strategia {i + 1})", flush=True)
+                break
+            err = story.get("error", {})
+            print(f"Link FB photo tentativo {i + 1} fallito: {err.get('message', err)}", flush=True)
+    else:
         story = graph_request(
             f"{GRAPH}/{page_id}/photo_stories",
             {"photo_id": photo_id, "access_token": token},
-            label="FB photo_stories (no link)",
+            label="FB photo_stories",
         )
     if story.get("error"):
         return story
@@ -423,11 +500,12 @@ def publish_instagram_story(
         )
         return {"dry_run": True, "id": "dry-run-ig-story"}
 
-    container = graph_request(media_url, image_params, label="IG story container")
-    if container.get("error") and link_url and _link_api_error(container):
-        print("Link sticker IG non supportato via API — overlay visivo attivo, retry senza link.", flush=True)
-        base_params = {"image_url": image_url, "media_type": "STORIES", "access_token": token}
-        container = graph_request(media_url, base_params, label="IG story container (no link)")
+    container = _ig_story_container(
+        media_url,
+        {"image_url": image_url, "media_type": "STORIES", "access_token": token},
+        link_url,
+        label="IG story container",
+    )
     if container.get("error"):
         return container
 

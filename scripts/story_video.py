@@ -17,33 +17,48 @@ except ImportError:
     imageio_ffmpeg = None  # type: ignore
 
 from chill_cyber_playlist import playlist_label, track_for_slot
+from story_links import (
+    SATOSHI_AI_STORY_LINK,
+    SATOSHI_STORY_CTA,
+    SATOSHI_STORY_HINT,
+    SATOSHI_STORY_STICKER,
+    SATOSHI_STORY_SUBTITLE,
+    SATOSHI_STORY_TITLE,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_DIR = ROOT / "assets" / "video" / "stories" / "cache"
 FB_STORY_IMG = ROOT / "assets" / "img" / "facebook" / "stories"
 IG_STORY_IMG = ROOT / "assets" / "img" / "instagram" / "stories"
-SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
+SITE_URL = SATOSHI_AI_STORY_LINK
 SITE_LABEL = "cryptoitaliafacile.com"
 STORY_DURATION = 15
 STORY_VARIANT_SUFFIXES = ("abstract", "thematic", "minimal")
+STORY_OVERLAY_REV = "satoshi-link-v5"
 
 THEME = {
     "instagram": {
         "accent": "#00F0FF",
         "accent2": "#FF2A6D",
         "gold": "#FDE047",
-        "cta": "👆 Tap here",
-        "scan": "📱 Scan QR with camera",
-        "hint": "👉 Opens the homepage",
-        "free": "✨ FREE",
+        "title": SATOSHI_STORY_TITLE,
+        "subtitle": SATOSHI_STORY_SUBTITLE,
+        "cta": f"🤖 {SATOSHI_STORY_CTA}",
+        "sticker": SATOSHI_STORY_STICKER,
+        "scan": "📱 Scansiona il QR con la fotocamera",
+        "hint": SATOSHI_STORY_HINT,
+        "free": "✨ GRATIS",
     },
     "facebook": {
         "accent": "#34D399",
         "accent2": "#FDE047",
         "gold": "#00F0FF",
-        "cta": "👉 Clicca qui",
-        "scan": "📱 Scansiona il QR",
-        "hint": "👆 Si apre la homepage",
+        "title": SATOSHI_STORY_TITLE,
+        "subtitle": SATOSHI_STORY_SUBTITLE,
+        "cta": f"🤖 {SATOSHI_STORY_CTA}",
+        "sticker": SATOSHI_STORY_STICKER,
+        "scan": "👆 Tocca lo sticker link in story",
+        "hint": SATOSHI_STORY_HINT,
         "free": "✨ GRATIS",
     },
 }
@@ -85,8 +100,10 @@ def story_image_file(article: dict, slot: int = 0) -> str:
 def short_link_label(link_url: str) -> str:
     parsed = urllib.parse.urlparse(link_url)
     path = parsed.path.strip("/")
+    if "chat" in path:
+        return f"🤖 {SATOSHI_STORY_TITLE}"
     if path in ("", "index.html") and parsed.netloc.endswith("github.io"):
-        return f"🏠 Homepage · {SITE_LABEL}"
+        return f"🤖 {SATOSHI_STORY_TITLE}"
     if parsed.netloc.endswith("github.io") and "cryptoitaliafacile" in parsed.path:
         return SITE_LABEL
     host = parsed.netloc.removeprefix("www.")
@@ -152,19 +169,24 @@ def overlay_link_panel(
     draw.rounded_rectangle(box, radius=36, fill=(12, 18, 38, 235), outline=accent_rgb + (255,), width=4)
     draw.rounded_rectangle((56, 960, 1024, 1032), radius=36, fill=accent2_rgb + (220,))
 
-    draw.text((88, 978), theme["cta"], fill=(15, 23, 42), font=_font(32, bold=True))
-    draw.text((780, 982), theme["free"], fill=(15, 23, 42), font=_font(24, bold=True))
+    draw.text((88, 972), theme["title"], fill=(15, 23, 42), font=_font(28, bold=True))
+    draw.text((88, 1006), theme["subtitle"], fill=(15, 23, 42), font=_font(20))
+    draw.text((780, 978), theme["free"], fill=(15, 23, 42), font=_font(22, bold=True))
 
-    qr = make_qr_image(link_url, size=190)
+    qr = make_qr_image(link_url, size=200)
     qr_rgba = qr.convert("RGBA")
     layer.paste(qr_rgba, (88, 1052), qr_rgba)
     draw.rounded_rectangle((80, 1044, 286, 1250), radius=16, outline=accent_rgb + (255,), width=3)
 
     label = short_link_label(link_url)
-    draw.text((310, 1052), label, fill="#FFFFFF", font=_font(34, bold=True))
+    draw.text((310, 1050), label, fill="#FFFFFF", font=_font(32, bold=True))
 
-    cta_y = 1100
-    draw.text((310, cta_y), theme["cta"], fill=accent, font=_font(30, bold=True))
+    sticker_box = (310, 1095, 990, 1155)
+    draw.rounded_rectangle(sticker_box, radius=18, fill=(255, 255, 255, 255))
+    draw.text((330, 1110), f"🔗 {theme['sticker']}", fill="#0F172A", font=_font(28, bold=True))
+
+    cta_y = 1170
+    draw.text((310, cta_y), theme["cta"], fill=accent, font=_font(28, bold=True))
     url_lines = format_link_lines(link_url)
     url_font = _font(22)
     url_y = cta_y + 42
@@ -293,7 +315,7 @@ def prepare_story_video(
     image_path = img_dir / f"{stem}.jpg"
     track = track_for_slot(slot, day_index, posts_per_day)
     audio_path = Path(track["path"])
-    out_path = CACHE_DIR / platform / f"{stem}-{track['id']}.mp4"
+    out_path = CACHE_DIR / platform / f"{stem}-{track['id']}-{STORY_OVERLAY_REV}.mp4"
     if (
         out_path.exists()
         and image_path.exists()

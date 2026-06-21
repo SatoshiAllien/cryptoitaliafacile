@@ -12,6 +12,7 @@ ARTICLES_PATH = ROOT / "data" / "articles.json"
 BITCOIN_NEWS_PATH = ROOT / "data" / "bitcoin-news.json"
 PLAN_PATH = ROOT / "data" / "instagram-highlights-plan.json"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
+SATOSHI_STORY_LINK = f"{SITE_URL}index.html"
 
 VARIANTS = ("abstract", "thematic", "minimal")
 VARIANT_KEYS = {
@@ -155,9 +156,7 @@ def news_story_entries(*, max_items: int | None = 12) -> list[dict]:
     for i, item in enumerate(items, 1):
         news_id = re.sub(r"[^a-zA-Z0-9_-]", "", str(item.get("id") or i))
         slug = f"news-{news_id}"
-        link = item.get("url") or f"{SITE_URL}news/index.html"
-        if item.get("slug"):
-            link = f"{SITE_URL}articolo.html?slug={item['slug']}"
+        link = SATOSHI_STORY_LINK
         title = (item.get("title") or "News Bitcoin").strip()
         if len(title) > 120:
             title = title[:117] + "…"
@@ -176,7 +175,8 @@ def news_story_entries(*, max_items: int | None = 12) -> list[dict]:
 
 
 def article_link(slug: str) -> str:
-    return f"{SITE_URL}articolo.html?slug={slug}"
+    """Tutte le story highlights → homepage Satoshi AI."""
+    return SATOSHI_STORY_LINK
 
 
 def build_category_plan(

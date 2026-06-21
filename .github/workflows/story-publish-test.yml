@@ -1,0 +1,55 @@
+name: Story Publish Test (FB + IG)
+
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: "Slug articolo story"
+        required: false
+        default: "comprare-bitcoin-prima-volta"
+      slot:
+        description: "Variante story 0-2"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install imageio-ffmpeg numpy Pillow qrcode[pil]
+
+      - name: Sync story music
+        run: python scripts/fetch-mixkit-story-music.py || true
+
+      - name: Publish story FB + IG
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          python scripts/post-story-only.py \
+            --slug "${{ github.event.inputs.slug }}" \
+            --slot "${{ github.event.inputs.slot }}"
+
+      - name: Commit published story videos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/video/stories/published/instagram/ || true
+          if git diff --staged --quiet; then
+            echo "Nessun video story da committare."
+          else
+            git commit -m "chore: story video pubblicato (${{ github.event.inputs.slug }})"
+            git push
+          fi

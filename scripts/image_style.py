@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stile condiviso clickbait: gradienti, griglia, glow, CTA 'Clicca qui'."""
+"""Stile professionale per post e story: pulito, emoji, palette per topic."""
 
 from __future__ import annotations
 
@@ -9,187 +9,147 @@ from PIL import Image, ImageDraw, ImageFont
 
 from brand_overlay import apply_branding
 
-# Palette unica per ogni topic — colori ben distinti
 TOPICS: dict[str, dict] = {
     "bitcoin": {
-        "bg": [(8, 10, 28), (120, 55, 8), (251, 146, 60)],
-        "accent": "#FBBF24",
-        "accent2": "#F97316",
-        "glow": (251, 191, 36),
-        "grid": (60, 45, 25),
+        "bg": [(11, 17, 33), (30, 41, 59)],
+        "accent": "#F59E0B",
         "emoji": "₿",
         "badge": "BITCOIN",
-        "hook_it": "🔥 LO DEVI\nSAPERE ORA",
-        "hook_en": "🔥 HOPE STARTS\nHERE",
-        "sub_it": "✨ Guida semplice · zero hype",
-        "sub_en": "✨ Simple guide · zero hype",
+        "hook_it": "Lo devi sapere\nora 🔥",
+        "hook_en": "Hope starts\nhere 🔥",
+        "sub_it": "✨ Guida semplice, zero hype",
+        "sub_en": "✨ Simple guide, zero hype",
     },
     "exchange": {
-        "bg": [(5, 18, 38), (6, 95, 70), (56, 189, 248)],
-        "accent": "#22D3EE",
-        "accent2": "#34D399",
-        "glow": (45, 212, 191),
-        "grid": (20, 55, 60),
+        "bg": [(10, 25, 38), (15, 55, 65)],
+        "accent": "#14B8A6",
         "emoji": "💱",
         "badge": "EXCHANGE",
-        "hook_it": "🚀 COMPRA CRYPTO\nIN SICUREZZA",
-        "hook_en": "🚀 BUY CRYPTO\nSAFELY",
+        "hook_it": "Compra crypto\nin sicurezza 🚀",
+        "hook_en": "Buy crypto\nsafely 🚀",
         "sub_it": "📋 Passo dopo passo",
         "sub_en": "📋 Step by step",
     },
     "wallet": {
-        "bg": [(18, 8, 42), (88, 28, 135), (192, 132, 252)],
-        "accent": "#C084FC",
-        "accent2": "#FF2A6D",
-        "glow": (216, 180, 254),
-        "grid": (45, 25, 65),
+        "bg": [(18, 12, 48), (49, 46, 129)],
+        "accent": "#A78BFA",
         "emoji": "🔐",
         "badge": "WALLET",
-        "hook_it": "🛡️ PROTEGGI LE\nTUE CRYPTO",
-        "hook_en": "🛡️ PROTECT YOUR\nCRYPTO",
+        "hook_it": "Proteggi le tue\ncrypto 🛡️",
+        "hook_en": "Protect your\ncrypto 🛡️",
         "sub_it": "💪 Metodi che funzionano",
         "sub_en": "💪 Methods that work",
     },
     "sicurezza": {
-        "bg": [(35, 6, 16), (153, 27, 27), (248, 113, 113)],
-        "accent": "#FCA5A5",
-        "accent2": "#FDE047",
-        "glow": (252, 165, 165),
-        "grid": (70, 25, 30),
+        "bg": [(35, 10, 20), (100, 25, 35)],
+        "accent": "#F87171",
         "emoji": "⚠️",
         "badge": "SICUREZZA",
         "badge_en": "SECURITY",
-        "hook_it": "🚨 EVITA QUESTO\nERRORE",
-        "hook_en": "🚨 AVOID THIS\nMISTAKE",
+        "hook_it": "Evita questo\nerrore 🚨",
+        "hook_en": "Avoid this\nmistake 🚨",
         "sub_it": "✅ Checklist anti-truffa",
         "sub_en": "✅ Anti-scam checklist",
     },
     "cardano": {
-        "bg": [(8, 14, 42), (29, 78, 216), (96, 165, 250)],
-        "accent": "#60A5FA",
-        "accent2": "#34D399",
-        "glow": (96, 165, 250),
-        "grid": (25, 40, 75),
+        "bg": [(12, 20, 48), (30, 64, 120)],
+        "accent": "#38BDF8",
         "emoji": "🔷",
         "badge": "CARDANO",
-        "hook_it": "💎 ADA SPIEGATO\nFACILE",
-        "hook_en": "💎 ADA MADE\nSIMPLE",
+        "hook_it": "ADA spiegato\nfacile 💎",
+        "hook_en": "ADA made\nsimple 💎",
         "sub_it": "🎯 Per chi inizia da zero",
         "sub_en": "🎯 For beginners",
     },
     "ethereum": {
-        "bg": [(12, 8, 48), (67, 56, 202), (165, 180, 252)],
-        "accent": "#A5B4FC",
-        "accent2": "#00F0FF",
-        "glow": (129, 140, 248),
-        "grid": (35, 35, 80),
+        "bg": [(15, 12, 45), (55, 48, 140)],
+        "accent": "#818CF8",
         "emoji": "⟠",
         "badge": "ETHEREUM",
-        "hook_it": "⚡ ETH SENZA\nCONFUSIONE",
-        "hook_en": "⚡ ETH WITHOUT\nCONFUSION",
+        "hook_it": "ETH senza\nconfusione ⚡",
+        "hook_en": "ETH without\nconfusion ⚡",
         "sub_it": "🧠 Concetti chiari in 5 min",
         "sub_en": "🧠 Clear in 5 min",
     },
     "defi": {
-        "bg": [(4, 28, 18), (21, 128, 61), (74, 222, 128)],
-        "accent": "#4ADE80",
-        "accent2": "#FDE047",
-        "glow": (74, 222, 128),
-        "grid": (18, 55, 40),
+        "bg": [(8, 28, 24), (20, 70, 50)],
+        "accent": "#34D399",
         "emoji": "🌊",
         "badge": "DeFi",
-        "hook_it": "🔬 SCOPRI COME\nFUNZIONA",
-        "hook_en": "🔬 HOW IT REALLY\nWORKS",
+        "hook_it": "Scopri come\nfunziona 🔬",
+        "hook_en": "How it really\nworks 🔬",
         "sub_it": "📖 Senza tecnicismi",
         "sub_en": "📖 No useless jargon",
     },
     "trend": {
-        "bg": [(6, 38, 32), (15, 100, 75), (45, 212, 191)],
-        "accent": "#FDE047",
-        "accent2": "#FBBF24",
-        "glow": (250, 204, 21),
-        "grid": (22, 55, 48),
+        "bg": [(8, 32, 30), (15, 80, 65)],
+        "accent": "#FACC15",
         "emoji": "📈",
         "badge": "TREND 2026",
-        "hook_it": "🌍 COSA STA\nCAMBIANDO",
-        "hook_en": "🌍 WHAT'S\nCHANGING",
+        "hook_it": "Cosa sta\ncambiando 🌍",
+        "hook_en": "What's\nchanging 🌍",
         "sub_it": "🔭 Macro trend spiegati",
         "sub_en": "🔭 Macro trends explained",
     },
     "tip": {
-        "bg": [(28, 12, 6), (146, 64, 14), (251, 191, 36)],
-        "accent": "#FCD34D",
-        "accent2": "#FF2A6D",
-        "glow": (251, 191, 36),
-        "grid": (65, 40, 18),
+        "bg": [(32, 18, 8), (120, 55, 18)],
+        "accent": "#FBBF24",
         "emoji": "💡",
         "badge": "CRYPTO TIP",
-        "hook_it": "⚡ TIP DA\nAPPLICARE SUBITO",
-        "hook_en": "⚡ USE THIS\nTODAY",
+        "hook_it": "Tip da usare\nsubito ⚡",
+        "hook_en": "Use this\ntoday ⚡",
         "sub_it": "⏱️ 30 secondi che ti salvano",
         "sub_en": "⏱️ 30 seconds that save you",
     },
     "guide": {
-        "bg": [(8, 12, 28), (15, 50, 90), (34, 197, 94)],
+        "bg": [(11, 17, 33), (22, 78, 55)],
         "accent": "#4ADE80",
-        "accent2": "#00F0FF",
-        "glow": (52, 211, 153),
-        "grid": (20, 45, 55),
         "emoji": "📚",
         "badge": "GUIDA GRATIS",
         "badge_en": "FREE GUIDE",
-        "hook_it": "🎯 CLICCA E\nIMPARA",
-        "hook_en": "🎯 TAP &\nLEARN",
+        "hook_it": "Clicca e\nimpara 🎯",
+        "hook_en": "Tap &\nlearn 🎯",
         "sub_it": "✨ The Little Satoshi News",
         "sub_en": "✨ @krown.82",
     },
     "regulation": {
-        "bg": [(20, 12, 50), (67, 56, 202), (129, 140, 248)],
-        "accent": "#A5B4FC",
-        "accent2": "#FDE047",
-        "glow": (165, 180, 252),
-        "grid": (35, 30, 70),
+        "bg": [(18, 14, 48), (45, 45, 110)],
+        "accent": "#93C5FD",
         "emoji": "⚖️",
         "badge": "REGULATION",
-        "hook_it": "⚖️ CRYPTO ALERT",
-        "hook_en": "⚖️ CRYPTO ALERT",
+        "hook_it": "Crypto alert ⚖️",
+        "hook_en": "Crypto alert ⚖️",
         "sub_it": "📜 SEC · MiCA · normative",
         "sub_en": "📜 SEC · MiCA · laws",
     },
     "elon": {
-        "bg": [(10, 15, 35), (30, 58, 95), (56, 189, 248)],
+        "bg": [(12, 18, 38), (25, 60, 95)],
         "accent": "#38BDF8",
-        "accent2": "#FBBF24",
-        "glow": (56, 189, 248),
-        "grid": (25, 45, 65),
         "emoji": "🔄",
         "badge": "ELON MUSK",
-        "hook_it": "🔄 VIRAL REPOST",
-        "hook_en": "🔄 VIRAL REPOST",
+        "hook_it": "Viral repost 🔄",
+        "hook_en": "Viral repost 🔄",
         "sub_it": "🗣️ Cosa dice Elon sul crypto",
         "sub_en": "🗣️ What Elon said about BTC",
     },
     "breaking": {
-        "bg": [(40, 6, 12), (185, 28, 28), (252, 165, 165)],
-        "accent": "#FCA5A5",
-        "accent2": "#FDE047",
-        "glow": (248, 113, 113),
-        "grid": (75, 20, 25),
+        "bg": [(40, 8, 14), (140, 28, 35)],
+        "accent": "#FB7185",
         "emoji": "🚨",
         "badge": "BREAKING",
-        "hook_it": "🚨 BTC BREAKING\nNEWS",
-        "hook_en": "🚨 BTC BREAKING\nNEWS",
+        "hook_it": "BTC breaking\nnews 🚨",
+        "hook_en": "BTC breaking\nnews 🚨",
         "sub_it": "📡 Aggiornamento in tempo reale",
         "sub_en": "📡 Real-time market update",
     },
 }
 
 CTA = {
-    "fb_post": "👉 CLICCA QUI",
-    "fb_story": "👉 CLICCA QUI · SCANSIONA QR ↓",
-    "ig_post": "👆 TAP HERE",
-    "ig_story": "👆 TAP HERE · SCAN QR ↓",
-    "x_post": "👉 TAP TO READ",
+    "fb_post": "👉 Leggi la guida",
+    "fb_story": "👉 Clicca qui · QR ↓",
+    "ig_post": "👆 Read the guide",
+    "ig_story": "👆 Tap here · QR ↓",
+    "x_post": "👉 Tap to read",
 }
 
 
@@ -223,6 +183,21 @@ def _is_emoji_char(ch: str) -> bool:
     return o > 0x238C or ch in "₿⟠"
 
 
+def _hex(c: str) -> tuple[int, int, int]:
+    c = c.lstrip("#")
+    return tuple(int(c[i : i + 2], 16) for i in (0, 2, 4))
+
+
+def _text_width(text: str, font, emoji_font) -> int:
+    tmp = ImageDraw.Draw(Image.new("RGB", (8, 8)))
+    w = 0
+    for ch in text:
+        f = emoji_font if _is_emoji_char(ch) else font
+        bbox = tmp.textbbox((0, 0), ch, font=f)
+        w += bbox[2] - bbox[0]
+    return w
+
+
 def draw_mixed_text(
     draw: ImageDraw.ImageDraw,
     xy: tuple[int, int],
@@ -242,36 +217,24 @@ def draw_mixed_text(
     return x, y
 
 
-def _hex(c: str) -> tuple[int, int, int]:
-    c = c.lstrip("#")
-    return tuple(int(c[i : i + 2], 16) for i in (0, 2, 4))
-
-
-def gradient3(
-    draw: ImageDraw.ImageDraw,
-    w: int,
-    h: int,
-    c1: tuple[int, int, int],
-    c2: tuple[int, int, int],
-    c3: tuple[int, int, int],
-) -> None:
-    mid = h // 2
+def gradient2(draw: ImageDraw.ImageDraw, w: int, h: int, c1: tuple[int, int, int], c2: tuple[int, int, int]) -> None:
     for y in range(h):
-        if y < mid:
-            t = y / max(mid - 1, 1)
-            color = tuple(int(c1[i] + (c2[i] - c1[i]) * t) for i in range(3))
-        else:
-            t = (y - mid) / max(h - mid - 1, 1)
-            color = tuple(int(c2[i] + (c3[i] - c2[i]) * t) for i in range(3))
+        t = y / max(h - 1, 1)
+        color = tuple(int(c1[i] + (c2[i] - c1[i]) * t) for i in range(3))
         draw.line([(0, y), (w, y)], fill=color)
 
 
-def draw_grid(draw: ImageDraw.ImageDraw, w: int, h: int, grid_rgb: tuple[int, int, int], step: int = 44) -> None:
-    gc = tuple(min(255, int(c * 1.35)) for c in grid_rgb)
-    for x in range(0, w, step):
-        draw.line([(x, 0), (x, h)], fill=gc, width=1)
-    for y in range(0, h, step):
-        draw.line([(0, y), (w, y)], fill=gc, width=1)
+def draw_accent_bar(draw: ImageDraw.ImageDraw, w: int, accent: str, height: int = 6) -> None:
+    draw.rectangle((0, 0, w, height), fill=_hex(accent))
+
+
+def draw_badge(draw: ImageDraw.ImageDraw, x: int, y: int, text: str, accent: str, font) -> None:
+    ef = load_emoji_font(getattr(font, "size", 28))
+    tw = _text_width(text, font, ef)
+    pad_x, pad_y = 28, 14
+    w, h = tw + pad_x * 2, getattr(font, "size", 28) + pad_y * 2
+    draw.rounded_rectangle((x, y, x + w, y + h), radius=20, fill=_hex(accent))
+    draw_mixed_text(draw, (x + pad_x, y + pad_y - 2), text, font, "#0F172A", emoji_font=ef)
 
 
 def draw_multiline(
@@ -280,13 +243,13 @@ def draw_multiline(
     text: str,
     font,
     fill: str,
-    line_gap: int = 8,
+    line_gap: int = 10,
 ) -> int:
     x, y = xy
     ef = load_emoji_font(getattr(font, "size", 48))
+    tmp = ImageDraw.Draw(Image.new("RGB", (8, 8)))
     for line in text.split("\n"):
         draw_mixed_text(draw, (x, y), line, font, fill, emoji_font=ef)
-        tmp = ImageDraw.Draw(Image.new("RGB", (4, 4)))
         lh = 0
         for ch in line:
             f = ef if _is_emoji_char(ch) else font
@@ -296,58 +259,40 @@ def draw_multiline(
     return y
 
 
-def draw_badge_pill(draw: ImageDraw.ImageDraw, x: int, y: int, text: str, accent: str, accent2: str, font) -> None:
-    ef = load_emoji_font(getattr(font, "size", 32))
-    tmp = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    tw, th = 0, 0
-    for ch in text:
-        f = ef if _is_emoji_char(ch) else font
-        bbox = tmp.textbbox((0, 0), ch, font=f)
-        tw += bbox[2] - bbox[0]
-        th = max(th, bbox[3] - bbox[1])
-    pad_x, pad_y = 36, 22
-    w, h = tw + pad_x * 2, th + pad_y * 2
-    draw.rounded_rectangle((x, y, x + w + 8, y + h + 8), radius=28, fill=_hex(accent2))
-    draw.rounded_rectangle((x + 4, y + 4, x + w + 4, y + h + 4), radius=24, fill=_hex(accent))
-    draw_mixed_text(draw, (x + pad_x, y + pad_y - 2), text, font, (15, 23, 42), emoji_font=ef)
-
-
 def draw_cta_button(
     draw: ImageDraw.ImageDraw,
     box: tuple[int, int, int, int],
     text: str,
     accent: str,
-    accent2: str,
     *,
-    font_size: int = 32,
+    font_size: int = 30,
+    outline: bool = False,
 ) -> None:
     x1, y1, x2, y2 = box
-    draw.rounded_rectangle((x1, y1, x2, y2), radius=28, fill=_hex(accent2))
-    draw.rounded_rectangle((x1 + 4, y1 + 4, x2 - 4, y2 - 4), radius=24, fill=_hex(accent))
+    text_color = accent if outline else "#0F172A"
+    if outline:
+        draw.rounded_rectangle((x1, y1, x2, y2), radius=22, outline=_hex(accent), width=3)
+    else:
+        draw.rounded_rectangle((x1, y1, x2, y2), radius=22, fill=_hex(accent))
     font = load_font(font_size, bold=True)
     ef = load_emoji_font(font_size)
-    tmp = ImageDraw.Draw(Image.new("RGB", (4, 4)))
-    tw, th = 0, 0
-    for ch in text:
-        f = ef if _is_emoji_char(ch) else font
-        bbox = tmp.textbbox((0, 0), ch, font=f)
-        tw += bbox[2] - bbox[0]
-        th = max(th, bbox[3] - bbox[1])
+    tw = _text_width(text, font, ef)
+    th = font_size + 4
     tx = x1 + (x2 - x1 - tw) // 2
-    ty = y1 + (y2 - y1 - th) // 2 - 2
-    draw_mixed_text(draw, (tx, ty), text, font, (15, 23, 42), emoji_font=ef)
+    ty = y1 + (y2 - y1 - th) // 2
+    if not outline:
+        draw.rounded_rectangle((x1, y1, x2, y2), radius=22, fill=_hex(accent))
+    draw_mixed_text(draw, (tx, ty), text, font, text_color, emoji_font=ef)
 
 
 def topic_cfg(name: str, *, lang: str = "it") -> dict:
     t = TOPICS[name]
     badge = t.get("badge_en", t["badge"]) if lang == "en" else t["badge"]
-    hook = t["hook_en"] if lang == "en" else t["hook_it"]
-    sub = t["sub_en"] if lang == "en" else t["sub_it"]
     return {
         **t,
         "badge_text": f"{t['emoji']} {badge}",
-        "hook": hook,
-        "sub": sub,
+        "hook": t["hook_en"] if lang == "en" else t["hook_it"],
+        "sub": t["sub_en"] if lang == "en" else t["sub_it"],
     }
 
 
@@ -362,45 +307,33 @@ def render_post(
     icon_box: tuple[int, int, int, int],
     hook_size: int,
     sub_size: int,
-    badge_size: int = 34,
+    badge_size: int = 28,
     brand_scale: float = 0.08,
 ) -> Image.Image:
     img = Image.new("RGB", (width, height))
     draw = ImageDraw.Draw(img)
-    gradient3(draw, width, height, cfg["bg"][0], cfg["bg"][1], cfg["bg"][2])
-    draw_grid(draw, width, height, cfg["grid"])
+    gradient2(draw, width, height, cfg["bg"][0], cfg["bg"][1])
+    draw_accent_bar(draw, width, cfg["accent"])
 
-    margin = int(width * 0.04)
+    m = int(width * 0.06)
+    draw_badge(draw, m, m + 16, cfg["badge_text"], cfg["accent"], load_font(badge_size, bold=True))
 
-    draw_badge_pill(
-        draw, margin, margin, cfg["badge_text"], cfg["accent"], cfg["accent2"], load_font(badge_size, bold=True)
-    )
+    card_y = m + 80
+    card_h = int(height * 0.52)
+    draw.rounded_rectangle((m, card_y, width - m, card_y + card_h), radius=24, fill=(15, 23, 42))
 
-    hook_y = margin + int(height * 0.18)
-    draw_multiline(draw, (margin, hook_y), cfg["hook"], load_font(hook_size, bold=True), "#FFFFFF", line_gap=4)
+    hook_y = card_y + int(card_h * 0.12)
+    draw_multiline(draw, (m + 32, hook_y), cfg["hook"], load_font(hook_size, bold=True), "#F8FAFC", line_gap=6)
 
-    sub_y = hook_y + int(height * 0.22)
-    draw_mixed_text(draw, (margin, sub_y), cfg["sub"], load_font(sub_size), "#E2E8F0")
+    sub_y = hook_y + int(card_h * 0.55)
+    draw_mixed_text(draw, (m + 32, sub_y), cfg["sub"], load_font(sub_size), "#94A3B8")
 
-    cta_h = int(height * 0.14)
-    cta_y = int(height * 0.72)
-    cta_w = int(width * 0.55)
-    draw_cta_button(
-        draw,
-        (margin, cta_y, margin + cta_w, cta_y + cta_h),
-        cta,
-        cfg["accent"],
-        cfg["accent2"],
-        font_size=max(22, int(height * 0.045)),
-    )
+    cta_h = int(height * 0.11)
+    cta_y = int(height * 0.78)
+    cta_w = int(width * 0.52)
+    draw_cta_button(draw, (m, cta_y, m + cta_w, cta_y + cta_h), cta, cfg["accent"], font_size=max(20, int(height * 0.04)))
 
-    draw_mixed_text(
-        draw,
-        (margin, height - margin - 28),
-        f"🌐 {footer}",
-        load_font(max(18, int(height * 0.028))),
-        "#94A3B8",
-    )
+    draw_mixed_text(draw, (m, height - m - 24), f"🌐 {footer}", load_font(max(16, int(height * 0.025))), "#64748B")
 
     return apply_branding(img, name, icon_box=icon_box, accent=cfg["accent"], brand_scale=brand_scale)
 
@@ -416,17 +349,20 @@ def render_story(
 ) -> Image.Image:
     img = Image.new("RGB", (width, height))
     draw = ImageDraw.Draw(img)
-    gradient3(draw, width, height, cfg["bg"][0], cfg["bg"][1], cfg["bg"][2])
-    draw_grid(draw, width, height, cfg["grid"])
+    gradient2(draw, width, height, cfg["bg"][0], cfg["bg"][1])
+    draw_accent_bar(draw, width, cfg["accent"], height=8)
 
-    draw_badge_pill(draw, 56, 90, cfg["badge_text"], cfg["accent"], cfg["accent2"], load_font(40, bold=True))
-    draw_multiline(draw, (56, 280), cfg["hook"], load_font(78, bold=True), "#FFFFFF", line_gap=6)
-    draw_mixed_text(draw, (56, 580), cfg["sub"], load_font(36), "#E2E8F0")
+    m = 56
+    draw_badge(draw, m, 72, cfg["badge_text"], cfg["accent"], load_font(32, bold=True))
 
-    draw.rounded_rectangle((56, 760, 1024, 880), radius=28, fill=(10, 15, 32), outline=_hex(cfg["accent"]), width=4)
-    draw_mixed_text(draw, (96, 808), "🌐 cryptoitaliafacile.com", load_font(38, bold=True), cfg["accent"])
+    draw.rounded_rectangle((m, 240, width - m, 720), radius=28, fill=(15, 23, 42))
+    draw_multiline(draw, (m + 36, 290), cfg["hook"], load_font(68, bold=True), "#F8FAFC", line_gap=8)
+    draw_mixed_text(draw, (m + 36, 580), cfg["sub"], load_font(34), "#94A3B8")
 
-    draw_cta_button(draw, (56, 1480, 900, 1600), cta, cfg["accent"], cfg["accent2"], font_size=36)
-    draw_mixed_text(draw, (56, 1760), footer, load_font(28), "#94A3B8")
+    draw.rounded_rectangle((m, 780, width - m, 900), radius=22, fill=(15, 23, 42), outline=_hex(cfg["accent"]), width=3)
+    draw_mixed_text(draw, (m + 32, 828), "🌐 cryptoitaliafacile.com", load_font(34, bold=True), cfg["accent"])
 
-    return apply_branding(img, name, icon_box=(700, 960, 980, 1220), accent=cfg["accent"], brand_scale=0.09)
+    draw_cta_button(draw, (m, 1500, width - m - 80, 1600), cta, cfg["accent"], font_size=34)
+    draw_mixed_text(draw, (m, 1780), footer, load_font(26), "#64748B")
+
+    return apply_branding(img, name, icon_box=(720, 940, 980, 1200), accent=cfg["accent"], brand_scale=0.09)

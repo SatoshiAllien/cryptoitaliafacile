@@ -84,7 +84,7 @@ function renderHeader() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </button>
           <div class="header-lang" id="header-lang">${renderLangSwitcher()}</div>
-          <a href="${base}chat/index.html" class="btn btn-satoshi btn-sm header-cta" title="${(SITE_CONFIG.satoshiAi || {}).title || 'Parla con Satoshi'}">${t('nav.satoshiAi')}</a>
+          <button type="button" class="btn btn-satoshi btn-sm header-cta" data-satoshi-open title="${(SITE_CONFIG.satoshiAi || {}).title || 'Parla con Satoshi'}">${t('nav.satoshiAi')}</button>
           <a href="${base}newsletter/index.html" class="btn btn-primary btn-sm header-cta">${t('nav.newsletter')}</a>
           <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -129,6 +129,9 @@ function renderHeader() {
                 </details>`;
             }
             const mcls = item.highlight ? 'mobile-nav-link mobile-nav-link--ai' : 'mobile-nav-link';
+            if (item.href === 'chat/index.html') {
+              return `<button type="button" class="${mcls}" data-satoshi-open>${navLabel(item.href)}</button>`;
+            }
             return `<a href="${base}${item.href}" class="${mcls}">${navLabel(item.href)}</a>`;
           }).join('')}
           <a href="${base}glossario/index.html" class="mobile-nav-link">${t('nav.glossario')}</a>

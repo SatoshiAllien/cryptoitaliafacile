@@ -117,8 +117,16 @@
         </div>
       </div>
       <button class="satoshi-launcher-btn" id="satoshi-open" aria-label="${escapeHtml(title)}">
-        <img src="${avatar}" alt="">
-        <span class="satoshi-launcher-label">${escapeHtml(title)}</span>
+        <span class="satoshi-launcher-pulse" aria-hidden="true"></span>
+        <span class="satoshi-launcher-pulse satoshi-launcher-pulse--2" aria-hidden="true"></span>
+        <img src="${avatar}" alt="Satoshi">
+        <span class="satoshi-launcher-label">
+          <span class="satoshi-launcher-title">${escapeHtml(title)}</span>
+          <span class="satoshi-launcher-sub">Chiedi qualsiasi cosa su crypto</span>
+        </span>
+        <span class="satoshi-launcher-icon" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </span>
       </button>
     `;
     document.body.appendChild(el);
@@ -156,6 +164,7 @@
     ).join('');
     el.innerHTML = `
       <div class="satoshi-welcome">
+        <div class="satoshi-welcome-icon" aria-hidden="true">₿</div>
         <p>${escapeHtml(c.tagline || 'Chiedi qualsiasi cosa su crypto, sicurezza e Web3')}</p>
         <div class="satoshi-suggestions">${suggestions}</div>
       </div>
@@ -318,13 +327,18 @@
 
     openBtn.addEventListener('click', () => {
       if (!panel) return;
-      panel.hidden = !panel.hidden;
+      const opening = panel.hidden;
+      panel.hidden = !opening;
+      openBtn.classList.toggle('satoshi-launcher-btn--hidden', !panel.hidden);
       if (!panel.hidden) {
         input?.focus();
         checkApiHealth().then(updateStatus);
       }
     });
-    closeBtn?.addEventListener('click', () => { if (panel) panel.hidden = true; });
+    closeBtn?.addEventListener('click', () => {
+      if (panel) panel.hidden = true;
+      openBtn?.classList.remove('satoshi-launcher-btn--hidden');
+    });
     newBtn?.addEventListener('click', () => {
       sessionId = null;
       renderWelcome('satoshi-messages');
@@ -363,10 +377,45 @@
     });
   }
 
+  function openSatoshiChat() {
+    if (document.body.dataset.page === 'chat') {
+      document.getElementById('chat-page-input')?.focus();
+      return;
+    }
+    if (!document.getElementById('satoshi-launcher')) renderLauncher();
+    const panel = document.getElementById('satoshi-panel');
+    const openBtn = document.getElementById('satoshi-open');
+    if (!panel) return;
+    panel.hidden = false;
+    openBtn?.classList.add('satoshi-launcher-btn--hidden');
+    document.getElementById('satoshi-input')?.focus();
+    checkApiHealth().then(updateStatus);
+  }
+
+  function bindOpenTriggers() {
+    document.querySelectorAll('[data-satoshi-open]').forEach(el => {
+      if (el.dataset.satoshiBound) return;
+      el.dataset.satoshiBound = '1';
+      const handler = e => {
+        e.preventDefault();
+        openSatoshiChat();
+      };
+      el.addEventListener('click', handler);
+      if (el.tagName !== 'BUTTON') {
+        el.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openSatoshiChat(); }
+        });
+      }
+    });
+  }
+
+  window.openSatoshiChat = openSatoshiChat;
+
   window.initSatoshiChat = function () {
     injectStyles();
     renderLauncher();
     initChatPage();
+    bindOpenTriggers();
     setInterval(() => {
       const panel = document.getElementById('satoshi-panel');
       if (panel && !panel.hidden) checkApiHealth().then(updateStatus);

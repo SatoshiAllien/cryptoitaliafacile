@@ -19,6 +19,12 @@ IG_STORIES = ROOT / "assets" / "img" / "instagram" / "stories"
 STORY_CACHE = ROOT / "assets" / "video" / "stories" / "cache"
 JPEG_QUALITY = 88
 
+STORY_VARIANTS = (
+    ("variant-1-hero", "abstract"),
+    ("variant-2-abstract", "thematic"),
+    ("variant-3-overlay", "minimal"),
+)
+
 
 def clear_story_cache() -> None:
     """Invalida video story generati con immagini precedenti."""
@@ -59,28 +65,52 @@ def integrate(*, refresh_cache: bool = True) -> dict[str, int]:
         slug = article["slug"]
         slug_dir = PREVIEWS / slug
         post_src = slug_dir / "variant-1-hero_square_1080x1080.png"
-        story_src = slug_dir / "variant-3-overlay_stories_1080x1920.png"
 
-        if not post_src.exists() or not story_src.exists():
+        if not post_src.exists():
             stats["missing"] += 1
-            print(f"SKIP {slug} — anteprime mancanti")
+            print(f"SKIP {slug} — anteprima post mancante")
             continue
 
-        fname = f"{slug}.jpg"
-        to_fb_post(post_src, FB_POSTS / fname)
-        to_jpg(post_src, IG_POSTS / fname)
-        to_jpg(story_src, FB_STORIES / fname)
-        to_jpg(story_src, IG_STORIES / fname)
+        story_ok = 0
+        for variant_key, suffix in STORY_VARIANTS:
+            story_src = slug_dir / f"{variant_key}_stories_1080x1920.png"
+            if not story_src.exists():
+                continue
+            story_fname = f"{slug}-{suffix}.jpg"
+            to_jpg(story_src, FB_STORIES / story_fname)
+            to_jpg(story_src, IG_STORIES / story_fname)
+            story_ok += 1
 
-        article["fbImage"] = fname
-        article["igImage"] = fname
-        article["fbStoryImage"] = fname
-        article["igStoryImage"] = fname
+        if story_ok == 0:
+            stats["missing"] += 1
+            print(f"SKIP {slug} — story mancanti")
+            continue
+
+        post_fname = f"{slug}.jpg"
+        to_fb_post(post_src, FB_POSTS / post_fname)
+        to_jpg(post_src, IG_POSTS / post_fname)
+
+        # Default story = abstract; rotazione per slot via suffisso
+        default_story = f"{slug}-abstract.jpg"
+        to_jpg(
+            slug_dir / "variant-1-hero_stories_1080x1920.png",
+            FB_STORIES / post_fname,
+        )
+        to_jpg(
+            slug_dir / "variant-1-hero_stories_1080x1920.png",
+            IG_STORIES / post_fname,
+        )
+
+        article["fbImage"] = post_fname
+        article["igImage"] = post_fname
+        article["fbStoryImage"] = default_story
+        article["igStoryImage"] = default_story
         article["previewVariant"] = "variant-1-hero"
-        article["storyVariant"] = "variant-3-overlay"
+        article["storyVariant"] = "variant-1-hero"
+        article["storyVariants"] = [v[0] for v in STORY_VARIANTS]
         stats["ok"] += 1
         stats["updated"] += 1
-        print(f"OK {slug}")
+        print(f"OK {slug} ({story_ok} story)")
 
     ARTICLES_PATH.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n",
@@ -91,4 +121,7 @@ def integrate(*, refresh_cache: bool = True) -> dict[str, int]:
 
 if __name__ == "__main__":
     result = integrate()
-    print(f"\nIntegrati: {result['ok']} | Mancanti: {result['missing']} | Aggiornati in articles.json: {result['updated']}")
+    print(
+        f"\nIntegrati: {result['ok']} | Mancanti: {result['missing']} "
+        f"| Aggiornati in articles.json: {result['updated']}"
+    )

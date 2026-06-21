@@ -25,7 +25,7 @@ from pathlib import Path
 from chill_cyber_playlist import track_for_slot
 from instagram_auth import graph_url, is_instagram_login_token, resolve_credentials
 from story_publish import publish_instagram_story
-from story_video import STORY_HOME_URL, prepare_story_video
+from story_video import prepare_story_video, story_image_file
 
 try:
     from zoneinfo import ZoneInfo
@@ -147,16 +147,8 @@ def article_url(slug: str) -> str:
     return f"{SITE_URL}articolo.html?slug={urllib.parse.quote(slug)}"
 
 
-def instagram_story_image_file(article: dict) -> str:
-    if article.get("igStoryImage"):
-        return article["igStoryImage"]
-    if article.get("igImage"):
-        return article["igImage"]
-    if article.get("fbStoryImage"):
-        return article["fbStoryImage"]
-    if article.get("fbImage"):
-        return article["fbImage"]
-    return instagram_image_file(article)
+def instagram_story_image_file(article: dict, slot: int = 0) -> str:
+    return story_image_file(article, slot)
 
 
 def instagram_image_file(article: dict) -> str:
@@ -191,8 +183,8 @@ def instagram_image_url(article: dict) -> str:
     return IMAGE_BASE + instagram_image_file(article)
 
 
-def instagram_story_image_url(article: dict) -> str:
-    return STORY_IMAGE_BASE + instagram_story_image_file(article)
+def instagram_story_image_url(article: dict, slot: int = 0) -> str:
+    return STORY_IMAGE_BASE + instagram_story_image_file(article, slot)
 
 
 def build_caption(article: dict) -> str:
@@ -516,7 +508,7 @@ def main() -> None:
     for i, article in enumerate(selected):
         caption = build_caption(article)
         image_url = instagram_image_url(article)
-        story_url = instagram_story_image_url(article)
+        story_url = instagram_story_image_url(article, args.slot)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")
         print(f"STORY: {story_url}")
@@ -533,14 +525,14 @@ def main() -> None:
 
         story_id = ""
         story_track = ""
-        story_link = STORY_HOME_URL
+        story_link = article_url(article["slug"])
         if not args.no_story:
             try:
                 story_video_path = None
                 if not args.dry_run:
                     story_video_path, track = prepare_story_video(
                         "instagram",
-                        instagram_story_image_file(article),
+                        instagram_story_image_file(article, args.slot),
                         args.slot,
                         day_idx,
                         per_day,

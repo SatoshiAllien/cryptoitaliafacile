@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def main() -> int:
     integrate = ROOT / "scripts" / "integrate-preview-images.py"
-    print("=== Aggiornamento immagini story (variant-3-overlay 1080x1920) ===\n")
+    print("=== Aggiornamento immagini story professionali (3 varianti 1080x1920) ===\n")
     rc = subprocess.call([sys.executable, str(integrate)])
     if rc != 0:
         return rc

@@ -29,7 +29,7 @@ from pathlib import Path
 
 from chill_cyber_playlist import track_for_slot
 from story_publish import publish_facebook_story
-from story_video import STORY_HOME_URL, prepare_story_video
+from story_video import prepare_story_video, story_image_file
 
 try:
     from zoneinfo import ZoneInfo
@@ -149,12 +149,8 @@ def article_url(slug: str) -> str:
     return f"{SITE_URL}articolo.html?slug={urllib.parse.quote(slug)}"
 
 
-def facebook_story_image_file(article: dict) -> str:
-    if article.get("fbStoryImage"):
-        return article["fbStoryImage"]
-    if article.get("fbImage"):
-        return article["fbImage"]
-    return facebook_image_file(article)
+def facebook_story_image_file(article: dict, slot: int = 0) -> str:
+    return story_image_file(article, slot)
 
 
 def facebook_image_file(article: dict) -> str:
@@ -190,8 +186,8 @@ def facebook_image_url(article: dict) -> str:
     return IMAGE_BASE + facebook_image_file(article)
 
 
-def facebook_story_image_url(article: dict) -> str:
-    return STORY_IMAGE_BASE + facebook_story_image_file(article)
+def facebook_story_image_url(article: dict, slot: int = 0) -> str:
+    return STORY_IMAGE_BASE + facebook_story_image_file(article, slot)
 
 
 def build_post(article: dict) -> str:
@@ -519,7 +515,7 @@ def main() -> None:
         message = build_post(article)
         link = article_url(article["slug"])
         image_url = facebook_image_url(article)
-        story_url = facebook_story_image_url(article)
+        story_url = facebook_story_image_url(article, args.slot)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")
         print(f"STORY: {story_url}")
@@ -538,14 +534,14 @@ def main() -> None:
 
         story_id = ""
         story_track = ""
-        story_link = STORY_HOME_URL
+        story_link = article_url(article["slug"])
         if not args.no_story:
             try:
                 story_video_path = None
                 if not args.dry_run:
                     story_video_path, track = prepare_story_video(
                         "facebook",
-                        facebook_story_image_file(article),
+                        facebook_story_image_file(article, args.slot),
                         args.slot,
                         day_idx,
                         per_day,

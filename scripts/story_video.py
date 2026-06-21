@@ -23,9 +23,9 @@ CACHE_DIR = ROOT / "assets" / "video" / "stories" / "cache"
 FB_STORY_IMG = ROOT / "assets" / "img" / "facebook" / "stories"
 IG_STORY_IMG = ROOT / "assets" / "img" / "instagram" / "stories"
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
-STORY_HOME_URL = "https://satoshiallien.github.io/cryptoitaliafacile/index.html"
 SITE_LABEL = "cryptoitaliafacile.com"
 STORY_DURATION = 15
+STORY_VARIANT_SUFFIXES = ("abstract", "thematic", "minimal")
 
 THEME = {
     "instagram": {
@@ -69,6 +69,17 @@ def _font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.I
 def _hex_to_rgb(color: str) -> tuple[int, int, int]:
     color = color.lstrip("#")
     return tuple(int(color[i : i + 2], 16) for i in (0, 2, 4))
+
+
+def story_image_file(article: dict, slot: int = 0) -> str:
+    """Seleziona variante story per slot giornaliero (0–19 → 3 varianti)."""
+    slug = article["slug"]
+    suffix = STORY_VARIANT_SUFFIXES[slot % len(STORY_VARIANT_SUFFIXES)]
+    fname = f"{slug}-{suffix}.jpg"
+    for img_dir in (FB_STORY_IMG, IG_STORY_IMG):
+        if (img_dir / fname).exists():
+            return fname
+    return article.get("fbStoryImage") or article.get("igStoryImage") or f"{slug}.jpg"
 
 
 def short_link_label(link_url: str) -> str:
@@ -174,7 +185,7 @@ def overlay_link_panel(
 
 
 def overlay_music_badge(
-    image_path: Path,
+    image_source: Path | Image.Image,
     *,
     playlist_name: str,
     track_title: str,
@@ -188,7 +199,10 @@ def overlay_music_badge(
     accent_rgb = _hex_to_rgb(accent)
     accent2_rgb = _hex_to_rgb(accent2)
 
-    img = Image.open(image_path).convert("RGBA")
+    if isinstance(image_source, Path):
+        img = Image.open(image_source).convert("RGBA")
+    else:
+        img = image_source.convert("RGBA")
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(layer)
 
@@ -203,7 +217,8 @@ def overlay_music_badge(
     draw.text((720, 1505), "🎵", fill=accent, font=_font(36, bold=True))
 
     out = Image.alpha_composite(img, layer).convert("RGB")
-    tmp = Path(tempfile.gettempdir()) / f"story-badge-{image_path.stem}.jpg"
+    stem = image_source.stem if isinstance(image_source, Path) else "story"
+    tmp = Path(tempfile.gettempdir()) / f"story-badge-{stem}.jpg"
     out.save(tmp, "JPEG", quality=94)
     return tmp
 
@@ -225,11 +240,8 @@ def build_story_video(
     if not audio_path.exists():
         raise FileNotFoundError(f"Traccia audio non trovata: {audio_path}")
 
-    base = image_path
-    link_tmp: Path | None = None
-    if link_url:
-        link_tmp = overlay_link_panel(base, link_url=link_url, platform=platform)
-        base = link_tmp
+    # Link articolo: solo via API (FB/IG), mai visibile nel video
+    base = _enhance_base(Image.open(image_path))
 
     framed = overlay_music_badge(
         base,
@@ -239,8 +251,6 @@ def build_story_video(
         viral_tag=viral_tag,
         platform=platform,
     )
-    if link_tmp:
-        link_tmp.unlink(missing_ok=True)
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     if out_path is None:
@@ -299,7 +309,7 @@ def prepare_story_video(
         track_artist=track["artist"],
         viral_tag=track.get("viral_tag", "#TrendingNow"),
         out_path=out_path,
-        link_url=link_url or STORY_HOME_URL,
+        link_url=link_url or SITE_URL,
         platform=platform,
     )
     return video, track

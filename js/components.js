@@ -257,6 +257,7 @@ function renderFooter() {
               <a href="${base}fondatore/index.html">${t('footer.founder')}</a>
               <a href="${base}tech-lab/index.html">${t('footer.techLab')}</a>
               <a href="${base}ospitalita/index.html">${t('footer.hospitality')}</a>
+              <a href="${base}fitness/index.html">${t('footer.fitness')}</a>
               <a href="${base}chi-siamo/index.html">${t('footer.about')}</a>
               <a href="${base}contatti/index.html">${t('footer.contacts')}</a>
               <a href="${base}privacy.html">Privacy</a>

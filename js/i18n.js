@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Notizie crypto e guide spiegate in modo facile e semplice. 100% educativo, zero hype.',
-      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', techLab: 'Tech Lab', hospitality: 'Ospitalità', contacts: 'Contatti',
+      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', techLab: 'Tech Lab', hospitality: 'Ospitalità', fitness: 'Health & Fitness', contacts: 'Contatti',
       disclaimer: 'I contenuti di The Little Satoshi News sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.'
     },
     home: {
@@ -138,6 +138,22 @@ const TRANSLATIONS = {
       stat2: 'continenti',
       stat3: 'barman',
       cta: 'Leggi la storia completa →'
+    },
+    fitness: {
+      label: '15 Anni di Passione per lo Sport',
+      title: 'Health & Fitness',
+      subtitle: 'Allenamento, nutrizione e benessere — costanza, disciplina e approccio evidence-based.',
+      homeHeadline: 'Il Mio Percorso nel Fitness',
+      homeDesc: 'Oltre 15 anni tra bodybuilding, corsa, bici da corsa e sport outdoor. Approccio naturale, nutrizione sportiva e divulgazione basata su evidenze — equilibrio, costanza e allenamento intelligente.',
+      stat1: 'anni',
+      stat2: 'sport',
+      stat3: 'guide',
+      stat4: 'naturale',
+      pill1: 'Bodybuilding',
+      pill2: 'Nutrizione',
+      pill3: 'Corsa & Bici',
+      pill4: 'Outdoor',
+      cta: 'Scopri Health & Fitness →'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -363,7 +379,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Practical guides and simple explanations about crypto. 100% educational, zero hype.',
-      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', techLab: 'Tech Lab', hospitality: 'Hospitality', contacts: 'Contact',
+      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', techLab: 'Tech Lab', hospitality: 'Hospitality', fitness: 'Health & Fitness', contacts: 'Contact',
       disclaimer: 'The Little Satoshi News content is for educational purposes only and does not constitute financial advice. Investing in crypto involves risks.'
     },
     home: {
@@ -470,6 +486,22 @@ const TRANSLATIONS = {
       stat2: 'continents',
       stat3: 'barman',
       cta: 'Read the full story →'
+    },
+    fitness: {
+      label: '15 Years of Passion for Sport',
+      title: 'Health & Fitness',
+      subtitle: 'Training, nutrition and wellness — consistency, discipline and an evidence-based approach.',
+      homeHeadline: 'My Fitness Journey',
+      homeDesc: 'Over 15 years across bodybuilding, running, road cycling and outdoor sports. Natural approach, sports nutrition and evidence-based sharing — balance, consistency and smart training.',
+      stat1: 'years',
+      stat2: 'sports',
+      stat3: 'guides',
+      stat4: 'natural',
+      pill1: 'Bodybuilding',
+      pill2: 'Nutrition',
+      pill3: 'Run & Bike',
+      pill4: 'Outdoor',
+      cta: 'Explore Health & Fitness →'
     },
     newsHub: {
       filterAll: 'All',

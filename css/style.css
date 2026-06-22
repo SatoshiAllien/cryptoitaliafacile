@@ -3941,3 +3941,405 @@ h1, h2, h3, h4 { color: var(--text); }
   .hospitality-teaser-stats { grid-template-columns: 1fr; }
   .hospitality-cta-bar .btn { width: 100%; }
 }
+
+/* ── Health & Fitness ───────────────────────────────────── */
+.fitness-section,
+.fitness-page {
+  --fitness-lime: #B8FF2E;
+  --fitness-lime-dim: rgba(184, 255, 46, 0.12);
+  --fitness-lime-glow: rgba(184, 255, 46, 0.28);
+  --fitness-steel: #8A9199;
+  --fitness-steel-dim: rgba(138, 145, 153, 0.15);
+  --fitness-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 20px rgba(184, 255, 46, 0.06);
+}
+
+.fitness-section { padding: 4rem 0; position: relative; z-index: 2; }
+
+.fitness-home-header { text-align: center; margin-bottom: 2rem; }
+.fitness-home-header h2 { font-size: clamp(1.5rem, 4vw, 2rem); color: var(--text); margin: 0.5rem 0; }
+.fitness-home-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+
+.fitness-section .section-label,
+.fitness-label {
+  color: var(--fitness-lime);
+  border-color: var(--fitness-lime-glow);
+  background: var(--fitness-lime-dim);
+}
+
+.fitness-teaser {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(184, 255, 46, 0.05) 100%);
+  border: 1px solid rgba(184, 255, 46, 0.14);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--fitness-shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.fitness-teaser:hover {
+  box-shadow: 0 0 24px rgba(184, 255, 46, 0.12), 0 12px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.fitness-teaser-img { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(184, 255, 46, 0.12); }
+.fitness-teaser-img img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+.fitness-teaser-content h3 { font-size: 1.2rem; color: var(--text); margin-bottom: 0.75rem; }
+.fitness-teaser-content p { color: var(--text-muted); line-height: 1.75; margin-bottom: 1.25rem; }
+
+.fitness-teaser-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.fitness-teaser-stat {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(138, 145, 153, 0.2);
+  border-radius: var(--radius);
+}
+.fitness-teaser-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--fitness-lime);
+}
+.fitness-teaser-stat span { font-size: 0.7rem; color: var(--fitness-steel); }
+
+.fitness-teaser-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.fitness-teaser-pill {
+  padding: 0.35rem 0.75rem;
+  background: var(--fitness-lime-dim);
+  border: 1px solid rgba(184, 255, 46, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--fitness-lime);
+}
+
+/* Fitness page */
+.fitness-page { padding-bottom: 4rem; }
+
+.fitness-hero { position: relative; min-height: 340px; overflow: hidden; margin-bottom: 2.5rem; }
+.fitness-hero-img { width: 100%; min-height: 340px; object-fit: cover; object-position: center; }
+.fitness-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(12, 10, 7, 0.94) 100%);
+  display: flex; align-items: flex-end; padding: 2.5rem 0 3rem;
+}
+.fitness-hero-overlay h1 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: #fff;
+  margin: 0.5rem 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+.fitness-hero-sub { font-size: 1.1rem; color: var(--fitness-steel); max-width: 620px; line-height: 1.6; margin: 0; }
+.fitness-breadcrumb { margin-bottom: 1rem; }
+
+.fitness-body { max-width: 880px; }
+.fitness-lead {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.fitness-lead strong { color: var(--fitness-lime); }
+
+.fitness-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+.fitness-stat {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: var(--surface);
+  border: 1px solid rgba(138, 145, 153, 0.2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.fitness-stat:hover {
+  border-color: var(--fitness-lime-glow);
+  box-shadow: var(--fitness-shadow);
+}
+.fitness-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--fitness-lime);
+  margin-bottom: 0.2rem;
+}
+.fitness-stat span { font-size: 0.72rem; color: var(--fitness-steel); }
+
+.fitness-block {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid rgba(138, 145, 153, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.fitness-block:hover {
+  border-color: var(--fitness-lime-glow);
+  box-shadow: var(--fitness-shadow);
+}
+.fitness-block h2 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.fitness-block--split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.fitness-prose p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem; }
+.fitness-prose p:last-child { margin-bottom: 0; }
+.fitness-prose strong { color: var(--text); }
+
+.fitness-pillars {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  list-style: none; margin: 1.5rem 0 0; padding: 0;
+}
+.fitness-pillars li {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--fitness-lime-dim);
+  border: 1px solid rgba(184, 255, 46, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem; font-weight: 600; color: var(--text);
+}
+
+.fitness-side-img {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(184, 255, 46, 0.12);
+}
+.fitness-side-img img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+.fitness-focus-list {
+  list-style: none;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+}
+.fitness-focus-list li {
+  position: relative;
+  padding: 0.65rem 0 0.65rem 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(138, 145, 153, 0.12);
+}
+.fitness-focus-list li:last-child { border-bottom: none; }
+.fitness-focus-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 1rem;
+  width: 6px; height: 6px;
+  background: var(--fitness-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--fitness-lime-glow);
+}
+.fitness-focus-list strong { color: var(--text); }
+
+.fitness-section-title {
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+.fitness-section-lead {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.fitness-sports { margin: 3rem 0; }
+.fitness-sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.fitness-sport-card {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid rgba(138, 145, 153, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  display: flex; flex-direction: column;
+}
+.fitness-sport-card:hover {
+  border-color: var(--fitness-lime-glow);
+  box-shadow: var(--fitness-shadow);
+  transform: translateY(-4px);
+}
+.fitness-sport-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.75rem; height: 2.75rem; font-size: 1.35rem;
+  background: var(--fitness-lime-dim);
+  border-radius: var(--radius);
+  margin-bottom: 0.875rem;
+}
+.fitness-sport-card h3 { font-size: 1rem; color: var(--text); margin-bottom: 0.5rem; }
+.fitness-sport-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; margin: 0 0 0.75rem; flex: 1; }
+.fitness-sport-benefit {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fitness-lime);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+.fitness-sport-motivation {
+  display: block;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--fitness-steel);
+  line-height: 1.5;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(138, 145, 153, 0.15);
+}
+
+.fitness-articles { margin: 3rem 0; }
+.fitness-article-nav {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.fitness-article-nav a {
+  padding: 0.4rem 0.9rem;
+  background: var(--fitness-steel-dim);
+  border: 1px solid rgba(138, 145, 153, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.fitness-article-nav a:hover {
+  background: var(--fitness-lime-dim);
+  border-color: var(--fitness-lime-glow);
+  color: var(--fitness-lime);
+}
+
+.fitness-article-card {
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid rgba(138, 145, 153, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.fitness-article-card:hover {
+  border-color: var(--fitness-lime-glow);
+  box-shadow: var(--fitness-shadow);
+}
+.fitness-article-card h3 {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+.fitness-article-tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--fitness-lime-dim);
+  border: 1px solid rgba(184, 255, 46, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.68rem; font-weight: 700;
+  color: var(--fitness-lime);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+
+.fitness-portfolio { margin: 3rem 0; }
+.fitness-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.fitness-portfolio-card {
+  padding: 1.5rem;
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(184, 255, 46, 0.04) 100%);
+  border: 1px solid rgba(138, 145, 153, 0.18);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+}
+.fitness-portfolio-card:hover {
+  border-color: var(--fitness-lime-glow);
+  box-shadow: var(--fitness-shadow);
+  transform: translateY(-3px);
+}
+.fitness-portfolio-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.5rem; height: 2.5rem; font-size: 1.2rem;
+  background: var(--fitness-lime-dim);
+  border-radius: var(--radius);
+  margin-bottom: 0.875rem;
+}
+.fitness-portfolio-card h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.75rem; }
+.fitness-portfolio-card ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.fitness-portfolio-card li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(138, 145, 153, 0.1);
+}
+.fitness-portfolio-card li:last-child { border-bottom: none; }
+.fitness-portfolio-card strong { color: var(--fitness-lime); }
+
+.fitness-quote {
+  margin: 2.5rem 0;
+  padding: 2rem 2rem 2rem 2.5rem;
+  background: var(--surface);
+  border-left: 4px solid var(--fitness-lime);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-style: italic;
+  box-shadow: var(--shadow);
+}
+.fitness-quote p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin: 0 0 1rem; }
+.fitness-quote cite { font-style: normal; font-size: 0.875rem; font-weight: 600; color: var(--fitness-lime); }
+
+.fitness-cta-bar {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+  margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(138, 145, 153, 0.2);
+}
+
+@media (min-width: 768px) {
+  .fitness-teaser { grid-template-columns: 1.1fr 1fr; align-items: center; padding: 2.5rem; }
+  .fitness-block--split { grid-template-columns: 1fr 1.1fr; }
+  .fitness-hero { min-height: 400px; }
+}
+
+@media (max-width: 600px) {
+  .fitness-stats,
+  .fitness-teaser-stats { grid-template-columns: repeat(2, 1fr); }
+  .fitness-cta-bar .btn { width: 100%; }
+  .fitness-block { padding: 1.5rem; }
+  .fitness-article-card { padding: 1.5rem; }
+}

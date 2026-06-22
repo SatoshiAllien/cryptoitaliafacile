@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260622-hospitality',
+  assetVersion: '20260622-fitness',
   email: 'info@cryptofacile.com',
 
   founder: {
@@ -48,6 +48,15 @@ const SITE_CONFIG = {
     cocktailImage: 'assets/img/hospitality-cocktail.jpg',
     hotelImage: 'assets/img/hospitality-hotel.jpg',
     subtitle: '10+ anni tra hotel, bar e turismo internazionale — UK, Sudafrica e Italia.'
+  },
+
+  fitness: {
+    title: 'Health & Fitness',
+    label: '15 Anni di Passione per lo Sport',
+    href: 'fitness/index.html',
+    heroImage: 'assets/img/fitness-hero.jpg',
+    nutritionImage: 'assets/img/fitness-nutrition.jpg',
+    subtitle: 'Allenamento, nutrizione e benessere — costanza, disciplina e approccio evidence-based.'
   },
 
   teacher: {

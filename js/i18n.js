@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Notizie crypto e guide spiegate in modo facile e semplice. 100% educativo, zero hype.',
-      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', contacts: 'Contatti',
+      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', techLab: 'Tech Lab', contacts: 'Contatti',
       disclaimer: 'I contenuti di The Little Satoshi News sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.'
     },
     home: {
@@ -115,6 +115,18 @@ const TRANSLATIONS = {
       ctaContact: 'Contatta il Fondatore',
       ctaLinkedin: 'Segui su LinkedIn',
       ctaConsult: 'Richiedi una consulenza'
+    },
+    techLab: {
+      label: 'Il Mio Spazio Tecnologico',
+      title: 'Tech Lab Personale',
+      subtitle: 'Sperimentazione, hardware custom e AI locali — competenze reali oltre il mondo crypto.',
+      homeHeadline: 'Hobby Tecnologici & Progetti Personali',
+      homeDesc: 'Build PC avanzati, ambienti multi‑OS, modelli AI in locale con Ollama e GPU NVIDIA, automazioni PowerShell e scripting Linux. Un laboratorio dove passione tecnica e metodo professionale si incontrano.',
+      pill1: 'Build PC',
+      pill2: 'AI Locale',
+      pill3: 'Multi‑OS',
+      pill4: 'Scripting',
+      cta: 'Esplora il Tech Lab →'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -340,7 +352,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Practical guides and simple explanations about crypto. 100% educational, zero hype.',
-      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', contacts: 'Contact',
+      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', techLab: 'Tech Lab', contacts: 'Contact',
       disclaimer: 'The Little Satoshi News content is for educational purposes only and does not constitute financial advice. Investing in crypto involves risks.'
     },
     home: {
@@ -424,6 +436,18 @@ const TRANSLATIONS = {
       ctaContact: 'Contact the Founder',
       ctaLinkedin: 'Follow on LinkedIn',
       ctaConsult: 'Request a consultation'
+    },
+    techLab: {
+      label: 'My Technology Space',
+      title: 'Personal Tech Lab',
+      subtitle: 'Experimentation, custom hardware and local AI — real skills beyond the crypto world.',
+      homeHeadline: 'Tech Hobbies & Personal Projects',
+      homeDesc: 'Advanced PC builds, multi‑OS environments, local AI models with Ollama and NVIDIA GPU, PowerShell automation and Linux scripting. A lab where technical passion meets professional method.',
+      pill1: 'PC Builds',
+      pill2: 'Local AI',
+      pill3: 'Multi‑OS',
+      pill4: 'Scripting',
+      cta: 'Explore the Tech Lab →'
     },
     newsHub: {
       filterAll: 'All',

@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260622-fitness-coach',
+  assetVersion: '20260622-main-logo-fix',
   email: 'info@cryptofacile.com',
 
   founder: {
@@ -19,6 +19,7 @@ const SITE_CONFIG = {
     role: 'Fondatore di CryptoItaliaFacile · Fraud & Risk Analyst · Blockchain Researcher · AI Specialist',
     photo: 'assets/img/founder-stefano-ai.jpg',
     photoOriginal: 'assets/img/founder-stefano.jpg',
+    logo: 'assets/img/brand-main-logo.png',
     href: 'fondatore/index.html',
     email: 'krown82@outlook.com',
     portfolio: 'https://satoshiallien.github.io/Stefano/',

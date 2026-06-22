@@ -1033,11 +1033,12 @@ button.mobile-nav-card {
   display: block;
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
-  object-position: center 15%;
+  object-fit: contain;
+  object-position: center center;
+  padding: 1rem;
   border-radius: var(--radius-lg);
   border: 4px solid var(--white);
-  background: var(--white);
+  background: #0c0a07;
   box-shadow:
     0 12px 40px rgba(0,200,150,0.2),
     0 0 0 3px var(--primary);
@@ -2975,9 +2976,11 @@ h1, h2, h3, h4 { color: var(--text); }
 .founder-photo {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center top;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center center;
+  padding: 1.25rem;
+  background: #0c0a07;
   border-radius: var(--radius-lg);
   border: 2px solid var(--border-glow);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35), var(--glow-cyan);

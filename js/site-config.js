@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260622-techlab',
+  assetVersion: '20260622-hospitality',
   email: 'info@cryptofacile.com',
 
   founder: {
@@ -38,6 +38,16 @@ const SITE_CONFIG = {
     heroImage: 'assets/img/tech-lab-hero.jpg',
     aiImage: 'assets/img/tech-lab-ai.jpg',
     subtitle: 'Sperimentazione, hardware custom e AI locali — competenze reali oltre il mondo crypto.'
+  },
+
+  hospitality: {
+    title: 'Dall\'Estero alla Mixology',
+    label: 'Esperienze Globali & Passione per l\'Arte del Servizio',
+    href: 'ospitalita/index.html',
+    heroImage: 'assets/img/hospitality-bar.jpg',
+    cocktailImage: 'assets/img/hospitality-cocktail.jpg',
+    hotelImage: 'assets/img/hospitality-hotel.jpg',
+    subtitle: '10+ anni tra hotel, bar e turismo internazionale — UK, Sudafrica e Italia.'
   },
 
   teacher: {

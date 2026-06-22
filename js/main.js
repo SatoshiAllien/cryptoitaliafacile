@@ -148,6 +148,16 @@ function initFadeIn() {
       el.classList.add('visible');
     }
   });
+
+  document.querySelectorAll('.hospitality-timeline-item:not([data-timeline-watched])').forEach((el, i) => {
+    el.dataset.timelineWatched = '1';
+    el.style.transitionDelay = `${i * 0.12}s`;
+    fadeObserver.observe(el);
+    const rect = el.getBoundingClientRect();
+    if (rect.height > 0 && rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    }
+  });
 }
 
 function initNewsletter() {

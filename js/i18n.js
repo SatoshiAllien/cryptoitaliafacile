@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Notizie crypto e guide spiegate in modo facile e semplice. 100% educativo, zero hype.',
-      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', techLab: 'Tech Lab', contacts: 'Contatti',
+      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', techLab: 'Tech Lab', hospitality: 'Ospitalità', contacts: 'Contatti',
       disclaimer: 'I contenuti di The Little Satoshi News sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.'
     },
     home: {
@@ -127,6 +127,17 @@ const TRANSLATIONS = {
       pill3: 'Multi‑OS',
       pill4: 'Scripting',
       cta: 'Esplora il Tech Lab →'
+    },
+    hospitality: {
+      label: 'Esperienze Globali & Passione per l\'Arte del Servizio',
+      title: 'Dall\'Estero alla Mixology',
+      subtitle: '10+ anni tra hotel, bar e turismo internazionale — UK, Sudafrica e Italia.',
+      homeHeadline: 'La Mia Storia nel Mondo dell\'Ospitalità',
+      homeDesc: 'Da commis de rang in Sicilia a bartender al Royal Shakespeare Company in UK, passando per resort 5 stelle e Sudafrica. Formazione AIBES, mixology, sommelier e HACCP — un percorso che ha forgiato disciplina, calma e cura del dettaglio.',
+      stat1: 'anni',
+      stat2: 'continenti',
+      stat3: 'barman',
+      cta: 'Leggi la storia completa →'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -352,7 +363,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Practical guides and simple explanations about crypto. 100% educational, zero hype.',
-      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', techLab: 'Tech Lab', contacts: 'Contact',
+      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', techLab: 'Tech Lab', hospitality: 'Hospitality', contacts: 'Contact',
       disclaimer: 'The Little Satoshi News content is for educational purposes only and does not constitute financial advice. Investing in crypto involves risks.'
     },
     home: {
@@ -448,6 +459,17 @@ const TRANSLATIONS = {
       pill3: 'Multi‑OS',
       pill4: 'Scripting',
       cta: 'Explore the Tech Lab →'
+    },
+    hospitality: {
+      label: 'Global Experiences & Passion for the Art of Service',
+      title: 'From Abroad to Mixology',
+      subtitle: '10+ years in hotels, bars and international tourism — UK, South Africa and Italy.',
+      homeHeadline: 'My Story in the World of Hospitality',
+      homeDesc: 'From commis de rang in Sicily to bartender at the Royal Shakespeare Company in the UK, through 5-star resorts and South Africa. AIBES training, mixology, sommelier and HACCP — a journey that forged discipline, calm and attention to detail.',
+      stat1: 'years',
+      stat2: 'continents',
+      stat3: 'barman',
+      cta: 'Read the full story →'
     },
     newsHub: {
       filterAll: 'All',

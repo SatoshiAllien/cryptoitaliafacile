@@ -3701,3 +3701,243 @@ h1, h2, h3, h4 { color: var(--text); }
   .tech-lab-cta-bar .btn,
   .tech-lab-cta-bar .btn-founder-outline { width: 100%; }
 }
+
+/* ── Ospitalità / Hospitality Story ─────────────────────── */
+.hospitality-section { padding: 4rem 0; position: relative; z-index: 2; }
+
+.hospitality-home-header { text-align: center; margin-bottom: 2rem; }
+.hospitality-home-header h2 { font-size: clamp(1.5rem, 4vw, 2rem); color: var(--text); margin: 0.5rem 0; }
+.hospitality-home-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 580px; margin: 0 auto; }
+
+.hospitality-teaser {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(232, 148, 12, 0.06) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.hospitality-teaser:hover { box-shadow: var(--shadow-color); transform: translateY(-2px); }
+
+.hospitality-teaser-img { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+.hospitality-teaser-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+.hospitality-teaser-content h3 { font-size: 1.2rem; color: var(--text); margin-bottom: 0.75rem; }
+.hospitality-teaser-content p { color: var(--text-muted); line-height: 1.75; margin-bottom: 1.25rem; }
+
+.hospitality-teaser-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.hospitality-teaser-stat {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.hospitality-teaser-stat strong { display: block; font-family: var(--font-display); font-size: 1.1rem; color: var(--primary); }
+.hospitality-teaser-stat span { font-size: 0.7rem; color: var(--text-light); }
+
+.hospitality-page { padding-bottom: 4rem; }
+
+.hospitality-hero { position: relative; min-height: 340px; overflow: hidden; margin-bottom: 2.5rem; }
+.hospitality-hero-img { width: 100%; min-height: 340px; object-fit: cover; object-position: center; }
+.hospitality-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(12, 10, 7, 0.4) 0%, rgba(12, 10, 7, 0.93) 100%);
+  display: flex; align-items: flex-end; padding: 2.5rem 0 3rem;
+}
+.hospitality-hero-overlay h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); color: var(--text); margin: 0.5rem 0; line-height: 1.15; }
+.hospitality-hero-sub { font-size: 1.1rem; color: var(--text-muted); max-width: 620px; line-height: 1.6; margin: 0; }
+.hospitality-breadcrumb { margin-bottom: 1rem; }
+
+.hospitality-body { max-width: 880px; }
+.hospitality-lead { font-size: 1.1rem; color: var(--text-muted); line-height: 1.85; margin-bottom: 2rem; text-align: center; }
+
+.hospitality-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+.hospitality-stat {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+.hospitality-stat:hover { border-color: var(--border-glow); }
+.hospitality-stat strong { display: block; font-family: var(--font-display); font-size: 1.2rem; color: var(--primary); margin-bottom: 0.2rem; }
+.hospitality-stat span { font-size: 0.72rem; color: var(--text-light); }
+
+.hospitality-narrative { margin-bottom: 3rem; }
+.hospitality-narrative-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.hospitality-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.5rem; height: 2.5rem; font-size: 1.2rem;
+  background: var(--primary-light); border-radius: var(--radius); flex-shrink: 0;
+}
+.hospitality-narrative-header h2 { font-size: 1.3rem; color: var(--text); margin: 0; line-height: 1.3; }
+
+.hospitality-prose p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem; }
+.hospitality-prose p:last-child { margin-bottom: 0; }
+
+.hospitality-highlight-box {
+  margin: 1.5rem 0;
+  padding: 1.75rem;
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(232, 197, 71, 0.08) 100%);
+  border-left: 4px solid var(--secondary);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+.hospitality-highlight-box h3 { font-size: 1.05rem; color: var(--text); margin-bottom: 0.75rem; }
+.hospitality-highlight-box p { color: var(--text-muted); line-height: 1.8; margin-bottom: 0.75rem; font-size: 0.95rem; }
+.hospitality-highlight-box p:last-child { margin-bottom: 0; }
+
+.hospitality-roles {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  list-style: none; margin: 1.5rem 0 0; padding: 0;
+}
+.hospitality-roles li {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--primary-light); border: 1px solid var(--border);
+  border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600; color: var(--text);
+}
+
+.hospitality-narrative--split {
+  display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start;
+}
+.hospitality-side-figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); }
+.hospitality-side-figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+
+.hospitality-section-title { font-size: 1.35rem; color: var(--text); margin-bottom: 0.75rem; text-align: center; }
+.hospitality-section-lead { text-align: center; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.7; }
+
+.hospitality-certs { margin: 3rem 0; }
+
+.hospitality-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.hospitality-cert-card {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition);
+  display: flex; flex-direction: column;
+}
+.hospitality-cert-card:hover { border-color: var(--border-glow); box-shadow: var(--shadow-color); transform: translateY(-3px); }
+.hospitality-cert-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.5rem; height: 2.5rem; font-size: 1.2rem;
+  background: var(--primary-light); border-radius: var(--radius); margin-bottom: 0.875rem;
+}
+.hospitality-cert-card h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 0.5rem; }
+.hospitality-cert-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 1rem; flex: 1; }
+.hospitality-cert-tag {
+  align-self: flex-start;
+  padding: 0.25rem 0.65rem;
+  background: rgba(232, 197, 71, 0.12);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.68rem; font-weight: 700; color: var(--secondary);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+/* Timeline */
+.hospitality-timeline-section { margin: 3rem 0; }
+.hospitality-timeline {
+  list-style: none; margin: 0; padding: 0 0 0 1.5rem;
+  border-left: 2px solid var(--border);
+  position: relative;
+}
+.hospitality-timeline-item {
+  position: relative;
+  padding: 0 0 2.5rem 2rem;
+  opacity: 0;
+  transform: translateX(-12px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.hospitality-timeline-item.visible { opacity: 1; transform: translateX(0); }
+.hospitality-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1.65rem; top: 0.35rem;
+  width: 12px; height: 12px;
+  background: var(--primary);
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  box-shadow: var(--glow-cyan);
+}
+.hospitality-timeline-year {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--secondary);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+.hospitality-timeline-content h3 { font-size: 1rem; color: var(--text); margin-bottom: 0.5rem; line-height: 1.3; }
+.hospitality-timeline-content p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 0.5rem; }
+.hospitality-timeline-loc { font-size: 0.78rem; color: var(--text-light); font-weight: 600; }
+
+.hospitality-gallery { margin: 3rem 0; }
+.hospitality-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.hospitality-gallery-item {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.hospitality-gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-color); }
+.hospitality-gallery-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.hospitality-gallery-item figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--text-muted);
+  background: var(--surface);
+  text-align: center;
+}
+
+.hospitality-quote {
+  margin: 2.5rem 0;
+  padding: 2rem 2rem 2rem 2.5rem;
+  background: var(--surface);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-style: italic;
+}
+.hospitality-quote p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin: 0 0 1rem; }
+.hospitality-quote cite { font-style: normal; font-size: 0.875rem; font-weight: 600; color: var(--primary); }
+
+.hospitality-cta-bar {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+  margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);
+}
+
+@media (min-width: 768px) {
+  .hospitality-teaser { grid-template-columns: 1fr 1.15fr; align-items: center; padding: 2.5rem; }
+  .hospitality-narrative--split { grid-template-columns: 1fr 1.1fr; }
+  .hospitality-hero { min-height: 400px; }
+}
+
+@media (max-width: 600px) {
+  .hospitality-stats { grid-template-columns: repeat(2, 1fr); }
+  .hospitality-teaser-stats { grid-template-columns: 1fr; }
+  .hospitality-cta-bar .btn { width: 100%; }
+}

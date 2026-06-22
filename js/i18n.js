@@ -31,7 +31,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Notizie crypto e guide spiegate in modo facile e semplice. 100% educativo, zero hype.',
-      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', contacts: 'Contatti',
+      guides: 'Guide', resources: 'Risorse', legal: 'Legale', about: 'Chi siamo', founder: 'Il Fondatore', contacts: 'Contatti',
       disclaimer: 'I contenuti di The Little Satoshi News sono a scopo puramente educativo e non costituiscono consulenza finanziaria. Investire in crypto comporta rischi.'
     },
     home: {
@@ -95,6 +95,21 @@ const TRANSLATIONS = {
       aiFeature2: 'Guide personalizzate',
       aiFeature3: 'Sicurezza crypto',
       aiFeature4: 'Steven AI'
+    },
+    founder: {
+      label: 'Il Fondatore',
+      name: 'Stefano Davide Ciancimino',
+      role: 'Analista · Ricercatore Blockchain · Educatore Crypto · AI Specialist',
+      bio: 'Vivo le crypto dal 2015. Ho creato Crypto Italia Facile per spiegare Bitcoin, blockchain e Web3 in modo semplice e sicuro — con l\'esperienza di chi ha lavorato in fintech e analizzato frodi per oltre otto anni.',
+      badge: 'Fondatore',
+      stat1: 'nel mondo crypto',
+      stat2: 'anni analisi & risk',
+      stat3: 'educativo, zero hype',
+      p1: 'Autorevolezza',
+      p2: 'Esperienza reale',
+      p3: 'Missione educativa',
+      p4: 'Sicurezza prima di tutto',
+      cta: 'Scopri il fondatore →'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -320,7 +335,7 @@ const TRANSLATIONS = {
     },
     footer: {
       desc: 'Practical guides and simple explanations about crypto. 100% educational, zero hype.',
-      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', contacts: 'Contact',
+      guides: 'Guides', resources: 'Resources', legal: 'Legal', about: 'About us', founder: 'The Founder', contacts: 'Contact',
       disclaimer: 'The Little Satoshi News content is for educational purposes only and does not constitute financial advice. Investing in crypto involves risks.'
     },
     home: {
@@ -384,6 +399,21 @@ const TRANSLATIONS = {
       aiFeature2: 'Personalized guides',
       aiFeature3: 'Crypto security',
       aiFeature4: 'Steven AI'
+    },
+    founder: {
+      label: 'The Founder',
+      name: 'Stefano Davide Ciancimino',
+      role: 'Analyst · Blockchain Researcher · Crypto Educator · AI Specialist',
+      bio: 'I\'ve been in crypto since 2015. I created Crypto Italia Facile to explain Bitcoin, blockchain and Web3 in a simple, secure way — drawing on fintech experience and over eight years of fraud analysis.',
+      badge: 'Founder',
+      stat1: 'in crypto',
+      stat2: 'years in analysis & risk',
+      stat3: 'educational, zero hype',
+      p1: 'Authority',
+      p2: 'Real experience',
+      p3: 'Educational mission',
+      p4: 'Security first',
+      cta: 'Meet the founder →'
     },
     newsHub: {
       filterAll: 'All',

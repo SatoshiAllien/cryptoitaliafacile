@@ -9,13 +9,27 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260621-edge-fix',
+  assetVersion: '20260622-founder',
   email: 'info@cryptofacile.com',
 
+  founder: {
+    fullName: 'Stefano Davide Ciancimino',
+    shortName: 'Stefano',
+    title: 'Fondatore di Crypto Italia Facile',
+    role: 'Fraud & Risk Analyst · Blockchain Researcher · Educatore Crypto · AI Specialist',
+    photo: 'assets/img/founder-stefano.jpg',
+    href: 'fondatore/index.html',
+    portfolio: 'https://satoshiallien.github.io/Stefano/',
+    linkedin: 'https://www.linkedin.com/in/55555555-b5947439',
+    x: 'https://x.com/RapidResponse47',
+    cryptoSince: 2015,
+    quote: 'Capire le crypto non dovrebbe essere un privilegio di pochi. Il mio obiettivo è accompagnarti con chiarezza, sicurezza e zero hype.'
+  },
+
   teacher: {
-    name: 'Stefano',
-    title: 'Insegnante crypto professionale',
-    photo: 'assets/img/teacher.jpg',
+    name: 'Stefano Davide Ciancimino',
+    title: 'Fondatore · Educatore crypto professionale',
+    photo: 'assets/img/founder-stefano.jpg',
     quote: 'Ti accompagno passo dopo passo nel mondo crypto — con parole semplici, esempi pratici e zero hype. Il mio obiettivo è che tu capisca davvero, non che compri alla cieca.',
     badges: [
       'Guide passo-passo',
@@ -23,7 +37,7 @@ const SITE_CONFIG = {
       'Linguaggio semplice',
       'Per principianti'
     ],
-    href: 'chi-siamo/index.html'
+    href: 'fondatore/index.html'
   },
 
   colors: {

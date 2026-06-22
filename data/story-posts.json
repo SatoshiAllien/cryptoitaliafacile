@@ -1,8 +1,10 @@
 {
-  "version": 2,
+  "version": 3,
   "links_enabled": false,
   "instagram_format": "1080x1920",
   "instagram_safe_area": "120px",
+  "instagram_layout": "hero_logo_centered",
+  "hero_logo_pct": "30-40%",
   "posts": [
     {
       "slug": "iniziare-exchange-revolut-kraken",
@@ -22,7 +24,7 @@
         "instagram": {
           "image": "iniziare-exchange-revolut-kraken-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "iniziare-exchange-revolut-kraken-abstract.jpg",
@@ -46,7 +48,7 @@
         "instagram": {
           "image": "iniziare-exchange-revolut-kraken-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "iniziare-exchange-revolut-kraken-thematic.jpg",
@@ -70,7 +72,7 @@
         "instagram": {
           "image": "iniziare-exchange-revolut-kraken-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "iniziare-exchange-revolut-kraken-minimal.jpg",
@@ -97,7 +99,7 @@
         "instagram": {
           "image": "lightning-network-guida-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "lightning-network-guida-abstract.jpg",
@@ -121,7 +123,7 @@
         "instagram": {
           "image": "lightning-network-guida-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "lightning-network-guida-thematic.jpg",
@@ -145,7 +147,7 @@
         "instagram": {
           "image": "lightning-network-guida-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "lightning-network-guida-minimal.jpg",
@@ -172,7 +174,7 @@
         "instagram": {
           "image": "comprare-bitcoin-prima-volta-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "comprare-bitcoin-prima-volta-abstract.jpg",
@@ -196,7 +198,7 @@
         "instagram": {
           "image": "comprare-bitcoin-prima-volta-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "comprare-bitcoin-prima-volta-thematic.jpg",
@@ -220,7 +222,7 @@
         "instagram": {
           "image": "comprare-bitcoin-prima-volta-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "comprare-bitcoin-prima-volta-minimal.jpg",
@@ -247,7 +249,7 @@
         "instagram": {
           "image": "creare-wallet-sicuro-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-wallet-sicuro-abstract.jpg",
@@ -271,7 +273,7 @@
         "instagram": {
           "image": "creare-wallet-sicuro-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-wallet-sicuro-thematic.jpg",
@@ -295,7 +297,7 @@
         "instagram": {
           "image": "creare-wallet-sicuro-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-wallet-sicuro-minimal.jpg",
@@ -322,7 +324,7 @@
         "instagram": {
           "image": "trasferire-crypto-exchange-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trasferire-crypto-exchange-abstract.jpg",
@@ -346,7 +348,7 @@
         "instagram": {
           "image": "trasferire-crypto-exchange-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trasferire-crypto-exchange-thematic.jpg",
@@ -370,7 +372,7 @@
         "instagram": {
           "image": "trasferire-crypto-exchange-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trasferire-crypto-exchange-minimal.jpg",
@@ -397,7 +399,7 @@
         "instagram": {
           "image": "staking-ethereum-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "staking-ethereum-abstract.jpg",
@@ -421,7 +423,7 @@
         "instagram": {
           "image": "staking-ethereum-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "staking-ethereum-thematic.jpg",
@@ -445,7 +447,7 @@
         "instagram": {
           "image": "staking-ethereum-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "staking-ethereum-minimal.jpg",
@@ -472,7 +474,7 @@
         "instagram": {
           "image": "usare-metamask-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CRYPTO USA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-metamask-abstract.jpg",
@@ -496,7 +498,7 @@
         "instagram": {
           "image": "usare-metamask-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-metamask-thematic.jpg",
@@ -520,7 +522,7 @@
         "instagram": {
           "image": "usare-metamask-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-metamask-minimal.jpg",
@@ -547,7 +549,7 @@
         "instagram": {
           "image": "leggere-indirizzo-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-indirizzo-wallet-abstract.jpg",
@@ -571,7 +573,7 @@
         "instagram": {
           "image": "leggere-indirizzo-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-indirizzo-wallet-thematic.jpg",
@@ -595,7 +597,7 @@
         "instagram": {
           "image": "leggere-indirizzo-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-indirizzo-wallet-minimal.jpg",
@@ -622,7 +624,7 @@
         "instagram": {
           "image": "dichiarare-crypto-italia-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "dichiarare-crypto-italia-abstract.jpg",
@@ -646,7 +648,7 @@
         "instagram": {
           "image": "dichiarare-crypto-italia-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "dichiarare-crypto-italia-thematic.jpg",
@@ -670,7 +672,7 @@
         "instagram": {
           "image": "dichiarare-crypto-italia-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "dichiarare-crypto-italia-minimal.jpg",
@@ -697,7 +699,7 @@
         "instagram": {
           "image": "scegliere-exchange-sicuro-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "scegliere-exchange-sicuro-abstract.jpg",
@@ -721,7 +723,7 @@
         "instagram": {
           "image": "scegliere-exchange-sicuro-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "scegliere-exchange-sicuro-thematic.jpg",
@@ -745,7 +747,7 @@
         "instagram": {
           "image": "scegliere-exchange-sicuro-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "scegliere-exchange-sicuro-minimal.jpg",
@@ -772,7 +774,7 @@
         "instagram": {
           "image": "proteggere-seed-phrase-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "proteggere-seed-phrase-abstract.jpg",
@@ -796,7 +798,7 @@
         "instagram": {
           "image": "proteggere-seed-phrase-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "proteggere-seed-phrase-thematic.jpg",
@@ -820,7 +822,7 @@
         "instagram": {
           "image": "proteggere-seed-phrase-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "proteggere-seed-phrase-minimal.jpg",
@@ -847,7 +849,7 @@
         "instagram": {
           "image": "prima-swap-uniswap-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "prima-swap-uniswap-abstract.jpg",
@@ -871,7 +873,7 @@
         "instagram": {
           "image": "prima-swap-uniswap-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "prima-swap-uniswap-thematic.jpg",
@@ -895,7 +897,7 @@
         "instagram": {
           "image": "prima-swap-uniswap-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "prima-swap-uniswap-minimal.jpg",
@@ -922,7 +924,7 @@
         "instagram": {
           "image": "hardware-wallet-ledger-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hardware-wallet-ledger-abstract.jpg",
@@ -946,7 +948,7 @@
         "instagram": {
           "image": "hardware-wallet-ledger-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hardware-wallet-ledger-thematic.jpg",
@@ -970,7 +972,7 @@
         "instagram": {
           "image": "hardware-wallet-ledger-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hardware-wallet-ledger-minimal.jpg",
@@ -997,7 +999,7 @@
         "instagram": {
           "image": "capire-gas-fee-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "capire-gas-fee-abstract.jpg",
@@ -1021,7 +1023,7 @@
         "instagram": {
           "image": "capire-gas-fee-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "capire-gas-fee-thematic.jpg",
@@ -1045,7 +1047,7 @@
         "instagram": {
           "image": "capire-gas-fee-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "capire-gas-fee-minimal.jpg",
@@ -1072,7 +1074,7 @@
         "instagram": {
           "image": "dca-crypto-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "dca-crypto-abstract.jpg",
@@ -1096,7 +1098,7 @@
         "instagram": {
           "image": "dca-crypto-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "dca-crypto-thematic.jpg",
@@ -1120,7 +1122,7 @@
         "instagram": {
           "image": "dca-crypto-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "dca-crypto-minimal.jpg",
@@ -1147,7 +1149,7 @@
         "instagram": {
           "image": "verificare-smart-contract-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "verificare-smart-contract-abstract.jpg",
@@ -1171,7 +1173,7 @@
         "instagram": {
           "image": "verificare-smart-contract-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "verificare-smart-contract-thematic.jpg",
@@ -1195,7 +1197,7 @@
         "instagram": {
           "image": "verificare-smart-contract-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "verificare-smart-contract-minimal.jpg",
@@ -1222,7 +1224,7 @@
         "instagram": {
           "image": "usare-etherscan-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-etherscan-abstract.jpg",
@@ -1246,7 +1248,7 @@
         "instagram": {
           "image": "usare-etherscan-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-etherscan-thematic.jpg",
@@ -1270,7 +1272,7 @@
         "instagram": {
           "image": "usare-etherscan-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-etherscan-minimal.jpg",
@@ -1297,7 +1299,7 @@
         "instagram": {
           "image": "cold-wallet-chiavi-offline-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cold-wallet-chiavi-offline-abstract.jpg",
@@ -1321,7 +1323,7 @@
         "instagram": {
           "image": "cold-wallet-chiavi-offline-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cold-wallet-chiavi-offline-thematic.jpg",
@@ -1345,7 +1347,7 @@
         "instagram": {
           "image": "cold-wallet-chiavi-offline-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cold-wallet-chiavi-offline-minimal.jpg",
@@ -1372,7 +1374,7 @@
         "instagram": {
           "image": "yield-farming-sicurezza-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "yield-farming-sicurezza-abstract.jpg",
@@ -1396,7 +1398,7 @@
         "instagram": {
           "image": "yield-farming-sicurezza-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "yield-farming-sicurezza-thematic.jpg",
@@ -1420,7 +1422,7 @@
         "instagram": {
           "image": "yield-farming-sicurezza-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "yield-farming-sicurezza-minimal.jpg",
@@ -1447,7 +1449,7 @@
         "instagram": {
           "image": "convertire-crypto-euro-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "convertire-crypto-euro-abstract.jpg",
@@ -1471,7 +1473,7 @@
         "instagram": {
           "image": "convertire-crypto-euro-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "convertire-crypto-euro-thematic.jpg",
@@ -1495,7 +1497,7 @@
         "instagram": {
           "image": "convertire-crypto-euro-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "convertire-crypto-euro-minimal.jpg",
@@ -1522,7 +1524,7 @@
         "instagram": {
           "image": "alert-prezzo-portafoglio-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "alert-prezzo-portafoglio-abstract.jpg",
@@ -1546,7 +1548,7 @@
         "instagram": {
           "image": "alert-prezzo-portafoglio-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "alert-prezzo-portafoglio-thematic.jpg",
@@ -1570,7 +1572,7 @@
         "instagram": {
           "image": "alert-prezzo-portafoglio-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "alert-prezzo-portafoglio-minimal.jpg",
@@ -1597,7 +1599,7 @@
         "instagram": {
           "image": "recuperare-crypto-sbagliato-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "recuperare-crypto-sbagliato-abstract.jpg",
@@ -1621,7 +1623,7 @@
         "instagram": {
           "image": "recuperare-crypto-sbagliato-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "recuperare-crypto-sbagliato-thematic.jpg",
@@ -1645,7 +1647,7 @@
         "instagram": {
           "image": "recuperare-crypto-sbagliato-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "recuperare-crypto-sbagliato-minimal.jpg",
@@ -1672,7 +1674,7 @@
         "instagram": {
           "image": "tip-mai-seed-phrase-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-mai-seed-phrase-abstract.jpg",
@@ -1696,7 +1698,7 @@
         "instagram": {
           "image": "tip-mai-seed-phrase-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-mai-seed-phrase-thematic.jpg",
@@ -1720,7 +1722,7 @@
         "instagram": {
           "image": "tip-mai-seed-phrase-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-mai-seed-phrase-minimal.jpg",
@@ -1747,7 +1749,7 @@
         "instagram": {
           "image": "tip-2fa-exchange-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-2fa-exchange-abstract.jpg",
@@ -1771,7 +1773,7 @@
         "instagram": {
           "image": "tip-2fa-exchange-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-2fa-exchange-thematic.jpg",
@@ -1795,7 +1797,7 @@
         "instagram": {
           "image": "tip-2fa-exchange-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-2fa-exchange-minimal.jpg",
@@ -1822,7 +1824,7 @@
         "instagram": {
           "image": "tip-verifica-url-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-verifica-url-abstract.jpg",
@@ -1846,7 +1848,7 @@
         "instagram": {
           "image": "tip-verifica-url-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-verifica-url-thematic.jpg",
@@ -1870,7 +1872,7 @@
         "instagram": {
           "image": "tip-verifica-url-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-verifica-url-minimal.jpg",
@@ -1897,7 +1899,7 @@
         "instagram": {
           "image": "tip-non-tenere-exchange-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-non-tenere-exchange-abstract.jpg",
@@ -1921,7 +1923,7 @@
         "instagram": {
           "image": "tip-non-tenere-exchange-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-non-tenere-exchange-thematic.jpg",
@@ -1945,7 +1947,7 @@
         "instagram": {
           "image": "tip-non-tenere-exchange-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-non-tenere-exchange-minimal.jpg",
@@ -1972,7 +1974,7 @@
         "instagram": {
           "image": "tip-inizia-poco-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-inizia-poco-abstract.jpg",
@@ -1996,7 +1998,7 @@
         "instagram": {
           "image": "tip-inizia-poco-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-inizia-poco-thematic.jpg",
@@ -2020,7 +2022,7 @@
         "instagram": {
           "image": "tip-inizia-poco-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-inizia-poco-minimal.jpg",
@@ -2047,7 +2049,7 @@
         "instagram": {
           "image": "tip-controlla-rete-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-controlla-rete-abstract.jpg",
@@ -2071,7 +2073,7 @@
         "instagram": {
           "image": "tip-controlla-rete-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-controlla-rete-thematic.jpg",
@@ -2095,7 +2097,7 @@
         "instagram": {
           "image": "tip-controlla-rete-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-controlla-rete-minimal.jpg",
@@ -2122,7 +2124,7 @@
         "instagram": {
           "image": "tip-rubrica-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-rubrica-wallet-abstract.jpg",
@@ -2146,7 +2148,7 @@
         "instagram": {
           "image": "tip-rubrica-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-rubrica-wallet-thematic.jpg",
@@ -2170,7 +2172,7 @@
         "instagram": {
           "image": "tip-rubrica-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-rubrica-wallet-minimal.jpg",
@@ -2197,7 +2199,7 @@
         "instagram": {
           "image": "tip-no-screenshot-seed-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-no-screenshot-seed-abstract.jpg",
@@ -2221,7 +2223,7 @@
         "instagram": {
           "image": "tip-no-screenshot-seed-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-no-screenshot-seed-thematic.jpg",
@@ -2245,7 +2247,7 @@
         "instagram": {
           "image": "tip-no-screenshot-seed-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-no-screenshot-seed-minimal.jpg",
@@ -2272,7 +2274,7 @@
         "instagram": {
           "image": "tip-diffida-telegram-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-diffida-telegram-abstract.jpg",
@@ -2296,7 +2298,7 @@
         "instagram": {
           "image": "tip-diffida-telegram-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-diffida-telegram-thematic.jpg",
@@ -2320,7 +2322,7 @@
         "instagram": {
           "image": "tip-diffida-telegram-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-diffida-telegram-minimal.jpg",
@@ -2347,7 +2349,7 @@
         "instagram": {
           "image": "tip-aggiorna-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-aggiorna-wallet-abstract.jpg",
@@ -2371,7 +2373,7 @@
         "instagram": {
           "image": "tip-aggiorna-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-aggiorna-wallet-thematic.jpg",
@@ -2395,7 +2397,7 @@
         "instagram": {
           "image": "tip-aggiorna-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-aggiorna-wallet-minimal.jpg",
@@ -2422,7 +2424,7 @@
         "instagram": {
           "image": "tip-email-dedicata-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CRYPTO USA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-email-dedicata-abstract.jpg",
@@ -2446,7 +2448,7 @@
         "instagram": {
           "image": "tip-email-dedicata-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-email-dedicata-thematic.jpg",
@@ -2470,7 +2472,7 @@
         "instagram": {
           "image": "tip-email-dedicata-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-email-dedicata-minimal.jpg",
@@ -2497,7 +2499,7 @@
         "instagram": {
           "image": "tip-leggi-transazione-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-leggi-transazione-abstract.jpg",
@@ -2521,7 +2523,7 @@
         "instagram": {
           "image": "tip-leggi-transazione-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-leggi-transazione-thematic.jpg",
@@ -2545,7 +2547,7 @@
         "instagram": {
           "image": "tip-leggi-transazione-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-leggi-transazione-minimal.jpg",
@@ -2572,7 +2574,7 @@
         "instagram": {
           "image": "tip-diversifica-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-diversifica-abstract.jpg",
@@ -2596,7 +2598,7 @@
         "instagram": {
           "image": "tip-diversifica-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-diversifica-thematic.jpg",
@@ -2620,7 +2622,7 @@
         "instagram": {
           "image": "tip-diversifica-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-diversifica-minimal.jpg",
@@ -2647,7 +2649,7 @@
         "instagram": {
           "image": "tip-traccia-operazioni-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-traccia-operazioni-abstract.jpg",
@@ -2671,7 +2673,7 @@
         "instagram": {
           "image": "tip-traccia-operazioni-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-traccia-operazioni-thematic.jpg",
@@ -2695,7 +2697,7 @@
         "instagram": {
           "image": "tip-traccia-operazioni-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-traccia-operazioni-minimal.jpg",
@@ -2722,7 +2724,7 @@
         "instagram": {
           "image": "tip-spread-fee-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-spread-fee-abstract.jpg",
@@ -2746,7 +2748,7 @@
         "instagram": {
           "image": "tip-spread-fee-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-spread-fee-thematic.jpg",
@@ -2770,7 +2772,7 @@
         "instagram": {
           "image": "tip-spread-fee-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-spread-fee-minimal.jpg",
@@ -2797,7 +2799,7 @@
         "instagram": {
           "image": "tip-staking-unlock-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-staking-unlock-abstract.jpg",
@@ -2821,7 +2823,7 @@
         "instagram": {
           "image": "tip-staking-unlock-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-staking-unlock-thematic.jpg",
@@ -2845,7 +2847,7 @@
         "instagram": {
           "image": "tip-staking-unlock-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-staking-unlock-minimal.jpg",
@@ -2872,7 +2874,7 @@
         "instagram": {
           "image": "tip-test-transazione-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-test-transazione-abstract.jpg",
@@ -2896,7 +2898,7 @@
         "instagram": {
           "image": "tip-test-transazione-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-test-transazione-thematic.jpg",
@@ -2920,7 +2922,7 @@
         "instagram": {
           "image": "tip-test-transazione-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-test-transazione-minimal.jpg",
@@ -2947,7 +2949,7 @@
         "instagram": {
           "image": "tip-no-link-email-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-no-link-email-abstract.jpg",
@@ -2971,7 +2973,7 @@
         "instagram": {
           "image": "tip-no-link-email-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-no-link-email-thematic.jpg",
@@ -2995,7 +2997,7 @@
         "instagram": {
           "image": "tip-no-link-email-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-no-link-email-minimal.jpg",
@@ -3022,7 +3024,7 @@
         "instagram": {
           "image": "tip-pin-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-pin-wallet-abstract.jpg",
@@ -3046,7 +3048,7 @@
         "instagram": {
           "image": "tip-pin-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-pin-wallet-thematic.jpg",
@@ -3070,7 +3072,7 @@
         "instagram": {
           "image": "tip-pin-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-pin-wallet-minimal.jpg",
@@ -3097,7 +3099,7 @@
         "instagram": {
           "image": "tip-non-capisci-non-investi-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-non-capisci-non-investi-abstract.jpg",
@@ -3121,7 +3123,7 @@
         "instagram": {
           "image": "tip-non-capisci-non-investi-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-non-capisci-non-investi-thematic.jpg",
@@ -3145,7 +3147,7 @@
         "instagram": {
           "image": "tip-non-capisci-non-investi-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "tip-non-capisci-non-investi-minimal.jpg",
@@ -3172,7 +3174,7 @@
         "instagram": {
           "image": "trend-mica-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-mica-abstract.jpg",
@@ -3196,7 +3198,7 @@
         "instagram": {
           "image": "trend-mica-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-mica-thematic.jpg",
@@ -3220,7 +3222,7 @@
         "instagram": {
           "image": "trend-mica-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-mica-minimal.jpg",
@@ -3247,7 +3249,7 @@
         "instagram": {
           "image": "trend-etf-bitcoin-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-etf-bitcoin-abstract.jpg",
@@ -3271,7 +3273,7 @@
         "instagram": {
           "image": "trend-etf-bitcoin-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-etf-bitcoin-thematic.jpg",
@@ -3295,7 +3297,7 @@
         "instagram": {
           "image": "trend-etf-bitcoin-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-etf-bitcoin-minimal.jpg",
@@ -3322,7 +3324,7 @@
         "instagram": {
           "image": "trend-layer2-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-layer2-abstract.jpg",
@@ -3346,7 +3348,7 @@
         "instagram": {
           "image": "trend-layer2-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-layer2-thematic.jpg",
@@ -3370,7 +3372,7 @@
         "instagram": {
           "image": "trend-layer2-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-layer2-minimal.jpg",
@@ -3397,7 +3399,7 @@
         "instagram": {
           "image": "trend-rwa-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-rwa-abstract.jpg",
@@ -3421,7 +3423,7 @@
         "instagram": {
           "image": "trend-rwa-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-rwa-thematic.jpg",
@@ -3445,7 +3447,7 @@
         "instagram": {
           "image": "trend-rwa-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-rwa-minimal.jpg",
@@ -3472,7 +3474,7 @@
         "instagram": {
           "image": "trend-stablecoin-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-stablecoin-abstract.jpg",
@@ -3496,7 +3498,7 @@
         "instagram": {
           "image": "trend-stablecoin-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-stablecoin-thematic.jpg",
@@ -3520,7 +3522,7 @@
         "instagram": {
           "image": "trend-stablecoin-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-stablecoin-minimal.jpg",
@@ -3547,7 +3549,7 @@
         "instagram": {
           "image": "trend-cbdc-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-cbdc-abstract.jpg",
@@ -3571,7 +3573,7 @@
         "instagram": {
           "image": "trend-cbdc-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-cbdc-thematic.jpg",
@@ -3595,7 +3597,7 @@
         "instagram": {
           "image": "trend-cbdc-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-cbdc-minimal.jpg",
@@ -3622,7 +3624,7 @@
         "instagram": {
           "image": "trend-depin-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-depin-abstract.jpg",
@@ -3646,7 +3648,7 @@
         "instagram": {
           "image": "trend-depin-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-depin-thematic.jpg",
@@ -3670,7 +3672,7 @@
         "instagram": {
           "image": "trend-depin-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-depin-minimal.jpg",
@@ -3697,7 +3699,7 @@
         "instagram": {
           "image": "trend-ai-blockchain-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-ai-blockchain-abstract.jpg",
@@ -3721,7 +3723,7 @@
         "instagram": {
           "image": "trend-ai-blockchain-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-ai-blockchain-thematic.jpg",
@@ -3745,7 +3747,7 @@
         "instagram": {
           "image": "trend-ai-blockchain-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-ai-blockchain-minimal.jpg",
@@ -3772,7 +3774,7 @@
         "instagram": {
           "image": "trend-halving-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-halving-abstract.jpg",
@@ -3796,7 +3798,7 @@
         "instagram": {
           "image": "trend-halving-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-halving-thematic.jpg",
@@ -3820,7 +3822,7 @@
         "instagram": {
           "image": "trend-halving-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-halving-minimal.jpg",
@@ -3847,7 +3849,7 @@
         "instagram": {
           "image": "trend-modular-blockchain-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-modular-blockchain-abstract.jpg",
@@ -3871,7 +3873,7 @@
         "instagram": {
           "image": "trend-modular-blockchain-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-modular-blockchain-thematic.jpg",
@@ -3895,7 +3897,7 @@
         "instagram": {
           "image": "trend-modular-blockchain-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TREND · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "trend-modular-blockchain-minimal.jpg",
@@ -3922,7 +3924,7 @@
         "instagram": {
           "image": "blockchain-5-minuti-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "blockchain-5-minuti-abstract.jpg",
@@ -3946,7 +3948,7 @@
         "instagram": {
           "image": "blockchain-5-minuti-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "blockchain-5-minuti-thematic.jpg",
@@ -3970,7 +3972,7 @@
         "instagram": {
           "image": "blockchain-5-minuti-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "blockchain-5-minuti-minimal.jpg",
@@ -3997,7 +3999,7 @@
         "instagram": {
           "image": "creare-account-exchange-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-account-exchange-abstract.jpg",
@@ -4021,7 +4023,7 @@
         "instagram": {
           "image": "creare-account-exchange-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-account-exchange-thematic.jpg",
@@ -4045,7 +4047,7 @@
         "instagram": {
           "image": "creare-account-exchange-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-account-exchange-minimal.jpg",
@@ -4072,7 +4074,7 @@
         "instagram": {
           "image": "primi-20-euro-bitcoin-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "primi-20-euro-bitcoin-abstract.jpg",
@@ -4096,7 +4098,7 @@
         "instagram": {
           "image": "primi-20-euro-bitcoin-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "primi-20-euro-bitcoin-thematic.jpg",
@@ -4120,7 +4122,7 @@
         "instagram": {
           "image": "primi-20-euro-bitcoin-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "primi-20-euro-bitcoin-minimal.jpg",
@@ -4147,7 +4149,7 @@
         "instagram": {
           "image": "installare-trust-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "installare-trust-wallet-abstract.jpg",
@@ -4171,7 +4173,7 @@
         "instagram": {
           "image": "installare-trust-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "installare-trust-wallet-thematic.jpg",
@@ -4195,7 +4197,7 @@
         "instagram": {
           "image": "installare-trust-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "installare-trust-wallet-minimal.jpg",
@@ -4222,7 +4224,7 @@
         "instagram": {
           "image": "prima-transazione-crypto-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "prima-transazione-crypto-abstract.jpg",
@@ -4246,7 +4248,7 @@
         "instagram": {
           "image": "prima-transazione-crypto-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "prima-transazione-crypto-thematic.jpg",
@@ -4270,7 +4272,7 @@
         "instagram": {
           "image": "prima-transazione-crypto-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "prima-transazione-crypto-minimal.jpg",
@@ -4297,7 +4299,7 @@
         "instagram": {
           "image": "leggere-grafico-candele-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-grafico-candele-abstract.jpg",
@@ -4321,7 +4323,7 @@
         "instagram": {
           "image": "leggere-grafico-candele-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-grafico-candele-thematic.jpg",
@@ -4345,7 +4347,7 @@
         "instagram": {
           "image": "leggere-grafico-candele-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-grafico-candele-minimal.jpg",
@@ -4372,7 +4374,7 @@
         "instagram": {
           "image": "market-cap-volume-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · TOKENOMICS · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · TOKENOMICS · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "market-cap-volume-abstract.jpg",
@@ -4396,7 +4398,7 @@
         "instagram": {
           "image": "market-cap-volume-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TOKENOMICS · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TOKENOMICS · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "market-cap-volume-thematic.jpg",
@@ -4420,7 +4422,7 @@
         "instagram": {
           "image": "market-cap-volume-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · TOKENOMICS · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · TOKENOMICS · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "market-cap-volume-minimal.jpg",
@@ -4447,7 +4449,7 @@
         "instagram": {
           "image": "esplorare-block-explorer-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "esplorare-block-explorer-abstract.jpg",
@@ -4471,7 +4473,7 @@
         "instagram": {
           "image": "esplorare-block-explorer-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "esplorare-block-explorer-thematic.jpg",
@@ -4495,7 +4497,7 @@
         "instagram": {
           "image": "esplorare-block-explorer-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "esplorare-block-explorer-minimal.jpg",
@@ -4522,7 +4524,7 @@
         "instagram": {
           "image": "notifiche-prezzo-app-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "notifiche-prezzo-app-abstract.jpg",
@@ -4546,7 +4548,7 @@
         "instagram": {
           "image": "notifiche-prezzo-app-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "notifiche-prezzo-app-thematic.jpg",
@@ -4570,7 +4572,7 @@
         "instagram": {
           "image": "notifiche-prezzo-app-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "notifiche-prezzo-app-minimal.jpg",
@@ -4597,7 +4599,7 @@
         "instagram": {
           "image": "creare-watchlist-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-watchlist-abstract.jpg",
@@ -4621,7 +4623,7 @@
         "instagram": {
           "image": "creare-watchlist-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-watchlist-thematic.jpg",
@@ -4645,7 +4647,7 @@
         "instagram": {
           "image": "creare-watchlist-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · GUIDA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "creare-watchlist-minimal.jpg",
@@ -4672,7 +4674,7 @@
         "instagram": {
           "image": "bridge-cross-chain-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "bridge-cross-chain-abstract.jpg",
@@ -4696,7 +4698,7 @@
         "instagram": {
           "image": "bridge-cross-chain-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "bridge-cross-chain-thematic.jpg",
@@ -4720,7 +4722,7 @@
         "instagram": {
           "image": "bridge-cross-chain-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "bridge-cross-chain-minimal.jpg",
@@ -4747,7 +4749,7 @@
         "instagram": {
           "image": "liquidita-uniswap-v3-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "liquidita-uniswap-v3-abstract.jpg",
@@ -4771,7 +4773,7 @@
         "instagram": {
           "image": "liquidita-uniswap-v3-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "liquidita-uniswap-v3-thematic.jpg",
@@ -4795,7 +4797,7 @@
         "instagram": {
           "image": "liquidita-uniswap-v3-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "liquidita-uniswap-v3-minimal.jpg",
@@ -4822,7 +4824,7 @@
         "instagram": {
           "image": "usare-aave-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-aave-abstract.jpg",
@@ -4846,7 +4848,7 @@
         "instagram": {
           "image": "usare-aave-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-aave-thematic.jpg",
@@ -4870,7 +4872,7 @@
         "instagram": {
           "image": "usare-aave-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "usare-aave-minimal.jpg",
@@ -4897,7 +4899,7 @@
         "instagram": {
           "image": "analisi-on-chain-dune-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "analisi-on-chain-dune-abstract.jpg",
@@ -4921,7 +4923,7 @@
         "instagram": {
           "image": "analisi-on-chain-dune-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "analisi-on-chain-dune-thematic.jpg",
@@ -4945,7 +4947,7 @@
         "instagram": {
           "image": "analisi-on-chain-dune-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "analisi-on-chain-dune-minimal.jpg",
@@ -4972,7 +4974,7 @@
         "instagram": {
           "image": "nodo-validator-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "nodo-validator-abstract.jpg",
@@ -4996,7 +4998,7 @@
         "instagram": {
           "image": "nodo-validator-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "nodo-validator-thematic.jpg",
@@ -5020,7 +5022,7 @@
         "instagram": {
           "image": "nodo-validator-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "nodo-validator-minimal.jpg",
@@ -5047,7 +5049,7 @@
         "instagram": {
           "image": "leggere-solidity-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-solidity-abstract.jpg",
@@ -5071,7 +5073,7 @@
         "instagram": {
           "image": "leggere-solidity-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-solidity-thematic.jpg",
@@ -5095,7 +5097,7 @@
         "instagram": {
           "image": "leggere-solidity-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · BLOCKCHAIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "leggere-solidity-minimal.jpg",
@@ -5122,7 +5124,7 @@
         "instagram": {
           "image": "mev-protezione-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "mev-protezione-abstract.jpg",
@@ -5146,7 +5148,7 @@
         "instagram": {
           "image": "mev-protezione-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "mev-protezione-thematic.jpg",
@@ -5170,7 +5172,7 @@
         "instagram": {
           "image": "mev-protezione-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "mev-protezione-minimal.jpg",
@@ -5197,7 +5199,7 @@
         "instagram": {
           "image": "multisig-gnosis-safe-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "multisig-gnosis-safe-abstract.jpg",
@@ -5221,7 +5223,7 @@
         "instagram": {
           "image": "multisig-gnosis-safe-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "multisig-gnosis-safe-thematic.jpg",
@@ -5245,7 +5247,7 @@
         "instagram": {
           "image": "multisig-gnosis-safe-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "multisig-gnosis-safe-minimal.jpg",
@@ -5272,7 +5274,7 @@
         "instagram": {
           "image": "ottimizzazione-gas-batch-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "ottimizzazione-gas-batch-abstract.jpg",
@@ -5296,7 +5298,7 @@
         "instagram": {
           "image": "ottimizzazione-gas-batch-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "ottimizzazione-gas-batch-thematic.jpg",
@@ -5320,7 +5322,7 @@
         "instagram": {
           "image": "ottimizzazione-gas-batch-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "ottimizzazione-gas-batch-minimal.jpg",
@@ -5347,7 +5349,7 @@
         "instagram": {
           "image": "hedging-stablecoin-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · STABLECOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hedging-stablecoin-abstract.jpg",
@@ -5371,7 +5373,7 @@
         "instagram": {
           "image": "hedging-stablecoin-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · STABLECOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hedging-stablecoin-thematic.jpg",
@@ -5395,7 +5397,7 @@
         "instagram": {
           "image": "hedging-stablecoin-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · STABLECOIN · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hedging-stablecoin-minimal.jpg",
@@ -5422,7 +5424,7 @@
         "instagram": {
           "image": "cardano-spiegato-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-spiegato-abstract.jpg",
@@ -5446,7 +5448,7 @@
         "instagram": {
           "image": "cardano-spiegato-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-spiegato-thematic.jpg",
@@ -5470,7 +5472,7 @@
         "instagram": {
           "image": "cardano-spiegato-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-spiegato-minimal.jpg",
@@ -5497,7 +5499,7 @@
         "instagram": {
           "image": "comprare-ada-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "comprare-ada-abstract.jpg",
@@ -5521,7 +5523,7 @@
         "instagram": {
           "image": "comprare-ada-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "comprare-ada-thematic.jpg",
@@ -5545,7 +5547,7 @@
         "instagram": {
           "image": "comprare-ada-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "comprare-ada-minimal.jpg",
@@ -5572,7 +5574,7 @@
         "instagram": {
           "image": "staking-ada-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "staking-ada-abstract.jpg",
@@ -5596,7 +5598,7 @@
         "instagram": {
           "image": "staking-ada-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "staking-ada-thematic.jpg",
@@ -5620,7 +5622,7 @@
         "instagram": {
           "image": "staking-ada-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "staking-ada-minimal.jpg",
@@ -5647,7 +5649,7 @@
         "instagram": {
           "image": "wallet-cardano-confronto-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "wallet-cardano-confronto-abstract.jpg",
@@ -5671,7 +5673,7 @@
         "instagram": {
           "image": "wallet-cardano-confronto-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "wallet-cardano-confronto-thematic.jpg",
@@ -5695,7 +5697,7 @@
         "instagram": {
           "image": "wallet-cardano-confronto-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "wallet-cardano-confronto-minimal.jpg",
@@ -5722,7 +5724,7 @@
         "instagram": {
           "image": "project-catalyst-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "project-catalyst-abstract.jpg",
@@ -5746,7 +5748,7 @@
         "instagram": {
           "image": "project-catalyst-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "project-catalyst-thematic.jpg",
@@ -5770,7 +5772,7 @@
         "instagram": {
           "image": "project-catalyst-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "project-catalyst-minimal.jpg",
@@ -5797,7 +5799,7 @@
         "instagram": {
           "image": "cardano-defi-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-defi-abstract.jpg",
@@ -5821,7 +5823,7 @@
         "instagram": {
           "image": "cardano-defi-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-defi-thematic.jpg",
@@ -5845,7 +5847,7 @@
         "instagram": {
           "image": "cardano-defi-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-defi-minimal.jpg",
@@ -5872,7 +5874,7 @@
         "instagram": {
           "image": "native-token-cardano-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "native-token-cardano-abstract.jpg",
@@ -5896,7 +5898,7 @@
         "instagram": {
           "image": "native-token-cardano-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "native-token-cardano-thematic.jpg",
@@ -5920,7 +5922,7 @@
         "instagram": {
           "image": "native-token-cardano-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "native-token-cardano-minimal.jpg",
@@ -5947,7 +5949,7 @@
         "instagram": {
           "image": "hydra-cardano-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hydra-cardano-abstract.jpg",
@@ -5971,7 +5973,7 @@
         "instagram": {
           "image": "hydra-cardano-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hydra-cardano-thematic.jpg",
@@ -5995,7 +5997,7 @@
         "instagram": {
           "image": "hydra-cardano-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hydra-cardano-minimal.jpg",
@@ -6022,7 +6024,7 @@
         "instagram": {
           "image": "plutus-panoramica-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "plutus-panoramica-abstract.jpg",
@@ -6046,7 +6048,7 @@
         "instagram": {
           "image": "plutus-panoramica-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "plutus-panoramica-thematic.jpg",
@@ -6070,7 +6072,7 @@
         "instagram": {
           "image": "plutus-panoramica-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "plutus-panoramica-minimal.jpg",
@@ -6097,7 +6099,7 @@
         "instagram": {
           "image": "cardano-vs-ethereum-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-vs-ethereum-abstract.jpg",
@@ -6121,7 +6123,7 @@
         "instagram": {
           "image": "cardano-vs-ethereum-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-vs-ethereum-thematic.jpg",
@@ -6145,7 +6147,7 @@
         "instagram": {
           "image": "cardano-vs-ethereum-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "cardano-vs-ethereum-minimal.jpg",
@@ -6172,7 +6174,7 @@
         "instagram": {
           "image": "seed-phrase-guida-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "seed-phrase-guida-abstract.jpg",
@@ -6196,7 +6198,7 @@
         "instagram": {
           "image": "seed-phrase-guida-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "seed-phrase-guida-thematic.jpg",
@@ -6220,7 +6222,7 @@
         "instagram": {
           "image": "seed-phrase-guida-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "seed-phrase-guida-minimal.jpg",
@@ -6247,7 +6249,7 @@
         "instagram": {
           "image": "hot-vs-cold-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hot-vs-cold-wallet-abstract.jpg",
@@ -6271,7 +6273,7 @@
         "instagram": {
           "image": "hot-vs-cold-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hot-vs-cold-wallet-thematic.jpg",
@@ -6295,7 +6297,7 @@
         "instagram": {
           "image": "hot-vs-cold-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "hot-vs-cold-wallet-minimal.jpg",
@@ -6322,7 +6324,7 @@
         "instagram": {
           "image": "confronto-hardware-wallet-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "confronto-hardware-wallet-abstract.jpg",
@@ -6346,7 +6348,7 @@
         "instagram": {
           "image": "confronto-hardware-wallet-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "confronto-hardware-wallet-thematic.jpg",
@@ -6370,7 +6372,7 @@
         "instagram": {
           "image": "confronto-hardware-wallet-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "confronto-hardware-wallet-minimal.jpg",
@@ -6397,7 +6399,7 @@
         "instagram": {
           "image": "difendersi-phishing-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "difendersi-phishing-abstract.jpg",
@@ -6421,7 +6423,7 @@
         "instagram": {
           "image": "difendersi-phishing-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "difendersi-phishing-thematic.jpg",
@@ -6445,7 +6447,7 @@
         "instagram": {
           "image": "difendersi-phishing-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "difendersi-phishing-minimal.jpg",
@@ -6472,7 +6474,7 @@
         "instagram": {
           "image": "approvazioni-smart-contract-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "approvazioni-smart-contract-abstract.jpg",
@@ -6496,7 +6498,7 @@
         "instagram": {
           "image": "approvazioni-smart-contract-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "approvazioni-smart-contract-thematic.jpg",
@@ -6520,7 +6522,7 @@
         "instagram": {
           "image": "approvazioni-smart-contract-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "approvazioni-smart-contract-minimal.jpg",
@@ -6547,7 +6549,7 @@
         "instagram": {
           "image": "backup-wallet-321-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "backup-wallet-321-abstract.jpg",
@@ -6571,7 +6573,7 @@
         "instagram": {
           "image": "backup-wallet-321-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "backup-wallet-321-thematic.jpg",
@@ -6595,7 +6597,7 @@
         "instagram": {
           "image": "backup-wallet-321-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "backup-wallet-321-minimal.jpg",
@@ -6622,7 +6624,7 @@
         "instagram": {
           "image": "sicurezza-mobile-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "sicurezza-mobile-abstract.jpg",
@@ -6646,7 +6648,7 @@
         "instagram": {
           "image": "sicurezza-mobile-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "sicurezza-mobile-thematic.jpg",
@@ -6670,7 +6672,7 @@
         "instagram": {
           "image": "sicurezza-mobile-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "sicurezza-mobile-minimal.jpg",
@@ -6697,7 +6699,7 @@
         "instagram": {
           "image": "wallet-compromesso-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "wallet-compromesso-abstract.jpg",
@@ -6721,7 +6723,7 @@
         "instagram": {
           "image": "wallet-compromesso-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "wallet-compromesso-thematic.jpg",
@@ -6745,7 +6747,7 @@
         "instagram": {
           "image": "wallet-compromesso-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "wallet-compromesso-minimal.jpg",
@@ -6772,7 +6774,7 @@
         "instagram": {
           "image": "password-manager-crypto-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "password-manager-crypto-abstract.jpg",
@@ -6796,7 +6798,7 @@
         "instagram": {
           "image": "password-manager-crypto-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "password-manager-crypto-thematic.jpg",
@@ -6820,7 +6822,7 @@
         "instagram": {
           "image": "password-manager-crypto-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "password-manager-crypto-minimal.jpg",
@@ -6847,7 +6849,7 @@
         "instagram": {
           "image": "audit-sicurezza-portafoglio-abstract.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "audit-sicurezza-portafoglio-abstract.jpg",
@@ -6871,7 +6873,7 @@
         "instagram": {
           "image": "audit-sicurezza-portafoglio-thematic.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "audit-sicurezza-portafoglio-thematic.jpg",
@@ -6895,7 +6897,7 @@
         "instagram": {
           "image": "audit-sicurezza-portafoglio-minimal.jpg",
           "size": "1080x1920",
-          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo alto-sx · titolo/sottotitolo centrati · icona centrale · testo 2 frasi · CTA visiva · zero link/URL."
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         },
         "facebook": {
           "image": "audit-sicurezza-portafoglio-minimal.jpg",

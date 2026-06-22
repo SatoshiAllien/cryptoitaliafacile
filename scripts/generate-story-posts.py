@@ -100,10 +100,12 @@ def main() -> None:
         articles = articles[: args.limit]
 
     manifest = {
-        "version": 2,
+        "version": 3,
         "links_enabled": False,
         "instagram_format": "1080x1920",
         "instagram_safe_area": "120px",
+        "instagram_layout": "hero_logo_centered",
+        "hero_logo_pct": "30-40%",
         "posts": [],
     }
 

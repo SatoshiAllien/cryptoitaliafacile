@@ -8,8 +8,13 @@ from dataclasses import dataclass
 
 from PIL import Image, ImageDraw
 
-from brand_overlay import apply_topic_logo_top_left, draw_center_topic_icon, paste_brand_watermark
-from feed_post_style import PALETTE, _draw_centered_lines, _text_width, _wrap_pixels
+from brand_overlay import (
+    apply_topic_logo_top_left,
+    draw_center_topic_icon,
+    draw_hero_logo_centered,
+    paste_brand_watermark,
+)
+from feed_post_style import PALETTE, _draw_centered_lines, _line_height, _text_width, _wrap_pixels
 from image_style import JPEG_QUALITY, _hex, gradient2, load_font
 from topic_detect import topic_label
 
@@ -26,6 +31,7 @@ class StoryLayout:
     body_size: int
     logo_size: int
     center_icon: int
+    hero_logo: int
     cta_height: int
     cta_font: int
     body_max_lines: int
@@ -34,21 +40,22 @@ class StoryLayout:
 
 INSTAGRAM_STORY = StoryLayout(
     width=1080, height=1920, safe=120,
-    title_size=56, subtitle_size=28, body_size=26,
-    logo_size=76, center_icon=128,
+    title_size=58, subtitle_size=30, body_size=26,
+    logo_size=0, center_icon=0,
+    hero_logo=400,
     cta_height=72, cta_font=26, body_max_lines=2,
     platform="instagram",
 )
 FACEBOOK_STORY = StoryLayout(
     width=1080, height=1350, safe=80,
     title_size=52, subtitle_size=26, body_size=24,
-    logo_size=72, center_icon=108,
+    logo_size=72, center_icon=108, hero_logo=0,
     cta_height=68, cta_font=24, body_max_lines=2,
     platform="facebook",
 )
 
 
-def _draw_bg(draw: ImageDraw.ImageDraw, spec: StoryLayout, *, variant: str, seed: int) -> None:
+def _draw_bg(draw: ImageDraw.ImageDraw, spec: StoryLayout, *, variant: str, seed: int, accent: str) -> None:
     w, h, s = spec.width, spec.height, spec.safe
     gradient2(draw, w, h, PALETTE["bg_dark"], PALETTE["bg_mid"])
     spacing = 44 if variant == "primary" else 36
@@ -60,14 +67,15 @@ def _draw_bg(draw: ImageDraw.ImageDraw, spec: StoryLayout, *, variant: str, seed
 
     rng = random.Random(seed)
     gold = _hex(PALETTE["gold"])
-    for band_y in (s + 20, h - s - 40):
+    orange = _hex(accent)
+    for band_y, color in ((s + 24, gold), (h - s - 48, orange)):
         pts: list[tuple[int, int]] = []
         x = s
         while x < w - s:
             pts.append((x, band_y + rng.randint(-12, 12)))
             x += rng.randint(90, 130)
         if len(pts) >= 2:
-            draw.line(pts, fill=gold, width=2)
+            draw.line(pts, fill=color, width=2)
 
     if variant == "alt":
         draw.rounded_rectangle(
@@ -103,32 +111,121 @@ def _draw_story_cta(
     )
 
 
-def render_story_post(
+def _cta_top(spec: StoryLayout) -> int:
+    return spec.height - spec.safe - spec.cta_height
+
+
+def _render_instagram_story(
     *,
-    platform: str,
+    spec: StoryLayout,
     topic: str,
     title: str,
     subtitle: str,
     body: str,
-    cta: str = "Scopri di più",
-    variant: str = "primary",
-    accent: str = PALETTE["accent"],
+    cta: str,
+    variant: str,
+    accent: str,
 ) -> Image.Image:
     """
-    Layout fisso:
-    1. Logo argomento alto-sx (safe-area)
-    2. Titolo centrato
-    3. Sottotitolo
-    4. Icona centrale
-    5. Testo breve (max 2 frasi)
-    6. CTA visiva in basso
+    Layout IG v3 — logo hero grande e centrato (30–40% area visiva):
+    1. Titolo grande sopra o sotto il logo (variante)
+    2. Sottotitolo breve
+    3. Logo hero centrato con glow/neon
+    4. Testo breve (max 2 frasi)
+    5. CTA visiva in basso
     """
-    spec = INSTAGRAM_STORY if platform == "instagram" else FACEBOOK_STORY
-    seed = hash(f"{title}:{platform}:{variant}") % 10_000
-
+    seed = hash(f"{title}:instagram:{variant}") % 10_000
     img = Image.new("RGB", (spec.width, spec.height), PALETTE["bg_dark"])
     draw = ImageDraw.Draw(img)
-    _draw_bg(draw, spec, variant=variant, seed=seed)
+    _draw_bg(draw, spec, variant=variant, seed=seed, accent=accent)
+
+    content_w = spec.width - spec.safe * 2
+    title_font = load_font(spec.title_size, bold=True)
+    subtitle_font = load_font(spec.subtitle_size)
+    body_font = load_font(spec.body_size)
+
+    title_lines = _wrap_pixels(title, title_font, content_w, max_lines=2)
+    subtitle_lines = _wrap_pixels(subtitle, subtitle_font, content_w, max_lines=2)
+    body_lines = _wrap_pixels(body, body_font, int(content_w * 0.88), max_lines=spec.body_max_lines)
+
+    title_above = variant == "primary"
+    cta_y = _cta_top(spec)
+    body_block_h = len(body_lines) * _line_height(body_font, 10) + 8
+    hero_size = spec.hero_logo
+    hero_cy = spec.height // 2 - 16
+
+    if title_above:
+        y = spec.safe + 8
+        y = _draw_centered_lines(
+            draw, title_lines, y=y, font=title_font, fill=PALETTE["text"],
+            canvas_w=spec.width, line_gap=10,
+        )
+        y += 12
+        y = _draw_centered_lines(
+            draw, subtitle_lines, y=y, font=subtitle_font, fill=PALETTE["gold"],
+            canvas_w=spec.width, line_gap=8,
+        )
+        top_text_bottom = y
+        hero_cy = max(
+            top_text_bottom + hero_size // 2 + 40,
+            min(hero_cy, cta_y - body_block_h - hero_size // 2 - 48),
+        )
+    else:
+        y = spec.safe + 8
+        y = _draw_centered_lines(
+            draw, subtitle_lines, y=y, font=subtitle_font, fill=PALETTE["gold"],
+            canvas_w=spec.width, line_gap=8,
+        )
+        top_text_bottom = y
+        hero_cy = max(
+            top_text_bottom + hero_size // 2 + 56,
+            min(spec.height // 2 + 20, cta_y - body_block_h - hero_size // 2 - 120),
+        )
+
+    img = draw_hero_logo_centered(
+        img, topic, accent=accent,
+        center=(spec.width // 2, hero_cy),
+        size=hero_size,
+        variant=variant,
+    )
+    draw = ImageDraw.Draw(img)
+
+    if title_above:
+        y = hero_cy + hero_size // 2 + 36
+    else:
+        y = hero_cy + hero_size // 2 + 28
+        y = _draw_centered_lines(
+            draw, title_lines, y=y, font=title_font, fill=PALETTE["text"],
+            canvas_w=spec.width, line_gap=10,
+        )
+        y += 16
+
+    max_body_y = cta_y - body_block_h - 12
+    y = min(y, max_body_y)
+    _draw_centered_lines(
+        draw, body_lines, y=y, font=body_font, fill=PALETTE["muted"],
+        canvas_w=spec.width, line_gap=10,
+    )
+    _draw_story_cta(draw, spec=spec, cta=cta, accent=accent)
+    return paste_brand_watermark(img, scale=0.038)
+
+
+def _render_facebook_story(
+    *,
+    spec: StoryLayout,
+    topic: str,
+    title: str,
+    subtitle: str,
+    body: str,
+    cta: str,
+    variant: str,
+    accent: str,
+) -> Image.Image:
+    """Layout FB invariato — logo alto-sx + icona centrale."""
+    seed = hash(f"{title}:facebook:{variant}") % 10_000
+    img = Image.new("RGB", (spec.width, spec.height), PALETTE["bg_dark"])
+    draw = ImageDraw.Draw(img)
+    _draw_bg(draw, spec, variant=variant, seed=seed, accent=accent)
 
     content_w = spec.width - spec.safe * 2
     title_font = load_font(spec.title_size, bold=True)
@@ -139,7 +236,7 @@ def render_story_post(
     subtitle_lines = _wrap_pixels(subtitle, subtitle_font, content_w, max_lines=2)
     body_lines = _wrap_pixels(body, body_font, int(content_w * 0.88), max_lines=spec.body_max_lines)
 
-    y = spec.safe + spec.logo_size + 32
+    y = spec.safe + spec.logo_size + 28
     y = _draw_centered_lines(
         draw, title_lines, y=y, font=title_font, fill=PALETTE["text"],
         canvas_w=spec.width, line_gap=10,
@@ -151,14 +248,14 @@ def render_story_post(
     )
     y += 28
 
-    icon_cy = y + spec.center_icon // 2 + (48 if platform == "instagram" else 28)
+    icon_cy = y + spec.center_icon // 2 + 28
     img = draw_center_topic_icon(
         img, topic, accent=accent,
         center=(spec.width // 2, icon_cy),
         size=spec.center_icon,
     )
     draw = ImageDraw.Draw(img)
-    y = icon_cy + spec.center_icon // 2 + 32
+    y = icon_cy + spec.center_icon // 2 + 28
 
     _draw_centered_lines(
         draw, body_lines, y=y, font=body_font, fill=PALETTE["muted"],
@@ -169,16 +266,39 @@ def render_story_post(
     img = apply_topic_logo_top_left(
         img, topic, accent=accent, size=spec.logo_size, margin=spec.safe,
     )
-    scale = 0.042 if platform == "instagram" else 0.045
-    return paste_brand_watermark(img, scale=scale)
+    return paste_brand_watermark(img, scale=0.045)
+
+
+def render_story_post(
+    *,
+    platform: str,
+    topic: str,
+    title: str,
+    subtitle: str,
+    body: str,
+    cta: str = "Scopri di più",
+    variant: str = "primary",
+    accent: str = PALETTE["accent"],
+) -> Image.Image:
+    spec = INSTAGRAM_STORY if platform == "instagram" else FACEBOOK_STORY
+    if platform == "instagram":
+        return _render_instagram_story(
+            spec=spec, topic=topic, title=title, subtitle=subtitle,
+            body=body, cta=cta, variant=variant, accent=accent,
+        )
+    return _render_facebook_story(
+        spec=spec, topic=topic, title=title, subtitle=subtitle,
+        body=body, cta=cta, variant=variant, accent=accent,
+    )
 
 
 def design_description(topic: str, variant: str, platform: str) -> str:
     if platform == "instagram":
+        title_pos = "sopra" if variant == "primary" else "sotto"
         return (
             f"Story IG 1080×1920 · safe 120px · {variant} · {topic_label(topic)} · "
-            f"logo alto-sx · titolo/sottotitolo centrati · icona centrale · "
-            f"testo 2 frasi · CTA visiva · zero link/URL."
+            f"logo hero centrato ~37% · PNG trasparente · glow/neon · titolo {title_pos} logo · "
+            f"sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         )
     return (
         f"Story FB 1080×1350 · safe 80px · {variant} · {topic_label(topic)} · "

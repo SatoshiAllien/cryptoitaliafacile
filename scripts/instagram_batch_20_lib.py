@@ -10,7 +10,6 @@ from PIL import Image, ImageDraw
 from image_style import (
     CTA,
     JPEG_QUALITY,
-    STORY_HOME_URL,
     _hex,
     draw_accent_bar,
     draw_badge,
@@ -54,11 +53,8 @@ def render_minimal_story(item: dict, *, lang: str = "it") -> Image.Image:
     draw_multiline(draw, (m + 24, 848), desc[:120], load_font(28), "#94A3B8", line_gap=6)
 
     cta = item["cta_it"] if lang == "it" else item["cta_en"]
-    draw_cta_button(draw, (m, 1380, w - m, 1480), f"👉 {cta[:42]}", accent, font_size=30)
-    draw_mixed_text(draw, (m, 1520), f"🔗 {HOME_LINK}", load_font(22, bold=True), accent)
-    draw_mixed_text(draw, (m, 1580), "📍 Sticker LINK qui", load_font(20), "#64748B")
-    draw_mixed_text(draw, (m, 1620), item["sticker_position"], load_font(18), "#475569")
-    footer = "✨ @krown.82 · Crypto Italia Facile" if lang == "en" else "✨ @krown.82 · Crypto Italia Facile"
+    draw_cta_button(draw, (m, 1380, w - m, 1480), cta[:42], accent, font_size=30)
+    footer = "✨ @krown.82 · Crypto Italia Facile"
     draw_mixed_text(draw, (m, 1780), footer, load_font(24), "#64748B")
 
     topic = item.get("topic", "bitcoin")
@@ -74,15 +70,12 @@ def render_advanced_story(item: dict, *, lang: str = "it") -> Image.Image:
     cfg["hook"] = item["hook_it"] if lang == "it" else item["hook_en"]
     cfg["sub"] = item["body_it"] if lang == "it" else item["body_en"]
     cta_text = (item["cta_it"] if lang == "it" else item["cta_en"])[:36]
-    footer = f"🔗 {HOME_LINK[:48]}..."
     story = render_story(
         topic,
         cfg,
-        cta=f"👉 {cta_text}",
-        footer=footer,
+        cta=cta_text,
+        footer="✨ @krown.82",
     )
-    draw = ImageDraw.Draw(story)
-    draw_mixed_text(draw, (56, 1660), f"🔗 {STORY_HOME_URL}", load_font(20, bold=True), cfg["accent"])
     return story
 
 
@@ -105,7 +98,7 @@ def write_manifest() -> None:
     manifest = {
         "version": 1,
         "count": 20,
-        "link": HOME_LINK,
+        "links_enabled": False,
         "size": "1080x1920",
         "items": [],
     }

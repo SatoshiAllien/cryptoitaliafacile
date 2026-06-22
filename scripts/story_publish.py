@@ -12,7 +12,7 @@ import urllib.request
 from pathlib import Path
 
 from instagram_auth import graph_url, is_instagram_login_token
-from story_links import SATOSHI_AI_STORY_LINK, SATOSHI_STORY_STICKER
+from story_links import STORIES_INCLUDE_LINKS
 from story_video_host import stage_story_video
 
 GRAPH = "https://graph.facebook.com/v21.0"
@@ -50,23 +50,14 @@ def _with_story_link(
     platform: str = "instagram",
     ig_variant: int = 0,
 ) -> dict:
-    if not link_url:
-        return params
-    out = dict(params)
-    if platform == "facebook":
-        payload = _fb_link_cta_payloads(link_url)[0]
-        out.update(payload)
-        return out
-    ig_payload = _ig_link_payloads(link_url)[min(ig_variant, len(_ig_link_payloads(link_url)) - 1)]
-    out.update(ig_payload)
-    return out
+    """Le story non includono mai link — ignora link_url."""
+    _ = (link_url, platform, ig_variant)
+    return params
 
 
 def _fb_finish_attempts(video_id: str, link_url: str | None, token: str) -> list[dict]:
-    base = {"upload_phase": "finish", "video_id": video_id, "access_token": token}
-    if not link_url:
-        return [base]
-    return [{**base, **payload} for payload in _fb_link_cta_payloads(link_url)]
+    _ = (link_url, STORIES_INCLUDE_LINKS)
+    return [{"upload_phase": "finish", "video_id": video_id, "access_token": token}]
 
 
 def _link_api_error(result: dict) -> bool:
@@ -204,16 +195,11 @@ def upload_facebook_video_story(
         return uploaded
 
     finished: dict = {}
-    for i, finish_params in enumerate(_fb_finish_attempts(video_id, link_url, token)):
-        label = "FB video_stories finish" if i == 0 else f"FB video_stories finish try {i + 1}"
+    for i, finish_params in enumerate(_fb_finish_attempts(video_id, None, token)):
+        label = "FB video_stories finish"
         finished = graph_request(endpoint, finish_params, label=label)
         if not finished.get("error"):
-            if link_url and i > 0:
-                print(f"Link FB story OK (strategia {i + 1})", flush=True)
             break
-        if link_url:
-            err = finished.get("error", {})
-            print(f"Link FB tentativo {i + 1} fallito: {err.get('message', err)}", flush=True)
     if finished.get("error"):
         return finished
     finished.setdefault("video_id", video_id)
@@ -278,10 +264,6 @@ def _upload_instagram_video_url(
     )
     published.setdefault("creation_id", creation_id)
     published.setdefault("video_url", video_url)
-    if link_url:
-        published["link_requested"] = link_url
-        if not published.get("link_attached"):
-            published["link_note"] = "Link API IG non disponibile — usa QR Parla con Satoshi AI nella story"
     return published
 
 
@@ -292,25 +274,8 @@ def _ig_story_container(
     *,
     label: str,
 ) -> dict:
-    if not link_url:
-        return graph_request(media_url, base_params, label=label)
-    last: dict = {}
-    variants = _ig_link_payloads(link_url)
-    for i, extra in enumerate(variants):
-        params = {**base_params, **extra}
-        attempt_label = label if i == 0 else f"{label} link try {i + 1}"
-        last = graph_request(media_url, params, label=attempt_label)
-        if not last.get("error"):
-            if i > 0:
-                print(f"Link IG story OK (variante {i + 1})", flush=True)
-            last["link_attached"] = True
-            return last
-        if not _link_api_error(last):
-            return last
-        err = last.get("error", {})
-        print(f"Link IG tentativo {i + 1} fallito: {err.get('message', err)}", flush=True)
-    print("Link sticker IG non supportato via API — QR Satoshi AI attivo nella story.", flush=True)
-    return graph_request(media_url, base_params, label=f"{label} (no link)")
+    _ = link_url
+    return graph_request(media_url, base_params, label=label)
 
 
 def _upload_instagram_resumable(
@@ -423,24 +388,11 @@ def publish_facebook_story(
     if not photo_id:
         return {"error": {"message": f"No photo id: {photo}"}}
 
-    story: dict = {}
-    if link_url:
-        for i, payload in enumerate(_fb_link_cta_payloads(link_url)):
-            params = {"photo_id": photo_id, "access_token": token, **payload}
-            lbl = "FB photo_stories" if i == 0 else f"FB photo_stories link try {i + 1}"
-            story = graph_request(f"{GRAPH}/{page_id}/photo_stories", params, label=lbl)
-            if not story.get("error"):
-                if i > 0:
-                    print(f"Link FB photo story OK (strategia {i + 1})", flush=True)
-                break
-            err = story.get("error", {})
-            print(f"Link FB photo tentativo {i + 1} fallito: {err.get('message', err)}", flush=True)
-    else:
-        story = graph_request(
-            f"{GRAPH}/{page_id}/photo_stories",
-            {"photo_id": photo_id, "access_token": token},
-            label="FB photo_stories",
-        )
+    story = graph_request(
+        f"{GRAPH}/{page_id}/photo_stories",
+        {"photo_id": photo_id, "access_token": token},
+        label="FB photo_stories",
+    )
     if story.get("error"):
         return story
     story.setdefault("photo_id", photo_id)

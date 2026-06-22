@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
-"""Pubblica solo Story FB + IG per un articolo (senza post feed)."""
+"""Pubblica solo Story FB + IG per un articolo (senza post feed, senza link)."""
 
 from __future__ import annotations
 
 import argparse
 import json
 import os
-import urllib.parse
 from pathlib import Path
 
 from instagram_auth import resolve_credentials
-from story_links import SATOSHI_AI_STORY_LINK
-from instagram_story_queue import HOME_LINK, enqueue_story, is_quota_error
+from instagram_story_queue import enqueue_story, is_quota_error
 from story_publish import publish_facebook_story, publish_instagram_story
 from story_video import prepare_story_video, story_image_file
 
@@ -44,28 +42,21 @@ def load_article(slug: str) -> dict:
     raise SystemExit(f"Articolo non trovato: {slug}")
 
 
-def article_url(slug: str) -> str:
-    return f"{SITE_URL}articolo.html?slug={urllib.parse.quote(slug)}"
-
-
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Pubblica solo Story FB/IG")
+    parser = argparse.ArgumentParser(description="Pubblica solo Story FB/IG (no link)")
     parser.add_argument("--slug", required=True)
     parser.add_argument("--slot", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--skip-facebook", action="store_true")
     parser.add_argument("--skip-instagram", action="store_true")
-    parser.add_argument("--link", default=SATOSHI_AI_STORY_LINK, help="URL sticker Satoshi AI")
     args = parser.parse_args()
 
     article = load_article(args.slug)
-    link = args.link
     variants = ("abstract", "thematic", "minimal")
     code = 0
 
     print(f"Articolo: {article['title']}")
-    print(f"Link: {link}")
-    print(f"Variante: {variants[args.slot % 3]} (slot {args.slot})")
+    print(f"Variante: {variants[args.slot % 3]} (slot {args.slot}) — nessun link")
 
     if not args.skip_facebook:
         env = load_env()
@@ -81,13 +72,13 @@ def main() -> int:
             video_path = None
             if not args.dry_run:
                 video_path, track = prepare_story_video(
-                    "facebook", img_file, args.slot, 0, 20, link_url=link
+                    "facebook", img_file, args.slot, 0, 20
                 )
                 print(f"MUSICA: {track['title']} — {track['artist']}")
                 print(f"VIDEO: {video_path}")
             result = publish_facebook_story(
                 page_id, story_url, token, args.dry_run,
-                video_path=video_path, use_video=True, link_url=link,
+                video_path=video_path, use_video=True,
             )
             print("RISULTATO FB:", json.dumps(result, indent=2))
             if result.get("error"):
@@ -106,13 +97,13 @@ def main() -> int:
             video_path = None
             if not args.dry_run:
                 video_path, track = prepare_story_video(
-                    "instagram", img_file, args.slot, 0, 20, link_url=link
+                    "instagram", img_file, args.slot, 0, 20
                 )
                 print(f"MUSICA: {track['title']} — {track['artist']}")
                 print(f"VIDEO: {video_path}")
             result = publish_instagram_story(
                 ig_id, story_url, token, args.dry_run,
-                video_path=video_path, use_video=True, link_url=link,
+                video_path=video_path, use_video=True,
             )
             print("RISULTATO IG:", json.dumps(result, indent=2))
             if result.get("error"):
@@ -120,14 +111,10 @@ def main() -> int:
                     entry = enqueue_story(
                         args.slug,
                         slot=args.slot,
-                        link_url=link,
                         reason="quota_limit",
                         note="Accodato automaticamente da post-story-only.py",
                     )
-                    print(
-                        "\n⏳ Instagram in coda (limite API). "
-                        "Ripubblicazione automatica via Krown82-IG-StoryRetry"
-                    )
+                    print("\n⏳ Instagram in coda (limite API).")
                     print(f"   Coda: {entry['slug']} slot {entry['slot']}")
                 code = 1
 

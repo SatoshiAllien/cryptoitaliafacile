@@ -1,14 +1,12 @@
-"""Coda story Instagram in attesa (limite API) + pubblicazione."""
+"""Coda story Instagram in attesa (limite API) — senza link."""
 
 from __future__ import annotations
 
 import json
-import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
 from instagram_auth import resolve_credentials
-from story_links import SATOSHI_AI_STORY_LINK
 from story_publish import publish_instagram_story
 from story_video import prepare_story_video, story_image_file
 
@@ -16,7 +14,6 @@ ROOT = Path(__file__).resolve().parent.parent
 ARTICLES_PATH = ROOT / "data" / "articles.json"
 QUEUE_PATH = ROOT / "data" / "instagram-story-queue.json"
 ENV_PATH = Path(__file__).resolve().parent / ".env"
-HOME_LINK = SATOSHI_AI_STORY_LINK
 SITE_URL = "https://satoshiallien.github.io/cryptoitaliafacile/"
 IG_STORY_BASE = f"{SITE_URL}assets/img/instagram/stories/"
 
@@ -48,10 +45,6 @@ def article_by_slug(slug: str) -> dict | None:
     return next((a for a in load_articles() if a["slug"] == slug), None)
 
 
-def article_link(slug: str) -> str:
-    return SATOSHI_AI_STORY_LINK
-
-
 def load_queue() -> dict:
     if not QUEUE_PATH.exists():
         return {"pending": [], "completed": []}
@@ -77,6 +70,7 @@ def enqueue_story(
     reason: str = "manual",
     note: str = "",
 ) -> dict:
+    _ = link_url
     article = article_by_slug(slug)
     if not article:
         raise ValueError(f"Articolo non trovato: {slug}")
@@ -91,7 +85,6 @@ def enqueue_story(
         "slug": slug,
         "title": article["title"],
         "slot": slot,
-        "link_url": link_url or HOME_LINK,
         "reason": reason,
         "note": note,
         "enqueued_at": datetime.now(timezone.utc).isoformat(),
@@ -108,7 +101,6 @@ def publish_instagram_queued_item(item: dict, *, dry_run: bool = False) -> dict:
         return {"error": {"message": f"Articolo non trovato: {item['slug']}"}}
 
     slot = int(item.get("slot", 0))
-    link_url = item.get("link_url") or HOME_LINK
     env = load_env()
     ig_id, token, api_mode = resolve_credentials(env)
 
@@ -120,9 +112,7 @@ def publish_instagram_queued_item(item: dict, *, dry_run: bool = False) -> dict:
     video_path = None
 
     if not dry_run:
-        video_path, track = prepare_story_video(
-            "instagram", img_file, slot, 0, 20, link_url=link_url
-        )
+        video_path, track = prepare_story_video("instagram", img_file, slot, 0, 20)
         print(f"MUSICA: {track['title']} — {track['artist']}")
         print(f"VIDEO: {video_path}")
 
@@ -133,12 +123,10 @@ def publish_instagram_queued_item(item: dict, *, dry_run: bool = False) -> dict:
         dry_run=dry_run,
         video_path=video_path,
         use_video=True,
-        link_url=link_url,
     )
     result["_meta"] = {
         "api_mode": api_mode,
         "story_url": story_url,
-        "link_url": link_url,
         "slug": item["slug"],
         "slot": slot,
     }
@@ -173,7 +161,6 @@ def process_queue(*, dry_run: bool = False, max_items: int = 3) -> dict:
 
         slug = item.get("slug", "?")
         print(f"\n→ Story in coda: {item.get('title', slug)} (slot {item.get('slot', 0)})")
-        print(f"  Link: {item.get('link_url', HOME_LINK)}")
 
         result = publish_instagram_queued_item(item, dry_run=dry_run)
         attempted += 1
@@ -184,8 +171,6 @@ def process_queue(*, dry_run: bool = False, max_items: int = 3) -> dict:
         if dry_run and result.get("dry_run"):
             report["published"] += 1
             report["successes"].append({"slug": slug, "dry_run": True})
-            if not dry_run:
-                completed.append({**item, "published_at": item["last_attempt_at"], "result": result})
             continue
 
         if result.get("error"):

@@ -144,13 +144,11 @@ TOPICS: dict[str, dict] = {
     },
 }
 
-STORY_HOME_URL = "https://satoshiallien.github.io/cryptoitaliafacile/index.html"
-
 CTA = {
     "fb_post": "👉 Clicca qui",
-    "fb_story": "👉 Clicca qui",
+    "fb_story": "Continua a imparare",
     "ig_post": "👆 Tap here",
-    "ig_story": "👆 Tap here",
+    "ig_story": "Continua a imparare",
     "x_post": "👉 Tap to read",
 }
 
@@ -362,10 +360,9 @@ def render_story(
     draw_mixed_text(draw, (m + 36, 580), cfg["sub"], load_font(34), "#94A3B8")
 
     draw.rounded_rectangle((m, 780, width - m, 900), radius=22, fill=(15, 23, 42), outline=_hex(cfg["accent"]), width=3)
-    draw_mixed_text(draw, (m + 32, 828), "🌐 cryptoitaliafacile.com", load_font(34, bold=True), cfg["accent"])
+    draw_mixed_text(draw, (m + 32, 828), cfg.get("badge_text", cfg["badge"]), load_font(30, bold=True), cfg["accent"])
 
     draw_cta_button(draw, (m, 1480, width - m - 80, 1580), cta, cfg["accent"], font_size=34)
-    draw_mixed_text(draw, (m, 1620), f"🔗 {STORY_HOME_URL}", load_font(24, bold=True), cfg["accent"])
     draw_mixed_text(draw, (m, 1780), footer, load_font(26), "#64748B")
 
     return apply_branding(img, name, icon_box=(720, 940, 980, 1200), accent=cfg["accent"], brand_scale=0.09)

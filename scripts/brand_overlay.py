@@ -222,6 +222,40 @@ def apply_topic_logo_top_left(
     return out
 
 
+def draw_center_topic_icon(
+    img: Image.Image,
+    topic: str,
+    *,
+    accent: str = "#F7931A",
+    center: tuple[int, int],
+    size: int = 110,
+) -> Image.Image:
+    """Icona argomento grande al centro del layout."""
+    out = img.copy()
+    layer = out.convert("RGBA")
+    draw = ImageDraw.Draw(layer)
+    cx, cy = center
+    half = size // 2
+    box = (cx - half, cy - half, cx + half, cy + half)
+    draw.ellipse(box, fill=(15, 23, 42, 235), outline=accent, width=3)
+
+    inner = (box[0] + 10, box[1] + 10, box[2] - 10, box[3] - 10)
+    if topic == "eu":
+        _draw_eu_flag(draw, inner)
+    elif topic == "usa":
+        _draw_usa_flag(draw, inner)
+    else:
+        crypto = load_crypto_icon(topic)
+        fitted = crypto.copy()
+        fitted.thumbnail((int(size * 0.58), int(size * 0.58)), Image.Resampling.LANCZOS)
+        px = cx - fitted.width // 2
+        py = cy - fitted.height // 2
+        layer.paste(fitted, (px, py), fitted)
+
+    out.paste(layer.convert("RGB"))
+    return out
+
+
 def paste_brand_watermark(img: Image.Image, *, scale: float = 0.05) -> Image.Image:
     """Logo brand piccolo in basso a destra."""
     out = img.copy()

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera titoli clickbait, testo breve e CTA da articoli del sito."""
+"""Genera titolo, sottotitolo, testo breve e CTA da articoli del sito."""
 
 from __future__ import annotations
 
@@ -10,13 +10,13 @@ from topic_detect import detect_topic, topic_label
 
 CTA_POOL = (
     "Scopri di più",
-    "Leggi l'articolo completo",
+    "Leggi l'articolo",
     "Continua sul sito",
     "Approfondisci ora",
     "Impara in 2 minuti",
 )
 
-HOOK_TEMPLATES = (
+TITLE_TEMPLATES = (
     "La verità su {topic} in 10 secondi",
     "Il trucco che nessuno ti dice su {topic}",
     "{topic}: spiegato facile",
@@ -27,7 +27,7 @@ HOOK_TEMPLATES = (
     "Errori da evitare con {topic}",
 )
 
-ALT_HOOK_TEMPLATES = (
+ALT_TITLE_TEMPLATES = (
     "{short_title}? Ecco la risposta",
     "Hai capito davvero {topic}?",
     "{topic}: la guida che ti serviva",
@@ -36,7 +36,14 @@ ALT_HOOK_TEMPLATES = (
     "{topic} — tutto quello che conta",
 )
 
-SECURITY_HOOKS = (
+SUBTITLE_TEMPLATES = (
+    "{topic_label} · Spiegato facile per tutti",
+    "Crypto Italia Facile · {topic_label}",
+    "Guida chiara · {topic_label}",
+    "Per principianti · {topic_label}",
+)
+
+SECURITY_TITLES = (
     "Come evitare la prossima truffa crypto",
     "Attenzione: questo errore ti costa caro",
     "Proteggiti prima che sia troppo tardi",
@@ -44,7 +51,7 @@ SECURITY_HOOKS = (
     "Sicurezza crypto: non saltare questo",
 )
 
-TREND_HOOKS = (
+TREND_TITLES = (
     "Cosa sta cambiando nel mondo crypto",
     "Trend 2026: non restare indietro",
     "Aggiornamento che devi conoscere",
@@ -54,7 +61,6 @@ TREND_HOOKS = (
 
 
 def _short_topic_name(topic: str, article: dict) -> str:
-    label = topic_label(topic)
     names = {
         "bitcoin": "Bitcoin",
         "defi": "la DeFi",
@@ -73,21 +79,21 @@ def _short_topic_name(topic: str, article: dict) -> str:
     title = (article.get("title") or "").split(":")[0].strip()
     if len(title) <= 42:
         return title
+    label = topic_label(topic)
     return label if label != "GUIDA" else "questo argomento crypto"
 
 
-def _seed(slug: str, variant: str) -> int:
-    h = hashlib.md5(f"{slug}:{variant}".encode()).hexdigest()
+def _seed(slug: str, variant: str, salt: str = "") -> int:
+    h = hashlib.md5(f"{slug}:{variant}:{salt}".encode()).hexdigest()
     return int(h[:8], 16)
 
 
-def _pick(pool: tuple[str, ...], slug: str, variant: str) -> str:
-    return pool[_seed(slug, variant) % len(pool)]
+def _pick(pool: tuple[str, ...], slug: str, variant: str, salt: str = "") -> str:
+    return pool[_seed(slug, variant, salt) % len(pool)]
 
 
-def _clean_excerpt(article: dict, max_len: int = 160) -> str:
-    text = (article.get("excerpt") or "").strip()
-    text = re.sub(r"\s+", " ", text)
+def _clean_text(text: str, max_len: int) -> str:
+    text = re.sub(r"\s+", " ", (text or "").strip())
     if len(text) <= max_len:
         return text
     cut = text[: max_len - 1].rsplit(" ", 1)[0]
@@ -101,41 +107,48 @@ def _short_title(article: dict, max_len: int = 48) -> str:
     return title[: max_len - 1].rsplit(" ", 1)[0] + "…"
 
 
-def build_hook(article: dict, *, variant: str = "primary") -> str:
+def build_title(article: dict, *, variant: str = "primary") -> str:
     slug = article.get("slug", "")
     topic = detect_topic(article)
-    group_seed = _seed(slug, variant)
+    group_seed = _seed(slug, variant, "title")
 
     if topic == "sicurezza" and variant == "primary":
-        return _pick(SECURITY_HOOKS, slug, variant)
+        return _pick(SECURITY_TITLES, slug, variant, "title")
     if topic in ("trend", "news", "eu", "usa") and variant == "primary":
-        return _pick(TREND_HOOKS, slug, variant)
+        return _pick(TREND_TITLES, slug, variant, "title")
 
     topic_name = _short_topic_name(topic, article)
-    templates = HOOK_TEMPLATES if variant == "primary" else ALT_HOOK_TEMPLATES
+    templates = TITLE_TEMPLATES if variant == "primary" else ALT_TITLE_TEMPLATES
     template = templates[group_seed % len(templates)]
-    hook = template.format(topic=topic_name, short_title=_short_title(article))
-    if len(hook) > 72:
-        hook = hook[:69] + "…"
-    return hook
+    title = template.format(topic=topic_name, short_title=_short_title(article))
+    return _clean_text(title, 72)
+
+
+def build_subtitle(article: dict, *, variant: str = "primary") -> str:
+    slug = article.get("slug", "")
+    topic = detect_topic(article)
+    label = topic_label(topic)
+    template = _pick(SUBTITLE_TEMPLATES, slug, variant, "sub")
+    subtitle = template.format(topic_label=label)
+    difficulty = article.get("difficulty", "")
+    if difficulty == "beginner":
+        subtitle = f"Per principianti · {label}"
+    return _clean_text(subtitle, 56)
 
 
 def build_body(article: dict) -> str:
-    return _clean_excerpt(article, max_len=155)
+    return _clean_text(article.get("excerpt") or "", 200)
 
 
 def build_cta(article: dict, *, variant: str = "primary") -> str:
-    slug = article.get("slug", "")
-    return _pick(CTA_POOL, slug, f"cta-{variant}")
+    return _pick(CTA_POOL, article.get("slug", ""), variant, "cta")
 
 
 def build_caption(article: dict, *, variant: str = "primary", lang: str = "it") -> str:
-    """Caption senza link — solo hook, testo e CTA."""
-    hook = build_hook(article, variant=variant)
+    title = build_title(article, variant=variant)
     body = build_body(article)
     cta = build_cta(article, variant=variant)
-    topic = detect_topic(article)
-    badge = topic_label(topic)
+    badge = topic_label(detect_topic(article))
 
     tags: list[str] = []
     for raw in (article.get("tags") or [])[:4]:
@@ -146,7 +159,7 @@ def build_caption(article: dict, *, variant: str = "primary", lang: str = "it") 
     base = "#crypto #CryptoItaliaFacile #educazione #bitcoin"
     if lang == "en":
         return (
-            f"🔥 {hook}\n\n"
+            f"🔥 {title}\n\n"
             f"📌 {badge}\n\n"
             f"{body}\n\n"
             f"👉 {cta}\n\n"
@@ -154,7 +167,7 @@ def build_caption(article: dict, *, variant: str = "primary", lang: str = "it") 
         ).strip()[:2200]
 
     return (
-        f"🔥 {hook}\n\n"
+        f"🔥 {title}\n\n"
         f"📌 {badge}\n\n"
         f"{body}\n\n"
         f"👉 {cta}\n\n"
@@ -163,14 +176,20 @@ def build_caption(article: dict, *, variant: str = "primary", lang: str = "it") 
 
 
 def post_payload(article: dict, *, variant: str = "primary") -> dict:
-    """Dati per rendering grafico e pubblicazione."""
+    topic = detect_topic(article)
+    title = build_title(article, variant=variant)
+    subtitle = build_subtitle(article, variant=variant)
+    body = build_body(article)
+    cta = build_cta(article, variant=variant)
     return {
         "slug": article["slug"],
-        "topic": detect_topic(article),
-        "topic_label": topic_label(detect_topic(article)),
-        "hook": build_hook(article, variant=variant),
-        "body": build_body(article),
-        "cta": build_cta(article, variant=variant),
+        "topic": topic,
+        "topic_label": topic_label(topic),
+        "title": title,
+        "subtitle": subtitle,
+        "body": body,
+        "cta": cta,
+        "hook": title,
         "caption_it": build_caption(article, variant=variant, lang="it"),
         "caption_en": build_caption(article, variant=variant, lang="en"),
         "variant": variant,

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera post feed 1080×1350 da articles.json — primario + alternativo per slug."""
+"""Genera post feed ordinati da articles.json — IG 1080×1350 + FB 1200×1200."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 from feed_post_content import post_payload
-from feed_post_style import JPEG_QUALITY, design_description, render_feed_portrait
+from feed_post_style import JPEG_QUALITY, design_description, render_feed_post
 from topic_detect import detect_topic
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,43 +37,59 @@ ACCENT_BY_TOPIC = {
 }
 
 
-def portrait_filename(slug: str, *, variant: str = "primary") -> str:
-    if variant == "alt":
-        return f"{slug}-portrait-alt.jpg"
-    return f"{slug}-portrait.jpg"
+def ig_filename(slug: str, *, variant: str = "primary") -> str:
+    return f"{slug}-portrait-alt.jpg" if variant == "alt" else f"{slug}-portrait.jpg"
 
 
-def generate_one(article: dict, *, variant: str) -> tuple[Path, dict]:
+def fb_filename(slug: str, *, variant: str = "primary") -> str:
+    return f"{slug}-square-alt.jpg" if variant == "alt" else f"{slug}-square.jpg"
+
+
+def generate_variant(article: dict, *, variant: str) -> dict:
     payload = post_payload(article, variant=variant)
     topic = detect_topic(article)
     accent = ACCENT_BY_TOPIC.get(topic, "#F7931A")
-    img = render_feed_portrait(
+    common = dict(
         topic=topic,
-        hook=payload["hook"],
+        title=payload["title"],
+        subtitle=payload["subtitle"],
         body=payload["body"],
         cta=payload["cta"],
         variant=variant,
         accent=accent,
     )
-    fname = portrait_filename(article["slug"], variant=variant)
-    out = IG_OUT / fname
-    out.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out, "JPEG", quality=JPEG_QUALITY, optimize=True)
+
+    ig_name = ig_filename(article["slug"], variant=variant)
+    ig_img = render_feed_post(platform="instagram", **common)
+    IG_OUT.mkdir(parents=True, exist_ok=True)
+    ig_img.save(IG_OUT / ig_name, "JPEG", quality=JPEG_QUALITY, optimize=True)
+
+    fb_name = fb_filename(article["slug"], variant=variant)
+    fb_img = render_feed_post(platform="facebook", **common)
     FB_OUT.mkdir(parents=True, exist_ok=True)
-    img.save(FB_OUT / fname, "JPEG", quality=JPEG_QUALITY, optimize=True)
-    meta = {
+    fb_img.save(FB_OUT / fb_name, "JPEG", quality=JPEG_QUALITY, optimize=True)
+
+    return {
         **payload,
-        "image": fname,
-        "design": design_description(topic, variant),
-        "size": "1080x1350",
+        "instagram": {
+            "image": ig_name,
+            "size": "1080x1350",
+            "safe_area": "80px",
+            "design": design_description(topic, variant, "instagram"),
+        },
+        "facebook": {
+            "image": fb_name,
+            "size": "1200x1200",
+            "safe_area": "100px",
+            "design": design_description(topic, variant, "facebook"),
+        },
     }
-    return out, meta
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Genera post feed 1080×1350")
+    parser = argparse.ArgumentParser(description="Genera post feed IG + FB")
     parser.add_argument("--slug", help="Solo uno slug")
-    parser.add_argument("--limit", type=int, default=0, help="Limita numero articoli")
+    parser.add_argument("--limit", type=int, default=0)
     args = parser.parse_args()
 
     data = json.loads(ARTICLES_PATH.read_text(encoding="utf-8"))
@@ -85,24 +101,29 @@ def main() -> None:
     if args.limit:
         articles = articles[: args.limit]
 
-    manifest: dict = {"version": 2, "format": "1080x1350", "posts": []}
+    manifest: dict = {
+        "version": 3,
+        "instagram": "1080x1350",
+        "facebook": "1200x1200",
+        "posts": [],
+    }
     ok = 0
 
     for article in articles:
         slug = article["slug"]
-        primary_path, primary_meta = generate_one(article, variant="primary")
-        alt_path, alt_meta = generate_one(article, variant="alt")
-        article["igPortraitImage"] = portrait_filename(slug)
-        article["fbPortraitImage"] = portrait_filename(slug)
-        article["igPortraitImageAlt"] = portrait_filename(slug, variant="alt")
-        article["feedPostVariant"] = "portrait-v2"
-        manifest["posts"].append({
-            "slug": slug,
-            "primary": primary_meta,
-            "alt": alt_meta,
-        })
+        primary = generate_variant(article, variant="primary")
+        alt = generate_variant(article, variant="alt")
+
+        article["igPortraitImage"] = ig_filename(slug)
+        article["igPortraitImageAlt"] = ig_filename(slug, variant="alt")
+        article["fbSquareImage"] = fb_filename(slug)
+        article["fbSquareImageAlt"] = fb_filename(slug, variant="alt")
+        article["fbPortraitImage"] = article["fbSquareImage"]
+        article["feedPostVariant"] = "layout-v3"
+
+        manifest["posts"].append({"slug": slug, "primary": primary, "alt": alt})
         ok += 1
-        print(f"OK {slug} → {primary_path.name} + {alt_path.name}")
+        print(f"OK {slug} → IG {ig_filename(slug)} + FB {fb_filename(slug)} (+alt)")
 
     ARTICLES_PATH.write_text(
         json.dumps(data, indent=2, ensure_ascii=False) + "\n",
@@ -112,7 +133,7 @@ def main() -> None:
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    print(f"\nGenerati {ok} post (×2 varianti) — manifest: {MANIFEST_PATH.relative_to(ROOT)}")
+    print(f"\nGenerati {ok} articoli × 2 varianti × 2 piattaforme — {MANIFEST_PATH.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":

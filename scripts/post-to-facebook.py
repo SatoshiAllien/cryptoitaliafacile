@@ -159,9 +159,13 @@ def facebook_story_image_file(article: dict, slot: int = 0) -> str:
 def facebook_image_file(article: dict, *, variant: str = "primary") -> str:
     slug = article.get("slug", "post")
     if variant == "alt":
+        if article.get("fbSquareImageAlt"):
+            return article["fbSquareImageAlt"]
         if article.get("igPortraitImageAlt"):
             return article["igPortraitImageAlt"]
-        return f"{slug}-portrait-alt.jpg"
+        return f"{slug}-square-alt.jpg"
+    if article.get("fbSquareImage"):
+        return article["fbSquareImage"]
     if article.get("fbPortraitImage"):
         return article["fbPortraitImage"]
     if article.get("igPortraitImage"):

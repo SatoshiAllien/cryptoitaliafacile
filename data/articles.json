@@ -28,7 +28,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "iniziare-exchange-revolut-kraken-portrait.jpg"
+      "igPortraitImage": "iniziare-exchange-revolut-kraken-portrait.jpg",
+      "fbPortraitImage": "iniziare-exchange-revolut-kraken-portrait.jpg",
+      "igPortraitImageAlt": "iniziare-exchange-revolut-kraken-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "lightning-network-guida",
@@ -58,7 +61,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "lightning-network-guida-portrait.jpg"
+      "igPortraitImage": "lightning-network-guida-portrait.jpg",
+      "fbPortraitImage": "lightning-network-guida-portrait.jpg",
+      "igPortraitImageAlt": "lightning-network-guida-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "comprare-bitcoin-prima-volta",
@@ -87,7 +93,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "comprare-bitcoin-prima-volta-portrait.jpg"
+      "igPortraitImage": "comprare-bitcoin-prima-volta-portrait.jpg",
+      "fbPortraitImage": "comprare-bitcoin-prima-volta-portrait.jpg",
+      "igPortraitImageAlt": "comprare-bitcoin-prima-volta-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "creare-wallet-sicuro",
@@ -115,7 +124,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "creare-wallet-sicuro-portrait.jpg"
+      "igPortraitImage": "creare-wallet-sicuro-portrait.jpg",
+      "fbPortraitImage": "creare-wallet-sicuro-portrait.jpg",
+      "igPortraitImageAlt": "creare-wallet-sicuro-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trasferire-crypto-exchange",
@@ -142,7 +154,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trasferire-crypto-exchange-portrait.jpg"
+      "igPortraitImage": "trasferire-crypto-exchange-portrait.jpg",
+      "fbPortraitImage": "trasferire-crypto-exchange-portrait.jpg",
+      "igPortraitImageAlt": "trasferire-crypto-exchange-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "staking-ethereum",
@@ -169,7 +184,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "staking-ethereum-portrait.jpg"
+      "igPortraitImage": "staking-ethereum-portrait.jpg",
+      "fbPortraitImage": "staking-ethereum-portrait.jpg",
+      "igPortraitImageAlt": "staking-ethereum-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "usare-metamask",
@@ -196,7 +214,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "usare-metamask-portrait.jpg"
+      "igPortraitImage": "usare-metamask-portrait.jpg",
+      "fbPortraitImage": "usare-metamask-portrait.jpg",
+      "igPortraitImageAlt": "usare-metamask-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "leggere-indirizzo-wallet",
@@ -222,7 +243,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "leggere-indirizzo-wallet-portrait.jpg"
+      "igPortraitImage": "leggere-indirizzo-wallet-portrait.jpg",
+      "fbPortraitImage": "leggere-indirizzo-wallet-portrait.jpg",
+      "igPortraitImageAlt": "leggere-indirizzo-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "dichiarare-crypto-italia",
@@ -248,7 +272,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "dichiarare-crypto-italia-portrait.jpg"
+      "igPortraitImage": "dichiarare-crypto-italia-portrait.jpg",
+      "fbPortraitImage": "dichiarare-crypto-italia-portrait.jpg",
+      "igPortraitImageAlt": "dichiarare-crypto-italia-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "scegliere-exchange-sicuro",
@@ -274,7 +301,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "scegliere-exchange-sicuro-portrait.jpg"
+      "igPortraitImage": "scegliere-exchange-sicuro-portrait.jpg",
+      "fbPortraitImage": "scegliere-exchange-sicuro-portrait.jpg",
+      "igPortraitImageAlt": "scegliere-exchange-sicuro-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "proteggere-seed-phrase",
@@ -302,7 +332,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "proteggere-seed-phrase-portrait.jpg"
+      "igPortraitImage": "proteggere-seed-phrase-portrait.jpg",
+      "fbPortraitImage": "proteggere-seed-phrase-portrait.jpg",
+      "igPortraitImageAlt": "proteggere-seed-phrase-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "prima-swap-uniswap",
@@ -328,7 +361,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "prima-swap-uniswap-portrait.jpg"
+      "igPortraitImage": "prima-swap-uniswap-portrait.jpg",
+      "fbPortraitImage": "prima-swap-uniswap-portrait.jpg",
+      "igPortraitImageAlt": "prima-swap-uniswap-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "hardware-wallet-ledger",
@@ -354,7 +390,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "hardware-wallet-ledger-portrait.jpg"
+      "igPortraitImage": "hardware-wallet-ledger-portrait.jpg",
+      "fbPortraitImage": "hardware-wallet-ledger-portrait.jpg",
+      "igPortraitImageAlt": "hardware-wallet-ledger-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "capire-gas-fee",
@@ -380,7 +419,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "capire-gas-fee-portrait.jpg"
+      "igPortraitImage": "capire-gas-fee-portrait.jpg",
+      "fbPortraitImage": "capire-gas-fee-portrait.jpg",
+      "igPortraitImageAlt": "capire-gas-fee-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "dca-crypto",
@@ -406,7 +448,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "dca-crypto-portrait.jpg"
+      "igPortraitImage": "dca-crypto-portrait.jpg",
+      "fbPortraitImage": "dca-crypto-portrait.jpg",
+      "igPortraitImageAlt": "dca-crypto-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "verificare-smart-contract",
@@ -432,7 +477,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "verificare-smart-contract-portrait.jpg"
+      "igPortraitImage": "verificare-smart-contract-portrait.jpg",
+      "fbPortraitImage": "verificare-smart-contract-portrait.jpg",
+      "igPortraitImageAlt": "verificare-smart-contract-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "usare-etherscan",
@@ -458,7 +506,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "usare-etherscan-portrait.jpg"
+      "igPortraitImage": "usare-etherscan-portrait.jpg",
+      "fbPortraitImage": "usare-etherscan-portrait.jpg",
+      "igPortraitImageAlt": "usare-etherscan-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "cold-wallet-chiavi-offline",
@@ -484,7 +535,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "cold-wallet-chiavi-offline-portrait.jpg"
+      "igPortraitImage": "cold-wallet-chiavi-offline-portrait.jpg",
+      "fbPortraitImage": "cold-wallet-chiavi-offline-portrait.jpg",
+      "igPortraitImageAlt": "cold-wallet-chiavi-offline-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "yield-farming-sicurezza",
@@ -510,7 +564,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "yield-farming-sicurezza-portrait.jpg"
+      "igPortraitImage": "yield-farming-sicurezza-portrait.jpg",
+      "fbPortraitImage": "yield-farming-sicurezza-portrait.jpg",
+      "igPortraitImageAlt": "yield-farming-sicurezza-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "convertire-crypto-euro",
@@ -536,7 +593,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "convertire-crypto-euro-portrait.jpg"
+      "igPortraitImage": "convertire-crypto-euro-portrait.jpg",
+      "fbPortraitImage": "convertire-crypto-euro-portrait.jpg",
+      "igPortraitImageAlt": "convertire-crypto-euro-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "alert-prezzo-portafoglio",
@@ -562,7 +622,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "alert-prezzo-portafoglio-portrait.jpg"
+      "igPortraitImage": "alert-prezzo-portafoglio-portrait.jpg",
+      "fbPortraitImage": "alert-prezzo-portafoglio-portrait.jpg",
+      "igPortraitImageAlt": "alert-prezzo-portafoglio-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "recuperare-crypto-sbagliato",
@@ -588,7 +651,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "recuperare-crypto-sbagliato-portrait.jpg"
+      "igPortraitImage": "recuperare-crypto-sbagliato-portrait.jpg",
+      "fbPortraitImage": "recuperare-crypto-sbagliato-portrait.jpg",
+      "igPortraitImageAlt": "recuperare-crypto-sbagliato-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-mai-seed-phrase",
@@ -612,7 +678,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-mai-seed-phrase-portrait.jpg"
+      "igPortraitImage": "tip-mai-seed-phrase-portrait.jpg",
+      "fbPortraitImage": "tip-mai-seed-phrase-portrait.jpg",
+      "igPortraitImageAlt": "tip-mai-seed-phrase-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-2fa-exchange",
@@ -637,7 +706,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-2fa-exchange-portrait.jpg"
+      "igPortraitImage": "tip-2fa-exchange-portrait.jpg",
+      "fbPortraitImage": "tip-2fa-exchange-portrait.jpg",
+      "igPortraitImageAlt": "tip-2fa-exchange-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-verifica-url",
@@ -661,7 +733,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-verifica-url-portrait.jpg"
+      "igPortraitImage": "tip-verifica-url-portrait.jpg",
+      "fbPortraitImage": "tip-verifica-url-portrait.jpg",
+      "igPortraitImageAlt": "tip-verifica-url-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-non-tenere-exchange",
@@ -686,7 +761,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-non-tenere-exchange-portrait.jpg"
+      "igPortraitImage": "tip-non-tenere-exchange-portrait.jpg",
+      "fbPortraitImage": "tip-non-tenere-exchange-portrait.jpg",
+      "igPortraitImageAlt": "tip-non-tenere-exchange-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-inizia-poco",
@@ -710,7 +788,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-inizia-poco-portrait.jpg"
+      "igPortraitImage": "tip-inizia-poco-portrait.jpg",
+      "fbPortraitImage": "tip-inizia-poco-portrait.jpg",
+      "igPortraitImageAlt": "tip-inizia-poco-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-controlla-rete",
@@ -734,7 +815,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-controlla-rete-portrait.jpg"
+      "igPortraitImage": "tip-controlla-rete-portrait.jpg",
+      "fbPortraitImage": "tip-controlla-rete-portrait.jpg",
+      "igPortraitImageAlt": "tip-controlla-rete-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-rubrica-wallet",
@@ -758,7 +842,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-rubrica-wallet-portrait.jpg"
+      "igPortraitImage": "tip-rubrica-wallet-portrait.jpg",
+      "fbPortraitImage": "tip-rubrica-wallet-portrait.jpg",
+      "igPortraitImageAlt": "tip-rubrica-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-no-screenshot-seed",
@@ -782,7 +869,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-no-screenshot-seed-portrait.jpg"
+      "igPortraitImage": "tip-no-screenshot-seed-portrait.jpg",
+      "fbPortraitImage": "tip-no-screenshot-seed-portrait.jpg",
+      "igPortraitImageAlt": "tip-no-screenshot-seed-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-diffida-telegram",
@@ -806,7 +896,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-diffida-telegram-portrait.jpg"
+      "igPortraitImage": "tip-diffida-telegram-portrait.jpg",
+      "fbPortraitImage": "tip-diffida-telegram-portrait.jpg",
+      "igPortraitImageAlt": "tip-diffida-telegram-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-aggiorna-wallet",
@@ -830,7 +923,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-aggiorna-wallet-portrait.jpg"
+      "igPortraitImage": "tip-aggiorna-wallet-portrait.jpg",
+      "fbPortraitImage": "tip-aggiorna-wallet-portrait.jpg",
+      "igPortraitImageAlt": "tip-aggiorna-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-email-dedicata",
@@ -854,7 +950,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-email-dedicata-portrait.jpg"
+      "igPortraitImage": "tip-email-dedicata-portrait.jpg",
+      "fbPortraitImage": "tip-email-dedicata-portrait.jpg",
+      "igPortraitImageAlt": "tip-email-dedicata-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-leggi-transazione",
@@ -878,7 +977,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-leggi-transazione-portrait.jpg"
+      "igPortraitImage": "tip-leggi-transazione-portrait.jpg",
+      "fbPortraitImage": "tip-leggi-transazione-portrait.jpg",
+      "igPortraitImageAlt": "tip-leggi-transazione-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-diversifica",
@@ -902,7 +1004,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-diversifica-portrait.jpg"
+      "igPortraitImage": "tip-diversifica-portrait.jpg",
+      "fbPortraitImage": "tip-diversifica-portrait.jpg",
+      "igPortraitImageAlt": "tip-diversifica-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-traccia-operazioni",
@@ -926,7 +1031,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-traccia-operazioni-portrait.jpg"
+      "igPortraitImage": "tip-traccia-operazioni-portrait.jpg",
+      "fbPortraitImage": "tip-traccia-operazioni-portrait.jpg",
+      "igPortraitImageAlt": "tip-traccia-operazioni-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-spread-fee",
@@ -950,7 +1058,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-spread-fee-portrait.jpg"
+      "igPortraitImage": "tip-spread-fee-portrait.jpg",
+      "fbPortraitImage": "tip-spread-fee-portrait.jpg",
+      "igPortraitImageAlt": "tip-spread-fee-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-staking-unlock",
@@ -974,7 +1085,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-staking-unlock-portrait.jpg"
+      "igPortraitImage": "tip-staking-unlock-portrait.jpg",
+      "fbPortraitImage": "tip-staking-unlock-portrait.jpg",
+      "igPortraitImageAlt": "tip-staking-unlock-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-test-transazione",
@@ -998,7 +1112,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-test-transazione-portrait.jpg"
+      "igPortraitImage": "tip-test-transazione-portrait.jpg",
+      "fbPortraitImage": "tip-test-transazione-portrait.jpg",
+      "igPortraitImageAlt": "tip-test-transazione-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-no-link-email",
@@ -1022,7 +1139,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-no-link-email-portrait.jpg"
+      "igPortraitImage": "tip-no-link-email-portrait.jpg",
+      "fbPortraitImage": "tip-no-link-email-portrait.jpg",
+      "igPortraitImageAlt": "tip-no-link-email-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-pin-wallet",
@@ -1046,7 +1166,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-pin-wallet-portrait.jpg"
+      "igPortraitImage": "tip-pin-wallet-portrait.jpg",
+      "fbPortraitImage": "tip-pin-wallet-portrait.jpg",
+      "igPortraitImageAlt": "tip-pin-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "tip-non-capisci-non-investi",
@@ -1070,7 +1193,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "tip-non-capisci-non-investi-portrait.jpg"
+      "igPortraitImage": "tip-non-capisci-non-investi-portrait.jpg",
+      "fbPortraitImage": "tip-non-capisci-non-investi-portrait.jpg",
+      "igPortraitImageAlt": "tip-non-capisci-non-investi-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-mica",
@@ -1101,7 +1227,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-mica-portrait.jpg"
+      "igPortraitImage": "trend-mica-portrait.jpg",
+      "fbPortraitImage": "trend-mica-portrait.jpg",
+      "igPortraitImageAlt": "trend-mica-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-etf-bitcoin",
@@ -1127,7 +1256,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-etf-bitcoin-portrait.jpg"
+      "igPortraitImage": "trend-etf-bitcoin-portrait.jpg",
+      "fbPortraitImage": "trend-etf-bitcoin-portrait.jpg",
+      "igPortraitImageAlt": "trend-etf-bitcoin-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-layer2",
@@ -1153,7 +1285,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-layer2-portrait.jpg"
+      "igPortraitImage": "trend-layer2-portrait.jpg",
+      "fbPortraitImage": "trend-layer2-portrait.jpg",
+      "igPortraitImageAlt": "trend-layer2-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-rwa",
@@ -1179,7 +1314,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-rwa-portrait.jpg"
+      "igPortraitImage": "trend-rwa-portrait.jpg",
+      "fbPortraitImage": "trend-rwa-portrait.jpg",
+      "igPortraitImageAlt": "trend-rwa-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-stablecoin",
@@ -1203,7 +1341,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-stablecoin-portrait.jpg"
+      "igPortraitImage": "trend-stablecoin-portrait.jpg",
+      "fbPortraitImage": "trend-stablecoin-portrait.jpg",
+      "igPortraitImageAlt": "trend-stablecoin-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-cbdc",
@@ -1227,7 +1368,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-cbdc-portrait.jpg"
+      "igPortraitImage": "trend-cbdc-portrait.jpg",
+      "fbPortraitImage": "trend-cbdc-portrait.jpg",
+      "igPortraitImageAlt": "trend-cbdc-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-depin",
@@ -1251,7 +1395,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-depin-portrait.jpg"
+      "igPortraitImage": "trend-depin-portrait.jpg",
+      "fbPortraitImage": "trend-depin-portrait.jpg",
+      "igPortraitImageAlt": "trend-depin-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-ai-blockchain",
@@ -1276,7 +1423,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-ai-blockchain-portrait.jpg"
+      "igPortraitImage": "trend-ai-blockchain-portrait.jpg",
+      "fbPortraitImage": "trend-ai-blockchain-portrait.jpg",
+      "igPortraitImageAlt": "trend-ai-blockchain-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-halving",
@@ -1301,7 +1451,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-halving-portrait.jpg"
+      "igPortraitImage": "trend-halving-portrait.jpg",
+      "fbPortraitImage": "trend-halving-portrait.jpg",
+      "igPortraitImageAlt": "trend-halving-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "trend-modular-blockchain",
@@ -1325,7 +1478,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "trend-modular-blockchain-portrait.jpg"
+      "igPortraitImage": "trend-modular-blockchain-portrait.jpg",
+      "fbPortraitImage": "trend-modular-blockchain-portrait.jpg",
+      "igPortraitImageAlt": "trend-modular-blockchain-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "blockchain-5-minuti",
@@ -1351,7 +1507,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "blockchain-5-minuti-portrait.jpg"
+      "igPortraitImage": "blockchain-5-minuti-portrait.jpg",
+      "fbPortraitImage": "blockchain-5-minuti-portrait.jpg",
+      "igPortraitImageAlt": "blockchain-5-minuti-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "creare-account-exchange",
@@ -1376,7 +1535,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "creare-account-exchange-portrait.jpg"
+      "igPortraitImage": "creare-account-exchange-portrait.jpg",
+      "fbPortraitImage": "creare-account-exchange-portrait.jpg",
+      "igPortraitImageAlt": "creare-account-exchange-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "primi-20-euro-bitcoin",
@@ -1401,7 +1563,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "primi-20-euro-bitcoin-portrait.jpg"
+      "igPortraitImage": "primi-20-euro-bitcoin-portrait.jpg",
+      "fbPortraitImage": "primi-20-euro-bitcoin-portrait.jpg",
+      "igPortraitImageAlt": "primi-20-euro-bitcoin-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "installare-trust-wallet",
@@ -1426,7 +1591,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "installare-trust-wallet-portrait.jpg"
+      "igPortraitImage": "installare-trust-wallet-portrait.jpg",
+      "fbPortraitImage": "installare-trust-wallet-portrait.jpg",
+      "igPortraitImageAlt": "installare-trust-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "prima-transazione-crypto",
@@ -1451,7 +1619,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "prima-transazione-crypto-portrait.jpg"
+      "igPortraitImage": "prima-transazione-crypto-portrait.jpg",
+      "fbPortraitImage": "prima-transazione-crypto-portrait.jpg",
+      "igPortraitImageAlt": "prima-transazione-crypto-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "leggere-grafico-candele",
@@ -1476,7 +1647,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "leggere-grafico-candele-portrait.jpg"
+      "igPortraitImage": "leggere-grafico-candele-portrait.jpg",
+      "fbPortraitImage": "leggere-grafico-candele-portrait.jpg",
+      "igPortraitImageAlt": "leggere-grafico-candele-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "market-cap-volume",
@@ -1501,7 +1675,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "market-cap-volume-portrait.jpg"
+      "igPortraitImage": "market-cap-volume-portrait.jpg",
+      "fbPortraitImage": "market-cap-volume-portrait.jpg",
+      "igPortraitImageAlt": "market-cap-volume-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "esplorare-block-explorer",
@@ -1526,7 +1703,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "esplorare-block-explorer-portrait.jpg"
+      "igPortraitImage": "esplorare-block-explorer-portrait.jpg",
+      "fbPortraitImage": "esplorare-block-explorer-portrait.jpg",
+      "igPortraitImageAlt": "esplorare-block-explorer-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "notifiche-prezzo-app",
@@ -1551,7 +1731,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "notifiche-prezzo-app-portrait.jpg"
+      "igPortraitImage": "notifiche-prezzo-app-portrait.jpg",
+      "fbPortraitImage": "notifiche-prezzo-app-portrait.jpg",
+      "igPortraitImageAlt": "notifiche-prezzo-app-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "creare-watchlist",
@@ -1576,7 +1759,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "creare-watchlist-portrait.jpg"
+      "igPortraitImage": "creare-watchlist-portrait.jpg",
+      "fbPortraitImage": "creare-watchlist-portrait.jpg",
+      "igPortraitImageAlt": "creare-watchlist-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "bridge-cross-chain",
@@ -1602,7 +1788,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "bridge-cross-chain-portrait.jpg"
+      "igPortraitImage": "bridge-cross-chain-portrait.jpg",
+      "fbPortraitImage": "bridge-cross-chain-portrait.jpg",
+      "igPortraitImageAlt": "bridge-cross-chain-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "liquidita-uniswap-v3",
@@ -1628,7 +1817,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "liquidita-uniswap-v3-portrait.jpg"
+      "igPortraitImage": "liquidita-uniswap-v3-portrait.jpg",
+      "fbPortraitImage": "liquidita-uniswap-v3-portrait.jpg",
+      "igPortraitImageAlt": "liquidita-uniswap-v3-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "usare-aave",
@@ -1654,7 +1846,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "usare-aave-portrait.jpg"
+      "igPortraitImage": "usare-aave-portrait.jpg",
+      "fbPortraitImage": "usare-aave-portrait.jpg",
+      "igPortraitImageAlt": "usare-aave-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "analisi-on-chain-dune",
@@ -1680,7 +1875,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "analisi-on-chain-dune-portrait.jpg"
+      "igPortraitImage": "analisi-on-chain-dune-portrait.jpg",
+      "fbPortraitImage": "analisi-on-chain-dune-portrait.jpg",
+      "igPortraitImageAlt": "analisi-on-chain-dune-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "nodo-validator",
@@ -1706,7 +1904,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "nodo-validator-portrait.jpg"
+      "igPortraitImage": "nodo-validator-portrait.jpg",
+      "fbPortraitImage": "nodo-validator-portrait.jpg",
+      "igPortraitImageAlt": "nodo-validator-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "leggere-solidity",
@@ -1732,7 +1933,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "leggere-solidity-portrait.jpg"
+      "igPortraitImage": "leggere-solidity-portrait.jpg",
+      "fbPortraitImage": "leggere-solidity-portrait.jpg",
+      "igPortraitImageAlt": "leggere-solidity-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "mev-protezione",
@@ -1758,7 +1962,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "mev-protezione-portrait.jpg"
+      "igPortraitImage": "mev-protezione-portrait.jpg",
+      "fbPortraitImage": "mev-protezione-portrait.jpg",
+      "igPortraitImageAlt": "mev-protezione-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "multisig-gnosis-safe",
@@ -1784,7 +1991,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "multisig-gnosis-safe-portrait.jpg"
+      "igPortraitImage": "multisig-gnosis-safe-portrait.jpg",
+      "fbPortraitImage": "multisig-gnosis-safe-portrait.jpg",
+      "igPortraitImageAlt": "multisig-gnosis-safe-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "ottimizzazione-gas-batch",
@@ -1810,7 +2020,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "ottimizzazione-gas-batch-portrait.jpg"
+      "igPortraitImage": "ottimizzazione-gas-batch-portrait.jpg",
+      "fbPortraitImage": "ottimizzazione-gas-batch-portrait.jpg",
+      "igPortraitImageAlt": "ottimizzazione-gas-batch-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "hedging-stablecoin",
@@ -1836,7 +2049,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "hedging-stablecoin-portrait.jpg"
+      "igPortraitImage": "hedging-stablecoin-portrait.jpg",
+      "fbPortraitImage": "hedging-stablecoin-portrait.jpg",
+      "igPortraitImageAlt": "hedging-stablecoin-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "cardano-spiegato",
@@ -1863,7 +2079,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "cardano-spiegato-portrait.jpg"
+      "igPortraitImage": "cardano-spiegato-portrait.jpg",
+      "fbPortraitImage": "cardano-spiegato-portrait.jpg",
+      "igPortraitImageAlt": "cardano-spiegato-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "comprare-ada",
@@ -1888,7 +2107,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "comprare-ada-portrait.jpg"
+      "igPortraitImage": "comprare-ada-portrait.jpg",
+      "fbPortraitImage": "comprare-ada-portrait.jpg",
+      "igPortraitImageAlt": "comprare-ada-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "staking-ada",
@@ -1914,7 +2136,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "staking-ada-portrait.jpg"
+      "igPortraitImage": "staking-ada-portrait.jpg",
+      "fbPortraitImage": "staking-ada-portrait.jpg",
+      "igPortraitImageAlt": "staking-ada-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "wallet-cardano-confronto",
@@ -1939,7 +2164,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "wallet-cardano-confronto-portrait.jpg"
+      "igPortraitImage": "wallet-cardano-confronto-portrait.jpg",
+      "fbPortraitImage": "wallet-cardano-confronto-portrait.jpg",
+      "igPortraitImageAlt": "wallet-cardano-confronto-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "project-catalyst",
@@ -1964,7 +2192,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "project-catalyst-portrait.jpg"
+      "igPortraitImage": "project-catalyst-portrait.jpg",
+      "fbPortraitImage": "project-catalyst-portrait.jpg",
+      "igPortraitImageAlt": "project-catalyst-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "cardano-defi",
@@ -1989,7 +2220,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "cardano-defi-portrait.jpg"
+      "igPortraitImage": "cardano-defi-portrait.jpg",
+      "fbPortraitImage": "cardano-defi-portrait.jpg",
+      "igPortraitImageAlt": "cardano-defi-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "native-token-cardano",
@@ -2014,7 +2248,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "native-token-cardano-portrait.jpg"
+      "igPortraitImage": "native-token-cardano-portrait.jpg",
+      "fbPortraitImage": "native-token-cardano-portrait.jpg",
+      "igPortraitImageAlt": "native-token-cardano-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "hydra-cardano",
@@ -2039,7 +2276,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "hydra-cardano-portrait.jpg"
+      "igPortraitImage": "hydra-cardano-portrait.jpg",
+      "fbPortraitImage": "hydra-cardano-portrait.jpg",
+      "igPortraitImageAlt": "hydra-cardano-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "plutus-panoramica",
@@ -2064,7 +2304,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "plutus-panoramica-portrait.jpg"
+      "igPortraitImage": "plutus-panoramica-portrait.jpg",
+      "fbPortraitImage": "plutus-panoramica-portrait.jpg",
+      "igPortraitImageAlt": "plutus-panoramica-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "cardano-vs-ethereum",
@@ -2089,7 +2332,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "cardano-vs-ethereum-portrait.jpg"
+      "igPortraitImage": "cardano-vs-ethereum-portrait.jpg",
+      "fbPortraitImage": "cardano-vs-ethereum-portrait.jpg",
+      "igPortraitImageAlt": "cardano-vs-ethereum-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "seed-phrase-guida",
@@ -2114,7 +2360,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "seed-phrase-guida-portrait.jpg"
+      "igPortraitImage": "seed-phrase-guida-portrait.jpg",
+      "fbPortraitImage": "seed-phrase-guida-portrait.jpg",
+      "igPortraitImageAlt": "seed-phrase-guida-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "hot-vs-cold-wallet",
@@ -2138,7 +2387,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "hot-vs-cold-wallet-portrait.jpg"
+      "igPortraitImage": "hot-vs-cold-wallet-portrait.jpg",
+      "fbPortraitImage": "hot-vs-cold-wallet-portrait.jpg",
+      "igPortraitImageAlt": "hot-vs-cold-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "confronto-hardware-wallet",
@@ -2162,7 +2414,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "confronto-hardware-wallet-portrait.jpg"
+      "igPortraitImage": "confronto-hardware-wallet-portrait.jpg",
+      "fbPortraitImage": "confronto-hardware-wallet-portrait.jpg",
+      "igPortraitImageAlt": "confronto-hardware-wallet-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "difendersi-phishing",
@@ -2186,7 +2441,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "difendersi-phishing-portrait.jpg"
+      "igPortraitImage": "difendersi-phishing-portrait.jpg",
+      "fbPortraitImage": "difendersi-phishing-portrait.jpg",
+      "igPortraitImageAlt": "difendersi-phishing-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "approvazioni-smart-contract",
@@ -2210,7 +2468,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "approvazioni-smart-contract-portrait.jpg"
+      "igPortraitImage": "approvazioni-smart-contract-portrait.jpg",
+      "fbPortraitImage": "approvazioni-smart-contract-portrait.jpg",
+      "igPortraitImageAlt": "approvazioni-smart-contract-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "backup-wallet-321",
@@ -2234,7 +2495,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "backup-wallet-321-portrait.jpg"
+      "igPortraitImage": "backup-wallet-321-portrait.jpg",
+      "fbPortraitImage": "backup-wallet-321-portrait.jpg",
+      "igPortraitImageAlt": "backup-wallet-321-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "sicurezza-mobile",
@@ -2258,7 +2522,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "sicurezza-mobile-portrait.jpg"
+      "igPortraitImage": "sicurezza-mobile-portrait.jpg",
+      "fbPortraitImage": "sicurezza-mobile-portrait.jpg",
+      "igPortraitImageAlt": "sicurezza-mobile-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "wallet-compromesso",
@@ -2282,7 +2549,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "wallet-compromesso-portrait.jpg"
+      "igPortraitImage": "wallet-compromesso-portrait.jpg",
+      "fbPortraitImage": "wallet-compromesso-portrait.jpg",
+      "igPortraitImageAlt": "wallet-compromesso-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "password-manager-crypto",
@@ -2306,7 +2576,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "password-manager-crypto-portrait.jpg"
+      "igPortraitImage": "password-manager-crypto-portrait.jpg",
+      "fbPortraitImage": "password-manager-crypto-portrait.jpg",
+      "igPortraitImageAlt": "password-manager-crypto-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     },
     {
       "slug": "audit-sicurezza-portafoglio",
@@ -2330,7 +2603,10 @@
         "variant-2-abstract",
         "variant-3-overlay"
       ],
-      "igPortraitImage": "audit-sicurezza-portafoglio-portrait.jpg"
+      "igPortraitImage": "audit-sicurezza-portafoglio-portrait.jpg",
+      "fbPortraitImage": "audit-sicurezza-portafoglio-portrait.jpg",
+      "igPortraitImageAlt": "audit-sicurezza-portafoglio-portrait-alt.jpg",
+      "feedPostVariant": "portrait-v2"
     }
   ],
   "glossary": [

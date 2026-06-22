@@ -25,6 +25,14 @@ CRYPTO_SOURCES: dict[str, Path] = {
     "breaking": ROOT / "assets" / "img" / "bitcoin-btc.png",
     "regulation": CRYPTO_DIR / "ethereum.png",
     "elon": ROOT / "assets" / "img" / "bitcoin-btc.png",
+    "eu": CRYPTO_DIR / "eu.png",
+    "usa": CRYPTO_DIR / "usa.png",
+    "nft": CRYPTO_DIR / "nft.png",
+    "stablecoin": CRYPTO_DIR / "stablecoin.png",
+    "blockchain": CRYPTO_DIR / "blockchain.png",
+    "cefi": CRYPTO_DIR / "cefi.png",
+    "tokenomics": CRYPTO_DIR / "tokenomics.png",
+    "news": CRYPTO_DIR / "trend.png",
 }
 
 
@@ -56,6 +64,13 @@ def ensure_crypto_icons() -> None:
         "trend": ("#FDE047", "↗"),
         "tip": ("#FDE68A", "💡"),
         "guide": ("#4ADE80", "📖"),
+        "eu": ("#2563EB", "EU"),
+        "usa": ("#DC2626", "US"),
+        "nft": ("#A855F7", "⬡"),
+        "stablecoin": ("#22C55E", "$"),
+        "blockchain": ("#38BDF8", "⛓"),
+        "cefi": ("#F59E0B", "C"),
+        "tokenomics": ("#EAB308", "T"),
     }
     for name, (color, symbol) in specs.items():
         path = CRYPTO_DIR / f"{name}.png"
@@ -148,3 +163,67 @@ def apply_branding_file(src: Path, topic: str, icon_box: tuple[int, int, int, in
     result = apply_branding(img, topic, icon_box=icon_box, accent=accent)
     result.save(src, quality=92, optimize=True)
     return src
+
+
+def _draw_eu_flag(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int]) -> None:
+    x1, y1, x2, y2 = box
+    draw.ellipse(box, fill="#003399")
+    cx, cy = (x1 + x2) // 2, (y1 + y2) // 2
+    r = (x2 - x1) // 5
+    import math
+
+    for i in range(12):
+        ang = math.radians(i * 30 - 90)
+        sx = cx + int(math.cos(ang) * r * 1.6)
+        sy = cy + int(math.sin(ang) * r * 1.6)
+        draw.ellipse((sx - 3, sy - 3, sx + 3, sy + 3), fill="#FFCC00")
+
+
+def _draw_usa_flag(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int]) -> None:
+    x1, y1, x2, y2 = box
+    w, h = x2 - x1, y2 - y1
+    draw.ellipse(box, fill="#B91C1C")
+    stripe_h = max(2, h // 13)
+    for i in range(7):
+        y = y1 + i * stripe_h * 2
+        draw.rectangle((x1, y, x2, y + stripe_h), fill="#FFFFFF")
+    draw.rectangle((x1, y1, x1 + w // 2, y1 + stripe_h * 7), fill="#1D4ED8")
+
+
+def apply_topic_logo_top_left(
+    img: Image.Image,
+    topic: str,
+    *,
+    accent: str = "#F7931A",
+    size: int = 96,
+    margin: int = 36,
+) -> Image.Image:
+    """Logo argomento in alto a sinistra — cerchio minimal."""
+    out = img.copy()
+    layer = out.convert("RGBA")
+    draw = ImageDraw.Draw(layer)
+    x1, y1 = margin, margin
+    x2, y2 = margin + size, margin + size
+    draw.ellipse((x1, y1, x2, y2), fill=(15, 23, 42, 240), outline=accent, width=3)
+
+    if topic == "eu":
+        _draw_eu_flag(draw, (x1 + 8, y1 + 8, x2 - 8, y2 - 8))
+    elif topic == "usa":
+        _draw_usa_flag(draw, (x1 + 8, y1 + 8, x2 - 8, y2 - 8))
+    else:
+        crypto = load_crypto_icon(topic)
+        fitted = crypto.copy()
+        fitted.thumbnail((int(size * 0.62), int(size * 0.62)), Image.Resampling.LANCZOS)
+        px = x1 + (size - fitted.width) // 2
+        py = y1 + (size - fitted.height) // 2
+        layer.paste(fitted, (px, py), fitted)
+
+    out.paste(layer.convert("RGB"))
+    return out
+
+
+def paste_brand_watermark(img: Image.Image, *, scale: float = 0.05) -> Image.Image:
+    """Logo brand piccolo in basso a destra."""
+    out = img.copy()
+    _paste_small_logo(out, scale=scale, corner="bottom-right")
+    return out

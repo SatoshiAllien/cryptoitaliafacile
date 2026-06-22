@@ -28,6 +28,8 @@ from datetime import date, datetime
 from pathlib import Path
 
 from chill_cyber_playlist import track_for_slot
+from daily_post_queue import daily_plan, variant_for_slot
+from feed_post_content import build_caption as build_feed_caption
 from story_links import SATOSHI_AI_STORY_LINK
 from story_publish import publish_facebook_story
 from story_video import prepare_story_video, story_image_file
@@ -154,7 +156,16 @@ def facebook_story_image_file(article: dict, slot: int = 0) -> str:
     return story_image_file(article, slot)
 
 
-def facebook_image_file(article: dict) -> str:
+def facebook_image_file(article: dict, *, variant: str = "primary") -> str:
+    slug = article.get("slug", "post")
+    if variant == "alt":
+        if article.get("igPortraitImageAlt"):
+            return article["igPortraitImageAlt"]
+        return f"{slug}-portrait-alt.jpg"
+    if article.get("fbPortraitImage"):
+        return article["fbPortraitImage"]
+    if article.get("igPortraitImage"):
+        return article["igPortraitImage"]
     if article.get("fbImage"):
         return article["fbImage"]
     for raw in article.get("tags") or []:
@@ -164,52 +175,35 @@ def facebook_image_file(article: dict) -> str:
         if f"#{tag}" in IMAGE_BY_TAG:
             return IMAGE_BY_TAG[f"#{tag}"]
     title = (article.get("title") or "").lower()
-    slug = (article.get("slug") or "").lower()
-    if "bitcoin" in title or "bitcoin" in slug:
+    slug_l = slug.lower()
+    if "bitcoin" in title or "bitcoin" in slug_l:
         return "bitcoin.jpg"
-    if "ethereum" in title or "ethereum" in slug:
+    if "ethereum" in title or "ethereum" in slug_l:
         return "ethereum.jpg"
-    if "cardano" in title or "cardano" in slug or "ada" in slug:
+    if "cardano" in title or "cardano" in slug_l or "ada" in slug_l:
         return "cardano.jpg"
-    if "exchange" in title or "exchange" in slug or "revolut" in slug or "kraken" in slug:
+    if "exchange" in title or "exchange" in slug_l or "revolut" in slug_l or "kraken" in slug_l:
         return "exchange.jpg"
-    if "wallet" in title or "wallet" in slug or "seed" in slug:
+    if "wallet" in title or "wallet" in slug_l or "seed" in slug_l:
         return "wallet.jpg"
-    if "sicurezz" in title or "sicurezz" in slug or "phishing" in slug:
+    if "sicurezz" in title or "sicurezz" in slug_l or "phishing" in slug_l:
         return "sicurezza.jpg"
-    if "defi" in title or "defi" in slug or "uniswap" in slug:
+    if "defi" in title or "defi" in slug_l or "uniswap" in slug_l:
         return "defi.jpg"
     cat = article.get("category", "guide")
     return IMAGE_DEFAULTS.get(cat, "guide.jpg")
 
 
-def facebook_image_url(article: dict) -> str:
-    return IMAGE_BASE + facebook_image_file(article)
+def facebook_image_url(article: dict, *, variant: str = "primary") -> str:
+    return IMAGE_BASE + facebook_image_file(article, variant=variant)
 
 
 def facebook_story_image_url(article: dict, slot: int = 0) -> str:
     return STORY_IMAGE_BASE + facebook_story_image_file(article, slot)
 
 
-def build_post(article: dict) -> str:
-    cat = article.get("category", "guide")
-    emoji = EMOJI.get(cat, "📖")
-    label = LABELS.get(cat, "Guida")
-    hook = HOOKS.get(cat, "🔥 Non perdere questa guida:")
-    raw_tags = []
-    for t in (article.get("tags") or [])[:4]:
-        clean = t.lstrip("#").strip()
-        if clean:
-            raw_tags.append(f"#{clean}")
-    tags = " ".join(raw_tags)
-    base_tags = "#crypto #The Little Satoshi News #educazione"
-    return (
-        f"{hook}\n\n"
-        f"{emoji} {label}: {article['title']}\n\n"
-        f"{article['excerpt']}\n\n"
-        f"👉 Leggi la guida completa:\n{article_url(article['slug'])}\n\n"
-        f"{tags} {base_tags}".strip()
-    )
+def build_post(article: dict, *, variant: str = "primary") -> str:
+    return build_feed_caption(article, variant=variant, lang="it")
 
 
 def graph_post(url: str, data: dict, dry_run: bool, label: str) -> dict:
@@ -268,51 +262,22 @@ def post_to_facebook(message: str, link: str, image_url: str, page_id: str, toke
 
 
 def article_score(article: dict) -> int:
-    return (4 if article.get("featured") else 0) + (2 if article.get("popular") else 0)
+    from daily_post_queue import article_score as _score
+    return _score(article)
 
 
 def balanced_queue(articles: list[dict]) -> list[dict]:
-    buckets: dict[str, list[dict]] = {
-        "guide": sorted(
-            [a for a in articles if a.get("category") in ("guide", "tutorial")],
-            key=article_score, reverse=True,
-        ),
-        "tip": sorted([a for a in articles if a.get("category") == "tip"], key=article_score, reverse=True),
-        "trend": sorted([a for a in articles if a.get("category") == "trend"], key=article_score, reverse=True),
-        "other": sorted(
-            [a for a in articles if a.get("category") in ("cardano", "sicurezza")],
-            key=article_score, reverse=True,
-        ),
-    }
+    from daily_post_queue import bucket_articles
+
+    buckets = bucket_articles(articles)
     queue: list[dict] = []
-    max_len = max((len(v) for v in buckets.values()), default=0)
-    for i in range(max_len):
-        for key in ("guide", "tip", "trend", "other"):
-            if i < len(buckets[key]):
-                queue.append(buckets[key][i])
     seen: set[str] = set()
-    unique: list[dict] = []
-    for item in queue:
-        slug = item["slug"]
-        if slug in seen:
-            continue
-        seen.add(slug)
-        unique.append(item)
-    return unique
-
-
-def daily_plan(articles: list[dict], per_day: int) -> list[list[dict]]:
-    queue = balanced_queue(articles)
-    if not queue:
-        return []
-    min_days = max((len(queue) + per_day - 1) // per_day, 30)
-    days: list[list[dict]] = []
-    cursor = 0
-    for _ in range(min_days):
-        day_posts = [queue[cursor % len(queue)] for _ in range(per_day)]
-        cursor += per_day
-        days.append(day_posts)
-    return days
+    for group in buckets.values():
+        for item in group:
+            if item["slug"] not in seen:
+                seen.add(item["slug"])
+                queue.append(item)
+    return queue
 
 
 def parse_date(value: str) -> date:
@@ -394,7 +359,7 @@ def get_auto_article(articles: list[dict], schedule: dict, slot: int, env: dict)
         print(f"Piano non ancora iniziato (startDate={start_date})")
         return None, day_idx, today_str
 
-    days = daily_plan(articles, per_day)
+    days = daily_plan(articles)
     if not days:
         print("Nessun articolo nel piano")
         return None, day_idx, today_str
@@ -429,7 +394,7 @@ def select_articles(data: dict, args: argparse.Namespace) -> list[dict]:
         return [article]
 
     if args.day is not None or args.today:
-        days = daily_plan(articles, per_day)
+        days = daily_plan(articles)
         if args.today:
             start = schedule.get("startDate", date.today().isoformat())
             day_index = max(0, day_index_from_start(start))
@@ -518,9 +483,10 @@ def main() -> None:
             print(f"\n[SKIP] Già pubblicato: {article['slug']}")
             continue
 
-        message = build_post(article)
+        variant = variant_for_slot(args.slot, day_idx) if args.auto else "primary"
+        message = build_post(article, variant=variant)
         link = article_url(article["slug"])
-        image_url = facebook_image_url(article)
+        image_url = facebook_image_url(article, variant=variant)
         story_url = facebook_story_image_url(article, args.slot)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")

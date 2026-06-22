@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 SCRIPTS = [
+    "generate-daily-feed-posts.py",
     "generate-fb-images.py",
     "generate-ig-images.py",
     "generate-story-images.py",

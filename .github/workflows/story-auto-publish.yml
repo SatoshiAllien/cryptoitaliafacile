@@ -1,0 +1,67 @@
+name: Story Auto Publish (FB + IG)
+
+on:
+  schedule:
+    # Ogni 30 min, 05:00–20:00 UTC ≈ 07:00–22:00 Roma — 20 story/giorno
+    - cron: "0,30 5-20 * * *"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Slot story 0-19 (vuoto = auto da orario)"
+        required: false
+        default: ""
+      dry_run:
+        description: "Solo test"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install imageio-ffmpeg numpy Pillow qrcode[pil] tzdata
+
+      - name: Sync story music
+        run: python scripts/fetch-mixkit-story-music.py || true
+
+      - name: Publish story FB + IG
+        env:
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          ARGS="--auto --process-queue"
+          if [ -n "${{ github.event.inputs.slot }}" ]; then
+            ARGS="--auto --slot ${{ github.event.inputs.slot }}"
+          else
+            ARGS="$ARGS --now"
+          fi
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python scripts/post-story-only.py $ARGS
+
+      - name: Commit schedule and videos
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/story-schedule.json assets/video/stories/published/instagram/ || true
+          if git diff --staged --quiet; then
+            echo "Nessun aggiornamento da committare."
+          else
+            git commit -m "chore: story auto-publish schedule"
+            git push
+          fi

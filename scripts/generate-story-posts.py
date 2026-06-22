@@ -7,7 +7,7 @@ import argparse
 import json
 from pathlib import Path
 
-from feed_post_content import post_payload
+from feed_post_content import story_payload
 from story_post_style import design_description, render_story_post
 from topic_detect import detect_topic
 
@@ -48,7 +48,7 @@ def story_filename(slug: str, *, variant_key: str) -> str:
 
 
 def generate_variant(article: dict, *, variant_key: str, variant: str) -> dict:
-    payload = post_payload(article, variant=variant)
+    payload = story_payload(article, variant=variant)
     topic = detect_topic(article)
     accent = ACCENT_BY_TOPIC.get(topic, "#F7931A")
     common = dict(
@@ -56,6 +56,7 @@ def generate_variant(article: dict, *, variant_key: str, variant: str) -> dict:
         title=payload["title"],
         subtitle=payload["subtitle"],
         body=payload["body"],
+        cta=payload["cta"],
         variant=variant,
         accent=accent,
     )
@@ -98,7 +99,13 @@ def main() -> None:
     if args.limit:
         articles = articles[: args.limit]
 
-    manifest = {"version": 1, "links_enabled": False, "posts": []}
+    manifest = {
+        "version": 2,
+        "links_enabled": False,
+        "instagram_format": "1080x1920",
+        "instagram_safe_area": "120px",
+        "posts": [],
+    }
 
     for article in articles:
         slug = article["slug"]
@@ -110,6 +117,8 @@ def main() -> None:
         article["fbStoryImage"] = story_filename(slug, variant_key="primary")
         article["storyVariants"] = [f"variant-1-{VARIANT_SUFFIX[k]}" for k in ("primary", "alt", "minimal")]
         article["storyNoLinks"] = True
+        article["storySafeArea"] = "120px"
+        article["storyFormat"] = "1080x1920"
 
         manifest["posts"].append({"slug": slug, "abstract": v1, "thematic": v2, "minimal": v3})
         print(f"OK {slug} → 3 varianti IG+FB (no link)")

@@ -28,6 +28,7 @@ def main() -> None:
             title=cfg_it["hook"].replace("\n", " "),
             subtitle=cfg_it.get("sub", "Spiegato facile"),
             body=cfg_it.get("sub", ""),
+            cta="Scopri di più",
             variant="primary",
             accent=cfg_it["accent"],
         )
@@ -41,6 +42,7 @@ def main() -> None:
             title=cfg_it["hook"].replace("\n", " "),
             subtitle=cfg_it.get("sub", "Spiegato facile"),
             body=cfg_it.get("sub", ""),
+            cta="Continua",
             variant="primary",
             accent=cfg_it["accent"],
         )

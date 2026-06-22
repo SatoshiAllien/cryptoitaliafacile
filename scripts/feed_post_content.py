@@ -16,6 +16,13 @@ CTA_POOL = (
     "Impara in 2 minuti",
 )
 
+STORY_CTA_POOL = (
+    "Scopri di più",
+    "Continua",
+    "Swipe",
+    "Approfondisci",
+)
+
 TITLE_TEMPLATES = (
     "La verità su {topic} in 10 secondi",
     "Il trucco che nessuno ti dice su {topic}",
@@ -140,8 +147,22 @@ def build_body(article: dict) -> str:
     return _clean_text(article.get("excerpt") or "", 200)
 
 
+def build_story_body(article: dict) -> str:
+    """Max 2 frasi per story Instagram."""
+    text = re.sub(r"\s+", " ", (article.get("excerpt") or "").strip())
+    if not text:
+        return ""
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    short = " ".join(parts[:2]).strip()
+    return _clean_text(short, 140)
+
+
 def build_cta(article: dict, *, variant: str = "primary") -> str:
     return _pick(CTA_POOL, article.get("slug", ""), variant, "cta")
+
+
+def build_story_cta(article: dict, *, variant: str = "primary") -> str:
+    return _pick(STORY_CTA_POOL, article.get("slug", ""), variant, "story-cta")
 
 
 def build_caption(article: dict, *, variant: str = "primary", lang: str = "it") -> str:
@@ -173,6 +194,14 @@ def build_caption(article: dict, *, variant: str = "primary", lang: str = "it") 
         f"👉 {cta}\n\n"
         f"{' '.join(tags)} {base}"
     ).strip()[:2200]
+
+
+def story_payload(article: dict, *, variant: str = "primary") -> dict:
+    """Payload per story — testo breve, CTA senza riferimenti al sito."""
+    base = post_payload(article, variant=variant)
+    base["body"] = build_story_body(article)
+    base["cta"] = build_story_cta(article, variant=variant)
+    return base
 
 
 def post_payload(article: dict, *, variant: str = "primary") -> dict:

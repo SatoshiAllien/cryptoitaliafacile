@@ -24,7 +24,7 @@ const SITE_CONFIG = {
     portfolio: 'https://satoshiallien.github.io/Stefano/',
     consulenza: 'https://satoshiallien.github.io/Stefano/consulenza.html',
     linkedin: 'https://www.linkedin.com/in/55555555-b5947439',
-    x: 'https://x.com/RapidResponse47',
+    x: 'https://x.com/TheRiser100x',
     cryptoSince: 2015,
     paypalYears: 8,
     blockchainSince: 2017,

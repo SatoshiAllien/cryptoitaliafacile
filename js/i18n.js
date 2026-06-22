@@ -97,19 +97,24 @@ const TRANSLATIONS = {
       aiFeature4: 'Steven AI'
     },
     founder: {
-      label: 'Il Fondatore',
+      label: 'Il Creatore di CryptoItaliaFacile',
+      title: 'Chi è il Fondatore',
+      subtitle: 'Rendere il mondo crypto comprensibile, sicuro e accessibile a tutti.',
       name: 'Stefano Davide Ciancimino',
-      role: 'Analista · Ricercatore Blockchain · Educatore Crypto · AI Specialist',
-      bio: 'Vivo le crypto dal 2015. Ho creato Crypto Italia Facile per spiegare Bitcoin, blockchain e Web3 in modo semplice e sicuro — con l\'esperienza di chi ha lavorato in fintech e analizzato frodi per oltre otto anni.',
+      role: 'Fondatore di CryptoItaliaFacile · Fraud & Risk Analyst · Blockchain Researcher · AI Specialist',
+      bio: 'Oltre 8 anni in PayPal tra antifrode e risk operations. Ricercatore blockchain dal 2017. Creo contenuti educativi chiari per rendere Bitcoin, DeFi e Web3 accessibili a tutti — con sicurezza e zero hype.',
       badge: 'Fondatore',
-      stat1: 'nel mondo crypto',
-      stat2: 'anni analisi & risk',
+      stat1: 'anni in PayPal',
+      stat2: 'ricerca blockchain',
       stat3: 'educativo, zero hype',
       p1: 'Autorevolezza',
       p2: 'Esperienza reale',
       p3: 'Missione educativa',
       p4: 'Sicurezza prima di tutto',
-      cta: 'Scopri il fondatore →'
+      cta: 'Scopri il fondatore →',
+      ctaContact: 'Contatta il Fondatore',
+      ctaLinkedin: 'Segui su LinkedIn',
+      ctaConsult: 'Richiedi una consulenza'
     },
     newsHub: {
       filterAll: 'Tutte',
@@ -401,19 +406,24 @@ const TRANSLATIONS = {
       aiFeature4: 'Steven AI'
     },
     founder: {
-      label: 'The Founder',
+      label: 'The Creator of CryptoItaliaFacile',
+      title: 'Meet the Founder',
+      subtitle: 'Making crypto understandable, secure and accessible for everyone.',
       name: 'Stefano Davide Ciancimino',
-      role: 'Analyst · Blockchain Researcher · Crypto Educator · AI Specialist',
-      bio: 'I\'ve been in crypto since 2015. I created Crypto Italia Facile to explain Bitcoin, blockchain and Web3 in a simple, secure way — drawing on fintech experience and over eight years of fraud analysis.',
+      role: 'Founder of CryptoItaliaFacile · Fraud & Risk Analyst · Blockchain Researcher · AI Specialist',
+      bio: '8+ years at PayPal in fraud prevention and risk operations. Independent blockchain researcher since 2017. I create clear educational content to make Bitcoin, DeFi and Web3 accessible — with security and zero hype.',
       badge: 'Founder',
-      stat1: 'in crypto',
-      stat2: 'years in analysis & risk',
+      stat1: 'years at PayPal',
+      stat2: 'blockchain research',
       stat3: 'educational, zero hype',
       p1: 'Authority',
       p2: 'Real experience',
       p3: 'Educational mission',
       p4: 'Security first',
-      cta: 'Meet the founder →'
+      cta: 'Meet the founder →',
+      ctaContact: 'Contact the Founder',
+      ctaLinkedin: 'Follow on LinkedIn',
+      ctaConsult: 'Request a consultation'
     },
     newsHub: {
       filterAll: 'All',

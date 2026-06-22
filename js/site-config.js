@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260622-brand-logo',
+  assetVersion: '20260622-fitness-coach',
   email: 'info@cryptofacile.com',
 
   founder: {
@@ -55,9 +55,16 @@ const SITE_CONFIG = {
     label: '15 Anni di Passione per lo Sport',
     href: 'fitness/index.html',
     heroImage: 'assets/img/fitness-hero.jpg',
-    iconImage: 'assets/img/fitness-icon.jpg',
-    iconSquare: 'assets/img/fitness-icon-square.jpg',
+    avatarImage: 'assets/img/fitness-avatar.jpg',
+    avatarHd: 'assets/img/fitness-avatar-hd.jpg',
+    botLogo: 'assets/img/fitness-bot-logo.jpg',
+    iconImage: 'assets/img/fitness-avatar.jpg',
     nutritionImage: 'assets/img/fitness-nutrition.jpg',
+    coach: {
+      title: 'Coach Fitness',
+      subtitle: 'Allenamento · Nutrizione · Benessere',
+      avatar: 'assets/img/fitness-bot-logo.jpg'
+    },
     subtitle: 'Allenamento, nutrizione e benessere — costanza, disciplina e approccio evidence-based.'
   },
 

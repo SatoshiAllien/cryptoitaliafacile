@@ -3967,6 +3967,10 @@ h1, h2, h3, h4 { color: var(--text); }
   object-fit: cover;
   aspect-ratio: 563 / 720;
 }
+.fitness-section-icon--avatar {
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
 .fitness-home-header h2 { font-size: clamp(1.5rem, 4vw, 2rem); color: var(--text); margin: 0.5rem 0; }
 .fitness-home-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
 
@@ -4055,8 +4059,33 @@ h1, h2, h3, h4 { color: var(--text); }
   border: 1px solid rgba(184, 255, 46, 0.3);
   box-shadow: 0 0 24px rgba(184, 255, 46, 0.15), 0 8px 28px rgba(0, 0, 0, 0.5);
   object-fit: cover;
-  aspect-ratio: 563 / 720;
+  aspect-ratio: 1;
 }
+.fitness-personal-photo img { aspect-ratio: 492 / 442; }
+.fitness-coach-cta { margin: 3rem 0; }
+.fitness-coach-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: linear-gradient(145deg, var(--surface) 0%, rgba(184, 255, 46, 0.06) 100%);
+  border: 1px solid rgba(184, 255, 46, 0.2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--fitness-shadow);
+}
+.fitness-coach-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(184, 255, 46, 0.35);
+  box-shadow: 0 0 16px rgba(184, 255, 46, 0.2);
+  flex-shrink: 0;
+}
+.fitness-coach-text { flex: 1; min-width: 220px; }
+.fitness-coach-text h2 { font-size: 1.2rem; color: var(--text); margin-bottom: 0.5rem; }
+.fitness-coach-text p { color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; font-size: 0.95rem; }
 .fitness-hero-heading-text { flex: 1; min-width: 220px; }
 .fitness-hero-overlay h1 {
   font-size: clamp(1.75rem, 4vw, 2.75rem);

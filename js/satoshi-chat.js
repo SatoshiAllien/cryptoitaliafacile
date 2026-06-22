@@ -79,7 +79,7 @@
 
   function renderLauncher() {
     if (document.getElementById('satoshi-launcher')) return;
-    if (document.body.dataset.page === 'chat') return;
+    if (document.body.dataset.page === 'chat' || document.body.dataset.page === 'fitness') return;
 
     const c = cfg();
     const avatar = assetUrl(c.avatar || 'assets/img/welcome-bitcoin-boss.png');

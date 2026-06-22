@@ -512,9 +512,18 @@ function loadScript(src) {
 }
 
 async function loadSatoshiChat() {
-  if (typeof initSatoshiChat === 'function') { initSatoshiChat(); return; }
   const base = getBasePath();
   const v = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.assetVersion) ? `?v=${SITE_CONFIG.assetVersion}` : '';
+  const isFitness = document.body.dataset.page === 'fitness' || window.location.pathname.includes('/fitness/');
+
+  if (isFitness) {
+    if (typeof initFitnessChat === 'function') { initFitnessChat(); return; }
+    await loadScript(`${base}js/fitness-chat.js${v}`);
+    if (typeof initFitnessChat === 'function') initFitnessChat();
+    return;
+  }
+
+  if (typeof initSatoshiChat === 'function') { initSatoshiChat(); return; }
   await loadScript(`${base}js/satoshi-bot.js${v}`);
   await loadScript(`${base}js/satoshi-chat.js${v}`);
   if (typeof initSatoshiChat === 'function') initSatoshiChat();
@@ -546,7 +555,11 @@ async function bootApp() {
   if (typeof initNewsHub === 'function') await initNewsHub();
   applyPageTranslations();
   initFadeIn();
-  if (typeof initSatoshiChat === 'function') initSatoshiChat();
+  if (document.body.dataset.page === 'fitness' || window.location.pathname.includes('/fitness/')) {
+    if (typeof initFitnessChat === 'function') initFitnessChat();
+  } else if (typeof initSatoshiChat === 'function') {
+    initSatoshiChat();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', bootApp);
@@ -570,5 +583,9 @@ window.addEventListener('langchange', async () => {
   if (typeof initNewsHub === 'function') await initNewsHub();
   applyPageTranslations();
   initFadeIn();
-  if (typeof initSatoshiChat === 'function') initSatoshiChat();
+  if (document.body.dataset.page === 'fitness' || window.location.pathname.includes('/fitness/')) {
+    if (typeof initFitnessChat === 'function') initFitnessChat();
+  } else if (typeof initSatoshiChat === 'function') {
+    initSatoshiChat();
+  }
 });

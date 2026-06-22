@@ -1,4 +1,4 @@
-name: Facebook Auto Post
+name: Facebook Auto Post — feed only
 
 on:
   schedule:
@@ -32,11 +32,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install tzdata imageio-ffmpeg numpy Pillow qrcode[pil]
-      - name: Sync viral story music
-        run: python scripts/generate-viral-story-tracks.py && python scripts/sync-instagram-trending-audio.py || true
+        run: pip install tzdata Pillow
 
-      - name: Post to Facebook
+      - name: Post to Facebook (solo feed, 20/giorno)
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}

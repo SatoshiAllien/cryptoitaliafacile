@@ -12,5 +12,5 @@ $trigger = New-ScheduledTaskTrigger -Once -At "07:00" -RepetitionInterval (New-T
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
 Register-ScheduledTask -TaskName "Krown82-IG-20post" -Action $action -Trigger $trigger -Settings $settings -Force | Out-Null
 
-Write-Host "Registrato: Krown82-IG-20post (ogni 30 min, 07:00-22:00 Roma, 20 post + story/giorno)"
+Write-Host "Registrato: Krown82-IG-20post (ogni 30 min, 07:00-22:00 Roma, 20 post feed/giorno, senza Story)"
 Write-Host "Richiede INSTAGRAM_ACCESS_TOKEN + INSTAGRAM_ACCOUNT_ID in scripts\.env"

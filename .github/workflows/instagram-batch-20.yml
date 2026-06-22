@@ -1,4 +1,4 @@
-name: Instagram Batch 20 (Post + Story)
+name: Instagram Batch 20 — feed only
 
 on:
   workflow_dispatch:
@@ -32,15 +32,12 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install tzdata imageio-ffmpeg numpy Pillow qrcode[pil]
-
-      - name: Sync story music
-        run: python scripts/fetch-mixkit-story-music.py || true
+        run: pip install tzdata Pillow
 
       - name: Verify batch manifest
         run: python scripts/publish-instagram-batch-20.py --verify
 
-      - name: Publish batch (resume-safe)
+      - name: Publish batch feed only (resume-safe)
         env:
           INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
@@ -57,10 +54,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/instagram-batch-20-state.json assets/video/stories/
+          git add data/instagram-batch-20-state.json
           if git diff --staged --quiet; then
             echo "Nessun aggiornamento stato."
           else
-            git commit -m "chore: instagram batch-20 publish progress"
+            git commit -m "chore: instagram batch-20 feed publish progress"
             git push
           fi

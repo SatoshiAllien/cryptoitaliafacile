@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pubblica lo stesso articolo su Facebook + Instagram (post feed + story con musica)."""
+"""Pubblica lo stesso articolo su Facebook + Instagram (solo post feed, senza Story)."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ def main() -> int:
     parser.add_argument("--slug", required=True, help="Slug articolo da pubblicare")
     parser.add_argument("--slot", type=int, default=0, help="Slot per rotazione musica story")
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--no-story", action="store_true")
+    parser.add_argument("--with-story", action="store_true", help="Includi anche Story")
     parser.add_argument("--skip-facebook", action="store_true")
     parser.add_argument("--skip-instagram", action="store_true")
     args = parser.parse_args()
@@ -30,8 +30,8 @@ def main() -> int:
     common = ["--slug", args.slug, "--slot", str(args.slot)]
     if args.dry_run:
         common.append("--dry-run")
-    if args.no_story:
-        common.append("--no-story")
+    if args.with_story:
+        common.append("--with-story")
 
     code = 0
     if not args.skip_facebook:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pubblica batch 20 post+story Instagram con delay, resume e anti-quota.
+"""Pubblica batch 20 post feed Instagram (senza Story) con delay, resume e anti-quota.
 
 Non interrompe finché tutti i 20 non sono completati (o in coda quota).
 """
@@ -34,17 +34,11 @@ from instagram_auth import resolve_credentials  # noqa: E402
 from instagram_batch_20_content import BATCH_20, HOME_LINK, build_caption_it  # noqa: E402
 from instagram_batch_20_lib import SITE_BASE, load_state, save_state  # noqa: E402
 from instagram_story_queue import is_quota_error  # noqa: E402
-from story_publish import publish_instagram_story  # noqa: E402
-from story_video import prepare_story_video  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DELAY_SECONDS = 120
 QUOTA_WAIT_SECONDS = 3600
 MAX_QUOTA_RETRIES = 6
-
-
-def story_image_url(slug: str) -> str:
-    return SITE_BASE + f"{slug}-story-advanced.jpg"
 
 
 def feed_image_url(slug: str) -> str:
@@ -55,53 +49,21 @@ def publish_one(item: dict, *, slot: int, ig_id: str, token: str, dry_run: bool)
     slug = item["slug"]
     caption = build_caption_it(item)
     feed_url = feed_image_url(slug)
-    story_url = story_image_url(slug)
 
     print(f"\n{'='*60}")
     print(f"#{item['id']} {item['hook_it'].replace(chr(10), ' ')}")
-    print(f"FEED:  {feed_url}")
-    print(f"STORY: {story_url}")
-    print(f"LINK:  {HOME_LINK}")
+    print(f"FEED: {feed_url}")
+    print(f"LINK: {HOME_LINK}")
 
     feed_result = post_to_instagram(caption, feed_url, ig_id, token, dry_run)
     if feed_result.get("error"):
         return {"ok": False, "stage": "feed", "error": feed_result["error"], "slug": slug}
 
     feed_id = feed_result.get("id") or feed_result.get("dry_run")
-    story_id = ""
-    story_video_path = None
-
-    if not dry_run:
-        img_file = f"{slug}-story-advanced.jpg"
-        story_video_path, track = prepare_story_video(
-            "instagram", img_file, slot, item["id"] - 1, 20, link_url=HOME_LINK,
-        )
-        print(f"MUSICA: {track['title']}")
-
-    story_result = publish_instagram_story(
-        ig_id,
-        story_url,
-        token,
-        dry_run,
-        video_path=story_video_path,
-        use_video=True,
-        link_url=HOME_LINK,
-    )
-    if story_result.get("error"):
-        return {
-            "ok": False,
-            "stage": "story",
-            "feed_id": feed_id,
-            "error": story_result["error"],
-            "slug": slug,
-        }
-
-    story_id = str(story_result.get("id") or "")
     return {
         "ok": True,
         "slug": slug,
         "feed_id": str(feed_id or ""),
-        "story_id": story_id,
     }
 
 
@@ -154,7 +116,7 @@ def run_batch(*, dry_run: bool = False, start_from: int = 1, delay: int = DELAY_
                 state.setdefault("published", []).append(entry)
                 state["last_id"] = item["id"]
                 save_state(state)
-                print(f"✓ #{item['id']} completato (feed {result.get('feed_id')}, story {result.get('story_id')})")
+                print(f"✓ #{item['id']} completato (feed {result.get('feed_id')})")
                 quota_retries = 0
                 break
 

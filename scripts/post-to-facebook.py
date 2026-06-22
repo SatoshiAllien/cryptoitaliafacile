@@ -8,7 +8,7 @@ Uso manuale:
   python post-to-facebook.py --slug iniziare-exchange-revolut-kraken
   python post-to-facebook.py --dry-run --today --per-day 3
 
-Automazione (20 post/giorno, 07:00–22:00 Roma):
+Automazione (20 post/giorno SOLO FEED, 07:00–22:00 Roma, senza Story):
   python post-to-facebook.py --auto --now        # rileva slot dall'orario
   python post-to-facebook.py --auto --slot 0     # post 1 (07:00)
   python post-to-facebook.py --auto --slot 19    # post 20 (22:00)
@@ -465,13 +465,18 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true", help="Mostra senza pubblicare")
     parser.add_argument("--all", action="store_true", help="Pubblica tutti gli articoli del sito")
     parser.add_argument("--delay", type=int, default=18, help="Secondi di pausa tra i post (con --all)")
-    parser.add_argument("--no-story", action="store_true", help="Pubblica solo il post feed, senza Story")
+    parser.add_argument("--with-story", action="store_true", help="Pubblica anche Story (default: solo post feed)")
+    parser.add_argument("--no-story", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
+    if args.no_story:
+        args.with_story = False
 
     env = load_env()
     page_id = env.get("FACEBOOK_PAGE_ID", "")
     token = env.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
 
+    if not args.with_story:
+        print("Modalità: solo post feed (nessuna Story)")
     if not args.dry_run and (not page_id or not token):
         print("Mancano FACEBOOK_PAGE_ID e FACEBOOK_PAGE_ACCESS_TOKEN.", file=sys.stderr)
         print(f"Crea il file: {ENV_PATH}", file=sys.stderr)
@@ -519,7 +524,8 @@ def main() -> None:
         story_url = facebook_story_image_url(article, args.slot)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")
-        print(f"STORY: {story_url}")
+        if args.with_story:
+            print(f"STORY: {story_url}")
         try:
             result = post_to_facebook(message, link, image_url, page_id, token, args.dry_run)
             print(json.dumps(result, indent=2))
@@ -536,7 +542,7 @@ def main() -> None:
         story_id = ""
         story_track = ""
         story_link = SATOSHI_AI_STORY_LINK
-        if not args.no_story:
+        if args.with_story:
             try:
                 story_video_path = None
                 if not args.dry_run:
@@ -563,7 +569,7 @@ def main() -> None:
                     token,
                     args.dry_run,
                     video_path=story_video_path,
-                    use_video=not args.no_story,
+                    use_video=args.with_story,
                     link_url=story_link,
                 )
                 print("STORY:", json.dumps(story_result, indent=2))

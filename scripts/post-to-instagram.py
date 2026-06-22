@@ -4,9 +4,10 @@
 Setup: scripts/.env — INSTAGRAM_ACCOUNT_ID + FACEBOOK_PAGE_ACCESS_TOKEN
 Guida: instagram-auto-setup.html
 
-Automazione (20 post/giorno, 07:00–22:00 Roma):
+Automazione (20 post/giorno SOLO FEED, 07:00–22:00 Roma, senza Story):
   python post-to-instagram.py --auto --now
   python post-to-instagram.py --auto --slot 0
+  python post-to-instagram.py --auto --now --with-story   # opzionale: anche Story
 """
 
 from __future__ import annotations
@@ -442,8 +443,11 @@ def main() -> None:
     parser.add_argument("--now", action="store_true")
     parser.add_argument("--slot", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--no-story", action="store_true", help="Pubblica solo il post feed, senza Story")
+    parser.add_argument("--with-story", action="store_true", help="Pubblica anche Story (default: solo post feed)")
+    parser.add_argument("--no-story", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
+    if args.no_story:
+        args.with_story = False
 
     env = load_env()
     ig_id, token, api_mode = resolve_credentials(env)
@@ -454,6 +458,8 @@ def main() -> None:
         print("Guida: instagram-auto-setup.html", file=sys.stderr)
         sys.exit(1)
 
+    if not args.with_story:
+        print("Modalità: solo post feed (nessuna Story)")
     if not args.dry_run:
         print(f"API Instagram: {api_mode} — @{env.get('INSTAGRAM_USERNAME', IG_HANDLE)}")
 
@@ -512,7 +518,8 @@ def main() -> None:
         story_url = instagram_story_image_url(article, args.slot)
         print(f"\n--- [{i + 1}/{len(selected)}] {article['title']} ---")
         print(f"IMAGE: {image_url}")
-        print(f"STORY: {story_url}")
+        if args.with_story:
+            print(f"STORY: {story_url}")
         result = post_to_instagram(caption, image_url, ig_id, token, args.dry_run)
         print(json.dumps(result, indent=2))
 
@@ -527,7 +534,7 @@ def main() -> None:
         story_id = ""
         story_track = ""
         story_link = SATOSHI_AI_STORY_LINK
-        if not args.no_story:
+        if args.with_story:
             try:
                 story_video_path = None
                 if not args.dry_run:
@@ -554,7 +561,7 @@ def main() -> None:
                     token,
                     args.dry_run,
                     video_path=story_video_path,
-                    use_video=not args.no_story,
+                    use_video=args.with_story,
                     link_url=story_link,
                 )
                 print("STORY:", json.dumps(story_result, indent=2))

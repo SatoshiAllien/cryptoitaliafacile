@@ -16,5 +16,5 @@ $trigger = New-ScheduledTaskTrigger -Once -At "07:00" -RepetitionInterval (New-T
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
 Register-ScheduledTask -TaskName "The Little Satoshi News-FB-20post" -Action $action -Trigger $trigger -Settings $settings -Force | Out-Null
 
-Write-Host "Registrato: The Little Satoshi News-FB-20post (ogni 30 min, 07:00–22:00, 20 post/giorno)"
+Write-Host "Registrato: The Little Satoshi News-FB-20post (ogni 30 min, 07:00–22:00, 20 post feed/giorno, senza Story)"
 Write-Host "Richiede scripts\.env con FACEBOOK_PAGE_ID e FACEBOOK_PAGE_ACCESS_TOKEN"

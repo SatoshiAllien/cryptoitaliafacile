@@ -1,0 +1,19 @@
+{
+  "mode": "feed_only",
+  "stories_enabled": false,
+  "posts_per_day": 20,
+  "platforms": ["instagram", "facebook"],
+  "instagram_handle": "krown.82",
+  "schedule": {
+    "timezone": "Europe/Rome",
+    "start_hour": 7,
+    "end_hour": 22,
+    "interval_minutes": 30,
+    "slots": 20
+  },
+  "workflows": [
+    "instagram-auto-post.yml",
+    "facebook-auto-post.yml"
+  ],
+  "note": "Solo post feed. Per pubblicare anche Story usare --with-story negli script."
+}

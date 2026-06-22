@@ -114,7 +114,15 @@ const TRANSLATIONS = {
       cta: 'Scopri il fondatore →',
       ctaContact: 'Contatta il Fondatore',
       ctaLinkedin: 'Segui su LinkedIn',
-      ctaConsult: 'Richiedi una consulenza'
+      ctaConsult: 'Richiedi una consulenza',
+      passionsTitle: 'Passioni & Percorsi Personali',
+      passionsLead: 'Oltre al mondo crypto — tech, ospitalità e fitness con lo stesso metodo e costanza.',
+      passionTech: 'Tech Lab',
+      passionHosp: 'Ospitalità',
+      passionFitness: 'Health & Fitness',
+      passionTechDesc: 'Hardware custom, AI locale e scripting.',
+      passionHospDesc: '10+ anni tra hotel, bar e mixology internazionale.',
+      passionFitnessDesc: '15+ anni tra pesi, corsa, bici e nutrizione.'
     },
     techLab: {
       label: 'Il Mio Spazio Tecnologico',
@@ -462,7 +470,15 @@ const TRANSLATIONS = {
       cta: 'Meet the founder →',
       ctaContact: 'Contact the Founder',
       ctaLinkedin: 'Follow on LinkedIn',
-      ctaConsult: 'Request a consultation'
+      ctaConsult: 'Request a consultation',
+      passionsTitle: 'Passions & Personal Journeys',
+      passionsLead: 'Beyond crypto — tech, hospitality and fitness with the same discipline and method.',
+      passionTech: 'Tech Lab',
+      passionHosp: 'Hospitality',
+      passionFitness: 'Health & Fitness',
+      passionTechDesc: 'Custom hardware, local AI and scripting.',
+      passionHospDesc: '10+ years in hotels, bars and international mixology.',
+      passionFitnessDesc: '15+ years across weights, running, cycling and nutrition.'
     },
     techLab: {
       label: 'My Technology Space',

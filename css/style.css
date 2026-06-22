@@ -3318,6 +3318,109 @@ h1, h2, h3, h4 { color: var(--text); }
   color: var(--secondary);
 }
 
+.founder-passions-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 0.25rem;
+}
+.founder-passions-quick-link {
+  padding: 0.4rem 0.85rem;
+  background: var(--primary-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition);
+}
+.founder-passions-quick-link:hover {
+  border-color: var(--border-glow);
+  background: rgba(232, 148, 12, 0.15);
+}
+.founder-passions-quick-link--fitness {
+  border-color: rgba(184, 255, 46, 0.25);
+  background: rgba(184, 255, 46, 0.08);
+  color: #b8ff2e;
+}
+.founder-passions-quick-link--fitness:hover {
+  border-color: rgba(184, 255, 46, 0.45);
+  background: rgba(184, 255, 46, 0.14);
+}
+
+.founder-passions { margin: 2.5rem 0; }
+.founder-passions-lead {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+.founder-passions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.founder-passion-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+.founder-passion-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glow);
+  box-shadow: var(--shadow-color);
+}
+.founder-passion-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.founder-passion-card-body { padding: 1.25rem; flex: 1; }
+.founder-passion-card h3 {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0.35rem 0 0.5rem;
+}
+.founder-passion-card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+.founder-passion-tag {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  background: var(--primary-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.founder-passion-card--fitness {
+  border-color: rgba(184, 255, 46, 0.2);
+}
+.founder-passion-card--fitness:hover {
+  border-color: rgba(184, 255, 46, 0.4);
+  box-shadow: 0 0 20px rgba(184, 255, 46, 0.1), var(--shadow-lg);
+}
+.founder-passion-card--fitness .founder-passion-tag {
+  background: rgba(184, 255, 46, 0.1);
+  border-color: rgba(184, 255, 46, 0.25);
+  color: #b8ff2e;
+}
+
 .founder-cta-bar--footer {
   margin-top: 2rem;
   padding-top: 2rem;

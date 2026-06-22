@@ -186,6 +186,15 @@ function renderHeader() {
             ${(SITE_CONFIG.nav.find(n => n.children) || {}).children?.map(c => `<a href="${base}${c.href}">${navLabel(c.href)}</a>`).join('') || ''}
           </div>
         </details>
+        <details class="mobile-accordion">
+          <summary>${t('footer.founder')}</summary>
+          <div class="mobile-accordion-body">
+            <a href="${base}fondatore/index.html">${t('footer.founder')}</a>
+            <a href="${base}tech-lab/index.html">${t('footer.techLab')}</a>
+            <a href="${base}ospitalita/index.html">${t('footer.hospitality')}</a>
+            <a href="${base}fitness/index.html">${t('footer.fitness')}</a>
+          </div>
+        </details>
         <nav class="mobile-nav-links">
           <a href="${base}glossario/index.html" class="mobile-nav-link">${t('nav.glossario')}</a>
           ${['x', 'facebook', 'instagram'].map(renderMobileSocialLink).join('')}
@@ -242,6 +251,10 @@ function renderFooter() {
           <div class="footer-col">
             <h4>${t('footer.resources')}</h4>
             <div class="footer-links">
+              <a href="${base}fondatore/index.html">${t('footer.founder')}</a>
+              <a href="${base}tech-lab/index.html">${t('footer.techLab')}</a>
+              <a href="${base}ospitalita/index.html">${t('footer.hospitality')}</a>
+              <a href="${base}fitness/index.html">${t('footer.fitness')}</a>
               <a href="${base}glossario/index.html">${t('nav.glossario')}</a>
               <a href="${base}strumenti/index.html">${t('nav.strumenti')}</a>
               <a href="${base}trend/index.html">${t('nav.trend')}</a>

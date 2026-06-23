@@ -31,12 +31,15 @@
       "igPortraitImage": "iniziare-exchange-revolut-kraken-portrait.jpg",
       "fbPortraitImage": "iniziare-exchange-revolut-kraken-square.jpg",
       "igPortraitImageAlt": "iniziare-exchange-revolut-kraken-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "iniziare-exchange-revolut-kraken-square.jpg",
       "fbSquareImageAlt": "iniziare-exchange-revolut-kraken-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "lightning-network-guida",
@@ -69,12 +72,15 @@
       "igPortraitImage": "lightning-network-guida-portrait.jpg",
       "fbPortraitImage": "lightning-network-guida-square.jpg",
       "igPortraitImageAlt": "lightning-network-guida-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "lightning-network-guida-square.jpg",
       "fbSquareImageAlt": "lightning-network-guida-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "comprare-bitcoin-prima-volta",
@@ -106,12 +112,15 @@
       "igPortraitImage": "comprare-bitcoin-prima-volta-portrait.jpg",
       "fbPortraitImage": "comprare-bitcoin-prima-volta-square.jpg",
       "igPortraitImageAlt": "comprare-bitcoin-prima-volta-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "comprare-bitcoin-prima-volta-square.jpg",
       "fbSquareImageAlt": "comprare-bitcoin-prima-volta-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "creare-wallet-sicuro",
@@ -142,12 +151,15 @@
       "igPortraitImage": "creare-wallet-sicuro-portrait.jpg",
       "fbPortraitImage": "creare-wallet-sicuro-square.jpg",
       "igPortraitImageAlt": "creare-wallet-sicuro-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "creare-wallet-sicuro-square.jpg",
       "fbSquareImageAlt": "creare-wallet-sicuro-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trasferire-crypto-exchange",
@@ -177,12 +189,15 @@
       "igPortraitImage": "trasferire-crypto-exchange-portrait.jpg",
       "fbPortraitImage": "trasferire-crypto-exchange-square.jpg",
       "igPortraitImageAlt": "trasferire-crypto-exchange-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trasferire-crypto-exchange-square.jpg",
       "fbSquareImageAlt": "trasferire-crypto-exchange-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "staking-ethereum",
@@ -212,12 +227,15 @@
       "igPortraitImage": "staking-ethereum-portrait.jpg",
       "fbPortraitImage": "staking-ethereum-square.jpg",
       "igPortraitImageAlt": "staking-ethereum-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "staking-ethereum-square.jpg",
       "fbSquareImageAlt": "staking-ethereum-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "usare-metamask",
@@ -247,12 +265,15 @@
       "igPortraitImage": "usare-metamask-portrait.jpg",
       "fbPortraitImage": "usare-metamask-square.jpg",
       "igPortraitImageAlt": "usare-metamask-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "usare-metamask-square.jpg",
       "fbSquareImageAlt": "usare-metamask-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "leggere-indirizzo-wallet",
@@ -281,12 +302,15 @@
       "igPortraitImage": "leggere-indirizzo-wallet-portrait.jpg",
       "fbPortraitImage": "leggere-indirizzo-wallet-square.jpg",
       "igPortraitImageAlt": "leggere-indirizzo-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "leggere-indirizzo-wallet-square.jpg",
       "fbSquareImageAlt": "leggere-indirizzo-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "dichiarare-crypto-italia",
@@ -315,12 +339,15 @@
       "igPortraitImage": "dichiarare-crypto-italia-portrait.jpg",
       "fbPortraitImage": "dichiarare-crypto-italia-square.jpg",
       "igPortraitImageAlt": "dichiarare-crypto-italia-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "dichiarare-crypto-italia-square.jpg",
       "fbSquareImageAlt": "dichiarare-crypto-italia-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "scegliere-exchange-sicuro",
@@ -349,12 +376,15 @@
       "igPortraitImage": "scegliere-exchange-sicuro-portrait.jpg",
       "fbPortraitImage": "scegliere-exchange-sicuro-square.jpg",
       "igPortraitImageAlt": "scegliere-exchange-sicuro-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "scegliere-exchange-sicuro-square.jpg",
       "fbSquareImageAlt": "scegliere-exchange-sicuro-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "proteggere-seed-phrase",
@@ -385,12 +415,15 @@
       "igPortraitImage": "proteggere-seed-phrase-portrait.jpg",
       "fbPortraitImage": "proteggere-seed-phrase-square.jpg",
       "igPortraitImageAlt": "proteggere-seed-phrase-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "proteggere-seed-phrase-square.jpg",
       "fbSquareImageAlt": "proteggere-seed-phrase-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "prima-swap-uniswap",
@@ -419,12 +452,15 @@
       "igPortraitImage": "prima-swap-uniswap-portrait.jpg",
       "fbPortraitImage": "prima-swap-uniswap-square.jpg",
       "igPortraitImageAlt": "prima-swap-uniswap-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "prima-swap-uniswap-square.jpg",
       "fbSquareImageAlt": "prima-swap-uniswap-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "hardware-wallet-ledger",
@@ -453,12 +489,15 @@
       "igPortraitImage": "hardware-wallet-ledger-portrait.jpg",
       "fbPortraitImage": "hardware-wallet-ledger-square.jpg",
       "igPortraitImageAlt": "hardware-wallet-ledger-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "hardware-wallet-ledger-square.jpg",
       "fbSquareImageAlt": "hardware-wallet-ledger-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "capire-gas-fee",
@@ -487,12 +526,15 @@
       "igPortraitImage": "capire-gas-fee-portrait.jpg",
       "fbPortraitImage": "capire-gas-fee-square.jpg",
       "igPortraitImageAlt": "capire-gas-fee-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "capire-gas-fee-square.jpg",
       "fbSquareImageAlt": "capire-gas-fee-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "dca-crypto",
@@ -521,12 +563,15 @@
       "igPortraitImage": "dca-crypto-portrait.jpg",
       "fbPortraitImage": "dca-crypto-square.jpg",
       "igPortraitImageAlt": "dca-crypto-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "dca-crypto-square.jpg",
       "fbSquareImageAlt": "dca-crypto-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "verificare-smart-contract",
@@ -555,12 +600,15 @@
       "igPortraitImage": "verificare-smart-contract-portrait.jpg",
       "fbPortraitImage": "verificare-smart-contract-square.jpg",
       "igPortraitImageAlt": "verificare-smart-contract-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "verificare-smart-contract-square.jpg",
       "fbSquareImageAlt": "verificare-smart-contract-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "usare-etherscan",
@@ -589,12 +637,15 @@
       "igPortraitImage": "usare-etherscan-portrait.jpg",
       "fbPortraitImage": "usare-etherscan-square.jpg",
       "igPortraitImageAlt": "usare-etherscan-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "usare-etherscan-square.jpg",
       "fbSquareImageAlt": "usare-etherscan-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "cold-wallet-chiavi-offline",
@@ -623,12 +674,15 @@
       "igPortraitImage": "cold-wallet-chiavi-offline-portrait.jpg",
       "fbPortraitImage": "cold-wallet-chiavi-offline-square.jpg",
       "igPortraitImageAlt": "cold-wallet-chiavi-offline-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "cold-wallet-chiavi-offline-square.jpg",
       "fbSquareImageAlt": "cold-wallet-chiavi-offline-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "yield-farming-sicurezza",
@@ -657,12 +711,15 @@
       "igPortraitImage": "yield-farming-sicurezza-portrait.jpg",
       "fbPortraitImage": "yield-farming-sicurezza-square.jpg",
       "igPortraitImageAlt": "yield-farming-sicurezza-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "yield-farming-sicurezza-square.jpg",
       "fbSquareImageAlt": "yield-farming-sicurezza-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "convertire-crypto-euro",
@@ -691,12 +748,15 @@
       "igPortraitImage": "convertire-crypto-euro-portrait.jpg",
       "fbPortraitImage": "convertire-crypto-euro-square.jpg",
       "igPortraitImageAlt": "convertire-crypto-euro-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "convertire-crypto-euro-square.jpg",
       "fbSquareImageAlt": "convertire-crypto-euro-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "alert-prezzo-portafoglio",
@@ -725,12 +785,15 @@
       "igPortraitImage": "alert-prezzo-portafoglio-portrait.jpg",
       "fbPortraitImage": "alert-prezzo-portafoglio-square.jpg",
       "igPortraitImageAlt": "alert-prezzo-portafoglio-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "alert-prezzo-portafoglio-square.jpg",
       "fbSquareImageAlt": "alert-prezzo-portafoglio-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "recuperare-crypto-sbagliato",
@@ -759,12 +822,15 @@
       "igPortraitImage": "recuperare-crypto-sbagliato-portrait.jpg",
       "fbPortraitImage": "recuperare-crypto-sbagliato-square.jpg",
       "igPortraitImageAlt": "recuperare-crypto-sbagliato-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "recuperare-crypto-sbagliato-square.jpg",
       "fbSquareImageAlt": "recuperare-crypto-sbagliato-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-mai-seed-phrase",
@@ -791,12 +857,15 @@
       "igPortraitImage": "tip-mai-seed-phrase-portrait.jpg",
       "fbPortraitImage": "tip-mai-seed-phrase-square.jpg",
       "igPortraitImageAlt": "tip-mai-seed-phrase-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-mai-seed-phrase-square.jpg",
       "fbSquareImageAlt": "tip-mai-seed-phrase-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-2fa-exchange",
@@ -824,12 +893,15 @@
       "igPortraitImage": "tip-2fa-exchange-portrait.jpg",
       "fbPortraitImage": "tip-2fa-exchange-square.jpg",
       "igPortraitImageAlt": "tip-2fa-exchange-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-2fa-exchange-square.jpg",
       "fbSquareImageAlt": "tip-2fa-exchange-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-verifica-url",
@@ -856,12 +928,15 @@
       "igPortraitImage": "tip-verifica-url-portrait.jpg",
       "fbPortraitImage": "tip-verifica-url-square.jpg",
       "igPortraitImageAlt": "tip-verifica-url-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-verifica-url-square.jpg",
       "fbSquareImageAlt": "tip-verifica-url-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-non-tenere-exchange",
@@ -889,12 +964,15 @@
       "igPortraitImage": "tip-non-tenere-exchange-portrait.jpg",
       "fbPortraitImage": "tip-non-tenere-exchange-square.jpg",
       "igPortraitImageAlt": "tip-non-tenere-exchange-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-non-tenere-exchange-square.jpg",
       "fbSquareImageAlt": "tip-non-tenere-exchange-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-inizia-poco",
@@ -921,12 +999,15 @@
       "igPortraitImage": "tip-inizia-poco-portrait.jpg",
       "fbPortraitImage": "tip-inizia-poco-square.jpg",
       "igPortraitImageAlt": "tip-inizia-poco-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-inizia-poco-square.jpg",
       "fbSquareImageAlt": "tip-inizia-poco-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-controlla-rete",
@@ -953,12 +1034,15 @@
       "igPortraitImage": "tip-controlla-rete-portrait.jpg",
       "fbPortraitImage": "tip-controlla-rete-square.jpg",
       "igPortraitImageAlt": "tip-controlla-rete-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-controlla-rete-square.jpg",
       "fbSquareImageAlt": "tip-controlla-rete-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-rubrica-wallet",
@@ -985,12 +1069,15 @@
       "igPortraitImage": "tip-rubrica-wallet-portrait.jpg",
       "fbPortraitImage": "tip-rubrica-wallet-square.jpg",
       "igPortraitImageAlt": "tip-rubrica-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-rubrica-wallet-square.jpg",
       "fbSquareImageAlt": "tip-rubrica-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-no-screenshot-seed",
@@ -1017,12 +1104,15 @@
       "igPortraitImage": "tip-no-screenshot-seed-portrait.jpg",
       "fbPortraitImage": "tip-no-screenshot-seed-square.jpg",
       "igPortraitImageAlt": "tip-no-screenshot-seed-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-no-screenshot-seed-square.jpg",
       "fbSquareImageAlt": "tip-no-screenshot-seed-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-diffida-telegram",
@@ -1049,12 +1139,15 @@
       "igPortraitImage": "tip-diffida-telegram-portrait.jpg",
       "fbPortraitImage": "tip-diffida-telegram-square.jpg",
       "igPortraitImageAlt": "tip-diffida-telegram-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-diffida-telegram-square.jpg",
       "fbSquareImageAlt": "tip-diffida-telegram-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-aggiorna-wallet",
@@ -1081,12 +1174,15 @@
       "igPortraitImage": "tip-aggiorna-wallet-portrait.jpg",
       "fbPortraitImage": "tip-aggiorna-wallet-square.jpg",
       "igPortraitImageAlt": "tip-aggiorna-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-aggiorna-wallet-square.jpg",
       "fbSquareImageAlt": "tip-aggiorna-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-email-dedicata",
@@ -1113,12 +1209,15 @@
       "igPortraitImage": "tip-email-dedicata-portrait.jpg",
       "fbPortraitImage": "tip-email-dedicata-square.jpg",
       "igPortraitImageAlt": "tip-email-dedicata-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-email-dedicata-square.jpg",
       "fbSquareImageAlt": "tip-email-dedicata-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-leggi-transazione",
@@ -1145,12 +1244,15 @@
       "igPortraitImage": "tip-leggi-transazione-portrait.jpg",
       "fbPortraitImage": "tip-leggi-transazione-square.jpg",
       "igPortraitImageAlt": "tip-leggi-transazione-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-leggi-transazione-square.jpg",
       "fbSquareImageAlt": "tip-leggi-transazione-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-diversifica",
@@ -1177,12 +1279,15 @@
       "igPortraitImage": "tip-diversifica-portrait.jpg",
       "fbPortraitImage": "tip-diversifica-square.jpg",
       "igPortraitImageAlt": "tip-diversifica-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-diversifica-square.jpg",
       "fbSquareImageAlt": "tip-diversifica-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-traccia-operazioni",
@@ -1209,12 +1314,15 @@
       "igPortraitImage": "tip-traccia-operazioni-portrait.jpg",
       "fbPortraitImage": "tip-traccia-operazioni-square.jpg",
       "igPortraitImageAlt": "tip-traccia-operazioni-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-traccia-operazioni-square.jpg",
       "fbSquareImageAlt": "tip-traccia-operazioni-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-spread-fee",
@@ -1241,12 +1349,15 @@
       "igPortraitImage": "tip-spread-fee-portrait.jpg",
       "fbPortraitImage": "tip-spread-fee-square.jpg",
       "igPortraitImageAlt": "tip-spread-fee-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-spread-fee-square.jpg",
       "fbSquareImageAlt": "tip-spread-fee-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-staking-unlock",
@@ -1273,12 +1384,15 @@
       "igPortraitImage": "tip-staking-unlock-portrait.jpg",
       "fbPortraitImage": "tip-staking-unlock-square.jpg",
       "igPortraitImageAlt": "tip-staking-unlock-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-staking-unlock-square.jpg",
       "fbSquareImageAlt": "tip-staking-unlock-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-test-transazione",
@@ -1305,12 +1419,15 @@
       "igPortraitImage": "tip-test-transazione-portrait.jpg",
       "fbPortraitImage": "tip-test-transazione-square.jpg",
       "igPortraitImageAlt": "tip-test-transazione-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-test-transazione-square.jpg",
       "fbSquareImageAlt": "tip-test-transazione-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-no-link-email",
@@ -1337,12 +1454,15 @@
       "igPortraitImage": "tip-no-link-email-portrait.jpg",
       "fbPortraitImage": "tip-no-link-email-square.jpg",
       "igPortraitImageAlt": "tip-no-link-email-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-no-link-email-square.jpg",
       "fbSquareImageAlt": "tip-no-link-email-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-pin-wallet",
@@ -1369,12 +1489,15 @@
       "igPortraitImage": "tip-pin-wallet-portrait.jpg",
       "fbPortraitImage": "tip-pin-wallet-square.jpg",
       "igPortraitImageAlt": "tip-pin-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-pin-wallet-square.jpg",
       "fbSquareImageAlt": "tip-pin-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "tip-non-capisci-non-investi",
@@ -1401,12 +1524,15 @@
       "igPortraitImage": "tip-non-capisci-non-investi-portrait.jpg",
       "fbPortraitImage": "tip-non-capisci-non-investi-square.jpg",
       "igPortraitImageAlt": "tip-non-capisci-non-investi-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "tip-non-capisci-non-investi-square.jpg",
       "fbSquareImageAlt": "tip-non-capisci-non-investi-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-mica",
@@ -1440,12 +1566,15 @@
       "igPortraitImage": "trend-mica-portrait.jpg",
       "fbPortraitImage": "trend-mica-square.jpg",
       "igPortraitImageAlt": "trend-mica-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-mica-square.jpg",
       "fbSquareImageAlt": "trend-mica-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-etf-bitcoin",
@@ -1474,12 +1603,15 @@
       "igPortraitImage": "trend-etf-bitcoin-portrait.jpg",
       "fbPortraitImage": "trend-etf-bitcoin-square.jpg",
       "igPortraitImageAlt": "trend-etf-bitcoin-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-etf-bitcoin-square.jpg",
       "fbSquareImageAlt": "trend-etf-bitcoin-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-layer2",
@@ -1508,12 +1640,15 @@
       "igPortraitImage": "trend-layer2-portrait.jpg",
       "fbPortraitImage": "trend-layer2-square.jpg",
       "igPortraitImageAlt": "trend-layer2-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-layer2-square.jpg",
       "fbSquareImageAlt": "trend-layer2-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-rwa",
@@ -1542,12 +1677,15 @@
       "igPortraitImage": "trend-rwa-portrait.jpg",
       "fbPortraitImage": "trend-rwa-square.jpg",
       "igPortraitImageAlt": "trend-rwa-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-rwa-square.jpg",
       "fbSquareImageAlt": "trend-rwa-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-stablecoin",
@@ -1574,12 +1712,15 @@
       "igPortraitImage": "trend-stablecoin-portrait.jpg",
       "fbPortraitImage": "trend-stablecoin-square.jpg",
       "igPortraitImageAlt": "trend-stablecoin-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-stablecoin-square.jpg",
       "fbSquareImageAlt": "trend-stablecoin-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-cbdc",
@@ -1606,12 +1747,15 @@
       "igPortraitImage": "trend-cbdc-portrait.jpg",
       "fbPortraitImage": "trend-cbdc-square.jpg",
       "igPortraitImageAlt": "trend-cbdc-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-cbdc-square.jpg",
       "fbSquareImageAlt": "trend-cbdc-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-depin",
@@ -1638,12 +1782,15 @@
       "igPortraitImage": "trend-depin-portrait.jpg",
       "fbPortraitImage": "trend-depin-square.jpg",
       "igPortraitImageAlt": "trend-depin-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-depin-square.jpg",
       "fbSquareImageAlt": "trend-depin-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-ai-blockchain",
@@ -1671,12 +1818,15 @@
       "igPortraitImage": "trend-ai-blockchain-portrait.jpg",
       "fbPortraitImage": "trend-ai-blockchain-square.jpg",
       "igPortraitImageAlt": "trend-ai-blockchain-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-ai-blockchain-square.jpg",
       "fbSquareImageAlt": "trend-ai-blockchain-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-halving",
@@ -1704,12 +1854,15 @@
       "igPortraitImage": "trend-halving-portrait.jpg",
       "fbPortraitImage": "trend-halving-square.jpg",
       "igPortraitImageAlt": "trend-halving-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-halving-square.jpg",
       "fbSquareImageAlt": "trend-halving-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "trend-modular-blockchain",
@@ -1736,12 +1889,15 @@
       "igPortraitImage": "trend-modular-blockchain-portrait.jpg",
       "fbPortraitImage": "trend-modular-blockchain-square.jpg",
       "igPortraitImageAlt": "trend-modular-blockchain-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "trend-modular-blockchain-square.jpg",
       "fbSquareImageAlt": "trend-modular-blockchain-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "blockchain-5-minuti",
@@ -1770,12 +1926,15 @@
       "igPortraitImage": "blockchain-5-minuti-portrait.jpg",
       "fbPortraitImage": "blockchain-5-minuti-square.jpg",
       "igPortraitImageAlt": "blockchain-5-minuti-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "blockchain-5-minuti-square.jpg",
       "fbSquareImageAlt": "blockchain-5-minuti-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "creare-account-exchange",
@@ -1803,12 +1962,15 @@
       "igPortraitImage": "creare-account-exchange-portrait.jpg",
       "fbPortraitImage": "creare-account-exchange-square.jpg",
       "igPortraitImageAlt": "creare-account-exchange-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "creare-account-exchange-square.jpg",
       "fbSquareImageAlt": "creare-account-exchange-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "primi-20-euro-bitcoin",
@@ -1836,12 +1998,15 @@
       "igPortraitImage": "primi-20-euro-bitcoin-portrait.jpg",
       "fbPortraitImage": "primi-20-euro-bitcoin-square.jpg",
       "igPortraitImageAlt": "primi-20-euro-bitcoin-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "primi-20-euro-bitcoin-square.jpg",
       "fbSquareImageAlt": "primi-20-euro-bitcoin-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "installare-trust-wallet",
@@ -1869,12 +2034,15 @@
       "igPortraitImage": "installare-trust-wallet-portrait.jpg",
       "fbPortraitImage": "installare-trust-wallet-square.jpg",
       "igPortraitImageAlt": "installare-trust-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "installare-trust-wallet-square.jpg",
       "fbSquareImageAlt": "installare-trust-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "prima-transazione-crypto",
@@ -1902,12 +2070,15 @@
       "igPortraitImage": "prima-transazione-crypto-portrait.jpg",
       "fbPortraitImage": "prima-transazione-crypto-square.jpg",
       "igPortraitImageAlt": "prima-transazione-crypto-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "prima-transazione-crypto-square.jpg",
       "fbSquareImageAlt": "prima-transazione-crypto-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "leggere-grafico-candele",
@@ -1935,12 +2106,15 @@
       "igPortraitImage": "leggere-grafico-candele-portrait.jpg",
       "fbPortraitImage": "leggere-grafico-candele-square.jpg",
       "igPortraitImageAlt": "leggere-grafico-candele-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "leggere-grafico-candele-square.jpg",
       "fbSquareImageAlt": "leggere-grafico-candele-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "market-cap-volume",
@@ -1968,12 +2142,15 @@
       "igPortraitImage": "market-cap-volume-portrait.jpg",
       "fbPortraitImage": "market-cap-volume-square.jpg",
       "igPortraitImageAlt": "market-cap-volume-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "market-cap-volume-square.jpg",
       "fbSquareImageAlt": "market-cap-volume-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "esplorare-block-explorer",
@@ -2001,12 +2178,15 @@
       "igPortraitImage": "esplorare-block-explorer-portrait.jpg",
       "fbPortraitImage": "esplorare-block-explorer-square.jpg",
       "igPortraitImageAlt": "esplorare-block-explorer-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "esplorare-block-explorer-square.jpg",
       "fbSquareImageAlt": "esplorare-block-explorer-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "notifiche-prezzo-app",
@@ -2034,12 +2214,15 @@
       "igPortraitImage": "notifiche-prezzo-app-portrait.jpg",
       "fbPortraitImage": "notifiche-prezzo-app-square.jpg",
       "igPortraitImageAlt": "notifiche-prezzo-app-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "notifiche-prezzo-app-square.jpg",
       "fbSquareImageAlt": "notifiche-prezzo-app-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "creare-watchlist",
@@ -2067,12 +2250,15 @@
       "igPortraitImage": "creare-watchlist-portrait.jpg",
       "fbPortraitImage": "creare-watchlist-square.jpg",
       "igPortraitImageAlt": "creare-watchlist-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "creare-watchlist-square.jpg",
       "fbSquareImageAlt": "creare-watchlist-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "bridge-cross-chain",
@@ -2101,12 +2287,15 @@
       "igPortraitImage": "bridge-cross-chain-portrait.jpg",
       "fbPortraitImage": "bridge-cross-chain-square.jpg",
       "igPortraitImageAlt": "bridge-cross-chain-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "bridge-cross-chain-square.jpg",
       "fbSquareImageAlt": "bridge-cross-chain-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "liquidita-uniswap-v3",
@@ -2135,12 +2324,15 @@
       "igPortraitImage": "liquidita-uniswap-v3-portrait.jpg",
       "fbPortraitImage": "liquidita-uniswap-v3-square.jpg",
       "igPortraitImageAlt": "liquidita-uniswap-v3-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "liquidita-uniswap-v3-square.jpg",
       "fbSquareImageAlt": "liquidita-uniswap-v3-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "usare-aave",
@@ -2169,12 +2361,15 @@
       "igPortraitImage": "usare-aave-portrait.jpg",
       "fbPortraitImage": "usare-aave-square.jpg",
       "igPortraitImageAlt": "usare-aave-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "usare-aave-square.jpg",
       "fbSquareImageAlt": "usare-aave-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "analisi-on-chain-dune",
@@ -2203,12 +2398,15 @@
       "igPortraitImage": "analisi-on-chain-dune-portrait.jpg",
       "fbPortraitImage": "analisi-on-chain-dune-square.jpg",
       "igPortraitImageAlt": "analisi-on-chain-dune-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "analisi-on-chain-dune-square.jpg",
       "fbSquareImageAlt": "analisi-on-chain-dune-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "nodo-validator",
@@ -2237,12 +2435,15 @@
       "igPortraitImage": "nodo-validator-portrait.jpg",
       "fbPortraitImage": "nodo-validator-square.jpg",
       "igPortraitImageAlt": "nodo-validator-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "nodo-validator-square.jpg",
       "fbSquareImageAlt": "nodo-validator-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "leggere-solidity",
@@ -2271,12 +2472,15 @@
       "igPortraitImage": "leggere-solidity-portrait.jpg",
       "fbPortraitImage": "leggere-solidity-square.jpg",
       "igPortraitImageAlt": "leggere-solidity-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "leggere-solidity-square.jpg",
       "fbSquareImageAlt": "leggere-solidity-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "mev-protezione",
@@ -2305,12 +2509,15 @@
       "igPortraitImage": "mev-protezione-portrait.jpg",
       "fbPortraitImage": "mev-protezione-square.jpg",
       "igPortraitImageAlt": "mev-protezione-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "mev-protezione-square.jpg",
       "fbSquareImageAlt": "mev-protezione-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "multisig-gnosis-safe",
@@ -2339,12 +2546,15 @@
       "igPortraitImage": "multisig-gnosis-safe-portrait.jpg",
       "fbPortraitImage": "multisig-gnosis-safe-square.jpg",
       "igPortraitImageAlt": "multisig-gnosis-safe-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "multisig-gnosis-safe-square.jpg",
       "fbSquareImageAlt": "multisig-gnosis-safe-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "ottimizzazione-gas-batch",
@@ -2373,12 +2583,15 @@
       "igPortraitImage": "ottimizzazione-gas-batch-portrait.jpg",
       "fbPortraitImage": "ottimizzazione-gas-batch-square.jpg",
       "igPortraitImageAlt": "ottimizzazione-gas-batch-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "ottimizzazione-gas-batch-square.jpg",
       "fbSquareImageAlt": "ottimizzazione-gas-batch-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "hedging-stablecoin",
@@ -2407,12 +2620,62 @@
       "igPortraitImage": "hedging-stablecoin-portrait.jpg",
       "fbPortraitImage": "hedging-stablecoin-square.jpg",
       "igPortraitImageAlt": "hedging-stablecoin-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "hedging-stablecoin-square.jpg",
       "fbSquareImageAlt": "hedging-stablecoin-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
+    },
+    {
+      "slug": "cardano-science-first",
+      "title": "Cardano: la blockchain costruita sulla scienza per il lungo periodo",
+      "titleEn": "Cardano: The Science-First Blockchain Built for the Long Term",
+      "excerpt": "Architettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.",
+      "excerptEn": "eUTxO architecture, staking, governance, Hydra, Mithril, and the scalability roadmap: a complete Cardano overview for readers in Italy, Egypt, and beyond.",
+      "seoTitle": "Cardano: blockchain proof-of-stake, scalabilità e Web3",
+      "seoDescription": "Guida completa a Cardano: ADA, eUTxO, staking, governance Voltaire, Hydra, Mithril, Leios e casi d'uso reali. Blockchain scientifica spiegata in modo chiaro.",
+      "seoKeywords": "Cardano, ADA, blockchain, scalabilità, decentralizzazione, Web3, smart contract, Hydra, staking",
+      "category": "cardano",
+      "difficulty": "intermediate",
+      "readTime": 18,
+      "date": "Giugno 2026",
+      "dateEn": "June 2026",
+      "tags": [
+        "cardano",
+        "ada",
+        "blockchain",
+        "web3",
+        "scalability"
+      ],
+      "popular": true,
+      "featured": true,
+      "fbImage": "cardano-spiegato.jpg",
+      "igImage": "cardano-spiegato.jpg",
+      "fbStoryImage": "cardano-spiegato-abstract.jpg",
+      "igStoryImage": "cardano-spiegato-abstract.jpg",
+      "previewVariant": "variant-1-hero",
+      "storyVariant": "variant-1-hero",
+      "storyVariants": [
+        "variant-1-abstract",
+        "variant-1-thematic",
+        "variant-1-minimal"
+      ],
+      "igPortraitImage": "cardano-spiegato-portrait.jpg",
+      "fbPortraitImage": "cardano-spiegato-square.jpg",
+      "igPortraitImageAlt": "cardano-spiegato-portrait-alt.jpg",
+      "feedPostVariant": "layout-v4-hero",
+      "fbSquareImage": "cardano-spiegato-square.jpg",
+      "fbSquareImageAlt": "cardano-spiegato-square-alt.jpg",
+      "storyNoLinks": true,
+      "storySafeArea": "120px",
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "cardano-spiegato",
@@ -2442,12 +2705,15 @@
       "igPortraitImage": "cardano-spiegato-portrait.jpg",
       "fbPortraitImage": "cardano-spiegato-square.jpg",
       "igPortraitImageAlt": "cardano-spiegato-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "cardano-spiegato-square.jpg",
       "fbSquareImageAlt": "cardano-spiegato-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "comprare-ada",
@@ -2475,12 +2741,15 @@
       "igPortraitImage": "comprare-ada-portrait.jpg",
       "fbPortraitImage": "comprare-ada-square.jpg",
       "igPortraitImageAlt": "comprare-ada-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "comprare-ada-square.jpg",
       "fbSquareImageAlt": "comprare-ada-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "staking-ada",
@@ -2509,12 +2778,15 @@
       "igPortraitImage": "staking-ada-portrait.jpg",
       "fbPortraitImage": "staking-ada-square.jpg",
       "igPortraitImageAlt": "staking-ada-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "staking-ada-square.jpg",
       "fbSquareImageAlt": "staking-ada-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "wallet-cardano-confronto",
@@ -2542,12 +2814,15 @@
       "igPortraitImage": "wallet-cardano-confronto-portrait.jpg",
       "fbPortraitImage": "wallet-cardano-confronto-square.jpg",
       "igPortraitImageAlt": "wallet-cardano-confronto-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "wallet-cardano-confronto-square.jpg",
       "fbSquareImageAlt": "wallet-cardano-confronto-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "project-catalyst",
@@ -2575,12 +2850,15 @@
       "igPortraitImage": "project-catalyst-portrait.jpg",
       "fbPortraitImage": "project-catalyst-square.jpg",
       "igPortraitImageAlt": "project-catalyst-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "project-catalyst-square.jpg",
       "fbSquareImageAlt": "project-catalyst-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "cardano-defi",
@@ -2608,12 +2886,15 @@
       "igPortraitImage": "cardano-defi-portrait.jpg",
       "fbPortraitImage": "cardano-defi-square.jpg",
       "igPortraitImageAlt": "cardano-defi-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "cardano-defi-square.jpg",
       "fbSquareImageAlt": "cardano-defi-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "native-token-cardano",
@@ -2641,12 +2922,15 @@
       "igPortraitImage": "native-token-cardano-portrait.jpg",
       "fbPortraitImage": "native-token-cardano-square.jpg",
       "igPortraitImageAlt": "native-token-cardano-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "native-token-cardano-square.jpg",
       "fbSquareImageAlt": "native-token-cardano-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "hydra-cardano",
@@ -2674,12 +2958,15 @@
       "igPortraitImage": "hydra-cardano-portrait.jpg",
       "fbPortraitImage": "hydra-cardano-square.jpg",
       "igPortraitImageAlt": "hydra-cardano-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "hydra-cardano-square.jpg",
       "fbSquareImageAlt": "hydra-cardano-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "plutus-panoramica",
@@ -2707,12 +2994,15 @@
       "igPortraitImage": "plutus-panoramica-portrait.jpg",
       "fbPortraitImage": "plutus-panoramica-square.jpg",
       "igPortraitImageAlt": "plutus-panoramica-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "plutus-panoramica-square.jpg",
       "fbSquareImageAlt": "plutus-panoramica-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "cardano-vs-ethereum",
@@ -2740,12 +3030,15 @@
       "igPortraitImage": "cardano-vs-ethereum-portrait.jpg",
       "fbPortraitImage": "cardano-vs-ethereum-square.jpg",
       "igPortraitImageAlt": "cardano-vs-ethereum-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "cardano-vs-ethereum-square.jpg",
       "fbSquareImageAlt": "cardano-vs-ethereum-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "seed-phrase-guida",
@@ -2773,12 +3066,15 @@
       "igPortraitImage": "seed-phrase-guida-portrait.jpg",
       "fbPortraitImage": "seed-phrase-guida-square.jpg",
       "igPortraitImageAlt": "seed-phrase-guida-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "seed-phrase-guida-square.jpg",
       "fbSquareImageAlt": "seed-phrase-guida-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "hot-vs-cold-wallet",
@@ -2805,12 +3101,15 @@
       "igPortraitImage": "hot-vs-cold-wallet-portrait.jpg",
       "fbPortraitImage": "hot-vs-cold-wallet-square.jpg",
       "igPortraitImageAlt": "hot-vs-cold-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "hot-vs-cold-wallet-square.jpg",
       "fbSquareImageAlt": "hot-vs-cold-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "confronto-hardware-wallet",
@@ -2837,12 +3136,15 @@
       "igPortraitImage": "confronto-hardware-wallet-portrait.jpg",
       "fbPortraitImage": "confronto-hardware-wallet-square.jpg",
       "igPortraitImageAlt": "confronto-hardware-wallet-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "confronto-hardware-wallet-square.jpg",
       "fbSquareImageAlt": "confronto-hardware-wallet-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "difendersi-phishing",
@@ -2869,12 +3171,15 @@
       "igPortraitImage": "difendersi-phishing-portrait.jpg",
       "fbPortraitImage": "difendersi-phishing-square.jpg",
       "igPortraitImageAlt": "difendersi-phishing-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "difendersi-phishing-square.jpg",
       "fbSquareImageAlt": "difendersi-phishing-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "approvazioni-smart-contract",
@@ -2901,12 +3206,15 @@
       "igPortraitImage": "approvazioni-smart-contract-portrait.jpg",
       "fbPortraitImage": "approvazioni-smart-contract-square.jpg",
       "igPortraitImageAlt": "approvazioni-smart-contract-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "approvazioni-smart-contract-square.jpg",
       "fbSquareImageAlt": "approvazioni-smart-contract-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "backup-wallet-321",
@@ -2933,12 +3241,15 @@
       "igPortraitImage": "backup-wallet-321-portrait.jpg",
       "fbPortraitImage": "backup-wallet-321-square.jpg",
       "igPortraitImageAlt": "backup-wallet-321-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "backup-wallet-321-square.jpg",
       "fbSquareImageAlt": "backup-wallet-321-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "sicurezza-mobile",
@@ -2965,12 +3276,15 @@
       "igPortraitImage": "sicurezza-mobile-portrait.jpg",
       "fbPortraitImage": "sicurezza-mobile-square.jpg",
       "igPortraitImageAlt": "sicurezza-mobile-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "sicurezza-mobile-square.jpg",
       "fbSquareImageAlt": "sicurezza-mobile-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "wallet-compromesso",
@@ -2997,12 +3311,15 @@
       "igPortraitImage": "wallet-compromesso-portrait.jpg",
       "fbPortraitImage": "wallet-compromesso-square.jpg",
       "igPortraitImageAlt": "wallet-compromesso-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "wallet-compromesso-square.jpg",
       "fbSquareImageAlt": "wallet-compromesso-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "password-manager-crypto",
@@ -3029,12 +3346,15 @@
       "igPortraitImage": "password-manager-crypto-portrait.jpg",
       "fbPortraitImage": "password-manager-crypto-square.jpg",
       "igPortraitImageAlt": "password-manager-crypto-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "password-manager-crypto-square.jpg",
       "fbSquareImageAlt": "password-manager-crypto-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     },
     {
       "slug": "audit-sicurezza-portafoglio",
@@ -3061,12 +3381,15 @@
       "igPortraitImage": "audit-sicurezza-portafoglio-portrait.jpg",
       "fbPortraitImage": "audit-sicurezza-portafoglio-square.jpg",
       "igPortraitImageAlt": "audit-sicurezza-portafoglio-portrait-alt.jpg",
-      "feedPostVariant": "layout-v3",
+      "feedPostVariant": "layout-v4-hero",
       "fbSquareImage": "audit-sicurezza-portafoglio-square.jpg",
       "fbSquareImageAlt": "audit-sicurezza-portafoglio-square-alt.jpg",
       "storyNoLinks": true,
       "storySafeArea": "120px",
-      "storyFormat": "1080x1920"
+      "storyFormat": "1080x1920",
+      "feedFormat": "1080x1350",
+      "feedSafeArea": "100px",
+      "feedLayout": "hero_logo_centered"
     }
   ],
   "glossary": [

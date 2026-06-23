@@ -81,6 +81,8 @@ def generate_variant(article: dict, *, variant_key: str, variant: str) -> dict:
         "facebook": {
             "image": fname,
             "size": "1080x1350",
+            "safe_area": "100px",
+            "layout": "hero_logo_centered",
             "design": design_description(topic, variant, "facebook"),
         },
     }

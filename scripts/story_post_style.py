@@ -47,9 +47,10 @@ INSTAGRAM_STORY = StoryLayout(
     platform="instagram",
 )
 FACEBOOK_STORY = StoryLayout(
-    width=1080, height=1350, safe=80,
-    title_size=52, subtitle_size=26, body_size=24,
-    logo_size=72, center_icon=108, hero_logo=0,
+    width=1080, height=1350, safe=100,
+    title_size=50, subtitle_size=26, body_size=24,
+    logo_size=0, center_icon=0,
+    hero_logo=300,
     cta_height=68, cta_font=24, body_max_lines=2,
     platform="facebook",
 )
@@ -281,12 +282,7 @@ def render_story_post(
     accent: str = PALETTE["accent"],
 ) -> Image.Image:
     spec = INSTAGRAM_STORY if platform == "instagram" else FACEBOOK_STORY
-    if platform == "instagram":
-        return _render_instagram_story(
-            spec=spec, topic=topic, title=title, subtitle=subtitle,
-            body=body, cta=cta, variant=variant, accent=accent,
-        )
-    return _render_facebook_story(
+    return _render_instagram_story(
         spec=spec, topic=topic, title=title, subtitle=subtitle,
         body=body, cta=cta, variant=variant, accent=accent,
     )
@@ -300,7 +296,9 @@ def design_description(topic: str, variant: str, platform: str) -> str:
             f"logo hero centrato ~37% · PNG trasparente · glow/neon · titolo {title_pos} logo · "
             f"sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
         )
+    title_pos = "sopra" if variant == "primary" else "sotto"
     return (
-        f"Story FB 1080×1350 · safe 80px · {variant} · {topic_label(topic)} · "
-        f"layout ordinato · CTA visiva · zero link/URL."
+        f"Story FB 1080×1350 · safe 100px · {variant} · {topic_label(topic)} · "
+        f"logo hero centrato ~35% · PNG trasparente · glow/neon · titolo {title_pos} logo · "
+        f"CTA visiva · zero link/URL."
     )

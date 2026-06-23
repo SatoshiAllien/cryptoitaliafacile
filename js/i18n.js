@@ -816,7 +816,14 @@ function initLangSwitcher() {
   });
 }
 
+function initLangFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get('lang');
+  if (lang === 'en' || lang === 'it') setLang(lang);
+}
+
 function initI18n() {
+  initLangFromUrl();
   document.documentElement.lang = getLang();
   initLangSwitcher();
   applyPageTranslations();

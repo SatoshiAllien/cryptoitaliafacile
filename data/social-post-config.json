@@ -1,9 +1,18 @@
 {
-  "mode": "feed_only",
-  "stories_enabled": false,
+  "mode": "feed_and_stories",
+  "stories_enabled": true,
   "posts_per_day": 20,
+  "stories_per_day": 20,
   "platforms": ["instagram", "facebook"],
   "instagram_handle": "krown.82",
+  "layout": {
+    "version": "v4-hero",
+    "instagram_story": { "size": "1080x1920", "safe_area_px": 120, "hero_logo_pct": "30-40%" },
+    "instagram_feed": { "size": "1080x1350", "safe_area_px": 100, "hero_logo_pct": "30-40%" },
+    "facebook_post": { "size": "1080x1350", "safe_area_px": 100, "hero_logo_pct": "30-40%" },
+    "facebook_story": { "size": "1080x1350", "safe_area_px": 100, "hero_logo_pct": "30-40%" },
+    "rules": ["logo_hero_centered", "png_transparent", "no_links", "no_urls"]
+  },
   "schedule": {
     "timezone": "Europe/Rome",
     "start_hour": 7,
@@ -15,5 +24,5 @@
     "instagram-auto-post.yml",
     "facebook-auto-post.yml"
   ],
-  "note": "Solo post feed. Per pubblicare anche Story usare --with-story negli script."
+  "note": "20 post feed + 20 story/giorno da articles.json. Layout hero logo centrato v4."
 }

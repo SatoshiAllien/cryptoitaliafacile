@@ -4,10 +4,10 @@
 Setup: scripts/.env — INSTAGRAM_ACCOUNT_ID + FACEBOOK_PAGE_ACCESS_TOKEN
 Guida: instagram-auto-setup.html
 
-Automazione (20 post/giorno SOLO FEED, 07:00–22:00 Roma, senza Story):
+Automazione (20 post+story/giorno, 07:00–22:00 Roma):
   python post-to-instagram.py --auto --now
   python post-to-instagram.py --auto --slot 0
-  python post-to-instagram.py --auto --now --with-story   # opzionale: anche Story
+  python post-to-instagram.py --auto --now --no-story   # solo feed
 """
 
 from __future__ import annotations
@@ -28,6 +28,7 @@ from daily_post_queue import daily_plan, variant_for_slot
 from feed_post_content import build_caption as build_feed_caption
 from instagram_auth import graph_url, is_instagram_login_token, resolve_credentials
 
+from social_post_config import apply_story_args
 from story_publish import publish_instagram_story
 from story_video import prepare_story_video, story_image_file
 
@@ -402,11 +403,10 @@ def main() -> None:
     parser.add_argument("--now", action="store_true")
     parser.add_argument("--slot", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--with-story", action="store_true", help="Pubblica anche Story (default: solo post feed)")
-    parser.add_argument("--no-story", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--with-story", action="store_true", help="Pubblica anche Story")
+    parser.add_argument("--no-story", action="store_true", help="Solo post feed, senza Story")
     args = parser.parse_args()
-    if args.no_story:
-        args.with_story = False
+    apply_story_args(args)
 
     env = load_env()
     ig_id, token, api_mode = resolve_credentials(env)
@@ -417,7 +417,9 @@ def main() -> None:
         print("Guida: instagram-auto-setup.html", file=sys.stderr)
         sys.exit(1)
 
-    if not args.with_story:
+    if args.with_story:
+        print("Modalità: post feed + Story")
+    else:
         print("Modalità: solo post feed (nessuna Story)")
     if not args.dry_run:
         print(f"API Instagram: {api_mode} — @{env.get('INSTAGRAM_USERNAME', IG_HANDLE)}")

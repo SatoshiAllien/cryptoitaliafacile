@@ -1,88 +1,126 @@
-"""Rendering e utilità per batch 20 post/storie Instagram."""
+"""Rendering batch 20 post/storie — layout professionale hero logo centrato."""
 
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from feed_post_style import render_feed_post as render_feed_image
+from story_post_style import render_story_post
 
-from image_style import (
-    CTA,
-    JPEG_QUALITY,
-    _hex,
-    draw_accent_bar,
-    draw_badge,
-    draw_cta_button,
-    draw_mixed_text,
-    draw_multiline,
-    gradient2,
-    load_font,
-    topic_cfg,
-)
-from brand_overlay import apply_branding
 from instagram_batch_20_content import BATCH_20, HOME_LINK, build_caption_en, build_caption_it
 
-ROOT = Path(__file__).resolve().parent.parent  # noqa: used by generate script
+ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "assets" / "img" / "instagram" / "batch-20"
 MANIFEST_PATH = ROOT / "data" / "instagram-batch-20.json"
 STATE_PATH = ROOT / "data" / "instagram-batch-20-state.json"
 SITE_BASE = "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/instagram/batch-20/"
 
+ACCENT_BY_TOPIC = {
+    "bitcoin": "#F7931A",
+    "cardano": "#38BDF8",
+    "ethereum": "#818CF8",
+    "eu": "#93C5FD",
+    "usa": "#60A5FA",
+    "sicurezza": "#F87171",
+    "defi": "#34D399",
+    "nft": "#A855F7",
+    "exchange": "#14B8A6",
+    "stablecoin": "#22C55E",
+    "blockchain": "#38BDF8",
+    "cefi": "#F59E0B",
+    "tokenomics": "#EAB308",
+    "trend": "#FACC15",
+    "guide": "#4ADE80",
+}
 
-def render_minimal_story(item: dict, *, lang: str = "it") -> Image.Image:
-    """1080×1920 — layout pulito: nero, bianco, arancione Satoshi."""
-    w, h = 1080, 1920
-    accent = "#F59E0B"
-    img = Image.new("RGB", (w, h), (0, 0, 0))
-    draw = ImageDraw.Draw(img)
-    draw_accent_bar(draw, w, accent, height=10)
+STORY_CTAS_IT = ("Scopri di più", "Continua", "Approfondisci", "Swipe")
+STORY_CTAS_EN = ("Learn more", "Continue", "Explore", "Swipe")
+POST_CTAS_IT = ("Leggi l'articolo", "Scopri di più")
+POST_CTAS_EN = ("Read article", "Learn more")
 
-    m = 64
-    cat = item["category_it"] if lang == "it" else item["category_en"]
-    draw_badge(draw, m, 80, f"#{item['id']} {cat[:18]}", accent, load_font(26, bold=True))
+_LINK_WORDS = re.compile(
+    r"link|sotto|below|bio|clicca|tap|http|satoshiallien|cryptoitaliafacile",
+    re.I,
+)
 
+
+def _sanitize_cta(raw: str, *, lang: str, for_feed: bool) -> str:
+    if _LINK_WORDS.search(raw or ""):
+        pool = (POST_CTAS_IT if for_feed else STORY_CTAS_IT) if lang == "it" else (
+            POST_CTAS_EN if for_feed else STORY_CTAS_EN
+        )
+        return pool[0]
+    text = (raw or "").strip()
+    if len(text) > 28:
+        return (POST_CTAS_IT if for_feed else STORY_CTAS_IT)[0] if lang == "it" else (
+            POST_CTAS_EN if for_feed else STORY_CTAS_EN
+        )[0]
+    return text or (POST_CTAS_IT[0] if for_feed else STORY_CTAS_IT[0])
+
+
+def _fields(item: dict, *, lang: str) -> dict:
     hook = item["hook_it"] if lang == "it" else item["hook_en"]
-    draw_multiline(draw, (m, 200), hook, load_font(72, bold=True), "#FFFFFF", line_gap=10)
-
+    cat = item["category_it"] if lang == "it" else item["category_en"]
     body = item["body_it"] if lang == "it" else item["body_en"]
-    draw_multiline(draw, (m, 520), body, load_font(32), "#CBD5E1", line_gap=8)
-
-    draw.rounded_rectangle((m, 820, w - m, 940), radius=16, outline=_hex(accent), width=2)
-    desc = item["desc_it"] if lang == "it" else item["desc_en"]
-    draw_multiline(draw, (m + 24, 848), desc[:120], load_font(28), "#94A3B8", line_gap=6)
-
-    cta = item["cta_it"] if lang == "it" else item["cta_en"]
-    draw_cta_button(draw, (m, 1380, w - m, 1480), cta[:42], accent, font_size=30)
-    footer = "✨ @krown.82 · Crypto Italia Facile"
-    draw_mixed_text(draw, (m, 1780), footer, load_font(24), "#64748B")
-
-    topic = item.get("topic", "bitcoin")
-    return apply_branding(img, topic, icon_box=(760, 1000, 1000, 1240), accent=accent, brand_scale=0.08)
+    raw_cta = item["cta_it"] if lang == "it" else item["cta_en"]
+    return {
+        "title": hook.replace("\n", " "),
+        "subtitle": f"{cat} · #{item['id']}",
+        "body": body,
+        "story_cta": _sanitize_cta(raw_cta, lang=lang, for_feed=False),
+        "post_cta": _sanitize_cta(raw_cta, lang=lang, for_feed=True),
+    }
 
 
-def render_advanced_story(item: dict, *, lang: str = "it") -> Image.Image:
-    """1080×1920 — layout premium con topic_cfg."""
-    from image_style import render_story
+def _accent(item: dict) -> str:
+    return ACCENT_BY_TOPIC.get(item.get("topic", "bitcoin"), "#F7931A")
 
-    topic = item.get("topic", "bitcoin")
-    cfg = topic_cfg(topic, lang=lang)
-    cfg["hook"] = item["hook_it"] if lang == "it" else item["hook_en"]
-    cfg["sub"] = item["body_it"] if lang == "it" else item["body_en"]
-    cta_text = (item["cta_it"] if lang == "it" else item["cta_en"])[:36]
-    story = render_story(
-        topic,
-        cfg,
-        cta=cta_text,
-        footer="✨ @krown.82",
+
+def render_minimal_story(item: dict, *, lang: str = "it"):
+    """1080×1920 — primary, logo hero centrato."""
+    f = _fields(item, lang=lang)
+    return render_story_post(
+        platform="instagram",
+        topic=item.get("topic", "bitcoin"),
+        title=f["title"],
+        subtitle=f["subtitle"],
+        body=f["body"],
+        cta=f["story_cta"],
+        variant="primary",
+        accent=_accent(item),
     )
-    return story
 
 
-def render_feed_post(item: dict, *, lang: str = "it") -> Image.Image:
-    """1080×1080 feed post."""
-    story = render_minimal_story(item, lang=lang)
-    return story.resize((1080, 1080), Image.Resampling.LANCZOS).crop((0, 200, 1080, 1280))
+def render_advanced_story(item: dict, *, lang: str = "it"):
+    """1080×1920 — alt, logo hero centrato."""
+    f = _fields(item, lang=lang)
+    return render_story_post(
+        platform="instagram",
+        topic=item.get("topic", "bitcoin"),
+        title=f["title"],
+        subtitle=f["subtitle"],
+        body=f["body"],
+        cta=f["story_cta"],
+        variant="alt",
+        accent=_accent(item),
+    )
+
+
+def render_feed_post(item: dict, *, lang: str = "it"):
+    """1080×1350 — feed 4:5, logo hero centrato."""
+    f = _fields(item, lang=lang)
+    return render_feed_image(
+        platform="instagram",
+        topic=item.get("topic", "bitcoin"),
+        title=f["title"],
+        subtitle=f["subtitle"],
+        body=f["body"],
+        cta=f["post_cta"],
+        variant="primary" if item["id"] % 2 else "alt",
+        accent=_accent(item),
+    )
 
 
 def image_urls(slug: str) -> dict[str, str]:
@@ -96,10 +134,14 @@ def image_urls(slug: str) -> dict[str, str]:
 
 def write_manifest() -> None:
     manifest = {
-        "version": 1,
+        "version": 2,
         "count": 20,
         "links_enabled": False,
-        "size": "1080x1920",
+        "layout": "hero_logo_centered",
+        "formats": {
+            "story": {"size": "1080x1920", "safe_area_px": 120},
+            "feed": {"size": "1080x1350", "safe_area_px": 100},
+        },
         "items": [],
     }
     for item in BATCH_20:

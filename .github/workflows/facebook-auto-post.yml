@@ -1,4 +1,4 @@
-name: Facebook Auto Post — feed only
+name: Facebook Auto Post — feed + story
 
 on:
   schedule:
@@ -12,6 +12,11 @@ on:
         default: ""
       dry_run:
         description: "Solo test, non pubblicare"
+        required: false
+        default: false
+        type: boolean
+      no_story:
+        description: "Solo feed, senza story"
         required: false
         default: false
         type: boolean
@@ -32,9 +37,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install tzdata Pillow
+        run: pip install tzdata Pillow imageio-ffmpeg
 
-      - name: Post to Facebook (solo feed, 20/giorno)
+      - name: Post to Facebook (feed + story, 20/giorno)
         env:
           FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
@@ -48,6 +53,9 @@ jobs:
           if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
             ARGS="$ARGS --dry-run"
           fi
+          if [ "${{ github.event.inputs.no_story }}" = "true" ]; then
+            ARGS="$ARGS --no-story"
+          fi
           python scripts/post-to-facebook.py $ARGS
 
       - name: Commit schedule state
@@ -55,10 +63,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/facebook-schedule.json
+          git add data/facebook-schedule.json data/story-schedule.json
           if git diff --staged --quiet; then
             echo "Nessun aggiornamento schedule."
           else
-            git commit -m "chore: aggiorna facebook-schedule dopo auto-post"
+            git commit -m "chore: aggiorna facebook-schedule dopo auto-post feed+story"
             git push
           fi

@@ -8,10 +8,11 @@ Uso manuale:
   python post-to-facebook.py --slug iniziare-exchange-revolut-kraken
   python post-to-facebook.py --dry-run --today --per-day 3
 
-Automazione (20 post/giorno SOLO FEED, 07:00–22:00 Roma, senza Story):
+Automazione (20 post+story/giorno, 07:00–22:00 Roma):
   python post-to-facebook.py --auto --now        # rileva slot dall'orario
   python post-to-facebook.py --auto --slot 0     # post 1 (07:00)
   python post-to-facebook.py --auto --slot 19    # post 20 (22:00)
+  python post-to-facebook.py --auto --slot 0 --no-story  # solo feed
 """
 
 from __future__ import annotations
@@ -31,6 +32,7 @@ from chill_cyber_playlist import track_for_slot
 from daily_post_queue import daily_plan, variant_for_slot
 from feed_post_content import build_caption as build_feed_caption
 
+from social_post_config import apply_story_args
 from story_publish import publish_facebook_story
 from story_video import prepare_story_video, story_image_file
 
@@ -434,17 +436,18 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true", help="Mostra senza pubblicare")
     parser.add_argument("--all", action="store_true", help="Pubblica tutti gli articoli del sito")
     parser.add_argument("--delay", type=int, default=18, help="Secondi di pausa tra i post (con --all)")
-    parser.add_argument("--with-story", action="store_true", help="Pubblica anche Story (default: solo post feed)")
-    parser.add_argument("--no-story", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--with-story", action="store_true", help="Pubblica anche Story")
+    parser.add_argument("--no-story", action="store_true", help="Solo post feed, senza Story")
     args = parser.parse_args()
-    if args.no_story:
-        args.with_story = False
+    apply_story_args(args)
 
     env = load_env()
     page_id = env.get("FACEBOOK_PAGE_ID", "")
     token = env.get("FACEBOOK_PAGE_ACCESS_TOKEN", "")
 
-    if not args.with_story:
+    if args.with_story:
+        print("Modalità: post feed + Story")
+    else:
         print("Modalità: solo post feed (nessuna Story)")
     if not args.dry_run and (not page_id or not token):
         print("Mancano FACEBOOK_PAGE_ID e FACEBOOK_PAGE_ACCESS_TOKEN.", file=sys.stderr)

@@ -1,8 +1,18 @@
 {
-  "version": 1,
+  "version": 2,
   "count": 20,
-  "link": "https://satoshiallien.github.io/cryptoitaliafacile/index.html",
-  "size": "1080x1920",
+  "links_enabled": false,
+  "layout": "hero_logo_centered",
+  "formats": {
+    "story": {
+      "size": "1080x1920",
+      "safe_area_px": 120
+    },
+    "feed": {
+      "size": "1080x1350",
+      "safe_area_px": 100
+    }
+  },
   "items": [
     {
       "id": 1,

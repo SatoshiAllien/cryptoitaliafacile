@@ -772,14 +772,17 @@ async function initArticlePage() {
   document.title = `${seoTitle} — The Little Satoshi News`.slice(0, 70);
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = seoDescription;
-  if (article.seoKeywords) {
+  const seoKeywords = (typeof getLang === 'function' && getLang() === 'en' && rawArticle.seoKeywordsEn)
+    ? rawArticle.seoKeywordsEn
+    : (rawArticle.seoKeywords || article.seoKeywords);
+  if (seoKeywords) {
     let kw = document.querySelector('meta[name="keywords"]');
     if (!kw) {
       kw = document.createElement('meta');
       kw.setAttribute('name', 'keywords');
       document.head.appendChild(kw);
     }
-    kw.content = article.seoKeywords;
+    kw.content = seoKeywords;
   }
 
   const articleUrl = getArticleUrl(slug);

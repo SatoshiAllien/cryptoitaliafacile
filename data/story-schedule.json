@@ -2,5 +2,7 @@
   "startDate": "2026-06-20",
   "storiesPerDay": 20,
   "timezone": "Europe/Rome",
+  "enabled": true,
+  "layout": "hero_logo_centered",
   "posted": []
 }

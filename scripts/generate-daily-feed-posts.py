@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera post feed ordinati da articles.json — IG 1080×1350 + FB 1200×1200."""
+"""Genera post feed ordinati da articles.json — IG/FB 1080×1350, logo hero centrato."""
 
 from __future__ import annotations
 
@@ -74,12 +74,12 @@ def generate_variant(article: dict, *, variant: str) -> dict:
         "instagram": {
             "image": ig_name,
             "size": "1080x1350",
-            "safe_area": "80px",
+            "safe_area": "100px",
             "design": design_description(topic, variant, "instagram"),
         },
         "facebook": {
             "image": fb_name,
-            "size": "1200x1200",
+            "size": "1080x1350",
             "safe_area": "100px",
             "design": design_description(topic, variant, "facebook"),
         },
@@ -102,9 +102,10 @@ def main() -> None:
         articles = articles[: args.limit]
 
     manifest: dict = {
-        "version": 3,
+        "version": 4,
+        "layout": "hero_logo_centered",
         "instagram": "1080x1350",
-        "facebook": "1200x1200",
+        "facebook": "1080x1350",
         "posts": [],
     }
     ok = 0
@@ -119,7 +120,10 @@ def main() -> None:
         article["fbSquareImage"] = fb_filename(slug)
         article["fbSquareImageAlt"] = fb_filename(slug, variant="alt")
         article["fbPortraitImage"] = article["fbSquareImage"]
-        article["feedPostVariant"] = "layout-v3"
+        article["feedPostVariant"] = "layout-v4-hero"
+        article["feedFormat"] = "1080x1350"
+        article["feedSafeArea"] = "100px"
+        article["feedLayout"] = "hero_logo_centered"
 
         manifest["posts"].append({"slug": slug, "primary": primary, "alt": alt})
         ok += 1

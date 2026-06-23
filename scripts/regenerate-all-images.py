@@ -10,6 +10,7 @@ from pathlib import Path
 SCRIPTS = [
     "generate-daily-feed-posts.py",
     "generate-story-posts.py",
+    "generate-instagram-batch-20.py",
     "generate-fb-images.py",
     "generate-ig-images.py",
     "generate-story-images.py",

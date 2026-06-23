@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Renderer feed ordinato — Instagram 1080×1350, Facebook 1200×1200."""
+"""Renderer feed ordinato — IG/FB 1080×1350, logo hero centrato, safe 100px."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from dataclasses import dataclass
 
 from PIL import Image, ImageDraw
 
-from brand_overlay import apply_topic_logo_top_left, draw_center_topic_icon, paste_brand_watermark
+from brand_overlay import draw_hero_logo_centered, paste_brand_watermark
 from image_style import JPEG_QUALITY, _hex, gradient2, load_font
 from topic_detect import topic_label
 
@@ -32,23 +32,26 @@ class LayoutSpec:
     title_size: int
     subtitle_size: int
     body_size: int
-    logo_size: int
-    center_icon: int
+    hero_logo: int
     cta_height: int
     cta_font: int
+    body_max_lines: int
+    platform: str
     line_gap_title: int = 10
     line_gap_body: int = 8
 
 
 INSTAGRAM = LayoutSpec(
-    width=1080, height=1350, safe=80,
-    title_size=54, subtitle_size=28, body_size=26,
-    logo_size=72, center_icon=112, cta_height=76, cta_font=26,
+    width=1080, height=1350, safe=100,
+    title_size=52, subtitle_size=28, body_size=26,
+    hero_logo=340, cta_height=72, cta_font=26,
+    body_max_lines=3, platform="instagram",
 )
 FACEBOOK = LayoutSpec(
-    width=1200, height=1200, safe=100,
+    width=1080, height=1350, safe=100,
     title_size=50, subtitle_size=26, body_size=24,
-    logo_size=72, center_icon=104, cta_height=72, cta_font=24,
+    hero_logo=340, cta_height=72, cta_font=24,
+    body_max_lines=3, platform="facebook",
 )
 
 
@@ -107,35 +110,46 @@ def _draw_centered_lines(
     return cy
 
 
-def _draw_bg(draw: ImageDraw.ImageDraw, w: int, h: int, *, variant: str, seed: int, accent: str) -> None:
+def _draw_bg(
+    draw: ImageDraw.ImageDraw,
+    spec: LayoutSpec,
+    *,
+    variant: str,
+    seed: int,
+    accent: str,
+) -> None:
+    w, h, s = spec.width, spec.height, spec.safe
     gradient2(draw, w, h, PALETTE["bg_dark"], PALETTE["bg_mid"])
-    spacing = 48 if variant == "primary" else 40
+    spacing = 44 if variant == "primary" else 36
     grid = PALETTE["grid"] if variant == "primary" else (18, 22, 34)
-    for x in range(0, w, spacing):
-        draw.line([(x, 0), (x, h)], fill=grid, width=1)
-    for y in range(0, h, spacing):
-        draw.line([(0, y), (w, y)], fill=grid, width=1)
+    for x in range(s, w - s, spacing):
+        draw.line([(x, s), (x, h - s)], fill=grid, width=1)
+    for y in range(s, h - s, spacing):
+        draw.line([(s, y), (w - s, y)], fill=grid, width=1)
 
     rng = random.Random(seed)
     gold = _hex(PALETTE["gold"])
     orange = _hex(accent)
-    for band_y, color in ((int(h * 0.08), gold), (int(h * 0.9), orange)):
+    for band_y, color in ((s + 20, gold), (h - s - 40, orange)):
         pts: list[tuple[int, int]] = []
-        x = 80
-        while x < w - 80:
-            pts.append((x, band_y + rng.randint(-18, 18)))
+        x = s
+        while x < w - s:
+            pts.append((x, band_y + rng.randint(-14, 14)))
             x += rng.randint(90, 130)
         if len(pts) >= 2:
             draw.line(pts, fill=color, width=2)
 
     if variant == "alt":
-        s = 80 if w == 1080 else 100
         draw.rounded_rectangle(
-            (s - 4, s - 4, w - s + 4, h - s + 4),
+            (s - 6, s - 6, w - s + 6, h - s + 6),
             radius=24,
             outline=_hex(PALETTE["electric"]),
             width=2,
         )
+
+
+def _cta_top(spec: LayoutSpec) -> int:
+    return spec.height - spec.safe - spec.cta_height
 
 
 def _draw_cta(
@@ -146,21 +160,115 @@ def _draw_cta(
     accent: str,
 ) -> None:
     font = load_font(spec.cta_font, bold=True)
-    label = text.upper() if len(text) < 28 else text
+    label = text.strip()
     tw = _text_width(label, font)
     pad_x = 40
     btn_w = min(spec.width - spec.safe * 2, tw + pad_x * 2)
     btn_h = spec.cta_height
     x1 = (spec.width - btn_w) // 2
     y1 = spec.height - spec.safe - btn_h
-    x2, y2 = x1 + btn_w, y1 + btn_h
-    draw.rounded_rectangle((x1, y1, x2, y2), radius=btn_h // 2, fill=_hex(accent))
+    draw.rounded_rectangle((x1, y1, x1 + btn_w, y1 + btn_h), radius=btn_h // 2, fill=_hex(accent))
     draw.text(
         (x1 + (btn_w - tw) // 2, y1 + (btn_h - spec.cta_font) // 2 - 2),
         label,
         fill="#0F172A",
         font=font,
     )
+
+
+def _render_feed_hero(
+    *,
+    spec: LayoutSpec,
+    topic: str,
+    title: str,
+    subtitle: str,
+    body: str,
+    cta: str,
+    variant: str,
+    accent: str,
+) -> Image.Image:
+    """
+    Layout feed v4 — logo hero grande e centrato (30–40% area visiva):
+    1. Titolo grande sopra o sotto il logo (variante)
+    2. Sottotitolo breve
+    3. Logo hero centrato con glow/neon
+    4. Testo breve
+    5. CTA visiva in basso
+    """
+    seed = hash(f"{title}:{spec.platform}:{variant}") % 10_000
+    img = Image.new("RGB", (spec.width, spec.height), PALETTE["bg_dark"])
+    draw = ImageDraw.Draw(img)
+    _draw_bg(draw, spec, variant=variant, seed=seed, accent=accent)
+
+    content_w = spec.width - spec.safe * 2
+    title_font = load_font(spec.title_size, bold=True)
+    subtitle_font = load_font(spec.subtitle_size)
+    body_font = load_font(spec.body_size)
+
+    title_lines = _wrap_pixels(title, title_font, content_w, max_lines=2)
+    subtitle_lines = _wrap_pixels(subtitle, subtitle_font, content_w, max_lines=2)
+    body_lines = _wrap_pixels(body, body_font, int(content_w * 0.9), max_lines=spec.body_max_lines)
+
+    title_above = variant == "primary"
+    cta_y = _cta_top(spec)
+    body_block_h = len(body_lines) * _line_height(body_font, spec.line_gap_body) + 8
+    hero_size = spec.hero_logo
+    hero_cy = spec.height // 2 - 12
+
+    if title_above:
+        y = spec.safe + 6
+        y = _draw_centered_lines(
+            draw, title_lines, y=y, font=title_font, fill=PALETTE["text"],
+            canvas_w=spec.width, line_gap=spec.line_gap_title,
+        )
+        y += 10
+        y = _draw_centered_lines(
+            draw, subtitle_lines, y=y, font=subtitle_font, fill=PALETTE["gold"],
+            canvas_w=spec.width, line_gap=6,
+        )
+        top_text_bottom = y
+        hero_cy = max(
+            top_text_bottom + hero_size // 2 + 32,
+            min(hero_cy, cta_y - body_block_h - hero_size // 2 - 40),
+        )
+    else:
+        y = spec.safe + 6
+        y = _draw_centered_lines(
+            draw, subtitle_lines, y=y, font=subtitle_font, fill=PALETTE["gold"],
+            canvas_w=spec.width, line_gap=6,
+        )
+        top_text_bottom = y
+        hero_cy = max(
+            top_text_bottom + hero_size // 2 + 44,
+            min(spec.height // 2 + 8, cta_y - body_block_h - hero_size // 2 - 100),
+        )
+
+    img = draw_hero_logo_centered(
+        img, topic, accent=accent,
+        center=(spec.width // 2, hero_cy),
+        size=hero_size,
+        variant=variant,
+    )
+    draw = ImageDraw.Draw(img)
+
+    if title_above:
+        y = hero_cy + hero_size // 2 + 28
+    else:
+        y = hero_cy + hero_size // 2 + 24
+        y = _draw_centered_lines(
+            draw, title_lines, y=y, font=title_font, fill=PALETTE["text"],
+            canvas_w=spec.width, line_gap=spec.line_gap_title,
+        )
+        y += 12
+
+    max_body_y = cta_y - body_block_h - 10
+    y = min(y, max_body_y)
+    _draw_centered_lines(
+        draw, body_lines, y=y, font=body_font, fill=PALETTE["muted"],
+        canvas_w=spec.width, line_gap=spec.line_gap_body,
+    )
+    _draw_cta(draw, spec=spec, text=cta, accent=accent)
+    return paste_brand_watermark(img, scale=0.042)
 
 
 def render_feed_post(
@@ -174,71 +282,22 @@ def render_feed_post(
     variant: str = "primary",
     accent: str = PALETTE["accent"],
 ) -> Image.Image:
-    """Layout fisso: logo alto-sx, titolo centrato, sottotitolo, icona centrale, testo, CTA."""
     spec = INSTAGRAM if platform == "instagram" else FACEBOOK
-    seed = hash(f"{title}:{platform}:{variant}") % 10_000
-
-    img = Image.new("RGB", (spec.width, spec.height), PALETTE["bg_dark"])
-    draw = ImageDraw.Draw(img)
-    _draw_bg(draw, spec.width, spec.height, variant=variant, seed=seed, accent=accent)
-
-    safe = spec.safe
-    content_w = spec.width - safe * 2
-
-    title_font = load_font(spec.title_size, bold=True)
-    subtitle_font = load_font(spec.subtitle_size)
-    body_font = load_font(spec.body_size)
-
-    title_lines = _wrap_pixels(title, title_font, content_w, max_lines=3)
-    subtitle_lines = _wrap_pixels(subtitle, subtitle_font, content_w, max_lines=2)
-    body_lines = _wrap_pixels(body, body_font, int(content_w * 0.92), max_lines=3)
-
-    y = safe + spec.logo_size + 28
-    y = _draw_centered_lines(
-        draw, title_lines, y=y, font=title_font, fill=PALETTE["text"],
-        canvas_w=spec.width, line_gap=spec.line_gap_title,
+    return _render_feed_hero(
+        spec=spec, topic=topic, title=title, subtitle=subtitle,
+        body=body, cta=cta, variant=variant, accent=accent,
     )
-    y += 16
-    y = _draw_centered_lines(
-        draw, subtitle_lines, y=y, font=subtitle_font, fill=PALETTE["gold"],
-        canvas_w=spec.width, line_gap=6,
-    )
-    y += 28
-
-    icon_y = y
-    img = draw_center_topic_icon(
-        img, topic, accent=accent,
-        center=(spec.width // 2, icon_y + spec.center_icon // 2),
-        size=spec.center_icon,
-    )
-    draw = ImageDraw.Draw(img)
-    y = icon_y + spec.center_icon + 32
-
-    y = _draw_centered_lines(
-        draw, body_lines, y=y, font=body_font, fill=PALETTE["muted"],
-        canvas_w=spec.width, line_gap=spec.line_gap_body,
-    )
-
-    _draw_cta(draw, spec=spec, text=cta, accent=accent)
-
-    img = apply_topic_logo_top_left(
-        img, topic, accent=accent,
-        size=spec.logo_size, margin=safe,
-    )
-    img = paste_brand_watermark(img, scale=0.045 if platform == "facebook" else 0.05)
-    return img
 
 
 def design_description(topic: str, variant: str, platform: str) -> str:
-    size = "1080×1350" if platform == "instagram" else "1200×1200"
-    safe = "80px" if platform == "instagram" else "100px"
+    title_pos = "sopra" if variant == "primary" else "sotto"
     style = "griglia oro/arancione" if variant == "primary" else "bordo blu elettrico"
     return (
-        f"{platform.upper()} {size} · safe-area {safe} · topic {topic_label(topic)} · "
-        f"{style} · logo alto-sx · titolo/sottotitolo centrati · icona centrale · CTA · nessun link."
+        f"{platform.upper()} 1080×1350 · safe 100px · {variant} · {topic_label(topic)} · "
+        f"logo hero centrato ~38% · PNG trasparente · glow/neon · titolo {title_pos} logo · "
+        f"{style} · CTA visiva · zero link/URL."
     )
 
 
-# Retrocompatibilità
 def render_feed_portrait(**kwargs) -> Image.Image:
     return render_feed_post(platform="instagram", **kwargs)

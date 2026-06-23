@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera 20×4 immagini (minimal/advanced story + feed IT/EN) — 1080×1920."""
+"""Genera 20×4 immagini professionali (story primary/alt + feed IT/EN 4:5)."""
 
 from __future__ import annotations
 

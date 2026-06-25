@@ -2,7 +2,6 @@
   "startDate": "2026-06-20",
   "postsPerDay": 20,
   "timezone": "Europe/Rome",
-  "account": "https://www.instagram.com/krown.82/",
   "posted": [
     {
       "date": "2026-06-21",
@@ -101,7 +100,35 @@
       "slug": "trend-etf-bitcoin",
       "mediaId": "18102170120517653",
       "publishedAt": "2026-06-23T18:45:46.752974+02:00"
+    },
+    {
+      "date": "2026-06-24",
+      "slot": 7,
+      "slug": "market-cap-volume",
+      "mediaId": "17954124027157709",
+      "publishedAt": "2026-06-24T12:42:32.491796+02:00",
+      "storyId": "17893813434518083",
+      "storyTrack": "Infected Vibes"
+    },
+    {
+      "date": "2026-06-25",
+      "slot": 6,
+      "slug": "multisig-gnosis-safe",
+      "mediaId": "18159874561414260",
+      "publishedAt": "2026-06-25T11:35:49.353698+02:00",
+      "storyId": "18048012236716869",
+      "storyTrack": "Techno Fest Vibes"
+    },
+    {
+      "date": "2026-06-25",
+      "slot": 0,
+      "slug": "lightning-network-guida",
+      "publishedAt": "2026-06-25T18:44:56.590050+02:00",
+      "mediaId": "17897102652470346",
+      "storyId": "17976789303024736",
+      "storyTrack": "Cat Walk"
     }
   ],
+  "account": "https://www.instagram.com/krown.82/",
   "handle": "krown.82"
 }

@@ -13,10 +13,14 @@
       "scheduled_at": "2026-06-25T07:00:00+02:00",
       "slug": "lightning-network-guida",
       "variant": "primary",
-      "status": "pending",
-      "feed_status": "pending",
-      "story_status": "pending",
-      "attempts": 0
+      "status": "published",
+      "feed_status": "published",
+      "story_status": "published",
+      "attempts": 1,
+      "external_id": "17897102652470346",
+      "story_id": "17976789303024736",
+      "published_at": "2026-06-25T18:44:56.590050+02:00",
+      "error": null
     },
     {
       "id": "facebook:2026-06-25:slot-00",
@@ -28,13 +32,14 @@
       "scheduled_at": "2026-06-25T07:00:00+02:00",
       "slug": "lightning-network-guida",
       "variant": "primary",
-      "status": "pending",
-      "feed_status": "pending",
-      "story_status": "pending",
-      "attempts": 0,
-      "external_id": null,
+      "status": "published",
+      "feed_status": "published",
+      "story_status": "published",
+      "attempts": 1,
+      "external_id": "122099140527371725",
       "story_id": null,
-      "error": null
+      "error": null,
+      "published_at": "2026-06-25T18:45:13.799928+02:00"
     },
     {
       "id": "instagram:2026-06-25:slot-01",

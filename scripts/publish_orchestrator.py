@@ -34,6 +34,7 @@ from queue_store import (
     load_queue,
     mark_status,
     record_failure,
+    recover_stale_publishing,
     requeue_failed,
     reset_circuit,
     save_queue,
@@ -266,9 +267,41 @@ def process_item(item: dict, queue: dict, config: dict, env: dict, dry_run: bool
         return False
 
     if not dry_run:
-        mark_status(item, "publishing")
+        mark_status(item, "publishing", publishing_since=now_tz(queue.get("timezone", "Europe/Rome")).isoformat())
         save_queue(queue)
 
+    try:
+        return _process_item_attempts(
+            item, queue, config, env, dry_run, article, max_attempts, backoff, auto,
+        )
+    except Exception as exc:
+        summary = f"unexpected_error:{exc}"
+        mark_status(item, "failed", error=summary)
+        item.pop("publishing_since", None)
+        record_failure(queue, config)
+        append_log({
+            "queue_id": item["id"],
+            "platform": item["platform"],
+            "slug": item["slug"],
+            "status": "failed",
+            "error": summary,
+        })
+        if not dry_run:
+            save_queue(queue)
+        return False
+
+
+def _process_item_attempts(
+    item: dict,
+    queue: dict,
+    config: dict,
+    env: dict,
+    dry_run: bool,
+    article: dict,
+    max_attempts: int,
+    backoff: list,
+    auto: dict,
+) -> bool:
     for attempt in range(1, max_attempts + 1):
         item["attempts"] = attempt
         started = time.time()
@@ -290,6 +323,7 @@ def process_item(item: dict, queue: dict, config: dict, env: dict, dry_run: bool
 
             if is_token_error(result) or is_permission_error(result):
                 mark_status(item, "failed", error=summary)
+                item.pop("publishing_since", None)
                 record_failure(queue, config)
                 if auto.get("safety", {}).get("stop_on_token_error", True):
                     queue["circuit_breaker"]["open"] = True
@@ -311,6 +345,7 @@ def process_item(item: dict, queue: dict, config: dict, env: dict, dry_run: bool
                 continue
 
             mark_status(item, "failed", error=summary)
+            item.pop("publishing_since", None)
             record_failure(queue, config)
             return False
 
@@ -357,6 +392,7 @@ def process_item(item: dict, queue: dict, config: dict, env: dict, dry_run: bool
             published_at=published_at,
             error=None,
         )
+        item.pop("publishing_since", None)
         sync_legacy_schedule(item, external_id, story_id, story_track)
 
         append_log({
@@ -373,11 +409,16 @@ def process_item(item: dict, queue: dict, config: dict, env: dict, dry_run: bool
         return True
 
     mark_status(item, "failed", error="max_retries_exceeded")
+    item.pop("publishing_since", None)
     record_failure(queue, config)
     return False
 
 
 def print_status(queue: dict, config: dict) -> None:
+    recovered = recover_stale_publishing(queue)
+    if recovered:
+        save_queue(queue)
+        print(f"Recuperati {recovered} post bloccati in 'publishing'")
     items = queue.get("items", [])
     counts: dict[str, int] = {}
     for item in items:
@@ -408,10 +449,18 @@ def run_auto(config: dict, *, dry_run: bool = False, limit: int = 1) -> int:
     tz_name = queue.get("timezone", "Europe/Rome")
     now = now_tz(tz_name)
 
-    if circuit_is_open(queue):
+    recovered = recover_stale_publishing(queue, now=now)
+    if recovered:
+        print(f"Recuperati {recovered} post bloccati in 'publishing'")
+        if not dry_run:
+            save_queue(queue)
+
+    if not dry_run and circuit_is_open(queue):
         print("Circuit breaker aperto — pubblicazione sospesa.")
         print("Usa: python publish_orchestrator.py --reset-circuit")
         return 1
+    if dry_run and circuit_is_open(queue):
+        print("Circuit breaker aperto — dry-run continua (nessuna pubblicazione reale)")
 
     schedule = config.get("schedule", {})
     start_h = int(schedule.get("start_hour", 7))
@@ -444,6 +493,9 @@ def run_auto(config: dict, *, dry_run: bool = False, limit: int = 1) -> int:
     ok = 0
     fail = 0
     for item in due:
+        if not dry_run and circuit_is_open(queue):
+            print("Circuit breaker aperto — interrompo batch")
+            break
         print(f"\n→ {item['id']} | @{item['platform']} | {item['slug']} | slot {item['slot']}")
         if process_item(item, queue, config, env, dry_run):
             ok += 1
@@ -451,6 +503,9 @@ def run_auto(config: dict, *, dry_run: bool = False, limit: int = 1) -> int:
             fail += 1
         if not dry_run:
             save_queue(queue)
+        if not dry_run and circuit_is_open(queue):
+            print("Circuit breaker aperto dopo errore token/permessi")
+            break
 
     print(f"\nCompletato: {ok} ok, {fail} errori")
     return 0 if fail == 0 else 1

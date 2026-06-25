@@ -13,14 +13,12 @@
       "scheduled_at": "2026-06-25T07:00:00+02:00",
       "slug": "lightning-network-guida",
       "variant": "primary",
-      "status": "published",
-      "feed_status": "published",
-      "story_status": "published",
+      "status": "failed",
+      "feed_status": "pending",
+      "story_status": "pending",
       "attempts": 1,
-      "external_id": "dry-run",
       "story_id": "dry-run-ig-story-video",
-      "error": null,
-      "published_at": "2026-06-25T15:47:32.521997+02:00"
+      "error": "Error validating access token: Session has expired on Thursday, 25-Jun-26 04:00:00 PDT. The current time is Thursday, 25-Jun-26 09:34:24 PDT. | code=190 | subcode=463"
     },
     {
       "id": "facebook:2026-06-25:slot-00",
@@ -10086,10 +10084,10 @@
     }
   ],
   "circuit_breaker": {
-    "open": false,
-    "errors_in_window": 0,
-    "window_start": null,
-    "opened_at": null
+    "open": true,
+    "errors_in_window": 1,
+    "window_start": "2026-06-25T18:34:25.008861+02:00",
+    "opened_at": "2026-06-25T18:34:25.008870+02:00"
   },
   "generatedAt": "2026-06-25T15:47:28"
 }

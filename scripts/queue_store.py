@@ -61,6 +61,34 @@ def item_by_id(data: dict, item_id: str) -> dict | None:
     return next((item for item in data.get("items", []) if item.get("id") == item_id), None)
 
 
+def recover_stale_publishing(
+    data: dict,
+    *,
+    now: datetime | None = None,
+    max_age_minutes: int = 15,
+) -> int:
+    """Reset items stuck in 'publishing' (crash/kill mid-run) back to pending."""
+    tz_name = data.get("timezone", "Europe/Rome")
+    if now is None:
+        now = datetime.now(ZoneInfo(tz_name) if ZoneInfo else timezone.utc)
+    recovered = 0
+    for item in data.get("items", []):
+        if item.get("status") != "publishing":
+            continue
+        stamp = item.get("publishing_since") or item.get("scheduled_at")
+        if not stamp:
+            item["status"] = "pending"
+            item.pop("publishing_since", None)
+            recovered += 1
+            continue
+        age = now - parse_dt(stamp, tz_name)
+        if age >= timedelta(minutes=max_age_minutes):
+            item["status"] = "pending"
+            item.pop("publishing_since", None)
+            recovered += 1
+    return recovered
+
+
 def due_items(
     data: dict,
     *,

@@ -165,6 +165,7 @@ const TRANSLATIONS = {
     },
     newsHub: {
       filterAll: 'Tutte',
+      filterTheRiser: '@TheRiser100x',
       filterX: 'Da X',
       filterTrend: 'Trend',
       filterTips: 'Tips',
@@ -179,7 +180,7 @@ const TRANSLATIONS = {
     btcNews: {
       label: 'Sessione News',
       title: 'Sessione News Bitcoin',
-      desc: 'Notizie in tempo reale da @BitcoinMagazine, @Strategy e @CPOfficialtx — pronte da leggere o ripubblicare.',
+      desc: 'Post da @TheRiser100x e notizie da @BitcoinMagazine, @Strategy e @CPOfficialtx — pronte da leggere o ripubblicare.',
       homeTitle: 'News del momento',
       homeDesc: 'Tutte le notizie aggregate: X, trend crypto e aggiornamenti del sito.',
       filterAll: 'Tutte',
@@ -521,6 +522,7 @@ const TRANSLATIONS = {
     },
     newsHub: {
       filterAll: 'All',
+      filterTheRiser: '@TheRiser100x',
       filterX: 'From X',
       filterTrend: 'Trends',
       filterTips: 'Tips',
@@ -535,7 +537,7 @@ const TRANSLATIONS = {
     btcNews: {
       label: 'News Session',
       title: 'Bitcoin News Session',
-      desc: 'Live news from @BitcoinMagazine, @Strategy and @CPOfficialtx — ready to read or repost.',
+      desc: 'Posts from @TheRiser100x plus news from @BitcoinMagazine, @Strategy and @CPOfficialtx — ready to read or repost.',
       homeTitle: 'News right now',
       homeDesc: 'All aggregated news: X, crypto trends and site updates.',
       filterAll: 'All',

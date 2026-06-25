@@ -18,12 +18,14 @@ SCRIPTS = Path(__file__).resolve().parent
 import sys
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
+from fetch_theriser_news import HANDLE as THERISER_HANDLE, collect_items as collect_theriser_items
 from x_viral import build_viral_post, categorize_post, score_viral
 from x_images import SLOT_TYPES, image_url_for_slot
 OUTPUT = ROOT / "data" / "crypto-news.json"
 OUTPUT_LEGACY = ROOT / "data" / "bitcoin-news.json"
 
 X_SOURCES = [
+    {"handle": THERISER_HANDLE, "label": "The Little Satoshi News", "priority": 15},
     {"handle": "elonmusk", "label": "Elon Musk", "priority": 11},
     {"handle": "WhiteHouse", "label": "White House", "priority": 12},
     {"handle": "BitcoinMagazine", "label": "Bitcoin Magazine", "priority": 9},
@@ -40,7 +42,7 @@ USER_AGENT = (
     "Mozilla/5.0 (compatible; TheRiser100x/1.0; +https://satoshiallien.github.io/cryptoitaliafacile/)"
 )
 PER_ACCOUNT = 6
-MAX_ITEMS = 45
+MAX_ITEMS = 60
 
 
 def parse_timeline_html(html: str, handle: str) -> dict:
@@ -114,11 +116,35 @@ def tweet_to_item(tweet: dict, source: dict) -> dict:
     }
 
 
+def load_existing_items() -> list[dict]:
+    for path in (OUTPUT, OUTPUT_LEGACY):
+        if not path.exists():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if data.get("items"):
+                return list(data["items"])
+        except (json.JSONDecodeError, OSError):
+            continue
+    return []
+
+
 def collect_items() -> tuple[list[dict], list[str]]:
     items: list[dict] = []
     errors: list[str] = []
 
+    try:
+        theriser_items = collect_theriser_items()
+        items.extend(theriser_items)
+        print(f"@{THERISER_HANDLE}: {len(theriser_items)} own posts imported")
+    except Exception as exc:
+        msg = f"@{THERISER_HANDLE}: {exc}"
+        errors.append(msg)
+        print(msg, file=sys.stderr)
+
     for index, source in enumerate(X_SOURCES):
+        if source["handle"] == THERISER_HANDLE:
+            continue
         handle = source["handle"]
         if index:
             time.sleep(2.5)
@@ -154,10 +180,15 @@ def collect_items() -> tuple[list[dict], list[str]]:
                 break
         print(f"@{handle}: {count} post")
 
-    if not items and errors:
-        raise RuntimeError("; ".join(errors))
+    if not items:
+        cached = load_existing_items()
+        if cached:
+            print(f"Using {len(cached)} cached news items after fetch errors")
+            items = cached
+        elif errors:
+            raise RuntimeError("; ".join(errors))
 
-    items.sort(key=lambda x: x["dateSort"], reverse=True)
+    items.sort(key=lambda x: x.get("dateSort", ""), reverse=True)
     deduped: list[dict] = []
     seen: set[str] = set()
     for item in items:

@@ -71,6 +71,8 @@ async function loadAggregatedNews() {
 
 function filterAggregatedNews(items, filter) {
   switch (filter) {
+    case 'theriser':
+      return items.filter(item => item.sourceHandle === '@TheRiser100x');
     case 'x':
       return items.filter(item => item.external || item.feedType === 'x');
     case 'trend':

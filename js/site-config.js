@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260622-fitness-nav',
+  assetVersion: '20260625-theriser-news',
   email: 'info@cryptofacile.com',
 
   founder: {

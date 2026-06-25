@@ -14,7 +14,9 @@ const BTC_NEWS_LABELS = {
 async function loadBitcoinNews() {
   if (bitcoinNewsData) return bitcoinNewsData;
   const base = getBasePath();
-  const res = await fetch(`${base}data/bitcoin-news.json`);
+  const v = (typeof SITE_CONFIG !== 'undefined' && SITE_CONFIG.assetVersion) ? `?v=${SITE_CONFIG.assetVersion}` : '';
+  const res = await fetch(`${base}data/bitcoin-news.json${v}`);
+  if (!res.ok) throw new Error(`bitcoin-news.json ${res.status}`);
   bitcoinNewsData = await res.json();
   return bitcoinNewsData;
 }

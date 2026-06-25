@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Fetch crypto news (X)
+      - name: Fetch crypto news (X + @TheRiser100x)
         run: python scripts/fetch-crypto-news.py
 
       - name: Commit updates

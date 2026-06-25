@@ -1,0 +1,63 @@
+name: Social Auto Post — unified orchestrator
+
+on:
+  schedule:
+    - cron: "0,30 5-20 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Solo test"
+        required: false
+        default: false
+        type: boolean
+      limit:
+        description: "Post max per run"
+        required: false
+        default: "2"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install tzdata Pillow imageio-ffmpeg
+
+      - name: Ensure publish queue
+        run: python scripts/generate_publish_queue.py --days 14
+
+      - name: Run orchestrator
+        env:
+          INSTAGRAM_ACCOUNT_ID: ${{ secrets.INSTAGRAM_ACCOUNT_ID }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+        run: |
+          ARGS="--auto --limit ${{ github.event.inputs.limit || '2' }}"
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          python scripts/publish_orchestrator.py $ARGS
+
+      - name: Commit queue state
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/publish-queue.json data/publish-log.jsonl data/instagram-schedule.json data/facebook-schedule.json
+          if git diff --staged --quiet; then
+            echo "Nessun aggiornamento stato."
+          else
+            git commit -m "chore: social auto-post queue update"
+            git push
+          fi

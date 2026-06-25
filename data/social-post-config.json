@@ -5,6 +5,26 @@
   "stories_per_day": 20,
   "platforms": ["instagram", "facebook"],
   "instagram_handle": "krown.82",
+  "auto_post": {
+    "enabled": true,
+    "dry_run": false,
+    "platforms": ["instagram", "facebook"],
+    "max_posts_per_day": 20,
+    "max_stories_per_day": 20,
+    "publish_story_with_feed": true,
+    "min_interval_minutes": 30,
+    "quota_wait_seconds": 3600,
+    "retry": {
+      "max_attempts": 3,
+      "backoff_seconds": [30, 120, 600]
+    },
+    "safety": {
+      "enabled": true,
+      "max_errors_per_hour": 5,
+      "pause_minutes_on_trip": 60,
+      "stop_on_token_error": true
+    }
+  },
   "layout": {
     "version": "v4-hero",
     "instagram_story": { "size": "1080x1920", "safe_area_px": 120, "hero_logo_pct": "30-40%" },
@@ -21,6 +41,7 @@
     "slots": 20
   },
   "workflows": [
+    "social-auto-post.yml",
     "instagram-auto-post.yml",
     "facebook-auto-post.yml"
   ],

@@ -1,9 +1,7 @@
 name: Facebook Auto Post — feed + story
 
 on:
-  schedule:
-    # Ogni 30 minuti, 05:00–20:30 UTC ≈ 07:00–22:30 Roma (CEST)
-    - cron: "0,30 5-20 * * *"
+  # Schedule disattivato — usa social-auto-post.yml (orchestratore unificato)
   workflow_dispatch:
     inputs:
       slot:

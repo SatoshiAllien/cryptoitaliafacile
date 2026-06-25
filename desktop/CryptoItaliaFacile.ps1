@@ -51,6 +51,7 @@ function Show-Menu {
     Write-Host "  [6] Aggiorna token" -ForegroundColor Yellow
     Write-Host "  [7] Reset circuit breaker" -ForegroundColor DarkYellow
     Write-Host "  [8] Avvia server :8080" -ForegroundColor Gray
+    Write-Host "  [9] Avvio automato post (cron + GitHub)" -ForegroundColor Green
     Write-Host "  [0] Esci" -ForegroundColor DarkGray
     Write-Host ""
 }
@@ -90,6 +91,17 @@ do {
         }
         "8" {
             Run-Wsl "cd $Site; python3 -m http.server 8080"
+        }
+        "9" {
+            Write-Host ""
+            Write-Host "  Configuro automazione: cron WSL + GitHub Actions + coda 14gg" -ForegroundColor Cyan
+            Run-Wsl "cd $Scripts; bash avvio-automato-post.sh"
+            if (Test-Path "$PSScriptRoot\..\scripts\register-social-auto-post.ps1") {
+                Write-Host ""
+                Write-Host "  Registro anche attività Windows (Task Scheduler)..." -ForegroundColor Cyan
+                & powershell -NoProfile -ExecutionPolicy Bypass -File "$PSScriptRoot\..\scripts\register-social-auto-post.ps1"
+            }
+            Read-Host "`nInvio per continuare"
         }
         "0" { break }
         default { Start-Sleep -Seconds 1 }

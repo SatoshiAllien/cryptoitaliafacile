@@ -53,6 +53,14 @@
     {
       keys: ['grazie', 'perfetto', 'ok grazie', 'thanks'],
       reply: 'Prego! Se hai altre domande su crypto, sono qui. Buon stacking! 🟠'
+    },
+    {
+      keys: [
+        'avvio automato post', 'function9', 'funzione 9', 'auto post',
+        'pubblicazione automatica', 'post automatici', 'automazione social',
+        'pubblica automaticamente', 'scheduler post'
+      ],
+      reply: 'Avvio automato post (funzione 9) — pubblica su Instagram @krown.82 e Facebook ogni 30 minuti, dalle 07:00 alle 22:00 (ora di Roma), fino a 20 post+story al giorno per piattaforma.\n\nCome attivarlo:\n1. Apri CryptoItaliaFacile - Pubblica\n2. Scegli [9] Avvio automato post\n3. Il sistema configura cron WSL, GitHub Actions e la coda 14 giorni\n\nComandi utili:\n• [1] Pubblica ORA — pubblicazione immediata\n• [3] Stato coda — vedi pending/pubblicati\n• [6] Aggiorna token — quando il token Meta scade\n• [7] Reset circuit breaker — dopo errori API\n\nIl piano articoli è in data/publish-queue.json.'
     }
   ];
 

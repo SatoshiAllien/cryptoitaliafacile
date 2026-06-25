@@ -41,9 +41,11 @@
     "slots": 20
   },
   "workflows": [
-    "social-auto-post.yml",
+    "social-auto-post.yml"
+  ],
+  "legacy_workflows_disabled": [
     "instagram-auto-post.yml",
     "facebook-auto-post.yml"
   ],
-  "note": "20 post feed + 20 story/giorno da articles.json. Layout hero logo centrato v4."
+  "note": "20 post feed + 20 story/giorno via orchestratore unificato. I workflow FB/IG singoli sono disattivati per evitare doppie pubblicazioni."
 }

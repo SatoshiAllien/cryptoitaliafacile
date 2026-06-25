@@ -24,6 +24,7 @@ function Show-Menu {
     Write-Host "  [4] Aggiorna token" -ForegroundColor Yellow
     Write-Host "  [5] Server :8080" -ForegroundColor White
     Write-Host "  [6] Rigenera immagini" -ForegroundColor DarkYellow
+    Write-Host "  [9] Avvio automato post (cron + GitHub)" -ForegroundColor Green
     Write-Host "  [0] Esci`n" -ForegroundColor DarkGray
 }
 
@@ -56,6 +57,10 @@ do {
         "5" { Run-Wsl "cd /home/workbench/cryptoitaliafacile && python3 -m http.server 8080" }
         "6" {
             Run-Wsl "cd $Scripts && python3 regenerate-all-images.py"
+            Read-Host "Invio"
+        }
+        "9" {
+            Run-Wsl "cd $Scripts && bash avvio-automato-post.sh"
             Read-Host "Invio"
         }
         "0" { break }

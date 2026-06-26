@@ -2,6 +2,7 @@
   "version": 1,
   "timezone": "Europe/Rome",
   "startDate": "2026-06-25",
+  "generatedAt": "2026-06-26T21:07:39",
   "items": [
     {
       "id": "instagram:2026-06-25:slot-00",
@@ -10091,6 +10092,5 @@
     "errors_in_window": 0,
     "window_start": null,
     "opened_at": null
-  },
-  "generatedAt": "2026-06-25T15:47:28"
+  }
 }

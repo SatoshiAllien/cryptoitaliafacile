@@ -37,6 +37,10 @@ jobs:
             --exclude='desktop' \
             --exclude='assets/audio' \
             --exclude='assets/video' \
+            --exclude='assets/img/instagram/stories' \
+            --exclude='assets/img/facebook/stories' \
+            --exclude='assets/img/instagram/posts/professional-batch' \
+            --exclude='assets/img/facebook/posts/professional-batch' \
             --exclude='_site' \
             ./ _site/
           echo "Artifact size:"
@@ -51,3 +55,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        timeout-minutes: 15
+
+      - name: Retry deploy if GitHub Pages sync failed
+        if: failure() && steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        timeout-minutes: 15

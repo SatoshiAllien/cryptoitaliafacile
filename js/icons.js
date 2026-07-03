@@ -44,9 +44,15 @@ function iconImg(name, opts = {}) {
   return `<img src="${iconUrl(name)}" class="${className}" width="${size}" height="${size}" alt="${alt}" loading="lazy" decoding="async"${hidden}>`;
 }
 
-function navIcon(href, size = 22) {
+function navIcon(href, size = 22, className = 'site-icon site-icon--nav') {
   const name = NAV_ICON_MAP[href];
-  return name ? iconImg(name, { size, className: 'site-icon site-icon--nav' }) : '';
+  return name ? iconImg(name, { size, className }) : '';
+}
+
+function navTabIcon(href) {
+  const name = NAV_ICON_MAP[href];
+  if (!name) return '';
+  return `<span class="nav-tab-icon">${iconImg(name, { size: 16, className: 'site-icon site-icon--nav-tab' })}</span>`;
 }
 
 function socialIcon(id, size = 20) {

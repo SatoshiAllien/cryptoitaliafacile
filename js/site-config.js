@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   },
   description: 'Notizie crypto e guide spiegate in modo facile e semplice. Per principianti e non solo.',
   year: 2026,
-  assetVersion: '20260703-icons',
+  assetVersion: '20260703-navtabs',
   email: 'info@cryptofacile.com',
 
   founder: {

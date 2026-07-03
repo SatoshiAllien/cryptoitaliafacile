@@ -231,7 +231,26 @@ button.nav-tab {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   box-shadow: 0 2px 14px rgba(232, 148, 12, 0.25);
 }
-.nav-caret { font-size: 0.65rem; opacity: 0.7; }
+.nav-tab-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  line-height: 0;
+}
+.nav-tab .site-icon--nav-tab {
+  width: 16px;
+  height: 16px;
+  opacity: 0.82;
+  transition: opacity var(--transition), filter var(--transition);
+}
+.nav-tab:hover .site-icon--nav-tab { opacity: 1; }
+.nav-tab--active .site-icon--nav-tab {
+  opacity: 1;
+  filter: brightness(0);
+}
+.nav-tab--ai .site-icon--nav-tab { opacity: 0.95; }
+.nav-tab-label { line-height: 1.2; }
+.nav-caret { font-size: 0.65rem; opacity: 0.7; margin-left: 0.1rem; }
 .nav-tab-item--dropdown { position: relative; }
 .nav-tab-item--dropdown .dropdown-menu {
   display: none;

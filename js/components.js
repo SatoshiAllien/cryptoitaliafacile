@@ -49,23 +49,28 @@ function navTabLabel(href) {
   return key ? t(`nav.${key}`) : navLabel(href);
 }
 
+function renderNavTabLabel(href, label, suffix = '') {
+  return `${navTabIcon(href)}<span class="nav-tab-label">${label}</span>${suffix}`;
+}
+
 function renderNavTabs(base) {
   return SITE_CONFIG.nav.map(item => {
+    const label = navTabLabel(item.href);
     if (item.children) {
       const children = item.children.map(c =>
         `<a href="${base}${c.href}" class="dropdown-link">${navLabel(c.href)}</a>`
       ).join('');
       return `
         <div class="nav-tab-item nav-tab-item--dropdown">
-          <a href="${base}${item.href}" class="nav-tab" data-nav-href="${item.href}">${navTabLabel(item.href)} <span class="nav-caret">▾</span></a>
+          <a href="${base}${item.href}" class="nav-tab" data-nav-href="${item.href}">${renderNavTabLabel(item.href, label, ' <span class="nav-caret">▾</span>')}</a>
           <div class="dropdown-menu">${children}</div>
         </div>`;
     }
     if (item.href === 'chat/index.html') {
-      return `<button type="button" class="nav-tab nav-tab--ai" data-satoshi-open data-nav-href="${item.href}">${navTabLabel(item.href)}</button>`;
+      return `<button type="button" class="nav-tab nav-tab--ai" data-satoshi-open data-nav-href="${item.href}">${renderNavTabLabel(item.href, label)}</button>`;
     }
     const cls = item.highlight ? 'nav-tab nav-tab--ai' : 'nav-tab';
-    return `<a href="${base}${item.href}" class="${cls}" data-nav-href="${item.href}">${navTabLabel(item.href)}</a>`;
+    return `<a href="${base}${item.href}" class="${cls}" data-nav-href="${item.href}">${renderNavTabLabel(item.href, label)}</a>`;
   }).join('');
 }
 

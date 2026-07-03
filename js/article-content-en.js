@@ -2731,302 +2731,351 @@ const ARTICLE_CONTENT_EN = {
     ]
   },
   'seed-phrase-guida': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Seed phrase: what it is, how to generate and store it</strong>. Everything about wallet recovery words.',
+    intro: 'The <strong>seed phrase</strong> (12 or 24 BIP39 words) is your wallet\'s master key. Whoever holds it controls your funds. This guide explains what it is, how it is generated, and how to store it without fatal mistakes.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Everything about wallet recovery words.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'what-is-seed', title: 'What is a seed phrase', content: `
+<p>When you create a self-custody wallet, the software generates a precise sequence of words. All private keys in the wallet are derived from that sequence.</p>
+<h3>Why it matters</h3>
+<ul><li>It is the <strong>only way</strong> to recover your wallet if you lose your phone or computer</li><li>There is no password reset — without the seed, funds are gone</li><li>Anyone who reads the seed can drain the wallet</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Everything about wallet recovery words.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'generation', title: 'How it is generated', content: `
+<p>Generation happens <strong>on your device</strong>, inside the wallet's secure environment (Trust Wallet, MetaMask, Ledger, etc.).</p>
+<ol><li>Choose "Create new wallet"</li><li>Software generates random entropy and converts it to BIP39 words</li><li>Words are shown once — write them down immediately</li><li>Complete the wallet's confirmation test</li></ol>
+<div class="box box--danger"><span class="box-title">Never</span>Generate or enter a seed on websites, Google forms, Telegram chats, or with "technical support".</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'storage', title: 'How to store it correctly', content: `
+<p>Practical rule: <strong>paper + metal + safe location</strong>.</p>
+<ul><li>Write words on permanent ink paper, no abbreviations</li><li>Consider a steel plate for fire and water resistance</li><li>Keep at least two copies in different physical locations</li><li>Do not label copies obviously as seed phrases</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
-<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'mistakes', title: 'Costly mistakes', content: `
+<ul><li>❌ Screenshots or photos of the seed</li><li>❌ Saving to cloud, email, Notes, iCloud</li><li>❌ Typing the seed on any website</li><li>❌ Sharing with family "for safety" without understanding risks</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Can I change my seed phrase?', a: 'No. To get a new one you must create a new wallet and transfer funds.' },
+      { q: '12 or 24 words?', a: 'Both are valid. 24 words offer more entropy; 12 is the most common mobile standard.' },
     ]
-  },
+  }
   'hot-vs-cold-wallet': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Hot wallet vs cold wallet: differences and when to use each</strong>. Practical comparison between online and offline wallets.',
+    intro: 'Hot and cold wallets are not the same. Understanding the difference helps you use the right tool for each amount and operation.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Practical comparison between online and offline wallets.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'difference', title: 'The difference in 30 seconds', content: `
+<p><strong>Hot wallet</strong>: internet-connected (mobile app, browser extension). Convenient, fast, more exposed.</p><p><strong>Cold wallet</strong>: offline keys (hardware wallet, paper wallet). Less convenient, maximum protection for hodling.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Practical comparison between online and offline wallets.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'when-hot', title: 'When to use a hot wallet', content: `
+<ul><li>Small amounts for daily use</li><li>DeFi, NFTs, frequent operations</li><li>Learning with minimal amounts</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      { id: 'when-cold', title: 'When to use a cold wallet', content: `
+<ul><li>Long-term storage (Bitcoin, ETH, ADA)</li><li>Funds you do not need daily</li><li>After accumulating on an exchange — withdraw to cold</li></ul><div class="box box--tip"><span class="box-title">Practical rule</span>Exchange to buy. Hot to operate. Cold to store.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'risks', title: 'Main risks', content: `
+<p>Hot: malware, phishing, malicious approvals. Cold: physical loss, no seed backup, tampered device purchase.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Can I use only a hot wallet?', a: 'Yes to start, but not for your entire portfolio. Diversify as amounts grow.' },
+      { q: 'Is a cold wallet difficult?', a: 'Ledger and Trezor are beginner-friendly. Setup takes 20-30 minutes.' },
     ]
-  },
+  }
   'confronto-hardware-wallet': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Hardware wallets: Ledger vs Trezor vs BitBox comparison</strong>. Which device to choose for maximum security.',
+    intro: 'Ledger, Trezor, and BitBox are the three most used hardware wallets in Europe. None is "perfect": the choice depends on budget, supported blockchains, and privacy level.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Which device to choose for maximum security.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'overview', title: 'Why a hardware wallet', content: `
+<p>A hardware wallet keeps <strong>private keys offline</strong>. Even if your PC is infected, an attacker cannot sign transactions without the physical device and PIN.</p><ul><li>Ideal for medium to long-term storage</li><li>Works with MetaMask, Ledger Live, Trezor Suite</li><li>Buy only from the official site or authorized reseller</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Which device to choose for maximum security.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'ledger', title: 'Ledger (Nano S Plus / Nano X)', content: `
+<h3>Strengths</h3><ul><li>Broad chain and token support</li><li>Intuitive Ledger Live app</li><li>Nano X with Bluetooth (note: larger attack surface)</li></ul><h3>Caveats</h3><p>Past customer data leaks (emails, addresses). Use a dedicated email and avoid suspicious links.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'trezor', title: 'Trezor (Model One / Safe 3)', content: `
+<h3>Strengths</h3><ul><li>Open-source firmware</li><li>Clean, transparent Trezor Suite</li><li>Excellent for Bitcoin and Ethereum</li></ul><h3>Caveats</h3><p>Model One does not support some modern chains. Check compatibility before buying.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'bitbox', title: 'BitBox (BitBox02)', content: `
+<h3>Strengths</h3><ul><li>Swiss-made, privacy-focused</li><li>microSD backup in addition to seed</li><li>Minimalist interface</li></ul><h3>Caveats</h3><p>Fewer chains than Ledger. Great if your stack is BTC/ETH-centric.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
-<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'choose', title: 'How to choose', content: `
+<ol><li>List crypto you hold today and plan to hold</li><li>Compare price, display, connectivity (USB-C, Bluetooth)</li><li>Ensure firmware is updatable</li><li>Order from the official site — never unknown marketplaces</li></ol><div class="box box--warning"><span class="box-title">Warning</span>A device "already set up" or with a pre-filled seed = guaranteed scam.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Ledger or Trezor for beginners?', a: 'Both work well. Ledger has more Italian tutorials; Trezor focuses on open-source transparency.' },
+      { q: 'Do I need the most expensive model?', a: 'No. Nano S Plus or Trezor Safe 3 are enough for most users.' },
     ]
-  },
+  }
   'difendersi-phishing': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Recognize and defend against crypto phishing</strong>. Warning signs and anti-scam best practices.',
+    intro: 'Phishing is the most common attack in crypto. You do not need a genius hacker: a convincing link and a moment of distraction are enough. Learn to spot it before it is too late.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Warning signs and anti-scam best practices.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'what-is', title: 'What is crypto phishing', content: `
+<p>Messages mimicking exchanges, wallets, airdrops, or "technical support" to steal seed phrases, passwords, or trick you into signing malicious transactions.</p><h3>Common channels</h3><ul><li>Emails and SMS with urgent links</li><li>Google/Facebook ads with similar URLs</li><li>DMs on Telegram, Discord, X</li><li>Clone sites of MetaMask, Ledger, Uniswap</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Warning signs and anti-scam best practices.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'signals', title: 'Warning signs', content: `
+<ul><li>Urgency: "Your account will be locked in 24 hours"</li><li>Requests for seed phrase or private keys</li><li>Slightly different URLs (metamask.io vs metamask.com)</li><li>Promises to double BTC or "exclusive" airdrops</li><li>Unsolicited support contacting you first</li></ul><div class="box box--danger"><span class="box-title">Golden rule</span>No legitimate service will ever ask for your seed phrase. Not Ledger, MetaMask, or Binance.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
+      { id: 'defense', title: 'How to defend yourself', content: `
+<ol><li>Bookmark official sites — do not use email links</li><li>Always verify the URL character by character</li><li>Enable 2FA with an authenticator app (not SMS)</li><li>Use a dedicated email for exchanges and crypto</li><li>Review token approvals periodically</li></ol>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
-      `},
-      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
-<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'clicked', title: 'If you clicked a suspicious link', content: `
+<p><strong>Do not enter data.</strong> Close the page. If you typed your seed: immediately transfer funds to a new wallet. If you connected your wallet to a fake site: revoke approvals on revoke.cash or etherscan.io.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'How do I verify if a site is official?', a: 'Check the exact domain, HTTPS certificate, and compare with links from the company\'s official X account or documentation.' },
+      { q: 'Does phishing only target beginners?', a: 'No. Even experienced users fall for sophisticated scams. Verification habits protect everyone.' },
     ]
-  },
+  }
   'approvazioni-smart-contract': {
-    intro: 'If you already understand wallets and exchanges, this security guide covers <strong>Smart contract approvals: what you sign and how to revoke them</strong>. Check and revoke permissions on your tokens.',
+    intro: 'Every time you use Uniswap, OpenSea, or a DeFi protocol, you sign <strong>approvals</strong> allowing a smart contract to move your tokens. Understanding what you sign is essential for security.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Check and revoke permissions on your tokens.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'what-are', title: 'What are approvals', content: `
+<p>An approval (allowance) authorizes a contract to withdraw a certain amount of tokens from your wallet without asking each time.</p><h3>Types</h3><ul><li><strong>Limited</strong> — specific amount (safer)</li><li><strong>Unlimited</strong> — full token access (risky)</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Check and revoke permissions on your tokens.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'risks', title: 'Risks of open approvals', content: `
+<p>If a contract is compromised or was malicious from the start, it can drain approved tokens — even months later.</p><div class="box box--danger"><span class="box-title">Never</span>Approve unlimited amounts on protocols you do not know or use regularly.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'check', title: 'How to check approvals', content: `
+<ol><li>Visit <strong>revoke.cash</strong> or Etherscan Token Approvals</li><li>Connect your wallet (only on trusted sites)</li><li>Check each network: Ethereum, Polygon, BSC, Arbitrum</li><li>Revoke old or suspicious approvals</li></ol>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
-<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'practices', title: 'Best practices', content: `
+<ul><li>Approve only the amount needed for a single operation</li><li>Use a separate wallet for experimental DeFi</li><li>Review approvals every 1-3 months</li><li>Before revoking, check network fees</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Is revoking an approval dangerous?', a: 'No, it is a standard operation. It only costs the network fee for the revoke transaction.' },
+      { q: 'Do I need this on all chains?', a: 'Yes. Each network has separate approvals. Check Ethereum, L2s, and sidechains where you have operated.' },
     ]
-  },
+  }
   'backup-wallet-321': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Wallet backup: 3-2-1 strategy for crypto</strong>. Three copies, two media, one off-site.',
+    intro: 'The <strong>3-2-1</strong> strategy comes from IT but applies perfectly to crypto: three copies, two media, one off-site. It is the bare minimum to avoid losing everything.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Three copies, two media, one off-site.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'strategy', title: 'The 3-2-1 rule explained', content: `
+<ul><li><strong>3 copies</strong> of the seed phrase or backup</li><li><strong>2 different media</strong> — e.g. paper + steel, or paper + encrypted microSD</li><li><strong>1 off-site copy</strong> — physical location different from home (safe deposit box, trusted relative)</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Three copies, two media, one off-site.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'media', title: 'Recommended media', content: `
+<h3>Paper</h3><p>Cheap, immediate. Use permanent ink, avoid sticky notes.</p><h3>Metal</h3><p>Cryptosteel, Billfodl plates: resist fire and flooding.</p><h3>microSD (hardware wallet)</h3><p>BitBox supports card backup. Guard the card like treasure.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'avoid', title: 'What NOT to use as backup', content: `
+<ul><li>❌ Screenshots, photos, unencrypted digital files</li><li>❌ Cloud (iCloud, Google Drive, Dropbox)</li><li>❌ Email to yourself</li><li>❌ Password manager for the seed (only for exchange passwords)</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'test', title: 'Test your backup', content: `
+<p>An untested backup is useless. Once a year (or after major moves):</p><ol><li>Recover the wallet on a clean device using the seed</li><li>Verify addresses match</li><li>Close without leaving traces on the test device</li></ol>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Are three copies too many?', a: 'No. One can burn, one can get wet, one can get lost. Redundancy is the point.' },
+      { q: 'Can I give a copy to a family member?', a: 'Only if they understand it is like giving house keys. Consider an additional passphrase (BIP39 passphrase) for extra protection.' },
     ]
-  },
+  }
   'sicurezza-mobile': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Mobile security: protect wallets on your smartphone</strong>. PIN, biometrics and precautions for mobile wallets.',
+    intro: 'The phone is the most used wallet for beginners — and the most stolen, lost, or infected. A few precautions drastically reduce risk.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>PIN, biometrics and precautions for mobile wallets.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'threat', title: 'Why mobile is at risk', content: `
+<ul><li>Malicious apps with excessive permissions</li><li>Stolen or lost phone</li><li>Unsafe public Wi-Fi</li><li>Phone cloud backup including screenshots</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>PIN, biometrics and precautions for mobile wallets.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'protect', title: 'Protect the device', content: `
+<ol><li>Strong PIN (6+ digits) or passphrase — not fingerprint alone</li><li>Always install OS updates</li><li>Download wallets only from official App Store / Play Store</li><li>Disable cloud backup for wallet apps if possible</li><li>Do not jailbreak/root if using wallets with real funds</li></ol>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'wallet-app', title: 'Mobile wallet setup', content: `
+<ul><li>Enable biometrics <strong>in addition to</strong> wallet PIN</li><li>Disable notification previews showing amounts</li><li>Never screenshot the seed</li><li>Use verifiable open-source wallets when possible</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'lost', title: 'If you lose or get robbed', content: `
+<p>Paper seed saves you. Install the wallet on a new device, import the seed, verify funds. Change exchange passwords and revoke active sessions.</p><div class="box box--warning"><span class="box-title">Without seed</span>If you have no seed backup, funds on the lost phone are unrecoverable.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Is Trust Wallet safe?', a: 'Widely used but still a hot wallet. Safe for small amounts if you follow best practices. For large holdings use a hardware wallet.' },
+      { q: 'Should I use a VPN?', a: 'Useful on public Wi-Fi. At home on a trusted network it is less critical, but does not replace good habits.' },
     ]
-  },
+  }
   'wallet-compromesso': {
-    intro: 'If you already understand wallets and exchanges, this security guide covers <strong>What to do if you suspect your wallet is compromised</strong>. Immediate action plan in case of emergency.',
+    intro: 'Suspect someone has access to your wallet? Every minute counts. Follow this action plan without panic — but without wasting time.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Immediate action plan in case of emergency.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'signals', title: 'Signs of compromise', content: `
+<ul><li>Transactions you did not authorize</li><li>Unknown approvals on revoke.cash</li><li>Exchange login from unusual IP or country</li><li>You entered your seed on a suspicious site</li><li>You installed an unofficial app or extension</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Immediate action plan in case of emergency.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'immediate', title: 'Immediate actions (first 15 minutes)', content: `
+<ol><li><strong>Stop</strong> — do not sign more transactions</li><li>If you have a safe seed elsewhere: create a <strong>new wallet</strong> on a clean device</li><li>Transfer all funds to the new address with high fees if speed matters</li><li>Revoke all approvals on the old address</li></ol><div class="box box--danger"><span class="box-title">Priority</span>Save funds before figuring out how it happened.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'exchange', title: 'If funds are on an exchange', content: `
+<ol><li>Change password immediately</li><li>Revoke API keys and active sessions</li><li>Enable or verify 2FA (authenticator, not SMS)</li><li>Contact official support only from verified site</li><li>Withdraw to self-custody wallet if possible</li></ol>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
-<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'after', title: 'After the emergency', content: `
+<ul><li>Analyze how the compromise happened</li><li>Replace device or reinstall OS if malware</li><li>New seed phrase — do not reuse the compromised one</li><li>Document for possible report (cyber police)</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Can I recover stolen funds?', a: 'Rarely. On-chain transactions are irreversible. Acting in time is the only real defense.' },
+      { q: 'Should I file a report?', a: 'Recommended for scams and phishing. Keep transaction hashes, URLs, screenshots.' },
     ]
-  },
+  }
   'password-manager-crypto': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Password managers and crypto: best practices</strong>. Manage passwords and secure notes for the crypto ecosystem.',
+    intro: 'Password managers and crypto go together — but with clear rules. They manage exchange passwords, not the seed phrase.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>Manage passwords and secure notes for the crypto ecosystem.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'why', title: 'Why use one', content: `
+<ul><li>Unique, long passwords for each exchange</li><li>No reuse across platforms</li><li>2FA backup codes stored securely</li><li>Controlled sharing in family contexts (vault)</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>Manage passwords and secure notes for the crypto ecosystem.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'choice', title: 'Which to choose', content: `
+<p>Reliable options: <strong>Bitwarden</strong> (open source), 1Password, KeePassXC (local). Avoid unknown or "free" solutions without audits.</p><h3>Minimum setup</h3><ol><li>Long master password (20+ chars) or passphrase</li><li>2FA on the vault itself</li><li>Backup PM recovery key in a secure physical location</li></ol>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'what-store', title: 'What to store in the password manager', content: `
+<ul><li>✅ Exchange logins, crypto email, API key labels</li><li>✅ 2FA backup codes</li><li>✅ Notes on wallet addresses (public) and device PINs</li><li>❌ Seed phrase — never digital</li><li>❌ Raw private keys</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'habits', title: 'Secure habits', content: `
+<p>Update passwords after known breaches. Do not autofill crypto sites from email links. Use the PM only on devices you control.</p>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'Is Bitwarden secure enough?', a: 'Yes, with a strong master password and 2FA. Zero-knowledge model protects data even if servers were compromised.' },
+      { q: 'Can I store an encrypted seed in the PM?', a: 'Not recommended. Sync errors, malware, or subpoena still pose unacceptable risk.' },
     ]
-  },
+  }
   'audit-sicurezza-portafoglio': {
-    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Security audit of your portfolio (checklist)</strong>. 25 points to verify for a secure portfolio.',
+    intro: 'A security audit does not require hacker skills: it is a checklist to verify where you store crypto, how you protect keys, and which habits expose you to risk.',
     sections: [
-      { id: 'overview', title: 'Overview', content: `
-<p>25 points to verify for a secure portfolio.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      { id: 'seed', title: 'Seed phrase and backup', content: `
+<ul><li>□ Backup on paper/metal, never digital</li><li>□ At least 2 copies in different locations</li><li>□ Recovery test done in the last 12 months</li><li>□ No one besides you has unnecessary access</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
-<p>25 points to verify for a secure portfolio.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      { id: 'wallet-device', title: 'Wallets and devices', content: `
+<ul><li>□ Hot wallet only for operational amounts</li><li>□ Hardware wallet for main storage</li><li>□ Wallet firmware updated</li><li>□ PIN/biometrics active on phone and apps</li><li>□ No wallet apps from unofficial sources</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
-<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'exchange', title: 'Exchanges and accounts', content: `
+<ul><li>□ Authenticator 2FA (not SMS) on every exchange</li><li>□ Unique passwords via password manager</li><li>□ Withdrawal whitelist enabled where available</li><li>□ No significant funds left on exchange long-term</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
-<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      { id: 'defi', title: 'DeFi and approvals', content: `
+<ul><li>□ Token approvals reviewed in the last 3 months</li><li>□ No unlimited approvals on inactive protocols</li><li>□ Separate DeFi wallet from main wallet</li></ul>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
-      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
-<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
-<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
-      `},
-      { id: 'security-checklist', title: 'Security checklist', content: `
-<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      { id: 'habits', title: 'Habits and phishing', content: `
+<ul><li>□ Official sites bookmarked</li><li>□ Never seed requested by "support"</li><li>□ Dedicated email for crypto</li><li>□ Suspicious activity reported and revokes done</li></ul><div class="box box--tip"><span class="box-title">Frequency</span>Repeat the audit every 3-6 months or after every major purchase.</div>
+<div class="box box--tip"><span class="box-title">Security first</span>Security is not optional: protect your seed phrase, devices, and habits before increasing your holdings.</div>
+<div class="box box--info"><span class="box-title">Zero hype</span>100% educational content. No profit promises. Only concrete, verifiable practices.</div>
+
       `},
     ],
     faq: [
-      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
-      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
-      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+      { q: 'How long does it take?', a: '30-45 minutes the first time, 15 minutes afterwards.' },
+      { q: 'What if I fail many items?', a: 'Priority: seed backup, 2FA, move funds from exchange to self-custody. One item at a time.' },
     ]
-  },
+  }
 
 };

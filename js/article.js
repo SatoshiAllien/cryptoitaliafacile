@@ -713,6 +713,9 @@ function getArticleContent(slug, article) {
       && typeof ARTICLE_CONTENT_EN !== 'undefined' && ARTICLE_CONTENT_EN[slug]) {
     return ARTICLE_CONTENT_EN[slug];
   }
+  if (typeof ARTICLE_CONTENT_SICUREZZA !== 'undefined' && ARTICLE_CONTENT_SICUREZZA[slug]) {
+    return ARTICLE_CONTENT_SICUREZZA[slug];
+  }
   return ARTICLE_CONTENT[slug] || generateGenericContent(article);
 }
 

@@ -338,10 +338,37 @@ async function initHubPage() {
   const grid = document.getElementById('hub-articles');
   if (!grid) return;
 
+  function renderSicurezzaCard(article) {
+    const a = localizeArticle(article);
+    const diffClass = `badge--${a.difficulty}`;
+    const diffLabel = { beginner: t('ui.beginner'), intermediate: t('ui.intermediate'), advanced: t('ui.advanced') }[a.difficulty] || t('ui.beginner');
+    const previewUrl = typeof getArticlePreviewSquareUrl === 'function' ? getArticlePreviewSquareUrl(a) : '';
+    const previewHtml = previewUrl
+      ? `<div class="article-card-media"><img src="${previewUrl}" alt="" class="article-card-image" loading="lazy" width="400" height="400" decoding="async"></div>`
+      : '<div class="article-card-accent"></div>';
+    return `
+    <a href="${a.slug}.html" class="article-card article-card--${a.difficulty}">
+      ${previewHtml}
+      <div class="article-card-body">
+        <div class="article-card-top">
+          <span class="badge ${diffClass}">${diffLabel}</span>
+          <span class="article-meta">${a.readTime} min</span>
+          <a href="${a.slug}-en.html" class="section-link" style="margin-left:auto;font-size:0.75rem;" hreflang="en" onclick="event.stopPropagation();">EN</a>
+        </div>
+        <h3 class="article-card-title">${a.title}</h3>
+        <p class="article-card-excerpt">${a.excerpt}</p>
+        <span class="article-card-link">${t('ui.readGuide')}</span>
+      </div>
+    </a>`;
+  }
+
   function render(filterKey) {
     const items = getArticlesByFilter(filterKey);
+    const cardFn = hub === 'tips' ? renderTipCard
+      : hub === 'sicurezza' ? renderSicurezzaCard
+      : renderArticleCard;
     grid.innerHTML = items.length
-      ? items.map(a => hub === 'tips' ? renderTipCard(a, base) : renderArticleCard(a, base)).join('')
+      ? items.map(a => cardFn(a, base)).join('')
       : `<p style="color:var(--text-muted)">${t('messages.noArticles')}</p>`;
     document.querySelectorAll('.filter-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.filter === filterKey);

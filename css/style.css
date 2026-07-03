@@ -668,33 +668,51 @@ button.mobile-nav-card {
   line-height: 1.7;
 }
 .trust-badges {
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
-  justify-content: center; margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 .trust-badge {
-  display: inline-flex; align-items: center;
-  background: rgba(255, 140, 0, 0.06);
-  padding: 0.35rem 0.75rem;
-  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
   font-family: var(--font-mono);
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--text-muted);
-  border: 1px solid rgba(255, 184, 0, 0.2);
-  letter-spacing: 0.03em;
+  border: 1px solid var(--border);
+  letter-spacing: 0.04em;
 }
-.hero .btn-secondary {
-  background: rgba(20, 20, 31, 0.6);
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  align-items: center;
+}
+.hero-cta--alt { gap: 0.5rem; }
+.btn-neutral {
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   border: 1px solid var(--border);
+  font-weight: 600;
 }
-.hero .btn-secondary:hover {
-  background: var(--surface);
-  border-color: var(--primary);
-  color: var(--primary);
-  transform: translateY(-2px);
+.btn-neutral:hover {
+  background: rgba(255, 211, 0, 0.08);
+  border-color: rgba(255, 211, 0, 0.35);
+  color: #FFD300;
+  transform: translateY(-1px);
 }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; justify-content: center; }
 .btn-facebook {
   background: #1877F2;
   color: #fff;
@@ -708,7 +726,6 @@ button.mobile-nav-card {
   transform: translateY(-3px);
   box-shadow: 0 0 28px rgba(24, 119, 242, 0.45);
 }
-.hero-cta .btn-facebook svg { flex-shrink: 0; }
 
 .btn-instagram {
   background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -723,73 +740,6 @@ button.mobile-nav-card {
   box-shadow: 0 0 28px rgba(225, 48, 108, 0.45);
   filter: brightness(1.08);
 }
-.hero-cta .btn-instagram svg { flex-shrink: 0; }
-
-.hero-social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0.85rem;
-  margin-top: 1.35rem;
-}
-.hero-social-icon {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  color: #fff;
-  transition: all var(--transition);
-  position: relative;
-  border: 2px solid rgba(255, 255, 255, 0.12);
-}
-.hero-social-icon .site-icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1);
-}
-.hero-social-icon--instagram {
-  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-  box-shadow: 0 4px 20px rgba(225, 48, 108, 0.35);
-}
-.hero-social-icon--facebook {
-  background: #1877F2;
-  box-shadow: 0 4px 20px rgba(24, 119, 242, 0.35);
-}
-.hero-social-icon--x {
-  background: #0f0f1a;
-  border-color: rgba(231, 233, 234, 0.25);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
-.hero-social-icon--linkedin {
-  background: #0A66C2;
-  box-shadow: 0 4px 20px rgba(10, 102, 194, 0.35);
-}
-.hero-social-icon:hover {
-  transform: translateY(-4px) scale(1.08);
-  filter: brightness(1.1);
-}
-.hero-social-icon--instagram:hover { box-shadow: 0 8px 28px rgba(225, 48, 108, 0.55); }
-.hero-social-icon--facebook:hover { box-shadow: 0 8px 28px rgba(24, 119, 242, 0.55); }
-.hero-social-icon--x:hover { box-shadow: 0 8px 28px rgba(231, 233, 234, 0.2); border-color: #E7E9EA; }
-.hero-social-icon--linkedin:hover { box-shadow: 0 8px 28px rgba(10, 102, 194, 0.55); }
-.hero-social-icon::after {
-  content: attr(data-label);
-  position: absolute;
-  bottom: -1.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.65rem;
-  color: var(--text-muted);
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity var(--transition);
-  pointer-events: none;
-}
-.hero-social-icon:hover::after { opacity: 1; }
 
 .instagram-section {
   padding: 4rem 0;
@@ -888,21 +838,18 @@ button.mobile-nav-card {
 }
 
 .btn-affiliate-hero {
-  background: linear-gradient(135deg, var(--accent-yellow) 0%, #ff9f1c 50%, var(--secondary) 100%);
-  color: #0c0a07;
-  font-weight: 700;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 0 28px rgba(252, 238, 10, 0.3);
-  border: 1px solid rgba(252, 238, 10, 0.4);
+  background: rgba(255, 211, 0, 0.1);
+  color: #FFD300;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  box-shadow: none;
+  border: 1px solid rgba(255, 211, 0, 0.45);
 }
 .btn-affiliate-hero:hover {
-  color: #0c0a07;
-  transform: translateY(-3px);
-  box-shadow: 0 0 40px rgba(252, 238, 10, 0.45);
-}
-@keyframes affiliate-hero-pulse {
-  0%, 100% { box-shadow: 0 0 28px rgba(252, 238, 10, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(252, 238, 10, 0.5), 0 0 0 3px rgba(252, 238, 10, 0.15); }
+  color: #FFD300;
+  background: rgba(255, 211, 0, 0.16);
+  transform: translateY(-1px);
+  box-shadow: none;
 }
 
 /* Welcome / manifesto */
@@ -2609,11 +2556,16 @@ h1, h2, h3, h4 { color: var(--text); }
 .btn-ghost { border-color: var(--border); color: var(--text-muted); }
 .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
 .btn-affiliate-hero {
-  background: linear-gradient(135deg, var(--accent-yellow) 0%, #ff9f1c 50%, var(--secondary) 100%);
-  color: #0c0a07;
-  box-shadow: 0 0 28px rgba(252, 238, 10, 0.35);
+  background: rgba(255, 211, 0, 0.1);
+  color: #FFD300;
+  box-shadow: none;
+  border: 1px solid rgba(255, 211, 0, 0.45);
 }
-.btn-affiliate-hero:hover { box-shadow: 0 0 40px rgba(252, 238, 10, 0.5); }
+.btn-affiliate-hero:hover {
+  background: rgba(255, 211, 0, 0.16);
+  color: #FFD300;
+  box-shadow: none;
+}
 
 /* Badges */
 .badge--beginner { background: var(--primary-light); color: var(--primary); border: 1px solid rgba(0,240,255,0.2); }
@@ -2660,21 +2612,21 @@ h1, h2, h3, h4 { color: var(--text); }
 }
 .hero-desc { color: var(--text-muted); }
 .trust-badge {
-  background: rgba(255, 140, 0, 0.06);
-  border: 1px solid rgba(255, 140, 0, 0.2);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.68rem;
 }
-.hero .btn-secondary {
-  background: rgba(20, 20, 31, 0.8);
+.hero .btn-neutral {
+  background: rgba(255, 255, 255, 0.04);
   color: var(--text);
   border: 1px solid var(--border);
 }
-.hero .btn-secondary:hover {
-  background: var(--surface);
-  border-color: var(--primary);
-  color: var(--primary);
+.hero .btn-neutral:hover {
+  background: rgba(255, 211, 0, 0.08);
+  border-color: rgba(255, 211, 0, 0.35);
+  color: #FFD300;
 }
 
 /* Reassure strip */

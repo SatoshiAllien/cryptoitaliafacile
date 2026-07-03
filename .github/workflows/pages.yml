@@ -65,7 +65,8 @@ jobs:
           test -d "${BUILD_DIR}/icons"
           test -f "${BUILD_DIR}/icons/home.svg"
           test -f "${BUILD_DIR}/js/icons.js"
-          grep -q "20260703-navtabs" "${BUILD_DIR}/index.html"
+          grep -q "hero-actions" "${BUILD_DIR}/index.html"
+          ! grep -q "hero-social-icons" "${BUILD_DIR}/index.html"
           grep -q "iconImg" "${BUILD_DIR}/js/components.js"
           echo "✓ All required files present in ${BUILD_DIR}"
 

@@ -279,24 +279,6 @@ async function initHomepage() {
   if (homeSocial && SITE_CONFIG.social) {
     homeSocial.innerHTML = renderSocialLinks();
   }
-
-  initHeroSocialIcons();
-}
-
-function initHeroSocialIcons() {
-  const el = document.getElementById('hero-social-icons');
-  if (!el || !SITE_CONFIG.social) return;
-  const base = getBasePath();
-  const order = ['instagram', 'facebook', 'x', 'linkedin'];
-  el.innerHTML = order.map(id => {
-    const s = getSocial(id);
-    if (!s) return '';
-    const iconName = SOCIAL_ICON_MAP[id];
-    if (!iconName) return '';
-    return `<a href="${s.url}" class="hero-social-icon hero-social-icon--${id}" data-label="${s.handle || s.name}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}">
-      ${iconImg(iconName, { size: 24, className: 'site-icon' })}
-    </a>`;
-  }).join('');
 }
 
 function initHubI18n() {

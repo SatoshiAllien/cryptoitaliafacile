@@ -27,10 +27,26 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare lean site artifact
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='scripts' \
+            --exclude='desktop' \
+            --exclude='assets/audio' \
+            --exclude='assets/video' \
+            --exclude='_site' \
+            ./ _site/
+          echo "Artifact size:"
+          du -sh _site
+          find _site -type f | wc -l
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment

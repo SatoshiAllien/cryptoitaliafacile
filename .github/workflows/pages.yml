@@ -14,6 +14,9 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  BUILD_DIR: _site
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -27,9 +30,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare lean site artifact
+      - name: Prepare static site artifact
         run: |
-          mkdir -p _site
+          mkdir -p "${BUILD_DIR}"
+          # Static site — no build step; publish repo root minus non-web assets
           rsync -a \
             --exclude='.git' \
             --exclude='.github' \
@@ -41,23 +45,50 @@ jobs:
             --exclude='assets/img/facebook/stories' \
             --exclude='assets/img/instagram/posts/professional-batch' \
             --exclude='assets/img/facebook/posts/professional-batch' \
-            --exclude='_site' \
-            ./ _site/
+            --exclude="${BUILD_DIR}" \
+            ./ "${BUILD_DIR}/"
           echo "Artifact size:"
-          du -sh _site
-          find _site -type f | wc -l
+          du -sh "${BUILD_DIR}"
+          echo "File count:"
+          find "${BUILD_DIR}" -type f | wc -l
+
+      - name: Verify artifact contains updated files
+        run: |
+          set -e
+          test -f "${BUILD_DIR}/index.html"
+          test -f "${BUILD_DIR}/css/style.css"
+          test -f "${BUILD_DIR}/js/main.js"
+          test -f "${BUILD_DIR}/js/components.js"
+          test -f "${BUILD_DIR}/js/site-config.js"
+          test -f "${BUILD_DIR}/js/article-content-en.js"
+          test -f "${BUILD_DIR}/news/en/index.html"
+          grep -q "20260703-deploy" "${BUILD_DIR}/index.html"
+          grep -q "linkedin" "${BUILD_DIR}/js/components.js"
+          echo "✓ All required files present in ${BUILD_DIR}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: ${{ env.BUILD_DIR }}
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         timeout-minutes: 15
 
-      - name: Retry deploy if GitHub Pages sync failed
+      - name: Retry deploy after sync failure
         if: failure() && steps.deployment.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy to GitHub Pages (retry)
+        if: failure() && steps.deployment.outcome == 'failure'
+        id: deployment_retry
         uses: actions/deploy-pages@v4
         timeout-minutes: 15
+
+      - name: Publish site URL
+        if: success()
+        run: |
+          URL="${{ steps.deployment.outputs.page_url }}"
+          if [ -z "$URL" ]; then URL="${{ steps.deployment_retry.outputs.page_url }}"; fi
+          echo "Site deployed: ${URL:-https://satoshiallien.github.io/cryptoitaliafacile/}"

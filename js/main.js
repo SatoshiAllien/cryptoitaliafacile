@@ -213,13 +213,18 @@ async function initHomepage() {
 
   const catGrid = document.getElementById('category-grid');
   if (catGrid) {
-    catGrid.innerHTML = SITE_CONFIG.categories.map(c => `
-      <a href="${base}${c.href}" class="category-card fade-in" style="--cat-color:${c.color};--cat-bg:${c.bg}">
-        <span class="category-icon">${c.iconImg
+    catGrid.innerHTML = SITE_CONFIG.categories.map(c => {
+      const iconHtml = (typeof categoryIcon === 'function' && CATEGORY_ICON_MAP[c.id])
+        ? categoryIcon(c.id)
+        : (c.iconImg
           ? `<img src="${base}${c.iconImg}" alt="${c.label}" class="category-icon-img" width="28" height="28" loading="lazy" />`
-          : `<span class="category-abbr">${c.abbr || c.label[0]}</span>`}</span>
+          : `<span class="category-abbr">${c.abbr || c.label[0]}</span>`);
+      return `
+      <a href="${base}${c.href}" class="category-card fade-in" style="--cat-color:${c.color};--cat-bg:${c.bg}">
+        <span class="category-icon">${iconHtml}</span>
         <span class="category-label">${t(`categories.${c.id}`) || c.label}</span>
-      </a>`).join('');
+      </a>`;
+    }).join('');
   }
 
   const popular = document.getElementById('popular-guides');
@@ -250,7 +255,7 @@ async function initHomepage() {
           <h3>${pathTr[i]?.title || s.title}</h3>
           <p>${pathTr[i]?.desc || s.desc}</p>
         </div>
-        <span class="path-arrow">→</span>
+        <span class="path-arrow">${iconImg('arrow-right', { size: 20, className: 'site-icon' })}</span>
       </a>`).join('');
   }
 
@@ -286,9 +291,10 @@ function initHeroSocialIcons() {
   el.innerHTML = order.map(id => {
     const s = getSocial(id);
     if (!s) return '';
-    const iconFile = `${base}assets/img/social/icon-${id}.svg`;
+    const iconName = SOCIAL_ICON_MAP[id];
+    if (!iconName) return '';
     return `<a href="${s.url}" class="hero-social-icon hero-social-icon--${id}" data-label="${s.handle || s.name}" target="_blank" rel="noopener noreferrer" aria-label="${s.name}">
-      <img src="${iconFile}" alt="" width="24" height="24" loading="eager" decoding="async">
+      ${iconImg(iconName, { size: 24, className: 'site-icon' })}
     </a>`;
   }).join('');
 }

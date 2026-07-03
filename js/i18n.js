@@ -1,9 +1,8 @@
 ﻿const I18N_STORAGE_KEY = 'cf_lang';
 
 function flagImg(code) {
-  const base = typeof getBasePath === 'function' ? getBasePath() : '';
-  const src = `${base}assets/img/flag-${code}.svg`;
-  return `<img src="${src}" class="lang-flag" width="22" height="15" alt="" loading="eager" decoding="async">`;
+  const name = code === 'it' ? 'language-it' : 'language-en';
+  return iconImg(name, { size: 20, className: 'site-icon lang-flag', alt: code.toUpperCase() });
 }
 
 const TRANSLATIONS = {

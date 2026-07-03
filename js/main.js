@@ -282,7 +282,7 @@ function initHeroSocialIcons() {
   const el = document.getElementById('hero-social-icons');
   if (!el || !SITE_CONFIG.social) return;
   const base = getBasePath();
-  const order = ['instagram', 'facebook', 'x'];
+  const order = ['instagram', 'facebook', 'x', 'linkedin'];
   el.innerHTML = order.map(id => {
     const s = getSocial(id);
     if (!s) return '';

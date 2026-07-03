@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Token Facebook permanente — CryptoItaliaFacile</title>
+  <style>
+    :root { --bg:#0a0a12; --surface:#12121f; --cyan:#00f0ff; --gold:#f4c430; --text:#e8e8f0; --muted:#9a9ab0; --border:#2a2a3d; --green:#4ade80; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+    .sub { color: var(--muted); margin-bottom: 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+    .card h2 { font-size: 1rem; color: var(--cyan); margin: 0 0 0.75rem; }
+    ol, ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.45rem; }
+    code, pre { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; }
+    code { padding: 0.15rem 0.4rem; }
+    pre { padding: 0.85rem; overflow-x: auto; }
+    a { color: var(--cyan); }
+    .btn { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1rem; border: 1px solid var(--cyan); border-radius: 8px; color: var(--cyan); text-decoration: none; font-weight: 600; }
+    .ok { color: var(--green); font-weight: 600; }
+    .warn { border-left: 3px solid var(--gold); padding-left: 1rem; color: var(--muted); font-size: 0.9rem; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Token Page permanente</h1>
+    <p class="sub">Per <strong>Crypto Italia Facile</strong> — token che <span class="ok">non scade</span>.</p>
+
+    <div class="card">
+      <h2>Metodo 1 — Access Token Tool (consigliato, 2 minuti)</h2>
+      <ol>
+        <li>Apri <a href="https://developers.facebook.com/tools/accesstoken/" target="_blank" rel="noopener">Access Token Tool</a> (loggato come admin app).</li>
+        <li>Trova l'app <strong>CryptoFacile Poster</strong> e il token <strong>User</strong>.</li>
+        <li>Clicca <strong>Extend Access Token</strong> sul token User.</li>
+        <li>Nella sezione <strong>Page Access Tokens</strong> copia il token di <strong>Crypto Italia Facile</strong>.</li>
+        <li>Verifica che la scadenza sia <span class="ok">Never</span> / mai.</li>
+        <li>Esegui:
+          <pre>python scripts\aggiorna-token-facebook.py INCOLLA_TOKEN_PAGINA</pre>
+        </li>
+      </ol>
+      <p class="warn">Usa il token della <strong>Pagina</strong>, non quello User.</p>
+      <a class="btn" href="https://developers.facebook.com/tools/accesstoken/" target="_blank" rel="noopener">Apri Access Token Tool</a>
+    </div>
+
+    <div class="card">
+      <h2>Metodo 2 — Script automatico (serve App Secret)</h2>
+      <ol>
+        <li>App Secret: <a href="https://developers.facebook.com/apps/1058281383830078/settings/basic/" target="_blank" rel="noopener">Impostazioni app → Basic</a></li>
+        <li>Token USER dal <a href="https://developers.facebook.com/tools/explorer/1058281383830078/" target="_blank" rel="noopener">Graph API Explorer</a></li>
+        <li>Aggiungi in <code>scripts/.env</code>: <code>FACEBOOK_APP_SECRET=...</code></li>
+        <li>Esegui:
+          <pre>python scripts\token-permanente.py EAA...</pre>
+        </li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Verifica</h2>
+      <pre>python scripts\verify-facebook-token.py</pre>
+      <p>Deve comparire: <span class="ok">Scade: (token pagina — di solito non scade)</span></p>
+    </div>
+
+    <p>
+      <a href="facebook-auto-setup.html" class="btn">Setup Facebook</a>
+      <a href="instagram-auto-setup.html" class="btn" style="margin-left:0.5rem;">Setup Instagram</a>
+    </p>
+  </div>
+</body>
+</html>

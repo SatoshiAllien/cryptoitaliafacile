@@ -158,6 +158,14 @@ const SITE_CONFIG = {
       desc: 'Tips visivi, caroselli educativi e storie sulla sicurezza crypto.'
     },
     {
+      id: 'linkedin',
+      name: 'LinkedIn',
+      handle: 'Stefano Davide Ciancimino',
+      url: 'https://www.linkedin.com/in/55555555-b5947439',
+      color: '#0A66C2',
+      desc: 'Profilo professionale: esperienza PayPal, ricerca blockchain e contenuti educativi crypto.'
+    },
+    {
       id: 'tiktok',
       name: 'TikTok',
       handle: '@cryptofacile',

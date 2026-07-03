@@ -2,7 +2,7 @@ const ARTICLE_CONTENT_EN = {
   'iniziare-exchange-revolut-kraken': {
     intro: 'Want to buy your first crypto but don\'t know where to start? In this guide I explain what an exchange is, why Revolut makes life easier, how to choose a reliable platform, and how to make your first purchase on Kraken — step by step, without hype.',
     sections: [
-      { id: 'cos-e-exchange', title: 'What is a crypto exchange', content: `
+      { id: 'cos-e-exchange', title: 'What Is a Crypto Exchange?', content: `
         <p>A <strong>crypto exchange</strong> is a platform where you can buy, sell, and trade cryptocurrencies using euros or other traditional currencies.</p>
         <h3>CEX vs DEX</h3>
         <ul>
@@ -126,7 +126,7 @@ const ARTICLE_CONTENT_EN = {
         </ul>
       `},
       { id: 'conclusione', title: 'Conclusion', content: `
-        <p>Recapping the path to get started:</p>
+        <p>Here\'s a recap of the path to get started:</p>
         <ol>
           <li><strong>Open Revolut</strong> — for fast SEPA transfers to exchanges</li>
           <li><strong>Sign up on Kraken</strong> — a regulated exchange suitable for beginners</li>
@@ -152,11 +152,10 @@ const ARTICLE_CONTENT_EN = {
       { q: 'Can I use only Revolut for crypto?', a: 'Revolut also offers built-in crypto buying, but fees and control differ from a dedicated exchange. To learn and have more choice, an exchange like Kraken is generally preferable.' }
     ]
   },
-
   'lightning-network-guida': {
     intro: 'Bitcoin is great, but paying €1 in fees for a €2 coffee on-chain doesn\'t make sense. That\'s where the Lightning Network comes in: instant payments in satoshis (sats), with near-zero costs. In this guide I explain everything simply — including Lightning wallets and how to use Satoshi Wallet with its merchant map.',
     sections: [
-      { id: 'cos-e-lightning', title: 'What is the Lightning Network', content: `
+      { id: 'cos-e-lightning', title: 'What Is the Lightning Network?', content: `
         <p>The <strong>Lightning Network</strong> (LN) is a payment network built <em>on top of</em> Bitcoin. It doesn\'t replace Bitcoin: it uses it as a security base, but allows you to move small amounts extremely fast.</p>
         <p><strong>Why does it exist?</strong> The Bitcoin blockchain can process a limited number of transactions per second. Every on-chain transaction (on the main blockchain) requires confirmation from miners and pays a fee. For small, frequent payments — a coffee, a tip, an online service — this is slow and expensive.</p>
         <h3>Bitcoin on-chain vs Lightning</h3>
@@ -172,7 +171,7 @@ const ARTICLE_CONTENT_EN = {
         </ul>
         <div class="box box--tip"><span class="box-title">In simple terms</span>If Bitcoin on-chain is like a bank transfer, Lightning is like paying with your phone at a bar: immediate and practical.</div>
       `},
-      { id: 'cosa-sono-sats', title: 'What are SATS', content: `
+      { id: 'cosa-sono-sats', title: 'What Are Satoshis (Sats)?', content: `
         <p>A <strong>satoshi</strong> (abbreviated <strong>sat</strong> or <strong>sats</strong>) is the smallest unit of Bitcoin.</p>
         <ul>
           <li><strong>1 BTC = 100,000,000 satoshi</strong> (one hundred million)</li>
@@ -282,7 +281,6 @@ const ARTICLE_CONTENT_EN = {
       { q: 'Can I pay with Lightning in Italy?', a: 'Yes, but adoption is still growing. The map helps you find places that accept Lightning. Major cities have more options than small towns.' }
     ]
   },
-
   'comprare-bitcoin-prima-volta': {
     intro: 'Want to buy Bitcoin but don\'t know where to start? In this guide I explain everything step by step: from choosing an exchange to securing your first purchase. No hype, just practical instructions.',
     sections: [
@@ -300,7 +298,7 @@ const ARTICLE_CONTENT_EN = {
         <ul>
           <li><strong>Kraken</strong> — regulated, good reputation, competitive fees</li>
           <li><strong>Coinbase</strong> — very intuitive for beginners</li>
-          <li><strong>Young Platform</strong> — Italian exchange with Italian-language support</li>
+          <li><strong>Young Platform</strong> — Italy-based exchange with local-language support</li>
         </ul>
         <div class="box box--warning"><span class="box-title">Warning</span>Always verify the URL is correct before entering your credentials. Phishing is the most common scam method.</div>
       `},
@@ -343,7 +341,6 @@ const ARTICLE_CONTENT_EN = {
       { q: 'Is it legal to buy Bitcoin in Italy?', a: 'Yes, it\'s perfectly legal. However, you must declare ownership on your tax return if you exceed certain thresholds.' }
     ]
   },
-
   'creare-wallet-sicuro': {
     intro: 'A wallet is where you store your crypto. Creating a secure one takes less than 10 minutes, but mistakes at this stage can cost you everything. Follow this guide carefully.',
     sections: [
@@ -388,11 +385,190 @@ const ARTICLE_CONTENT_EN = {
       `}
     ],
     faq: [
-      { q: 'What happens if I lose my seed phrase?', a: 'You permanently lose access to your crypto. No one can recover them for you. The seed phrase IS your wallet.' },
+      { q: 'What happens if I lose my seed phrase?', a: 'You permanently lose access to your funds. No one can recover them for you. The seed phrase is your wallet.' },
       { q: 'Can I use the same wallet on multiple devices?', a: 'Yes, by importing the same seed phrase. But each additional device is an extra risk.' }
     ]
   },
-
+  'trasferire-crypto-exchange': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to transfer crypto from an exchange to a personal wallet</strong>. Safe withdrawal: network, address, fees and transaction verification.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Safe withdrawal: network, address, fees and transaction verification.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Safe withdrawal: network, address, fees and transaction verification.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'staking-ethereum': {
+    intro: 'If you already understand wallets and exchanges, this step-by-step guide covers <strong>How to stake Ethereum: step-by-step guide</strong>. Direct staking, liquid staking and what to expect in terms of returns.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Direct staking, liquid staking and what to expect in terms of returns.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Direct staking, liquid staking and what to expect in terms of returns.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction. Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction. Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction. Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction. Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'usare-metamask': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to use MetaMask: installation and first transaction</strong>. Install MetaMask, configure the network and send your first transaction.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Install MetaMask, configure the network and send your first transaction.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Install MetaMask, configure the network and send your first transaction.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'leggere-indirizzo-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to read a wallet address and verify a transaction</strong>. Understanding addresses, transaction hashes and block explorers.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Understanding addresses, transaction hashes and block explorers.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Understanding addresses, transaction hashes and block explorers.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'dichiarare-crypto-italia': {
+    intro: 'If you already understand wallets and exchanges, this step-by-step guide covers <strong>How to declare crypto in Italy (practical overview)</strong>. RW form, RT section and tax obligations explained simply.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>RW form, RT section and tax obligations explained simply.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>RW form, RT section and tax obligations explained simply.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 14 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'scegliere-exchange-sicuro': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to choose a safe exchange: 7-point checklist</strong>. Regulation, reputation, fees and security: what to check.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Regulation, reputation, fees and security: what to check.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Regulation, reputation, fees and security: what to check.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
   'proteggere-seed-phrase': {
     intro: 'The seed phrase is the key to your entire crypto portfolio. Whoever has it, has your crypto. Here\'s how to protect it properly.',
     sections: [
@@ -430,51 +606,1093 @@ const ARTICLE_CONTENT_EN = {
       { q: 'Can I change my seed phrase?', a: 'No. It\'s generated once when the wallet is created. To get a new seed, you must create a new wallet and transfer your funds.' }
     ]
   },
-
-  'cardano-spiegato': {
-    intro: 'Cardano is a blockchain built on peer-reviewed academic research. Its native cryptocurrency is called ADA. Here\'s everything you need to know, explained without jargon.',
+  'prima-swap-uniswap': {
+    intro: 'If you already understand wallets and exchanges, this step-by-step guide covers <strong>How a DEX works: your first swap on Uniswap</strong>. Decentralized exchange, liquidity and your first DeFi operation.',
     sections: [
-      { id: 'cosa-e', title: 'What is Cardano', content: `
-        <p>Cardano is a blockchain platform created by Charles Hoskinson (co-founder of Ethereum). It stands out for:</p>
-        <ul>
-          <li>An approach based on <strong>scientific research</strong></li>
-          <li><strong>Proof-of-Stake</strong> mechanism (Ouroboros)</li>
-          <li>Focus on sustainability, scalability, and interoperability</li>
-        </ul>
+      { id: 'overview', title: 'Overview', content: `
+<p>Decentralized exchange, liquidity and your first DeFi operation.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
       `},
-      { id: 'ada', title: 'What is ADA', content: `
-        <p>ADA is Cardano\'s native cryptocurrency. It\'s used for:</p>
-        <ul>
-          <li>Paying transaction fees</li>
-          <li>Participating in <strong>staking</strong> (delegating to pools)</li>
-          <li>Governance (voting on proposals with Project Catalyst)</li>
-        </ul>
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Decentralized exchange, liquidity and your first DeFi operation.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
       `},
-      { id: 'staking', title: 'Staking on Cardano', content: `
-        <p>Unlike Ethereum, staking on Cardano <strong>doesn\'t lock your ADA</strong>. You can delegate to a staking pool and:</p>
-        <ul>
-          <li>Receive rewards (~3-5% annually)</li>
-          <li>Spend or transfer your ADA at any time</li>
-          <li>Change pools whenever you want</li>
-        </ul>
-        <div class="box box--tip"><span class="box-title">Tip</span>Read the full guide: <a href="articolo.html?slug=staking-ada">Staking ADA step by step</a>.</div>
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
       `},
-      { id: 'ecosistema', title: 'The Cardano ecosystem', content: `
-        <p>Beyond ADA, on Cardano you\'ll find:</p>
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 13 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'hardware-wallet-ledger': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to set up a Ledger hardware wallet from scratch</strong>. Setup, seed backup and first transaction with Ledger.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Setup, seed backup and first transaction with Ledger.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Setup, seed backup and first transaction with Ledger.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'capire-gas-fee': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to understand network fees (gas) and when to operate</strong>. Gas on Ethereum and other networks: how to save on fees.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Gas on Ethereum and other networks: how to save on fees.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Gas on Ethereum and other networks: how to save on fees.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'dca-crypto': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to do DCA (Dollar Cost Averaging) with crypto</strong>. Invest in installments without trying to time the market.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Invest in installments without trying to time the market.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Invest in installments without trying to time the market.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'verificare-smart-contract': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this step-by-step guide covers <strong>How to verify a smart contract before investing</strong>. Tools and red flags to avoid DeFi scams.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Tools and red flags to avoid DeFi scams.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Tools and red flags to avoid DeFi scams.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-5-document-for-compliance', title: 'Step 5: Document for compliance', content: `
+<p>Log dates, amounts, and platforms used. You will need this for tax reporting and audit trails.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 15 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'usare-etherscan': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to use a block explorer (Etherscan explained simply)</strong>. Read transactions, contracts and wallets on Etherscan.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Read transactions, contracts and wallets on Etherscan.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Read transactions, contracts and wallets on Etherscan.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'cold-wallet-chiavi-offline': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this step-by-step guide covers <strong>How to create a cold wallet with offline keys</strong>. Generate and store private keys without an internet connection.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Generate and store private keys without an internet connection.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Generate and store private keys without an internet connection.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 14 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'yield-farming-sicurezza': {
+    intro: 'If you already understand wallets and exchanges, this step-by-step guide covers <strong>How to do yield farming safely (first steps)</strong>. Provide liquidity without unnecessary risks: a cautious guide.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Provide liquidity without unnecessary risks: a cautious guide.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Provide liquidity without unnecessary risks: a cautious guide.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'convertire-crypto-euro': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to convert crypto to euros and withdraw</strong>. Selling on an exchange, bank transfer and timelines.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Selling on an exchange, bank transfer and timelines.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Selling on an exchange, bank transfer and timelines.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'alert-prezzo-portafoglio': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this step-by-step guide covers <strong>How to set price alerts and monitor your portfolio</strong>. Apps and tools to keep track of your assets.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Apps and tools to keep track of your assets.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Apps and tools to keep track of your assets.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 6 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'recuperare-crypto-sbagliato': {
+    intro: 'If you already understand wallets and exchanges, this step-by-step guide covers <strong>How to recover crypto sent to the wrong address</strong>. What can and cannot be recovered: a realistic guide.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>What can and cannot be recovered: a realistic guide.</p><p>In this step-by-step guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>What can and cannot be recovered: a realistic guide.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this step-by-step guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-mai-seed-phrase': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Never share your seed phrase — not even with "support"</strong>. No legitimate service will ever ask for your 12 or 24 recovery words.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>No legitimate service will ever ask for your 12 or 24 recovery words.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Never share your seed phrase — not even with "support"</strong> — No legitimate service will ever ask for your 12 or 24 recovery words.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-2fa-exchange': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Always enable 2FA on your exchange (not via SMS)</strong>. Two-factor authentication with a dedicated app, never SMS.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Two-factor authentication with a dedicated app, never SMS.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Always enable 2FA on your exchange (not via SMS)</strong> — Two-factor authentication with a dedicated app, never SMS.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages. Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-verifica-url': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Verify the exchange URL: phishing starts there</strong>. Always check the address bar before entering credentials.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Always check the address bar before entering credentials.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Verify the exchange URL: phishing starts there</strong> — Always check the address bar before entering credentials.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-non-tenere-exchange': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Don\'t keep all your crypto on an exchange</strong>. Exchanges are for buying/selling, not long-term storage.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Exchanges are for buying/selling, not long-term storage.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Don't keep all your crypto on an exchange</strong> — Exchanges are for buying/selling, not long-term storage.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances. Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-inizia-poco': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Start with a small amount: learn before investing big</strong>. Better to make mistakes with €20 than with €2,000.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Better to make mistakes with €20 than with €2,000.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Start with a small amount: learn before investing big</strong> — Better to make mistakes with €20 than with €2,000.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Start with a small amount to learn the process. The goal of your first operation is understanding the workflow, not maximizing returns.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-controlla-rete': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Check the network before sending (ERC-20 ≠ BEP-20)</strong>. Sending on the wrong network can be costly.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Sending on the wrong network can be costly.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Check the network before sending (ERC-20 ≠ BEP-20)</strong> — Sending on the wrong network can be costly.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Move slowly, verify every address and network, and keep records for tax reporting.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-rubrica-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Save frequent addresses in your wallet address book</strong>. Avoid typos on addresses you use often.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Avoid typos on addresses you use often.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Save frequent addresses in your wallet address book</strong> — Avoid typos on addresses you use often.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-no-screenshot-seed': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Screenshot your seed? You\'ve already lost</strong>. Photos in the cloud are an easy target for hackers.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Photos in the cloud are an easy target for hackers.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Screenshot your seed? You've already lost</strong> — Photos in the cloud are an easy target for hackers.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Move slowly, verify every address and network, and keep records for tax reporting.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-diffida-telegram': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Beware of "guaranteed returns" on Telegram</strong>. If they promise fixed returns, it\'s almost certainly a scam.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>If they promise fixed returns, it's almost certainly a scam.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Beware of "guaranteed returns" on Telegram</strong> — If they promise fixed returns, it's almost certainly a scam.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Move slowly, verify every address and network, and keep records for tax reporting.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-aggiorna-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Always update wallets and apps</strong>. Updates fix security vulnerabilities.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Updates fix security vulnerabilities.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Always update wallets and apps</strong> — Updates fix security vulnerabilities.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-email-dedicata': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Use a dedicated email for crypto only</strong>. Separate crypto communications from the rest of your digital life.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Separate crypto communications from the rest of your digital life.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Use a dedicated email for crypto only</strong> — Separate crypto communications from the rest of your digital life.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-leggi-transazione': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Before signing a transaction, read what you\'re approving</strong>. Every "Confirm" click can authorize a withdrawal.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Every "Confirm" click can authorize a withdrawal.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Before signing a transaction, read what you're approving</strong> — Every "Confirm" click can authorize a withdrawal.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-diversifica': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Diversify: don\'t put everything on one crypto</strong>. A balanced portfolio reduces concentrated risk.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>A balanced portfolio reduces concentrated risk.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Diversify: don't put everything on one crypto</strong> — A balanced portfolio reduces concentrated risk.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Move slowly, verify every address and network, and keep records for tax reporting.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-traccia-operazioni': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Track every operation for tax reporting</strong>. A spreadsheet or tracking app will save you at year-end.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>A spreadsheet or tracking app will save you at year-end.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Track every operation for tax reporting</strong> — A spreadsheet or tracking app will save you at year-end.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Move slowly, verify every address and network, and keep records for tax reporting.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-spread-fee': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>The price you see isn\'t what you pay (spread + fees)</strong>. Always calculate the total cost of the operation.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Always calculate the total cost of the operation.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>The price you see isn't what you pay (spread + fees)</strong> — Always calculate the total cost of the operation.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-staking-unlock': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Staking: understand the unlock period before locking funds</strong>. Some staking locks funds for days or weeks.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Some staking locks funds for days or weeks.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Staking: understand the unlock period before locking funds</strong> — Some staking locks funds for days or weeks.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-test-transazione': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>New wallet? Test with a few cents first</strong>. Verify everything works before sending large amounts.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Verify everything works before sending large amounts.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>New wallet? Test with a few cents first</strong> — Verify everything works before sending large amounts.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-no-link-email': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Don\'t click crypto links from suspicious emails</strong>. Always go directly to the site by typing the URL.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Always go directly to the site by typing the URL.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Don't click crypto links from suspicious emails</strong> — Always go directly to the site by typing the URL.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-pin-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>Set a strong PIN on your mobile wallet</strong>. Protect wallet access on your smartphone.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Protect wallet access on your smartphone.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>Set a strong PIN on your mobile wallet</strong> — Protect wallet access on your smartphone.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Security in crypto is cumulative: strong passwords, hardware wallets for large holdings, and skepticism toward unsolicited messages.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'tip-non-capisci-non-investi': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Crypto Tip covers <strong>If you don\'t understand the project, don\'t invest</strong>. The simplest and most effective rule to avoid scams.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>The simplest and most effective rule to avoid scams.</p><p>Apply this advice before your next crypto operation — it takes minutes and can prevent irreversible losses.</p>
+      `},
+      { id: 'the-rule', title: 'The rule', content: `
+<p><strong>If you don't understand the project, don't invest</strong> — The simplest and most effective rule to avoid scams.</p><p>This is one of the simplest, highest-impact habits in cryptocurrency security and operations.</p>
+      `},
+      { id: 'how-to-apply-it-today', title: 'How to apply it today', content: `
+<ul><li>Review your current setup against this rule before your next transaction</li><li>Adjust wallet, exchange, or browser settings if needed</li><li>Share the practice with anyone who has access to shared devices or accounts</li></ul>
+      `},
+      { id: 'mistakes-to-avoid', title: 'Mistakes to avoid', content: `
+<p>Most losses in crypto come from ignored basics, not sophisticated hacks. Move slowly, verify every address and network, and keep records for tax reporting.</p><div class="box box--warning"><span class="box-title">Warning</span>This content is educational only and does not constitute financial advice.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Crypto Tip take?', a: 'Most readers complete it in about 2 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-mica': {
+    subtitle: 'The European regulation reshaping exchanges, stablecoins, and investor rights — explained without legal jargon.',
+    intro: '<strong>MiCA</strong> (Markets in Crypto-Assets) is the European Union\'s first comprehensive regulatory framework for cryptocurrencies. It took effect in late 2024, and by <strong>2026</strong> the practical impact is clear: licensed exchanges, stablecoins under oversight, stronger investor protections, and a Europe positioning itself to compete with the US and Asia. Here\'s what you need to know — in plain language.',
+    sections: [
+      { id: 'trasparenza-exchange', title: 'Mandatory Transparency for Exchanges', content: `
+        <p>Under MiCA, operating in Europe is no longer a matter of "launch a website and start trading." <strong>Crypto-Asset Service Providers</strong> (CASPs) — exchanges, custody platforms, crypto brokers — must obtain <strong>authorization</strong> from a national competent authority (in Italy, typically the Bank of Italy or Consob, depending on the service).</p>
+        <p>What this means for you in practice:</p>
         <ul>
-          <li><strong>Native tokens</strong> — assets created directly on the blockchain</li>
-          <li><strong>DeFi</strong> — Minswap, SundaeSwap, and other DEXs</li>
-          <li><strong>NFTs</strong> — dedicated marketplaces</li>
-          <li><strong>Project Catalyst</strong> — community funding system</li>
+          <li><strong>Mandatory white paper</strong> for public offerings of tokens not already regulated</li>
+          <li><strong>Clear disclosure</strong> of risks, fees, and conflicts of interest</li>
+          <li><strong>Segregation of client funds</strong> from the operator\'s own assets</li>
+          <li><strong>Transaction traceability</strong> and strengthened anti-money laundering procedures</li>
         </ul>
+        <p>Non-compliant exchanges must exit the EU market or adapt. In 2026, the list of authorized operators becomes the first filter to check before depositing euros or cryptocurrency.</p>
+        <div class="box box--tip"><span class="box-title">How to verify</span>Always check whether a platform declares a MiCA license or VASP registration in your country. Be wary of operators that do not clearly state their regulator and authorization number.</div>
+      `},
+      { id: 'protezione-investitori', title: 'Investor Protection', content: `
+        <p>MiCA introduces rules that bring crypto closer to traditional finance standards — without eliminating market risk, but reducing exposure to <strong>opacity and bad faith</strong>.</p>
+        <p>The main pillars:</p>
+        <ul>
+          <li><strong>Asset classification</strong> — e-money tokens, asset-referenced tokens, and other crypto-assets: each category carries different obligations</li>
+          <li><strong>Market manipulation and insider trading bans</strong>, with significant penalties</li>
+          <li><strong>Marketing communications</strong> — must be clear, not misleading, and identifiable as advertising</li>
+          <li><strong>Complaints and dispute resolution</strong> — mandatory procedures for authorized providers</li>
+        </ul>
+        <p>For retail investors, the advantage is greater <strong>predictability</strong>: you know whom to contact if something goes wrong and what minimum rights to expect. The risk of losing capital to volatility remains — MiCA is not a price guarantee.</p>
+        <div class="box box--warning"><span class="box-title">Important</span>MiCA protects you from non-compliant operators and unfair practices, not from Bitcoin or altcoin price swings. Only invest amounts you can afford to lose.</div>
+      `},
+      { id: 'stablecoin-regole', title: 'Stablecoins and the New Rules', content: `
+        <p>Stablecoins sit at the center of MiCA. The regulation distinguishes primarily between:</p>
+        <ul>
+          <li><strong>E-Money Tokens (EMT)</strong> — pegged to a fiat currency (e.g. the euro). Issuers must be authorized as electronic money institutions or banks</li>
+          <li><strong>Asset-Referenced Tokens (ART)</strong> — pegged to a basket of assets (currencies, commodities, crypto). Stricter capital and governance requirements apply</li>
+        </ul>
+        <p>The most visible trends in 2026:</p>
+        <ul>
+          <li>Non-compliant stablecoins <strong>restricted or withdrawn</strong> from the European market</li>
+          <li>More room for <strong>regulated euro stablecoins</strong> (fiat-backed with verifiable reserves)</li>
+          <li>Greater transparency on <strong>reserves, audits, and redemption</strong> — the peg is no longer just a promise on a website</li>
+        </ul>
+        <p>If you use stablecoins for trading, DeFi, or simply to park value, verify whether the issuer is authorized in the EU. A stablecoin without MiCA compliance may become difficult to use on European exchanges.</p>
+      `},
+      { id: 'competitivita-europea', title: 'European Competitiveness', content: `
+        <p>Europe has chosen the path of <strong>explicit regulation</strong> while other countries — such as the United States — pursue more fragmented or post-hoc enforcement approaches. 2026 is the test case.</p>
+        <p><strong>Strengths</strong> for the EU ecosystem:</p>
+        <ul>
+          <li><strong>European passport</strong> — one MiCA authorization valid across all member states (with notifications)</li>
+          <li><strong>Regulatory certainty</strong> — attracts institutions that avoid gray zones</li>
+          <li><strong>Integration with PSD2/AML</strong> — a framework aligned with banks and fintech</li>
+        </ul>
+        <p><strong>Risks</strong> to watch:</p>
+        <ul>
+          <li>High compliance costs for startups — possible consolidation around a few large players</li>
+          <li>Volume shifting to unregulated offshore markets</li>
+          <li>Slower DeFi innovation pace compared to less regulated markets</li>
+        </ul>
+        <p>Competition is not only legal but technological: layer 2, CBDCs, and real-world asset (RWA) tokenization. MiCA is the foundation, not the finish line.</p>
+      `},
+      { id: 'adozione-istituzionale', title: 'Institutional Adoption', content: `
+        <p>2026 marks a turning point: banks, asset managers, and large corporations can no longer ignore MiCA if they want to operate with crypto in Europe.</p>
+        <p>Trends underway:</p>
+        <ul>
+          <li><strong>ETFs and listed products</strong> — already governed by traditional financial regulation, now in clearer dialogue with MiCA for ancillary services</li>
+          <li><strong>Institutional custody</strong> — banks offering crypto custody under MiCA standards</li>
+          <li><strong>Tokenization</strong> — bonds, funds, and securities on blockchain with a defined legal framework</li>
+          <li><strong>CBDCs and stablecoins</strong> — the digital euro (in pilot phase) coexists with regulated private stablecoins</li>
+        </ul>
+        <p>For retail users, the most tangible effect is <strong>normalization</strong>: crypto increasingly integrated into banking apps, investment platforms, and pension services — with KYC, tax reporting, and consumer protection aligned with the rest of finance.</p>
+        <div class="box box--tip"><span class="box-title">Perspective</span>Understanding MiCA today means understanding where the European market is headed over the next 3–5 years. You don\'t need a law degree — just know who is authorized, which assets are compliant, and which risks remain yours.</div>
+      `},
+      { id: 'conclusione', title: 'Conclusion: Summary and Future Outlook', content: `
+        <p><strong>MiCA in 2026</strong> is not a technical detail for lawyers — it is the new playing field for Europe\'s crypto market. In summary:</p>
+        <ul>
+          <li>Exchanges and platforms must be <strong>authorized and transparent</strong></li>
+          <li>Investors have <strong>stronger protections</strong> against bad operators</li>
+          <li>Stablecoins enter a <strong>strict, verifiable</strong> regime</li>
+          <li>Europe bets on <strong>clear rules</strong> to compete globally</li>
+          <li>Institutional adoption accelerates across <strong>custody, ETFs, and tokenization</strong></li>
+        </ul>
+        <p>In the coming years we will likely see <strong>sector consolidation</strong> (fewer operators, more solid ones), deeper <strong>bank-crypto integration</strong>, and new challenges around DeFi and privacy — areas still partially outside MiCA\'s scope.</p>
+        <p>Your smart move: use only compliant platforms, diversify, document transactions for tax purposes, and stay informed. The regulation protects those who operate consciously — not those who leave everything to chance.</p>
       `}
     ],
     faq: [
-      { q: 'Is Cardano better than Ethereum?', a: 'It depends on your needs. Cardano has lower fees and simpler staking. Ethereum has a more mature DeFi ecosystem. There\'s no absolute "better".' },
-      { q: 'How much does a transaction on Cardano cost?', a: 'Typically less than 0.20 ADA (a few cents in euros). Much cheaper than Ethereum.' }
+      { q: 'Does MiCA apply in Italy too?', a: 'Yes. MiCA is an EU regulation directly applicable in all member states, including Italy. National authorities oversee implementation.' },
+      { q: 'Do I need to declare crypto differently under MiCA?', a: 'MiCA regulates operators and markets — it does not replace tax obligations. In Italy, cryptocurrency must still be declared under current tax rules (RW form, RT section, capital gains).' },
+      { q: 'Is Bitcoin regulated by MiCA?', a: 'Bitcoin, as a decentralized asset without an issuer, does not fall under the category of publicly offered tokens. Services on Bitcoin (exchanges, custody) do — they must comply with MiCA.' },
+      { q: 'Can I still use non-European exchanges?', a: 'It depends on licenses, geographic restrictions, and compliance. An exchange without EU authorization may be inaccessible or riskier for European residents.' }
     ]
   },
-
+  'trend-etf-bitcoin': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this crypto trend analysis covers <strong>Bitcoin Spot ETF: what they are and why they matter</strong>. Listed funds tracking Bitcoin: impact and what it means for you.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Listed funds tracking Bitcoin: impact and what it means for you.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Listed funds tracking Bitcoin: impact and what it means for you.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-layer2': {
+    intro: 'If you already understand wallets and exchanges, this crypto trend analysis covers <strong>Layer 2: why Ethereum needs "secondary roads"</strong>. Scalability solutions to reduce fees and confirmation times.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Scalability solutions to reduce fees and confirmation times.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Scalability solutions to reduce fees and confirmation times.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-rwa': {
+    intro: 'If you already understand wallets and exchanges, this crypto trend analysis covers <strong>Real World Assets (RWA): crypto representing real assets</strong>. Tokenization of real estate, bonds and commodities.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Tokenization of real estate, bonds and commodities.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Tokenization of real estate, bonds and commodities.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-stablecoin': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this crypto trend analysis covers <strong>Stablecoins: how they work and what risks they hide</strong>. USDT, USDC and DAI: apparent stability, real risks.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>USDT, USDC and DAI: apparent stability, real risks.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>USDT, USDC and DAI: apparent stability, real risks.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-cbdc': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this crypto trend analysis covers <strong>CBDC: central bank digital currencies explained</strong>. Digital euro and sovereign currencies: differences from decentralized crypto.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Digital euro and sovereign currencies: differences from decentralized crypto.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Digital euro and sovereign currencies: differences from decentralized crypto.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-depin': {
+    intro: 'If you already understand wallets and exchanges, this crypto trend analysis covers <strong>DePIN: decentralized physical infrastructure</strong>. Decentralized networks for storage, WiFi, energy and more.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Decentralized networks for storage, WiFi, energy and more.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Decentralized networks for storage, WiFi, energy and more.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-ai-blockchain': {
+    intro: 'If you already understand wallets and exchanges, this crypto trend analysis covers <strong>AI + Blockchain: trend or real utility?</strong>. Where artificial intelligence meets blockchain.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Where artificial intelligence meets blockchain.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Where artificial intelligence meets blockchain.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-halving': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this crypto trend analysis covers <strong>The Bitcoin halving: what it is and why everyone talks about it</strong>. Reduction of miner rewards: effects on the market.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Reduction of miner rewards: effects on the market.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Reduction of miner rewards: effects on the market.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'trend-modular-blockchain': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this crypto trend analysis covers <strong>Modular Blockchain: the new architecture of crypto networks</strong>. Separating consensus, execution and data availability.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Separating consensus, execution and data availability.</p><p>In this crypto trend analysis, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'why-this-trend-matters-in-2026', title: 'Why this trend matters in 2026', content: `
+<p>Separating consensus, execution and data availability.</p><p>Macro trends shape regulation, liquidity, institutional adoption, and which infrastructure layers gain traction over the next cycle.</p>
+      `},
+      { id: 'key-developments-to-understand', title: 'Key developments to understand', content: `
+<ul><li><strong>Regulation</strong> — MiCA in Europe, evolving US enforcement, and global licensing standards</li><li><strong>Infrastructure</strong> — layer-2 scaling, real-world asset tokenization, and institutional custody</li><li><strong>Market structure</strong> — ETFs, stablecoin policy, and exchange consolidation</li></ul>
+      `},
+      { id: 'what-it-means-for-retail-investors', title: 'What it means for retail investors', content: `
+<p>You do not need to chase every narrative. Focus on authorized platforms, transparent disclosures, and assets you understand. Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'outlook', title: 'Outlook', content: `
+<p>Crypto markets remain volatile and fast-moving. Use trends to inform your education and risk management — not as buy signals.</p><div class="box box--tip"><span class="box-title">Stay informed</span>Subscribe to The Little Satoshi News newsletter for weekly security tips and new guides.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this crypto trend analysis take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
   'blockchain-5-minuti': {
     intro: 'You hear about blockchain everywhere but still don\'t get what it is? In 5 minutes I\'ll explain the core concept — no formulas, no hype.',
     sections: [
@@ -503,7 +1721,580 @@ const ARTICLE_CONTENT_EN = {
       { q: 'Are blockchain and Bitcoin the same thing?', a: 'No. Bitcoin is a cryptocurrency that uses blockchain technology. Blockchain is the underlying technology, also used by Ethereum, Cardano, and many others.' }
     ]
   },
-
+  'creare-account-exchange': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Create an account on Coinbase/Kraken (with screenshots)</strong>. Registration, KYC verification and first steps on the exchange.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Registration, KYC verification and first steps on the exchange.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Registration, KYC verification and first steps on the exchange.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'primi-20-euro-bitcoin': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Buy your first €20 of Bitcoin</strong>. Buy order, payment and confirmation step by step.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Buy order, payment and confirmation step by step.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Buy order, payment and confirmation step by step.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Bitcoin remains the most liquid and widely recognized cryptocurrency. On-chain fees vary with network congestion — check mempool conditions before sending.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Bitcoin remains the most liquid and widely recognized cryptocurrency. On-chain fees vary with network congestion — check mempool conditions before sending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Bitcoin remains the most liquid and widely recognized cryptocurrency. On-chain fees vary with network congestion — check mempool conditions before sending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 6 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'installare-trust-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Install and configure Trust Wallet</strong>. Download, setup and first crypto receipt.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Download, setup and first crypto receipt.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Download, setup and first crypto receipt.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'prima-transazione-crypto': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Send and receive your first crypto</strong>. From copying the address to on-chain confirmation.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>From copying the address to on-chain confirmation.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>From copying the address to on-chain confirmation.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 6 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'leggere-grafico-candele': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Read a price chart (basic candlesticks)</strong>. Candlesticks, timeframes and volume for beginners.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Candlesticks, timeframes and volume for beginners.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Candlesticks, timeframes and volume for beginners.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'market-cap-volume': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Understanding market cap, volume and supply</strong>. The basic metrics to evaluate a cryptocurrency.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>The basic metrics to evaluate a cryptocurrency.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>The basic metrics to evaluate a cryptocurrency.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'esplorare-block-explorer': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Explore your first transaction on a blockchain explorer</strong>. Find and read your transaction on the blockchain.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Find and read your transaction on the blockchain.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Find and read your transaction on the blockchain.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 6 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'notifiche-prezzo-app': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Set price notifications on mobile apps</strong>. Custom alerts with CoinGecko and similar apps.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Custom alerts with CoinGecko and similar apps.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Custom alerts with CoinGecko and similar apps.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 5 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'creare-watchlist': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this tutorial covers <strong>Create your first personalized watchlist</strong>. Monitor the crypto you\'re interested in.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Monitor the crypto you're interested in.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Monitor the crypto you're interested in.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 4 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'bridge-cross-chain': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Cross-chain bridge: transfer assets between Ethereum and Arbitrum</strong>. Bridges between blockchains: how they work and risks to consider.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Bridges between blockchains: how they work and risks to consider.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Bridges between blockchains: how they work and risks to consider.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 14 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'liquidita-uniswap-v3': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Provide liquidity on Uniswap V3 (with impermanent loss calculation)</strong>. Concentrated liquidity and impermanent loss risk.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Concentrated liquidity and impermanent loss risk.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Concentrated liquidity and impermanent loss risk.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-5-document-for-compliance', title: 'Step 5: Document for compliance', content: `
+<p>Log dates, amounts, and platforms used. You will need this for tax reporting and audit trails.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 16 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'usare-aave': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Use Aave for DeFi lending and deposits</strong>. Decentralized lending and borrowing on Aave.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Decentralized lending and borrowing on Aave.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Decentralized lending and borrowing on Aave.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 14 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'analisi-on-chain-dune': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>On-chain analysis with Dune Analytics</strong>. SQL queries and dashboards for blockchain analysis.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>SQL queries and dashboards for blockchain analysis.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>SQL queries and dashboards for blockchain analysis.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-5-document-for-compliance', title: 'Step 5: Document for compliance', content: `
+<p>Log dates, amounts, and platforms used. You will need this for tax reporting and audit trails.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 15 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'nodo-validator': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Configure a validator node (requirements overview)</strong>. Hardware, software and costs to validate a network.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Hardware, software and costs to validate a network.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Hardware, software and costs to validate a network.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-5-document-for-compliance', title: 'Step 5: Document for compliance', content: `
+<p>Log dates, amounts, and platforms used. You will need this for tax reporting and audit trails.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 18 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'leggere-solidity': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Smart contracts: read basic Solidity code</strong>. Functions, variables and common patterns for non-developers.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Functions, variables and common patterns for non-developers.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Functions, variables and common patterns for non-developers.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-5-document-for-compliance', title: 'Step 5: Document for compliance', content: `
+<p>Log dates, amounts, and platforms used. You will need this for tax reporting and audit trails.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 16 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'mev-protezione': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>MEV and protection in DeFi transactions</strong>. Maximal Extractable Value and how to defend against it.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Maximal Extractable Value and how to defend against it.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Maximal Extractable Value and how to defend against it.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'multisig-gnosis-safe': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Multisig wallet with Gnosis Safe</strong>. Multi-signature wallet for teams and DAOs.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Multi-signature wallet for teams and DAOs.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Multi-signature wallet for teams and DAOs.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 13 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'ottimizzazione-gas-batch': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Gas optimization with batch transactions</strong>. Group operations to save on fees.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Group operations to save on fees.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Group operations to save on fees.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Gas fees spike during network congestion. Use block explorers and gas trackers to time transactions when costs are lower. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 11 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'hedging-stablecoin': {
+    intro: 'For experienced users who want a precise, no-nonsense walkthrough, this tutorial covers <strong>Hedging strategies with stablecoins and DeFi derivatives</strong>. Protect your portfolio in volatile markets.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Protect your portfolio in volatile markets.</p><p>In this tutorial, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Protect your portfolio in volatile markets.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this tutorial take?', a: 'Most readers complete it in about 14 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
   'cardano-science-first': {
     subtitle: 'eUTxO, staking, governance, Hydra, Mithril, and a layered scalability roadmap — explained for readers in Italy, Egypt, and beyond.',
     intro: 'Blockchain technology has moved well beyond early experimentation. Today it underpins digital identity, financial infrastructure, and decentralized applications for governments, enterprises, and developers worldwide — including growing communities in <strong>Italy</strong>, <strong>Egypt</strong>, and across Europe and the Middle East. Among the major platforms in this space, <strong>Cardano</strong> stands out for one defining choice: it was engineered from the ground up as a peer-reviewed, research-driven <strong>blockchain</strong>, not as a rapid prototype refined under live traffic.',
@@ -572,12 +2363,12 @@ const ARTICLE_CONTENT_EN = {
       `},
       { id: 'scalability', title: 'The Scalability Roadmap', content: `
         <p><strong>Scalability</strong> is the defining challenge of modern <strong>blockchain</strong> design. Cardano addresses it through a multi-layered roadmap.</p>
-        <h3>Hydra: Layer-2 state channels</h3>
+        <h3>Hydra: layer-2 state channels</h3>
         <p><strong>Hydra</strong> enables off-chain state channels where participants execute transactions rapidly, settling final state on the main chain only when needed — like a restaurant tab settled once at the end of the meal.</p>
         <div class="box box--tip"><span class="box-title">Learn more</span><a href="articolo.html?slug=hydra-cardano">Hydra on Cardano: full guide</a></div>
         <h3>Mithril: Lightweight chain verification</h3>
         <p><strong>Mithril</strong> lets users verify blockchain state without downloading the entire history. Using cryptographic multi-signatures and stake-based thresholds, lightweight clients — mobile wallets, browsers — can trustlessly verify the chain with minimal data. Crucial for regions with limited bandwidth, including parts of North Africa and rural Europe.</p>
-        <h3>Leios and Input Endorsers: Layer-1 throughput</h3>
+        <h3>Leios and Input Endorsers: layer-1 throughput</h3>
         <p><strong>Leios</strong> and <strong>Input Endorsers</strong> target base-layer performance. Input Endorsers separate transaction endorsement from block production, pipelining validation and increasing capacity without compromising Ouroboros security assumptions.</p>
         <p>Together, these form a coherent strategy:</p>
         <ul>
@@ -600,9 +2391,9 @@ const ARTICLE_CONTENT_EN = {
       `},
       { id: 'explore-more', title: 'Going Deeper: Explore the Cardano Hub', content: `
         <p>Blockchain education remains fragmented. Newcomers benefit most from curated, sequential learning paths — from wallet setup and staking mechanics to smart contract concepts and ecosystem projects.</p>
-        <p>For a structured walkthrough of the full Cardano ecosystem, explore <a href="cardano/index.html">Steven's Cardano guide hub</a> on Crypto Italia Facile. It bridges the gap between high-level overviews like this article and the hands-on knowledge required to participate meaningfully in the ecosystem.</p>
+        <p>For a structured walkthrough of the full Cardano ecosystem, explore <a href="cardano/index.html">Steven\'s Cardano guide hub</a> on CryptoItaliaFacile. It bridges the gap between high-level overviews like this article and the hands-on knowledge required to participate meaningfully in the ecosystem.</p>
         <p>Whether you are a developer evaluating Plutus, a delegate choosing a stake pool, or curious about proof-of-stake governance in practice, a structured guide accelerates understanding far faster than scattered search results.</p>
-        <p><strong>Start here:</strong> <a href="https://satoshiallien.github.io/cryptoitaliafacile/cardano/index.html" target="_blank" rel="noopener noreferrer">Cardano ecosystem hub — Crypto Italia Facile</a></p>
+        <p><strong>Start here:</strong> <a href="https://satoshiallien.github.io/cryptoitaliafacile/cardano/index.html" target="_blank" rel="noopener noreferrer">Cardano ecosystem hub — CryptoItaliaFacile</a></p>
       `},
       { id: 'future', title: 'The Road Ahead: Cardano's Future in Web3', content: `
         <p>Cardano enters its next chapter with foundational elements in place: a live proof-of-stake network, functioning <strong>smart contracts</strong>, an active governance framework, and a pipeline of scaling technologies moving from research to implementation.</p>
@@ -618,6 +2409,623 @@ const ARTICLE_CONTENT_EN = {
       { q: 'What is the difference between UTxO and eUTxO?', a: 'UTxO is the basic transaction model where outputs are spent and new ones created. eUTxO extends this with datum and validator scripts, enabling smart contracts while keeping deterministic execution.' },
       { q: 'How does Cardano scale?', a: 'Through a layered approach: Input Endorsers and Leios improve layer-1 throughput, Hydra provides layer-2 state channels, and Mithril enables lightweight verification for mobile and low-bandwidth users.' },
       { q: 'Where can I learn more about Cardano step by step?', a: 'Visit the Cardano hub at satoshiallien.github.io/cryptoitaliafacile/cardano/ for structured guides on wallets, staking, DeFi, and more.' }
+    ]
+  },
+  'cardano-spiegato': {
+    intro: 'Cardano is a blockchain built on peer-reviewed academic research. Its native cryptocurrency is called ADA. Here\'s everything you need to know, explained without jargon.',
+    sections: [
+      { id: 'cosa-e', title: 'What is Cardano', content: `
+        <p>Cardano is a blockchain platform created by Charles Hoskinson (co-founder of Ethereum). It stands out for:</p>
+        <ul>
+          <li>An approach based on <strong>scientific research</strong></li>
+          <li><strong>Proof-of-Stake</strong> mechanism (Ouroboros)</li>
+          <li>Focus on sustainability, scalability, and interoperability</li>
+        </ul>
+      `},
+      { id: 'ada', title: 'What is ADA', content: `
+        <p>ADA is Cardano\'s native cryptocurrency. It\'s used for:</p>
+        <ul>
+          <li>Paying transaction fees</li>
+          <li>Participating in <strong>staking</strong> (delegating to pools)</li>
+          <li>Governance (voting on proposals with Project Catalyst)</li>
+        </ul>
+      `},
+      { id: 'staking', title: 'Staking on Cardano', content: `
+        <p>Unlike Ethereum, staking on Cardano <strong>doesn\'t lock your ADA</strong>. You can delegate to a staking pool and:</p>
+        <ul>
+          <li>Receive rewards (~3-5% annually)</li>
+          <li>Spend or transfer your ADA at any time</li>
+          <li>Change pools whenever you want</li>
+        </ul>
+        <div class="box box--tip"><span class="box-title">Tip</span>Read the full guide: <a href="articolo.html?slug=staking-ada">Staking ADA step by step</a>.</div>
+      `},
+      { id: 'ecosistema', title: 'The Cardano ecosystem', content: `
+        <p>Beyond ADA, on Cardano you\'ll find:</p>
+        <ul>
+          <li><strong>Native tokens</strong> — assets created directly on the blockchain</li>
+          <li><strong>DeFi</strong> — Minswap, SundaeSwap, and other DEXs</li>
+          <li><strong>NFTs</strong> — dedicated marketplaces</li>
+          <li><strong>Project Catalyst</strong> — community funding system</li>
+        </ul>
+      `}
+    ],
+    faq: [
+      { q: 'Is Cardano better than Ethereum?', a: 'It depends on your needs. Cardano has lower fees and simpler staking. Ethereum has a more mature DeFi ecosystem. There\'s no absolute "better".' },
+      { q: 'How much does a transaction on Cardano cost?', a: 'Typically less than 0.20 ADA (a few cents in euros). Much cheaper than Ethereum.' }
+    ]
+  },
+  'comprare-ada': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Cardano guide covers <strong>How to buy ADA on exchanges</strong>. Where and how to buy Cardano.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Where and how to buy Cardano.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Where and how to buy Cardano.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Always verify the platform is regulated, enable two-factor authentication, and double-check deposit and withdrawal networks before moving funds.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'staking-ada': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Cardano guide covers <strong>Staking ADA: complete guide (delegation vs pool)</strong>. Delegate ADA to a staking pool: returns and pool selection.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Delegate ADA to a staking pool: returns and pool selection.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Delegate ADA to a staking pool: returns and pool selection.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Staking rewards depend on network conditions and pool performance. Never share private keys — legitimate staking only requires delegation, not custody transfer.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'wallet-cardano-confronto': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Cardano guide covers <strong>Eternl, Nami, Yoroi: which Cardano wallet to choose</strong>. Comparison of the most used wallets in the Cardano ecosystem.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Comparison of the most used wallets in the Cardano ecosystem.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Comparison of the most used wallets in the Cardano ecosystem.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'project-catalyst': {
+    intro: 'If you already understand wallets and exchanges, this Cardano guide covers <strong>How to vote on Project Catalyst</strong>. Participate in ecosystem governance and funding.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Participate in ecosystem governance and funding.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Participate in ecosystem governance and funding.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'cardano-defi': {
+    intro: 'If you already understand wallets and exchanges, this Cardano guide covers <strong>Cardano DeFi: Minswap, SundaeSwap and liquidity pools</strong>. The main DEXs and DeFi protocols on Cardano.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>The main DEXs and DeFi protocols on Cardano.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>The main DEXs and DeFi protocols on Cardano.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>DeFi removes intermediaries but not risk. Verify contract addresses, understand impermanent loss, and never approve unlimited token spending. Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 13 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'native-token-cardano': {
+    intro: 'If you already understand wallets and exchanges, this Cardano guide covers <strong>Native tokens on Cardano: create and manage assets</strong>. Native tokens without complex smart contracts.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Native tokens without complex smart contracts.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Native tokens without complex smart contracts.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 11 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'hydra-cardano': {
+    intro: 'If you already understand wallets and exchanges, this Cardano guide covers <strong>Hydra: what it is and what it will change for scalability</strong>. Cardano\'s Layer 2 for ultra-fast transactions.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Cardano's Layer 2 for ultra-fast transactions.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Cardano's Layer 2 for ultra-fast transactions.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'plutus-panoramica': {
+    intro: 'If you already understand wallets and exchanges, this Cardano guide covers <strong>Cardano smart contracts (Plutus): overview for users</strong>. How smart contracts work on Cardano.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>How smart contracts work on Cardano.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>How smart contracts work on Cardano.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'cardano-vs-ethereum': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this Cardano guide covers <strong>Cardano vs Ethereum: practical differences for users</strong>. A real comparison between the two ecosystems for beginners.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>A real comparison between the two ecosystems for beginners.</p><p>In this Cardano guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>A real comparison between the two ecosystems for beginners.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Cardano uses a proof-of-stake model with low transaction fees. Choose reputable wallets and stake pools with consistent performance and transparent fees. Ethereum powers most of DeFi and NFT activity. Confirm you are on the correct network (mainnet or an approved layer 2) before signing any transaction.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this Cardano guide take?', a: 'Most readers complete it in about 11 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'seed-phrase-guida': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Seed phrase: what it is, how to generate and store it</strong>. Everything about wallet recovery words.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Everything about wallet recovery words.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Everything about wallet recovery words.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'hot-vs-cold-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Hot wallet vs cold wallet: differences and when to use each</strong>. Practical comparison between online and offline wallets.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Practical comparison between online and offline wallets.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Practical comparison between online and offline wallets.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Your seed phrase is the master key to your funds. Write it on paper, never store it digitally, and test with a small amount before transferring larger balances.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'confronto-hardware-wallet': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Hardware wallets: Ledger vs Trezor vs BitBox comparison</strong>. Which device to choose for maximum security.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Which device to choose for maximum security.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Which device to choose for maximum security.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 12 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'difendersi-phishing': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Recognize and defend against crypto phishing</strong>. Warning signs and anti-scam best practices.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Warning signs and anti-scam best practices.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Warning signs and anti-scam best practices.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Phishing is the most common attack vector in crypto. Type URLs manually, bookmark official sites, and never share recovery phrases.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'approvazioni-smart-contract': {
+    intro: 'If you already understand wallets and exchanges, this security guide covers <strong>Smart contract approvals: what you sign and how to revoke them</strong>. Check and revoke permissions on your tokens.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Check and revoke permissions on your tokens.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Check and revoke permissions on your tokens.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'backup-wallet-321': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Wallet backup: 3-2-1 strategy for crypto</strong>. Three copies, two media, one off-site.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Three copies, two media, one off-site.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Three copies, two media, one off-site.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 8 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'sicurezza-mobile': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Mobile security: protect wallets on your smartphone</strong>. PIN, biometrics and precautions for mobile wallets.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>PIN, biometrics and precautions for mobile wallets.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>PIN, biometrics and precautions for mobile wallets.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'wallet-compromesso': {
+    intro: 'If you already understand wallets and exchanges, this security guide covers <strong>What to do if you suspect your wallet is compromised</strong>. Immediate action plan in case of emergency.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Immediate action plan in case of emergency.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Immediate action plan in case of emergency.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'This is written for users with some prior crypto experience. Beginners may want to start with our beginner path on the homepage.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 9 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'password-manager-crypto': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Password managers and crypto: best practices</strong>. Manage passwords and secure notes for the crypto ecosystem.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>Manage passwords and secure notes for the crypto ecosystem.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>Manage passwords and secure notes for the crypto ecosystem.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 7 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
+    ]
+  },
+  'audit-sicurezza-portafoglio': {
+    intro: 'Whether you are new to cryptocurrency or refreshing the basics, this security guide covers <strong>Security audit of your portfolio (checklist)</strong>. 25 points to verify for a secure portfolio.',
+    sections: [
+      { id: 'overview', title: 'Overview', content: `
+<p>25 points to verify for a secure portfolio.</p><p>In this security guide, we walk through the process practically and safely, without hype and with concrete checkpoints.</p>
+      `},
+      { id: 'what-you-need-before-you-start', title: 'What you need before you start', content: `
+<p>25 points to verify for a secure portfolio.</p><ul><li>A verified exchange or wallet account with two-factor authentication enabled</li><li>A secure backup of your recovery phrase (if using a self-custody wallet)</li><li>Time to read each confirmation screen before approving</li></ul>
+      `},
+      { id: 'step-1-prepare-your-accounts', title: 'Step 1: Prepare your accounts', content: `
+<p>Confirm KYC is complete, 2FA is active, and you are on the official app or website — not a link from email or social media.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-2-configure-the-settings', title: 'Step 2: Configure the settings', content: `
+<p>Select the correct network, fee level, and destination address. For first-time operations, use a small test amount.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-3-execute-and-verify', title: 'Step 3: Execute and verify', content: `
+<p>Submit the transaction and verify it on a block explorer. Save the transaction ID for your records.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'step-4-secure-your-funds', title: 'Step 4: Secure your funds', content: `
+<p>Move long-term holdings to a personal wallet you control. Never leave large balances on an exchange indefinitely.</p><p>Move slowly, verify every address and network, and keep records for tax reporting.</p>
+      `},
+      { id: 'security-checklist', title: 'Security checklist', content: `
+<ul><li>Enable 2FA with an authenticator app — not SMS</li><li>Verify URLs and contract addresses character by character</li><li>Never share seed phrases or private keys</li><li>Use hardware wallets for significant long-term holdings</li></ul><div class="box box--danger"><span class="box-title">Never</span>Approve transactions you do not fully understand, especially unlimited token allowances.</div>
+      `},
+    ],
+    faq: [
+      { q: 'Is this article suitable for beginners?', a: 'Yes. The Little Satoshi News is designed for readers new to crypto. If a term is unclear, check our glossary.' },
+      { q: 'How long does this security guide take?', a: 'Most readers complete it in about 10 minutes, plus time to execute the steps carefully.' },
+      { q: 'Does this constitute financial advice?', a: 'No. This content is for education only. Cryptocurrency involves significant risk — only invest what you can afford to lose.' },
     ]
   },
 

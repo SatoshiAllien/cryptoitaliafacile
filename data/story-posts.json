@@ -5839,6 +5839,87 @@
       }
     },
     {
+      "slug": "cardano-science-first",
+      "abstract": {
+        "slug": "cardano-science-first",
+        "topic": "cardano",
+        "topic_label": "CARDANO",
+        "title": "Quello che devi sapere su Cardano",
+        "subtitle": "Per principianti · CARDANO",
+        "body": "Architettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.",
+        "cta": "Approfondisci",
+        "hook": "Quello che devi sapere su Cardano",
+        "caption_it": "🔥 Quello che devi sapere su Cardano\n\n📌 CARDANO\n\nArchitettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.\n\n👉 Continua sul sito\n\n#cardano #ada #blockchain #web3 #crypto #CryptoItaliaFacile #educazione #bitcoin",
+        "caption_en": "🔥 Quello che devi sapere su Cardano\n\n📌 CARDANO\n\nArchitettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.\n\n👉 Continua sul sito\n\n#cardano #ada #blockchain #web3 #CryptoEducation #Bitcoin",
+        "variant": "primary",
+        "variant_key": "primary",
+        "instagram": {
+          "image": "cardano-science-first-abstract.jpg",
+          "size": "1080x1920",
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "facebook": {
+          "image": "cardano-science-first-abstract.jpg",
+          "size": "1080x1350",
+          "safe_area": "100px",
+          "layout": "hero_logo_centered",
+          "design": "Story FB 1080×1350 · safe 100px · primary · CARDANO · logo hero centrato ~35% · PNG trasparente · glow/neon · titolo sopra logo · CTA visiva · zero link/URL."
+        }
+      },
+      "thematic": {
+        "slug": "cardano-science-first",
+        "topic": "cardano",
+        "topic_label": "CARDANO",
+        "title": "Principianti: Cardano in parole semplici",
+        "subtitle": "Per principianti · CARDANO",
+        "body": "Architettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.",
+        "cta": "Approfondisci",
+        "hook": "Principianti: Cardano in parole semplici",
+        "caption_it": "🔥 Principianti: Cardano in parole semplici\n\n📌 CARDANO\n\nArchitettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.\n\n👉 Impara in 2 minuti\n\n#cardano #ada #blockchain #web3 #crypto #CryptoItaliaFacile #educazione #bitcoin",
+        "caption_en": "🔥 Principianti: Cardano in parole semplici\n\n📌 CARDANO\n\nArchitettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.\n\n👉 Impara in 2 minuti\n\n#cardano #ada #blockchain #web3 #CryptoEducation #Bitcoin",
+        "variant": "alt",
+        "variant_key": "alt",
+        "instagram": {
+          "image": "cardano-science-first-thematic.jpg",
+          "size": "1080x1920",
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "facebook": {
+          "image": "cardano-science-first-thematic.jpg",
+          "size": "1080x1350",
+          "safe_area": "100px",
+          "layout": "hero_logo_centered",
+          "design": "Story FB 1080×1350 · safe 100px · alt · CARDANO · logo hero centrato ~35% · PNG trasparente · glow/neon · titolo sotto logo · CTA visiva · zero link/URL."
+        }
+      },
+      "minimal": {
+        "slug": "cardano-science-first",
+        "topic": "cardano",
+        "topic_label": "CARDANO",
+        "title": "Principianti: Cardano in parole semplici",
+        "subtitle": "Per principianti · CARDANO",
+        "body": "Architettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.",
+        "cta": "Approfondisci",
+        "hook": "Principianti: Cardano in parole semplici",
+        "caption_it": "🔥 Principianti: Cardano in parole semplici\n\n📌 CARDANO\n\nArchitettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.\n\n👉 Impara in 2 minuti\n\n#cardano #ada #blockchain #web3 #crypto #CryptoItaliaFacile #educazione #bitcoin",
+        "caption_en": "🔥 Principianti: Cardano in parole semplici\n\n📌 CARDANO\n\nArchitettura eUTxO, staking, governance, Hydra, Mithril e roadmap di scalabilità: panoramica completa su Cardano.\n\n👉 Impara in 2 minuti\n\n#cardano #ada #blockchain #web3 #CryptoEducation #Bitcoin",
+        "variant": "alt",
+        "variant_key": "minimal",
+        "instagram": {
+          "image": "cardano-science-first-minimal.jpg",
+          "size": "1080x1920",
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "facebook": {
+          "image": "cardano-science-first-minimal.jpg",
+          "size": "1080x1350",
+          "safe_area": "100px",
+          "layout": "hero_logo_centered",
+          "design": "Story FB 1080×1350 · safe 100px · alt · CARDANO · logo hero centrato ~35% · PNG trasparente · glow/neon · titolo sotto logo · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
       "slug": "cardano-spiegato",
       "abstract": {
         "slug": "cardano-spiegato",

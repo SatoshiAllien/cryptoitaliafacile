@@ -1,0 +1,244 @@
+{
+  "version": 1,
+  "format": "1080x1920",
+  "safe_area_px": 120,
+  "brand": "CryptoItaliaFacile",
+  "palette": [
+    "nero",
+    "bianco",
+    "arancione Satoshi #F7931A",
+    "oro #F4C430"
+  ],
+  "stories": [
+    {
+      "slug": "bitcoin",
+      "topic": "bitcoin",
+      "accent": "#F7931A",
+      "title": "Bitcoin spiegato facile",
+      "subtitle": "La guida essenziale · BITCOIN",
+      "body": "Scopri cos'è Bitcoin e perché resta il re delle crypto. Due concetti chiave, zero confusione.",
+      "cta": "Scopri di più",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/bitcoin-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/bitcoin-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "cardano",
+      "topic": "cardano",
+      "accent": "#38BDF8",
+      "title": "Cardano in 60 secondi",
+      "subtitle": "ADA per principianti · CARDANO",
+      "body": "Proof-of-stake, smart contract e community globale. Tutto quello che serve per capire ADA.",
+      "cta": "Continua",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/cardano-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/cardano-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "ethereum",
+      "topic": "ethereum",
+      "accent": "#818CF8",
+      "title": "Ethereum senza confusione",
+      "subtitle": "ETH · smart contract · DeFi",
+      "body": "La rete che ha rivoluzionato le crypto. Gas, staking e Layer 2 spiegati in modo chiaro.",
+      "cta": "Scopri di più",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/ethereum-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/ethereum-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "regolamentazione-eu",
+      "topic": "eu",
+      "accent": "#93C5FD",
+      "title": "Regolamentazione EU",
+      "subtitle": "MiCA · normative · compliance",
+      "body": "Cosa cambia per le crypto in Europa. Le regole che ogni investitore deve conoscere.",
+      "cta": "Approfondisci",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/regolamentazione-eu-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/regolamentazione-eu-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "usa-news",
+      "topic": "usa",
+      "accent": "#60A5FA",
+      "title": "Crypto negli USA",
+      "subtitle": "SEC · ETF · Congresso",
+      "body": "Le ultime novità dal mercato americano. Trend, regolamentazione e impatto su Bitcoin.",
+      "cta": "Continua",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/usa-news-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/usa-news-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "defi",
+      "topic": "defi",
+      "accent": "#34D399",
+      "title": "DeFi spiegato semplice",
+      "subtitle": "Finanza decentralizzata",
+      "body": "Lending, liquidity pool e yield senza banche tradizionali. Come funziona davvero il DeFi.",
+      "cta": "Scopri di più",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/defi-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/defi-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "nft",
+      "topic": "nft",
+      "accent": "#A855F7",
+      "title": "NFT: cosa sono davvero",
+      "subtitle": "Collezioni · arte digitale",
+      "body": "Token unici sulla blockchain. Valore, utilità e rischi spiegati senza hype.",
+      "cta": "Swipe",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/nft-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · NFT · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/nft-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · NFT · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "sicurezza",
+      "topic": "sicurezza",
+      "accent": "#F87171",
+      "title": "Proteggi le tue crypto",
+      "subtitle": "Sicurezza · anti-truffa",
+      "body": "Seed phrase, 2FA e cold wallet. La checklist che ti salva da errori costosi.",
+      "cta": "Scopri di più",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/sicurezza-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/sicurezza-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "stablecoin",
+      "topic": "stablecoin",
+      "accent": "#22C55E",
+      "title": "Stablecoin in breve",
+      "subtitle": "USDT · USDC · DAI",
+      "body": "Monete ancorate al dollaro per stabilità e trading. Come funzionano e quando usarle.",
+      "cta": "Continua",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/stablecoin-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/stablecoin-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    },
+    {
+      "slug": "exchange",
+      "topic": "exchange",
+      "accent": "#14B8A6",
+      "title": "Exchange crypto guidati",
+      "subtitle": "Trading · acquisto · sicurezza",
+      "body": "Come scegliere e usare un exchange in sicurezza. Candlestick, spread e primi passi.",
+      "cta": "Scopri di più",
+      "variants": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/exchange-primary.jpg",
+          "size": "1080x1920",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/exchange-alt.jpg",
+          "size": "1080x1920",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      }
+    }
+  ]
+}

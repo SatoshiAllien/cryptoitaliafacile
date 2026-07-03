@@ -1,0 +1,606 @@
+{
+  "version": 2,
+  "brand": "CryptoItaliaFacile",
+  "palette": [
+    "nero",
+    "bianco",
+    "arancione Satoshi #F7931A",
+    "oro #F4C430"
+  ],
+  "formats": {
+    "instagram_story": {
+      "size": "1080x1920",
+      "safe_area_px": 120
+    },
+    "instagram_feed": {
+      "size": "1080x1350",
+      "safe_area_px": 100
+    },
+    "facebook_post": {
+      "size": "1080x1350",
+      "safe_area_px": 100
+    }
+  },
+  "items": [
+    {
+      "slug": "bitcoin",
+      "topic": "bitcoin",
+      "title": "Bitcoin spiegato facile",
+      "subtitle": "La guida essenziale · BITCOIN",
+      "body": "Scopri cos'è Bitcoin e perché resta il re delle crypto. Due concetti chiave, zero confusione.",
+      "accent": "#F7931A",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/bitcoin-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/bitcoin-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · BITCOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/bitcoin-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · BITCOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/bitcoin-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · BITCOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/bitcoin-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · BITCOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/bitcoin-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · BITCOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "cardano",
+      "topic": "cardano",
+      "title": "Cardano in 60 secondi",
+      "subtitle": "ADA per principianti · CARDANO",
+      "body": "Proof-of-stake, smart contract e community globale. Tutto quello che serve per capire ADA.",
+      "accent": "#38BDF8",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/cardano-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Continua",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/cardano-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Continua",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · CARDANO · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/cardano-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · CARDANO · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/cardano-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · CARDANO · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/cardano-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · CARDANO · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/cardano-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · CARDANO · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "ethereum",
+      "topic": "ethereum",
+      "title": "Ethereum senza confusione",
+      "subtitle": "ETH · smart contract · DeFi",
+      "body": "La rete che ha rivoluzionato le crypto. Gas, staking e Layer 2 spiegati in modo chiaro.",
+      "accent": "#818CF8",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/ethereum-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/ethereum-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · ETHEREUM · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/ethereum-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · ETHEREUM · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/ethereum-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · ETHEREUM · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/ethereum-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · ETHEREUM · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/ethereum-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · ETHEREUM · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "regolamentazione-eu",
+      "topic": "eu",
+      "title": "Regolamentazione EU",
+      "subtitle": "MiCA · normative · compliance",
+      "body": "Cosa cambia per le crypto in Europa. Le regole che ogni investitore deve conoscere.",
+      "accent": "#93C5FD",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/regolamentazione-eu-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Approfondisci",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/regolamentazione-eu-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Approfondisci",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/regolamentazione-eu-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/regolamentazione-eu-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · REGOLAMENTAZIONE EU · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/regolamentazione-eu-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/regolamentazione-eu-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · REGOLAMENTAZIONE EU · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "usa-news",
+      "topic": "usa",
+      "title": "Crypto negli USA",
+      "subtitle": "SEC · ETF · Congresso",
+      "body": "Le ultime novità dal mercato americano. Trend, regolamentazione e impatto su Bitcoin.",
+      "accent": "#60A5FA",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/usa-news-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Continua",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/usa-news-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Continua",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · CRYPTO USA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/usa-news-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · CRYPTO USA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/usa-news-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · CRYPTO USA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/usa-news-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · CRYPTO USA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/usa-news-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · CRYPTO USA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "defi",
+      "topic": "defi",
+      "title": "DeFi spiegato semplice",
+      "subtitle": "Finanza decentralizzata",
+      "body": "Lending, liquidity pool e yield senza banche tradizionali. Come funziona davvero il DeFi.",
+      "accent": "#34D399",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/defi-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/defi-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · DeFi · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/defi-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · DeFi · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/defi-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · DeFi · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/defi-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · DeFi · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/defi-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · DeFi · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "nft",
+      "topic": "nft",
+      "title": "NFT: cosa sono davvero",
+      "subtitle": "Collezioni · arte digitale",
+      "body": "Token unici sulla blockchain. Valore, utilità e rischi spiegati senza hype.",
+      "accent": "#A855F7",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/nft-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Swipe",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · NFT · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/nft-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Swipe",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · NFT · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/nft-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · NFT · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/nft-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · NFT · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/nft-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · NFT · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/nft-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · NFT · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "sicurezza",
+      "topic": "sicurezza",
+      "title": "Proteggi le tue crypto",
+      "subtitle": "Sicurezza · anti-truffa",
+      "body": "Seed phrase, 2FA e cold wallet. La checklist che ti salva da errori costosi.",
+      "accent": "#F87171",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/sicurezza-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/sicurezza-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · SICUREZZA · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/sicurezza-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · SICUREZZA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/sicurezza-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · SICUREZZA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/sicurezza-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · SICUREZZA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/sicurezza-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · SICUREZZA · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "stablecoin",
+      "topic": "stablecoin",
+      "title": "Stablecoin in breve",
+      "subtitle": "USDT · USDC · DAI",
+      "body": "Monete ancorate al dollaro per stabilità e trading. Come funzionano e quando usarle.",
+      "accent": "#22C55E",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/stablecoin-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Continua",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/stablecoin-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Continua",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · STABLECOIN · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/stablecoin-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · STABLECOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/stablecoin-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · STABLECOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/stablecoin-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · STABLECOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/stablecoin-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Scopri di più",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · STABLECOIN · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    },
+    {
+      "slug": "exchange",
+      "topic": "exchange",
+      "title": "Exchange crypto guidati",
+      "subtitle": "Trading · acquisto · sicurezza",
+      "body": "Come scegliere e usare un exchange in sicurezza. Candlestick, spread e primi passi.",
+      "accent": "#14B8A6",
+      "stories": {
+        "primary": {
+          "image": "assets/img/instagram/stories/professional-batch/exchange-primary.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sopra",
+          "design": "Story IG 1080×1920 · safe 120px · primary · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sopra logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        },
+        "alt": {
+          "image": "assets/img/instagram/stories/professional-batch/exchange-alt.jpg",
+          "size": "1080x1920",
+          "cta": "Scopri di più",
+          "title_position": "sotto",
+          "design": "Story IG 1080×1920 · safe 120px · alt · EXCHANGE · logo hero centrato ~37% · PNG trasparente · glow/neon · titolo sotto logo · sottotitolo · testo 2 frasi · CTA visiva · zero link/URL."
+        }
+      },
+      "posts": {
+        "primary": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/exchange-ig-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · primary · EXCHANGE · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/exchange-fb-primary.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sopra",
+            "design": "FACEBOOK 1080×1350 · safe 100px · primary · EXCHANGE · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sopra logo · griglia oro/arancione · CTA visiva · zero link/URL."
+          }
+        },
+        "alt": {
+          "instagram": {
+            "image": "assets/img/instagram/posts/professional-batch/exchange-ig-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "INSTAGRAM 1080×1350 · safe 100px · alt · EXCHANGE · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          },
+          "facebook": {
+            "image": "assets/img/facebook/posts/professional-batch/exchange-fb-alt.jpg",
+            "size": "1080x1350",
+            "cta": "Leggi l'articolo",
+            "title_position": "sotto",
+            "design": "FACEBOOK 1080×1350 · safe 100px · alt · EXCHANGE · logo hero centrato ~38% · PNG trasparente · glow/neon · titolo sotto logo · bordo blu elettrico · CTA visiva · zero link/URL."
+          }
+        }
+      }
+    }
+  ]
+}

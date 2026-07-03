@@ -300,6 +300,10 @@ ARTICLE_EN = {
         "Cardano explained simply: what is ADA",
         "The proof-of-stake blockchain founded on academic research.",
     ),
+    "cardano-science-first": (
+        "Cardano: The Science-First Blockchain Built for the Long Term",
+        "eUTxO architecture, staking, governance, Hydra, Mithril, and the scalability roadmap: a complete Cardano overview for readers in Italy, Egypt, and beyond.",
+    ),
     "comprare-ada": (
         "How to buy ADA on exchanges",
         "Where and how to buy Cardano.",
@@ -425,6 +429,11 @@ def main():
             article["excerptEn"] = ARTICLE_EN[slug][1]
         else:
             missing.append(slug)
+        if article.get("titleEn"):
+            article["seoTitleEn"] = article.get("seoTitleEn") or article["titleEn"]
+            article["seoDescriptionEn"] = article.get("seoDescriptionEn") or article["excerptEn"]
+            tags = article.get("tags") or []
+            article["seoKeywordsEn"] = article.get("seoKeywordsEn") or ", ".join(tags)
         if article.get("date") in DATE_EN:
             article["dateEn"] = DATE_EN[article["date"]]
 

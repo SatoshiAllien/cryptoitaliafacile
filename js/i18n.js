@@ -304,6 +304,7 @@ const TRANSLATIONS = {
         x: { desc: 'Notizie rapide, analisi crypto e aggiornamenti in tempo reale.' },
         facebook: { desc: 'Guide brevi, aggiornamenti e community crypto in italiano.' },
         instagram: { desc: 'Tips visivi, caroselli educativi e storie sulla sicurezza crypto.' },
+        linkedin: { desc: 'Profilo professionale: esperienza PayPal, ricerca blockchain e contenuti educativi crypto.' },
         tiktok: { desc: 'Video brevi: crypto spiegata in 60 secondi, zero hype.' },
         youtube: { desc: 'Tutorial passo-passo e guide approfondite in video.' }
       },
@@ -342,6 +343,8 @@ const TRANSLATIONS = {
       guideDesc: 'Guide crypto passo-passo per principianti e avanzati. Impara Bitcoin, wallet, DeFi, staking e molto altro su The Little Satoshi News.',
       tipsTitle: 'Crypto Tips — The Little Satoshi News', tipsDesc: 'Consigli brevi e pratici sul mondo crypto.',
       trendTitle: 'Trend Crypto — The Little Satoshi News', trendDesc: 'Macro trend crypto spiegati in modo semplice.',
+      newsTitle: 'News — The Little Satoshi News',
+      newsDesc: 'Tutte le news crypto in un unico posto: post @TheRiser100x, feed X, trend e aggiornamenti del sito.',
       sicurezzaTitle: 'Sicurezza Crypto — The Little Satoshi News',
       sicurezzaDesc: 'Guide sulla sicurezza crypto: seed phrase, hardware wallet, phishing, backup e protezione del portafoglio.',
       cardanoTitle: 'Cardano — The Little Satoshi News',
@@ -661,6 +664,7 @@ const TRANSLATIONS = {
         x: { desc: 'Fast news, crypto analysis and real-time updates.' },
         facebook: { desc: 'Short guides, updates and an Italian crypto community.' },
         instagram: { desc: 'Visual tips, educational carousels and security stories.' },
+        linkedin: { desc: 'Professional profile: PayPal experience, blockchain research and crypto education.' },
         tiktok: { desc: 'Short videos: crypto explained in 60 seconds, zero hype.' },
         youtube: { desc: 'Step-by-step tutorials and in-depth video guides.' }
       },
@@ -699,6 +703,8 @@ const TRANSLATIONS = {
       guideDesc: 'Step-by-step crypto guides for beginners and advanced users. Learn Bitcoin, wallets, DeFi, staking and more on The Little Satoshi News.',
       tipsTitle: 'Crypto Tips — The Little Satoshi News', tipsDesc: 'Short, practical tips about the crypto world.',
       trendTitle: 'Crypto Trends — The Little Satoshi News', trendDesc: 'Macro crypto trends explained simply.',
+      newsTitle: 'News — The Little Satoshi News',
+      newsDesc: 'All crypto news in one place: @TheRiser100x posts, X feed, trends and site updates.',
       sicurezzaTitle: 'Crypto Security — The Little Satoshi News',
       sicurezzaDesc: 'Crypto security guides: seed phrase, hardware wallet, phishing, backup and portfolio protection.',
       cardanoTitle: 'Cardano — The Little Satoshi News',
@@ -819,6 +825,11 @@ function initLangSwitcher() {
 }
 
 function initLangFromUrl() {
+  const defaultLang = document.body?.dataset?.defaultLang;
+  if (defaultLang === 'en' || defaultLang === 'it') {
+    setLang(defaultLang);
+    return;
+  }
   const params = new URLSearchParams(window.location.search);
   const lang = params.get('lang');
   if (lang === 'en' || lang === 'it') setLang(lang);

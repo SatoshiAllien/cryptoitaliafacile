@@ -717,6 +717,43 @@ function getArticleContent(slug, article) {
 }
 
 function generateGenericContent(article) {
+  const isEn = typeof getLang === 'function' && getLang() === 'en';
+  const categoryKeys = {
+    guide: 'catGuide', tip: 'catTip', trend: 'catTrend', tutorial: 'catTutorial',
+    cardano: 'catCardano', sicurezza: 'catSicurezza'
+  };
+
+  if (isEn && typeof t === 'function') {
+    const catKey = categoryKeys[article.category] || 'catGuide';
+    const cat = t(`articleGeneric.${catKey}`);
+    const excerpt = article.excerptEn || article.excerpt;
+    const introSuffix = t('articleGeneric.introSuffix').replace('{cat}', cat);
+    return {
+      intro: `${excerpt} ${introSuffix}`,
+      sections: [
+        { id: 'panoramica', title: t('articleGeneric.overview'), content: `<p>${excerpt}</p><p>${t('articleGeneric.overview2')}</p>` },
+        { id: 'passi', title: t('articleGeneric.steps'), content: `
+        <div class="step-block"><h3>${t('articleGeneric.step1t')}</h3><p>${t('articleGeneric.step1d')}</p></div>
+        <div class="step-block"><h3>${t('articleGeneric.step2t')}</h3><p>${t('articleGeneric.step2d')}</p></div>
+        <div class="step-block"><h3>${t('articleGeneric.step3t')}</h3><p>${t('articleGeneric.step3d')}</p></div>
+        <div class="box box--warning"><span class="box-title">${t('articleGeneric.warning')}</span>${t('articleGeneric.warningText')}</div>
+      `},
+        { id: 'consigli', title: t('articleGeneric.tips'), content: `
+        <ul>
+          <li>${t('articleGeneric.tip1')}</li>
+          <li>${t('articleGeneric.tip2')}</li>
+          <li>${t('articleGeneric.tip3')}</li>
+          <li>${t('articleGeneric.tip4')}</li>
+        </ul>
+      `}
+      ],
+      faq: [
+        { q: t('articleGeneric.faq1q'), a: t('articleGeneric.faq1a') },
+        { q: t('articleGeneric.faq2q'), a: t('articleGeneric.faq2a') }
+      ]
+    };
+  }
+
   const categoryLabels = {
     guide: 'Guida passo-passo', tip: 'Crypto Tip', trend: 'Trend crypto',
     tutorial: 'Tutorial', cardano: 'Cardano', sicurezza: 'Sicurezza',
@@ -849,7 +886,7 @@ async function initArticlePage() {
     ? getArticlePreviewHeroUrl(article)
     : (typeof getFacebookImageAbsoluteUrl === 'function' ? getFacebookImageAbsoluteUrl(article) : '');
   const heroHtml = heroUrl
-    ? `<figure class="article-hero-preview"><img src="${heroUrl}" alt="Anteprima: ${article.title}" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async"></figure>`
+    ? `<figure class="article-hero-preview"><img src="${heroUrl}" alt="${typeof getLang === 'function' && getLang() === 'en' ? 'Preview' : 'Anteprima'}: ${article.title}" width="1200" height="630" loading="eager" fetchpriority="high" decoding="async"></figure>`
     : '';
 
   const headerEl = document.getElementById('article-header');

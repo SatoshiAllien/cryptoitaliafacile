@@ -22,20 +22,35 @@ on:
 permissions:
   contents: write
 
+env:
+  NODE_VERSION: "22"
+
 jobs:
   post:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
 
       - name: Install dependencies
-        run: pip install tzdata Pillow imageio-ffmpeg
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
 
       - name: Post to Instagram (feed + story, 20/giorno)
         env:
@@ -67,5 +82,5 @@ jobs:
             echo "Nessun aggiornamento schedule."
           else
             git commit -m "chore: instagram schedule dopo auto-post feed+story"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
           fi

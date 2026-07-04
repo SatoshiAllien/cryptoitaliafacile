@@ -19,18 +19,35 @@ on:
 permissions:
   contents: write
 
+env:
+  NODE_VERSION: "22"
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/requirements.txt
 
       - name: Install dependencies
-        run: pip install imageio-ffmpeg numpy Pillow qrcode[pil] tzdata
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements.txt
 
       - name: Sync story music
         run: python scripts/fetch-mixkit-story-music.py || true
@@ -63,5 +80,5 @@ jobs:
             echo "Nessun aggiornamento da committare."
           else
             git commit -m "chore: story auto-publish schedule"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
           fi

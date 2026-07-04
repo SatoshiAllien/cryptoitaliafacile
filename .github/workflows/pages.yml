@@ -16,16 +16,23 @@ concurrency:
 
 env:
   BUILD_DIR: _site
+  NODE_VERSION: "22"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -78,7 +85,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        timeout-minutes: 15
 
       - name: Retry deploy after sync failure
         if: failure() && steps.deployment.outcome == 'failure'
@@ -88,7 +94,6 @@ jobs:
         if: failure() && steps.deployment.outcome == 'failure'
         id: deployment_retry
         uses: actions/deploy-pages@v4
-        timeout-minutes: 15
 
       - name: Publish site URL
         if: success()

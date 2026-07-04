@@ -19,15 +19,26 @@ on:
 permissions:
   contents: write
 
+env:
+  NODE_VERSION: "22"
+
 jobs:
   post:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -65,5 +76,5 @@ jobs:
             echo "Nessun aggiornamento."
           else
             git commit -m "chore: aggiorna news crypto e schedule X"
-            git push
+            git push origin HEAD:${{ github.ref_name }}
           fi

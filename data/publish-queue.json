@@ -69,13 +69,14 @@
       "scheduled_at": "2026-06-25T07:47:00+02:00",
       "slug": "comprare-bitcoin-prima-volta",
       "variant": "alt",
-      "status": "pending",
-      "feed_status": "pending",
-      "story_status": "pending",
-      "attempts": 0,
-      "external_id": null,
+      "status": "published",
+      "feed_status": "published",
+      "story_status": "published",
+      "attempts": 1,
+      "external_id": "122105287545371725",
       "story_id": null,
-      "error": null
+      "error": null,
+      "published_at": "2026-07-04T12:46:48.565857+02:00"
     },
     {
       "id": "instagram:2026-06-25:slot-02",
@@ -10087,10 +10088,10 @@
     }
   ],
   "circuit_breaker": {
-    "open": true,
-    "errors_in_window": 1,
-    "window_start": "2026-07-04T09:38:58.271051+02:00",
-    "opened_at": "2026-07-04T09:38:58.271062+02:00"
+    "open": false,
+    "errors_in_window": 0,
+    "window_start": null,
+    "opened_at": null
   },
-  "generatedAt": "2026-07-04T07:38:57"
+  "generatedAt": "2026-07-04T10:46:26"
 }

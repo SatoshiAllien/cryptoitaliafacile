@@ -513,8 +513,11 @@ def run_auto(config: dict, *, dry_run: bool = False, limit: int = 1) -> int:
     print(f"\nCompletato: {ok} ok, {fail} errori")
     if fail == 0:
         return 0
-    if os.environ.get("GITHUB_ACTIONS") == "true" and circuit_is_open(queue):
-        print("CI: errori API/token — stato salvato, workflow non bloccato")
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        if circuit_is_open(queue):
+            print("CI: circuit breaker aperto — stato salvato, workflow non bloccato")
+        else:
+            print("CI: errori pubblicazione — stato salvato, workflow non bloccato")
         return 0
     return 1
 

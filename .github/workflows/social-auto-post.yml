@@ -23,12 +23,16 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  NODE_VERSION: "22"
+  NODE_VERSION: "24"
+  PYTHON_VERSION: "3.12"
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    defaults:
+      run:
+        shell: bash
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -44,7 +48,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
           cache-dependency-path: scripts/requirements.txt
 
@@ -56,7 +60,7 @@ jobs:
       - name: Reset circuit breaker
         run: python scripts/publish_orchestrator.py --reset-circuit
 
-      - name: Ensure publish queue
+      - name: Generate publish queue
         run: python scripts/generate_publish_queue.py --days 14
 
       - name: Run orchestrator
@@ -75,14 +79,14 @@ jobs:
           python scripts/publish_orchestrator.py $ARGS
 
       - name: Commit queue state
-        if: github.event.inputs.dry_run != 'true'
+        if: success() && github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/publish-queue.json data/publish-log.jsonl data/instagram-schedule.json data/facebook-schedule.json
+          git add -A data/publish-queue.json data/publish-log.jsonl data/instagram-schedule.json data/facebook-schedule.json
           if git diff --staged --quiet; then
             echo "Nessun aggiornamento stato."
           else
-            git commit -m "chore: social auto-post queue update"
-            git push origin HEAD:${{ github.ref_name }}
+            git commit -m "chore: social auto-post queue update [skip ci]"
+            git push origin "HEAD:${{ github.ref_name }}"
           fi

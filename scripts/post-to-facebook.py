@@ -226,7 +226,15 @@ def graph_post(url: str, data: dict, dry_run: bool, label: str) -> dict:
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         err_body = e.read().decode("utf-8", errors="replace")
-        return {"error": {"code": e.code, "message": err_body}}
+        try:
+            parsed = json.loads(err_body)
+            if isinstance(parsed.get("error"), dict):
+                err = parsed["error"]
+                err["http_status"] = e.code
+                return {"error": err}
+        except json.JSONDecodeError:
+            pass
+        return {"error": {"code": e.code, "message": err_body, "http_status": e.code}}
 
 
 def post_to_facebook(message: str, link: str, image_url: str, page_id: str, token: str, dry_run: bool) -> dict:
@@ -260,10 +268,9 @@ def post_to_facebook(message: str, link: str, image_url: str, page_id: str, toke
     fallback = graph_post(feed_url, feed_data, dry_run=False, label="feed")
     if fallback.get("error"):
         fb_err = fallback["error"]
-        hint = ""
         if "expired" in str(fb_err.get("message", "")).lower():
-            hint = "\nToken scaduto → facebook-fix.html"
-        raise SystemExit(f"Facebook API error {fb_err.get('code')}: {fb_err.get('message')}{hint}") from None
+            print("Token scaduto → facebook-fix.html", file=sys.stderr)
+        return fallback
     return fallback
 
 

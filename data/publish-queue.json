@@ -520,13 +520,13 @@
       "scheduled_at": "2026-06-25T18:03:00+02:00",
       "slug": "hardware-wallet-ledger",
       "variant": "primary",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Thursday, 25-Jun-26 11:00:00 PDT. The current time is Tuesday, 07-Jul-26 06:31:25 PDT. | code=190 | subcode=463"
     },
     {
       "id": "facebook:2026-06-25:slot-14",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-07T13:22:38.182187+02:00",
-    "opened_at": "2026-07-07T13:22:38.182200+02:00"
+    "window_start": "2026-07-07T15:31:26.028552+02:00",
+    "opened_at": "2026-07-07T15:31:26.028561+02:00"
   },
-  "generatedAt": "2026-07-07T11:22:37"
+  "generatedAt": "2026-07-07T13:31:25"
 }

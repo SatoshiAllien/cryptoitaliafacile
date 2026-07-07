@@ -556,13 +556,13 @@
       "scheduled_at": "2026-06-25T18:51:00+02:00",
       "slug": "usare-metamask",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Thursday, 25-Jun-26 11:00:00 PDT. The current time is Tuesday, 07-Jul-26 11:27:02 PDT. | code=190 | subcode=463"
     },
     {
       "id": "facebook:2026-06-25:slot-15",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-07T18:21:20.502650+02:00",
-    "opened_at": "2026-07-07T18:21:20.502689+02:00"
+    "window_start": "2026-07-07T20:27:02.328255+02:00",
+    "opened_at": "2026-07-07T20:27:02.328266+02:00"
   },
-  "generatedAt": "2026-07-07T16:21:19"
+  "generatedAt": "2026-07-07T18:27:01"
 }

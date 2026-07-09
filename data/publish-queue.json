@@ -808,13 +808,13 @@
       "scheduled_at": "2026-06-26T08:35:00+02:00",
       "slug": "capire-gas-fee",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Thursday, 25-Jun-26 11:00:00 PDT. The current time is Thursday, 09-Jul-26 11:51:48 PDT. | code=190 | subcode=463"
     },
     {
       "id": "facebook:2026-06-26:slot-02",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-09T18:59:48.809922+02:00",
-    "opened_at": "2026-07-09T18:59:48.809936+02:00"
+    "window_start": "2026-07-09T20:51:48.591192+02:00",
+    "opened_at": "2026-07-09T20:51:48.591201+02:00"
   },
-  "generatedAt": "2026-07-09T16:59:47"
+  "generatedAt": "2026-07-09T18:51:47"
 }

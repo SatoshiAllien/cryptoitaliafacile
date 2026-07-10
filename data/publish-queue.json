@@ -898,13 +898,13 @@
       "scheduled_at": "2026-06-26T10:09:00+02:00",
       "slug": "usare-etherscan",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Saturday, 04-Jul-26 05:00:00 PDT. The current time is Friday, 10-Jul-26 08:44:14 PDT. | code=190 | subcode=463"
     },
     {
       "id": "instagram:2026-06-26:slot-05",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-10T15:23:30.421629+02:00",
-    "opened_at": "2026-07-10T15:23:30.421640+02:00"
+    "window_start": "2026-07-10T17:44:14.357440+02:00",
+    "opened_at": "2026-07-10T17:44:14.357452+02:00"
   },
-  "generatedAt": "2026-07-10T13:23:29"
+  "generatedAt": "2026-07-10T15:44:13"
 }

@@ -1186,13 +1186,13 @@
       "scheduled_at": "2026-06-26T16:28:00+02:00",
       "slug": "tip-mai-seed-phrase",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Saturday, 04-Jul-26 05:00:00 PDT. The current time is Sunday, 12-Jul-26 00:25:21 PDT. | code=190 | subcode=463"
     },
     {
       "id": "instagram:2026-06-26:slot-13",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-11T22:40:05.240230+02:00",
-    "opened_at": "2026-07-11T22:40:05.240241+02:00"
+    "window_start": "2026-07-12T09:25:21.110451+02:00",
+    "opened_at": "2026-07-12T09:25:21.110501+02:00"
   },
-  "generatedAt": "2026-07-11T20:40:04"
+  "generatedAt": "2026-07-12T07:25:20"
 }

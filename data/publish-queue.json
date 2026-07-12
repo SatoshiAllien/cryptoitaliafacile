@@ -1240,13 +1240,13 @@
       "scheduled_at": "2026-06-26T18:03:00+02:00",
       "slug": "tip-verifica-url",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Thursday, 25-Jun-26 11:00:00 PDT. The current time is Sunday, 12-Jul-26 04:52:27 PDT. | code=190 | subcode=463"
     },
     {
       "id": "facebook:2026-06-26:slot-14",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-12T12:51:26.007075+02:00",
-    "opened_at": "2026-07-12T12:51:26.007093+02:00"
+    "window_start": "2026-07-12T13:52:28.035528+02:00",
+    "opened_at": "2026-07-12T13:52:28.035540+02:00"
   },
-  "generatedAt": "2026-07-12T10:51:25"
+  "generatedAt": "2026-07-12T11:52:27"
 }

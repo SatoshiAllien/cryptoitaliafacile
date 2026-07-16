@@ -1942,13 +1942,13 @@
       "scheduled_at": "2026-06-27T17:16:00+02:00",
       "slug": "tip-rubrica-wallet",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Saturday, 04-Jul-26 05:00:00 PDT. The current time is Thursday, 16-Jul-26 10:59:34 PDT. | code=190 | subcode=463"
     },
     {
       "id": "instagram:2026-06-27:slot-14",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-16T18:47:42.136058+02:00",
-    "opened_at": "2026-07-16T18:47:42.136069+02:00"
+    "window_start": "2026-07-16T19:59:34.225129+02:00",
+    "opened_at": "2026-07-16T19:59:34.225142+02:00"
   },
-  "generatedAt": "2026-07-16T16:47:41"
+  "generatedAt": "2026-07-16T17:59:32"
 }

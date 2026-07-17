@@ -2122,13 +2122,13 @@
       "scheduled_at": "2026-06-27T21:13:00+02:00",
       "slug": "usare-metamask",
       "variant": "primary",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Saturday, 04-Jul-26 05:00:00 PDT. The current time is Friday, 17-Jul-26 11:32:25 PDT. | code=190 | subcode=463"
     },
     {
       "id": "instagram:2026-06-27:slot-19",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-17T19:03:10.509185+02:00",
-    "opened_at": "2026-07-17T19:03:10.509195+02:00"
+    "window_start": "2026-07-17T20:32:25.439531+02:00",
+    "opened_at": "2026-07-17T20:32:25.439545+02:00"
   },
-  "generatedAt": "2026-07-17T17:03:09"
+  "generatedAt": "2026-07-17T18:32:24"
 }

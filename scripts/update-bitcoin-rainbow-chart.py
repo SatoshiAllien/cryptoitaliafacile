@@ -49,17 +49,17 @@ USER_AGENT = "CryptoItaliaFacile-RainbowAgent/1.0 (+https://github.com/SatoshiAl
 
 # Classic BlockchainCenter rainbow legend (top → bottom).
 # Colors and labels reverse-engineered from their live JS bundle.
-BANDS_TOP_TO_BOTTOM: list[dict[str, str]] = [
-    {"id": 0, "label": "Maximum Bubble Territory", "label_it": "Massimo territorio bolla", "color": "#c00000"},
-    {"id": 1, "label": "Sell. Seriously, SELL!", "label_it": "Vendi. Seriamente, VENDI!", "color": "#d64018"},
-    {"id": 2, "label": "FOMO intensifies", "label_it": "FOMO in aumento", "color": "#ed7d31"},
-    {"id": 3, "label": "Is this a bubble?", "label_it": "È una bolla?", "color": "#f6b45a"},
-    {"id": 4, "label": "HODL!", "label_it": "HODL!", "color": "#ffeb84"},
-    {"id": 5, "label": "Still cheap", "label_it": "Ancora economico", "color": "#b1d580"},
-    {"id": 6, "label": "Accumulate", "label_it": "Accumula", "color": "#63be7b"},
-    {"id": 7, "label": "BUY!", "label_it": "COMPRA!", "color": "#54989f"},
-    {"id": 8, "label": "Basically a Fire Sale", "label_it": "Quasi saldi da liquidazione", "color": "#4472c4"},
-    {"id": 9, "label": "Bitcoin is dead", "label_it": "Bitcoin è morto", "color": "#9568db"},
+BANDS_TOP_TO_BOTTOM: list[dict[str, Any]] = [
+    {"id": 0, "label": "Maximum Bubble Territory", "color": "#c00000"},
+    {"id": 1, "label": "Sell. Seriously, SELL!", "color": "#d64018"},
+    {"id": 2, "label": "FOMO intensifies", "color": "#ed7d31"},
+    {"id": 3, "label": "Is this a bubble?", "color": "#f6b45a"},
+    {"id": 4, "label": "HODL!", "color": "#ffeb84"},
+    {"id": 5, "label": "Still cheap", "color": "#b1d580"},
+    {"id": 6, "label": "Accumulate", "color": "#63be7b"},
+    {"id": 7, "label": "BUY!", "color": "#54989f"},
+    {"id": 8, "label": "Basically a Fire Sale", "color": "#4472c4"},
+    {"id": 9, "label": "Bitcoin is dead", "color": "#9568db"},
 ]
 
 # Original logarithmic regression band coefficients (natural log).
@@ -303,52 +303,52 @@ def compute_dynamic_model(series: list[dict[str, Any]], price: float, as_of: dat
     )
 
 
-def interpretation_it(band: dict[str, str], model: str) -> str:
-    """Non-advisory trend reading of the current band (Italian)."""
+def interpretation_en(band: dict[str, Any], model: str) -> str:
+    """Non-advisory trend reading of the current band (English)."""
     key = band["label"]
     texts = {
         "Maximum Bubble Territory": (
-            "La fascia più alta del modello storico. In passato ha coinciso con euforia estrema "
-            "e top di ciclo. Non è una previsione: è un contesto storico di valutazione relativa."
+            "The highest band of the historical model. In past cycles it often aligned with extreme "
+            "euphoria and cycle tops. This is relative valuation context, not a price forecast."
         ),
         "Sell. Seriously, SELL!": (
-            "Zona storicamente legata a euforia avanzata. Il meme del chart invita alla cautela; "
-            "resta un modello descrittivo, non un segnale operativo."
+            "A zone historically linked to late-stage euphoria. The meme chart invites caution; "
+            "it remains a descriptive model, not a trading signal."
         ),
         "FOMO intensifies": (
-            "Fascia in cui, nei cicli passati, spesso entrava un forte flusso retail (FOMO). "
-            "Utile come termometro narrativo del sentiment, non come timing preciso."
+            "A band where past cycles often saw heavy retail inflows (FOMO). Useful as a sentiment "
+            "thermometer, not as precise market timing."
         ),
         "Is this a bubble?": (
-            "Area intermedia-alta: il prezzo è sopra il trend di lungo periodo del modello. "
-            "Storicamente si è vista discussione su “bolla”, senza implicare un esito certo."
+            "Upper-mid area: price sits above the model’s long-term trend. Markets have debated "
+            "“bubble” narratives here without implying a certain outcome."
         ),
         "HODL!": (
-            "Vicino alla zona centrale del trend di lungo periodo del modello. "
-            "Spesso interpretata come valutazione “nella media storica” — non un consiglio di detenzione."
+            "Near the center of the model’s long-term trend. Often read as roughly “fair” relative "
+            "to history — not a recommendation to hold or sell."
         ),
         "Still cheap": (
-            "Sotto il centro del trend logaritmico. Nei cicli passati è stata una zona di consolidamento "
-            "o di ripresa graduale; non implica che il prezzo sia “a sconto” in senso assoluto."
+            "Below the log-trend center. In past cycles this was often consolidation or gradual "
+            "recovery territory; it does not mean price is absolutely “cheap.”"
         ),
         "Accumulate": (
-            "Fascia inferiore-media del rainbow. Storicamente associata ad accumulo di lungo periodo, "
-            "sempre con l’avvertenza che il passato non predice il futuro."
+            "Lower-mid rainbow band. Historically associated with long-horizon accumulation stories, "
+            "with the usual caveat that past performance is not predictive."
         ),
         "BUY!": (
-            "Zona bassa del modello originale/dinamico. In passato ha coinciso con fasi di forte "
-            "sottovalutazione relativa al trend — non è un invito all’acquisto."
+            "A lower zone of the original/dynamic model. Past cycles sometimes saw strong relative "
+            "undervaluation vs the trend here — not an invitation to buy."
         ),
         "Basically a Fire Sale": (
-            "Tra le fasce più basse: storicamente legata a panico o fine di bear market. "
-            "Il nome è un meme; non costituisce consulenza finanziaria."
+            "Among the lowest bands: historically linked to panic or late bear-market phases. "
+            "The label is a meme; it is not financial advice."
         ),
         "Bitcoin is dead": (
-            "Fascia viola aggiunta nelle versioni successive quando il prezzo scende sotto il rainbow classico. "
-            "Indica estrema distanza verso il basso rispetto al modello originale."
+            "Purple band added in later chart versions when price fell below the classic rainbow. "
+            "It marks an extreme downside gap vs the original model."
         ),
     }
-    base = texts.get(key, "Posizione all’interno del modello rainbow di lungo periodo.")
+    base = texts.get(key, "Position within the long-term rainbow valuation model.")
     return f"[{model}] {base}"
 
 
@@ -483,7 +483,7 @@ def render_chart_png(
     # Title / subtitle
     draw.text((left, 18), "Bitcoin Rainbow Chart — Dynamic Power Law", fill="#f8fafc", font=font_title)
     sub = (
-        f"Prezzo live: ${live_price:,.0f}  ·  Fascia: {dynamic.band['label']}  ·  "
+        f"Live price: ${live_price:,.0f}  ·  Band: {dynamic.band['label']}  ·  "
         f"R²={dynamic.r2 * 100:.1f}%  ·  {as_of.strftime('%Y-%m-%d')}"
     )
     draw.text((left, 48), sub, fill="#a0a0b0", font=font_sub)
@@ -508,7 +508,10 @@ def render_chart_png(
         draw.text((legend_x + 20, y - 1), f"{prefix}{band['label']}", fill=color, font=font_tiny)
 
     # Footer
-    footer = f"Fonte: BlockchainCenter · Power Law fit su minimi locali 180g · Non è consulenza finanziaria · {SOURCE_URL}"
+    footer = (
+        f"Source: BlockchainCenter · Power Law fit on 180d local bottoms · "
+        f"Not financial advice · {SOURCE_URL}"
+    )
     draw.text((left, H - 28), footer, fill="#666677", font=font_tiny)
 
     # Border
@@ -557,11 +560,12 @@ def build_payload(
             "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
             "as_of": as_of.strftime("%Y-%m-%d"),
             "disclaimer": (
-                "Il Rainbow Chart non è consulenza finanziaria. "
-                "Le performance passate non indicano risultati futuri. "
-                "È un modo divertente e visuale di osservare i movimenti di lungo periodo."
+                "The Rainbow Chart is not financial advice. "
+                "Past performance is not an indication of future results. "
+                "It is a fun, visual way to look at long-term price movements."
             ),
             "agent": "Grok Agent · CryptoItaliaFacile",
+            "language": "en",
             "feed": feed_meta or {},
         },
         "live": {
@@ -582,7 +586,7 @@ def build_payload(
             "band_index": original.band_index,
             "band": original.band,
             "bounds_usd": [round(b, 2) for b in original.bounds_usd],
-            "interpretation_it": interpretation_it(original.band, "Modello originale"),
+            "interpretation": interpretation_en(original.band, "Original model"),
         },
         "dynamic_model": {
             "type": "power_law_bottoms_180d",
@@ -598,7 +602,7 @@ def build_payload(
             "deviation_percent_vs_center": round(dynamic.deviation_pct, 2),
             "bottoms_used": dynamic.bottoms_used,
             "tops_used": dynamic.tops_used,
-            "interpretation_it": interpretation_it(dynamic.band, "Modello dinamico"),
+            "interpretation": interpretation_en(dynamic.band, "Dynamic model"),
         },
         "historical": {
             "points": len(hist),
@@ -617,7 +621,7 @@ def write_markdown(payload: dict[str, Any], out_path: Path) -> None:
     band = dyn["band"]
 
     legend_rows = "\n".join(
-        f"| `{b['color']}` | **{b['label']}** | {b['label_it']} |" for b in payload["legend"]
+        f"| `{b['color']}` | **{b['label']}** |" for b in payload["legend"]
     )
 
     # Compact JSON (full dataset stays in data/*.json)
@@ -633,100 +637,100 @@ def write_markdown(payload: dict[str, Any], out_path: Path) -> None:
             "points": payload["historical"]["points"],
             "from": payload["historical"]["from"],
             "to": payload["historical"]["to"],
-            "note": "Dataset completo in /data/bitcoin-rainbow-chart.json",
+            "note": "Full weekly dataset in /data/bitcoin-rainbow-chart.json",
         },
     }
 
     md = f"""# Bitcoin Rainbow Chart – Dynamic Analysis
 
-> Aggiornato automaticamente da **Grok Agent** · {meta["generated_at"]}  
-> Fonte: [{SOURCE_URL}]({SOURCE_URL})
+> Auto-updated by **Grok Agent** · {meta["generated_at"]}  
+> Source: [{SOURCE_URL}]({SOURCE_URL})
 
-## Cos’è il Bitcoin Rainbow Chart?
+## What is the Bitcoin Rainbow Chart?
 
-Il **Bitcoin Rainbow Chart** è un grafico logaritmico della storia del prezzo di Bitcoin,
-sovrapposto a fasce colorate (il “arcobaleno”) che rappresentano zone di valutazione relativa
-rispetto a una curva di lungo periodo.
+The **Bitcoin Rainbow Chart** is a logarithmic chart of Bitcoin’s full price history,
+overlaid with colored bands (the “rainbow”) that mark relative valuation zones along
+a long-term growth curve.
 
-Nato come meme su Reddit (2014, utente *azop*) e reso interattivo da
-[BlockchainCenter]({SOURCE_URL}), **non è un modello scientifico di previsione** né consulenza
-finanziaria. Serve a “zoomare fuori” dalla volatilità quotidiana e a collocare il prezzo
-corrente nel contesto dei cicli pluriennali.
+It began as a Reddit meme (2014, user *azop*) and was turned into a live tool by
+[BlockchainCenter]({SOURCE_URL}). It is **not a scientific forecasting model** and
+**not financial advice**. It helps zoom out from daily volatility and place the current
+price in multi-year cycle context.
 
-La versione **Dynamic** ricalcola in tempo reale una regressione **Power Law** sulla storia
-dei prezzi (fit sui minimi locali a 180 giorni), con forza di adattamento dichiarata dal sito
-fonte intorno al **94%+ R²**.
+The **Dynamic** version fits a **Power Law** regression in real time on price history
+(using 180-day local bottoms), with fit strength commonly reported around **94%+ R²**
+on the source site.
 
 ---
 
-## Dati live (da BlockchainCenter)
+## Live data (from BlockchainCenter)
 
-| Campo | Valore |
+| Field | Value |
 |-------|--------|
-| Prezzo BTC (USD) | **${live["price_usd"]:,.2f}** |
-| Prezzo BTC (EUR) | {f'€{live["price_eur"]:,.2f}' if live.get("price_eur") else "n/d"} |
-| Variazione 24h | {live.get("percent_change_24h", 0):+.2f}% |
-| Variazione 7g | {live.get("percent_change_7d", 0):+.2f}% |
+| BTC price (USD) | **${live["price_usd"]:,.2f}** |
+| BTC price (EUR) | {f'€{live["price_eur"]:,.2f}' if live.get("price_eur") else "n/a"} |
+| Change 24h | {live.get("percent_change_24h", 0):+.2f}% |
+| Change 7d | {live.get("percent_change_7d", 0):+.2f}% |
 | Market cap (USD) | ${live.get("market_cap_usd") or 0:,.0f} |
 | ATH | ${live.get("ath") or 0:,.0f} ({(live.get("ath_date") or "")[:10]}) |
-| Data riferimento | {meta["as_of"]} |
+| As of | {meta["as_of"]} |
 
-### Posizione sulle fasce
+### Current band position
 
-| Modello | Fascia corrente | Label IT |
-|---------|-----------------|----------|
-| **Dynamic Power Law** | **{band["label"]}** | {band["label_it"]} |
-| Originale (log regression) | {orig["band"]["label"]} | {orig["band"]["label_it"]} |
+| Model | Current band |
+|-------|--------------|
+| **Dynamic Power Law** | **{band["label"]}** |
+| Original (log regression) | {orig["band"]["label"]} |
 
-- Formula dinamica: `{dyn["formula"]}`
-- R² fit: **{dyn["r2_percent"]}%**
-- Deviazione vs centro modello: **{dyn["deviation_percent_vs_center"]:+.1f}%**
+- Dynamic formula: `{dyn["formula"]}`
+- Fit R²: **{dyn["r2_percent"]}%**
+- Deviation vs model center: **{dyn["deviation_percent_vs_center"]:+.1f}%**
 
 ---
 
-## Grafico generato
+## Generated chart
 
 ![Bitcoin Rainbow Chart](../assets/rainbow-chart.png)
 
-*Immagine rigenerata a ogni esecuzione di `scripts/update-bitcoin-rainbow-chart.py`.*
+*Image regenerated on every run of `scripts/update-bitcoin-rainbow-chart.py`.*
 
 ---
 
-## Legenda fasce e colori
+## Color bands & legend
 
-| Colore | Label (EN) | Label (IT) |
-|--------|------------|------------|
+| Color | Label |
+|-------|--------|
 {legend_rows}
 
-Fasce dall’alto (euforia / sopravvalutazione relativa) verso il basso
-(panico / sottovalutazione relativa rispetto al trend di lungo periodo del modello).
+Bands run from the top (euphoria / relative overvaluation) to the bottom
+(panic / relative undervaluation vs the model’s long-term trend).
 
 ---
 
-## Interpretazione della fascia corrente
+## Interpretation of the current band
 
-### Modello dinamico — {band["label"]} ({band["label_it"]})
+### Dynamic model — {band["label"]}
 
-{dyn["interpretation_it"]}
+{dyn["interpretation"]}
 
-### Modello originale — {orig["band"]["label"]}
+### Original model — {orig["band"]["label"]}
 
-{orig["interpretation_it"]}
+{orig["interpretation"]}
 
-### Nota di lettura (senza consulenza finanziaria)
+### How to read this (not financial advice)
 
-- Il chart descrive **storia e sentiment di lungo periodo**, non timing di ingresso/uscita.
-- Le etichette (BUY, SELL, FOMO, HODL…) sono **meme educativi**, non ordini di trading.
-- Un prezzo in fascia bassa non garantisce rialzi; uno in fascia alta non garantisce ribassi.
-- Usa il rainbow come **contesto**, affiancato a gestione del rischio, orizzonte temporale e
-  comprensione del protocollo Bitcoin.
+- The chart describes **long-term history and sentiment**, not entry/exit timing.
+- Labels (BUY, SELL, FOMO, HODL…) are **educational memes**, not trading orders.
+- A low band does not guarantee rallies; a high band does not guarantee drawdowns.
+- Use the rainbow as **context**, alongside risk management, time horizon, and
+  understanding of the Bitcoin protocol.
 
 ---
 
-## Dataset JSON (dinamico)
+## Dynamic JSON dataset
 
-Il blocco seguente è un estratto del payload generato. Il dataset storico completo
-(settimanale) è in [`/data/bitcoin-rainbow-chart.json`](../data/bitcoin-rainbow-chart.json).
+The block below is a compact extract of the generated payload. The full weekly
+historical dataset is in [`/data/bitcoin-rainbow-chart.json`](../data/bitcoin-rainbow-chart.json).
 
 ```json
 {json.dumps(compact, indent=2, ensure_ascii=False)}
@@ -734,17 +738,17 @@ Il blocco seguente è un estratto del payload generato. Il dataset storico compl
 
 ---
 
-## Come aggiornare
+## How to refresh
 
 ```bash
 python3 scripts/update-bitcoin-rainbow-chart.py
 ```
 
-Lo script:
+The script:
 
-1. Scarica prezzi storici e live da BlockchainCenter  
-2. Ricalcola fasce Original + Dynamic  
-3. Rigenera PNG, JSON e questo markdown  
+1. Fetches historical and live prices from BlockchainCenter  
+2. Recomputes Original + Dynamic bands  
+3. Regenerates PNG, JSON, and this markdown  
 
 ---
 
@@ -752,7 +756,7 @@ Lo script:
 
 {meta["disclaimer"]}
 
-Progetto: **CryptoItaliaFacile / The Little Satoshi News** · Agente: Grok
+Project: **CryptoItaliaFacile / The Little Satoshi News** · Agent: Grok
 """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(md, encoding="utf-8")
@@ -799,7 +803,7 @@ def main() -> int:
         "band_original": original.band,
         "r2_percent": payload["dynamic_model"]["r2_percent"],
         "formula": dynamic.formula,
-        "interpretation_it": payload["dynamic_model"]["interpretation_it"],
+        "interpretation": payload["dynamic_model"]["interpretation"],
         "source": SOURCE_URL,
         "chart_image": "assets/rainbow-chart.png",
         "section_md": "sections/bitcoin-rainbow-chart.md",

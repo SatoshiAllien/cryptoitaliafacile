@@ -1,102 +1,102 @@
 # Bitcoin Rainbow Chart – Dynamic Analysis
 
-> Aggiornato automaticamente da **Grok Agent** · 2026-07-18T06:27:19Z  
-> Fonte: [https://www.blockchaincenter.net/bitcoin-rainbow-chart/](https://www.blockchaincenter.net/bitcoin-rainbow-chart/)
+> Auto-updated by **Grok Agent** · 2026-07-18T06:32:31Z  
+> Source: [https://www.blockchaincenter.net/bitcoin-rainbow-chart/](https://www.blockchaincenter.net/bitcoin-rainbow-chart/)
 
-## Cos’è il Bitcoin Rainbow Chart?
+## What is the Bitcoin Rainbow Chart?
 
-Il **Bitcoin Rainbow Chart** è un grafico logaritmico della storia del prezzo di Bitcoin,
-sovrapposto a fasce colorate (il “arcobaleno”) che rappresentano zone di valutazione relativa
-rispetto a una curva di lungo periodo.
+The **Bitcoin Rainbow Chart** is a logarithmic chart of Bitcoin’s full price history,
+overlaid with colored bands (the “rainbow”) that mark relative valuation zones along
+a long-term growth curve.
 
-Nato come meme su Reddit (2014, utente *azop*) e reso interattivo da
-[BlockchainCenter](https://www.blockchaincenter.net/bitcoin-rainbow-chart/), **non è un modello scientifico di previsione** né consulenza
-finanziaria. Serve a “zoomare fuori” dalla volatilità quotidiana e a collocare il prezzo
-corrente nel contesto dei cicli pluriennali.
+It began as a Reddit meme (2014, user *azop*) and was turned into a live tool by
+[BlockchainCenter](https://www.blockchaincenter.net/bitcoin-rainbow-chart/). It is **not a scientific forecasting model** and
+**not financial advice**. It helps zoom out from daily volatility and place the current
+price in multi-year cycle context.
 
-La versione **Dynamic** ricalcola in tempo reale una regressione **Power Law** sulla storia
-dei prezzi (fit sui minimi locali a 180 giorni), con forza di adattamento dichiarata dal sito
-fonte intorno al **94%+ R²**.
+The **Dynamic** version fits a **Power Law** regression in real time on price history
+(using 180-day local bottoms), with fit strength commonly reported around **94%+ R²**
+on the source site.
 
 ---
 
-## Dati live (da BlockchainCenter)
+## Live data (from BlockchainCenter)
 
-| Campo | Valore |
+| Field | Value |
 |-------|--------|
-| Prezzo BTC (USD) | **$63,945.00** |
-| Prezzo BTC (EUR) | €55,907.00 |
-| Variazione 24h | +1.72% |
-| Variazione 7g | -0.28% |
-| Market cap (USD) | $1,282,588,746,509 |
+| BTC price (USD) | **$63,940.00** |
+| BTC price (EUR) | €55,903.00 |
+| Change 24h | +1.69% |
+| Change 7d | -0.29% |
+| Market cap (USD) | $1,282,548,531,518 |
 | ATH | $126,080 (2025-10-06) |
-| Data riferimento | 2026-07-18 |
+| As of | 2026-07-18 |
 
-### Posizione sulle fasce
+### Current band position
 
-| Modello | Fascia corrente | Label IT |
-|---------|-----------------|----------|
-| **Dynamic Power Law** | **Basically a Fire Sale** | Quasi saldi da liquidazione |
-| Originale (log regression) | Bitcoin is dead | Bitcoin è morto |
+| Model | Current band |
+|-------|--------------|
+| **Dynamic Power Law** | **Basically a Fire Sale** |
+| Original (log regression) | Bitcoin is dead |
 
-- Formula dinamica: `Price = 10^(5.7695 * log10(days) + -17.0916)`
-- R² fit: **99.6%**
-- Deviazione vs centro modello: **-65.6%**
+- Dynamic formula: `Price = 10^(5.7695 * log10(days) + -17.0916)`
+- Fit R²: **99.6%**
+- Deviation vs model center: **-65.6%**
 
 ---
 
-## Grafico generato
+## Generated chart
 
 ![Bitcoin Rainbow Chart](../assets/rainbow-chart.png)
 
-*Immagine rigenerata a ogni esecuzione di `scripts/update-bitcoin-rainbow-chart.py`.*
+*Image regenerated on every run of `scripts/update-bitcoin-rainbow-chart.py`.*
 
 ---
 
-## Legenda fasce e colori
+## Color bands & legend
 
-| Colore | Label (EN) | Label (IT) |
-|--------|------------|------------|
-| `#c00000` | **Maximum Bubble Territory** | Massimo territorio bolla |
-| `#d64018` | **Sell. Seriously, SELL!** | Vendi. Seriamente, VENDI! |
-| `#ed7d31` | **FOMO intensifies** | FOMO in aumento |
-| `#f6b45a` | **Is this a bubble?** | È una bolla? |
-| `#ffeb84` | **HODL!** | HODL! |
-| `#b1d580` | **Still cheap** | Ancora economico |
-| `#63be7b` | **Accumulate** | Accumula |
-| `#54989f` | **BUY!** | COMPRA! |
-| `#4472c4` | **Basically a Fire Sale** | Quasi saldi da liquidazione |
-| `#9568db` | **Bitcoin is dead** | Bitcoin è morto |
+| Color | Label |
+|-------|--------|
+| `#c00000` | **Maximum Bubble Territory** |
+| `#d64018` | **Sell. Seriously, SELL!** |
+| `#ed7d31` | **FOMO intensifies** |
+| `#f6b45a` | **Is this a bubble?** |
+| `#ffeb84` | **HODL!** |
+| `#b1d580` | **Still cheap** |
+| `#63be7b` | **Accumulate** |
+| `#54989f` | **BUY!** |
+| `#4472c4` | **Basically a Fire Sale** |
+| `#9568db` | **Bitcoin is dead** |
 
-Fasce dall’alto (euforia / sopravvalutazione relativa) verso il basso
-(panico / sottovalutazione relativa rispetto al trend di lungo periodo del modello).
-
----
-
-## Interpretazione della fascia corrente
-
-### Modello dinamico — Basically a Fire Sale (Quasi saldi da liquidazione)
-
-[Modello dinamico] Tra le fasce più basse: storicamente legata a panico o fine di bear market. Il nome è un meme; non costituisce consulenza finanziaria.
-
-### Modello originale — Bitcoin is dead
-
-[Modello originale] Fascia viola aggiunta nelle versioni successive quando il prezzo scende sotto il rainbow classico. Indica estrema distanza verso il basso rispetto al modello originale.
-
-### Nota di lettura (senza consulenza finanziaria)
-
-- Il chart descrive **storia e sentiment di lungo periodo**, non timing di ingresso/uscita.
-- Le etichette (BUY, SELL, FOMO, HODL…) sono **meme educativi**, non ordini di trading.
-- Un prezzo in fascia bassa non garantisce rialzi; uno in fascia alta non garantisce ribassi.
-- Usa il rainbow come **contesto**, affiancato a gestione del rischio, orizzonte temporale e
-  comprensione del protocollo Bitcoin.
+Bands run from the top (euphoria / relative overvaluation) to the bottom
+(panic / relative undervaluation vs the model’s long-term trend).
 
 ---
 
-## Dataset JSON (dinamico)
+## Interpretation of the current band
 
-Il blocco seguente è un estratto del payload generato. Il dataset storico completo
-(settimanale) è in [`/data/bitcoin-rainbow-chart.json`](../data/bitcoin-rainbow-chart.json).
+### Dynamic model — Basically a Fire Sale
+
+[Dynamic model] Among the lowest bands: historically linked to panic or late bear-market phases. The label is a meme; it is not financial advice.
+
+### Original model — Bitcoin is dead
+
+[Original model] Purple band added in later chart versions when price fell below the classic rainbow. It marks an extreme downside gap vs the original model.
+
+### How to read this (not financial advice)
+
+- The chart describes **long-term history and sentiment**, not entry/exit timing.
+- Labels (BUY, SELL, FOMO, HODL…) are **educational memes**, not trading orders.
+- A low band does not guarantee rallies; a high band does not guarantee drawdowns.
+- Use the rainbow as **context**, alongside risk management, time horizon, and
+  understanding of the Bitcoin protocol.
+
+---
+
+## Dynamic JSON dataset
+
+The block below is a compact extract of the generated payload. The full weekly
+historical dataset is in [`/data/bitcoin-rainbow-chart.json`](../data/bitcoin-rainbow-chart.json).
 
 ```json
 {
@@ -107,23 +107,24 @@ Il blocco seguente è un estratto del payload generato. Il dataset storico compl
       "chartdata": "https://www.blockchaincenter.net/api/coin/chartdata/?crypto=BTC",
       "rates": "https://www.blockchaincenter.net/api/coin/rates/?crypto=BTC"
     },
-    "generated_at": "2026-07-18T06:27:19Z",
+    "generated_at": "2026-07-18T06:32:31Z",
     "as_of": "2026-07-18",
-    "disclaimer": "Il Rainbow Chart non è consulenza finanziaria. Le performance passate non indicano risultati futuri. È un modo divertente e visuale di osservare i movimenti di lungo periodo.",
+    "disclaimer": "The Rainbow Chart is not financial advice. Past performance is not an indication of future results. It is a fun, visual way to look at long-term price movements.",
     "agent": "Grok Agent · CryptoItaliaFacile",
+    "language": "en",
     "feed": {
       "feed_unit_detected": "eur_converted_to_usd",
-      "fx_used": 1.143774,
+      "fx_used": 1.143767,
       "raw_last_close": 55893.0,
       "points": 5301
     }
   },
   "live": {
-    "price_usd": 63945.0,
-    "price_eur": 55907,
-    "market_cap_usd": 1282588746509,
-    "percent_change_24h": 1.7246865670696678,
-    "percent_change_7d": -0.2825978213422718,
+    "price_usd": 63940.0,
+    "price_eur": 55903,
+    "market_cap_usd": 1282548531518,
+    "percent_change_24h": 1.6910513479649398,
+    "percent_change_7d": -0.29035802483275513,
     "ath": 126080,
     "ath_date": "2025-10-06T18:57:42.558Z",
     "symbol": "BTC",
@@ -133,61 +134,51 @@ Il blocco seguente è un estratto del payload generato. Il dataset storico compl
     {
       "id": 0,
       "label": "Maximum Bubble Territory",
-      "label_it": "Massimo territorio bolla",
       "color": "#c00000"
     },
     {
       "id": 1,
       "label": "Sell. Seriously, SELL!",
-      "label_it": "Vendi. Seriamente, VENDI!",
       "color": "#d64018"
     },
     {
       "id": 2,
       "label": "FOMO intensifies",
-      "label_it": "FOMO in aumento",
       "color": "#ed7d31"
     },
     {
       "id": 3,
       "label": "Is this a bubble?",
-      "label_it": "È una bolla?",
       "color": "#f6b45a"
     },
     {
       "id": 4,
       "label": "HODL!",
-      "label_it": "HODL!",
       "color": "#ffeb84"
     },
     {
       "id": 5,
       "label": "Still cheap",
-      "label_it": "Ancora economico",
       "color": "#b1d580"
     },
     {
       "id": 6,
       "label": "Accumulate",
-      "label_it": "Accumula",
       "color": "#63be7b"
     },
     {
       "id": 7,
       "label": "BUY!",
-      "label_it": "COMPRA!",
       "color": "#54989f"
     },
     {
       "id": 8,
       "label": "Basically a Fire Sale",
-      "label_it": "Quasi saldi da liquidazione",
       "color": "#4472c4"
     },
     {
       "id": 9,
       "label": "Bitcoin is dead",
-      "label_it": "Bitcoin è morto",
       "color": "#9568db"
     }
   ],
@@ -198,10 +189,9 @@ Il blocco seguente è un estratto del payload generato. Il dataset storico compl
     "band": {
       "id": 9,
       "label": "Bitcoin is dead",
-      "label_it": "Bitcoin è morto",
       "color": "#9568db"
     },
-    "interpretation_it": "[Modello originale] Fascia viola aggiunta nelle versioni successive quando il prezzo scende sotto il rainbow classico. Indica estrema distanza verso il basso rispetto al modello originale.",
+    "interpretation": "[Original model] Purple band added in later chart versions when price fell below the classic rainbow. It marks an extreme downside gap vs the original model.",
     "bounds_usd_sample": [
       1232513.03,
       905021.54,
@@ -218,62 +208,61 @@ Il blocco seguente è un estratto del payload generato. Il dataset storico compl
   "dynamic_model": {
     "type": "power_law_bottoms_180d",
     "formula": "Price = 10^(5.7695 * log10(days) + -17.0916)",
-    "slope": 5.769481827395767,
-    "intercept": -17.09162650659551,
+    "slope": 5.76947872716842,
+    "intercept": -17.091618077398042,
     "r2": 0.9964,
     "r2_percent": 99.6,
-    "fit_price_usd": 74133.83,
+    "fit_price_usd": 74133.26,
     "band_index": 8,
     "band": {
       "id": 8,
       "label": "Basically a Fire Sale",
-      "label_it": "Quasi saldi da liquidazione",
       "color": "#4472c4"
     },
     "deviation_percent_vs_center": -65.57,
     "bottoms_used": 8,
     "tops_used": 8,
-    "interpretation_it": "[Modello dinamico] Tra le fasce più basse: storicamente legata a panico o fine di bear market. Il nome è un meme; non costituisce consulenza finanziaria.",
+    "interpretation": "[Dynamic model] Among the lowest bands: historically linked to panic or late bear-market phases. The label is a meme; it is not financial advice.",
     "band_edges_usd": [
-      604732.46,
-      465178.82,
-      357829.86,
-      275253.74,
-      211733.64,
-      162872.03,
-      125286.18,
-      96373.98,
-      74133.83,
-      57026.03
+      604727.77,
+      465175.2,
+      357827.08,
+      275251.6,
+      211732.0,
+      162870.77,
+      125285.21,
+      96373.24,
+      74133.26,
+      57025.58
     ]
   },
   "historical_summary": {
     "points": 759,
     "from": "2012-01-01",
     "to": "2026-07-18",
-    "note": "Dataset completo in /data/bitcoin-rainbow-chart.json"
+    "note": "Full weekly dataset in /data/bitcoin-rainbow-chart.json"
   }
 }
 ```
 
 ---
 
-## Come aggiornare
+## How to refresh
 
 ```bash
 python3 scripts/update-bitcoin-rainbow-chart.py
 ```
 
-Lo script:
+The script:
 
-1. Scarica prezzi storici e live da BlockchainCenter  
-2. Ricalcola fasce Original + Dynamic  
-3. Rigenera PNG, JSON e questo markdown  
+1. Fetches historical and live prices from BlockchainCenter  
+2. Recomputes Original + Dynamic bands  
+3. Regenerates PNG, JSON, and this markdown  
 
 ---
 
 ## Disclaimer
 
-Il Rainbow Chart non è consulenza finanziaria. Le performance passate non indicano risultati futuri. È un modo divertente e visuale di osservare i movimenti di lungo periodo.
+The Rainbow Chart is not financial advice. Past performance is not an indication of future results. It is a fun, visual way to look at long-term price movements.
 
-Progetto: **CryptoItaliaFacile / The Little Satoshi News** · Agente: Grok
+Project: **CryptoItaliaFacile / The Little Satoshi News** · Agent: Grok

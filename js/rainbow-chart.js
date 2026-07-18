@@ -1,8 +1,8 @@
 /**
  * rainbow-chart.js
- * Popola #rainbow-data con lo snapshot generato da
+ * Fills #rainbow-data from the snapshot produced by
  * scripts/update-bitcoin-rainbow-chart.py (Grok Agent).
- * Solo UI educativa — nessuna consulenza finanziaria.
+ * Educational UI only — not financial advice.
  */
 (function () {
   'use strict';
@@ -11,7 +11,7 @@
 
   function formatUsd(n) {
     if (typeof n !== 'number' || !isFinite(n)) return '—';
-    return new Intl.NumberFormat('it-IT', {
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       maximumFractionDigits: 0
@@ -33,35 +33,34 @@
     var band = data.band || {};
     var bandOrig = data.band_original || {};
     var color = band.color || '#4472c4';
+    var interpretation = data.interpretation || data.interpretation_it || '';
 
     el.innerHTML =
       '<div class="rainbow-data-grid">' +
         '<div class="rainbow-stat">' +
-          '<span class="rainbow-stat-label">Prezzo BTC</span>' +
+          '<span class="rainbow-stat-label">BTC price</span>' +
           '<span class="rainbow-stat-value">' + escapeHtml(formatUsd(data.price_usd)) + '</span>' +
         '</div>' +
         '<div class="rainbow-stat rainbow-stat--band" style="--band-color:' + escapeHtml(color) + '">' +
-          '<span class="rainbow-stat-label">Fascia dinamica</span>' +
+          '<span class="rainbow-stat-label">Dynamic band</span>' +
           '<span class="rainbow-stat-value">' +
             '<span class="rainbow-band-dot" aria-hidden="true"></span>' +
-            escapeHtml(band.label_it || band.label || '—') +
+            escapeHtml(band.label || '—') +
           '</span>' +
-          '<span class="rainbow-stat-meta">' + escapeHtml(band.label || '') + '</span>' +
         '</div>' +
         '<div class="rainbow-stat">' +
-          '<span class="rainbow-stat-label">Modello originale</span>' +
-          '<span class="rainbow-stat-value">' + escapeHtml(bandOrig.label_it || bandOrig.label || '—') + '</span>' +
-          '<span class="rainbow-stat-meta">' + escapeHtml(bandOrig.label || '') + '</span>' +
+          '<span class="rainbow-stat-label">Original model</span>' +
+          '<span class="rainbow-stat-value">' + escapeHtml(bandOrig.label || '—') + '</span>' +
         '</div>' +
         '<div class="rainbow-stat">' +
-          '<span class="rainbow-stat-label">Fit Power Law (R²)</span>' +
+          '<span class="rainbow-stat-label">Power Law fit (R²)</span>' +
           '<span class="rainbow-stat-value">' + escapeHtml(String(data.r2_percent != null ? data.r2_percent + '%' : '—')) + '</span>' +
           '<span class="rainbow-stat-meta">' + escapeHtml(data.as_of || '') + '</span>' +
         '</div>' +
       '</div>' +
-      '<p class="rainbow-interpretation">' + escapeHtml(data.interpretation_it || '') + '</p>' +
-      '<p class="rainbow-updated">Aggiornato: ' + escapeHtml(data.updated_at || '—') +
-        ' · <a href="sections/bitcoin-rainbow-chart.md">Dettaglio e dataset JSON</a></p>';
+      '<p class="rainbow-interpretation">' + escapeHtml(interpretation) + '</p>' +
+      '<p class="rainbow-updated">Updated: ' + escapeHtml(data.updated_at || '—') +
+        ' · <a href="sections/bitcoin-rainbow-chart.md">Full analysis &amp; JSON dataset</a></p>';
   }
 
   function fail(msg) {
@@ -79,7 +78,7 @@
       })
       .then(render)
       .catch(function () {
-        fail('Dati rainbow non disponibili. Riesegui scripts/update-bitcoin-rainbow-chart.py');
+        fail('Rainbow data unavailable. Re-run scripts/update-bitcoin-rainbow-chart.py');
       });
   }
 

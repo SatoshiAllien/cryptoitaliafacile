@@ -1,0 +1,24 @@
+{
+  "updated_at": "2026-07-18T06:27:19Z",
+  "as_of": "2026-07-18",
+  "price_usd": 63945.0,
+  "band": {
+    "id": 8,
+    "label": "Basically a Fire Sale",
+    "label_it": "Quasi saldi da liquidazione",
+    "color": "#4472c4"
+  },
+  "band_original": {
+    "id": 9,
+    "label": "Bitcoin is dead",
+    "label_it": "Bitcoin è morto",
+    "color": "#9568db"
+  },
+  "r2_percent": 99.6,
+  "formula": "Price = 10^(5.7695 * log10(days) + -17.0916)",
+  "interpretation_it": "[Modello dinamico] Tra le fasce più basse: storicamente legata a panico o fine di bear market. Il nome è un meme; non costituisce consulenza finanziaria.",
+  "source": "https://www.blockchaincenter.net/bitcoin-rainbow-chart/",
+  "chart_image": "assets/rainbow-chart.png",
+  "section_md": "sections/bitcoin-rainbow-chart.md",
+  "disclaimer": "Il Rainbow Chart non è consulenza finanziaria. Le performance passate non indicano risultati futuri. È un modo divertente e visuale di osservare i movimenti di lungo periodo."
+}

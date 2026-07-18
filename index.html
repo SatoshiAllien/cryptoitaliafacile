@@ -338,6 +338,30 @@
       </div>
     </section>
 
+    <!-- Bitcoin Rainbow Chart — aggiornato da scripts/update-bitcoin-rainbow-chart.py (Grok Agent) -->
+    <section id="rainbow-chart" class="section rainbow-chart-section">
+      <div class="container">
+        <div class="section-header section-header-row">
+          <div>
+            <span class="section-label">Analisi · Lungo periodo</span>
+            <h2>Bitcoin Rainbow Chart</h2>
+            <p>Grafico dinamico aggiornato da Grok Agent — fasce storiche e Power Law live da BlockchainCenter.</p>
+          </div>
+          <a href="sections/bitcoin-rainbow-chart.md" class="section-link">Analisi completa →</a>
+        </div>
+        <div class="rainbow-chart-card">
+          <img src="assets/rainbow-chart.png" alt="Bitcoin Rainbow Chart" width="1400" height="820" loading="lazy" decoding="async">
+          <div id="rainbow-data" class="rainbow-data" aria-live="polite">
+            <p class="rainbow-data-loading">Caricamento dati rainbow…</p>
+          </div>
+          <p class="rainbow-disclaimer">
+            Il Rainbow Chart non è consulenza finanziaria. È un meme/visualizzazione educativa dei cicli di lungo periodo.
+            Fonte: <a href="https://www.blockchaincenter.net/bitcoin-rainbow-chart/" target="_blank" rel="noopener noreferrer">BlockchainCenter</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <div class="section-header section-header-row">
@@ -453,6 +477,7 @@
   <script src="js/components.js?v=20260703-hero-clean"></script>
   <script src="js/bitcoin-news.js?v=20260703-hero-clean"></script>
   <script src="js/news-hub.js?v=20260703-hero-clean"></script>
+  <script src="js/rainbow-chart.js?v=20260718-rainbow"></script>
   <script src="js/main.js?v=20260703-hero-clean"></script>
 </body>
 </html>

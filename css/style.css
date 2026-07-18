@@ -4511,3 +4511,141 @@ h1, h2, h3, h4 { color: var(--text); }
   .fitness-block { padding: 1.5rem; }
   .fitness-article-card { padding: 1.5rem; }
 }
+
+/* --------------------------------------------------------------------------
+   Bitcoin Rainbow Chart (homepage) — updated by Grok Agent script
+   -------------------------------------------------------------------------- */
+.rainbow-chart-section {
+  position: relative;
+}
+
+.rainbow-chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.rainbow-chart-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: #0a0a12;
+}
+
+.rainbow-data {
+  margin-top: 1.25rem;
+}
+
+.rainbow-data-loading,
+.rainbow-data-error {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.rainbow-data-error { color: var(--danger); }
+
+.rainbow-data-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.rainbow-stat {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 5.5rem;
+}
+
+.rainbow-stat--band {
+  border-left: 3px solid var(--band-color, var(--primary));
+}
+
+.rainbow-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.rainbow-stat-value {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  line-height: 1.25;
+}
+
+.rainbow-stat-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.rainbow-band-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--band-color, var(--primary));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--band-color, var(--primary)) 55%, transparent);
+  flex-shrink: 0;
+}
+
+.rainbow-interpretation {
+  margin: 1rem 0 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.rainbow-updated {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+.rainbow-updated a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.rainbow-updated a:hover { text-decoration: underline; }
+
+.rainbow-disclaimer {
+  margin: 1rem 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.45;
+}
+
+.rainbow-disclaimer a {
+  color: var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .rainbow-data-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .rainbow-data-grid {
+    grid-template-columns: 1fr;
+  }
+  .rainbow-chart-card { padding: 0.85rem; }
+}

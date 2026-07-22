@@ -2932,13 +2932,13 @@
       "scheduled_at": "2026-06-29T07:47:00+02:00",
       "slug": "creare-watchlist",
       "variant": "alt",
-      "status": "pending",
+      "status": "failed",
       "feed_status": "pending",
       "story_status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "external_id": null,
       "story_id": null,
-      "error": null
+      "error": "Error validating access token: Session has expired on Thursday, 25-Jun-26 11:00:00 PDT. The current time is Wednesday, 22-Jul-26 10:47:55 PDT. | code=190 | subcode=463"
     },
     {
       "id": "facebook:2026-06-29:slot-01",
@@ -10090,8 +10090,8 @@
   "circuit_breaker": {
     "open": true,
     "errors_in_window": 1,
-    "window_start": "2026-07-22T18:16:19.330749+02:00",
-    "opened_at": "2026-07-22T18:16:19.330764+02:00"
+    "window_start": "2026-07-22T19:47:56.058686+02:00",
+    "opened_at": "2026-07-22T19:47:56.058698+02:00"
   },
-  "generatedAt": "2026-07-22T16:16:18"
+  "generatedAt": "2026-07-22T17:47:55"
 }

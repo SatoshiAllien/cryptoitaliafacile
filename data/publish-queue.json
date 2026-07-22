@@ -2,6 +2,7 @@
   "version": 1,
   "timezone": "Europe/Rome",
   "startDate": "2026-06-25",
+  "generatedAt": "2026-07-22T21:35:08",
   "items": [
     {
       "id": "instagram:2026-06-25:slot-00",
@@ -10088,10 +10089,9 @@
     }
   ],
   "circuit_breaker": {
-    "open": true,
-    "errors_in_window": 1,
-    "window_start": "2026-07-22T22:19:00.568053+02:00",
-    "opened_at": "2026-07-22T22:19:00.568064+02:00"
-  },
-  "generatedAt": "2026-07-22T20:19:00"
+    "open": false,
+    "errors_in_window": 0,
+    "window_start": null,
+    "opened_at": null
+  }
 }

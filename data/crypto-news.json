@@ -2,7 +2,7 @@
   "session": "crypto-news",
   "title": "Ultime News Crypto",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-07-28T01:17",
+  "exportedAt": "2026-07-28T08:10",
   "source": "X — TheRiser100x, elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
     {
@@ -58,6 +58,25 @@
   ],
   "count": 60,
   "items": [
+    {
+      "id": "2081986971434443261",
+      "title": "RT @WatcherGuru: JUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surp…",
+      "summary": "RT @WatcherGuru: JUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.",
+      "date": "28 Jul 2026 06:15",
+      "category": "x",
+      "source": "Watcher Guru",
+      "sourceHandle": "@WatcherGuru",
+      "priority": 8,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/WatcherGuru/status/2081986971434443261",
+      "breaking": true,
+      "postCategory": "regulation",
+      "viralScore": 26,
+      "postText": "🚨 BREAKING\n: JUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2081986971434443261\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n: JUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2081986971434443261\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
     {
       "id": "2081911598453563712",
       "title": "JUST IN: 🇰🇷 South Korea's KOSPI stock market halted after 8% crash, triggering circuit breaker. https://t.co/4EdHoZL8So",
@@ -266,25 +285,6 @@
       "postText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 📰 \"Trump admin targets woke schools accused of hiding students' gender transitions from parents\"\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2081870257124151736\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
       "viralPostText": "🇺🇸 WHITE HOUSE · CRYPTO\n🇺🇸 📰 \"Trump admin targets woke schools accused of hiding students' gender transitions from parents\"\nvia @WhiteHouse\nhttps://x.com/WhiteHouse/status/2081870257124151736\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
       "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
-    },
-    {
-      "id": "2081863412695359912",
-      "title": "JUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.",
-      "summary": "JUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.",
-      "date": "27 Jul 2026 22:04",
-      "category": "x",
-      "source": "Watcher Guru",
-      "sourceHandle": "@WatcherGuru",
-      "priority": 8,
-      "slug": null,
-      "external": true,
-      "url": "https://x.com/WatcherGuru/status/2081863412695359912",
-      "breaking": true,
-      "postCategory": "regulation",
-      "viralScore": 26,
-      "postText": "🚨 BREAKING\nJUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2081863412695359912\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: 🇺🇸 Citadel Securities expects the Federal Reserve to raise interest rates this week in a surprise move.\nvia @WatcherGuru\nhttps://x.com/WatcherGuru/status/2081863412695359912\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
-      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
     },
     {
       "id": "2081855916035670036",

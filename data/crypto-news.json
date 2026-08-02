@@ -2,7 +2,7 @@
   "session": "crypto-news",
   "title": "Ultime News Crypto",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-08-02T10:13",
+  "exportedAt": "2026-08-02T11:41",
   "source": "X — TheRiser100x, elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
     {
@@ -56,8 +56,27 @@
       "priority": 6
     }
   ],
-  "count": 13,
+  "count": 19,
   "items": [
+    {
+      "id": "2083118277757464943",
+      "title": "Veteran crypto investor @michaelterpin reveals that he isn’t convinced $BTC has found its bottom yet, suggesting there…",
+      "summary": "Veteran crypto investor @michaelterpin reveals that he isn’t convinced $BTC has found its bottom yet, suggesting there could still be more downside ahead, with prices potentially falling into the $40,000 range.\n\n“One of the defining hallmarks of the bottom is that it doesn’t pop …",
+      "date": "31 Jul 2026 09:11",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/2083118277757464943",
+      "breaking": false,
+      "postCategory": "bitcoin",
+      "viralScore": 11,
+      "postText": "₿ BITCOIN ALERT\n\n₿ Veteran crypto investor reveals that he isn’t convinced $BTC has found its bottom yet, suggesting there cou…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "viralPostText": "₿ BITCOIN ALERT\n\n₿ Veteran crypto investor reveals that he isn’t convinced $BTC has found its bottom yet, suggesting there cou…\n\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
     {
       "id": "2062952276998692912",
       "title": "@BitcoinRachy where?",
@@ -304,6 +323,101 @@
       "postText": "🔥 CRYPTO NEWS\n\n𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆 💥 Regime in TOTAL despair… Israel + US: 2000 bombs dropped → leaders & generals ERASED, bases GONE,…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
       "viralPostText": "🔥 CRYPTO NEWS\n\n𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆 💥 Regime in TOTAL despair… Israel + US: 2000 bombs dropped → leaders & generals ERASED, bases GONE,…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
       "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1954316835169423559",
+      "title": "👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026. https://t.co/ozqFo3okRv",
+      "summary": "👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026. https://t.co/ozqFo3okRv",
+      "date": "09 Aug 2025 23:00",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1954316835169423559",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "📈 CRYPTO MARKET\n👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1954316835169423559\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
+      "viralPostText": "📈 CRYPTO MARKET\n👀 INSIGHT: A farmer who predicted 100 years of markets cycle predicts a bullish peak in 2026.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1954316835169423559\n#Crypto #Bitcoin #Altcoins #CryptoNews #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1881688751602286740",
+      "title": "🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the gr…",
+      "summary": "🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the green light. https://t.co/BisP4SUGIj",
+      "date": "21 Jan 2025 13:02",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1881688751602286740",
+      "breaking": true,
+      "postCategory": "regulation",
+      "viralScore": 24,
+      "postText": "🚨 BREAKING\n🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the green light.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1881688751602286740\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n🚨 BREAKING: Bank of America CEO says the financial industry is ready to adopt crypto payments if regulators give the green light.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1881688751602286740\n#Crypto #Regulation #SEC #Bitcoin #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/regulation.jpg"
+    },
+    {
+      "id": "1859693801268560197",
+      "title": "🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas. https://t.co/0t75CIdYkf",
+      "summary": "🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas. https://t.co/0t75CIdYkf",
+      "date": "21 Nov 2024 20:22",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1859693801268560197",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "⟠ ETH UPDATE\n🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1859693801268560197\n#Ethereum #ETH #Crypto #DeFi #TheRiser100x",
+      "viralPostText": "⟠ ETH UPDATE\n🔥 NEW: MetaMask will now allow users to swap tokens without requiring $ETH for gas.\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1859693801268560197\n#Ethereum #ETH #Crypto #DeFi #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1773394872617033921",
+      "title": "This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique blend of tech…",
+      "summary": "This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique blend of technology and monetary theory. [AD]https://t.co/Twc59PQuOO",
+      "date": "28 Mar 2024 17:01",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1773394872617033921",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "🔥 CRYPTO NEWS\n\n👀 This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique b…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n\n👀 This cryptocurrency initiative aims to tackle industry volatility and regulatory challenges with a unique b…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "1767528468491665837",
+      "title": "Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. @GaiminIo [AD]",
+      "summary": "Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. @GaiminIo [AD]\n\nhttps://t.co/G6n06EaN4p",
+      "date": "12 Mar 2024 12:30",
+      "category": "x",
+      "source": "Cointelegraph",
+      "sourceHandle": "@Cointelegraph",
+      "priority": 6,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/Cointelegraph/status/1767528468491665837",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 6,
+      "postText": "🔥 CRYPTO NEWS\n👀 Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. [AD]\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1767528468491665837\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n👀 Blockchain-based game launcher kicks off, offering developers a simple way to join the Web3 gaming space. [AD]\nvia @Cointelegraph\nhttps://x.com/Cointelegraph/status/1767528468491665837\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     }
   ],
   "warnings": [
@@ -314,7 +428,6 @@
     "@WatcherGuru: HTTP Error 429: Too Many Requests",
     "@CPOfficialtx: HTTP Error 429: Too Many Requests",
     "@unusual_whales: HTTP Error 429: Too Many Requests",
-    "@Strategy: HTTP Error 429: Too Many Requests",
-    "@Cointelegraph: HTTP Error 429: Too Many Requests"
+    "@Strategy: HTTP Error 429: Too Many Requests"
   ]
 }

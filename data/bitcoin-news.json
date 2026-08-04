@@ -2,7 +2,7 @@
   "session": "bitcoin-news",
   "title": "Sessione News Bitcoin",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-08-04T08:13",
+  "exportedAt": "2026-08-04T08:28",
   "source": "X — TheRiser100x, elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
     {
@@ -56,7 +56,7 @@
       "priority": 6
     }
   ],
-  "count": 12,
+  "count": 13,
   "items": [
     {
       "id": "2062952276998692912",
@@ -284,6 +284,25 @@
       "viralScore": 37,
       "postText": "🚨 BREAKING\n\n🚨💥 Trump advisor David Sacks on All-In Podcast: DC faction pushes MAJOR Iran escalation — oil/energy strikes…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
       "viralPostText": "🚨 BREAKING\n\n🚨💥 Trump advisor David Sacks on All-In Podcast: DC faction pushes MAJOR Iran escalation — oil/energy strikes…\n\n#WhiteHouse #Crypto #Bitcoin #USA #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "2028540168177930655",
+      "title": "𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆 💥 Regime in TOTAL despair…",
+      "summary": "𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆 💥 Regime in TOTAL despair…\nIsrael + US: 2000 bombs dropped → leaders & generals ERASED, bases GONE, navy SUNK, political core DECIMATED, 50% launchers DISABLED. Full decapitation 🔥🇮🇱🇺🇸\nIran’s response: 35 missiles → only 10% hit. Then pathetic drone/missile attacks on Du…",
+      "date": "02 Mar 2026 18:37",
+      "category": "x",
+      "source": "The Little Satoshi News",
+      "sourceHandle": "@TheRiser100x",
+      "priority": 15,
+      "slug": null,
+      "external": true,
+      "url": "https://twitter.com/TheRiser100x/status/2028540168177930655",
+      "breaking": false,
+      "postCategory": "crypto",
+      "viralScore": 15,
+      "postText": "🔥 CRYPTO NEWS\n\n𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆 💥 Regime in TOTAL despair… Israel + US: 2000 bombs dropped → leaders & generals ERASED, bases GONE,…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🔥 CRYPTO NEWS\n\n𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆 💥 Regime in TOTAL despair… Israel + US: 2000 bombs dropped → leaders & generals ERASED, bases GONE,…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
       "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     }
   ],

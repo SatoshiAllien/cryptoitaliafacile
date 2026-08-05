@@ -2,7 +2,7 @@
   "session": "crypto-news",
   "title": "Ultime News Crypto",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-08-05T11:00",
+  "exportedAt": "2026-08-05T13:30",
   "source": "X — TheRiser100x, elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
     {
@@ -56,7 +56,7 @@
       "priority": 6
     }
   ],
-  "count": 12,
+  "count": 13,
   "items": [
     {
       "id": "2062952276998692912",
@@ -227,6 +227,25 @@
       "viralScore": 27,
       "postText": "🚨 BREAKING\n\n🚨 BREAKING: 3,000+ 82nd Airborne Troops Arrive in Middle East 🚨 Over 3,000 elite paratroopers landed via 35 C…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
       "viralPostText": "🚨 BREAKING\n\n🚨 BREAKING: 3,000+ 82nd Airborne Troops Arrive in Middle East 🚨 Over 3,000 elite paratroopers landed via 35 C…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
+    {
+      "id": "2035512461634244678",
+      "title": "Iranian ballistic missiles struck Arad and Dimona in southern Israel; air defenses (including Iron Dome layers) failed…",
+      "summary": "Iranian ballistic missiles struck Arad and Dimona in southern Israel; air defenses (including Iron Dome layers) failed to intercept several, causing direct hits on residential areas. Over 100 injured total (dozens in each city, some serious), buildings damaged/collapsed. Relentle…",
+      "date": "22 Mar 2026 00:22",
+      "category": "x",
+      "source": "The Little Satoshi News",
+      "sourceHandle": "@TheRiser100x",
+      "priority": 15,
+      "slug": null,
+      "external": true,
+      "url": "https://twitter.com/TheRiser100x/status/2035512461634244678",
+      "breaking": true,
+      "postCategory": "bitcoin",
+      "viralScore": 19,
+      "postText": "🚨 BREAKING\n\nIranian ballistic missiles struck Arad and Dimona in southern Israel; air defenses (including Iron Dome layer…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n\nIranian ballistic missiles struck Arad and Dimona in southern Israel; air defenses (including Iron Dome layer…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
       "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {

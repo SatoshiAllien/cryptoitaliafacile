@@ -2,7 +2,7 @@
   "session": "bitcoin-news",
   "title": "Sessione News Bitcoin",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-08-08T11:34",
+  "exportedAt": "2026-08-08T12:20",
   "source": "X — TheRiser100x, elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
     {
@@ -58,6 +58,25 @@
   ],
   "count": 60,
   "items": [
+    {
+      "id": "2086064747024203977",
+      "title": "BREAKING: 🇺🇸 Senate Majority Leader John Thune has filed for cloture on the CLARITY ACT 👀",
+      "summary": "BREAKING: 🇺🇸 Senate Majority Leader John Thune has filed for cloture on the CLARITY ACT 👀\n\nThe Senate is now set up for a floor vote once they return in September. 👏 https://t.co/F4NiusLHHN",
+      "date": "08 Aug 2026 12:19",
+      "category": "x",
+      "source": "Bitcoin Magazine",
+      "sourceHandle": "@BitcoinMagazine",
+      "priority": 9,
+      "slug": null,
+      "external": true,
+      "url": "https://x.com/BitcoinMagazine/status/2086064747024203977",
+      "breaking": true,
+      "postCategory": "bitcoin",
+      "viralScore": 21,
+      "postText": "🚨 BREAKING\n\nBREAKING: 🇺🇸 Senate Majority Leader John Thune has filed for cloture on the CLARITY ACT 👀 The Senate is now s…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "viralPostText": "🚨 BREAKING\n\nBREAKING: 🇺🇸 Senate Majority Leader John Thune has filed for cloture on the CLARITY ACT 👀 The Senate is now s…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
+      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
+    },
     {
       "id": "2085967222304854306",
       "title": "RT @WatcherGuru: JUST IN: X to end current creator monetization program and replace it with new \"Original Content Rewar…",
@@ -341,25 +360,6 @@
       "viralScore": 21,
       "postText": "🚨 BREAKING\n\nJUST IN: 🇺🇸 Senator Lummis releases statement now Clarity Act vote is delayed: \"There will be a time where I…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
       "viralPostText": "🚨 BREAKING\n\nJUST IN: 🇺🇸 Senator Lummis releases statement now Clarity Act vote is delayed: \"There will be a time where I…\n\n#Crypto #Bitcoin #CryptoNews #BTC #TheRiser100x",
-      "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
-    },
-    {
-      "id": "2085767353778749485",
-      "title": "JUST IN: There's now a 62% chance Bitcoin will be above $67,500 this month, according to https://t.co/0Rf4C5DSVg 🚀 http…",
-      "summary": "JUST IN: There's now a 62% chance Bitcoin will be above $67,500 this month, according to https://t.co/0Rf4C5DSVg 🚀 https://t.co/cTLpdJKGiv",
-      "date": "07 Aug 2026 16:37",
-      "category": "x",
-      "source": "Bitcoin Magazine",
-      "sourceHandle": "@BitcoinMagazine",
-      "priority": 9,
-      "slug": null,
-      "external": true,
-      "url": "https://x.com/BitcoinMagazine/status/2085767353778749485",
-      "breaking": true,
-      "postCategory": "bitcoin",
-      "viralScore": 26,
-      "postText": "🚨 BREAKING\nJUST IN: There's now a 62% chance Bitcoin will be above $67,500 this month, according to 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2085767353778749485\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
-      "viralPostText": "🚨 BREAKING\nJUST IN: There's now a 62% chance Bitcoin will be above $67,500 this month, according to 🚀\nvia @BitcoinMagazine\nhttps://x.com/BitcoinMagazine/status/2085767353778749485\n#Bitcoin #BTC #Crypto #CryptoNews #TheRiser100x",
       "xImage": "https://satoshiallien.github.io/cryptoitaliafacile/assets/img/x/posts/bitcoin.jpg"
     },
     {

@@ -2,7 +2,7 @@
   "session": "bitcoin-news",
   "title": "Sessione News Bitcoin",
   "account": "https://x.com/TheRiser100x",
-  "exportedAt": "2026-08-18T06:32",
+  "exportedAt": "2026-08-18T07:33",
   "source": "X — TheRiser100x, elonmusk, WhiteHouse, BitcoinMagazine, SECGov, WatcherGuru, CPOfficialtx, unusual_whales, Strategy, Cointelegraph",
   "sources": [
     {
@@ -307,7 +307,6 @@
     }
   ],
   "warnings": [
-    "@TheRiser100x: Remote end closed connection without response",
     "@elonmusk: HTTP Error 429: Too Many Requests",
     "@WhiteHouse: HTTP Error 429: Too Many Requests",
     "@BitcoinMagazine: HTTP Error 429: Too Many Requests",
